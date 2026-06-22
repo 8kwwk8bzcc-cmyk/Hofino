@@ -1,0 +1,95 @@
+import type { CompanyProfile, EtfProfile } from "./schema.js";
+
+// Redaktioneller Erstbestand. Wächst iterativ auf ~200 Unternehmen + 10 ETFs.
+// Im Kindermodus werden KEINE frei generierten KI-Texte ausgespielt. ETFs sind neutrale
+// Lernbeispiele, KEINE Kaufempfehlung. ISIN/WKN vor öffentlichem Start rechtlich verifizieren.
+
+export const COMPANY_PROFILES: CompanyProfile[] = [
+  {
+    ticker: "AAPL",
+    name: "Apple",
+    whatDoes: "Apple entwickelt und verkauft Smartphones, Computer, Tablets, Uhren und Dienste.",
+    howEarns: "Vor allem durch den Verkauf von Geräten wie dem iPhone und zusätzlich durch Dienste (z. B. App Store, iCloud).",
+    products: "iPhone, iPad, Mac, Apple Watch, AirPods, App Store.",
+    sector: "Technologie",
+    competitors: "Samsung, Google, Microsoft.",
+    opportunities: "Treue Kundschaft, starke Marke, wachsende Dienste-Umsätze.",
+    risks: "Starke Abhängigkeit vom iPhone, Wettbewerb, Lieferketten in Asien.",
+    whyPriceMoves: "Neue Produkte, Verkaufszahlen und die allgemeine Tech-Stimmung können den Kurs bewegen.",
+  },
+  {
+    ticker: "SAP",
+    name: "SAP",
+    whatDoes: "SAP stellt Software her, mit der große Unternehmen ihre Abläufe (Einkauf, Personal, Finanzen) steuern.",
+    howEarns: "Früher durch Software-Lizenzen, heute zunehmend durch Cloud-Abos (regelmäßige Mietzahlungen).",
+    products: "Unternehmenssoftware (ERP), Cloud-Dienste.",
+    sector: "Technologie",
+    competitors: "Oracle, Microsoft, Salesforce.",
+    opportunities: "Umstieg vieler Kunden in die Cloud, langfristige Verträge.",
+    risks: "Harter Cloud-Wettbewerb, aufwendige Umstellungen bei Kunden.",
+    whyPriceMoves: "Cloud-Wachstum, Quartalszahlen und Ausblicke beeinflussen den Kurs.",
+  },
+  {
+    ticker: "SIE",
+    name: "Siemens",
+    whatDoes: "Siemens baut Technik für Industrie, Gebäude, Bahnverkehr und Stromnetze.",
+    howEarns: "Durch Verkauf und Wartung von Maschinen, Anlagen, Zügen und Automatisierungstechnik.",
+    products: "Industrieautomatisierung, Züge, Gebäudetechnik, Medizintechnik (Siemens Healthineers).",
+    sector: "Industrie",
+    competitors: "ABB, Schneider Electric, General Electric.",
+    opportunities: "Automatisierung, Digitalisierung der Industrie, Bahn- und Energietrends.",
+    risks: "Abhängigkeit von der Konjunktur, große langlaufende Projekte.",
+    whyPriceMoves: "Auftragslage, Konjunktur und Großaufträge wirken auf den Kurs.",
+  },
+  {
+    ticker: "NESN",
+    name: "Nestlé",
+    whatDoes: "Nestlé ist ein großer Lebensmittel- und Getränkekonzern aus der Schweiz.",
+    howEarns: "Durch den Verkauf von Lebensmitteln und Getränken in vielen Ländern.",
+    products: "Kaffee (Nescafé, Nespresso), Wasser, Süßwaren, Tiernahrung.",
+    sector: "Konsumgüter",
+    competitors: "Unilever, Mondelēz, Danone.",
+    opportunities: "Bekannte Marken, weltweite Verbreitung, stabile Nachfrage nach Alltagsprodukten.",
+    risks: "Rohstoffpreise, Wechselkurse, Diskussionen um Gesundheit und Nachhaltigkeit.",
+    whyPriceMoves: "Absatzmengen, Preise und Wechselkurse können den Kurs bewegen.",
+  },
+];
+
+export const ETF_PROFILES: EtfProfile[] = [
+  {
+    ticker: "IWDA",
+    name: "iShares Core MSCI World UCITS ETF (Acc)",
+    isin: "IE00B4L5Y983",
+    wkn: "A0RPWH",
+    tracks: "Bildet den MSCI World ab – hunderte große und mittlere Firmen aus Industrieländern.",
+    region: "Welt (Industrieländer)",
+    sector: "Breit über alle Branchen gestreut",
+    diversification: "Sehr breit: viele Länder und Branchen in einem Produkt.",
+    costLogic: "Laufende Kosten (TER) pro Jahr, anteilig vom angelegten Wert.",
+    risks: "Schwankungen des Weltmarkts; kein Schutz vor allgemeinen Kursrückgängen.",
+  },
+  {
+    ticker: "CSPX",
+    name: "iShares Core S&P 500 UCITS ETF (Acc)",
+    isin: "IE00B5BMR087",
+    wkn: "A0YEDG",
+    tracks: "Bildet den S&P 500 ab – die 500 größten börsennotierten Firmen der USA.",
+    region: "USA",
+    sector: "Breit über US-Branchen gestreut",
+    diversification: "Breit innerhalb der USA, aber auf ein Land konzentriert.",
+    costLogic: "Laufende Kosten (TER) pro Jahr, anteilig vom angelegten Wert.",
+    risks: "Konzentration auf die USA und den US-Dollar; Marktschwankungen.",
+  },
+  {
+    ticker: "EIMI",
+    name: "iShares Core MSCI EM IMI UCITS ETF (Acc)",
+    isin: "IE00BKM4GZ66",
+    wkn: "A111X9",
+    tracks: "Bildet Schwellenländer ab (MSCI Emerging Markets IMI), z. B. China, Indien, Brasilien.",
+    region: "Schwellenländer",
+    sector: "Breit über Branchen der Schwellenländer gestreut",
+    diversification: "Breit über viele Schwellenländer, aber schwankungsreicher.",
+    costLogic: "Laufende Kosten (TER) pro Jahr, anteilig vom angelegten Wert.",
+    risks: "Höhere Schwankungen, politische und Währungsrisiken.",
+  },
+];
