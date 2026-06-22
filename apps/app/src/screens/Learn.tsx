@@ -20,12 +20,12 @@ function ModuleView({ module, onClose }: { module: LearningModule; onClose: () =
   const [answers, setAnswers] = useState<Record<number, number>>({});
   const [result, setResult] = useState<{ correct: number; total: number; perfect: boolean } | null>(null);
 
-  const finishQuiz = () => {
+  const finishQuiz = async () => {
     const total = module.quiz.length;
     const correct = module.quiz.reduce((n, q, i) => n + (answers[i] === q.correctIndex ? 1 : 0), 0);
-    completeModule(module.id, correct, total);
     setResult({ correct, total, perfect: correct === total });
     setPhase("done");
+    await completeModule(module.id, correct, total);
   };
 
   return (

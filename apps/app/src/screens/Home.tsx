@@ -20,7 +20,7 @@ export function Home() {
   const stageIndex = STAGES.findIndex((s) => s.id === derived.houseStage);
   const stage = STAGES[Math.max(0, stageIndex)]!;
 
-  const mission = !state.investedEver
+  const mission = state.portfolio.holdings.length === 0
     ? "Tätige dein erstes Investment im Depot oder unter Entdecken."
     : derived.completedCount === 0
       ? "Schließe dein erstes Lernmodul ab und verdiene Lernkapital."

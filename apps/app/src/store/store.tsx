@@ -1,64 +1,70 @@
-// Lokaler Spielstand (MVP, Schritt 1): Zustand im Browser, Logik aus @hofino/core,
-// Kurse aus @hofino/market-data. Supabase/Auth wird in einem späteren Schritt angebunden.
-import React, { createContext, useContext, useEffect, useMemo, useReducer, useState } from "react";
+// Spielstand aus Supabase: Auth-Session, Lesen via RLS, Schreiben über serverseitige
+// RPCs (place_order, complete_module). Ersetzt den früheren lokalen Store.
+import React, { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from "react";
 import {
-  buy as coreBuy,
-  sell as coreSell,
-  createPortfolio,
   depotValueCents,
   holdingsValueCents,
-  grantLearningCapital,
-  totalLearningCapitalCents,
-  awardKnowledgePoints,
-  totalKnowledgePoints,
   performancePercent,
   houseStage,
   type Portfolio,
   type OrderError,
-  type CapitalGrant,
-  type PointsAward,
   type HouseStage,
 } from "@hofino/core";
 import { MODULES } from "@hofino/content";
-import { SimulatedMarketDataProvider } from "@hofino/market-data";
-import { INSTRUMENTS } from "../data/instruments.js";
+import { supabase } from "../lib/supabase.js";
 
-const STORAGE_KEY = "hofino:kids:v2";
-const PASS_RATIO = 0.6;
+export interface Instrument {
+  id: string;
+  ticker: string;
+  name: string;
+  type: "stock" | "etf";
+  sector: string;
+  country: string;
+}
 
 interface QuizResult {
-  score: number; // 0..100
+  score: number;
   perfect: boolean;
 }
 
-export interface GameState {
-  onboarded: boolean;
+interface Data {
+  sessionUserId: string | null;
+  profileId: string | null;
   displayName: string;
   plot: string;
-  investedEver: boolean;
-  portfolio: Portfolio;
+  cashCents: number;
+  holdings: { instrumentId: string; quantity: number; avgCostCents: number }[];
   watchlist: string[];
-  grants: readonly CapitalGrant[];
-  points: readonly PointsAward[];
   completed: string[];
   quiz: Record<string, QuizResult>;
+  knowledgePoints: number;
+  learningCapitalCents: number;
+  hasInvested: boolean;
+  instruments: Instrument[];
+  prices: Map<string, number>;
+  loading: boolean;
 }
 
-const initialState: GameState = {
-  onboarded: false,
+const EMPTY: Data = {
+  sessionUserId: null,
+  profileId: null,
   displayName: "",
   plot: "",
-  investedEver: false,
-  portfolio: createPortfolio(),
+  cashCents: 0,
+  holdings: [],
   watchlist: [],
-  grants: [],
-  points: [],
   completed: [],
   quiz: {},
+  knowledgePoints: 0,
+  learningCapitalCents: 0,
+  hasInvested: false,
+  instruments: [],
+  prices: new Map(),
+  loading: true,
 };
 
-// Themenblöcke aus dem Inhalt ableiten (Block -> Modul-IDs).
-const BLOCKS: Record<string, string[]> = MODULES.reduce(
+const BLOCK_OF: Record<string, string> = Object.fromEntries(MODULES.map((m) => [m.id, m.block]));
+const BLOCK_IDS: Record<string, string[]> = MODULES.reduce(
   (acc, m) => {
     (acc[m.block] ??= []).push(m.id);
     return acc;
@@ -66,117 +72,27 @@ const BLOCKS: Record<string, string[]> = MODULES.reduce(
   {} as Record<string, string[]>
 );
 
-type Action =
-  | { type: "ONBOARD"; name: string; plot: string }
-  | { type: "BUY"; instrumentId: string; quantity: number; priceCents: number }
-  | { type: "SELL"; instrumentId: string; quantity: number; priceCents: number }
-  | { type: "TOGGLE_WATCH"; instrumentId: string }
-  | { type: "COMPLETE_MODULE"; moduleId: string; correct: number; total: number }
-  | { type: "RESET" };
-
-function applyRewards(state: GameState, moduleId: string, correct: number, total: number): GameState {
-  const score = total > 0 ? Math.round((correct / total) * 100) : 0;
-  const passed = total > 0 && correct / total >= PASS_RATIO;
-  const perfect = total > 0 && correct === total;
-
-  let grants = state.grants;
-  let points = state.points;
-  // Neu gewährtes Lernkapital wird dem Cash gutgeschrieben (man kann es investieren).
-  // Die Performance-Basis (Start + Lernkapital) wächst mit, daher ist der Erhalt
-  // performance-neutral – nur Markt und Gebühren bewegen die Quote.
-  let addedCapital = 0;
-  const grant = (reason: Parameters<typeof grantLearningCapital>[1], ref: string) => {
-    const r = grantLearningCapital(grants, reason, ref);
-    grants = r.grants;
-    addedCapital += r.addedCents;
-  };
-
-  grant("module_done", moduleId);
-  points = awardKnowledgePoints(points, "module_done", moduleId).awards;
-  if (passed) points = awardKnowledgePoints(points, "quiz_passed", moduleId).awards;
-  if (perfect) {
-    grant("quiz_perfect", moduleId);
-    points = awardKnowledgePoints(points, "quiz_perfect_bonus", moduleId).awards;
-  }
-
-  const completed = state.completed.includes(moduleId)
-    ? state.completed
-    : [...state.completed, moduleId];
-
-  // Themenblock-Belohnung, sobald ein Block vollständig abgeschlossen ist.
-  for (const [block, ids] of Object.entries(BLOCKS)) {
-    if (ids.every((id) => completed.includes(id))) {
-      grant("themenblock", block);
-      points = awardKnowledgePoints(points, "themenblock", block).awards;
-    }
-  }
-  // Großer Meilenstein: alle Module abgeschlossen.
-  if (MODULES.every((m) => completed.includes(m.id))) {
-    grant("milestone", "all-modules");
-    points = awardKnowledgePoints(points, "milestone", "all-modules").awards;
-  }
-
-  const portfolio =
-    addedCapital > 0
-      ? { ...state.portfolio, cashCents: state.portfolio.cashCents + addedCapital }
-      : state.portfolio;
-
-  return {
-    ...state,
-    grants,
-    points,
-    completed,
-    portfolio,
-    quiz: { ...state.quiz, [moduleId]: { score, perfect } },
-  };
+function plotKey(userId: string) {
+  return `hofino:plot:${userId}`;
 }
 
-function reducer(state: GameState, action: Action): GameState {
-  switch (action.type) {
-    case "ONBOARD":
-      return { ...state, onboarded: true, displayName: action.name, plot: action.plot };
-    case "BUY": {
-      const r = coreBuy(state.portfolio, action.instrumentId, action.quantity, action.priceCents);
-      if (!r.ok) return state;
-      return { ...state, portfolio: r.portfolio, investedEver: true };
-    }
-    case "SELL": {
-      const r = coreSell(state.portfolio, action.instrumentId, action.quantity, action.priceCents);
-      if (!r.ok) return state;
-      return { ...state, portfolio: r.portfolio };
-    }
-    case "TOGGLE_WATCH": {
-      const has = state.watchlist.includes(action.instrumentId);
-      return {
-        ...state,
-        watchlist: has
-          ? state.watchlist.filter((i) => i !== action.instrumentId)
-          : [...state.watchlist, action.instrumentId],
-      };
-    }
-    case "COMPLETE_MODULE":
-      return applyRewards(state, action.moduleId, action.correct, action.total);
-    case "RESET":
-      return initialState;
-    default:
-      return state;
-  }
-}
-
-function loadState(): GameState {
-  try {
-    const raw = globalThis.localStorage?.getItem(STORAGE_KEY);
-    if (raw) return { ...initialState, ...JSON.parse(raw) } as GameState;
-  } catch {
-    // ignorieren – frischer Start
-  }
-  return initialState;
-}
-
-export type OrderOutcome = { ok: true } | { ok: false; reason: OrderError };
+export type OrderOutcome = { ok: true } | { ok: false; reason: OrderError | "error" };
+export type AuthOutcome = { ok: true } | { ok: false; message: string };
 
 interface StoreApi {
-  state: GameState;
+  state: {
+    onboarded: boolean;
+    hasSession: boolean;
+    loading: boolean;
+    displayName: string;
+    plot: string;
+    portfolio: Portfolio;
+    watchlist: string[];
+    completed: string[];
+    quiz: Record<string, QuizResult>;
+  };
+  instruments: Instrument[];
+  instrumentById: Map<string, Instrument>;
   prices: ReadonlyMap<string, number>;
   derived: {
     holdingsValueCents: number;
@@ -187,93 +103,257 @@ interface StoreApi {
     houseStage: HouseStage;
     completedCount: number;
   };
-  onboard: (name: string, plot: string) => void;
-  buy: (instrumentId: string, quantity: number) => OrderOutcome;
-  sell: (instrumentId: string, quantity: number) => OrderOutcome;
-  toggleWatch: (instrumentId: string) => void;
-  completeModule: (moduleId: string, correct: number, total: number) => void;
-  reset: () => void;
+  register: (name: string, plot: string, email: string, password: string) => Promise<AuthOutcome>;
+  login: (email: string, password: string) => Promise<AuthOutcome>;
+  createProfile: (name: string, plot: string) => Promise<AuthOutcome>;
+  signOut: () => Promise<void>;
+  buy: (instrumentId: string, quantity: number) => Promise<OrderOutcome>;
+  sell: (instrumentId: string, quantity: number) => Promise<OrderOutcome>;
+  toggleWatch: (instrumentId: string) => Promise<void>;
+  completeModule: (moduleId: string, correct: number, total: number) => Promise<void>;
 }
 
 const StoreContext = createContext<StoreApi | null>(null);
 
 export function StoreProvider({ children }: { children: React.ReactNode }) {
-  const [state, dispatch] = useReducer(reducer, undefined, loadState);
-  const [, setTick] = useState(0);
+  const [data, setData] = useState<Data>(EMPTY);
+  const dataRef = useRef(data);
+  dataRef.current = data;
 
-  const provider = useMemo(
-    () => new SimulatedMarketDataProvider(INSTRUMENTS.map((i) => ({ id: i.id, basePriceCents: i.basePriceCents }))),
-    []
-  );
-
-  // Persistieren bei jeder Änderung.
-  useEffect(() => {
-    try {
-      globalThis.localStorage?.setItem(STORAGE_KEY, JSON.stringify(state));
-    } catch {
-      // ignorieren
+  const load = useCallback(async () => {
+    const { data: auth } = await supabase.auth.getUser();
+    const user = auth.user;
+    if (!user) {
+      setData({ ...EMPTY, loading: false });
+      return;
     }
-  }, [state]);
 
-  // Minütlich neu rendern (fängt Stundenwechsel der Kurse).
-  useEffect(() => {
-    const id = setInterval(() => setTick((t) => t + 1), 60_000);
-    return () => clearInterval(id);
+    const profileRes = await supabase
+      .from("profiles")
+      .select("id, role, display_name")
+      .eq("auth_user_id", user.id)
+      .maybeSingle();
+
+    if (!profileRes.data) {
+      setData({ ...EMPTY, sessionUserId: user.id, profileId: null, loading: false });
+      return;
+    }
+    const profileId = profileRes.data.id as string;
+
+    // Jüngste Kurs-Charge bestimmen.
+    const latest = await supabase
+      .from("price_snapshots")
+      .select("as_of")
+      .order("as_of", { ascending: false })
+      .limit(1);
+    const asOf = latest.data?.[0]?.as_of as string | undefined;
+
+    const [instrumentsRes, pricesRes, portfolioRes, holdingsRes, watchRes, learnRes, pointsRes, grantsRes, ordersRes] =
+      await Promise.all([
+        supabase.from("instruments").select("id, ticker, name, type, sector, country"),
+        asOf
+          ? supabase.from("price_snapshots").select("instrument_id, price_cents").eq("as_of", asOf)
+          : Promise.resolve({ data: [] as { instrument_id: string; price_cents: number }[] }),
+        supabase.from("portfolios").select("cash_cents").eq("owner_profile_id", profileId).maybeSingle(),
+        supabase.from("holdings").select("instrument_id, quantity, avg_cost_cents"),
+        supabase.from("watchlist").select("instrument_id"),
+        supabase.from("learning_progress").select("module_id, quiz_score, perfect, completed_at"),
+        supabase.from("knowledge_points").select("points"),
+        supabase.from("capital_grants").select("amount_cents"),
+        supabase.from("orders").select("id").limit(1),
+      ]);
+
+    const prices = new Map<string, number>();
+    for (const p of pricesRes.data ?? []) prices.set(p.instrument_id, p.price_cents);
+
+    const completed: string[] = [];
+    const quiz: Record<string, QuizResult> = {};
+    for (const lp of learnRes.data ?? []) {
+      if (lp.completed_at) completed.push(lp.module_id);
+      quiz[lp.module_id] = { score: lp.quiz_score ?? 0, perfect: !!lp.perfect };
+    }
+
+    setData({
+      sessionUserId: user.id,
+      profileId,
+      displayName: (profileRes.data.display_name as string) ?? "",
+      plot: globalThis.localStorage?.getItem(plotKey(user.id)) ?? "",
+      cashCents: portfolioRes.data?.cash_cents ?? 0,
+      holdings: (holdingsRes.data ?? []).map((h) => ({
+        instrumentId: h.instrument_id,
+        quantity: h.quantity,
+        avgCostCents: h.avg_cost_cents,
+      })),
+      watchlist: (watchRes.data ?? []).map((w) => w.instrument_id),
+      completed,
+      quiz,
+      knowledgePoints: (pointsRes.data ?? []).reduce((s, r) => s + r.points, 0),
+      learningCapitalCents: (grantsRes.data ?? []).reduce((s, r) => s + r.amount_cents, 0),
+      hasInvested: (ordersRes.data ?? []).length > 0,
+      instruments: (instrumentsRes.data ?? []) as Instrument[],
+      prices,
+      loading: false,
+    });
   }, []);
 
-  const prices = useMemo(() => {
-    const now = new Date();
-    const map = new Map<string, number>();
-    for (const i of INSTRUMENTS) map.set(i.id, provider.priceAtCents(i.id, now));
-    return map;
-  }, [provider, Math.floor(Date.now() / 3_600_000)]);
+  useEffect(() => {
+    load();
+    const { data: sub } = supabase.auth.onAuthStateChange(() => {
+      load();
+    });
+    return () => sub.subscription.unsubscribe();
+  }, [load]);
+
+  const register = useCallback<StoreApi["register"]>(
+    async (name, plot, email, password) => {
+      const { data: res, error } = await supabase.auth.signUp({ email, password });
+      if (error) return { ok: false, message: error.message };
+      const user = res.user;
+      if (!user) return { ok: false, message: "Keine Session erhalten." };
+      const ins = await supabase.from("profiles").insert({ auth_user_id: user.id, role: "child", display_name: name });
+      if (ins.error) return { ok: false, message: ins.error.message };
+      try {
+        globalThis.localStorage?.setItem(plotKey(user.id), plot);
+      } catch {
+        // ignorieren
+      }
+      await load();
+      return { ok: true };
+    },
+    [load]
+  );
+
+  const createProfile = useCallback<StoreApi["createProfile"]>(
+    async (name, plot) => {
+      const { data: auth } = await supabase.auth.getUser();
+      const user = auth.user;
+      if (!user) return { ok: false, message: "Nicht angemeldet." };
+      const ins = await supabase.from("profiles").insert({ auth_user_id: user.id, role: "child", display_name: name });
+      if (ins.error) return { ok: false, message: ins.error.message };
+      try {
+        globalThis.localStorage?.setItem(plotKey(user.id), plot);
+      } catch {
+        // ignorieren
+      }
+      await load();
+      return { ok: true };
+    },
+    [load]
+  );
+
+  const login = useCallback<StoreApi["login"]>(
+    async (email, password) => {
+      const { error } = await supabase.auth.signInWithPassword({ email, password });
+      if (error) return { ok: false, message: error.message };
+      await load();
+      return { ok: true };
+    },
+    [load]
+  );
+
+  const signOut = useCallback(async () => {
+    await supabase.auth.signOut();
+    setData({ ...EMPTY, loading: false });
+  }, []);
+
+  const order = useCallback(
+    async (instrumentId: string, quantity: number, side: "buy" | "sell"): Promise<OrderOutcome> => {
+      const { data: res, error } = await supabase.rpc("place_order", {
+        p_instrument: instrumentId,
+        p_side: side,
+        p_qty: quantity,
+      });
+      if (error) return { ok: false, reason: "error" };
+      if (!res?.ok) return { ok: false, reason: (res?.reason as OrderError) ?? "error" };
+      await load();
+      return { ok: true };
+    },
+    [load]
+  );
+
+  const toggleWatch = useCallback<StoreApi["toggleWatch"]>(
+    async (instrumentId) => {
+      const { profileId, watchlist } = dataRef.current;
+      if (!profileId) return;
+      if (watchlist.includes(instrumentId)) {
+        await supabase.from("watchlist").delete().eq("profile_id", profileId).eq("instrument_id", instrumentId);
+      } else {
+        await supabase.from("watchlist").insert({ profile_id: profileId, instrument_id: instrumentId });
+      }
+      await load();
+    },
+    [load]
+  );
+
+  const completeModule = useCallback<StoreApi["completeModule"]>(
+    async (moduleId, correct, total) => {
+      await supabase.rpc("complete_module", { p_module: moduleId, p_correct: correct, p_total: total });
+      await load();
+    },
+    [load]
+  );
+
+  const portfolio: Portfolio = useMemo(
+    () => ({
+      cashCents: data.cashCents,
+      holdings: data.holdings.map((h) => ({
+        instrumentId: h.instrumentId,
+        quantity: h.quantity,
+        avgCostCents: h.avgCostCents,
+      })),
+    }),
+    [data.cashCents, data.holdings]
+  );
+
+  const instrumentById = useMemo(() => new Map(data.instruments.map((i) => [i.id, i])), [data.instruments]);
 
   const derived = useMemo(() => {
-    const learningCapitalCents = totalLearningCapitalCents(state.grants);
-    const equityCents = depotValueCents(state.portfolio, prices);
+    const equityCents = depotValueCents(portfolio, data.prices);
+    const blocksDone = Object.values(BLOCK_IDS).filter((ids) =>
+      ids.every((id) => data.completed.includes(id))
+    ).length;
     return {
-      holdingsValueCents: holdingsValueCents(state.portfolio, prices),
+      holdingsValueCents: holdingsValueCents(portfolio, data.prices),
       equityCents,
-      learningCapitalCents,
-      knowledgePoints: totalKnowledgePoints(state.points),
-      performancePercent: performancePercent(equityCents, learningCapitalCents),
+      learningCapitalCents: data.learningCapitalCents,
+      knowledgePoints: data.knowledgePoints,
+      performancePercent: performancePercent(equityCents, data.learningCapitalCents),
       houseStage: houseStage({
-        hasInvested: state.investedEver,
-        modulesCompleted: state.completed.length,
+        hasInvested: data.hasInvested,
+        modulesCompleted: data.completed.length,
         riskAndDiversificationUnderstood:
-          state.completed.includes("m13") && state.completed.includes("m14"),
-        themenbloeckeCompleted: Object.values(BLOCKS).filter((ids) =>
-          ids.every((id) => state.completed.includes(id))
-        ).length,
-        milestonesReached: MODULES.every((m) => state.completed.includes(m.id)) ? 1 : 0,
+          data.completed.includes("m13") && data.completed.includes("m14"),
+        themenbloeckeCompleted: blocksDone,
+        milestonesReached: MODULES.every((m) => data.completed.includes(m.id)) ? 1 : 0,
       }),
-      completedCount: state.completed.length,
+      completedCount: data.completed.length,
     };
-  }, [state, prices]);
+  }, [portfolio, data.prices, data.completed, data.learningCapitalCents, data.knowledgePoints, data.hasInvested]);
 
   const api: StoreApi = {
-    state,
-    prices,
+    state: {
+      onboarded: data.profileId !== null,
+      hasSession: data.sessionUserId !== null,
+      loading: data.loading,
+      displayName: data.displayName,
+      plot: data.plot,
+      portfolio,
+      watchlist: data.watchlist,
+      completed: data.completed,
+      quiz: data.quiz,
+    },
+    instruments: data.instruments,
+    instrumentById,
+    prices: data.prices,
     derived,
-    onboard: (name, plot) => dispatch({ type: "ONBOARD", name, plot }),
-    buy: (instrumentId, quantity) => {
-      const priceCents = prices.get(instrumentId) ?? 0;
-      const r = coreBuy(state.portfolio, instrumentId, quantity, priceCents);
-      if (!r.ok) return { ok: false, reason: r.reason };
-      dispatch({ type: "BUY", instrumentId, quantity, priceCents });
-      return { ok: true };
-    },
-    sell: (instrumentId, quantity) => {
-      const priceCents = prices.get(instrumentId) ?? 0;
-      const r = coreSell(state.portfolio, instrumentId, quantity, priceCents);
-      if (!r.ok) return { ok: false, reason: r.reason };
-      dispatch({ type: "SELL", instrumentId, quantity, priceCents });
-      return { ok: true };
-    },
-    toggleWatch: (instrumentId) => dispatch({ type: "TOGGLE_WATCH", instrumentId }),
-    completeModule: (moduleId, correct, total) =>
-      dispatch({ type: "COMPLETE_MODULE", moduleId, correct, total }),
-    reset: () => dispatch({ type: "RESET" }),
+    register,
+    login,
+    createProfile,
+    signOut,
+    buy: (id, qty) => order(id, qty, "buy"),
+    sell: (id, qty) => order(id, qty, "sell"),
+    toggleWatch,
+    completeModule,
   };
 
   return <StoreContext.Provider value={api}>{children}</StoreContext.Provider>;
@@ -284,3 +364,6 @@ export function useStore(): StoreApi {
   if (!ctx) throw new Error("useStore muss innerhalb von StoreProvider verwendet werden");
   return ctx;
 }
+
+// Block-Zuordnung für andere Module bei Bedarf.
+export { BLOCK_OF };

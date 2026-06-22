@@ -16,6 +16,12 @@ pnpm web            # App im Browser (Expo Web, http://localhost:8081)
 Remote: `git@github.com:8kwwk8bzcc-cmyk/Hofino.git` (SSH). Ein lokaler `post-commit`-Hook
 pusht **nach jedem Commit automatisch** nach `origin/main`. Push-Log: `/tmp/hofino_autopush.log`.
 
+## App ↔ Supabase
+Die App nutzt Supabase (Auth + DB). Lokale Defaults sind in `apps/app/src/lib/supabase.ts`
+hinterlegt; für andere Umgebungen `EXPO_PUBLIC_SUPABASE_URL` / `EXPO_PUBLIC_SUPABASE_ANON_KEY`
+setzen. Voraussetzung: lokaler Supabase-Stack läuft (`pnpm exec supabase start`).
+Mutationen laufen über die RPCs `place_order` / `complete_module` (serverseitig, manipulationssicher).
+
 ## Was lokal läuft
 - ✅ Domänen-Logik + Tests (`packages/core`)
 - ✅ App im **Web-Browser** (`pnpm web`) — deckt auch den Lehrer-/Beamer-Modus ab

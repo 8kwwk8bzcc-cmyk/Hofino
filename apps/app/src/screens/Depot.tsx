@@ -2,13 +2,12 @@ import React, { useState } from "react";
 import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { formatEuros } from "@hofino/core";
 import { useStore } from "../store/store.js";
-import { INSTRUMENT_BY_ID } from "../data/instruments.js";
 import { Body, Card, H1, H2, Muted, Pill } from "../ui/components.js";
 import { TradePanel } from "../ui/TradePanel.js";
 import { colors, font, space } from "../theme.js";
 
 export function Depot() {
-  const { state, prices, derived } = useStore();
+  const { state, prices, derived, instrumentById } = useStore();
   const [sellId, setSellId] = useState<string | null>(null);
   const holdings = state.portfolio.holdings;
 
@@ -42,7 +41,7 @@ export function Depot() {
         <Card>
           <H2>Deine Positionen</H2>
           {holdings.map((h) => {
-            const inst = INSTRUMENT_BY_ID.get(h.instrumentId);
+            const inst = instrumentById.get(h.instrumentId);
             const price = prices.get(h.instrumentId) ?? 0;
             const value = price * h.quantity;
             const plPct = h.avgCostCents > 0 ? ((price - h.avgCostCents) / h.avgCostCents) * 100 : 0;
@@ -75,7 +74,7 @@ export function Depot() {
 
       {sellId && (
         <Card>
-          <H2>{INSTRUMENT_BY_ID.get(sellId)?.name} verkaufen</H2>
+          <H2>{instrumentById.get(sellId)?.name} verkaufen</H2>
           <TradePanel instrumentId={sellId} mode="sell" />
         </Card>
       )}

@@ -3,14 +3,13 @@ import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { formatEuros } from "@hofino/core";
 import { COMPANY_PROFILES, ETF_PROFILES } from "@hofino/content";
 import { useStore } from "../store/store.js";
-import { INSTRUMENTS, INSTRUMENT_BY_ID } from "../data/instruments.js";
 import { Body, Button, Card, H1, H2, Muted, Pill } from "../ui/components.js";
 import { TradePanel } from "../ui/TradePanel.js";
 import { colors, font, space } from "../theme.js";
 
 function Detail({ id, onBack }: { id: string; onBack: () => void }) {
-  const { prices, state, toggleWatch } = useStore();
-  const inst = INSTRUMENT_BY_ID.get(id)!;
+  const { prices, state, toggleWatch, instrumentById } = useStore();
+  const inst = instrumentById.get(id)!;
   const company = COMPANY_PROFILES.find((p) => p.ticker === inst.ticker);
   const etf = ETF_PROFILES.find((p) => p.ticker === inst.ticker);
   const watched = state.watchlist.includes(id);
@@ -82,8 +81,9 @@ function Field({ q, a }: { q: string; a: string }) {
 }
 
 function Row({ id, onOpen }: { id: string; onOpen: (id: string) => void }) {
-  const { prices, state } = useStore();
-  const inst = INSTRUMENT_BY_ID.get(id)!;
+  const { prices, state, instrumentById } = useStore();
+  const inst = instrumentById.get(id);
+  if (!inst) return null;
   return (
     <Pressable testID={`inst-${id}`} onPress={() => onOpen(id)} style={styles.row}>
       <View style={{ flex: 1 }}>
@@ -99,7 +99,7 @@ function Row({ id, onOpen }: { id: string; onOpen: (id: string) => void }) {
 }
 
 export function Discover() {
-  const { state } = useStore();
+  const { state, instruments } = useStore();
   const [selected, setSelected] = useState<string | null>(null);
 
   if (selected) return <Detail id={selected} onBack={() => setSelected(null)} />;
@@ -107,7 +107,7 @@ export function Discover() {
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <H1>Entdecken</H1>
-      <Muted>{INSTRUMENTS.length} Werte: bekannte Unternehmen und ETFs als Lernbeispiele.</Muted>
+      <Muted>{instruments.length} Werte: bekannte Unternehmen und ETFs als Lernbeispiele.</Muted>
 
       {state.watchlist.length > 0 && (
         <Card>
@@ -120,7 +120,7 @@ export function Discover() {
 
       <Card>
         <H2>Alle Werte</H2>
-        {INSTRUMENTS.map((i) => (
+        {instruments.map((i) => (
           <Row key={i.id} id={i.id} onOpen={setSelected} />
         ))}
       </Card>

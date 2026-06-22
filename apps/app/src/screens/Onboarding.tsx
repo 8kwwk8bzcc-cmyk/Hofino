@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ScrollView, StyleSheet, TextInput, View, Text, Pressable } from "react-native";
+import { Pressable, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 import { formatEuros, START_CAPITAL_CENTS } from "@hofino/core";
 import { useStore } from "../store/store.js";
 import { Body, Button, H1, HLogo, Muted } from "../ui/components.js";
@@ -11,12 +11,103 @@ const PLOTS = [
   { id: "stadt", emoji: "🏙️", label: "Platz in der Stadt" },
 ];
 
+function NameInput({ value, onChange }: { value: string; onChange: (v: string) => void }) {
+  return (
+    <View style={styles.block}>
+      <Text style={styles.label}>Wie möchtest du heißen?</Text>
+      <TextInput
+        testID="name-input"
+        value={value}
+        onChangeText={onChange}
+        placeholder="Anzeigename (kein echter Name nötig)"
+        placeholderTextColor={colors.textMuted}
+        style={styles.input}
+        maxLength={20}
+      />
+    </View>
+  );
+}
+
+function PlotPicker({ value, onChange }: { value: string; onChange: (v: string) => void }) {
+  return (
+    <View style={styles.block}>
+      <Text style={styles.label}>Wähle dein Grundstück</Text>
+      {PLOTS.map((p) => (
+        <Pressable
+          key={p.id}
+          testID={`plot-${p.id}`}
+          onPress={() => onChange(p.id)}
+          style={[styles.plot, value === p.id && styles.plotActive]}
+        >
+          <Text style={styles.plotEmoji}>{p.emoji}</Text>
+          <Text style={styles.plotLabel}>{p.label}</Text>
+          {value === p.id && <Text style={styles.check}>✓</Text>}
+        </Pressable>
+      ))}
+    </View>
+  );
+}
+
+function Credentials({
+  email,
+  password,
+  onEmail,
+  onPassword,
+}: {
+  email: string;
+  password: string;
+  onEmail: (v: string) => void;
+  onPassword: (v: string) => void;
+}) {
+  return (
+    <View style={styles.block}>
+      <TextInput
+        testID="email-input"
+        value={email}
+        onChangeText={onEmail}
+        placeholder="E-Mail"
+        autoCapitalize="none"
+        keyboardType="email-address"
+        placeholderTextColor={colors.textMuted}
+        style={styles.input}
+      />
+      <TextInput
+        testID="password-input"
+        value={password}
+        onChangeText={onPassword}
+        placeholder="Passwort (mind. 6 Zeichen)"
+        secureTextEntry
+        placeholderTextColor={colors.textMuted}
+        style={styles.input}
+      />
+    </View>
+  );
+}
+
 export function Onboarding() {
-  const { onboard } = useStore();
+  const { register, login } = useStore();
+  const [mode, setMode] = useState<"register" | "login">("register");
   const [name, setName] = useState("");
   const [plot, setPlot] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState<string | null>(null);
+  const [busy, setBusy] = useState(false);
 
-  const canStart = name.trim().length >= 2 && plot !== "";
+  const emailOk = /.+@.+\..+/.test(email);
+  const canRegister = name.trim().length >= 2 && plot !== "" && emailOk && password.length >= 6;
+  const canLogin = emailOk && password.length >= 6;
+
+  const submit = async () => {
+    setError(null);
+    setBusy(true);
+    const r =
+      mode === "register"
+        ? await register(name.trim(), plot, email.trim(), password)
+        : await login(email.trim(), password);
+    setBusy(false);
+    if (!r.ok) setError(r.message);
+  };
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
@@ -26,55 +117,79 @@ export function Onboarding() {
         <Muted>Geld verstehen. Investieren üben.</Muted>
       </View>
 
-      <View style={styles.block}>
-        <Text style={styles.label}>Wie möchtest du heißen?</Text>
-        <TextInput
-          testID="name-input"
-          value={name}
-          onChangeText={setName}
-          placeholder="Dein Anzeigename (kein echter Name nötig)"
-          placeholderTextColor={colors.textMuted}
-          style={styles.input}
-          maxLength={20}
-        />
-        <Muted>Du brauchst keinen echten Namen anzugeben.</Muted>
+      <View style={styles.tabs}>
+        <Pressable testID="mode-register" onPress={() => setMode("register")} style={[styles.tab, mode === "register" && styles.tabActive]}>
+          <Text style={[styles.tabText, mode === "register" && styles.tabTextActive]}>Neu hier</Text>
+        </Pressable>
+        <Pressable testID="mode-login" onPress={() => setMode("login")} style={[styles.tab, mode === "login" && styles.tabActive]}>
+          <Text style={[styles.tabText, mode === "login" && styles.tabTextActive]}>Anmelden</Text>
+        </Pressable>
       </View>
 
-      <View style={styles.block}>
-        <Text style={styles.label}>Wähle dein Grundstück</Text>
-        {PLOTS.map((p) => (
-          <Pressable
-            key={p.id}
-            testID={`plot-${p.id}`}
-            onPress={() => setPlot(p.id)}
-            style={[styles.plot, plot === p.id && styles.plotActive]}
-          >
-            <Text style={styles.plotEmoji}>{p.emoji}</Text>
-            <Text style={styles.plotLabel}>{p.label}</Text>
-            {plot === p.id && <Text style={styles.check}>✓</Text>}
-          </Pressable>
-        ))}
-      </View>
+      {mode === "register" && (
+        <>
+          <NameInput value={name} onChange={setName} />
+          <PlotPicker value={plot} onChange={setPlot} />
+        </>
+      )}
+      <Credentials email={email} password={password} onEmail={setEmail} onPassword={setPassword} />
 
-      <View style={styles.startBlock}>
+      {error && <Text style={styles.error}>{error}</Text>}
+
+      {mode === "register" && (
         <Body>
           Zum Start bekommst du <Text style={{ fontWeight: "800" }}>{formatEuros(START_CAPITAL_CENTS)}</Text>{" "}
           virtuelles Übungsgeld – kein echtes Geld.
         </Body>
-        <Button
-          testID="start-button"
-          title="Los geht's"
-          onPress={() => canStart && onboard(name.trim(), plot)}
-          disabled={!canStart}
-        />
+      )}
+
+      <Button
+        testID="start-button"
+        title={busy ? "Bitte warten…" : mode === "register" ? "Los geht's" : "Anmelden"}
+        onPress={submit}
+        disabled={busy || (mode === "register" ? !canRegister : !canLogin)}
+      />
+    </ScrollView>
+  );
+}
+
+export function ProfileSetup() {
+  const { createProfile, signOut } = useStore();
+  const [name, setName] = useState("");
+  const [plot, setPlot] = useState("");
+  const [error, setError] = useState<string | null>(null);
+
+  return (
+    <ScrollView contentContainerStyle={styles.container}>
+      <View style={styles.header}>
+        <HLogo size={56} />
+        <H1>Profil einrichten</H1>
       </View>
+      <NameInput value={name} onChange={setName} />
+      <PlotPicker value={plot} onChange={setPlot} />
+      {error && <Text style={styles.error}>{error}</Text>}
+      <Button
+        testID="create-profile"
+        title="Weiter"
+        disabled={name.trim().length < 2 || plot === ""}
+        onPress={async () => {
+          const r = await createProfile(name.trim(), plot);
+          if (!r.ok) setError(r.message);
+        }}
+      />
+      <Button title="Abmelden" variant="ghost" onPress={signOut} />
     </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: { padding: space.xl, gap: space.xl, backgroundColor: colors.background, flexGrow: 1 },
-  header: { alignItems: "center", gap: space.sm, marginTop: space.xl },
+  container: { padding: space.xl, gap: space.lg, backgroundColor: colors.background, flexGrow: 1 },
+  header: { alignItems: "center", gap: space.sm, marginTop: space.lg },
+  tabs: { flexDirection: "row", gap: space.sm },
+  tab: { flex: 1, padding: space.md, borderRadius: radius.md, alignItems: "center", backgroundColor: colors.surface, borderWidth: 1, borderColor: colors.border },
+  tabActive: { borderColor: colors.primary, backgroundColor: colors.primary },
+  tabText: { fontWeight: "700", color: colors.primary },
+  tabTextActive: { color: "#FFFFFF" },
   block: { gap: space.sm },
   label: { fontSize: font.h3, fontWeight: "700", color: colors.text },
   input: {
@@ -100,5 +215,5 @@ const styles = StyleSheet.create({
   plotEmoji: { fontSize: 28 },
   plotLabel: { flex: 1, fontSize: font.body, fontWeight: "600", color: colors.text },
   check: { color: colors.secondary, fontWeight: "800", fontSize: font.h3 },
-  startBlock: { gap: space.md, marginTop: "auto" },
+  error: { color: colors.danger, fontWeight: "600", fontSize: font.small },
 });

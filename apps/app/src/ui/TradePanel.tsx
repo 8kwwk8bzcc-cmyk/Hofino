@@ -25,8 +25,9 @@ export function TradePanel({ instrumentId, mode }: { instrumentId: string; mode:
     setQty((q) => Math.max(1, q + d));
   };
 
-  const submit = () => {
-    const r: OrderOutcome = mode === "buy" ? buy(instrumentId, qty) : sell(instrumentId, qty);
+  const submit = async () => {
+    setMsg(null);
+    const r: OrderOutcome = mode === "buy" ? await buy(instrumentId, qty) : await sell(instrumentId, qty);
     if (r.ok) {
       setMsg(mode === "buy" ? `Gekauft: ${qty} Stück.` : `Verkauft: ${qty} Stück.`);
       setQty(1);

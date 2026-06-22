@@ -1,7 +1,16 @@
 import React, { useState } from "react";
-import { Platform, Pressable, SafeAreaView, StatusBar, StyleSheet, Text, View } from "react-native";
+import {
+  ActivityIndicator,
+  Platform,
+  Pressable,
+  SafeAreaView,
+  StatusBar,
+  StyleSheet,
+  Text,
+  View,
+} from "react-native";
 import { StoreProvider, useStore } from "./store/store.js";
-import { Onboarding } from "./screens/Onboarding.js";
+import { Onboarding, ProfileSetup } from "./screens/Onboarding.js";
 import { Home } from "./screens/Home.js";
 import { Discover } from "./screens/Discover.js";
 import { Depot } from "./screens/Depot.js";
@@ -19,14 +28,18 @@ const TABS: { id: TabId; icon: string; label: string }[] = [
   { id: "rankings", icon: "🏆", label: "Ligen" },
 ];
 
-function Shell() {
-  const { state } = useStore();
+function Main() {
+  const { signOut } = useStore();
   const [tab, setTab] = useState<TabId>("home");
-
-  if (!state.onboarded) return <Onboarding />;
 
   return (
     <View style={styles.shell}>
+      <View style={styles.topbar}>
+        <Text style={styles.brand}>Hofino</Text>
+        <Pressable testID="logout" onPress={signOut}>
+          <Text style={styles.logout}>Abmelden</Text>
+        </Pressable>
+      </View>
       <View style={styles.screen}>
         {tab === "home" && <Home />}
         {tab === "learn" && <Learn />}
@@ -49,12 +62,26 @@ function Shell() {
   );
 }
 
+function Gate() {
+  const { state } = useStore();
+  if (state.loading) {
+    return (
+      <View style={styles.center}>
+        <ActivityIndicator color={colors.primary} />
+      </View>
+    );
+  }
+  if (!state.hasSession) return <Onboarding />;
+  if (!state.onboarded) return <ProfileSetup />;
+  return <Main />;
+}
+
 export default function App() {
   return (
     <SafeAreaView style={styles.safe}>
       <StatusBar barStyle="dark-content" />
       <StoreProvider>
-        <Shell />
+        <Gate />
       </StoreProvider>
     </SafeAreaView>
   );
@@ -62,7 +89,20 @@ export default function App() {
 
 const styles = StyleSheet.create({
   safe: { flex: 1, backgroundColor: colors.background, paddingTop: Platform.OS === "android" ? 24 : 0 },
+  center: { flex: 1, alignItems: "center", justifyContent: "center" },
   shell: { flex: 1 },
+  topbar: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    paddingHorizontal: space.lg,
+    paddingVertical: space.sm,
+    borderBottomWidth: 1,
+    borderBottomColor: colors.border,
+    backgroundColor: colors.surface,
+  },
+  brand: { fontWeight: "800", color: colors.primary, fontSize: 16 },
+  logout: { color: colors.textMuted, fontWeight: "600", fontSize: 13 },
   screen: { flex: 1 },
   tabbar: {
     flexDirection: "row",
