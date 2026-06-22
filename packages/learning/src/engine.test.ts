@@ -8,7 +8,7 @@ import {
   naechsterLeitner,
   waehleDistraktoren,
 } from "./engine.js";
-import { fragenFuer, vorlagenFuer } from "./seed.js";
+import { fragenFuer, vorlagenFuer, SEED } from "./seed.js";
 import type { Frage } from "./types.js";
 
 const POOL = [
@@ -56,6 +56,19 @@ describe("instanziiereVorlage – Kollisions-Validierung", () => {
     const inst = instanziiereVorlage(v, makeRng(3));
     expect(inst.frage).not.toContain("{");
   });
+});
+
+describe("alle Vorlagen erzeugen kollisionsfreie Instanzen", () => {
+  for (const v of SEED.vorlagen) {
+    it(`${v.id} (200×)`, () => {
+      for (let s = 0; s < 200; s++) {
+        const inst = instanziiereVorlage(v, makeRng(s * 7 + 1));
+        const texte = inst.optionen.map((o) => o.text);
+        expect(new Set(texte).size).toBe(texte.length);
+        expect(inst.optionen.filter((o) => o.korrekt)).toHaveLength(1);
+      }
+    });
+  }
 });
 
 describe("naechsterLeitner", () => {

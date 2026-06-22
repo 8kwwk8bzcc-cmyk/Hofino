@@ -1,6 +1,6 @@
 // Importiert die Lern-Inhalte (Seed-JSON) in die DB-Inhaltstabellen. Idempotent (upsert).
 // Ausführen:  node apps/app/scripts/seed-learning.mjs
-import { readFileSync } from "node:fs";
+import { readFileSync, readdirSync, existsSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 import { createClient } from "@supabase/supabase-js";
@@ -12,7 +12,22 @@ const SERVICE =
 
 const admin = createClient(URL, SERVICE, { auth: { persistSession: false, autoRefreshToken: false } });
 const here = dirname(fileURLToPath(import.meta.url));
-const seed = JSON.parse(readFileSync(join(here, "../../../packages/learning/src/seed.json"), "utf8"));
+const srcDir = join(here, "../../../packages/learning/src");
+const contentDir = join(srcDir, "content");
+
+// Basis-Seed + alle Themenblock-Dateien zusammenführen (dedupliziert nach id).
+const quellen = [JSON.parse(readFileSync(join(srcDir, "seed.json"), "utf8"))];
+if (existsSync(contentDir)) {
+  for (const f of readdirSync(contentDir).filter((n) => n.endsWith(".json"))) {
+    quellen.push(JSON.parse(readFileSync(join(contentDir, f), "utf8")));
+  }
+}
+const byId = (key) => {
+  const map = new Map();
+  for (const q of quellen) for (const item of q[key] ?? []) map.set(item.id, item);
+  return [...map.values()];
+};
+const seed = { themenbloecke: byId("themenbloecke"), konzepte: byId("konzepte"), fragen: byId("fragen"), vorlagen: byId("vorlagen") };
 
 async function up(table, rows, onConflict) {
   if (!rows?.length) return;

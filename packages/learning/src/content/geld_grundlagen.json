@@ -1,0 +1,321 @@
+{
+  "_hinweis": "Themenblock Geld-Grundlagen (Module 1-4). Struktur exakt wie seed.json.",
+  "themenbloecke": [{ "id": "tb_geld_grundlagen", "titel": { "de": "Geld-Grundlagen" } }],
+  "konzepte": [
+    {
+      "id": "konzept_geld",
+      "modul_nr": 1,
+      "themenblock_id": "tb_geld_grundlagen",
+      "titel": { "de": "Was ist Geld?" },
+      "ist_rechnerisch": false,
+      "voraussetzungen": [],
+      "freischalt_level": 1,
+      "erklaerungen": {
+        "kind_8_10": { "de": "Geld ist etwas, womit man Dinge kaufen kann – zum Beispiel Muenzen und Scheine. Frueher haben Menschen Sachen getauscht, etwa einen Apfel gegen Brot. Mit Geld geht das viel einfacher." },
+        "kind_11_14": { "de": "Geld ist ein Tauschmittel. Statt Waren direkt zu tauschen, benutzen wir Geld, weil es jeder annimmt. So kann man Dinge leichter kaufen, verkaufen und ihren Wert vergleichen." },
+        "eltern_lehrer": { "de": "Geld erfuellt drei Funktionen: Zahlungsmittel, Recheneinheit (Wertmassstab) und Wertaufbewahrung. Sein Wert beruht auf Vertrauen und allgemeiner Akzeptanz." }
+      },
+      "stufen": ["erklaeren", "erkennen", "verstehen", "anwenden", "meistern"]
+    },
+    {
+      "id": "konzept_sparen",
+      "modul_nr": 2,
+      "themenblock_id": "tb_geld_grundlagen",
+      "titel": { "de": "Sparen vs. Ausgeben" },
+      "ist_rechnerisch": true,
+      "voraussetzungen": ["konzept_geld"],
+      "freischalt_level": 1,
+      "erklaerungen": {
+        "kind_8_10": { "de": "Sparen heisst, Geld nicht sofort auszugeben, sondern aufzuheben. Wenn du jede Woche etwas zur Seite legst, hast du spaeter mehr fuer etwas Groesseres." },
+        "kind_11_14": { "de": "Sparen bedeutet, Geld zurueckzulegen, statt es gleich auszugeben. So kannst du dir spaeter groessere Dinge leisten oder hast einen Puffer fuer Unerwartetes." },
+        "eltern_lehrer": { "de": "Sparen ist Konsumverzicht zugunsten spaeteren Konsums; es schafft einen Liquiditaetspuffer und ermoeglicht groessere Anschaffungen oder Investitionen." }
+      },
+      "stufen": ["erklaeren", "erkennen", "verstehen", "anwenden", "meistern"]
+    },
+    {
+      "id": "konzept_konten",
+      "modul_nr": 3,
+      "themenblock_id": "tb_geld_grundlagen",
+      "titel": { "de": "Sparbuch, Girokonto, Tagesgeld" },
+      "ist_rechnerisch": false,
+      "voraussetzungen": ["konzept_sparen"],
+      "freischalt_level": 1,
+      "erklaerungen": {
+        "kind_8_10": { "de": "Ein Girokonto ist wie ein Geldbeutel bei der Bank: Geld kommt rein und geht raus. Ein Sparkonto ist zum Aufheben von Geld." },
+        "kind_11_14": { "de": "Auf dem Girokonto laeuft dein taeglicher Zahlungsverkehr. Sparbuch und Tagesgeld sind zum Zuruecklegen gedacht und geben oft kleine Zinsen; Tagesgeld ist flexibler als ein klassisches Sparbuch." },
+        "eltern_lehrer": { "de": "Girokonto = Zahlungsverkehr (kaum Zinsen), Tagesgeld = taeglich verfuegbar mit variablem Zins, Sparbuch = klassische, niedrig verzinste Spareinlage." }
+      },
+      "stufen": ["erklaeren", "erkennen", "verstehen", "anwenden", "meistern"]
+    },
+    {
+      "id": "konzept_inflation",
+      "modul_nr": 4,
+      "themenblock_id": "tb_geld_grundlagen",
+      "titel": { "de": "Was ist Inflation?" },
+      "ist_rechnerisch": true,
+      "voraussetzungen": ["konzept_konten"],
+      "freischalt_level": 1,
+      "erklaerungen": {
+        "kind_8_10": { "de": "Inflation heisst, dass Dinge mit der Zeit teurer werden. Fuer dein Geld bekommst du dann weniger als frueher." },
+        "kind_11_14": { "de": "Inflation bedeutet, dass die Preise allgemein steigen. Dein Geld verliert an Kaufkraft – fuer denselben Betrag bekommst du weniger." },
+        "eltern_lehrer": { "de": "Inflation ist der Anstieg des allgemeinen Preisniveaus; die Kaufkraft des Geldes sinkt. Gemessen ueber die jaehrliche Veraenderung eines Warenkorbs." }
+      },
+      "stufen": ["erklaeren", "erkennen", "verstehen", "anwenden", "meistern"]
+    }
+  ],
+  "fragen": [
+    {
+      "id": "q_geld_001", "konzept_id": "konzept_geld", "stufe": "erklaeren", "typ": "multiple_choice",
+      "frage": { "de": "Wofuer benutzt man Geld?" },
+      "korrekte_antwort": { "de": "Um Dinge zu kaufen und zu bezahlen" },
+      "distraktor_pool": [
+        { "text": { "de": "Um es zu essen" }, "naehe": 1 },
+        { "text": { "de": "Um damit zu malen" }, "naehe": 1 },
+        { "text": { "de": "Um es wegzuwerfen" }, "naehe": 1 }
+      ],
+      "anzahl_distraktoren_angezeigt": 3,
+      "erklaerung_nach_antwort": { "de": "Genau – mit Geld kann man Dinge kaufen und bezahlen." },
+      "wissenspunkte": 100
+    },
+    {
+      "id": "q_geld_002", "konzept_id": "konzept_geld", "stufe": "erkennen", "typ": "multiple_choice",
+      "frage": { "de": "Was gehoert zu Geld?" },
+      "korrekte_antwort": { "de": "Muenzen und Scheine" },
+      "distraktor_pool": [
+        { "text": { "de": "Nur Muscheln vom Strand" }, "naehe": 1 },
+        { "text": { "de": "Ein Spielzeugauto" }, "naehe": 1 },
+        { "text": { "de": "Spielgeld aus einem Brettspiel" }, "naehe": 2 }
+      ],
+      "anzahl_distraktoren_angezeigt": 3,
+      "erklaerung_nach_antwort": { "de": "Richtig – echtes Geld sind z. B. Muenzen und Scheine (und Geld auf dem Konto)." },
+      "wissenspunkte": 100
+    },
+    {
+      "id": "q_geld_003", "konzept_id": "konzept_geld", "stufe": "verstehen", "typ": "multiple_choice",
+      "frage": { "de": "Warum war reines Tauschen (z. B. Apfel gegen Brot) umstaendlich?" },
+      "korrekte_antwort": { "de": "Man musste jemanden finden, der genau das Passende anbietet und haben will" },
+      "distraktor_pool": [
+        { "text": { "de": "Weil Aepfel zu schwer sind" }, "naehe": 1 },
+        { "text": { "de": "Weil Brot zu teuer war" }, "naehe": 2 },
+        { "text": { "de": "Weil Tauschen verboten ist" }, "naehe": 1 }
+      ],
+      "anzahl_distraktoren_angezeigt": 3,
+      "erklaerung_nach_antwort": { "de": "Genau – beim Tauschen muessen zwei Leute zufaellig genau das Passende wollen. Geld loest das." },
+      "wissenspunkte": 100
+    },
+    {
+      "id": "q_geld_004", "konzept_id": "konzept_geld", "stufe": "anwenden", "typ": "multiple_choice",
+      "frage": { "de": "Warum nehmen Menschen Geld im Tausch fuer ihre Waren an?" },
+      "korrekte_antwort": { "de": "Weil sie wissen, dass auch andere es wieder annehmen" },
+      "distraktor_pool": [
+        { "text": { "de": "Weil Geld immer aus Gold besteht" }, "naehe": 3 },
+        { "text": { "de": "Weil der Staat es jedem schenkt" }, "naehe": 2 },
+        { "text": { "de": "Weil Geld essbar ist" }, "naehe": 1 }
+      ],
+      "anzahl_distraktoren_angezeigt": 3,
+      "erklaerung_nach_antwort": { "de": "Geld funktioniert durch Vertrauen: alle akzeptieren es, weil alle es akzeptieren." },
+      "wissenspunkte": 120
+    },
+    {
+      "id": "q_geld_005", "konzept_id": "konzept_geld", "stufe": "meistern", "typ": "multiple_choice",
+      "frage": { "de": "Welche Aussage ueber Geld stimmt?" },
+      "korrekte_antwort": { "de": "Geld ist ein Tauschmittel, dessen Wert auf dem Vertrauen aller beruht" },
+      "distraktor_pool": [
+        { "text": { "de": "Geld hat nur Wert, wenn es aus Edelmetall besteht" }, "naehe": 3 },
+        { "text": { "de": "Geld entsteht, indem jeder selbst Scheine druckt" }, "naehe": 2 },
+        { "text": { "de": "Geld ist dasselbe wie Glueck" }, "naehe": 2 }
+      ],
+      "anzahl_distraktoren_angezeigt": 3,
+      "erklaerung_nach_antwort": { "de": "Geld ist ein Tauschmittel; sein Wert kommt aus Vertrauen und Akzeptanz, nicht aus dem Material." },
+      "wissenspunkte": 150
+    },
+
+    {
+      "id": "q_spar_001", "konzept_id": "konzept_sparen", "stufe": "erklaeren", "typ": "multiple_choice",
+      "frage": { "de": "Was bedeutet sparen?" },
+      "korrekte_antwort": { "de": "Geld fuer spaeter zuruecklegen" },
+      "distraktor_pool": [
+        { "text": { "de": "Alles sofort ausgeben" }, "naehe": 2 },
+        { "text": { "de": "Geld verlieren" }, "naehe": 1 },
+        { "text": { "de": "Geld verschenken" }, "naehe": 1 }
+      ],
+      "anzahl_distraktoren_angezeigt": 3,
+      "erklaerung_nach_antwort": { "de": "Sparen heisst, etwas zurueckzulegen statt es gleich auszugeben." },
+      "wissenspunkte": 100
+    },
+    {
+      "id": "q_spar_002", "konzept_id": "konzept_sparen", "stufe": "erkennen", "typ": "multiple_choice",
+      "frage": { "de": "Welches Verhalten ist sparen?" },
+      "korrekte_antwort": { "de": "Einen Teil des Taschengelds aufheben" },
+      "distraktor_pool": [
+        { "text": { "de": "Alles sofort fuer Suessigkeiten ausgeben" }, "naehe": 2 },
+        { "text": { "de": "Mehr ausgeben, als man hat" }, "naehe": 2 },
+        { "text": { "de": "Geld wegwerfen" }, "naehe": 1 }
+      ],
+      "anzahl_distraktoren_angezeigt": 3,
+      "erklaerung_nach_antwort": { "de": "Wer einen Teil zuruecklegt, spart." },
+      "wissenspunkte": 100
+    },
+    {
+      "id": "q_spar_003", "konzept_id": "konzept_sparen", "stufe": "verstehen", "typ": "multiple_choice",
+      "frage": { "de": "Warum kann Sparen sinnvoll sein?" },
+      "korrekte_antwort": { "de": "Um spaeter ein groesseres Ziel zu erreichen oder Unerwartetes abzufedern" },
+      "distraktor_pool": [
+        { "text": { "de": "Weil Ausgeben verboten ist" }, "naehe": 1 },
+        { "text": { "de": "Damit das Geld weniger wird" }, "naehe": 1 },
+        { "text": { "de": "Weil man Geld nie benutzen darf" }, "naehe": 1 }
+      ],
+      "anzahl_distraktoren_angezeigt": 3,
+      "erklaerung_nach_antwort": { "de": "Sparen schafft Spielraum fuer groessere Ziele und einen Puffer." },
+      "wissenspunkte": 100
+    },
+
+    {
+      "id": "q_kto_001", "konzept_id": "konzept_konten", "stufe": "erklaeren", "typ": "multiple_choice",
+      "frage": { "de": "Wofuer ist ein Girokonto vor allem da?" },
+      "korrekte_antwort": { "de": "Fuer den taeglichen Zahlungsverkehr (Geld bekommen und ausgeben)" },
+      "distraktor_pool": [
+        { "text": { "de": "Fuer besonders hohe Zinsen" }, "naehe": 2 },
+        { "text": { "de": "Zum Aktienkauf" }, "naehe": 2 },
+        { "text": { "de": "Zum Verstecken von Geld" }, "naehe": 1 }
+      ],
+      "anzahl_distraktoren_angezeigt": 3,
+      "erklaerung_nach_antwort": { "de": "Das Girokonto ist fuer den taeglichen Zahlungsverkehr da." },
+      "wissenspunkte": 100
+    },
+    {
+      "id": "q_kto_002", "konzept_id": "konzept_konten", "stufe": "erkennen", "typ": "multiple_choice",
+      "frage": { "de": "Welches Konto ist eher zum Zuruecklegen gedacht?" },
+      "korrekte_antwort": { "de": "Das Tagesgeldkonto" },
+      "distraktor_pool": [
+        { "text": { "de": "Das Girokonto" }, "naehe": 3 },
+        { "text": { "de": "Das Bargeld in der Hosentasche" }, "naehe": 2 },
+        { "text": { "de": "Gar keines" }, "naehe": 1 }
+      ],
+      "anzahl_distraktoren_angezeigt": 3,
+      "erklaerung_nach_antwort": { "de": "Tagesgeld (oder Sparbuch) ist zum Zuruecklegen gedacht, das Girokonto fuer Alltagszahlungen." },
+      "wissenspunkte": 100
+    },
+    {
+      "id": "q_kto_003", "konzept_id": "konzept_konten", "stufe": "verstehen", "typ": "multiple_choice",
+      "frage": { "de": "Was ist typisch fuer Tagesgeld?" },
+      "korrekte_antwort": { "de": "Geld ist flexibel verfuegbar und wird verzinst" },
+      "distraktor_pool": [
+        { "text": { "de": "Man kommt nie wieder an sein Geld" }, "naehe": 2 },
+        { "text": { "de": "Es kostet jeden Monat Gebuehren" }, "naehe": 2 },
+        { "text": { "de": "Es ist dasselbe wie eine Aktie" }, "naehe": 2 }
+      ],
+      "anzahl_distraktoren_angezeigt": 3,
+      "erklaerung_nach_antwort": { "de": "Tagesgeld ist taeglich verfuegbar und wird verzinst – ohne Kursrisiko wie bei Aktien." },
+      "wissenspunkte": 100
+    },
+    {
+      "id": "q_kto_004", "konzept_id": "konzept_konten", "stufe": "anwenden", "typ": "multiple_choice",
+      "frage": { "de": "Du bekommst dein Taschengeld ueberwiesen und zahlst damit Dinge. Welches Konto passt dafuer?" },
+      "korrekte_antwort": { "de": "Girokonto" },
+      "distraktor_pool": [
+        { "text": { "de": "Sparbuch" }, "naehe": 3 },
+        { "text": { "de": "Tagesgeld" }, "naehe": 3 },
+        { "text": { "de": "Depot" }, "naehe": 2 }
+      ],
+      "anzahl_distraktoren_angezeigt": 3,
+      "erklaerung_nach_antwort": { "de": "Fuer Alltagszahlungen ist das Girokonto da." },
+      "wissenspunkte": 120
+    },
+    {
+      "id": "q_kto_005", "konzept_id": "konzept_konten", "stufe": "meistern", "typ": "multiple_choice",
+      "frage": { "de": "Welche Aussage stimmt?" },
+      "korrekte_antwort": { "de": "Sparbuch, Tagesgeld und Girokonto sind sicher, bringen aber meist kaum hohe Renditen" },
+      "distraktor_pool": [
+        { "text": { "de": "Das Girokonto bringt die hoechsten Zinsen" }, "naehe": 3 },
+        { "text": { "de": "Auf dem Sparbuch verliert man immer Geld" }, "naehe": 2 },
+        { "text": { "de": "Tagesgeld ist riskanter als Aktien" }, "naehe": 3 }
+      ],
+      "anzahl_distraktoren_angezeigt": 3,
+      "erklaerung_nach_antwort": { "de": "Diese Konten sind sicher, aber renditearm – fuer mehr Rendite braucht es z. B. breit gestreute Anlagen." },
+      "wissenspunkte": 150
+    },
+
+    {
+      "id": "q_inf_001", "konzept_id": "konzept_inflation", "stufe": "erklaeren", "typ": "multiple_choice",
+      "frage": { "de": "Was passiert bei Inflation?" },
+      "korrekte_antwort": { "de": "Die Preise steigen, Geld ist weniger wert" },
+      "distraktor_pool": [
+        { "text": { "de": "Die Preise fallen immer" }, "naehe": 2 },
+        { "text": { "de": "Geld wird mehr wert" }, "naehe": 2 },
+        { "text": { "de": "Nichts aendert sich" }, "naehe": 1 }
+      ],
+      "anzahl_distraktoren_angezeigt": 3,
+      "erklaerung_nach_antwort": { "de": "Bei Inflation steigen die Preise – dein Geld ist weniger wert." },
+      "wissenspunkte": 100
+    },
+    {
+      "id": "q_inf_002", "konzept_id": "konzept_inflation", "stufe": "erkennen", "typ": "multiple_choice",
+      "frage": { "de": "Ein Broetchen kostet erst 50 Cent, spaeter 55 Cent. Das ist ein Beispiel fuer …" },
+      "korrekte_antwort": { "de": "Inflation" },
+      "distraktor_pool": [
+        { "text": { "de": "einen Rabatt" }, "naehe": 2 },
+        { "text": { "de": "ein Tauschgeschaeft" }, "naehe": 1 },
+        { "text": { "de": "einen Gewinn" }, "naehe": 2 }
+      ],
+      "anzahl_distraktoren_angezeigt": 3,
+      "erklaerung_nach_antwort": { "de": "Steigende Preise sind Inflation." },
+      "wissenspunkte": 100
+    },
+    {
+      "id": "q_inf_003", "konzept_id": "konzept_inflation", "stufe": "verstehen", "typ": "multiple_choice",
+      "frage": { "de": "Was bedeutet Inflation fuer deine Kaufkraft?" },
+      "korrekte_antwort": { "de": "Du kannst dir fuer dasselbe Geld weniger kaufen" },
+      "distraktor_pool": [
+        { "text": { "de": "Du kannst dir mehr kaufen" }, "naehe": 2 },
+        { "text": { "de": "Deine Kaufkraft bleibt gleich" }, "naehe": 2 },
+        { "text": { "de": "Dein Geld verschwindet komplett" }, "naehe": 1 }
+      ],
+      "anzahl_distraktoren_angezeigt": 3,
+      "erklaerung_nach_antwort": { "de": "Inflation senkt die Kaufkraft: fuer denselben Betrag gibt es weniger." },
+      "wissenspunkte": 100
+    }
+  ],
+  "vorlagen": [
+    {
+      "id": "tmpl_spar_anwenden", "konzept_id": "konzept_sparen", "stufe": "anwenden",
+      "parameter": { "betrag": { "typ": "int", "min": 2, "max": 20 }, "monate": { "typ": "int", "min": 2, "max": 12 } },
+      "frage_vorlage": { "de": "Du legst jeden Monat {betrag} Euro zur Seite. Wie viel hast du nach {monate} Monaten gespart?" },
+      "loesung_formel": "betrag * monate",
+      "distraktor_formeln": ["betrag + monate", "betrag * monate - betrag", "betrag * (monate + 1)"],
+      "einheit": "Euro", "rundung": "ganzzahl",
+      "erklaerung_nach_antwort": { "de": "Pro Monat {betrag} Euro, also {betrag} mal {monate} Monate." },
+      "wissenspunkte": 150
+    },
+    {
+      "id": "tmpl_spar_meistern", "konzept_id": "konzept_sparen", "stufe": "meistern",
+      "parameter": { "betrag": { "typ": "int", "min": 2, "max": 20 }, "monate": { "typ": "int", "min": 2, "max": 12 }, "bonus": { "typ": "int", "min": 5, "max": 50 } },
+      "frage_vorlage": { "de": "Du sparst {monate} Monate lang je {betrag} Euro. Am Ende legen deine Eltern {bonus} Euro drauf. Wie viel hast du dann?" },
+      "loesung_formel": "betrag * monate + bonus",
+      "distraktor_formeln": ["betrag * monate", "betrag * monate - bonus", "betrag * (monate + 1) + bonus"],
+      "einheit": "Euro", "rundung": "ganzzahl",
+      "erklaerung_nach_antwort": { "de": "Erst {betrag} mal {monate} sparen, dann {bonus} Euro Bonus dazu." },
+      "wissenspunkte": 200
+    },
+    {
+      "id": "tmpl_inf_anwenden", "konzept_id": "konzept_inflation", "stufe": "anwenden",
+      "parameter": { "preis": { "typ": "int", "min": 100, "max": 500 }, "prozent": { "typ": "int", "min": 2, "max": 8 } },
+      "frage_vorlage": { "de": "Etwas kostet {preis} Euro und wird um {prozent} Prozent teurer. Um wie viele Euro steigt der Preis (gerundet)?" },
+      "loesung_formel": "preis * prozent / 100",
+      "distraktor_formeln": ["preis * prozent", "preis + prozent", "preis / prozent"],
+      "einheit": "Euro", "rundung": "ganzzahl",
+      "erklaerung_nach_antwort": { "de": "{prozent} Prozent von {preis} Euro = {preis} mal {prozent} geteilt durch 100." },
+      "wissenspunkte": 150
+    },
+    {
+      "id": "tmpl_inf_meistern", "konzept_id": "konzept_inflation", "stufe": "meistern",
+      "parameter": { "preis": { "typ": "int", "min": 100, "max": 500 }, "prozent": { "typ": "int", "min": 2, "max": 8 } },
+      "frage_vorlage": { "de": "Etwas kostet {preis} Euro. Der Preis steigt zwei Jahre lang um je {prozent} Prozent (vereinfacht, ohne Zinseszins). Um wie viele Euro steigt er insgesamt (gerundet)?" },
+      "loesung_formel": "2 * preis * prozent / 100",
+      "distraktor_formeln": ["preis * prozent / 100", "preis * prozent", "2 * preis * prozent"],
+      "einheit": "Euro", "rundung": "ganzzahl",
+      "erklaerung_nach_antwort": { "de": "Pro Jahr {prozent} Prozent von {preis} Euro, mal zwei Jahre." },
+      "wissenspunkte": 200
+    }
+  ]
+}

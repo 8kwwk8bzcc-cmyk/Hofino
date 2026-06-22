@@ -1,8 +1,22 @@
-// Lädt die redaktionellen Seed-Inhalte (2 Beispiel-Konzepte) und bietet einfache Zugriffe.
+// Lädt die redaktionellen Inhalte (Beispiel-Seed + Themenblock-Dateien) und bietet Zugriffe.
 import raw from "./seed.json";
+import geldGrundlagen from "./content/geld_grundlagen.json";
 import type { Frage, InhaltsSeed, Konzept, Stufe, Themenblock, Vorlage } from "./types.js";
 
-export const SEED = raw as unknown as InhaltsSeed;
+const QUELLEN = [raw, geldGrundlagen] as unknown as InhaltsSeed[];
+
+function mergeById<T extends { id: string }>(listen: T[][]): T[] {
+  const map = new Map<string, T>();
+  for (const liste of listen) for (const item of liste) map.set(item.id, item);
+  return [...map.values()];
+}
+
+export const SEED: InhaltsSeed = {
+  themenbloecke: mergeById(QUELLEN.map((q) => q.themenbloecke ?? [])),
+  konzepte: mergeById(QUELLEN.map((q) => q.konzepte ?? [])),
+  fragen: mergeById(QUELLEN.map((q) => q.fragen ?? [])),
+  vorlagen: mergeById(QUELLEN.map((q) => q.vorlagen ?? [])),
+};
 
 export function alleThemenbloecke(): Themenblock[] {
   return SEED.themenbloecke;
