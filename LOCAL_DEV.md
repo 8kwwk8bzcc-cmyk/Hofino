@@ -20,4 +20,4 @@ pusht **nach jedem Commit automatisch** nach `origin/main`. Push-Log: `/tmp/hofi
 - ✅ Domänen-Logik + Tests (`packages/core`)
 - ✅ App im **Web-Browser** (`pnpm web`) — deckt auch den Lehrer-/Beamer-Modus ab
 - ⏳ **iOS-Simulator**: braucht volles Xcode (aktuell nur Command Line Tools)
-- ⏳ **Supabase lokal**: braucht Docker + Supabase CLI — siehe `supabase/README.md` (ab M2)
+- ✅ **Supabase lokal** (Docker): `pnpm exec supabase start` — Studio auf http://127.0.0.1:54323, siehe `supabase/README.md`

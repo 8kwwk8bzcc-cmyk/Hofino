@@ -2,7 +2,9 @@
   "name": "hofino",
   "private": true,
   "packageManager": "pnpm@11.8.0",
-  "engines": { "node": ">=20" },
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "lint": "turbo run lint",
     "typecheck": "turbo run typecheck",
@@ -11,12 +13,13 @@
     "web": "pnpm --filter @hofino/app web"
   },
   "devDependencies": {
+    "@eslint/js": "^9.13.0",
+    "eslint": "^9.13.0",
+    "prettier": "^3.3.0",
+    "supabase": "^2.107.0",
     "turbo": "^2.5.0",
     "typescript": "^5.6.0",
-    "prettier": "^3.3.0",
-    "eslint": "^9.13.0",
     "typescript-eslint": "^8.10.0",
-    "@eslint/js": "^9.13.0",
     "vitest": "^2.1.0"
   }
 }

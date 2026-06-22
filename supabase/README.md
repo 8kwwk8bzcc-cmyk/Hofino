@@ -2,15 +2,15 @@
 
 SQL-Migrationen (`migrations/`) und Edge Functions (`functions/`) für Hofino.
 
-**Status:** SQL/Functions werden ab **M2/M3** hier abgelegt und sind als Dateien lokal prüfbar.
-Der **lokale Stack** (`supabase start`) braucht **Docker** + **Supabase CLI** — beides ist auf diesem
-Rechner noch nicht installiert. Sobald vorhanden:
+**Status:** Lokaler Stack läuft (Docker + Supabase-CLI via `pnpm exec supabase`). M2 (Schema + RLS
++ Lehrer-Aggregate) ist eingespielt und per RLS-Tests verifiziert.
 
 ```bash
-brew install supabase/tap/supabase   # CLI
-supabase init                        # erzeugt config.toml (falls noch nicht vorhanden)
-supabase start                       # startet Postgres/Auth/Studio lokal (Docker)
-supabase db reset                    # spielt migrations/ + seed ein
+pnpm exec supabase start      # Stack starten (Docker)
+pnpm exec supabase db reset   # migrations/ + seed.sql frisch einspielen
+pnpm exec supabase status     # URLs + lokale Keys anzeigen
+pnpm exec supabase stop       # Stack anhalten
 ```
 
-Bis dahin: Domänen-Logik in `packages/core` ist voll ohne DB testbar (Vitest), die App läuft im Web.
+Studio (lokale DB-Oberfläche): http://127.0.0.1:54323 · API: http://127.0.0.1:54321
+RLS-Testskripte liegen im Scratchpad (m2_setup.sql / m2_rls_test.sql).
