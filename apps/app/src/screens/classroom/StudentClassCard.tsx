@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from "react";
-import { StyleSheet, Text, TextInput, View } from "react-native";
+import { StyleSheet, Text, TextInput } from "react-native";
 import { useStore, type MyClass } from "../../store/store.js";
 import { Body, Button, Card, H2, Muted } from "../../ui/components.js";
 import { colors, font, radius, space } from "../../theme.js";

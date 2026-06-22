@@ -188,8 +188,22 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
   const t = useCallback((key: string) => translate(lang, key), [lang]);
 
   const load = useCallback(async () => {
-    const { data: auth } = await supabase.auth.getUser();
-    const user = auth.user;
+    let { data: auth } = await supabase.auth.getUser();
+    let user = auth.user;
+    // Dev-Auto-Login fürs Test-Cockpit (nur lokal mit EXPO_PUBLIC_DEV_LOGIN=1).
+    if (!user && process.env.EXPO_PUBLIC_DEV_LOGIN === "1") {
+      let email: string | null = null;
+      try {
+        email = new URLSearchParams(globalThis.location?.search ?? "").get("devlogin");
+      } catch {
+        email = null;
+      }
+      if (email) {
+        await supabase.auth.signInWithPassword({ email, password: "hofino-dev-123" });
+        ({ data: auth } = await supabase.auth.getUser());
+        user = auth.user;
+      }
+    }
     if (!user) {
       setData({ ...EMPTY, loading: false });
       return;

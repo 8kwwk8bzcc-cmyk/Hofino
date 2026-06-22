@@ -9,6 +9,22 @@ const LOCAL_ANON =
 const url = process.env.EXPO_PUBLIC_SUPABASE_URL ?? LOCAL_URL;
 const anonKey = process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY ?? LOCAL_ANON;
 
+// Pane-Isolation fürs Test-Cockpit: jede App-Instanz (?pane=…) bekommt einen eigenen
+// Auth-Speicher, damit mehrere Rollen gleichzeitig im selben Browser eingeloggt sein können.
+function paneSuffix(): string {
+  try {
+    const p = new URLSearchParams(globalThis.location?.search ?? "").get("pane");
+    return p ? `-${p}` : "";
+  } catch {
+    return "";
+  }
+}
+
 export const supabase = createClient(url, anonKey, {
-  auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: false },
+  auth: {
+    storageKey: `sb-hofino-auth${paneSuffix()}`,
+    persistSession: true,
+    autoRefreshToken: true,
+    detectSessionInUrl: false,
+  },
 });

@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hofino · Test-Cockpit</title>
+    <style>
+      * { box-sizing: border-box; }
+      body { margin: 0; font-family: -apple-system, system-ui, sans-serif; background: #0D2B45; color: #fff; height: 100vh; display: flex; flex-direction: column; }
+      header { padding: 10px 16px; display: flex; align-items: center; gap: 16px; flex-wrap: wrap; border-bottom: 1px solid rgba(255,255,255,.15); }
+      .brand { font-weight: 800; font-size: 16px; }
+      .presets { display: flex; gap: 8px; flex-wrap: wrap; }
+      .presets button { background: #22C55E; color: #06351f; border: 0; border-radius: 8px; padding: 8px 12px; font-weight: 700; cursor: pointer; font-size: 13px; }
+      .presets button.alt { background: #F4C542; color: #3a2c00; }
+      .hint { font-size: 12px; opacity: .8; }
+      #panes { flex: 1; display: flex; gap: 8px; padding: 8px; overflow: auto; }
+      .pane { flex: 1 1 0; min-width: 320px; display: flex; flex-direction: column; background: #fff; border-radius: 12px; overflow: hidden; }
+      .pane-head { background: #F5F7FA; color: #0D2B45; padding: 6px 8px; display: flex; gap: 6px; align-items: center; border-bottom: 1px solid #E3E8EF; }
+      .pane-head select { flex: 1; padding: 6px; border-radius: 6px; border: 1px solid #cdd6e0; font-size: 13px; }
+      .pane-head button { background: #0D2B45; color: #fff; border: 0; border-radius: 6px; padding: 6px 8px; cursor: pointer; font-size: 12px; }
+      iframe { flex: 1; border: 0; width: 100%; background: #F5F7FA; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <span class="brand">Hofino · Test-Cockpit</span>
+      <div class="presets" id="presets"></div>
+      <span class="hint">Jede Spalte ist eine eigene Anmeldung. Passwort aller Test-Nutzer: <b>hofino-dev-123</b></span>
+    </header>
+    <div id="panes"></div>
+
+    <script>
+      const USERS = [
+        { email: "mia@hofino.test", label: "👧 Mia (Kind)" },
+        { email: "tom@hofino.test", label: "👦 Tom (Kind)" },
+        { email: "alex@hofino.test", label: "🧑 Alex (Erwachsene)" },
+        { email: "papa@hofino.test", label: "👨‍👧 Papa (Eltern)" },
+        { email: "lehrer@hofino.test", label: "👩‍🏫 Frau Klein (Lehrer)" },
+        { email: "", label: "— leer —" },
+      ];
+      const PRESETS = [
+        { label: "Nur Kind", panes: ["mia@hofino.test"] },
+        { label: "Nur Erwachsener", panes: ["alex@hofino.test"] },
+        { label: "Kind ↔ Eltern", panes: ["mia@hofino.test", "papa@hofino.test"] },
+        { label: "2 Kinder ↔ Eltern", panes: ["mia@hofino.test", "tom@hofino.test", "papa@hofino.test"] },
+        { label: "2 Kinder ↔ Lehrer", panes: ["mia@hofino.test", "tom@hofino.test", "lehrer@hofino.test"], alt: true },
+        { label: "Kind ↔ Lehrer", panes: ["mia@hofino.test", "lehrer@hofino.test"], alt: true },
+      ];
+
+      let seq = 0;
+      function appUrl(paneIndex, email) {
+        const token = "p" + paneIndex + "_" + (seq++); // eigener Auth-Speicher je (Pane × Auswahl)
+        const dev = email ? "&devlogin=" + encodeURIComponent(email) : "";
+        return "./?pane=" + token + dev;
+      }
+
+      function makePane(paneIndex, email) {
+        const pane = document.createElement("div");
+        pane.className = "pane";
+
+        const head = document.createElement("div");
+        head.className = "pane-head";
+        const sel = document.createElement("select");
+        for (const u of USERS) {
+          const o = document.createElement("option");
+          o.value = u.email; o.textContent = u.label;
+          if (u.email === email) o.selected = true;
+          sel.appendChild(o);
+        }
+        const reload = document.createElement("button");
+        reload.textContent = "↻";
+        head.appendChild(sel);
+        head.appendChild(reload);
+
+        const frame = document.createElement("iframe");
+        frame.src = appUrl(paneIndex, email);
+
+        sel.addEventListener("change", () => { frame.src = appUrl(paneIndex, sel.value); });
+        reload.addEventListener("click", () => { frame.src = appUrl(paneIndex, sel.value); });
+
+        pane.appendChild(head);
+        pane.appendChild(frame);
+        return pane;
+      }
+
+      function render(emails) {
+        const container = document.getElementById("panes");
+        container.innerHTML = "";
+        emails.forEach((email, i) => container.appendChild(makePane(i, email)));
+      }
+
+      const presetsEl = document.getElementById("presets");
+      for (const p of PRESETS) {
+        const b = document.createElement("button");
+        if (p.alt) b.className = "alt";
+        b.textContent = p.label;
+        b.addEventListener("click", () => render(p.panes));
+        presetsEl.appendChild(b);
+      }
+
+      render(PRESETS[2].panes); // Default: Kind ↔ Eltern
+    </script>
+  </body>
+</html>
