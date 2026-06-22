@@ -82,6 +82,8 @@ importers:
 
   packages/core: {}
 
+  packages/learning: {}
+
   packages/market-data: {}
 
 packages:

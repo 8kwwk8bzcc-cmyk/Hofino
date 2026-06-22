@@ -1,0 +1,216 @@
+{
+  "_hinweis": "Seed-/Testdaten fuer Hofino. Zwei vollstaendig ausformulierte Konzepte als Vorlage fuer die restlichen 18. Pro Konzept enthaelt der echte Pool ~20 Fragen; hier sind beispielhaft 1-2 pro Stufe enthalten. Feldnamen exakt wie in der Spec.",
+  "themenbloecke": [
+    { "id": "tb_unternehmen_aktien", "titel": { "de": "Unternehmen & Aktien" } },
+    { "id": "tb_depot_kosten", "titel": { "de": "Depot & Kosten" } }
+  ],
+  "konzepte": [
+    {
+      "id": "konzept_unternehmen",
+      "modul_nr": 5,
+      "themenblock_id": "tb_unternehmen_aktien",
+      "titel": { "de": "Was ist ein Unternehmen?" },
+      "ist_rechnerisch": false,
+      "voraussetzungen": ["konzept_geld"],
+      "freischalt_level": 2,
+      "erklaerungen": {
+        "kind_8_10": { "de": "Ein Unternehmen ist eine Firma. Zum Beispiel ein Baecker, der Broetchen backt und verkauft. Dort arbeiten Menschen zusammen, um etwas herzustellen oder anzubieten, und bekommen dafuer Geld." },
+        "kind_11_14": { "de": "Ein Unternehmen ist eine Organisation, die Produkte herstellt oder Dienstleistungen anbietet, um damit Geld zu verdienen. Es gibt ganz kleine (die Baeckerei um die Ecke) und sehr grosse (wie Lego oder Adidas)." },
+        "eltern_lehrer": { "de": "Ein Unternehmen ist eine wirtschaftliche Einheit, die Gueter produziert oder Dienstleistungen erbringt, um am Markt Erloese zu erzielen. Die Rechtsformen reichen vom Einzelunternehmen bis zur Aktiengesellschaft; letztere kann sich ueber die Ausgabe von Aktien Kapital beschaffen." }
+      },
+      "stufen": ["erklaeren", "erkennen", "verstehen", "anwenden", "meistern"]
+    },
+    {
+      "id": "konzept_kosten",
+      "modul_nr": 17,
+      "themenblock_id": "tb_depot_kosten",
+      "titel": { "de": "Was kostet Kaufen und Verkaufen?" },
+      "ist_rechnerisch": true,
+      "voraussetzungen": ["konzept_depot"],
+      "freischalt_level": 6,
+      "erklaerungen": {
+        "kind_8_10": { "de": "Wenn du eine Aktie kaufst oder verkaufst, kostet das jedes Mal ein bisschen Geld. Das nennt man Gebuehr. Bei Hofino sind das 5 Euro pro Auftrag. Die musst du mitrechnen." },
+        "kind_11_14": { "de": "Beim Kauf oder Verkauf von Aktien faellt eine Ordergebuehr an, bei Hofino 5 Euro pro Order, egal wie viele Aktien. Die Gebuehr verringert deinen Gewinn. Deshalb lohnt sich haeufiges Hin- und Herkaufen oft nicht." },
+        "eltern_lehrer": { "de": "Transaktionskosten (Ordergebuehren) fallen pro Order an, unabhaengig vom Ordervolumen. Sie schmaelern die Nettorendite; haeufiges Trading erhoeht die Kostenlast besonders bei kleinen Orders ueberproportional." }
+      },
+      "stufen": ["erklaeren", "erkennen", "verstehen", "anwenden", "meistern"]
+    }
+  ],
+  "fragen": [
+    {
+      "id": "q_unt_001",
+      "konzept_id": "konzept_unternehmen",
+      "stufe": "erklaeren",
+      "typ": "multiple_choice",
+      "frage": { "de": "Was ist ein Unternehmen?" },
+      "korrekte_antwort": { "de": "Eine Firma, die etwas herstellt oder anbietet, um Geld zu verdienen" },
+      "distraktor_pool": [
+        { "text": { "de": "Ein Tier, das im Wald lebt" }, "naehe": 1 },
+        { "text": { "de": "Ein Brettspiel fuer die ganze Familie" }, "naehe": 1 },
+        { "text": { "de": "Ein Schulfach wie Mathe" }, "naehe": 1 }
+      ],
+      "anzahl_distraktoren_angezeigt": 3,
+      "erklaerung_nach_antwort": { "de": "Genau. Ein Unternehmen bietet etwas an und verdient damit Geld, zum Beispiel eine Baeckerei mit ihren Broetchen." },
+      "wissenspunkte": 100
+    },
+    {
+      "id": "q_unt_002",
+      "konzept_id": "konzept_unternehmen",
+      "stufe": "erkennen",
+      "typ": "multiple_choice",
+      "frage": { "de": "Welches davon ist am ehesten ein Unternehmen?" },
+      "korrekte_antwort": { "de": "Eine Baeckerei, die Brot verkauft" },
+      "distraktor_pool": [
+        { "text": { "de": "Deine Familie beim Abendessen" }, "naehe": 1 },
+        { "text": { "de": "Ein Park zum Spielen" }, "naehe": 1 },
+        { "text": { "de": "Ein Sportverein nur zum Spass" }, "naehe": 2 }
+      ],
+      "anzahl_distraktoren_angezeigt": 3,
+      "erklaerung_nach_antwort": { "de": "Die Baeckerei verkauft etwas und verdient damit Geld. Das macht sie zum Unternehmen." },
+      "wissenspunkte": 100
+    },
+    {
+      "id": "q_unt_003",
+      "konzept_id": "konzept_unternehmen",
+      "stufe": "verstehen",
+      "typ": "multiple_choice",
+      "frage": { "de": "Warum gibt es Unternehmen ueberhaupt?" },
+      "korrekte_antwort": { "de": "Sie bieten Produkte oder Dienste an und verdienen damit Geld" },
+      "distraktor_pool": [
+        { "text": { "de": "Damit Menschen alles kostenlos bekommen" }, "naehe": 2 },
+        { "text": { "de": "Damit der Staat sie bezahlen muss" }, "naehe": 2 },
+        { "text": { "de": "Nur um Werbung zu zeigen" }, "naehe": 1 },
+        { "text": { "de": "Damit Kinder dort spielen koennen" }, "naehe": 1 },
+        { "text": { "de": "Um moeglichst viele Steuern zu sparen" }, "naehe": 2 }
+      ],
+      "anzahl_distraktoren_angezeigt": 3,
+      "erklaerung_nach_antwort": { "de": "Unternehmen wollen mit ihrem Angebot Geld verdienen. Das ist ihr eigentlicher Sinn." },
+      "wissenspunkte": 120
+    },
+    {
+      "id": "q_unt_004",
+      "konzept_id": "konzept_unternehmen",
+      "stufe": "anwenden",
+      "typ": "multiple_choice",
+      "frage": { "de": "Tom backt zu Hause Kekse fuer seine Familie und verschenkt sie. Lisa backt Kekse und verkauft sie an einem Stand. Wer betreibt eher ein Unternehmen?" },
+      "korrekte_antwort": { "de": "Lisa, weil sie etwas anbietet, um Geld zu verdienen" },
+      "distraktor_pool": [
+        { "text": { "de": "Tom, weil er mehr Kekse backt" }, "naehe": 2 },
+        { "text": { "de": "Beide gleich, weil beide Kekse backen" }, "naehe": 3 },
+        { "text": { "de": "Keiner, weil Kekse kein richtiges Produkt sind" }, "naehe": 2 }
+      ],
+      "anzahl_distraktoren_angezeigt": 3,
+      "erklaerung_nach_antwort": { "de": "Lisa verkauft ihre Kekse und will Geld verdienen. Tom verschenkt sie, das ist ein Hobby." },
+      "wissenspunkte": 150
+    },
+    {
+      "id": "q_unt_005",
+      "konzept_id": "konzept_unternehmen",
+      "stufe": "meistern",
+      "typ": "multiple_choice",
+      "frage": { "de": "Was unterscheidet ein Unternehmen am ehesten von einem Hobby?" },
+      "korrekte_antwort": { "de": "Ein Unternehmen will mit seinem Angebot regelmaessig Geld verdienen" },
+      "distraktor_pool": [
+        { "text": { "de": "Ein Unternehmen macht immer mehr Spass als ein Hobby" }, "naehe": 2 },
+        { "text": { "de": "Ein Unternehmen braucht keine Kunden" }, "naehe": 3 },
+        { "text": { "de": "Ein Hobby kostet nie Geld, ein Unternehmen schon" }, "naehe": 3 },
+        { "text": { "de": "Ein Unternehmen hat immer sehr viele Mitarbeiter" }, "naehe": 3 }
+      ],
+      "anzahl_distraktoren_angezeigt": 3,
+      "erklaerung_nach_antwort": { "de": "Der Kern ist die Absicht, regelmaessig Geld zu verdienen, nicht die Groesse oder der Spass." },
+      "wissenspunkte": 150
+    },
+
+    {
+      "id": "q_kos_001",
+      "konzept_id": "konzept_kosten",
+      "stufe": "erklaeren",
+      "typ": "multiple_choice",
+      "frage": { "de": "Was kostet bei Hofino jeder Kauf oder Verkauf an Gebuehr?" },
+      "korrekte_antwort": { "de": "5 Euro" },
+      "distraktor_pool": [
+        { "text": { "de": "0 Euro, es ist gratis" }, "naehe": 2 },
+        { "text": { "de": "5 Euro pro Aktie" }, "naehe": 3 },
+        { "text": { "de": "50 Euro" }, "naehe": 1 }
+      ],
+      "anzahl_distraktoren_angezeigt": 3,
+      "erklaerung_nach_antwort": { "de": "5 Euro pro Auftrag, egal wie viele Aktien du in diesem Auftrag kaufst oder verkaufst." },
+      "wissenspunkte": 100
+    },
+    {
+      "id": "q_kos_002",
+      "konzept_id": "konzept_kosten",
+      "stufe": "erkennen",
+      "typ": "multiple_choice",
+      "frage": { "de": "Wofuer gilt die 5-Euro-Gebuehr?" },
+      "korrekte_antwort": { "de": "Pro Auftrag (Order), egal wie viele Aktien" },
+      "distraktor_pool": [
+        { "text": { "de": "Pro einzelne Aktie" }, "naehe": 3 },
+        { "text": { "de": "Nur beim Kaufen, nicht beim Verkaufen" }, "naehe": 2 },
+        { "text": { "de": "Einmal im Monat" }, "naehe": 1 }
+      ],
+      "anzahl_distraktoren_angezeigt": 3,
+      "erklaerung_nach_antwort": { "de": "Die Gebuehr faellt pro Order an. Ob du 1 oder 10 Aktien kaufst, es bleiben 5 Euro." },
+      "wissenspunkte": 100
+    },
+    {
+      "id": "q_kos_003",
+      "konzept_id": "konzept_kosten",
+      "stufe": "verstehen",
+      "typ": "multiple_choice",
+      "frage": { "de": "Warum lohnt sich haeufiges Kaufen und Verkaufen oft nicht?" },
+      "korrekte_antwort": { "de": "Jede Order kostet 5 Euro Gebuehr, das summiert sich und frisst den Gewinn" },
+      "distraktor_pool": [
+        { "text": { "de": "Weil die Aktien dadurch teurer werden" }, "naehe": 2 },
+        { "text": { "de": "Weil man nur einmal am Tag handeln darf" }, "naehe": 2 },
+        { "text": { "de": "Weil die Gebuehr mit jedem Mal steigt" }, "naehe": 3 }
+      ],
+      "anzahl_distraktoren_angezeigt": 3,
+      "erklaerung_nach_antwort": { "de": "Viele Orders bedeuten viele 5-Euro-Gebuehren. Das schmaelert deinen Gewinn deutlich." },
+      "wissenspunkte": 120
+    }
+  ],
+  "vorlagen": [
+    {
+      "id": "tmpl_kos_anwenden",
+      "konzept_id": "konzept_kosten",
+      "stufe": "anwenden",
+      "parameter": {
+        "n": { "typ": "int", "min": 2, "max": 12 },
+        "preis": { "typ": "int", "min": 5, "max": 300 }
+      },
+      "frage_vorlage": { "de": "Du kaufst {n} Aktien zu je {preis} Euro. Pro Order zahlst du 5 Euro Gebuehr. Was wird insgesamt von deinem Konto abgebucht?" },
+      "loesung_formel": "n * preis + 5",
+      "distraktor_formeln": [
+        "n * preis",
+        "n * preis + 5 * n",
+        "n * preis - 5"
+      ],
+      "einheit": "Euro",
+      "rundung": "ganzzahl",
+      "erklaerung_nach_antwort": { "de": "Aktienwert ist n mal Preis, plus einmal 5 Euro Gebuehr fuer den Auftrag." },
+      "wissenspunkte": 150
+    },
+    {
+      "id": "tmpl_kos_meistern",
+      "konzept_id": "konzept_kosten",
+      "stufe": "meistern",
+      "parameter": {
+        "n": { "typ": "int", "min": 3, "max": 10 },
+        "kauf": { "typ": "int", "min": 20, "max": 200 },
+        "verkauf": { "typ": "int", "min": 20, "max": 200 }
+      },
+      "frage_vorlage": { "de": "Du kaufst {n} Aktien zu je {kauf} Euro und verkaufst sie spaeter zu je {verkauf} Euro. Fuer Kauf und Verkauf zahlst du je 5 Euro Gebuehr. Wie viel Gewinn oder Verlust machst du nach den Gebuehren?" },
+      "loesung_formel": "n * (verkauf - kauf) - 10",
+      "distraktor_formeln": [
+        "n * (verkauf - kauf)",
+        "n * (verkauf - kauf) - 5",
+        "n * verkauf - n * kauf - 5 * n"
+      ],
+      "einheit": "Euro",
+      "rundung": "ganzzahl",
+      "erklaerung_nach_antwort": { "de": "Gewinn pro Aktie mal Anzahl, dann zweimal 5 Euro Gebuehr abziehen (Kauf und Verkauf)." },
+      "wissenspunkte": 200
+    }
+  ]
+}
