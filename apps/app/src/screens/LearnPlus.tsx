@@ -19,7 +19,7 @@ import { supabase } from "../lib/supabase.js";
 import { Body, Button, Card, H1, H2, Muted, Pill, ProgressBar } from "../ui/components.js";
 import { colors, font, radius, space } from "../theme.js";
 
-type Phase = "liste" | "erklaerung" | "frage" | "feedback" | "fertig";
+type Phase = "liste" | "erklaerung" | "frage" | "feedback" | "wdh" | "wdh_feedback" | "fertig";
 const ALTERSBAND = "kind_11_14" as const; // MVP-Default; später aus dem Profil
 const STUFE_LABEL: Record<Stufe, string> = {
   erklaeren: "Erklären",
@@ -43,6 +43,18 @@ function baueInstanz(konzept: Konzept, stufe: Stufe, rng: () => number): FrageIn
   return null;
 }
 
+// Für Wiederholungen: irgendeine spielbare Frage des Konzepts (bevorzugt anspruchsvollere Stufe).
+function baueInstanzBeliebig(konzept: Konzept, rng: () => number): FrageInstanz | null {
+  const reihenfolge: Stufe[] = konzept.ist_rechnerisch
+    ? ["anwenden", "meistern", "verstehen", "erkennen", "erklaeren"]
+    : ["verstehen", "erkennen", "anwenden", "meistern", "erklaeren"];
+  for (const s of reihenfolge) {
+    const inst = baueInstanz(konzept, s, rng);
+    if (inst) return inst;
+  }
+  return null;
+}
+
 export function LearnPlus() {
   const konzepte = alleKonzepte();
   const [phase, setPhase] = useState<Phase>("liste");
@@ -52,6 +64,16 @@ export function LearnPlus() {
   const [gewaehlt, setGewaehlt] = useState<number | null>(null);
   const [srMap, setSrMap] = useState<Record<string, SRZustand>>({});
   const [tages, setTages] = useState<{ neu: number; wieder: number; xp: number }>({ neu: 0, wieder: 0, xp: 0 });
+  const [wdhQueue, setWdhQueue] = useState<string[]>([]);
+  const [wdhIdx, setWdhIdx] = useState(0);
+  const [zeigeErklaerung, setZeigeErklaerung] = useState(false);
+  const [letzteXp, setLetzteXp] = useState(0);
+
+  const heute = heuteISO();
+  const faellig = konzepte.filter((k) => {
+    const sr = srMap[k.id];
+    return sr?.naechste_faelligkeit && sr.naechste_faelligkeit <= heute;
+  });
 
   const ladeStatus = useCallback(async () => {
     const sr = await supabase.from("lern_sr_zustand").select("konzept_id, leitner_box, richtig_in_folge, gemeistert, naechste_faelligkeit, letzte_antwort_korrekt");
@@ -131,6 +153,63 @@ export function LearnPlus() {
     setPhase("feedback");
   };
 
+  const naechsteWdh = (queue: string[], idx: number) => {
+    const rng = makeRng((Date.now() & 0xffffffff) ^ (idx * 40503));
+    for (let i = idx; i < queue.length; i++) {
+      const k = konzepte.find((x) => x.id === queue[i]);
+      if (!k) continue;
+      const inst = baueInstanzBeliebig(k, rng);
+      if (inst) {
+        setKonzept(k);
+        setInstanz(inst);
+        setWdhIdx(i);
+        setGewaehlt(null);
+        setZeigeErklaerung(false);
+        setPhase("wdh");
+        return;
+      }
+    }
+    setPhase("liste");
+    ladeStatus();
+  };
+
+  const starteWiederholung = () => {
+    const rest = Math.max(0, 10 - tages.wieder);
+    const queue = faellig.map((k) => k.id).slice(0, rest);
+    if (queue.length === 0) return;
+    setWdhQueue(queue);
+    naechsteWdh(queue, 0);
+  };
+
+  const antwortenWdh = async (idx: number) => {
+    if (!konzept || !instanz) return;
+    setGewaehlt(idx);
+    const korrekt = !!instanz.optionen[idx]?.korrekt;
+    const sr = srMap[konzept.id] ?? initLeitner(konzept.id, heute);
+    const neu = naechsterLeitner(sr, korrekt, heute);
+    const res = await supabase.rpc("lern_antwort_speichern", {
+      p_konzept: konzept.id,
+      p_stufe: instanz.stufe,
+      p_frage_id: instanz.frage_id ?? "",
+      p_vorlage_id: instanz.vorlage_id ?? "",
+      p_korrekt: korrekt,
+      p_ist_wiederholung: true,
+      p_basis_xp: instanz.wissenspunkte,
+      p_box: neu.leitner_box,
+      p_richtig_in_folge: neu.richtig_in_folge,
+      p_gemeistert: neu.gemeistert,
+      p_faellig: neu.naechste_faelligkeit,
+    });
+    if (res.data && res.data.ok === false) {
+      setPhase("fertig");
+      return;
+    }
+    setSrMap((m) => ({ ...m, [konzept.id]: neu }));
+    setTages((t) => ({ ...t, wieder: t.wieder + 1 }));
+    setLetzteXp(typeof res.data?.granted_xp === "number" ? res.data.granted_xp : 0);
+    setPhase("wdh_feedback");
+  };
+
   // ── Render ──────────────────────────────────────────────────────────────
   if (phase === "liste") {
     return (
@@ -143,6 +222,18 @@ export function LearnPlus() {
           </Body>
           <ProgressBar value={tages.neu / 10} />
         </Card>
+        {faellig.length > 0 && (
+          <Card style={{ borderColor: colors.accent, borderWidth: 2 }}>
+            <H2>Tägliche Mini-Aufgabe</H2>
+            <Body>{faellig.length} Konzept(e) heute fällig zum Wiederholen.</Body>
+            <Button
+              title={tages.wieder >= 10 ? "Heute schon erledigt" : "Wiederholen starten"}
+              onPress={starteWiederholung}
+              disabled={tages.wieder >= 10}
+              testID="wdh-start"
+            />
+          </Card>
+        )}
         {konzepte.map((k) => {
           const sr = srMap[k.id];
           return (
@@ -206,6 +297,48 @@ export function LearnPlus() {
           {korrekt && <Pill label={`+${instanz.wissenspunkte} XP`} tone="good" />}
         </Card>
         <Button title="Weiter" onPress={() => naechsteStufe(konzept, stufeIdx + 1)} testID="lp-weiter" />
+      </ScrollView>
+    );
+  }
+
+  if (phase === "wdh" && instanz && konzept) {
+    return (
+      <ScrollView contentContainerStyle={styles.container}>
+        <Muted>
+          Wiederholung · {konzept.titel.de} · {wdhIdx + 1}/{wdhQueue.length}
+        </Muted>
+        <H2>{instanz.frage}</H2>
+        {instanz.optionen.map((o, i) => (
+          <Pressable key={i} testID={`wdh-opt${i}`} onPress={() => antwortenWdh(i)} style={styles.option}>
+            <Text style={styles.optionText}>{o.text}</Text>
+          </Pressable>
+        ))}
+        <Button
+          title={zeigeErklaerung ? "Erklärung ausblenden" : "Nochmal erklären"}
+          variant="ghost"
+          onPress={() => setZeigeErklaerung((s) => !s)}
+          testID="wdh-erklaer"
+        />
+        {zeigeErklaerung && (
+          <Card>
+            <Body>{konzept.erklaerungen[ALTERSBAND].de}</Body>
+          </Card>
+        )}
+      </ScrollView>
+    );
+  }
+
+  if (phase === "wdh_feedback" && instanz && konzept && gewaehlt !== null) {
+    const korrekt = !!instanz.optionen[gewaehlt]?.korrekt;
+    return (
+      <ScrollView contentContainerStyle={styles.container}>
+        <Card style={{ borderColor: korrekt ? colors.secondary : colors.danger, borderWidth: 2 }}>
+          <H2>{korrekt ? "Richtig! 🎉" : "Knapp daneben"}</H2>
+          {!korrekt && <Body>Richtig wäre: {instanz.optionen.find((o) => o.korrekt)?.text}</Body>}
+          {!korrekt && instanz.erklaerung_nach_antwort ? <Body>{instanz.erklaerung_nach_antwort}</Body> : null}
+          {korrekt && <Pill label={letzteXp > 0 ? `+${letzteXp} XP` : "Tages-XP-Limit erreicht"} tone="good" />}
+        </Card>
+        <Button title="Weiter" onPress={() => naechsteWdh(wdhQueue, wdhIdx + 1)} testID="wdh-weiter" />
       </ScrollView>
     );
   }
