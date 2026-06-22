@@ -1,0 +1,30 @@
+{
+  "expo": {
+    "name": "Hofino",
+    "slug": "hofino",
+    "scheme": "hofino",
+    "version": "0.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "backgroundColor": "#F5F7FA",
+    "splash": {
+      "backgroundColor": "#0D2B45",
+      "resizeMode": "contain"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#0D2B45"
+      }
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "single"
+    },
+    "plugins": [
+      "expo-status-bar"
+    ]
+  }
+}
