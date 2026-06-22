@@ -56,8 +56,10 @@ create trigger on_profile_created
 -- Ohne passende Policy ist eine Aktion trotz Grant verboten (z. B. INSERT auf
 -- capital_grants/knowledge_points → nur service_role serverseitig).
 -- ─────────────────────────────────────────────────────────────────────────────
-grant usage on schema public to authenticated;
+grant usage on schema public to authenticated, service_role;
 grant select, insert, update, delete on all tables in schema public to authenticated;
+-- service_role (Edge Functions/Server) umgeht RLS, benötigt aber Tabellen-Grants.
+grant all on all tables in schema public to service_role;
 
 -- ─────────────────────────────────────────────────────────────────────────────
 -- RLS aktivieren
