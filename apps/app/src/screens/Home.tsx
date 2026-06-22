@@ -5,6 +5,7 @@ import { MODULES } from "@hofino/content";
 import { useStore } from "../store/store.js";
 import { Body, Card, H1, H2, HLogo, Muted, Pill, ProgressBar } from "../ui/components.js";
 import { ChildFamilyCard } from "./family/ChildFamilyCard.js";
+import { StudentClassCard } from "./classroom/StudentClassCard.js";
 import { colors, font, space } from "../theme.js";
 
 const STAGES: { id: string; emoji: string; label: string }[] = [
@@ -82,6 +83,7 @@ export function Home() {
       </Card>
 
       <ChildFamilyCard />
+      <StudentClassCard />
     </ScrollView>
   );
 }

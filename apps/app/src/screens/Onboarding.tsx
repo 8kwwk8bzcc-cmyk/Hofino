@@ -84,11 +84,12 @@ function Credentials({
   );
 }
 
-type RegRole = "child" | "adult" | "parent";
+type RegRole = "child" | "adult" | "parent" | "teacher";
 const ROLE_OPTIONS: { id: RegRole; label: string }[] = [
   { id: "child", label: "Kind (10–15)" },
   { id: "adult", label: "Erwachsene" },
   { id: "parent", label: "Eltern" },
+  { id: "teacher", label: "Lehrer" },
 ];
 
 function RoleToggle({ role, onChange }: { role: RegRole; onChange: (r: RegRole) => void }) {
@@ -166,7 +167,7 @@ export function Onboarding() {
 
       {error && <Text style={styles.error}>{error}</Text>}
 
-      {mode === "register" && role !== "parent" && (
+      {mode === "register" && (role === "child" || role === "adult") && (
         <Body>
           Zum Start bekommst du <Text style={{ fontWeight: "800" }}>{formatEuros(START_CAPITAL_CENTS)}</Text>{" "}
           virtuelles Übungsgeld – kein echtes Geld.
@@ -174,6 +175,9 @@ export function Onboarding() {
       )}
       {mode === "register" && role === "parent" && (
         <Body>Als Elternteil begleitest du dein Kind – du verknüpfst es nach der Anmeldung per Code.</Body>
+      )}
+      {mode === "register" && role === "teacher" && (
+        <Body>Als Lehrer erstellst du nach der Anmeldung eine Klasse und teilst den Klassencode mit deinen Schülern.</Body>
       )}
 
       <Button
@@ -222,7 +226,7 @@ export function ProfileSetup() {
 const styles = StyleSheet.create({
   container: { padding: space.xl, gap: space.lg, backgroundColor: colors.background, flexGrow: 1 },
   header: { alignItems: "center", gap: space.sm, marginTop: space.lg },
-  tabs: { flexDirection: "row", gap: space.sm },
+  tabs: { flexDirection: "row", flexWrap: "wrap", gap: space.sm },
   tab: { flex: 1, padding: space.md, borderRadius: radius.md, alignItems: "center", backgroundColor: colors.surface, borderWidth: 1, borderColor: colors.border },
   tabActive: { borderColor: colors.primary, backgroundColor: colors.primary },
   tabText: { fontWeight: "700", color: colors.primary },

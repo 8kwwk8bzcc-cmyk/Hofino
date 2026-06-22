@@ -19,6 +19,8 @@ import { Learn } from "./screens/Learn.js";
 import { Rankings } from "./screens/Rankings.js";
 import { FamilyHome } from "./screens/family/FamilyHome.js";
 import { FamilyLink } from "./screens/family/FamilyLink.js";
+import { TeacherClass } from "./screens/classroom/TeacherClass.js";
+import { TeacherBeamer } from "./screens/classroom/TeacherBeamer.js";
 import { colors, space } from "./theme.js";
 
 type TabId = "home" | "learn" | "depot" | "discover" | "rankings";
@@ -103,6 +105,42 @@ function ParentShell() {
   );
 }
 
+type TeacherTab = "class" | "beamer";
+const TEACHER_TABS: { id: TeacherTab; icon: string; label: string }[] = [
+  { id: "class", icon: "🏫", label: "Klasse" },
+  { id: "beamer", icon: "📽️", label: "Beamer" },
+];
+
+function TeacherShell() {
+  const { signOut } = useStore();
+  const [tab, setTab] = useState<TeacherTab>("class");
+  return (
+    <View style={styles.shell}>
+      <View style={styles.topbar}>
+        <Text style={styles.brand}>Hofino · Lehrer</Text>
+        <Pressable testID="logout" onPress={signOut}>
+          <Text style={styles.logout}>Abmelden</Text>
+        </Pressable>
+      </View>
+      <View style={styles.screen}>
+        {tab === "class" && <TeacherClass />}
+        {tab === "beamer" && <TeacherBeamer />}
+      </View>
+      <View style={styles.tabbar}>
+        {TEACHER_TABS.map((t) => {
+          const active = t.id === tab;
+          return (
+            <Pressable key={t.id} testID={`tab-${t.id}`} onPress={() => setTab(t.id)} style={styles.tab}>
+              <Text style={[styles.tabIcon, active && styles.tabIconActive]}>{t.icon}</Text>
+              <Text style={[styles.tabLabel, active && styles.tabLabelActive]}>{t.label}</Text>
+            </Pressable>
+          );
+        })}
+      </View>
+    </View>
+  );
+}
+
 function Gate() {
   const { state } = useStore();
   if (state.loading) {
@@ -115,6 +153,7 @@ function Gate() {
   if (!state.hasSession) return <Onboarding />;
   if (!state.onboarded) return <ProfileSetup />;
   if (state.role === "parent") return <ParentShell />;
+  if (state.role === "teacher") return <TeacherShell />;
   return <Main />;
 }
 

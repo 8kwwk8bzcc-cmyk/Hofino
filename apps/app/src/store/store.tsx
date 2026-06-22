@@ -27,10 +27,30 @@ interface QuizResult {
   perfect: boolean;
 }
 
-export type Role = "child" | "adult" | "parent";
+export type Role = "child" | "adult" | "parent" | "teacher" | "student";
 
 export interface PendingLink {
   parentProfileId: string;
+}
+
+export interface TeacherClass {
+  id: string;
+  name: string;
+  code: string;
+}
+
+export interface ClassOverviewRow {
+  childProfileId: string;
+  displayName: string;
+  modulesCompleted: number;
+  knowledgePoints: number;
+  avgQuiz: number | null;
+  depotValueRoundedCents: number;
+}
+
+export interface MyClass {
+  name: string;
+  code: string;
 }
 
 export interface ChildSummary {
@@ -136,6 +156,11 @@ interface StoreApi {
   linkChild: (childCode: string) => Promise<AuthOutcome>;
   respondToLink: (parentProfileId: string, approve: boolean) => Promise<void>;
   fetchFamily: () => Promise<ChildSummary[]>;
+  createClass: (name: string) => Promise<AuthOutcome & { code?: string }>;
+  joinClass: (code: string) => Promise<AuthOutcome>;
+  fetchTeacherClass: () => Promise<TeacherClass | null>;
+  fetchClassOverview: (classId: string) => Promise<ClassOverviewRow[]>;
+  fetchMyClass: () => Promise<MyClass | null>;
 }
 
 const StoreContext = createContext<StoreApi | null>(null);
@@ -194,7 +219,7 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
       ]);
 
     const role = (profileRes.data.role as Role) ?? "child";
-    const isPlayer = role !== "parent"; // Eltern haben kein eigenes Depot/Lernprofil.
+    const isPlayer = role !== "parent" && role !== "teacher"; // diese Rollen haben kein eigenes Depot.
 
     const prices = new Map<string, number>();
     for (const p of pricesRes.data ?? []) prices.set(p.instrument_id, p.price_cents);
@@ -407,6 +432,60 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
     });
   }, []);
 
+  const createClass = useCallback<StoreApi["createClass"]>(async (name) => {
+    const { data: res, error } = await supabase.rpc("create_class", { p_name: name });
+    if (error) return { ok: false, message: error.message };
+    if (!res?.ok) return { ok: false, message: res?.reason ?? "Fehler" };
+    return { ok: true, code: res.class_code as string };
+  }, []);
+
+  const joinClass = useCallback<StoreApi["joinClass"]>(
+    async (code) => {
+      const { data: res, error } = await supabase.rpc("join_class", { p_code: code });
+      if (error) return { ok: false, message: error.message };
+      if (!res?.ok) return { ok: false, message: res?.reason === "not_found" ? "Code nicht gefunden." : "Fehler" };
+      await load();
+      return { ok: true };
+    },
+    [load]
+  );
+
+  const fetchTeacherClass = useCallback<StoreApi["fetchTeacherClass"]>(async () => {
+    const profileId = dataRef.current.profileId;
+    if (!profileId) return null;
+    const res = await supabase
+      .from("classes")
+      .select("id, name, class_code")
+      .eq("teacher_profile_id", profileId)
+      .order("created_at", { ascending: false })
+      .limit(1)
+      .maybeSingle();
+    if (!res.data) return null;
+    return { id: res.data.id, name: res.data.name, code: res.data.class_code };
+  }, []);
+
+  const fetchClassOverview = useCallback<StoreApi["fetchClassOverview"]>(async (classId) => {
+    const { data, error } = await supabase.rpc("class_overview", { p_class_id: classId });
+    if (error || !data) return [];
+    return (data as Record<string, unknown>[]).map((r) => ({
+      childProfileId: r.child_profile_id as string,
+      displayName: r.display_name as string,
+      modulesCompleted: Number(r.modules_completed ?? 0),
+      knowledgePoints: Number(r.knowledge_points ?? 0),
+      avgQuiz: r.avg_quiz === null || r.avg_quiz === undefined ? null : Number(r.avg_quiz),
+      depotValueRoundedCents: Number(r.depot_value_rounded_cents ?? 0),
+    }));
+  }, []);
+
+  const fetchMyClass = useCallback<StoreApi["fetchMyClass"]>(async () => {
+    const profileId = dataRef.current.profileId;
+    if (!profileId) return null;
+    const m = await supabase.from("class_members").select("class_id").eq("child_profile_id", profileId).maybeSingle();
+    if (!m.data) return null;
+    const c = await supabase.from("classes").select("name, class_code").eq("id", m.data.class_id).maybeSingle();
+    return c.data ? { name: c.data.name, code: c.data.class_code } : null;
+  }, []);
+
   const portfolio: Portfolio = useMemo(
     () => ({
       cashCents: data.cashCents,
@@ -474,6 +553,11 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
     linkChild,
     respondToLink,
     fetchFamily,
+    createClass,
+    joinClass,
+    fetchTeacherClass,
+    fetchClassOverview,
+    fetchMyClass,
   };
 
   return <StoreContext.Provider value={api}>{children}</StoreContext.Provider>;
