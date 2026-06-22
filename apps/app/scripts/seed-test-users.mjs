@@ -1,6 +1,6 @@
-// Seed für die lokale Test-Umgebung / das Cockpit.
+// Seed für die lokale Test-Umgebung / das Cockpit. Idempotent (mehrfach ausführbar).
 // Legt feste Test-Nutzer mit bekanntem Passwort an (für Dev-Auto-Login) und etwas Aktivität.
-// Ausführen:  node scripts/seed-test-users.mjs   (lokaler Supabase-Stack muss laufen)
+// Ausführen:  node apps/app/scripts/seed-test-users.mjs   (lokaler Supabase-Stack muss laufen)
 import { createClient } from "@supabase/supabase-js";
 
 const URL = process.env.SUPABASE_URL ?? "http://127.0.0.1:54321";
@@ -23,65 +23,47 @@ const USERS = [
   { key: "lehrer", email: "lehrer@hofino.test", name: "Frau Klein", role: "teacher" },
 ];
 
-async function deleteByEmail(email) {
+async function findUserByEmail(email) {
   const { data } = await admin.auth.admin.listUsers({ perPage: 1000 });
-  for (const u of data.users) {
-    if (u.email === email) await admin.auth.admin.deleteUser(u.id, false); // hard delete; cascadet
-  }
+  return data.users.find((u) => u.email === email) ?? null;
 }
 
-async function deleteExisting() {
-  for (const u of USERS) await deleteByEmail(u.email);
-}
-
-async function createUsers() {
-  const created = {};
-  for (const u of USERS) {
-    let { data, error } = await admin.auth.admin.createUser({
+// Auth-Nutzer finden oder anlegen; Passwort sicherstellen; Profil upserten.
+async function ensureUser(u) {
+  let authId;
+  const existing = await findUserByEmail(u.email);
+  if (existing) {
+    authId = existing.id;
+    await admin.auth.admin.updateUserById(authId, { password: PASSWORD, email_confirm: true });
+  } else {
+    const { data, error } = await admin.auth.admin.createUser({
       email: u.email,
       password: PASSWORD,
       email_confirm: true,
     });
-    if (error && /registered/i.test(error.message)) {
-      await deleteByEmail(u.email);
-      ({ data, error } = await admin.auth.admin.createUser({
-        email: u.email,
-        password: PASSWORD,
-        email_confirm: true,
-      }));
-    }
     if (error) throw new Error(`createUser ${u.email}: ${error.message}`);
-    const { data: prof, error: pErr } = await admin
-      .from("profiles")
-      .insert({ auth_user_id: data.user.id, role: u.role, display_name: u.name })
-      .select("id")
-      .single();
-    if (pErr) throw new Error(`profile ${u.email}: ${pErr.message}`);
-    created[u.key] = { ...u, authId: data.user.id, profileId: prof.id };
+    authId = data.user.id;
   }
-  return created;
-}
-
-async function linkFamily(c) {
-  const { error } = await admin.from("parent_child_links").insert([
-    { parent_profile_id: c.papa.profileId, child_profile_id: c.mia.profileId, status: "approved" },
-    { parent_profile_id: c.papa.profileId, child_profile_id: c.tom.profileId, status: "approved" },
-  ]);
-  if (error) throw new Error(`links: ${error.message}`);
-}
-
-async function setupClass(c) {
-  const { data: cls, error } = await admin
-    .from("classes")
-    .insert({ teacher_profile_id: c.lehrer.profileId, name: "Klasse 6b", class_code: "TEST6B" })
+  const { data: prof, error: pErr } = await admin
+    .from("profiles")
+    .upsert({ auth_user_id: authId, role: u.role, display_name: u.name }, { onConflict: "auth_user_id" })
     .select("id")
     .single();
-  if (error) throw new Error(`class: ${error.message}`);
-  const { error: mErr } = await admin.from("class_members").insert([
-    { class_id: cls.id, child_profile_id: c.mia.profileId },
-    { class_id: cls.id, child_profile_id: c.tom.profileId },
-  ]);
-  if (mErr) throw new Error(`members: ${mErr.message}`);
+  if (pErr) throw new Error(`profile ${u.email}: ${pErr.message}`);
+  return { ...u, authId, profileId: prof.id };
+}
+
+// Transaktionsdaten eines Spielers zurücksetzen (für reproduzierbare Aktivität).
+async function resetPlayer(profileId) {
+  const { data: pf } = await admin.from("portfolios").select("id").eq("owner_profile_id", profileId).maybeSingle();
+  if (pf) {
+    await admin.from("holdings").delete().eq("portfolio_id", pf.id);
+    await admin.from("orders").delete().eq("portfolio_id", pf.id);
+    await admin.from("portfolios").update({ cash_cents: 500000 }).eq("id", pf.id);
+  }
+  await admin.from("capital_grants").delete().eq("profile_id", profileId);
+  await admin.from("knowledge_points").delete().eq("profile_id", profileId);
+  await admin.from("learning_progress").delete().eq("profile_id", profileId);
 }
 
 // Aktivität über die echten RPCs (eigene Session je Kind) – damit Dashboards Daten zeigen.
@@ -97,10 +79,32 @@ async function seedActivity(email, { modules, buyTicker, buyQty }) {
 }
 
 async function main() {
-  await deleteExisting();
-  const c = await createUsers();
-  await linkFamily(c);
-  await setupClass(c);
+  const c = {};
+  for (const u of USERS) c[u.key] = await ensureUser(u);
+
+  // Family: Papa ↔ Mia, Tom (freigegeben) – idempotent neu setzen.
+  await admin.from("parent_child_links").delete().eq("parent_profile_id", c.papa.profileId);
+  await admin.from("parent_child_links").insert([
+    { parent_profile_id: c.papa.profileId, child_profile_id: c.mia.profileId, status: "approved" },
+    { parent_profile_id: c.papa.profileId, child_profile_id: c.tom.profileId, status: "approved" },
+  ]);
+
+  // Classroom: Klasse 6b (Code TEST6B) mit Mia + Tom – idempotent neu setzen.
+  await admin.from("classes").delete().eq("teacher_profile_id", c.lehrer.profileId);
+  const { data: cls, error: clsErr } = await admin
+    .from("classes")
+    .insert({ teacher_profile_id: c.lehrer.profileId, name: "Klasse 6b", class_code: "TEST6B" })
+    .select("id")
+    .single();
+  if (clsErr) throw new Error(`class: ${clsErr.message}`);
+  await admin.from("class_members").insert([
+    { class_id: cls.id, child_profile_id: c.mia.profileId },
+    { class_id: cls.id, child_profile_id: c.tom.profileId },
+  ]);
+
+  // Aktivität zurücksetzen + neu erzeugen (reproduzierbar).
+  await resetPlayer(c.mia.profileId);
+  await resetPlayer(c.tom.profileId);
   await seedActivity("mia@hofino.test", { modules: ["m01", "m02"], buyTicker: "AAPL", buyQty: 3 });
   await seedActivity("tom@hofino.test", { modules: ["m01"], buyTicker: "SAP", buyQty: 2 });
 

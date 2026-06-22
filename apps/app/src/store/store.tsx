@@ -188,6 +188,7 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
   const t = useCallback((key: string) => translate(lang, key), [lang]);
 
   const load = useCallback(async () => {
+   try {
     let { data: auth } = await supabase.auth.getUser();
     let user = auth.user;
     // Dev-Auto-Login fürs Test-Cockpit (nur lokal mit EXPO_PUBLIC_DEV_LOGIN=1).
@@ -199,9 +200,11 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
         email = null;
       }
       if (email) {
-        await supabase.auth.signInWithPassword({ email, password: "hofino-dev-123" });
-        ({ data: auth } = await supabase.auth.getUser());
-        user = auth.user;
+        const r = await supabase.auth.signInWithPassword({ email, password: "hofino-dev-123" });
+        if (!r.error) {
+          ({ data: auth } = await supabase.auth.getUser());
+          user = auth.user;
+        }
       }
     }
     if (!user) {
@@ -289,6 +292,10 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
       pendingLinks: (pendingRes.data ?? []).map((r) => ({ parentProfileId: r.parent_profile_id })),
       loading: false,
     });
+   } catch {
+     // Netzwerk/Backend nicht erreichbar → nicht hängen bleiben, sondern Login zeigen.
+     setData({ ...EMPTY, loading: false });
+   }
   }, []);
 
   useEffect(() => {
