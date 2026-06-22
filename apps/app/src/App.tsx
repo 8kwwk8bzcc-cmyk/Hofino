@@ -17,6 +17,8 @@ import { Discover } from "./screens/Discover.js";
 import { Depot } from "./screens/Depot.js";
 import { Learn } from "./screens/Learn.js";
 import { Rankings } from "./screens/Rankings.js";
+import { FamilyHome } from "./screens/family/FamilyHome.js";
+import { FamilyLink } from "./screens/family/FamilyLink.js";
 import { colors, space } from "./theme.js";
 
 type TabId = "home" | "learn" | "depot" | "discover" | "rankings";
@@ -65,6 +67,42 @@ function Main() {
   );
 }
 
+type ParentTab = "family" | "link";
+const PARENT_TABS: { id: ParentTab; icon: string; label: string }[] = [
+  { id: "family", icon: "👪", label: "Familie" },
+  { id: "link", icon: "🔗", label: "Verknüpfen" },
+];
+
+function ParentShell() {
+  const { signOut } = useStore();
+  const [tab, setTab] = useState<ParentTab>("family");
+  return (
+    <View style={styles.shell}>
+      <View style={styles.topbar}>
+        <Text style={styles.brand}>Hofino · Eltern</Text>
+        <Pressable testID="logout" onPress={signOut}>
+          <Text style={styles.logout}>Abmelden</Text>
+        </Pressable>
+      </View>
+      <View style={styles.screen}>
+        {tab === "family" && <FamilyHome />}
+        {tab === "link" && <FamilyLink />}
+      </View>
+      <View style={styles.tabbar}>
+        {PARENT_TABS.map((t) => {
+          const active = t.id === tab;
+          return (
+            <Pressable key={t.id} testID={`tab-${t.id}`} onPress={() => setTab(t.id)} style={styles.tab}>
+              <Text style={[styles.tabIcon, active && styles.tabIconActive]}>{t.icon}</Text>
+              <Text style={[styles.tabLabel, active && styles.tabLabelActive]}>{t.label}</Text>
+            </Pressable>
+          );
+        })}
+      </View>
+    </View>
+  );
+}
+
 function Gate() {
   const { state } = useStore();
   if (state.loading) {
@@ -76,6 +114,7 @@ function Gate() {
   }
   if (!state.hasSession) return <Onboarding />;
   if (!state.onboarded) return <ProfileSetup />;
+  if (state.role === "parent") return <ParentShell />;
   return <Main />;
 }
 

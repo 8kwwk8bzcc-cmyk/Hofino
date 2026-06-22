@@ -27,7 +27,20 @@ interface QuizResult {
   perfect: boolean;
 }
 
-export type Role = "child" | "adult";
+export type Role = "child" | "adult" | "parent";
+
+export interface PendingLink {
+  parentProfileId: string;
+}
+
+export interface ChildSummary {
+  profileId: string;
+  displayName: string;
+  completedCount: number;
+  knowledgePoints: number;
+  equityCents: number;
+  performancePercent: number;
+}
 
 interface Data {
   sessionUserId: string | null;
@@ -45,6 +58,7 @@ interface Data {
   hasInvested: boolean;
   instruments: Instrument[];
   prices: Map<string, number>;
+  pendingLinks: PendingLink[];
   loading: boolean;
 }
 
@@ -64,6 +78,7 @@ const EMPTY: Data = {
   hasInvested: false,
   instruments: [],
   prices: new Map(),
+  pendingLinks: [],
   loading: true,
 };
 
@@ -89,12 +104,14 @@ interface StoreApi {
     hasSession: boolean;
     loading: boolean;
     role: Role;
+    profileId: string | null;
     displayName: string;
     plot: string;
     portfolio: Portfolio;
     watchlist: string[];
     completed: string[];
     quiz: Record<string, QuizResult>;
+    pendingLinks: PendingLink[];
   };
   instruments: Instrument[];
   instrumentById: Map<string, Instrument>;
@@ -116,6 +133,9 @@ interface StoreApi {
   sell: (instrumentId: string, quantity: number) => Promise<OrderOutcome>;
   toggleWatch: (instrumentId: string) => Promise<void>;
   completeModule: (moduleId: string, correct: number, total: number) => Promise<void>;
+  linkChild: (childCode: string) => Promise<AuthOutcome>;
+  respondToLink: (parentProfileId: string, approve: boolean) => Promise<void>;
+  fetchFamily: () => Promise<ChildSummary[]>;
 }
 
 const StoreContext = createContext<StoreApi | null>(null);
@@ -153,7 +173,7 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
       .limit(1);
     const asOf = latest.data?.[0]?.as_of as string | undefined;
 
-    const [instrumentsRes, pricesRes, portfolioRes, holdingsRes, watchRes, learnRes, pointsRes, grantsRes, ordersRes] =
+    const [instrumentsRes, pricesRes, portfolioRes, holdingsRes, watchRes, learnRes, pointsRes, grantsRes, ordersRes, pendingRes] =
       await Promise.all([
         supabase.from("instruments").select("id, ticker, name, type, sector, country"),
         asOf
@@ -166,38 +186,51 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
         supabase.from("knowledge_points").select("points"),
         supabase.from("capital_grants").select("amount_cents"),
         supabase.from("orders").select("id").limit(1),
+        supabase
+          .from("parent_child_links")
+          .select("parent_profile_id")
+          .eq("child_profile_id", profileId)
+          .eq("status", "pending"),
       ]);
+
+    const role = (profileRes.data.role as Role) ?? "child";
+    const isPlayer = role !== "parent"; // Eltern haben kein eigenes Depot/Lernprofil.
 
     const prices = new Map<string, number>();
     for (const p of pricesRes.data ?? []) prices.set(p.instrument_id, p.price_cents);
 
     const completed: string[] = [];
     const quiz: Record<string, QuizResult> = {};
-    for (const lp of learnRes.data ?? []) {
-      if (lp.completed_at) completed.push(lp.module_id);
-      quiz[lp.module_id] = { score: lp.quiz_score ?? 0, perfect: !!lp.perfect };
+    if (isPlayer) {
+      for (const lp of learnRes.data ?? []) {
+        if (lp.completed_at) completed.push(lp.module_id);
+        quiz[lp.module_id] = { score: lp.quiz_score ?? 0, perfect: !!lp.perfect };
+      }
     }
 
     setData({
       sessionUserId: user.id,
       profileId,
-      role: (profileRes.data.role as Role) ?? "child",
+      role,
       displayName: (profileRes.data.display_name as string) ?? "",
       plot: globalThis.localStorage?.getItem(plotKey(user.id)) ?? "",
-      cashCents: portfolioRes.data?.cash_cents ?? 0,
-      holdings: (holdingsRes.data ?? []).map((h) => ({
-        instrumentId: h.instrument_id,
-        quantity: h.quantity,
-        avgCostCents: h.avg_cost_cents,
-      })),
-      watchlist: (watchRes.data ?? []).map((w) => w.instrument_id),
+      cashCents: isPlayer ? portfolioRes.data?.cash_cents ?? 0 : 0,
+      holdings: isPlayer
+        ? (holdingsRes.data ?? []).map((h) => ({
+            instrumentId: h.instrument_id,
+            quantity: h.quantity,
+            avgCostCents: h.avg_cost_cents,
+          }))
+        : [],
+      watchlist: isPlayer ? (watchRes.data ?? []).map((w) => w.instrument_id) : [],
       completed,
       quiz,
-      knowledgePoints: (pointsRes.data ?? []).reduce((s, r) => s + r.points, 0),
-      learningCapitalCents: (grantsRes.data ?? []).reduce((s, r) => s + r.amount_cents, 0),
-      hasInvested: (ordersRes.data ?? []).length > 0,
+      knowledgePoints: isPlayer ? (pointsRes.data ?? []).reduce((s, r) => s + r.points, 0) : 0,
+      learningCapitalCents: isPlayer ? (grantsRes.data ?? []).reduce((s, r) => s + r.amount_cents, 0) : 0,
+      hasInvested: isPlayer ? (ordersRes.data ?? []).length > 0 : false,
       instruments: (instrumentsRes.data ?? []) as Instrument[],
       prices,
+      pendingLinks: (pendingRes.data ?? []).map((r) => ({ parentProfileId: r.parent_profile_id })),
       loading: false,
     });
   }, []);
@@ -299,6 +332,81 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
     [load]
   );
 
+  const linkChild = useCallback<StoreApi["linkChild"]>(async (childCode) => {
+    const profileId = dataRef.current.profileId;
+    if (!profileId) return { ok: false, message: "Nicht angemeldet." };
+    const code = childCode.trim();
+    if (code === profileId) return { ok: false, message: "Das ist dein eigener Code." };
+    const ins = await supabase
+      .from("parent_child_links")
+      .insert({ parent_profile_id: profileId, child_profile_id: code, status: "pending" });
+    if (ins.error) return { ok: false, message: "Code ungültig oder bereits angefragt." };
+    return { ok: true };
+  }, []);
+
+  const respondToLink = useCallback<StoreApi["respondToLink"]>(
+    async (parentProfileId, approve) => {
+      await supabase.rpc("respond_to_parent_link", { p_parent: parentProfileId, p_approve: approve });
+      await load();
+    },
+    [load]
+  );
+
+  const fetchFamily = useCallback<StoreApi["fetchFamily"]>(async () => {
+    const profileId = dataRef.current.profileId;
+    if (!profileId) return [];
+    const links = await supabase
+      .from("parent_child_links")
+      .select("child_profile_id")
+      .eq("parent_profile_id", profileId)
+      .eq("status", "approved");
+    const childIds = (links.data ?? []).map((l) => l.child_profile_id as string);
+    if (childIds.length === 0) return [];
+
+    const [profilesRes, portfoliosRes, holdingsRes, learnRes, pointsRes, grantsRes] = await Promise.all([
+      supabase.from("profiles").select("id, display_name").in("id", childIds),
+      supabase.from("portfolios").select("id, owner_profile_id, cash_cents").in("owner_profile_id", childIds),
+      supabase.from("holdings").select("portfolio_id, instrument_id, quantity"),
+      supabase.from("learning_progress").select("profile_id, completed_at"),
+      supabase.from("knowledge_points").select("profile_id, points"),
+      supabase.from("capital_grants").select("profile_id, amount_cents"),
+    ]);
+
+    const prices = dataRef.current.prices;
+    const portfolioOwner = new Map<string, string>(); // portfolioId -> childId
+    const cashByChild = new Map<string, number>();
+    for (const p of portfoliosRes.data ?? []) {
+      portfolioOwner.set(p.id, p.owner_profile_id);
+      cashByChild.set(p.owner_profile_id, p.cash_cents);
+    }
+    const equityByChild = new Map<string, number>(cashByChild);
+    for (const h of holdingsRes.data ?? []) {
+      const child = portfolioOwner.get(h.portfolio_id);
+      if (!child) continue;
+      equityByChild.set(child, (equityByChild.get(child) ?? 0) + (prices.get(h.instrument_id) ?? 0) * h.quantity);
+    }
+    const completedByChild = new Map<string, number>();
+    for (const lp of learnRes.data ?? []) {
+      if (lp.completed_at) completedByChild.set(lp.profile_id, (completedByChild.get(lp.profile_id) ?? 0) + 1);
+    }
+    const pointsByChild = new Map<string, number>();
+    for (const r of pointsRes.data ?? []) pointsByChild.set(r.profile_id, (pointsByChild.get(r.profile_id) ?? 0) + r.points);
+    const capitalByChild = new Map<string, number>();
+    for (const r of grantsRes.data ?? []) capitalByChild.set(r.profile_id, (capitalByChild.get(r.profile_id) ?? 0) + r.amount_cents);
+
+    return (profilesRes.data ?? []).map((p) => {
+      const equity = equityByChild.get(p.id) ?? cashByChild.get(p.id) ?? 0;
+      return {
+        profileId: p.id,
+        displayName: p.display_name as string,
+        completedCount: completedByChild.get(p.id) ?? 0,
+        knowledgePoints: pointsByChild.get(p.id) ?? 0,
+        equityCents: equity,
+        performancePercent: performancePercent(equity, capitalByChild.get(p.id) ?? 0),
+      };
+    });
+  }, []);
+
   const portfolio: Portfolio = useMemo(
     () => ({
       cashCents: data.cashCents,
@@ -342,12 +450,14 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
       hasSession: data.sessionUserId !== null,
       loading: data.loading,
       role: data.role,
+      profileId: data.profileId,
       displayName: data.displayName,
       plot: data.plot,
       portfolio,
       watchlist: data.watchlist,
       completed: data.completed,
       quiz: data.quiz,
+      pendingLinks: data.pendingLinks,
     },
     instruments: data.instruments,
     instrumentById,
@@ -361,6 +471,9 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
     sell: (id, qty) => order(id, qty, "sell"),
     toggleWatch,
     completeModule,
+    linkChild,
+    respondToLink,
+    fetchFamily,
   };
 
   return <StoreContext.Provider value={api}>{children}</StoreContext.Provider>;

@@ -84,17 +84,28 @@ function Credentials({
   );
 }
 
-function RoleToggle({ role, onChange }: { role: "child" | "adult"; onChange: (r: "child" | "adult") => void }) {
+type RegRole = "child" | "adult" | "parent";
+const ROLE_OPTIONS: { id: RegRole; label: string }[] = [
+  { id: "child", label: "Kind (10–15)" },
+  { id: "adult", label: "Erwachsene" },
+  { id: "parent", label: "Eltern" },
+];
+
+function RoleToggle({ role, onChange }: { role: RegRole; onChange: (r: RegRole) => void }) {
   return (
     <View style={styles.block}>
       <Text style={styles.label}>Für wen ist das Konto?</Text>
       <View style={styles.tabs}>
-        <Pressable testID="role-child" onPress={() => onChange("child")} style={[styles.tab, role === "child" && styles.tabActive]}>
-          <Text style={[styles.tabText, role === "child" && styles.tabTextActive]}>Kind (10–15)</Text>
-        </Pressable>
-        <Pressable testID="role-adult" onPress={() => onChange("adult")} style={[styles.tab, role === "adult" && styles.tabActive]}>
-          <Text style={[styles.tabText, role === "adult" && styles.tabTextActive]}>Erwachsene</Text>
-        </Pressable>
+        {ROLE_OPTIONS.map((o) => (
+          <Pressable
+            key={o.id}
+            testID={`role-${o.id}`}
+            onPress={() => onChange(o.id)}
+            style={[styles.tab, role === o.id && styles.tabActive]}
+          >
+            <Text style={[styles.tabText, role === o.id && styles.tabTextActive]}>{o.label}</Text>
+          </Pressable>
+        ))}
       </View>
     </View>
   );
@@ -103,7 +114,7 @@ function RoleToggle({ role, onChange }: { role: "child" | "adult"; onChange: (r:
 export function Onboarding() {
   const { register, login } = useStore();
   const [mode, setMode] = useState<"register" | "login">("register");
-  const [role, setRole] = useState<"child" | "adult">("child");
+  const [role, setRole] = useState<RegRole>("child");
   const [name, setName] = useState("");
   const [plot, setPlot] = useState("");
   const [email, setEmail] = useState("");
@@ -112,7 +123,7 @@ export function Onboarding() {
   const [busy, setBusy] = useState(false);
 
   const emailOk = /.+@.+\..+/.test(email);
-  const plotOk = role === "adult" || plot !== "";
+  const plotOk = role !== "child" || plot !== "";
   const canRegister = name.trim().length >= 2 && plotOk && emailOk && password.length >= 6;
   const canLogin = emailOk && password.length >= 6;
 
@@ -155,11 +166,14 @@ export function Onboarding() {
 
       {error && <Text style={styles.error}>{error}</Text>}
 
-      {mode === "register" && (
+      {mode === "register" && role !== "parent" && (
         <Body>
           Zum Start bekommst du <Text style={{ fontWeight: "800" }}>{formatEuros(START_CAPITAL_CENTS)}</Text>{" "}
           virtuelles Übungsgeld – kein echtes Geld.
         </Body>
+      )}
+      {mode === "register" && role === "parent" && (
+        <Body>Als Elternteil begleitest du dein Kind – du verknüpfst es nach der Anmeldung per Code.</Body>
       )}
 
       <Button
@@ -174,12 +188,12 @@ export function Onboarding() {
 
 export function ProfileSetup() {
   const { createProfile, signOut } = useStore();
-  const [role, setRole] = useState<"child" | "adult">("child");
+  const [role, setRole] = useState<RegRole>("child");
   const [name, setName] = useState("");
   const [plot, setPlot] = useState("");
   const [error, setError] = useState<string | null>(null);
 
-  const plotOk = role === "adult" || plot !== "";
+  const plotOk = role !== "child" || plot !== "";
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
