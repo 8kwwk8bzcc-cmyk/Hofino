@@ -16,6 +16,9 @@ pnpm exec supabase start >/dev/null 2>&1 || pnpm exec supabase start || true
 echo "▶ Test-Nutzer anlegen…"
 node apps/app/scripts/seed-test-users.mjs
 
+echo "▶ Lern-Inhalte importieren…"
+node apps/app/scripts/seed-learning.mjs
+
 echo "▶ Cockpit bauen…"
 ( cd apps/app && pnpm cockpit >/dev/null )
 
