@@ -3,9 +3,11 @@ import { ScrollView, StyleSheet, View, Text } from "react-native";
 import { formatEuros } from "@hofino/core";
 import { MODULES } from "@hofino/content";
 import { useStore } from "../store/store.js";
-import { Body, Card, H1, H2, HLogo, Muted, Pill, ProgressBar } from "../ui/components.js";
+import { Body, Button, Card, H1, H2, HLogo, Muted, Pill, ProgressBar } from "../ui/components.js";
+import { HouseScene } from "../ui/HouseScene.js";
 import { ChildFamilyCard } from "./family/ChildFamilyCard.js";
 import { StudentClassCard } from "./classroom/StudentClassCard.js";
+import { useNav } from "../nav.js";
 import { colors, font, space } from "../theme.js";
 
 const STAGES: { id: string; emoji: string; label: string }[] = [
@@ -19,16 +21,20 @@ const STAGES: { id: string; emoji: string; label: string }[] = [
 
 export function Home() {
   const { state, derived } = useStore();
+  const go = useNav();
   const stageIndex = STAGES.findIndex((s) => s.id === derived.houseStage);
   const stage = STAGES[Math.max(0, stageIndex)]!;
 
-  const mission = state.portfolio.holdings.length === 0
+  const noInvest = state.portfolio.holdings.length === 0;
+  const mission = noInvest
     ? "Tätige dein erstes Investment im Depot oder unter Entdecken."
     : derived.completedCount === 0
       ? "Schließe dein erstes Lernmodul ab und verdiene Lernkapital."
       : derived.completedCount < MODULES.length
         ? "Lerne weiter – schließe das nächste Modul ab."
         : "Stark! Du hast alle Module geschafft. Baue dein Depot weiter aus.";
+  const missionTab = noInvest ? "discover" : "learn";
+  const missionCta = noInvest ? "Jetzt entdecken" : "Zum Lernen";
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
@@ -43,7 +49,7 @@ export function Home() {
       <Card>
         <H2>Dein Haus</H2>
         <View style={styles.house}>
-          <Text style={styles.houseEmoji}>{stage.emoji}</Text>
+          <HouseScene stage={derived.houseStage} size={96} />
           <View style={{ flex: 1, gap: space.xs }}>
             <Text style={styles.stageLabel}>{stage.label}</Text>
             <ProgressBar value={(stageIndex + 1) / STAGES.length} />
@@ -73,6 +79,7 @@ export function Home() {
       <Card>
         <H2>Nächste Mission</H2>
         <Body>{mission}</Body>
+        <Button title={missionCta} onPress={() => go(missionTab)} testID="mission-cta" />
       </Card>
 
       <Card>

@@ -23,6 +23,7 @@ import { TeacherClass } from "./screens/classroom/TeacherClass.js";
 import { TeacherBeamer } from "./screens/classroom/TeacherBeamer.js";
 import { LangToggle } from "./ui/components.js";
 import { translate } from "./i18n.js";
+import { NavContext } from "./nav.js";
 import { colors, space } from "./theme.js";
 
 function TopBar({ brand }: { brand: string }) {
@@ -58,13 +59,15 @@ function Main() {
   return (
     <View style={styles.shell}>
       <TopBar brand={isAdult ? t("brand.adult") : "Hofino"} />
-      <View style={styles.screen}>
-        {tab === "home" && (isAdult ? <AdultHome /> : <Home />)}
-        {tab === "learn" && <Learn />}
-        {tab === "depot" && <Depot />}
-        {tab === "discover" && <Discover />}
-        {tab === "rankings" && <Rankings />}
-      </View>
+      <NavContext.Provider value={setTab}>
+        <View style={styles.screen}>
+          {tab === "home" && (isAdult ? <AdultHome /> : <Home />)}
+          {tab === "learn" && <Learn />}
+          {tab === "depot" && <Depot />}
+          {tab === "discover" && <Discover />}
+          {tab === "rankings" && <Rankings />}
+        </View>
+      </NavContext.Provider>
       <View style={styles.tabbar}>
         {TABS.map((item) => {
           const active = item.id === tab;
