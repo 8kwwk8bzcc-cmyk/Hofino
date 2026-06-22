@@ -21,7 +21,24 @@ import { FamilyHome } from "./screens/family/FamilyHome.js";
 import { FamilyLink } from "./screens/family/FamilyLink.js";
 import { TeacherClass } from "./screens/classroom/TeacherClass.js";
 import { TeacherBeamer } from "./screens/classroom/TeacherBeamer.js";
+import { LangToggle } from "./ui/components.js";
+import { translate } from "./i18n.js";
 import { colors, space } from "./theme.js";
+
+function TopBar({ brand }: { brand: string }) {
+  const { signOut, lang, setLang } = useStore();
+  return (
+    <View style={styles.topbar}>
+      <Text style={styles.brand}>{brand}</Text>
+      <View style={styles.topbarRight}>
+        <LangToggle lang={lang} onChange={setLang} />
+        <Pressable testID="logout" onPress={signOut}>
+          <Text style={styles.logout}>{translate(lang, "common.logout")}</Text>
+        </Pressable>
+      </View>
+    </View>
+  );
+}
 
 type TabId = "home" | "learn" | "depot" | "discover" | "rankings";
 
@@ -34,18 +51,13 @@ const TABS: { id: TabId; icon: string; label: string }[] = [
 ];
 
 function Main() {
-  const { signOut, state } = useStore();
+  const { state, t } = useStore();
   const [tab, setTab] = useState<TabId>("home");
   const isAdult = state.role === "adult";
 
   return (
     <View style={styles.shell}>
-      <View style={styles.topbar}>
-        <Text style={styles.brand}>Hofino{isAdult ? " · Erwachsene" : ""}</Text>
-        <Pressable testID="logout" onPress={signOut}>
-          <Text style={styles.logout}>Abmelden</Text>
-        </Pressable>
-      </View>
+      <TopBar brand={isAdult ? t("brand.adult") : "Hofino"} />
       <View style={styles.screen}>
         {tab === "home" && (isAdult ? <AdultHome /> : <Home />)}
         {tab === "learn" && <Learn />}
@@ -54,12 +66,12 @@ function Main() {
         {tab === "rankings" && <Rankings />}
       </View>
       <View style={styles.tabbar}>
-        {TABS.map((t) => {
-          const active = t.id === tab;
-          const label = t.id === "home" && isAdult ? "Übersicht" : t.label;
+        {TABS.map((item) => {
+          const active = item.id === tab;
+          const label = item.id === "home" && isAdult ? t("tab.overview") : t(`tab.${item.id}`);
           return (
-            <Pressable key={t.id} testID={`tab-${t.id}`} onPress={() => setTab(t.id)} style={styles.tab}>
-              <Text style={[styles.tabIcon, active && styles.tabIconActive]}>{t.icon}</Text>
+            <Pressable key={item.id} testID={`tab-${item.id}`} onPress={() => setTab(item.id)} style={styles.tab}>
+              <Text style={[styles.tabIcon, active && styles.tabIconActive]}>{item.icon}</Text>
               <Text style={[styles.tabLabel, active && styles.tabLabelActive]}>{label}</Text>
             </Pressable>
           );
@@ -76,27 +88,22 @@ const PARENT_TABS: { id: ParentTab; icon: string; label: string }[] = [
 ];
 
 function ParentShell() {
-  const { signOut } = useStore();
+  const { t } = useStore();
   const [tab, setTab] = useState<ParentTab>("family");
   return (
     <View style={styles.shell}>
-      <View style={styles.topbar}>
-        <Text style={styles.brand}>Hofino · Eltern</Text>
-        <Pressable testID="logout" onPress={signOut}>
-          <Text style={styles.logout}>Abmelden</Text>
-        </Pressable>
-      </View>
+      <TopBar brand={t("brand.parent")} />
       <View style={styles.screen}>
         {tab === "family" && <FamilyHome />}
         {tab === "link" && <FamilyLink />}
       </View>
       <View style={styles.tabbar}>
-        {PARENT_TABS.map((t) => {
-          const active = t.id === tab;
+        {PARENT_TABS.map((item) => {
+          const active = item.id === tab;
           return (
-            <Pressable key={t.id} testID={`tab-${t.id}`} onPress={() => setTab(t.id)} style={styles.tab}>
-              <Text style={[styles.tabIcon, active && styles.tabIconActive]}>{t.icon}</Text>
-              <Text style={[styles.tabLabel, active && styles.tabLabelActive]}>{t.label}</Text>
+            <Pressable key={item.id} testID={`tab-${item.id}`} onPress={() => setTab(item.id)} style={styles.tab}>
+              <Text style={[styles.tabIcon, active && styles.tabIconActive]}>{item.icon}</Text>
+              <Text style={[styles.tabLabel, active && styles.tabLabelActive]}>{t(`tab.${item.id}`)}</Text>
             </Pressable>
           );
         })}
@@ -112,27 +119,22 @@ const TEACHER_TABS: { id: TeacherTab; icon: string; label: string }[] = [
 ];
 
 function TeacherShell() {
-  const { signOut } = useStore();
+  const { t } = useStore();
   const [tab, setTab] = useState<TeacherTab>("class");
   return (
     <View style={styles.shell}>
-      <View style={styles.topbar}>
-        <Text style={styles.brand}>Hofino · Lehrer</Text>
-        <Pressable testID="logout" onPress={signOut}>
-          <Text style={styles.logout}>Abmelden</Text>
-        </Pressable>
-      </View>
+      <TopBar brand={t("brand.teacher")} />
       <View style={styles.screen}>
         {tab === "class" && <TeacherClass />}
         {tab === "beamer" && <TeacherBeamer />}
       </View>
       <View style={styles.tabbar}>
-        {TEACHER_TABS.map((t) => {
-          const active = t.id === tab;
+        {TEACHER_TABS.map((item) => {
+          const active = item.id === tab;
           return (
-            <Pressable key={t.id} testID={`tab-${t.id}`} onPress={() => setTab(t.id)} style={styles.tab}>
-              <Text style={[styles.tabIcon, active && styles.tabIconActive]}>{t.icon}</Text>
-              <Text style={[styles.tabLabel, active && styles.tabLabelActive]}>{t.label}</Text>
+            <Pressable key={item.id} testID={`tab-${item.id}`} onPress={() => setTab(item.id)} style={styles.tab}>
+              <Text style={[styles.tabIcon, active && styles.tabIconActive]}>{item.icon}</Text>
+              <Text style={[styles.tabLabel, active && styles.tabLabelActive]}>{t(`tab.${item.id}`)}</Text>
             </Pressable>
           );
         })}
@@ -183,6 +185,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.surface,
   },
   brand: { fontWeight: "800", color: colors.primary, fontSize: 16 },
+  topbarRight: { flexDirection: "row", alignItems: "center", gap: space.lg },
   logout: { color: colors.textMuted, fontWeight: "600", fontSize: 13 },
   screen: { flex: 1 },
   tabbar: {

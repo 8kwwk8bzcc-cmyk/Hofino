@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Pressable, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 import { formatEuros, START_CAPITAL_CENTS } from "@hofino/core";
 import { useStore } from "../store/store.js";
-import { Body, Button, H1, HLogo, Muted } from "../ui/components.js";
+import { Body, Button, H1, HLogo, LangToggle, Muted } from "../ui/components.js";
 import { colors, font, radius, space } from "../theme.js";
 
 const PLOTS = [
@@ -12,14 +12,15 @@ const PLOTS = [
 ];
 
 function NameInput({ value, onChange }: { value: string; onChange: (v: string) => void }) {
+  const { t } = useStore();
   return (
     <View style={styles.block}>
-      <Text style={styles.label}>Wie möchtest du heißen?</Text>
+      <Text style={styles.label}>{t("auth.name")}</Text>
       <TextInput
         testID="name-input"
         value={value}
         onChangeText={onChange}
-        placeholder="Anzeigename (kein echter Name nötig)"
+        placeholder={t("auth.namePlaceholder")}
         placeholderTextColor={colors.textMuted}
         style={styles.input}
         maxLength={20}
@@ -29,9 +30,10 @@ function NameInput({ value, onChange }: { value: string; onChange: (v: string) =
 }
 
 function PlotPicker({ value, onChange }: { value: string; onChange: (v: string) => void }) {
+  const { t } = useStore();
   return (
     <View style={styles.block}>
-      <Text style={styles.label}>Wähle dein Grundstück</Text>
+      <Text style={styles.label}>{t("auth.plot")}</Text>
       {PLOTS.map((p) => (
         <Pressable
           key={p.id}
@@ -59,13 +61,14 @@ function Credentials({
   onEmail: (v: string) => void;
   onPassword: (v: string) => void;
 }) {
+  const { t } = useStore();
   return (
     <View style={styles.block}>
       <TextInput
         testID="email-input"
         value={email}
         onChangeText={onEmail}
-        placeholder="E-Mail"
+        placeholder={t("auth.email")}
         autoCapitalize="none"
         keyboardType="email-address"
         placeholderTextColor={colors.textMuted}
@@ -75,7 +78,7 @@ function Credentials({
         testID="password-input"
         value={password}
         onChangeText={onPassword}
-        placeholder="Passwort (mind. 6 Zeichen)"
+        placeholder={t("auth.password")}
         secureTextEntry
         placeholderTextColor={colors.textMuted}
         style={styles.input}
@@ -93,9 +96,10 @@ const ROLE_OPTIONS: { id: RegRole; label: string }[] = [
 ];
 
 function RoleToggle({ role, onChange }: { role: RegRole; onChange: (r: RegRole) => void }) {
+  const { t } = useStore();
   return (
     <View style={styles.block}>
-      <Text style={styles.label}>Für wen ist das Konto?</Text>
+      <Text style={styles.label}>{t("auth.roleQuestion")}</Text>
       <View style={styles.tabs}>
         {ROLE_OPTIONS.map((o) => (
           <Pressable
@@ -104,7 +108,7 @@ function RoleToggle({ role, onChange }: { role: RegRole; onChange: (r: RegRole) 
             onPress={() => onChange(o.id)}
             style={[styles.tab, role === o.id && styles.tabActive]}
           >
-            <Text style={[styles.tabText, role === o.id && styles.tabTextActive]}>{o.label}</Text>
+            <Text style={[styles.tabText, role === o.id && styles.tabTextActive]}>{t(`role.${o.id}`)}</Text>
           </Pressable>
         ))}
       </View>
@@ -113,7 +117,7 @@ function RoleToggle({ role, onChange }: { role: RegRole; onChange: (r: RegRole) 
 }
 
 export function Onboarding() {
-  const { register, login } = useStore();
+  const { register, login, t, lang, setLang } = useStore();
   const [mode, setMode] = useState<"register" | "login">("register");
   const [role, setRole] = useState<RegRole>("child");
   const [name, setName] = useState("");
@@ -141,18 +145,21 @@ export function Onboarding() {
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
+      <View style={{ alignItems: "flex-end" }}>
+        <LangToggle lang={lang} onChange={setLang} />
+      </View>
       <View style={styles.header}>
         <HLogo size={64} />
-        <H1>Willkommen bei Hofino</H1>
-        <Muted>Geld verstehen. Investieren üben.</Muted>
+        <H1>{t("auth.welcome")}</H1>
+        <Muted>{t("claim")}</Muted>
       </View>
 
       <View style={styles.tabs}>
         <Pressable testID="mode-register" onPress={() => setMode("register")} style={[styles.tab, mode === "register" && styles.tabActive]}>
-          <Text style={[styles.tabText, mode === "register" && styles.tabTextActive]}>Neu hier</Text>
+          <Text style={[styles.tabText, mode === "register" && styles.tabTextActive]}>{t("auth.new")}</Text>
         </Pressable>
         <Pressable testID="mode-login" onPress={() => setMode("login")} style={[styles.tab, mode === "login" && styles.tabActive]}>
-          <Text style={[styles.tabText, mode === "login" && styles.tabTextActive]}>Anmelden</Text>
+          <Text style={[styles.tabText, mode === "login" && styles.tabTextActive]}>{t("auth.login")}</Text>
         </Pressable>
       </View>
 
@@ -182,7 +189,7 @@ export function Onboarding() {
 
       <Button
         testID="start-button"
-        title={busy ? "Bitte warten…" : mode === "register" ? "Los geht's" : "Anmelden"}
+        title={busy ? t("auth.wait") : mode === "register" ? t("auth.start") : t("auth.signin")}
         onPress={submit}
         disabled={busy || (mode === "register" ? !canRegister : !canLogin)}
       />

@@ -2,6 +2,7 @@
 export * from "./schema.js";
 export * from "./modules.js";
 export * from "./profiles.js";
+export * from "./guard.js";
 
 import { MODULES } from "./modules.js";
 import type { LearningModule } from "./schema.js";

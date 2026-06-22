@@ -82,6 +82,24 @@ export function ProgressBar({ value }: { value: number }) {
   );
 }
 
+export function LangToggle({
+  lang,
+  onChange,
+}: {
+  lang: "de" | "en";
+  onChange: (l: "de" | "en") => void;
+}) {
+  return (
+    <View style={styles.langRow}>
+      {(["de", "en"] as const).map((l) => (
+        <Pressable key={l} testID={`lang-${l}`} onPress={() => onChange(l)}>
+          <Text style={[styles.langText, lang === l && styles.langActive]}>{l.toUpperCase()}</Text>
+        </Pressable>
+      ))}
+    </View>
+  );
+}
+
 export function HLogo({ size = 40 }: { size?: number }) {
   return (
     <View style={[styles.logo, { width: size, height: size, borderRadius: size * 0.24 }]}>
@@ -116,4 +134,7 @@ const styles = StyleSheet.create({
   progressFill: { height: "100%", backgroundColor: colors.secondary },
   logo: { backgroundColor: colors.primary, alignItems: "center", justifyContent: "center" },
   logoText: { color: colors.secondary, fontWeight: "800" },
+  langRow: { flexDirection: "row", gap: space.sm },
+  langText: { fontSize: font.small, color: colors.textMuted, fontWeight: "700" },
+  langActive: { color: colors.primary, textDecorationLine: "underline" },
 });

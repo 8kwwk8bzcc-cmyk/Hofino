@@ -72,10 +72,14 @@ Definition of Done je Aufgabe: `pnpm lint && pnpm typecheck && pnpm test` grün.
 - [ ] Web-Ansicht für den Beamer (große Schrift, Klassenüberblick).
 
 ## M8 – Schliff & Absicherung
-- [ ] i18n de/en durchziehen.
-- [ ] Kinderschutz-Checks als Tests/Lint-Regeln (keine Brokerlinks/Werbung/Chat im Kindermodus).
-- [ ] Manipulationsschutz: Rankings nur serverseitig; Order serverseitig validiert.
-- [ ] Erfolgskriterien-Tracking (Aktivierung, ≥3 Module in 7 Tagen, Elternbindung …).
+- [~] i18n de/en: Grundlage (de/en) + UI-Hülle/Auth übersetzt mit Sprachumschalter
+      (`src/i18n.ts`). Offen: Inhaltsschirme schrittweise migrieren; englische Lerninhalte.
+- [x] Kinderschutz-Checks als Tests (`packages/content` `auditChildContent`): keine
+      Brokerlinks/Werbung/Anlageempfehlungen/Chat im Kindermodus.
+- [x] Manipulationsschutz: Rankings nur serverseitig (`ranking-recompute`); Order/Lernkapital
+      serverseitig (`place_order`/`complete_module`); kein Self-Granting (RLS). Siehe `SECURITY.md`.
+- [x] Erfolgskriterien → Datenquellen dokumentiert (`SECURITY.md`); Datengrundlage vorhanden,
+      Reporting später.
 
 ## Später (NICHT MVP)
 Lizenzierter Kursfeed statt Simulator · Premium-Zahlung · KI-Coach · mehrere Depots ·

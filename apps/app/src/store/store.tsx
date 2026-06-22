@@ -12,6 +12,7 @@ import {
 } from "@hofino/core";
 import { MODULES } from "@hofino/content";
 import { supabase } from "../lib/supabase.js";
+import { translate, type Lang } from "../i18n.js";
 
 export interface Instrument {
   id: string;
@@ -161,6 +162,9 @@ interface StoreApi {
   fetchTeacherClass: () => Promise<TeacherClass | null>;
   fetchClassOverview: (classId: string) => Promise<ClassOverviewRow[]>;
   fetchMyClass: () => Promise<MyClass | null>;
+  lang: Lang;
+  setLang: (lang: Lang) => void;
+  t: (key: string) => string;
 }
 
 const StoreContext = createContext<StoreApi | null>(null);
@@ -169,6 +173,19 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
   const [data, setData] = useState<Data>(EMPTY);
   const dataRef = useRef(data);
   dataRef.current = data;
+
+  const [lang, setLangState] = useState<Lang>(
+    () => ((globalThis.localStorage?.getItem("hofino:lang") as Lang) || "de")
+  );
+  const setLang = useCallback((l: Lang) => {
+    try {
+      globalThis.localStorage?.setItem("hofino:lang", l);
+    } catch {
+      // ignorieren
+    }
+    setLangState(l);
+  }, []);
+  const t = useCallback((key: string) => translate(lang, key), [lang]);
 
   const load = useCallback(async () => {
     const { data: auth } = await supabase.auth.getUser();
@@ -558,6 +575,9 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
     fetchTeacherClass,
     fetchClassOverview,
     fetchMyClass,
+    lang,
+    setLang,
+    t,
   };
 
   return <StoreContext.Provider value={api}>{children}</StoreContext.Provider>;
