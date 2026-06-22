@@ -44,6 +44,9 @@ importers:
       '@hofino/core':
         specifier: workspace:*
         version: link:../../packages/core
+      '@hofino/learning':
+        specifier: workspace:*
+        version: link:../../packages/learning
       '@hofino/market-data':
         specifier: workspace:*
         version: link:../../packages/market-data
