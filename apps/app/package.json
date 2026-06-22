@@ -12,6 +12,9 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@hofino/core": "workspace:*",
+    "@hofino/content": "workspace:*",
+    "@hofino/market-data": "workspace:*",
     "@expo/metro-runtime": "~56.0.15",
     "@types/react": "~19.2.17",
     "expo": "^56.0.0",
