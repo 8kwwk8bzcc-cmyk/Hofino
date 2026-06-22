@@ -84,9 +84,26 @@ function Credentials({
   );
 }
 
+function RoleToggle({ role, onChange }: { role: "child" | "adult"; onChange: (r: "child" | "adult") => void }) {
+  return (
+    <View style={styles.block}>
+      <Text style={styles.label}>Für wen ist das Konto?</Text>
+      <View style={styles.tabs}>
+        <Pressable testID="role-child" onPress={() => onChange("child")} style={[styles.tab, role === "child" && styles.tabActive]}>
+          <Text style={[styles.tabText, role === "child" && styles.tabTextActive]}>Kind (10–15)</Text>
+        </Pressable>
+        <Pressable testID="role-adult" onPress={() => onChange("adult")} style={[styles.tab, role === "adult" && styles.tabActive]}>
+          <Text style={[styles.tabText, role === "adult" && styles.tabTextActive]}>Erwachsene</Text>
+        </Pressable>
+      </View>
+    </View>
+  );
+}
+
 export function Onboarding() {
   const { register, login } = useStore();
   const [mode, setMode] = useState<"register" | "login">("register");
+  const [role, setRole] = useState<"child" | "adult">("child");
   const [name, setName] = useState("");
   const [plot, setPlot] = useState("");
   const [email, setEmail] = useState("");
@@ -95,7 +112,8 @@ export function Onboarding() {
   const [busy, setBusy] = useState(false);
 
   const emailOk = /.+@.+\..+/.test(email);
-  const canRegister = name.trim().length >= 2 && plot !== "" && emailOk && password.length >= 6;
+  const plotOk = role === "adult" || plot !== "";
+  const canRegister = name.trim().length >= 2 && plotOk && emailOk && password.length >= 6;
   const canLogin = emailOk && password.length >= 6;
 
   const submit = async () => {
@@ -103,7 +121,7 @@ export function Onboarding() {
     setBusy(true);
     const r =
       mode === "register"
-        ? await register(name.trim(), plot, email.trim(), password)
+        ? await register(name.trim(), role === "child" ? plot : "", email.trim(), password, role)
         : await login(email.trim(), password);
     setBusy(false);
     if (!r.ok) setError(r.message);
@@ -128,8 +146,9 @@ export function Onboarding() {
 
       {mode === "register" && (
         <>
+          <RoleToggle role={role} onChange={setRole} />
           <NameInput value={name} onChange={setName} />
-          <PlotPicker value={plot} onChange={setPlot} />
+          {role === "child" && <PlotPicker value={plot} onChange={setPlot} />}
         </>
       )}
       <Credentials email={email} password={password} onEmail={setEmail} onPassword={setPassword} />
@@ -155,9 +174,12 @@ export function Onboarding() {
 
 export function ProfileSetup() {
   const { createProfile, signOut } = useStore();
+  const [role, setRole] = useState<"child" | "adult">("child");
   const [name, setName] = useState("");
   const [plot, setPlot] = useState("");
   const [error, setError] = useState<string | null>(null);
+
+  const plotOk = role === "adult" || plot !== "";
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
@@ -165,15 +187,16 @@ export function ProfileSetup() {
         <HLogo size={56} />
         <H1>Profil einrichten</H1>
       </View>
+      <RoleToggle role={role} onChange={setRole} />
       <NameInput value={name} onChange={setName} />
-      <PlotPicker value={plot} onChange={setPlot} />
+      {role === "child" && <PlotPicker value={plot} onChange={setPlot} />}
       {error && <Text style={styles.error}>{error}</Text>}
       <Button
         testID="create-profile"
         title="Weiter"
-        disabled={name.trim().length < 2 || plot === ""}
+        disabled={name.trim().length < 2 || !plotOk}
         onPress={async () => {
-          const r = await createProfile(name.trim(), plot);
+          const r = await createProfile(name.trim(), role === "child" ? plot : "", role);
           if (!r.ok) setError(r.message);
         }}
       />

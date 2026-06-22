@@ -27,9 +27,12 @@ interface QuizResult {
   perfect: boolean;
 }
 
+export type Role = "child" | "adult";
+
 interface Data {
   sessionUserId: string | null;
   profileId: string | null;
+  role: Role;
   displayName: string;
   plot: string;
   cashCents: number;
@@ -48,6 +51,7 @@ interface Data {
 const EMPTY: Data = {
   sessionUserId: null,
   profileId: null,
+  role: "child",
   displayName: "",
   plot: "",
   cashCents: 0,
@@ -84,6 +88,7 @@ interface StoreApi {
     onboarded: boolean;
     hasSession: boolean;
     loading: boolean;
+    role: Role;
     displayName: string;
     plot: string;
     portfolio: Portfolio;
@@ -103,9 +108,9 @@ interface StoreApi {
     houseStage: HouseStage;
     completedCount: number;
   };
-  register: (name: string, plot: string, email: string, password: string) => Promise<AuthOutcome>;
+  register: (name: string, plot: string, email: string, password: string, role: Role) => Promise<AuthOutcome>;
   login: (email: string, password: string) => Promise<AuthOutcome>;
-  createProfile: (name: string, plot: string) => Promise<AuthOutcome>;
+  createProfile: (name: string, plot: string, role: Role) => Promise<AuthOutcome>;
   signOut: () => Promise<void>;
   buy: (instrumentId: string, quantity: number) => Promise<OrderOutcome>;
   sell: (instrumentId: string, quantity: number) => Promise<OrderOutcome>;
@@ -176,6 +181,7 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
     setData({
       sessionUserId: user.id,
       profileId,
+      role: (profileRes.data.role as Role) ?? "child",
       displayName: (profileRes.data.display_name as string) ?? "",
       plot: globalThis.localStorage?.getItem(plotKey(user.id)) ?? "",
       cashCents: portfolioRes.data?.cash_cents ?? 0,
@@ -205,12 +211,12 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
   }, [load]);
 
   const register = useCallback<StoreApi["register"]>(
-    async (name, plot, email, password) => {
+    async (name, plot, email, password, role) => {
       const { data: res, error } = await supabase.auth.signUp({ email, password });
       if (error) return { ok: false, message: error.message };
       const user = res.user;
       if (!user) return { ok: false, message: "Keine Session erhalten." };
-      const ins = await supabase.from("profiles").insert({ auth_user_id: user.id, role: "child", display_name: name });
+      const ins = await supabase.from("profiles").insert({ auth_user_id: user.id, role, display_name: name });
       if (ins.error) return { ok: false, message: ins.error.message };
       try {
         globalThis.localStorage?.setItem(plotKey(user.id), plot);
@@ -224,11 +230,11 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
   );
 
   const createProfile = useCallback<StoreApi["createProfile"]>(
-    async (name, plot) => {
+    async (name, plot, role) => {
       const { data: auth } = await supabase.auth.getUser();
       const user = auth.user;
       if (!user) return { ok: false, message: "Nicht angemeldet." };
-      const ins = await supabase.from("profiles").insert({ auth_user_id: user.id, role: "child", display_name: name });
+      const ins = await supabase.from("profiles").insert({ auth_user_id: user.id, role, display_name: name });
       if (ins.error) return { ok: false, message: ins.error.message };
       try {
         globalThis.localStorage?.setItem(plotKey(user.id), plot);
@@ -335,6 +341,7 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
       onboarded: data.profileId !== null,
       hasSession: data.sessionUserId !== null,
       loading: data.loading,
+      role: data.role,
       displayName: data.displayName,
       plot: data.plot,
       portfolio,

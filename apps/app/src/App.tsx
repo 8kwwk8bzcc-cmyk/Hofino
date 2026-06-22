@@ -12,6 +12,7 @@ import {
 import { StoreProvider, useStore } from "./store/store.js";
 import { Onboarding, ProfileSetup } from "./screens/Onboarding.js";
 import { Home } from "./screens/Home.js";
+import { AdultHome } from "./screens/AdultHome.js";
 import { Discover } from "./screens/Discover.js";
 import { Depot } from "./screens/Depot.js";
 import { Learn } from "./screens/Learn.js";
@@ -29,19 +30,20 @@ const TABS: { id: TabId; icon: string; label: string }[] = [
 ];
 
 function Main() {
-  const { signOut } = useStore();
+  const { signOut, state } = useStore();
   const [tab, setTab] = useState<TabId>("home");
+  const isAdult = state.role === "adult";
 
   return (
     <View style={styles.shell}>
       <View style={styles.topbar}>
-        <Text style={styles.brand}>Hofino</Text>
+        <Text style={styles.brand}>Hofino{isAdult ? " · Erwachsene" : ""}</Text>
         <Pressable testID="logout" onPress={signOut}>
           <Text style={styles.logout}>Abmelden</Text>
         </Pressable>
       </View>
       <View style={styles.screen}>
-        {tab === "home" && <Home />}
+        {tab === "home" && (isAdult ? <AdultHome /> : <Home />)}
         {tab === "learn" && <Learn />}
         {tab === "depot" && <Depot />}
         {tab === "discover" && <Discover />}
@@ -50,10 +52,11 @@ function Main() {
       <View style={styles.tabbar}>
         {TABS.map((t) => {
           const active = t.id === tab;
+          const label = t.id === "home" && isAdult ? "Übersicht" : t.label;
           return (
             <Pressable key={t.id} testID={`tab-${t.id}`} onPress={() => setTab(t.id)} style={styles.tab}>
               <Text style={[styles.tabIcon, active && styles.tabIconActive]}>{t.icon}</Text>
-              <Text style={[styles.tabLabel, active && styles.tabLabelActive]}>{t.label}</Text>
+              <Text style={[styles.tabLabel, active && styles.tabLabelActive]}>{label}</Text>
             </Pressable>
           );
         })}
