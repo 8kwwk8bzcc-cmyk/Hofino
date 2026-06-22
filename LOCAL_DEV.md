@@ -12,6 +12,10 @@ pnpm web            # App im Browser (Expo Web, http://localhost:8081)
 
 **Definition of Done je Aufgabe:** `pnpm lint && pnpm typecheck && pnpm test` grün.
 
+## GitHub-Sync
+Remote: `git@github.com:8kwwk8bzcc-cmyk/Hofino.git` (SSH). Ein lokaler `post-commit`-Hook
+pusht **nach jedem Commit automatisch** nach `origin/main`. Push-Log: `/tmp/hofino_autopush.log`.
+
 ## Was lokal läuft
 - ✅ Domänen-Logik + Tests (`packages/core`)
 - ✅ App im **Web-Browser** (`pnpm web`) — deckt auch den Lehrer-/Beamer-Modus ab
