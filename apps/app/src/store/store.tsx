@@ -86,6 +86,9 @@ interface Data {
   quiz: Record<string, QuizResult>;
   completedKonzepte: string[];
   knowledgePoints: number;
+  lernXpGesamt: number;
+  lernXpSaison: number;
+  korrekteAntworten: number;
   learningCapitalCents: number;
   hasInvested: boolean;
   instruments: Instrument[];
@@ -107,6 +110,9 @@ const EMPTY: Data = {
   quiz: {},
   completedKonzepte: [],
   knowledgePoints: 0,
+  lernXpGesamt: 0,
+  lernXpSaison: 0,
+  korrekteAntworten: 0,
   learningCapitalCents: 0,
   hasInvested: false,
   instruments: [],
@@ -149,6 +155,9 @@ interface StoreApi {
     performancePercent: number;
     houseStage: HouseStage;
     completedCount: number;
+    lernXpGesamt: number;
+    lernXpSaison: number;
+    korrekteAntworten: number;
   };
   register: (name: string, plot: string, email: string, password: string, role: Role) => Promise<AuthOutcome>;
   login: (email: string, password: string) => Promise<AuthOutcome>;
@@ -236,7 +245,7 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
       .limit(1);
     const asOf = latest.data?.[0]?.as_of as string | undefined;
 
-    const [instrumentsRes, pricesRes, portfolioRes, holdingsRes, watchRes, learnRes, pointsRes, grantsRes, ordersRes, pendingRes, fortschrittRes] =
+    const [instrumentsRes, pricesRes, portfolioRes, holdingsRes, watchRes, learnRes, pointsRes, grantsRes, ordersRes, pendingRes, fortschrittRes, statusRes, korrektRes] =
       await Promise.all([
         supabase.from("instruments").select("id, ticker, name, type, sector, country"),
         asOf
@@ -255,6 +264,8 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
           .eq("child_profile_id", profileId)
           .eq("status", "pending"),
         supabase.from("lern_konzept_fortschritt").select("konzept_id, hoechste_abgeschlossene_stufe"),
+        supabase.from("lern_status").select("xp_gesamt, xp_saison").eq("profile_id", profileId).maybeSingle(),
+        supabase.from("lern_antworten").select("id", { count: "exact", head: true }).eq("korrekt", true),
       ]);
 
     const role = (profileRes.data.role as Role) ?? "child";
@@ -295,6 +306,9 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
             .map((r) => r.konzept_id)
         : [],
       knowledgePoints: isPlayer ? (pointsRes.data ?? []).reduce((s, r) => s + r.points, 0) : 0,
+      lernXpGesamt: isPlayer ? Number(statusRes.data?.xp_gesamt ?? 0) : 0,
+      lernXpSaison: isPlayer ? Number(statusRes.data?.xp_saison ?? 0) : 0,
+      korrekteAntworten: isPlayer ? korrektRes.count ?? 0 : 0,
       learningCapitalCents: isPlayer ? (grantsRes.data ?? []).reduce((s, r) => s + r.amount_cents, 0) : 0,
       hasInvested: isPlayer ? (ordersRes.data ?? []).length > 0 : false,
       instruments: (instrumentsRes.data ?? []) as Instrument[],
@@ -569,8 +583,21 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
         milestonesReached: done.length >= KONZEPTE_GESAMT ? 1 : 0,
       }),
       completedCount: done.length,
+      lernXpGesamt: data.lernXpGesamt,
+      lernXpSaison: data.lernXpSaison,
+      korrekteAntworten: data.korrekteAntworten,
     };
-  }, [portfolio, data.prices, data.completedKonzepte, data.learningCapitalCents, data.knowledgePoints, data.hasInvested]);
+  }, [
+    portfolio,
+    data.prices,
+    data.completedKonzepte,
+    data.learningCapitalCents,
+    data.knowledgePoints,
+    data.hasInvested,
+    data.lernXpGesamt,
+    data.lernXpSaison,
+    data.korrekteAntworten,
+  ]);
 
   const api: StoreApi = {
     state: {

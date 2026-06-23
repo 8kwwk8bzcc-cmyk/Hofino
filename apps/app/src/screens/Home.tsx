@@ -71,7 +71,7 @@ export function Home() {
         </Card>
         <Card style={styles.stat}>
           <Muted>Wissenspunkte</Muted>
-          <Text style={styles.statValue}>{derived.knowledgePoints}</Text>
+          <Text style={styles.statValue}>{derived.lernXpGesamt}</Text>
           <Pill label={`${derived.completedCount}/${MODULES.length} Module`} tone="gold" />
         </Card>
       </View>

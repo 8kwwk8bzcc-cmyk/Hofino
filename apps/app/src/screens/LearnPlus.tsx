@@ -9,6 +9,8 @@ import {
   initLeitner,
   makeRng,
   naechsterLeitner,
+  wissenslevel,
+  bewerteAuszeichnungen,
   STUFEN,
   type FrageInstanz,
   type Konzept,
@@ -73,6 +75,9 @@ export function LearnPlus() {
   const [gewaehlt, setGewaehlt] = useState<number | null>(null);
   const [srMap, setSrMap] = useState<Record<string, SRZustand>>({});
   const [tages, setTages] = useState<{ neu: number; wieder: number; xp: number }>({ neu: 0, wieder: 0, xp: 0 });
+  const [xpGesamt, setXpGesamt] = useState(0);
+  const [korrektGesamt, setKorrektGesamt] = useState(0);
+  const [abgeschlossen, setAbgeschlossen] = useState(0);
   const [wdhQueue, setWdhQueue] = useState<string[]>([]);
   const [wdhIdx, setWdhIdx] = useState(0);
   const [zeigeErklaerung, setZeigeErklaerung] = useState(false);
@@ -100,6 +105,12 @@ export function LearnPlus() {
     setSrMap(map);
     const st = await supabase.rpc("lern_tagesstatus");
     if (st.data?.ok) setTages({ neu: st.data.neu_genutzt, wieder: st.data.wieder_genutzt, xp: st.data.wiederhol_xp });
+    const status = await supabase.from("lern_status").select("xp_gesamt").maybeSingle();
+    setXpGesamt(Number(status.data?.xp_gesamt ?? 0));
+    const korrekt = await supabase.from("lern_antworten").select("id", { count: "exact", head: true }).eq("korrekt", true);
+    setKorrektGesamt(korrekt.count ?? 0);
+    const fort = await supabase.from("lern_konzept_fortschritt").select("konzept_id, hoechste_abgeschlossene_stufe");
+    setAbgeschlossen((fort.data ?? []).filter((r) => r.hoechste_abgeschlossene_stufe === "meistern").length);
   }, []);
 
   useEffect(() => {
@@ -222,9 +233,39 @@ export function LearnPlus() {
 
   // ── Render ──────────────────────────────────────────────────────────────
   if (phase === "liste") {
+    const lvl = wissenslevel(xpGesamt);
+    const auszeichnungen = bewerteAuszeichnungen({
+      korrekteAntworten: korrektGesamt,
+      konzepteAbgeschlossen: abgeschlossen,
+      wissenslevel: lvl.level,
+    });
+    const rangEmoji: Record<string, string> = { bronze: "🥉", silber: "🥈", gold: "🥇" };
     return (
       <ScrollView contentContainerStyle={styles.container}>
-        <H1>Üben</H1>
+        <H1>Lernen</H1>
+        <Card>
+          <View style={styles.row}>
+            <H2>Wissenslevel {lvl.level}</H2>
+            <Pill label={`${xpGesamt} XP`} tone="gold" />
+          </View>
+          <ProgressBar value={lvl.fortschritt} />
+          <Muted>
+            Noch {Math.max(0, lvl.xpFuerNaechstes - lvl.xpImLevel)} XP bis Level {lvl.level + 1}
+          </Muted>
+        </Card>
+        <Card>
+          <H2>Auszeichnungen</H2>
+          {auszeichnungen.map((a) => (
+            <View key={a.id} style={styles.row}>
+              <Body>
+                {a.rang ? rangEmoji[a.rang] : "▫️"} {a.titel}
+              </Body>
+              <Muted>
+                {a.naechsteSchwelle === null ? "Gold erreicht" : `${a.wert}/${a.naechsteSchwelle}`}
+              </Muted>
+            </View>
+          ))}
+        </Card>
         <Card>
           <Muted>Heute schon gelernt</Muted>
           <Body>

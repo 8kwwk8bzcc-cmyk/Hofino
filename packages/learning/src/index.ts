@@ -2,4 +2,5 @@
 export * from "./types.js";
 export * from "./formel.js";
 export * from "./engine.js";
+export * from "./gamification.js";
 export * from "./seed.js";

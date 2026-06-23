@@ -52,7 +52,7 @@ export function AdultHome() {
           <Muted>
             {derived.completedCount}/{MODULES.length} Module
           </Muted>
-          <Muted>{derived.knowledgePoints} Wissenspunkte</Muted>
+          <Muted>{derived.lernXpGesamt} Wissenspunkte</Muted>
         </View>
         <Muted>Lernkapital (getrennt von der Performance): {formatEuros(derived.learningCapitalCents)}</Muted>
       </Card>

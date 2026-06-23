@@ -56,7 +56,7 @@ export function Rankings() {
 
   const perf: RankEntry[] = [...BOTS.map((b) => ({ id: b.id, score: b.perf })), { id: "me", score: derived.performancePercent }];
   const capital: RankEntry[] = [...BOTS.map((b) => ({ id: b.id, score: b.capital })), { id: "me", score: derived.equityCents }];
-  const knowledge: RankEntry[] = [...BOTS.map((b) => ({ id: b.id, score: b.knowledge })), { id: "me", score: derived.knowledgePoints }];
+  const knowledge: RankEntry[] = [...BOTS.map((b) => ({ id: b.id, score: b.knowledge })), { id: "me", score: derived.lernXpSaison }];
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
