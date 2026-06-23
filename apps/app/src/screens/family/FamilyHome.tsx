@@ -8,7 +8,7 @@ import { colors, font, space } from "../../theme.js";
 
 // Eltern-Dashboard: Lernfortschritt + Depotentwicklung der verknüpften Kinder (nur lesend).
 export function FamilyHome() {
-  const { fetchFamily, state } = useStore();
+  const { fetchFamily, state, t } = useStore();
   const [children, setChildren] = useState<ChildSummary[] | null>(null);
 
   useEffect(() => {
@@ -27,16 +27,16 @@ export function FamilyHome() {
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <View style={styles.top}>
-        <Muted>Family</Muted>
+        <Muted>{t("tab.family")}</Muted>
         <H1>{state.displayName}</H1>
       </View>
 
       {children === null ? (
-        <Muted>Lädt …</Muted>
+        <Muted>{t("family.loading")}</Muted>
       ) : children.length === 0 ? (
         <Card>
-          <H2>Noch kein Kind verknüpft</H2>
-          <Body>Wechsle zu „Verknüpfen" und gib den Code deines Kindes ein. Dein Kind gibt die Verbindung dann frei.</Body>
+          <H2>{t("family.noChild")}</H2>
+          <Body>{t("family.noChildBody")}</Body>
         </Card>
       ) : (
         <>
@@ -50,27 +50,25 @@ export function FamilyHome() {
                 />
               </View>
               <View style={styles.row}>
-                <Muted>Depotwert</Muted>
+                <Muted>{t("home.equity")}</Muted>
                 <Text style={styles.val}>{formatEuros(c.equityCents)}</Text>
               </View>
               <View style={styles.row}>
-                <Muted>Lernfortschritt</Muted>
-                <Text style={styles.val}>
-                  {c.completedCount}/{MODULES.length} Module
-                </Text>
+                <Muted>{t("adult.learnProgress")}</Muted>
+                <Text style={styles.val}>{t("home.modulesPill", { done: c.completedCount, total: MODULES.length })}</Text>
               </View>
               <View style={styles.row}>
-                <Muted>Wissenspunkte</Muted>
+                <Muted>{t("home.knowledge")}</Muted>
                 <Text style={styles.val}>{c.knowledgePoints}</Text>
               </View>
-              <Muted>Nur-Lese-Ansicht – du kannst das Depot nicht verändern.</Muted>
+              <Muted>{t("family.readOnly")}</Muted>
             </Card>
           ))}
 
           {children.length > 1 && (
             <Card>
-              <H2>Familien-Challenge</H2>
-              <Muted>Wer sammelt die meisten Wissenspunkte?</Muted>
+              <H2>{t("family.challenge")}</H2>
+              <Muted>{t("family.challengeQ")}</Muted>
               {challenge.map((e) => (
                 <View key={e.id} style={styles.row}>
                   <Text style={styles.rank}>

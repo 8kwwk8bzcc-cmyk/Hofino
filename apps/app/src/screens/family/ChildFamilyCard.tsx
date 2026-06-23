@@ -6,25 +6,25 @@ import { colors, font, space } from "../../theme.js";
 
 // Auf dem Kinder-Zuhause: eigener Verknüpfungscode + Freigabe von Eltern-Anfragen.
 export function ChildFamilyCard() {
-  const { state, respondToLink } = useStore();
+  const { state, respondToLink, t } = useStore();
 
   return (
     <Card>
-      <H2>Eltern verbinden</H2>
+      <H2>{t("family.connectParents")}</H2>
       {state.pendingLinks.length > 0 ? (
         state.pendingLinks.map((l) => (
           <View key={l.parentProfileId} style={styles.req}>
-            <Body>Ein Elternteil möchte dich begleiten.</Body>
+            <Body>{t("family.parentWants")}</Body>
             <View style={styles.btns}>
-              <Button title="Freigeben" onPress={() => respondToLink(l.parentProfileId, true)} testID="link-approve" />
-              <Button title="Ablehnen" variant="secondary" onPress={() => respondToLink(l.parentProfileId, false)} testID="link-decline" />
+              <Button title={t("family.approve")} onPress={() => respondToLink(l.parentProfileId, true)} testID="link-approve" />
+              <Button title={t("family.decline")} variant="secondary" onPress={() => respondToLink(l.parentProfileId, false)} testID="link-decline" />
             </View>
           </View>
         ))
       ) : (
-        <Muted>Keine offenen Anfragen.</Muted>
+        <Muted>{t("family.noRequests")}</Muted>
       )}
-      <Muted>Dein Verknüpfungscode (gib ihn einem Elternteil):</Muted>
+      <Muted>{t("family.yourCode")}</Muted>
       <Text selectable style={styles.code} testID="link-code">
         {state.profileId}
       </Text>

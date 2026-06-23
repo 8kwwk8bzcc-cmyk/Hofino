@@ -7,7 +7,7 @@ import { Body, Button, Card, H1, H2, Muted } from "../../ui/components.js";
 import { colors, font, radius, space } from "../../theme.js";
 
 export function TeacherClass() {
-  const { fetchTeacherClass, fetchClassOverview, createClass } = useStore();
+  const { fetchTeacherClass, fetchClassOverview, createClass, t } = useStore();
   const [cls, setCls] = useState<TClass | null>(null);
   const [rows, setRows] = useState<ClassOverviewRow[]>([]);
   const [loaded, setLoaded] = useState(false);
@@ -43,58 +43,56 @@ export function TeacherClass() {
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      <H1>Klasse</H1>
+      <H1>{t("tab.class")}</H1>
 
       {!cls ? (
         <Card>
-          <H2>Klasse erstellen</H2>
-          <Body>Lege eine Klasse an und teile den Code mit deinen Schülern.</Body>
+          <H2>{t("class.create")}</H2>
+          <Body>{t("class.createBody")}</Body>
           <TextInput
             testID="class-name-input"
             value={name}
             onChangeText={setName}
-            placeholder="Klassenname (z. B. 6a)"
+            placeholder={t("class.namePlaceholder")}
             placeholderTextColor={colors.textMuted}
             style={styles.input}
           />
-          <Button title="Klasse erstellen" onPress={create} disabled={name.trim().length < 1} testID="create-class" />
+          <Button title={t("class.create")} onPress={create} disabled={name.trim().length < 1} testID="create-class" />
           {msg && <Text style={styles.msg}>{msg}</Text>}
         </Card>
       ) : (
         <>
           <Card>
             <H2>{cls.name}</H2>
-            <Muted>Klassencode (zum Beitreten):</Muted>
+            <Muted>{t("class.codeToJoin")}</Muted>
             <Text style={styles.code} testID="class-code">
               {cls.code}
             </Text>
-            <Button title="Aktualisieren" variant="secondary" onPress={reload} testID="refresh-class" />
+            <Button title={t("class.refresh")} variant="secondary" onPress={reload} testID="refresh-class" />
           </Card>
 
           <Card>
-            <H2>Schüler ({rows.length})</H2>
+            <H2>{t("class.students", { n: rows.length })}</H2>
             {rows.length === 0 ? (
-              <Muted>Noch keine Schüler beigetreten. Teile den Code {cls.code}.</Muted>
+              <Muted>{t("class.noStudents", { code: cls.code })}</Muted>
             ) : (
               rows.map((r) => (
                 <View key={r.childProfileId} style={styles.studentRow}>
                   <Text style={styles.studentName}>{r.displayName}</Text>
                   <View style={styles.metrics}>
-                    <Muted>
-                      {r.modulesCompleted}/{MODULES.length} Module · {r.knowledgePoints} P
-                    </Muted>
+                    <Muted>{t("class.studentMetrics", { done: r.modulesCompleted, total: MODULES.length, points: r.knowledgePoints })}</Muted>
                     <Muted>≈ {formatEuros(r.depotValueRoundedCents)}</Muted>
                   </View>
                 </View>
               ))
             )}
-            <Muted>Nur Aggregate – keine Einzelorders, keine privaten Daten.</Muted>
+            <Muted>{t("class.aggregatesOnly")}</Muted>
           </Card>
 
           {rows.length > 0 && (
             <Card>
-              <H2>Klassen-Challenge</H2>
-              <Muted>Wer sammelt die meisten Wissenspunkte?</Muted>
+              <H2>{t("class.challenge")}</H2>
+              <Muted>{t("family.challengeQ")}</Muted>
               {ranked.map((e) => (
                 <View key={e.id} style={styles.rankRow}>
                   <Text style={styles.rankText}>

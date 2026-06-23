@@ -11,7 +11,7 @@ interface LinkRow {
 }
 
 export function FamilyLink() {
-  const { state, linkChild, fetchFamily } = useStore();
+  const { state, linkChild, fetchFamily, t } = useStore();
   const [code, setCode] = useState("");
   const [msg, setMsg] = useState<string | null>(null);
   const [links, setLinks] = useState<LinkRow[]>([]);
@@ -36,7 +36,7 @@ export function FamilyLink() {
     setMsg(null);
     const r = await linkChild(code);
     if (r.ok) {
-      setMsg("Anfrage gesendet – dein Kind muss sie in seiner App freigeben.");
+      setMsg(t("family.requestSent"));
       setCode("");
       await reload();
     } else {
@@ -46,33 +46,33 @@ export function FamilyLink() {
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      <H1>Kind verknüpfen</H1>
+      <H1>{t("family.linkChild")}</H1>
       <Card>
-        <H2>Code eingeben</H2>
-        <Body>Dein Kind findet seinen Verknüpfungscode in seiner App unter „Eltern verbinden".</Body>
+        <H2>{t("family.enterCode")}</H2>
+        <Body>{t("family.enterCodeBody")}</Body>
         <TextInput
           testID="child-code-input"
           value={code}
           onChangeText={setCode}
-          placeholder="Verknüpfungscode des Kindes"
+          placeholder={t("family.codePlaceholder")}
           autoCapitalize="none"
           placeholderTextColor={colors.textMuted}
           style={styles.input}
         />
-        <Button title="Verknüpfung anfragen" onPress={submit} disabled={code.trim().length < 8} testID="link-submit" />
+        <Button title={t("family.requestLink")} onPress={submit} disabled={code.trim().length < 8} testID="link-submit" />
         {msg && <Text style={styles.msg}>{msg}</Text>}
       </Card>
 
       <Card>
-        <H2>Verknüpfungen</H2>
+        <H2>{t("family.links")}</H2>
         {links.length === 0 ? (
-          <Muted>Noch keine Verknüpfungen.</Muted>
+          <Muted>{t("family.noLinks")}</Muted>
         ) : (
           links.map((l) => (
             <View key={l.childId} style={styles.row}>
-              <Text style={styles.name}>{names.get(l.childId) ?? `Code …${l.childId.slice(-6)}`}</Text>
+              <Text style={styles.name}>{names.get(l.childId) ?? t("family.codeFallback", { tail: l.childId.slice(-6) })}</Text>
               <Text style={[styles.status, l.status === "approved" && { color: colors.secondary }]}>
-                {l.status === "approved" ? "freigegeben" : l.status === "declined" ? "abgelehnt" : "wartet auf Freigabe"}
+                {l.status === "approved" ? t("family.statusApproved") : l.status === "declined" ? t("family.statusDeclined") : t("family.statusPending")}
               </Text>
             </View>
           ))

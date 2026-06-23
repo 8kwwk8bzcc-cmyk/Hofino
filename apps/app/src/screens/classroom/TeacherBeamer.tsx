@@ -8,7 +8,7 @@ import { colors, space } from "../../theme.js";
 
 // Große Klassenansicht für den Beamer.
 export function TeacherBeamer() {
-  const { fetchTeacherClass, fetchClassOverview } = useStore();
+  const { fetchTeacherClass, fetchClassOverview, t } = useStore();
   const [title, setTitle] = useState("");
   const [rows, setRows] = useState<ClassOverviewRow[]>([]);
   const [empty, setEmpty] = useState(false);
@@ -19,9 +19,9 @@ export function TeacherBeamer() {
       setEmpty(true);
       return;
     }
-    setTitle(`${c.name} · Code ${c.code}`);
+    setTitle(t("class.beamerTitle", { name: c.name, code: c.code }));
     setRows(await fetchClassOverview(c.id));
-  }, [fetchTeacherClass, fetchClassOverview]);
+  }, [fetchTeacherClass, fetchClassOverview, t]);
 
   useEffect(() => {
     reload();
@@ -33,7 +33,7 @@ export function TeacherBeamer() {
   if (empty) {
     return (
       <View style={styles.center}>
-        <Text style={styles.big}>Noch keine Klasse</Text>
+        <Text style={styles.big}>{t("class.noClass")}</Text>
       </View>
     );
   }
@@ -42,7 +42,7 @@ export function TeacherBeamer() {
     <ScrollView contentContainerStyle={styles.container}>
       <Text style={styles.title}>{title}</Text>
       <View style={{ alignSelf: "flex-end" }}>
-        <Button title="Aktualisieren" variant="secondary" onPress={reload} testID="beamer-refresh" />
+        <Button title={t("class.refresh")} variant="secondary" onPress={reload} testID="beamer-refresh" />
       </View>
       {ranked.map((e) => {
         const row = byId.get(e.id);
@@ -51,7 +51,7 @@ export function TeacherBeamer() {
             <Text style={styles.rank}>{e.rank}</Text>
             <Text style={styles.name}>{row?.displayName}</Text>
             <Text style={styles.meta}>
-              {row?.modulesCompleted}/{MODULES.length} · {row?.knowledgePoints} P
+              {t("class.beamerMeta", { done: row?.modulesCompleted ?? 0, total: MODULES.length, points: row?.knowledgePoints ?? 0 })}
             </Text>
           </View>
         );
