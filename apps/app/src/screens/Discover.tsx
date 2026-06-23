@@ -40,6 +40,7 @@ function Detail({ id, onBack }: { id: string; onBack: () => void }) {
           <Field q="Was macht das Unternehmen?" a={company.whatDoes} />
           <Field q="Wie verdient es Geld?" a={company.howEarns} />
           <Field q="Bekannte Produkte" a={company.products} />
+          <Field q="Konkurrenten" a={company.competitors} />
           <Field q="Chancen" a={company.opportunities} />
           <Field q="Risiken" a={company.risks} />
           <Field q="Warum kann der Kurs schwanken?" a={company.whyPriceMoves} />
@@ -52,6 +53,7 @@ function Detail({ id, onBack }: { id: string; onBack: () => void }) {
             ISIN {etf.isin} · WKN {etf.wkn} · neutrales Lernbeispiel, keine Kaufempfehlung
           </Muted>
           <Field q="Was bildet der ETF ab?" a={etf.tracks} />
+          <Field q="Region" a={etf.region} />
           <Field q="Streuung" a={etf.diversification} />
           <Field q="Kosten" a={etf.costLogic} />
           <Field q="Risiken" a={etf.risks} />

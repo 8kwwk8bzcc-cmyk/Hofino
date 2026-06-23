@@ -37,6 +37,11 @@ Definition of Done je Aufgabe: `pnpm lint && pnpm typecheck && pnpm test` grün.
 - [ ] Edge Function `ranking-recompute` (Cron) → aktualisiert `rankings`.
 
 ## M4 – Inhalte (`packages/content`)
+- [x] Faktensheet je Aktie/ETF (Was macht die Firma? Womit verdient sie? Produkte, Branche,
+      Konkurrenten, Chancen, Risiken, Was bewegt den Kurs / bei ETF: abgebildet, Region,
+      Streuung, Kosten, Risiken). Alle 14 Aktien + 3 ETFs des DB-Seeds haben ein Profil;
+      Anzeige in `Discover.tsx` (Detailansicht), inkl. Konkurrenten + ETF-Region.
+      Offen/später: weitere Werte beim Ausbau des ~200-Universums redaktionell ergänzen.
 - [ ] Datenschema für Lernmodule (Textkarten + 3–5 MC-Fragen) und Profile.
 - [ ] Die 20 Lernmodule als Inhalt (Kinder-Erklärung + Eltern-/Lehrer-Erklärung).
 - [ ] Profil-Vorlage für Unternehmen (Was macht es? Wie verdient es Geld? Chancen/Risiken …).
