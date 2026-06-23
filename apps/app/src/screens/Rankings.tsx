@@ -19,10 +19,12 @@ function League({
   title,
   entries,
   format,
+  meLabel,
 }: {
   title: string;
   entries: RankEntry[];
   format: (score: number) => string;
+  meLabel: string;
 }) {
   const ranked = rank(entries, 10);
   return (
@@ -35,7 +37,7 @@ function League({
             <Text style={[styles.rank, e.awarded && { color: colors.accent }]}>
               {e.awarded ? `🏅 ${e.rank}` : e.rank}
             </Text>
-            <Text style={[styles.name, me && { fontWeight: "800" }]}>{me ? "Du" : NAMES[e.id]}</Text>
+            <Text style={[styles.name, me && { fontWeight: "800" }]}>{me ? meLabel : NAMES[e.id]}</Text>
             <Text style={styles.score}>{format(e.score)}</Text>
           </View>
         );
@@ -45,14 +47,14 @@ function League({
 }
 
 const PREMIUM = [
-  { icon: "🤖", label: "KI-Coach" },
-  { icon: "📁", label: "Mehrere Depots" },
-  { icon: "🛠️", label: "ETF-Werkstatt" },
-  { icon: "📊", label: "Erweiterte Analyse" },
+  { icon: "🤖", key: "premium.aiCoach" },
+  { icon: "📁", key: "premium.multiDepot" },
+  { icon: "🛠️", key: "premium.etfWorkshop" },
+  { icon: "📊", key: "premium.analysis" },
 ];
 
 export function Rankings() {
-  const { derived } = useStore();
+  const { derived, t } = useStore();
 
   const perf: RankEntry[] = [...BOTS.map((b) => ({ id: b.id, score: b.perf })), { id: "me", score: derived.performancePercent }];
   const capital: RankEntry[] = [...BOTS.map((b) => ({ id: b.id, score: b.capital })), { id: "me", score: derived.equityCents }];
@@ -60,21 +62,21 @@ export function Rankings() {
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      <H1>Ligen & Challenges</H1>
-      <Muted>Die Top 10 jeder Liga erhalten Auszeichnungen.</Muted>
+      <H1>{t("rankings.title")}</H1>
+      <Muted>{t("rankings.top10")}</Muted>
 
-      <League title="Performance" entries={perf} format={(s) => `${s >= 0 ? "+" : ""}${s.toFixed(1)} %`} />
-      <League title="Gesamtkapital" entries={capital} format={(s) => formatEuros(s)} />
-      <League title="Wissensliga" entries={knowledge} format={(s) => `${Math.round(s)} P`} />
+      <League title={t("rankings.performance")} meLabel={t("rankings.you")} entries={perf} format={(s) => `${s >= 0 ? "+" : ""}${s.toFixed(1)} %`} />
+      <League title={t("rankings.capital")} meLabel={t("rankings.you")} entries={capital} format={(s) => formatEuros(s)} />
+      <League title={t("rankings.knowledge")} meLabel={t("rankings.you")} entries={knowledge} format={(s) => `${Math.round(s)} P`} />
 
       <Card>
-        <H2>Premium (bald)</H2>
-        <Muted>Diese Funktionen sind im MVP sichtbar, aber noch nicht buchbar.</Muted>
+        <H2>{t("rankings.premiumTitle")}</H2>
+        <Muted>{t("rankings.premiumNote")}</Muted>
         <View style={styles.tiles}>
           {PREMIUM.map((p) => (
-            <View key={p.label} style={styles.tile}>
+            <View key={p.key} style={styles.tile}>
               <Text style={styles.tileIcon}>{p.icon}</Text>
-              <Text style={styles.tileLabel}>{p.label}</Text>
+              <Text style={styles.tileLabel}>{t(p.key)}</Text>
               <Text style={styles.lock}>🔒</Text>
             </View>
           ))}

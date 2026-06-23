@@ -7,18 +7,18 @@ import { TradePanel } from "../ui/TradePanel.js";
 import { colors, font, space } from "../theme.js";
 
 export function Depot() {
-  const { state, prices, derived, instrumentById } = useStore();
+  const { state, prices, derived, instrumentById, t } = useStore();
   const [sellId, setSellId] = useState<string | null>(null);
   const holdings = state.portfolio.holdings;
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      <H1>Depot</H1>
+      <H1>{t("depot.title")}</H1>
 
       <Card>
         <View style={styles.headRow}>
           <View>
-            <Muted>Depotwert gesamt</Muted>
+            <Muted>{t("depot.totalValue")}</Muted>
             <Text style={styles.big}>{formatEuros(derived.equityCents)}</Text>
           </View>
           <Pill
@@ -27,19 +27,19 @@ export function Depot() {
           />
         </View>
         <View style={styles.splitRow}>
-          <Muted>Cash: {formatEuros(state.portfolio.cashCents)}</Muted>
-          <Muted>Positionen: {formatEuros(derived.holdingsValueCents)}</Muted>
+          <Muted>{t("depot.cash", { cash: formatEuros(state.portfolio.cashCents) })}</Muted>
+          <Muted>{t("depot.positions", { value: formatEuros(derived.holdingsValueCents) })}</Muted>
         </View>
       </Card>
 
       {holdings.length === 0 ? (
         <Card>
-          <H2>Noch keine Positionen</H2>
-          <Body>Geh zu „Entdecken" und kaufe deine erste Aktie oder deinen ersten ETF.</Body>
+          <H2>{t("depot.noPositionsTitle")}</H2>
+          <Body>{t("depot.noPositionsBody")}</Body>
         </Card>
       ) : (
         <Card>
-          <H2>Deine Positionen</H2>
+          <H2>{t("depot.yourPositions")}</H2>
           {holdings.map((h) => {
             const inst = instrumentById.get(h.instrumentId);
             const price = prices.get(h.instrumentId) ?? 0;
@@ -54,9 +54,7 @@ export function Depot() {
               >
                 <View style={{ flex: 1 }}>
                   <Text style={styles.posName}>{inst?.name ?? h.instrumentId}</Text>
-                  <Muted>
-                    {h.quantity} Stück · Ø {formatEuros(h.avgCostCents)}
-                  </Muted>
+                  <Muted>{t("depot.qtyAvg", { qty: h.quantity, avg: formatEuros(h.avgCostCents) })}</Muted>
                 </View>
                 <View style={{ alignItems: "flex-end" }}>
                   <Text style={styles.posVal}>{formatEuros(value)}</Text>
@@ -68,13 +66,13 @@ export function Depot() {
               </Pressable>
             );
           })}
-          <Muted>Tippe eine Position an, um zu verkaufen.</Muted>
+          <Muted>{t("depot.tapToSell")}</Muted>
         </Card>
       )}
 
       {sellId && (
         <Card>
-          <H2>{instrumentById.get(sellId)?.name} verkaufen</H2>
+          <H2>{t("depot.sell", { name: instrumentById.get(sellId)?.name ?? "" })}</H2>
           <TradePanel instrumentId={sellId} mode="sell" />
         </Card>
       )}

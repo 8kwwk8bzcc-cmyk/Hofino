@@ -10,59 +10,57 @@ import { StudentClassCard } from "./classroom/StudentClassCard.js";
 import { useNav } from "../nav.js";
 import { colors, font, space } from "../theme.js";
 
-const STAGES: { id: string; emoji: string; label: string }[] = [
-  { id: "grundstueck", emoji: "🟫", label: "Grundstück" },
-  { id: "fundament", emoji: "🧱", label: "Fundament" },
-  { id: "waende", emoji: "🏗️", label: "Wände" },
-  { id: "dach", emoji: "🏠", label: "Dach" },
-  { id: "erstes_haus", emoji: "🏡", label: "Erstes Haus" },
-  { id: "ausbauten", emoji: "🏘️", label: "Ausbauten" },
+const STAGES: { id: string; emoji: string }[] = [
+  { id: "grundstueck", emoji: "🟫" },
+  { id: "fundament", emoji: "🧱" },
+  { id: "waende", emoji: "🏗️" },
+  { id: "dach", emoji: "🏠" },
+  { id: "erstes_haus", emoji: "🏡" },
+  { id: "ausbauten", emoji: "🏘️" },
 ];
 
 export function Home() {
-  const { state, derived } = useStore();
+  const { state, derived, t } = useStore();
   const go = useNav();
   const stageIndex = STAGES.findIndex((s) => s.id === derived.houseStage);
   const stage = STAGES[Math.max(0, stageIndex)]!;
 
   const noInvest = state.portfolio.holdings.length === 0;
   const mission = noInvest
-    ? "Tätige dein erstes Investment im Depot oder unter Entdecken."
+    ? t("home.missionInvest")
     : derived.completedCount === 0
-      ? "Schließe dein erstes Lernmodul ab und verdiene Lernkapital."
+      ? t("home.missionFirstModule")
       : derived.completedCount < MODULES.length
-        ? "Lerne weiter – schließe das nächste Modul ab."
-        : "Stark! Du hast alle Module geschafft. Baue dein Depot weiter aus.";
+        ? t("home.missionKeepLearning")
+        : t("home.missionAllDone");
   const missionTab = noInvest ? "discover" : "uebung";
-  const missionCta = noInvest ? "Jetzt entdecken" : "Zum Lernen";
+  const missionCta = noInvest ? t("home.ctaDiscover") : t("home.ctaLearn");
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <View style={styles.top}>
         <HLogo size={36} />
         <View>
-          <Muted>Willkommen zurück</Muted>
+          <Muted>{t("home.welcomeBack")}</Muted>
           <H1>{state.displayName || "Hofino"}</H1>
         </View>
       </View>
 
       <Card>
-        <H2>Dein Haus</H2>
+        <H2>{t("home.house")}</H2>
         <View style={styles.house}>
           <HouseScene stage={derived.houseStage} size={96} />
           <View style={{ flex: 1, gap: space.xs }}>
-            <Text style={styles.stageLabel}>{stage.label}</Text>
+            <Text style={styles.stageLabel}>{t(`house.${stage.id}`)}</Text>
             <ProgressBar value={(stageIndex + 1) / STAGES.length} />
-            <Muted>
-              Stufe {stageIndex + 1} von {STAGES.length} · wächst durch Lernen & Meilensteine
-            </Muted>
+            <Muted>{t("home.stage", { n: stageIndex + 1, total: STAGES.length })}</Muted>
           </View>
         </View>
       </Card>
 
       <View style={styles.statsRow}>
         <Card style={styles.stat}>
-          <Muted>Depotwert</Muted>
+          <Muted>{t("home.equity")}</Muted>
           <Text style={styles.statValue}>{formatEuros(derived.equityCents)}</Text>
           <Pill
             label={`${derived.performancePercent >= 0 ? "+" : ""}${derived.performancePercent.toFixed(1)} %`}
@@ -70,22 +68,24 @@ export function Home() {
           />
         </Card>
         <Card style={styles.stat}>
-          <Muted>Wissenspunkte</Muted>
+          <Muted>{t("home.knowledge")}</Muted>
           <Text style={styles.statValue}>{derived.lernXpGesamt}</Text>
-          <Pill label={`${derived.completedCount}/${MODULES.length} Module`} tone="gold" />
+          <Pill label={t("home.modulesPill", { done: derived.completedCount, total: MODULES.length })} tone="gold" />
         </Card>
       </View>
 
       <Card>
-        <H2>Nächste Mission</H2>
+        <H2>{t("home.mission")}</H2>
         <Body>{mission}</Body>
         <Button title={missionCta} onPress={() => go(missionTab)} testID="mission-cta" />
       </Card>
 
       <Card>
         <Muted>
-          Lernkapital (getrennt von der Performance): {formatEuros(derived.learningCapitalCents)}. Cash:{" "}
-          {formatEuros(state.portfolio.cashCents)}.
+          {t("home.capitalNote", {
+            capital: formatEuros(derived.learningCapitalCents),
+            cash: formatEuros(state.portfolio.cashCents),
+          })}
         </Muted>
       </Card>
 
