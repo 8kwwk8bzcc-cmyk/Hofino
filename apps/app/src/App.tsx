@@ -15,7 +15,6 @@ import { Home } from "./screens/Home.js";
 import { AdultHome } from "./screens/AdultHome.js";
 import { Discover } from "./screens/Discover.js";
 import { Depot } from "./screens/Depot.js";
-import { Learn } from "./screens/Learn.js";
 import { Rankings } from "./screens/Rankings.js";
 import { LearnPlus } from "./screens/LearnPlus.js";
 import { FamilyHome } from "./screens/family/FamilyHome.js";
@@ -42,12 +41,11 @@ function TopBar({ brand }: { brand: string }) {
   );
 }
 
-type TabId = "home" | "learn" | "uebung" | "depot" | "discover" | "rankings";
+type TabId = "home" | "uebung" | "depot" | "discover" | "rankings";
 
 const TABS: { id: TabId; icon: string; label: string }[] = [
   { id: "home", icon: "🏠", label: "Zuhause" },
-  { id: "learn", icon: "📚", label: "Lernen" },
-  { id: "uebung", icon: "🧠", label: "Üben" },
+  { id: "uebung", icon: "📚", label: "Lernen" },
   { id: "depot", icon: "💼", label: "Depot" },
   { id: "discover", icon: "🔍", label: "Entdecken" },
   { id: "rankings", icon: "🏆", label: "Ligen" },
@@ -64,7 +62,6 @@ function Main() {
       <NavContext.Provider value={setTab}>
         <View style={styles.screen}>
           {tab === "home" && (isAdult ? <AdultHome /> : <Home />)}
-          {tab === "learn" && <Learn />}
           {tab === "uebung" && <LearnPlus />}
           {tab === "depot" && <Depot />}
           {tab === "discover" && <Discover />}

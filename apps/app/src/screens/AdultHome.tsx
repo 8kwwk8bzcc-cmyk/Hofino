@@ -18,7 +18,7 @@ export function AdultHome() {
     : derived.completedCount < MODULES.length
       ? "Vertiefe dein Wissen mit dem nächsten Lernmodul."
       : "Alle Module abgeschlossen – baue dein Depot weiter aus.";
-  const nextTab = noInvest ? "discover" : "learn";
+  const nextTab = noInvest ? "discover" : "uebung";
   const nextCta = noInvest ? "Jetzt entdecken" : "Zum Lernen";
 
   return (

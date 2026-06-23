@@ -15,11 +15,20 @@ import {
   type SRZustand,
   type Stufe,
 } from "@hofino/learning";
+import { formatEuros } from "@hofino/core";
 import { supabase } from "../lib/supabase.js";
 import { Body, Button, Card, H1, H2, Muted, Pill, ProgressBar } from "../ui/components.js";
 import { colors, font, radius, space } from "../theme.js";
 
-type Phase = "liste" | "erklaerung" | "frage" | "feedback" | "wdh" | "wdh_feedback" | "fertig";
+type Phase =
+  | "liste"
+  | "erklaerung"
+  | "frage"
+  | "feedback"
+  | "konzept_fertig"
+  | "wdh"
+  | "wdh_feedback"
+  | "fertig";
 const ALTERSBAND = "kind_11_14" as const; // MVP-Default; später aus dem Profil
 const STUFE_LABEL: Record<Stufe, string> = {
   erklaeren: "Erklären",
@@ -68,6 +77,7 @@ export function LearnPlus() {
   const [wdhIdx, setWdhIdx] = useState(0);
   const [zeigeErklaerung, setZeigeErklaerung] = useState(false);
   const [letzteXp, setLetzteXp] = useState(0);
+  const [lernkapital, setLernkapital] = useState(0);
 
   const heute = heuteISO();
   const faellig = konzepte.filter((k) => {
@@ -96,7 +106,7 @@ export function LearnPlus() {
     ladeStatus();
   }, [ladeStatus]);
 
-  const naechsteStufe = (k: Konzept, ab: number) => {
+  const naechsteStufe = async (k: Konzept, ab: number) => {
     const rng = makeRng((Date.now() & 0xffffffff) ^ (ab * 2654435761));
     for (let i = ab; i < STUFEN.length; i++) {
       const inst = baueInstanz(k, STUFEN[i]!, rng);
@@ -108,10 +118,10 @@ export function LearnPlus() {
         return;
       }
     }
-    // keine weitere Stufe → Konzept fertig
-    void supabase.rpc("lern_stufe_abgeschlossen", { p_konzept: k.id, p_stufe: "meistern" });
-    setPhase("liste");
-    ladeStatus();
+    // keine weitere Stufe → Konzept abgeschlossen: Lernkapital gewähren
+    const res = await supabase.rpc("lern_konzept_abschliessen", { p_konzept: k.id });
+    setLernkapital(typeof res.data?.lernkapital_cents === "number" ? res.data.lernkapital_cents : 0);
+    setPhase("konzept_fertig");
   };
 
   const oeffneKonzept = async (k: Konzept) => {
@@ -297,6 +307,26 @@ export function LearnPlus() {
           {korrekt && <Pill label={`+${instanz.wissenspunkte} XP`} tone="good" />}
         </Card>
         <Button title="Weiter" onPress={() => naechsteStufe(konzept, stufeIdx + 1)} testID="lp-weiter" />
+      </ScrollView>
+    );
+  }
+
+  if (phase === "konzept_fertig" && konzept) {
+    return (
+      <ScrollView contentContainerStyle={styles.container}>
+        <Card style={{ borderColor: colors.secondary, borderWidth: 2 }}>
+          <H1>Konzept geschafft! 🎉</H1>
+          <Body>Du hast „{konzept.titel.de}" abgeschlossen.</Body>
+          {lernkapital > 0 ? (
+            <>
+              <Pill label={`+${formatEuros(lernkapital)} Lernkapital`} tone="good" />
+              <Body>Dein Lernkapital wandert in dein Musterdepot – du kannst es im „Depot" investieren.</Body>
+            </>
+          ) : (
+            <Muted>Dieses Konzept hattest du schon abgeschlossen – kein neues Lernkapital.</Muted>
+          )}
+        </Card>
+        <Button title="Zurück zur Übersicht" onPress={() => { setPhase("liste"); ladeStatus(); }} testID="lp-konzept-fertig" />
       </ScrollView>
     );
   }

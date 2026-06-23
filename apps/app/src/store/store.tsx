@@ -10,9 +10,19 @@ import {
   type OrderError,
   type HouseStage,
 } from "@hofino/core";
-import { MODULES } from "@hofino/content";
+import { alleKonzepte } from "@hofino/learning";
 import { supabase } from "../lib/supabase.js";
 import { translate, type Lang } from "../i18n.js";
+
+// Konzept → Themenblock (für die Haus-Stufen aus dem neuen Lernsystem).
+const KONZEPT_BLOCK_IDS: Record<string, string[]> = alleKonzepte().reduce(
+  (acc, k) => {
+    (acc[k.themenblock_id] ??= []).push(k.id);
+    return acc;
+  },
+  {} as Record<string, string[]>
+);
+const KONZEPTE_GESAMT = alleKonzepte().length;
 
 export interface Instrument {
   id: string;
@@ -74,6 +84,7 @@ interface Data {
   watchlist: string[];
   completed: string[];
   quiz: Record<string, QuizResult>;
+  completedKonzepte: string[];
   knowledgePoints: number;
   learningCapitalCents: number;
   hasInvested: boolean;
@@ -94,6 +105,7 @@ const EMPTY: Data = {
   watchlist: [],
   completed: [],
   quiz: {},
+  completedKonzepte: [],
   knowledgePoints: 0,
   learningCapitalCents: 0,
   hasInvested: false,
@@ -103,14 +115,6 @@ const EMPTY: Data = {
   loading: true,
 };
 
-const BLOCK_OF: Record<string, string> = Object.fromEntries(MODULES.map((m) => [m.id, m.block]));
-const BLOCK_IDS: Record<string, string[]> = MODULES.reduce(
-  (acc, m) => {
-    (acc[m.block] ??= []).push(m.id);
-    return acc;
-  },
-  {} as Record<string, string[]>
-);
 
 function plotKey(userId: string) {
   return `hofino:plot:${userId}`;
@@ -232,7 +236,7 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
       .limit(1);
     const asOf = latest.data?.[0]?.as_of as string | undefined;
 
-    const [instrumentsRes, pricesRes, portfolioRes, holdingsRes, watchRes, learnRes, pointsRes, grantsRes, ordersRes, pendingRes] =
+    const [instrumentsRes, pricesRes, portfolioRes, holdingsRes, watchRes, learnRes, pointsRes, grantsRes, ordersRes, pendingRes, fortschrittRes] =
       await Promise.all([
         supabase.from("instruments").select("id, ticker, name, type, sector, country"),
         asOf
@@ -250,6 +254,7 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
           .select("parent_profile_id")
           .eq("child_profile_id", profileId)
           .eq("status", "pending"),
+        supabase.from("lern_konzept_fortschritt").select("konzept_id, hoechste_abgeschlossene_stufe"),
       ]);
 
     const role = (profileRes.data.role as Role) ?? "child";
@@ -284,6 +289,11 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
       watchlist: isPlayer ? (watchRes.data ?? []).map((w) => w.instrument_id) : [],
       completed,
       quiz,
+      completedKonzepte: isPlayer
+        ? (fortschrittRes.data ?? [])
+            .filter((r) => r.hoechste_abgeschlossene_stufe === "meistern")
+            .map((r) => r.konzept_id)
+        : [],
       knowledgePoints: isPlayer ? (pointsRes.data ?? []).reduce((s, r) => s + r.points, 0) : 0,
       learningCapitalCents: isPlayer ? (grantsRes.data ?? []).reduce((s, r) => s + r.amount_cents, 0) : 0,
       hasInvested: isPlayer ? (ordersRes.data ?? []).length > 0 : false,
@@ -540,8 +550,9 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
 
   const derived = useMemo(() => {
     const equityCents = depotValueCents(portfolio, data.prices);
-    const blocksDone = Object.values(BLOCK_IDS).filter((ids) =>
-      ids.every((id) => data.completed.includes(id))
+    const done = data.completedKonzepte;
+    const blocksDone = Object.values(KONZEPT_BLOCK_IDS).filter((ids) =>
+      ids.every((id) => done.includes(id))
     ).length;
     return {
       holdingsValueCents: holdingsValueCents(portfolio, data.prices),
@@ -551,15 +562,15 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
       performancePercent: performancePercent(equityCents, data.learningCapitalCents),
       houseStage: houseStage({
         hasInvested: data.hasInvested,
-        modulesCompleted: data.completed.length,
+        modulesCompleted: done.length,
         riskAndDiversificationUnderstood:
-          data.completed.includes("m13") && data.completed.includes("m14"),
+          done.includes("konzept_risiko") && done.includes("konzept_diversifikation"),
         themenbloeckeCompleted: blocksDone,
-        milestonesReached: MODULES.every((m) => data.completed.includes(m.id)) ? 1 : 0,
+        milestonesReached: done.length >= KONZEPTE_GESAMT ? 1 : 0,
       }),
-      completedCount: data.completed.length,
+      completedCount: done.length,
     };
-  }, [portfolio, data.prices, data.completed, data.learningCapitalCents, data.knowledgePoints, data.hasInvested]);
+  }, [portfolio, data.prices, data.completedKonzepte, data.learningCapitalCents, data.knowledgePoints, data.hasInvested]);
 
   const api: StoreApi = {
     state: {
@@ -609,6 +620,3 @@ export function useStore(): StoreApi {
   if (!ctx) throw new Error("useStore muss innerhalb von StoreProvider verwendet werden");
   return ctx;
 }
-
-// Block-Zuordnung für andere Module bei Bedarf.
-export { BLOCK_OF };

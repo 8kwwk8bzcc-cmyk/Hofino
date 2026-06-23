@@ -33,7 +33,7 @@ export function Home() {
       : derived.completedCount < MODULES.length
         ? "Lerne weiter – schließe das nächste Modul ab."
         : "Stark! Du hast alle Module geschafft. Baue dein Depot weiter aus.";
-  const missionTab = noInvest ? "discover" : "learn";
+  const missionTab = noInvest ? "discover" : "uebung";
   const missionCta = noInvest ? "Jetzt entdecken" : "Zum Lernen";
 
   return (
