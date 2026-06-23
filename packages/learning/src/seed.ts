@@ -1,9 +1,20 @@
 // Lädt die redaktionellen Inhalte (Beispiel-Seed + Themenblock-Dateien) und bietet Zugriffe.
 import raw from "./seed.json";
 import geldGrundlagen from "./content/geld_grundlagen.json";
+import unternehmenAktien from "./content/unternehmen_aktien.json";
+import risikoEtf from "./content/risiko_etf.json";
+import depotKosten from "./content/depot_kosten.json";
+import haltungLangfrist from "./content/haltung_langfrist.json";
 import type { Frage, InhaltsSeed, Konzept, Stufe, Themenblock, Vorlage } from "./types.js";
 
-const QUELLEN = [raw, geldGrundlagen] as unknown as InhaltsSeed[];
+const QUELLEN = [
+  raw,
+  geldGrundlagen,
+  unternehmenAktien,
+  risikoEtf,
+  depotKosten,
+  haltungLangfrist,
+] as unknown as InhaltsSeed[];
 
 function mergeById<T extends { id: string }>(listen: T[][]): T[] {
   const map = new Map<string, T>();

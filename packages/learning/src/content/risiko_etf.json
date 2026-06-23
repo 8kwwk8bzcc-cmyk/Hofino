@@ -1,0 +1,143 @@
+{
+  "_hinweis": "Themenblock Risiko, Streuung & ETF (Module 12-15).",
+  "themenbloecke": [{ "id": "tb_risiko_etf", "titel": { "de": "Risiko, Streuung & ETF" } }],
+  "konzepte": [
+    {
+      "id": "konzept_risiko", "modul_nr": 12, "themenblock_id": "tb_risiko_etf",
+      "titel": { "de": "Was bedeutet Risiko?" }, "ist_rechnerisch": false,
+      "voraussetzungen": ["konzept_aktie"], "freischalt_level": 4,
+      "erklaerungen": {
+        "kind_8_10": { "de": "Risiko heisst: Man weiss vorher nicht genau, wie es ausgeht. Es kann besser oder schlechter kommen." },
+        "kind_11_14": { "de": "Risiko bedeutet, dass das Ergebnis unsicher ist. Beim Investieren koennen Kurse steigen, aber auch fallen." },
+        "eltern_lehrer": { "de": "Risiko ist die Schwankungsbreite moeglicher Ergebnisse und die Moeglichkeit von Verlusten; mehr Chance geht meist mit mehr Risiko einher." }
+      },
+      "stufen": ["erklaeren", "erkennen", "verstehen", "anwenden", "meistern"]
+    },
+    {
+      "id": "konzept_diversifikation", "modul_nr": 13, "themenblock_id": "tb_risiko_etf",
+      "titel": { "de": "Was ist Diversifikation?" }, "ist_rechnerisch": true,
+      "voraussetzungen": ["konzept_risiko"], "freischalt_level": 4,
+      "erklaerungen": {
+        "kind_8_10": { "de": "Diversifikation heisst: nicht alles auf eine Karte setzen. Verteile dein Geld auf viele Dinge." },
+        "kind_11_14": { "de": "Diversifikation bedeutet, das Geld breit zu verteilen – auf viele Firmen und Branchen. Dann trifft dich ein einzelner Fehlschlag weniger hart." },
+        "eltern_lehrer": { "de": "Diversifikation streut Kapital ueber viele Titel/Branchen/Regionen und senkt das unsystematische Risiko; das Marktrisiko bleibt." }
+      },
+      "stufen": ["erklaeren", "erkennen", "verstehen", "anwenden", "meistern"]
+    },
+    {
+      "id": "konzept_etf", "modul_nr": 14, "themenblock_id": "tb_risiko_etf",
+      "titel": { "de": "Was ist ein ETF?" }, "ist_rechnerisch": false,
+      "voraussetzungen": ["konzept_diversifikation"], "freischalt_level": 5,
+      "erklaerungen": {
+        "kind_8_10": { "de": "Ein ETF ist wie ein Korb voller vieler Aktien. Kaufst du den Korb, hast du von allen ein kleines Stueck." },
+        "kind_11_14": { "de": "Ein ETF buendelt viele Aktien in einem Produkt. Mit einem Kauf bist du breit gestreut dabei, statt nur auf eine Firma zu setzen." },
+        "eltern_lehrer": { "de": "Ein ETF bildet meist einen Index nach und wird wie eine Aktie gehandelt; breite Streuung zu geringen Kosten." }
+      },
+      "stufen": ["erklaeren", "erkennen", "verstehen", "anwenden", "meistern"]
+    },
+    {
+      "id": "konzept_aktie_vs_etf", "modul_nr": 15, "themenblock_id": "tb_risiko_etf",
+      "titel": { "de": "Aktie vs. ETF" }, "ist_rechnerisch": false,
+      "voraussetzungen": ["konzept_aktie", "konzept_etf"], "freischalt_level": 5,
+      "erklaerungen": {
+        "kind_8_10": { "de": "Eine Aktie ist eine einzige Firma. Ein ETF sind viele Firmen zusammen." },
+        "kind_11_14": { "de": "Mit einer Einzelaktie setzt du stark auf eine Firma. Ein ETF verteilt das Risiko auf viele Firmen." },
+        "eltern_lehrer": { "de": "Einzelaktien bieten hoehere Chancen und hoeheres Einzelrisiko; ETFs streuen breit, folgen aber dem Gesamtmarkt." }
+      },
+      "stufen": ["erklaeren", "erkennen", "verstehen", "anwenden", "meistern"]
+    }
+  ],
+  "fragen": [
+    { "id": "q_ris_001", "konzept_id": "konzept_risiko", "stufe": "erklaeren", "typ": "multiple_choice",
+      "frage": { "de": "Was bedeutet Risiko beim Investieren?" }, "korrekte_antwort": { "de": "Das Ergebnis ist unsicher – Verluste sind moeglich" },
+      "distraktor_pool": [ { "text": { "de": "Gewinn ist garantiert" }, "naehe": 3 }, { "text": { "de": "Es passiert nie etwas" }, "naehe": 2 }, { "text": { "de": "Man bekommt immer sein Geld zurueck" }, "naehe": 2 } ],
+      "anzahl_distraktoren_angezeigt": 3, "erklaerung_nach_antwort": { "de": "Risiko heisst: es kann auch schlechter laufen." }, "wissenspunkte": 100 },
+    { "id": "q_ris_002", "konzept_id": "konzept_risiko", "stufe": "erkennen", "typ": "multiple_choice",
+      "frage": { "de": "Welche Anlage schwankt typischerweise am staerksten?" }, "korrekte_antwort": { "de": "Eine einzelne Aktie" },
+      "distraktor_pool": [ { "text": { "de": "Ein Sparbuch" }, "naehe": 2 }, { "text": { "de": "Bargeld in der Dose" }, "naehe": 1 }, { "text": { "de": "Ein Tagesgeldkonto" }, "naehe": 2 } ],
+      "anzahl_distraktoren_angezeigt": 3, "erklaerung_nach_antwort": { "de": "Einzelne Aktien schwanken meist staerker als sichere Konten." }, "wissenspunkte": 100 },
+    { "id": "q_ris_003", "konzept_id": "konzept_risiko", "stufe": "verstehen", "typ": "multiple_choice",
+      "frage": { "de": "Wie haengen Chance und Risiko oft zusammen?" }, "korrekte_antwort": { "de": "Mehr Chance bedeutet meist auch mehr Risiko" },
+      "distraktor_pool": [ { "text": { "de": "Mehr Chance, nie Risiko" }, "naehe": 3 }, { "text": { "de": "Sie haben nichts miteinander zu tun" }, "naehe": 2 }, { "text": { "de": "Weniger Chance, mehr Risiko" }, "naehe": 2 } ],
+      "anzahl_distraktoren_angezeigt": 3, "erklaerung_nach_antwort": { "de": "Hoehere Renditechancen gehen meist mit hoeherem Risiko einher." }, "wissenspunkte": 100 },
+    { "id": "q_ris_004", "konzept_id": "konzept_risiko", "stufe": "anwenden", "typ": "multiple_choice",
+      "frage": { "de": "Du steckst dein ganzes Geld in eine einzige Aktie. Was ist das Problem?" }, "korrekte_antwort": { "de": "Faellt diese eine Aktie stark, trifft es dich voll" },
+      "distraktor_pool": [ { "text": { "de": "Gar kein Problem, das ist immer sicher" }, "naehe": 3 }, { "text": { "de": "Aktien kann man nie verkaufen" }, "naehe": 1 }, { "text": { "de": "Eine Aktie bringt nie Verlust" }, "naehe": 3 } ],
+      "anzahl_distraktoren_angezeigt": 3, "erklaerung_nach_antwort": { "de": "Alles auf eine Aktie zu setzen ist riskant – ohne Streuung trifft dich ein Einbruch voll." }, "wissenspunkte": 120 },
+    { "id": "q_ris_005", "konzept_id": "konzept_risiko", "stufe": "meistern", "typ": "multiple_choice",
+      "frage": { "de": "Welche Aussage stimmt?" }, "korrekte_antwort": { "de": "Risiko laesst sich durch breite Streuung verringern, aber nie ganz beseitigen" },
+      "distraktor_pool": [ { "text": { "de": "Risiko kann man komplett abschalten" }, "naehe": 3 }, { "text": { "de": "Streuung erhoeht das Risiko" }, "naehe": 3 }, { "text": { "de": "Nur reiche Leute haben Risiko" }, "naehe": 1 } ],
+      "anzahl_distraktoren_angezeigt": 3, "erklaerung_nach_antwort": { "de": "Streuung senkt das Einzelrisiko; ein Marktrisiko bleibt immer." }, "wissenspunkte": 150 },
+
+    { "id": "q_dvs_001", "konzept_id": "konzept_diversifikation", "stufe": "erklaeren", "typ": "multiple_choice",
+      "frage": { "de": "Was bedeutet Diversifikation?" }, "korrekte_antwort": { "de": "Geld breit auf viele Dinge verteilen" },
+      "distraktor_pool": [ { "text": { "de": "Alles in eine Firma stecken" }, "naehe": 3 }, { "text": { "de": "Gar nicht investieren" }, "naehe": 1 }, { "text": { "de": "Nur Bargeld halten" }, "naehe": 2 } ],
+      "anzahl_distraktoren_angezeigt": 3, "erklaerung_nach_antwort": { "de": "Diversifikation = breit verteilen statt alles auf eine Karte." }, "wissenspunkte": 100 },
+    { "id": "q_dvs_002", "konzept_id": "konzept_diversifikation", "stufe": "erkennen", "typ": "multiple_choice",
+      "frage": { "de": "Welcher Spruch passt zu Diversifikation?" }, "korrekte_antwort": { "de": "Nicht alle Eier in einen Korb legen" },
+      "distraktor_pool": [ { "text": { "de": "Doppelt haelt besser beim Eis" }, "naehe": 1 }, { "text": { "de": "Der fruehe Vogel verliert" }, "naehe": 1 }, { "text": { "de": "Viel hilft viel" }, "naehe": 2 } ],
+      "anzahl_distraktoren_angezeigt": 3, "erklaerung_nach_antwort": { "de": "Faellt ein Korb, sind nicht alle Eier kaputt – das ist Streuung." }, "wissenspunkte": 100 },
+    { "id": "q_dvs_003", "konzept_id": "konzept_diversifikation", "stufe": "verstehen", "typ": "multiple_choice",
+      "frage": { "de": "Was verringert Diversifikation?" }, "korrekte_antwort": { "de": "Das Risiko durch einzelne Firmen" },
+      "distraktor_pool": [ { "text": { "de": "Die Anzahl der Branchen" }, "naehe": 2 }, { "text": { "de": "Den Spass am Lernen" }, "naehe": 1 }, { "text": { "de": "Das gesamte Marktrisiko vollstaendig" }, "naehe": 3 } ],
+      "anzahl_distraktoren_angezeigt": 3, "erklaerung_nach_antwort": { "de": "Streuung senkt das Einzelrisiko; das Marktrisiko bleibt bestehen." }, "wissenspunkte": 100 },
+
+    { "id": "q_etf_001", "konzept_id": "konzept_etf", "stufe": "erklaeren", "typ": "multiple_choice",
+      "frage": { "de": "Was ist ein ETF?" }, "korrekte_antwort": { "de": "Ein Korb aus vielen Werten in einem Produkt" },
+      "distraktor_pool": [ { "text": { "de": "Eine einzelne Firma" }, "naehe": 3 }, { "text": { "de": "Ein Sparbuch" }, "naehe": 2 }, { "text": { "de": "Ein Gutschein" }, "naehe": 1 } ],
+      "anzahl_distraktoren_angezeigt": 3, "erklaerung_nach_antwort": { "de": "Ein ETF buendelt viele Werte in einem Produkt." }, "wissenspunkte": 100 },
+    { "id": "q_etf_002", "konzept_id": "konzept_etf", "stufe": "erkennen", "typ": "multiple_choice",
+      "frage": { "de": "Was ist ein Vorteil eines Welt-ETFs?" }, "korrekte_antwort": { "de": "Breite Streuung ueber viele Firmen" },
+      "distraktor_pool": [ { "text": { "de": "Garantierter Gewinn" }, "naehe": 3 }, { "text": { "de": "Gar keine Risiken" }, "naehe": 3 }, { "text": { "de": "Man besitzt nur eine Firma" }, "naehe": 2 } ],
+      "anzahl_distraktoren_angezeigt": 3, "erklaerung_nach_antwort": { "de": "Ein Welt-ETF streut breit ueber viele Firmen und Laender." }, "wissenspunkte": 100 },
+    { "id": "q_etf_003", "konzept_id": "konzept_etf", "stufe": "verstehen", "typ": "multiple_choice",
+      "frage": { "de": "Wie wird ein ETF gehandelt?" }, "korrekte_antwort": { "de": "Wie eine Aktie an der Boerse" },
+      "distraktor_pool": [ { "text": { "de": "Nur per Brief bei der Post" }, "naehe": 1 }, { "text": { "de": "Gar nicht, man kann ihn nicht kaufen" }, "naehe": 2 }, { "text": { "de": "Nur einmal im Jahr" }, "naehe": 2 } ],
+      "anzahl_distraktoren_angezeigt": 3, "erklaerung_nach_antwort": { "de": "Ein ETF wird wie eine Aktie an der Boerse gehandelt." }, "wissenspunkte": 100 },
+    { "id": "q_etf_004", "konzept_id": "konzept_etf", "stufe": "anwenden", "typ": "multiple_choice",
+      "frage": { "de": "Eine von 500 Firmen im ETF faellt stark. Was passiert mit dem ETF?" }, "korrekte_antwort": { "de": "Er faellt nur ein kleines bisschen" },
+      "distraktor_pool": [ { "text": { "de": "Er wird komplett wertlos" }, "naehe": 3 }, { "text": { "de": "Er verschwindet" }, "naehe": 2 }, { "text": { "de": "Er halbiert sich sofort" }, "naehe": 3 } ],
+      "anzahl_distraktoren_angezeigt": 3, "erklaerung_nach_antwort": { "de": "Bei 500 Firmen faellt eine einzelne kaum ins Gewicht." }, "wissenspunkte": 120 },
+    { "id": "q_etf_005", "konzept_id": "konzept_etf", "stufe": "meistern", "typ": "multiple_choice",
+      "frage": { "de": "Welche Aussage ueber ETFs stimmt?" }, "korrekte_antwort": { "de": "Ein ETF senkt das Einzelrisiko, folgt aber dem Gesamtmarkt" },
+      "distraktor_pool": [ { "text": { "de": "Ein ETF kann nie an Wert verlieren" }, "naehe": 3 }, { "text": { "de": "Ein ETF ist eine einzelne Firma" }, "naehe": 3 }, { "text": { "de": "Ein ETF ist dasselbe wie Bargeld" }, "naehe": 2 } ],
+      "anzahl_distraktoren_angezeigt": 3, "erklaerung_nach_antwort": { "de": "Ein ETF streut breit (weniger Einzelrisiko), schwankt aber mit dem Markt." }, "wissenspunkte": 150 },
+
+    { "id": "q_ave_001", "konzept_id": "konzept_aktie_vs_etf", "stufe": "erklaeren", "typ": "multiple_choice",
+      "frage": { "de": "Worin unterscheiden sich Aktie und ETF?" }, "korrekte_antwort": { "de": "Aktie = eine Firma, ETF = viele Firmen" },
+      "distraktor_pool": [ { "text": { "de": "Beide sind genau dasselbe" }, "naehe": 3 }, { "text": { "de": "Ein ETF ist eine einzelne Firma" }, "naehe": 3 }, { "text": { "de": "Eine Aktie sind viele Firmen" }, "naehe": 3 } ],
+      "anzahl_distraktoren_angezeigt": 3, "erklaerung_nach_antwort": { "de": "Eine Aktie ist eine Firma, ein ETF buendelt viele." }, "wissenspunkte": 100 },
+    { "id": "q_ave_002", "konzept_id": "konzept_aktie_vs_etf", "stufe": "erkennen", "typ": "multiple_choice",
+      "frage": { "de": "Was senkt ein ETF gegenueber einer Einzelaktie?" }, "korrekte_antwort": { "de": "Das Einzelrisiko durch Streuung" },
+      "distraktor_pool": [ { "text": { "de": "Die Anzahl der Firmen" }, "naehe": 2 }, { "text": { "de": "Den Spass" }, "naehe": 1 }, { "text": { "de": "Gar nichts" }, "naehe": 2 } ],
+      "anzahl_distraktoren_angezeigt": 3, "erklaerung_nach_antwort": { "de": "Durch Streuung ist das Risiko einer einzelnen Firma kleiner." }, "wissenspunkte": 100 },
+    { "id": "q_ave_003", "konzept_id": "konzept_aktie_vs_etf", "stufe": "verstehen", "typ": "multiple_choice",
+      "frage": { "de": "Wann passt eher eine Einzelaktie?" }, "korrekte_antwort": { "de": "Wenn man bewusst staerker auf eine Firma setzen will (mehr Chance, mehr Risiko)" },
+      "distraktor_pool": [ { "text": { "de": "Wenn man gar kein Risiko moechte" }, "naehe": 3 }, { "text": { "de": "Wenn man maximal breit streuen will" }, "naehe": 3 }, { "text": { "de": "Wenn man kein Geld hat" }, "naehe": 1 } ],
+      "anzahl_distraktoren_angezeigt": 3, "erklaerung_nach_antwort": { "de": "Einzelaktien sind fuer gezielte Wetten – mit hoeherer Chance und hoeherem Risiko." }, "wissenspunkte": 100 },
+    { "id": "q_ave_004", "konzept_id": "konzept_aktie_vs_etf", "stufe": "anwenden", "typ": "multiple_choice",
+      "frage": { "de": "Du willst breit gestreut und einfach starten. Was passt eher?" }, "korrekte_antwort": { "de": "Ein breiter ETF" },
+      "distraktor_pool": [ { "text": { "de": "Eine einzige Aktie" }, "naehe": 3 }, { "text": { "de": "Gar nichts" }, "naehe": 1 }, { "text": { "de": "Nur Bargeld" }, "naehe": 2 } ],
+      "anzahl_distraktoren_angezeigt": 3, "erklaerung_nach_antwort": { "de": "Fuer breite Streuung mit einem Kauf eignet sich ein ETF." }, "wissenspunkte": 120 },
+    { "id": "q_ave_005", "konzept_id": "konzept_aktie_vs_etf", "stufe": "meistern", "typ": "multiple_choice",
+      "frage": { "de": "Welche Aussage stimmt?" }, "korrekte_antwort": { "de": "Einzelaktien bieten mehr Chance und mehr Einzelrisiko, ETFs streuen breiter" },
+      "distraktor_pool": [ { "text": { "de": "ETFs sind immer riskanter als Einzelaktien" }, "naehe": 3 }, { "text": { "de": "Einzelaktien haben nie Risiko" }, "naehe": 3 }, { "text": { "de": "Beides bringt garantiert Gewinn" }, "naehe": 2 } ],
+      "anzahl_distraktoren_angezeigt": 3, "erklaerung_nach_antwort": { "de": "Einzelaktie = mehr Chance/Risiko; ETF = breitere Streuung." }, "wissenspunkte": 150 }
+  ],
+  "vorlagen": [
+    { "id": "tmpl_dvs_anwenden", "konzept_id": "konzept_diversifikation", "stufe": "anwenden",
+      "parameter": { "summe": { "typ": "int", "min": 100, "max": 900 }, "anzahl": { "typ": "int", "min": 2, "max": 9 } },
+      "frage_vorlage": { "de": "Du verteilst {summe} Euro gleichmaessig auf {anzahl} verschiedene Aktien. Wie viel steckst du in jede (gerundet)?" },
+      "loesung_formel": "summe / anzahl",
+      "distraktor_formeln": ["summe * anzahl", "summe - anzahl", "summe / anzahl + anzahl"],
+      "einheit": "Euro", "rundung": "ganzzahl",
+      "erklaerung_nach_antwort": { "de": "Gleichmaessig verteilen: {summe} geteilt durch {anzahl}." }, "wissenspunkte": 150 },
+    { "id": "tmpl_dvs_meistern", "konzept_id": "konzept_diversifikation", "stufe": "meistern",
+      "parameter": { "summe": { "typ": "int", "min": 200, "max": 800 }, "anzahl": { "typ": "int", "min": 2, "max": 8 } },
+      "frage_vorlage": { "de": "Du hast {summe} Euro. Die Haelfte legst du in einen ETF, den Rest verteilst du gleichmaessig auf {anzahl} Aktien. Wie viel steckt in jeder Aktie (gerundet)?" },
+      "loesung_formel": "summe / 2 / anzahl",
+      "distraktor_formeln": ["summe / anzahl", "summe / 2", "summe / 2 / anzahl + anzahl"],
+      "einheit": "Euro", "rundung": "ganzzahl",
+      "erklaerung_nach_antwort": { "de": "Erst die Haelfte ({summe} geteilt durch 2), die dann auf {anzahl} Aktien aufteilen." }, "wissenspunkte": 200 }
+  ]
+}

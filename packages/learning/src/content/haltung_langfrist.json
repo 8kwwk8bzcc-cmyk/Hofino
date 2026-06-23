@@ -1,0 +1,111 @@
+{
+  "_hinweis": "Themenblock Haltung & Langfrist (Module 18-20).",
+  "themenbloecke": [{ "id": "tb_haltung_langfrist", "titel": { "de": "Haltung & Langfrist" } }],
+  "konzepte": [
+    {
+      "id": "konzept_langfristig", "modul_nr": 18, "themenblock_id": "tb_haltung_langfrist",
+      "titel": { "de": "Was ist langfristiges Investieren?" }, "ist_rechnerisch": false,
+      "voraussetzungen": ["konzept_depot"], "freischalt_level": 5,
+      "erklaerungen": {
+        "kind_8_10": { "de": "Langfristig heisst: Geld lange liegen lassen, statt staendig zu kaufen und zu verkaufen." },
+        "kind_11_14": { "de": "Langfristig investieren heisst, ueber viele Jahre dabeizubleiben. Dann werden kleine Schwankungen weniger wichtig." },
+        "eltern_lehrer": { "de": "Langfristiges Investieren nutzt Zeit und Zinseszins und reduziert die Bedeutung kurzfristiger Volatilitaet." }
+      },
+      "stufen": ["erklaeren", "erkennen", "verstehen", "anwenden", "meistern"]
+    },
+    {
+      "id": "konzept_sparplan", "modul_nr": 19, "themenblock_id": "tb_haltung_langfrist",
+      "titel": { "de": "Was ist ein Sparplan?" }, "ist_rechnerisch": true,
+      "voraussetzungen": ["konzept_langfristig"], "freischalt_level": 6,
+      "erklaerungen": {
+        "kind_8_10": { "de": "Bei einem Sparplan legst du jeden Monat automatisch einen festen Betrag an." },
+        "kind_11_14": { "de": "Ein Sparplan legt regelmaessig (z. B. monatlich) einen festen Betrag an – so baust du Schritt fuer Schritt Vermoegen auf, ohne jedes Mal selbst zu handeln." },
+        "eltern_lehrer": { "de": "Ein Sparplan investiert feste Betraege in festen Intervallen (Cost-Average-Effekt) und foerdert Disziplin." }
+      },
+      "stufen": ["erklaeren", "erkennen", "verstehen", "anwenden", "meistern"]
+    },
+    {
+      "id": "konzept_zocken", "modul_nr": 20, "themenblock_id": "tb_haltung_langfrist",
+      "titel": { "de": "Investieren vs. Zocken" }, "ist_rechnerisch": false,
+      "voraussetzungen": ["konzept_langfristig"], "freischalt_level": 6,
+      "erklaerungen": {
+        "kind_8_10": { "de": "Investieren heisst mit Plan und Geduld anlegen. Zocken heisst, schnell reich werden zu wollen – das ist riskant." },
+        "kind_11_14": { "de": "Investieren bedeutet, mit Wissen langfristig und gestreut anzulegen. Zocken setzt auf schnelle Gewinne, oft ohne Plan und mit hohem Risiko." },
+        "eltern_lehrer": { "de": "Investieren beruht auf Analyse, Streuung und Zeithorizont; Spekulation/Zocken setzt auf kurzfristige Bewegungen mit hohem Risiko." }
+      },
+      "stufen": ["erklaeren", "erkennen", "verstehen", "anwenden", "meistern"]
+    }
+  ],
+  "fragen": [
+    { "id": "q_lang_001", "konzept_id": "konzept_langfristig", "stufe": "erklaeren", "typ": "multiple_choice",
+      "frage": { "de": "Was kennzeichnet langfristiges Investieren?" }, "korrekte_antwort": { "de": "Lange dabeibleiben statt staendig zu handeln" },
+      "distraktor_pool": [ { "text": { "de": "Jeden Tag kaufen und verkaufen" }, "naehe": 3 }, { "text": { "de": "Sofort wieder verkaufen" }, "naehe": 2 }, { "text": { "de": "Nie investieren" }, "naehe": 1 } ],
+      "anzahl_distraktoren_angezeigt": 3, "erklaerung_nach_antwort": { "de": "Langfristig heisst: ueber Jahre dabeibleiben." }, "wissenspunkte": 100 },
+    { "id": "q_lang_002", "konzept_id": "konzept_langfristig", "stufe": "erkennen", "typ": "multiple_choice",
+      "frage": { "de": "Was hilft beim langfristigen Investieren?" }, "korrekte_antwort": { "de": "Geduld und Zeit" },
+      "distraktor_pool": [ { "text": { "de": "Hektik" }, "naehe": 3 }, { "text": { "de": "Glueck allein" }, "naehe": 2 }, { "text": { "de": "Jeden Kurs stuendlich pruefen" }, "naehe": 2 } ],
+      "anzahl_distraktoren_angezeigt": 3, "erklaerung_nach_antwort": { "de": "Zeit und Geduld sind die wichtigsten Zutaten." }, "wissenspunkte": 100 },
+    { "id": "q_lang_003", "konzept_id": "konzept_langfristig", "stufe": "verstehen", "typ": "multiple_choice",
+      "frage": { "de": "Warum sind kurze Schwankungen langfristig weniger wichtig?" }, "korrekte_antwort": { "de": "Weil sich ueber viele Jahre vieles ausgleichen kann" },
+      "distraktor_pool": [ { "text": { "de": "Weil Kurse nie schwanken" }, "naehe": 3 }, { "text": { "de": "Weil man taeglich verkaufen sollte" }, "naehe": 3 }, { "text": { "de": "Weil Geld nie weniger wird" }, "naehe": 2 } ],
+      "anzahl_distraktoren_angezeigt": 3, "erklaerung_nach_antwort": { "de": "Ueber lange Zeit fallen einzelne Schwankungen weniger ins Gewicht." }, "wissenspunkte": 100 },
+    { "id": "q_lang_004", "konzept_id": "konzept_langfristig", "stufe": "anwenden", "typ": "multiple_choice",
+      "frage": { "de": "Der Kurs faellt kurz. Was passt zur langfristigen Haltung?" }, "korrekte_antwort": { "de": "Ruhig bleiben und am Plan festhalten" },
+      "distraktor_pool": [ { "text": { "de": "Sofort panisch alles verkaufen" }, "naehe": 3 }, { "text": { "de": "Jeden Tag alles umschichten" }, "naehe": 3 }, { "text": { "de": "Nie wieder investieren" }, "naehe": 2 } ],
+      "anzahl_distraktoren_angezeigt": 3, "erklaerung_nach_antwort": { "de": "Langfristig bleibt man bei kurzen Rueckschlaegen ruhig." }, "wissenspunkte": 120 },
+    { "id": "q_lang_005", "konzept_id": "konzept_langfristig", "stufe": "meistern", "typ": "multiple_choice",
+      "frage": { "de": "Welche Aussage stimmt?" }, "korrekte_antwort": { "de": "Langfristig zaehlt Dranbleiben mehr als perfektes Timing" },
+      "distraktor_pool": [ { "text": { "de": "Wer am meisten handelt, gewinnt sicher" }, "naehe": 3 }, { "text": { "de": "Timing ist immer leicht und sicher" }, "naehe": 3 }, { "text": { "de": "Langfristig verliert man immer" }, "naehe": 2 } ],
+      "anzahl_distraktoren_angezeigt": 3, "erklaerung_nach_antwort": { "de": "Dranbleiben und Geduld schlagen meist den Versuch, den Markt zu timen." }, "wissenspunkte": 150 },
+
+    { "id": "q_spp_001", "konzept_id": "konzept_sparplan", "stufe": "erklaeren", "typ": "multiple_choice",
+      "frage": { "de": "Was ist ein Sparplan?" }, "korrekte_antwort": { "de": "Regelmaessig wird ein fester Betrag automatisch angelegt" },
+      "distraktor_pool": [ { "text": { "de": "Einmalig alles auf einmal anlegen" }, "naehe": 3 }, { "text": { "de": "Ein Kredit" }, "naehe": 2 }, { "text": { "de": "Ein Gewinnspiel" }, "naehe": 1 } ],
+      "anzahl_distraktoren_angezeigt": 3, "erklaerung_nach_antwort": { "de": "Ein Sparplan legt regelmaessig einen festen Betrag an." }, "wissenspunkte": 100 },
+    { "id": "q_spp_002", "konzept_id": "konzept_sparplan", "stufe": "erkennen", "typ": "multiple_choice",
+      "frage": { "de": "Was ist typisch fuer einen Sparplan?" }, "korrekte_antwort": { "de": "Gleiche Rate in festen Abstaenden" },
+      "distraktor_pool": [ { "text": { "de": "Jeden Monat ein zufaelliger Betrag" }, "naehe": 2 }, { "text": { "de": "Nur einmal im Leben" }, "naehe": 2 }, { "text": { "de": "Nie Geld einzahlen" }, "naehe": 1 } ],
+      "anzahl_distraktoren_angezeigt": 3, "erklaerung_nach_antwort": { "de": "Feste Rate, feste Abstaende – das ist der Sparplan." }, "wissenspunkte": 100 },
+    { "id": "q_spp_003", "konzept_id": "konzept_sparplan", "stufe": "verstehen", "typ": "multiple_choice",
+      "frage": { "de": "Was foerdert ein Sparplan vor allem?" }, "korrekte_antwort": { "de": "Disziplin beim regelmaessigen Sparen" },
+      "distraktor_pool": [ { "text": { "de": "Hektisches Handeln" }, "naehe": 2 }, { "text": { "de": "Garantierten Gewinn" }, "naehe": 3 }, { "text": { "de": "Gebuehrenfreiheit fuer immer" }, "naehe": 2 } ],
+      "anzahl_distraktoren_angezeigt": 3, "erklaerung_nach_antwort": { "de": "Ein Sparplan macht das Sparen automatisch und diszipliniert." }, "wissenspunkte": 100 },
+
+    { "id": "q_zoc_001", "konzept_id": "konzept_zocken", "stufe": "erklaeren", "typ": "multiple_choice",
+      "frage": { "de": "Was beschreibt Investieren?" }, "korrekte_antwort": { "de": "Mit Plan, gestreut und langfristig anlegen" },
+      "distraktor_pool": [ { "text": { "de": "Schnell alles auf eine Karte setzen" }, "naehe": 3 }, { "text": { "de": "Wuerfeln" }, "naehe": 2 }, { "text": { "de": "Geld verstecken" }, "naehe": 1 } ],
+      "anzahl_distraktoren_angezeigt": 3, "erklaerung_nach_antwort": { "de": "Investieren ist geplant, gestreut und langfristig." }, "wissenspunkte": 100 },
+    { "id": "q_zoc_002", "konzept_id": "konzept_zocken", "stufe": "erkennen", "typ": "multiple_choice",
+      "frage": { "de": "Was ist typisch fuers Zocken?" }, "korrekte_antwort": { "de": "Hohes Risiko, Hoffnung auf schnellen Gewinn" },
+      "distraktor_pool": [ { "text": { "de": "Breite Streuung" }, "naehe": 3 }, { "text": { "de": "Langer Atem" }, "naehe": 3 }, { "text": { "de": "Geduld" }, "naehe": 2 } ],
+      "anzahl_distraktoren_angezeigt": 3, "erklaerung_nach_antwort": { "de": "Zocken setzt auf schnelle Gewinne mit hohem Risiko." }, "wissenspunkte": 100 },
+    { "id": "q_zoc_003", "konzept_id": "konzept_zocken", "stufe": "verstehen", "typ": "multiple_choice",
+      "frage": { "de": "Warum ist alles auf eine 'heisse' Aktie zu setzen eher Zocken?" }, "korrekte_antwort": { "de": "Weil ohne Streuung und Plan das Risiko sehr hoch ist" },
+      "distraktor_pool": [ { "text": { "de": "Weil das immer sicher gewinnt" }, "naehe": 3 }, { "text": { "de": "Weil Aktien nie fallen" }, "naehe": 3 }, { "text": { "de": "Weil das verboten ist" }, "naehe": 1 } ],
+      "anzahl_distraktoren_angezeigt": 3, "erklaerung_nach_antwort": { "de": "Ohne Streuung und Plan ist es eine riskante Wette – das ist Zocken." }, "wissenspunkte": 100 },
+    { "id": "q_zoc_004", "konzept_id": "konzept_zocken", "stufe": "anwenden", "typ": "multiple_choice",
+      "frage": { "de": "Was uebt Hofino?" }, "korrekte_antwort": { "de": "Das Investieren mit Plan und Geduld" },
+      "distraktor_pool": [ { "text": { "de": "Das Zocken um schnelles Geld" }, "naehe": 3 }, { "text": { "de": "Das Schuldenmachen" }, "naehe": 2 }, { "text": { "de": "Das Wetten auf Sport" }, "naehe": 1 } ],
+      "anzahl_distraktoren_angezeigt": 3, "erklaerung_nach_antwort": { "de": "Hofino vermittelt bewusst das langfristige, geplante Investieren." }, "wissenspunkte": 120 },
+    { "id": "q_zoc_005", "konzept_id": "konzept_zocken", "stufe": "meistern", "typ": "multiple_choice",
+      "frage": { "de": "Welche Aussage stimmt?" }, "korrekte_antwort": { "de": "Investieren ist geplant und gestreut; Zocken ist eine riskante Wette auf schnelles Geld" },
+      "distraktor_pool": [ { "text": { "de": "Investieren und Zocken sind dasselbe" }, "naehe": 3 }, { "text": { "de": "Zocken ist sicherer als Investieren" }, "naehe": 3 }, { "text": { "de": "Investieren bringt garantiert schnellen Reichtum" }, "naehe": 2 } ],
+      "anzahl_distraktoren_angezeigt": 3, "erklaerung_nach_antwort": { "de": "Investieren = Plan, Streuung, Zeit; Zocken = riskante Wette auf schnelle Gewinne." }, "wissenspunkte": 150 }
+  ],
+  "vorlagen": [
+    { "id": "tmpl_spp_anwenden", "konzept_id": "konzept_sparplan", "stufe": "anwenden",
+      "parameter": { "rate": { "typ": "int", "min": 10, "max": 100 }, "jahre": { "typ": "int", "min": 2, "max": 10 } },
+      "frage_vorlage": { "de": "Du legst {rate} Euro pro Monat {jahre} Jahre lang an (ohne Zinsen). Wie viel zahlst du insgesamt ein?" },
+      "loesung_formel": "rate * 12 * jahre",
+      "distraktor_formeln": ["rate * jahre", "rate * 12", "rate * 12 * jahre + rate"],
+      "einheit": "Euro", "rundung": "ganzzahl",
+      "erklaerung_nach_antwort": { "de": "{rate} Euro mal 12 Monate mal {jahre} Jahre." }, "wissenspunkte": 150 },
+    { "id": "tmpl_spp_meistern", "konzept_id": "konzept_sparplan", "stufe": "meistern",
+      "parameter": { "rate": { "typ": "int", "min": 10, "max": 100 }, "jahre": { "typ": "int", "min": 2, "max": 10 }, "bonus": { "typ": "int", "min": 10, "max": 200 } },
+      "frage_vorlage": { "de": "Du sparst {rate} Euro pro Monat fuer {jahre} Jahre. Am Ende kommen {bonus} Euro Zinsen dazu. Wie viel hast du dann (vereinfacht)?" },
+      "loesung_formel": "rate * 12 * jahre + bonus",
+      "distraktor_formeln": ["rate * 12 * jahre", "rate * jahre + bonus", "rate * 12 + bonus"],
+      "einheit": "Euro", "rundung": "ganzzahl",
+      "erklaerung_nach_antwort": { "de": "Erst {rate} mal 12 mal {jahre} einzahlen, dann {bonus} Euro Zinsen dazu." }, "wissenspunkte": 200 }
+  ]
+}

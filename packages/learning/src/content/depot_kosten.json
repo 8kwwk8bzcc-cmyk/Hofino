@@ -1,0 +1,40 @@
+{
+  "_hinweis": "Themenblock Depot & Kosten (Modul 16). Modul 17 (Kosten) liegt in seed.json.",
+  "themenbloecke": [{ "id": "tb_depot_kosten", "titel": { "de": "Depot & Kosten" } }],
+  "konzepte": [
+    {
+      "id": "konzept_depot", "modul_nr": 16, "themenblock_id": "tb_depot_kosten",
+      "titel": { "de": "Was ist ein Depot?" }, "ist_rechnerisch": false,
+      "voraussetzungen": ["konzept_aktie_vs_etf"], "freischalt_level": 5,
+      "erklaerungen": {
+        "kind_8_10": { "de": "Ein Depot ist wie ein Schrank bei der Bank, in dem deine Aktien und ETFs liegen." },
+        "kind_11_14": { "de": "Ein Depot ist der Aufbewahrungsort fuer deine Wertpapiere. So wie ein Konto Geld verwaltet, verwaltet ein Depot deine Anteile." },
+        "eltern_lehrer": { "de": "Ein Wertpapierdepot verwahrt und verwaltet Wertpapiere; Kaeufe, Verkaeufe und Bestaende werden dort dokumentiert, das Verrechnungskonto haelt das Cash." }
+      },
+      "stufen": ["erklaeren", "erkennen", "verstehen", "anwenden", "meistern"]
+    }
+  ],
+  "fragen": [
+    { "id": "q_dep_001", "konzept_id": "konzept_depot", "stufe": "erklaeren", "typ": "multiple_choice",
+      "frage": { "de": "Was ist ein Depot?" }, "korrekte_antwort": { "de": "Ein Aufbewahrungsort fuer Wertpapiere wie Aktien und ETFs" },
+      "distraktor_pool": [ { "text": { "de": "Ein Geldautomat" }, "naehe": 2 }, { "text": { "de": "Ein Sparschwein fuer Muenzen" }, "naehe": 2 }, { "text": { "de": "Ein Laden zum Einkaufen" }, "naehe": 1 } ],
+      "anzahl_distraktoren_angezeigt": 3, "erklaerung_nach_antwort": { "de": "Im Depot liegen deine Aktien und ETFs." }, "wissenspunkte": 100 },
+    { "id": "q_dep_002", "konzept_id": "konzept_depot", "stufe": "erkennen", "typ": "multiple_choice",
+      "frage": { "de": "Was siehst du in deinem Depot?" }, "korrekte_antwort": { "de": "Deine Aktien und ETFs" },
+      "distraktor_pool": [ { "text": { "de": "Nur Urlaubsfotos" }, "naehe": 1 }, { "text": { "de": "Dein Bargeld in der Hand" }, "naehe": 2 }, { "text": { "de": "Die Hausaufgaben" }, "naehe": 1 } ],
+      "anzahl_distraktoren_angezeigt": 3, "erklaerung_nach_antwort": { "de": "Im Depot stehen deine Wertpapiere und ihr Wert." }, "wissenspunkte": 100 },
+    { "id": "q_dep_003", "konzept_id": "konzept_depot", "stufe": "verstehen", "typ": "multiple_choice",
+      "frage": { "de": "Wo liegt das Geld, mit dem du im Depot kaufst?" }, "korrekte_antwort": { "de": "Auf dem Verrechnungskonto zum Depot" },
+      "distraktor_pool": [ { "text": { "de": "Im ETF selbst versteckt" }, "naehe": 2 }, { "text": { "de": "Unter dem Kopfkissen" }, "naehe": 1 }, { "text": { "de": "Gar nirgendwo" }, "naehe": 1 } ],
+      "anzahl_distraktoren_angezeigt": 3, "erklaerung_nach_antwort": { "de": "Zum Depot gehoert ein Verrechnungskonto, das das Cash haelt." }, "wissenspunkte": 100 },
+    { "id": "q_dep_004", "konzept_id": "konzept_depot", "stufe": "anwenden", "typ": "multiple_choice",
+      "frage": { "de": "Du kaufst eine Aktie. Wo wird sie danach angezeigt?" }, "korrekte_antwort": { "de": "Als Position in deinem Depot" },
+      "distraktor_pool": [ { "text": { "de": "Auf deinem Girokonto als Bargeld" }, "naehe": 3 }, { "text": { "de": "In der Wunschliste" }, "naehe": 2 }, { "text": { "de": "Gar nicht sichtbar" }, "naehe": 1 } ],
+      "anzahl_distraktoren_angezeigt": 3, "erklaerung_nach_antwort": { "de": "Gekaufte Wertpapiere erscheinen als Position im Depot." }, "wissenspunkte": 120 },
+    { "id": "q_dep_005", "konzept_id": "konzept_depot", "stufe": "meistern", "typ": "multiple_choice",
+      "frage": { "de": "Welche Aussage ueber das Depot stimmt?" }, "korrekte_antwort": { "de": "Das Depot verwahrt Wertpapiere; das Cash liegt auf dem Verrechnungskonto" },
+      "distraktor_pool": [ { "text": { "de": "Im Depot liegt nur Bargeld" }, "naehe": 3 }, { "text": { "de": "Ein Depot kostet immer alles Geld" }, "naehe": 2 }, { "text": { "de": "Ein Depot ist dasselbe wie eine Aktie" }, "naehe": 3 } ],
+      "anzahl_distraktoren_angezeigt": 3, "erklaerung_nach_antwort": { "de": "Depot = Wertpapiere; Cash = Verrechnungskonto. Beides gehoert zusammen." }, "wissenspunkte": 150 }
+  ],
+  "vorlagen": []
+}
