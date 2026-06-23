@@ -19,6 +19,7 @@ import {
 } from "@hofino/learning";
 import { formatEuros } from "@hofino/core";
 import { supabase } from "../lib/supabase.js";
+import { useStore } from "../store/store.js";
 import { Body, Button, Card, H1, H2, Muted, Pill, ProgressBar } from "../ui/components.js";
 import { colors, font, radius, space } from "../theme.js";
 
@@ -32,12 +33,12 @@ type Phase =
   | "wdh_feedback"
   | "fertig";
 const ALTERSBAND = "kind_11_14" as const; // MVP-Default; später aus dem Profil
-const STUFE_LABEL: Record<Stufe, string> = {
-  erklaeren: "Erklären",
-  erkennen: "Erkennen",
-  verstehen: "Verstehen",
-  anwenden: "Anwenden",
-  meistern: "Meistern",
+const STUFE_KEY: Record<Stufe, string> = {
+  erklaeren: "learn.stufeErklaeren",
+  erkennen: "learn.stufeErkennen",
+  verstehen: "learn.stufeVerstehen",
+  anwenden: "learn.stufeAnwenden",
+  meistern: "learn.stufeMeistern",
 };
 
 function heuteISO(): string {
@@ -67,6 +68,7 @@ function baueInstanzBeliebig(konzept: Konzept, rng: () => number): FrageInstanz 
 }
 
 export function LearnPlus() {
+  const { t } = useStore();
   const konzepte = alleKonzepte();
   const [phase, setPhase] = useState<Phase>("liste");
   const [konzept, setKonzept] = useState<Konzept | null>(null);
@@ -242,43 +244,41 @@ export function LearnPlus() {
     const rangEmoji: Record<string, string> = { bronze: "🥉", silber: "🥈", gold: "🥇" };
     return (
       <ScrollView contentContainerStyle={styles.container}>
-        <H1>Lernen</H1>
+        <H1>{t("learn.title")}</H1>
         <Card>
           <View style={styles.row}>
-            <H2>Wissenslevel {lvl.level}</H2>
+            <H2>{t("learn.level", { n: lvl.level })}</H2>
             <Pill label={`${xpGesamt} XP`} tone="gold" />
           </View>
           <ProgressBar value={lvl.fortschritt} />
           <Muted>
-            Noch {Math.max(0, lvl.xpFuerNaechstes - lvl.xpImLevel)} XP bis Level {lvl.level + 1}
+            {t("learn.xpToNext", { xp: Math.max(0, lvl.xpFuerNaechstes - lvl.xpImLevel), n: lvl.level + 1 })}
           </Muted>
         </Card>
         <Card>
-          <H2>Auszeichnungen</H2>
+          <H2>{t("learn.awards")}</H2>
           {auszeichnungen.map((a) => (
             <View key={a.id} style={styles.row}>
               <Body>
                 {a.rang ? rangEmoji[a.rang] : "▫️"} {a.titel}
               </Body>
               <Muted>
-                {a.naechsteSchwelle === null ? "Gold erreicht" : `${a.wert}/${a.naechsteSchwelle}`}
+                {a.naechsteSchwelle === null ? t("learn.goldReached") : `${a.wert}/${a.naechsteSchwelle}`}
               </Muted>
             </View>
           ))}
         </Card>
         <Card>
-          <Muted>Heute schon gelernt</Muted>
-          <Body>
-            {tages.neu}/10 neue Fragen · {tages.wieder}/10 Wiederholungen
-          </Body>
+          <Muted>{t("learn.todayLearned")}</Muted>
+          <Body>{t("learn.todayCounts", { neu: tages.neu, wieder: tages.wieder })}</Body>
           <ProgressBar value={tages.neu / 10} />
         </Card>
         {faellig.length > 0 && (
           <Card style={{ borderColor: colors.accent, borderWidth: 2 }}>
-            <H2>Tägliche Mini-Aufgabe</H2>
-            <Body>{faellig.length} Konzept(e) heute fällig zum Wiederholen.</Body>
+            <H2>{t("learn.miniTask")}</H2>
+            <Body>{t("learn.dueToReview", { n: faellig.length })}</Body>
             <Button
-              title={tages.wieder >= 10 ? "Heute schon erledigt" : "Wiederholen starten"}
+              title={tages.wieder >= 10 ? t("learn.reviewDone") : t("learn.reviewStart")}
               onPress={starteWiederholung}
               disabled={tages.wieder >= 10}
               testID="wdh-start"
@@ -292,9 +292,9 @@ export function LearnPlus() {
               <Card>
                 <View style={styles.row}>
                   <H2>{k.titel.de}</H2>
-                  {sr?.gemeistert ? <Pill label="🏆 gemeistert" tone="gold" /> : sr ? <Pill label={`Box ${sr.leitner_box}`} tone="good" /> : null}
+                  {sr?.gemeistert ? <Pill label={t("learn.mastered")} tone="gold" /> : sr ? <Pill label={t("learn.box", { n: sr.leitner_box })} tone="good" /> : null}
                 </View>
-                <Muted>{k.ist_rechnerisch ? "Mit Rechenaufgaben" : "Verständnisfragen"}</Muted>
+                <Muted>{k.ist_rechnerisch ? t("learn.calcType") : t("learn.understandType")}</Muted>
               </Card>
             </Pressable>
           );
@@ -306,12 +306,12 @@ export function LearnPlus() {
   if (phase === "erklaerung" && konzept) {
     return (
       <ScrollView contentContainerStyle={styles.container}>
-        <Button title="‹ Zurück" variant="ghost" onPress={() => setPhase("liste")} testID="lp-back" />
+        <Button title={t("discover.back")} variant="ghost" onPress={() => setPhase("liste")} testID="lp-back" />
         <H1>{konzept.titel.de}</H1>
         <Card>
           <Body>{konzept.erklaerungen[ALTERSBAND].de}</Body>
         </Card>
-        <Button title="Verstanden – los geht's" onPress={starteStufen} testID="lp-start" />
+        <Button title={t("learn.understood")} onPress={starteStufen} testID="lp-start" />
       </ScrollView>
     );
   }
@@ -320,7 +320,7 @@ export function LearnPlus() {
     return (
       <ScrollView contentContainerStyle={styles.container}>
         <Muted>
-          {konzept.titel.de} · Stufe {stufeIdx + 1}/5 · {STUFE_LABEL[instanz.stufe]}
+          {t("learn.stageLine", { title: konzept.titel.de, n: stufeIdx + 1, stufe: t(STUFE_KEY[instanz.stufe]) })}
         </Muted>
         <H2>{instanz.frage}</H2>
         {instanz.optionen.map((o, i) => (
@@ -337,17 +337,15 @@ export function LearnPlus() {
     return (
       <ScrollView contentContainerStyle={styles.container}>
         <Card style={{ borderColor: korrekt ? colors.secondary : colors.danger, borderWidth: 2 }}>
-          <H2>{korrekt ? "Richtig! 🎉" : "Knapp daneben"}</H2>
+          <H2>{korrekt ? t("learn.correct") : t("learn.close")}</H2>
           {!korrekt && (
-            <Body>
-              Richtig wäre: {instanz.optionen.find((o) => o.korrekt)?.text}
-            </Body>
+            <Body>{t("learn.correctWould", { text: instanz.optionen.find((o) => o.korrekt)?.text ?? "" })}</Body>
           )}
           {/* Fehler = Lernmoment: Erklärung (bei falscher Antwort Pflicht, sonst zur Vertiefung) */}
           {instanz.erklaerung_nach_antwort ? <Body>{instanz.erklaerung_nach_antwort}</Body> : null}
           {korrekt && <Pill label={`+${instanz.wissenspunkte} XP`} tone="good" />}
         </Card>
-        <Button title="Weiter" onPress={() => naechsteStufe(konzept, stufeIdx + 1)} testID="lp-weiter" />
+        <Button title={t("learn.next")} onPress={() => naechsteStufe(konzept, stufeIdx + 1)} testID="lp-weiter" />
       </ScrollView>
     );
   }
@@ -356,18 +354,18 @@ export function LearnPlus() {
     return (
       <ScrollView contentContainerStyle={styles.container}>
         <Card style={{ borderColor: colors.secondary, borderWidth: 2 }}>
-          <H1>Konzept geschafft! 🎉</H1>
-          <Body>Du hast „{konzept.titel.de}" abgeschlossen.</Body>
+          <H1>{t("learn.conceptDone")}</H1>
+          <Body>{t("learn.youCompleted", { title: konzept.titel.de })}</Body>
           {lernkapital > 0 ? (
             <>
-              <Pill label={`+${formatEuros(lernkapital)} Lernkapital`} tone="good" />
-              <Body>Dein Lernkapital wandert in dein Musterdepot – du kannst es im „Depot" investieren.</Body>
+              <Pill label={t("learn.capitalGained", { amount: formatEuros(lernkapital) })} tone="good" />
+              <Body>{t("learn.capitalNote")}</Body>
             </>
           ) : (
-            <Muted>Dieses Konzept hattest du schon abgeschlossen – kein neues Lernkapital.</Muted>
+            <Muted>{t("learn.alreadyDone")}</Muted>
           )}
         </Card>
-        <Button title="Zurück zur Übersicht" onPress={() => { setPhase("liste"); ladeStatus(); }} testID="lp-konzept-fertig" />
+        <Button title={t("learn.backToOverview")} onPress={() => { setPhase("liste"); ladeStatus(); }} testID="lp-konzept-fertig" />
       </ScrollView>
     );
   }
@@ -376,7 +374,7 @@ export function LearnPlus() {
     return (
       <ScrollView contentContainerStyle={styles.container}>
         <Muted>
-          Wiederholung · {konzept.titel.de} · {wdhIdx + 1}/{wdhQueue.length}
+          {t("learn.reviewLine", { title: konzept.titel.de, n: wdhIdx + 1, total: wdhQueue.length })}
         </Muted>
         <H2>{instanz.frage}</H2>
         {instanz.optionen.map((o, i) => (
@@ -385,7 +383,7 @@ export function LearnPlus() {
           </Pressable>
         ))}
         <Button
-          title={zeigeErklaerung ? "Erklärung ausblenden" : "Nochmal erklären"}
+          title={zeigeErklaerung ? t("learn.hideExplanation") : t("learn.explainAgain")}
           variant="ghost"
           onPress={() => setZeigeErklaerung((s) => !s)}
           testID="wdh-erklaer"
@@ -404,12 +402,12 @@ export function LearnPlus() {
     return (
       <ScrollView contentContainerStyle={styles.container}>
         <Card style={{ borderColor: korrekt ? colors.secondary : colors.danger, borderWidth: 2 }}>
-          <H2>{korrekt ? "Richtig! 🎉" : "Knapp daneben"}</H2>
-          {!korrekt && <Body>Richtig wäre: {instanz.optionen.find((o) => o.korrekt)?.text}</Body>}
+          <H2>{korrekt ? t("learn.correct") : t("learn.close")}</H2>
+          {!korrekt && <Body>{t("learn.correctWould", { text: instanz.optionen.find((o) => o.korrekt)?.text ?? "" })}</Body>}
           {!korrekt && instanz.erklaerung_nach_antwort ? <Body>{instanz.erklaerung_nach_antwort}</Body> : null}
-          {korrekt && <Pill label={letzteXp > 0 ? `+${letzteXp} XP` : "Tages-XP-Limit erreicht"} tone="good" />}
+          {korrekt && <Pill label={letzteXp > 0 ? `+${letzteXp} XP` : t("learn.xpLimit")} tone="good" />}
         </Card>
-        <Button title="Weiter" onPress={() => naechsteWdh(wdhQueue, wdhIdx + 1)} testID="wdh-weiter" />
+        <Button title={t("learn.next")} onPress={() => naechsteWdh(wdhQueue, wdhIdx + 1)} testID="wdh-weiter" />
       </ScrollView>
     );
   }
@@ -418,9 +416,9 @@ export function LearnPlus() {
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <Card>
-        <H1>Fertig für heute 👏</H1>
-        <Body>Stark gemacht! Du hast dein Tagesziel erreicht. Morgen geht's weiter.</Body>
-        <Button title="Zurück zur Übersicht" onPress={() => { setPhase("liste"); ladeStatus(); }} testID="lp-fertig" />
+        <H1>{t("learn.doneTodayTitle")}</H1>
+        <Body>{t("learn.doneTodayBody")}</Body>
+        <Button title={t("learn.backToOverview")} onPress={() => { setPhase("liste"); ladeStatus(); }} testID="lp-fertig" />
       </Card>
     </ScrollView>
   );

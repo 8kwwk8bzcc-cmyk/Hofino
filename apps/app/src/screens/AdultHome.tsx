@@ -9,29 +9,29 @@ import { colors, font, space } from "../theme.js";
 
 // Erwachsenen-Übersicht: sachlich, ohne Haus-Metapher, Fokus auf Depot & Lernen.
 export function AdultHome() {
-  const { state, derived } = useStore();
+  const { state, derived, t } = useStore();
   const go = useNav();
 
   const noInvest = state.portfolio.holdings.length === 0;
   const next = noInvest
-    ? "Lege unter Entdecken deine erste Position an oder starte mit einem Lernmodul."
+    ? t("adult.next1")
     : derived.completedCount < MODULES.length
-      ? "Vertiefe dein Wissen mit dem nächsten Lernmodul."
-      : "Alle Module abgeschlossen – baue dein Depot weiter aus.";
+      ? t("adult.next2")
+      : t("adult.next3");
   const nextTab = noInvest ? "discover" : "uebung";
-  const nextCta = noInvest ? "Jetzt entdecken" : "Zum Lernen";
+  const nextCta = noInvest ? t("home.ctaDiscover") : t("home.ctaLearn");
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <View style={styles.top}>
-        <Muted>Übersicht</Muted>
+        <Muted>{t("tab.overview")}</Muted>
         <H1>{state.displayName}</H1>
       </View>
 
       <Card>
         <View style={styles.row}>
           <View>
-            <Muted>Depotwert</Muted>
+            <Muted>{t("home.equity")}</Muted>
             <Text style={styles.big}>{formatEuros(derived.equityCents)}</Text>
           </View>
           <Pill
@@ -40,25 +40,23 @@ export function AdultHome() {
           />
         </View>
         <View style={styles.row}>
-          <Muted>Cash: {formatEuros(state.portfolio.cashCents)}</Muted>
-          <Muted>Positionen: {formatEuros(derived.holdingsValueCents)}</Muted>
+          <Muted>{t("depot.cash", { cash: formatEuros(state.portfolio.cashCents) })}</Muted>
+          <Muted>{t("depot.positions", { value: formatEuros(derived.holdingsValueCents) })}</Muted>
         </View>
       </Card>
 
       <Card>
-        <H2>Lernfortschritt</H2>
+        <H2>{t("adult.learnProgress")}</H2>
         <ProgressBar value={derived.completedCount / MODULES.length} />
         <View style={styles.row}>
-          <Muted>
-            {derived.completedCount}/{MODULES.length} Module
-          </Muted>
-          <Muted>{derived.lernXpGesamt} Wissenspunkte</Muted>
+          <Muted>{t("home.modulesPill", { done: derived.completedCount, total: MODULES.length })}</Muted>
+          <Muted>{t("adult.knowledgePoints", { xp: derived.lernXpGesamt })}</Muted>
         </View>
-        <Muted>Lernkapital (getrennt von der Performance): {formatEuros(derived.learningCapitalCents)}</Muted>
+        <Muted>{t("adult.learnCapital", { capital: formatEuros(derived.learningCapitalCents) })}</Muted>
       </Card>
 
       <Card>
-        <H2>Nächster Schritt</H2>
+        <H2>{t("adult.nextStep")}</H2>
         <Body>{next}</Body>
         <Button title={nextCta} onPress={() => go(nextTab)} testID="next-cta" />
       </Card>
