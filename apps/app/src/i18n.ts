@@ -38,6 +38,47 @@ const de: Dict = {
   "brand.adult": "Hofino · Erwachsene",
   "brand.parent": "Hofino · Eltern",
   "brand.teacher": "Hofino · Lehrer",
+  // Entdecken (Discover)
+  "discover.title": "Entdecken",
+  "discover.count": "{n} Werte: bekannte Unternehmen und ETFs als Lernbeispiele.",
+  "discover.watchlist": "Deine Wunschliste",
+  "discover.all": "Alle Werte",
+  "discover.back": "‹ Zurück",
+  "discover.watchOn": "★ Auf Wunschliste",
+  "discover.watchAdd": "☆ Zur Wunschliste",
+  "discover.about": "Über {name}",
+  "discover.qWhat": "Was macht das Unternehmen?",
+  "discover.qEarns": "Wie verdient es Geld?",
+  "discover.qProducts": "Bekannte Produkte",
+  "discover.qCompetitors": "Konkurrenten",
+  "discover.qOpportunities": "Chancen",
+  "discover.qRisks": "Risiken",
+  "discover.qWhy": "Warum kann der Kurs schwanken?",
+  "discover.etfNote": "neutrales Lernbeispiel, keine Kaufempfehlung",
+  "discover.etfTracks": "Was bildet der ETF ab?",
+  "discover.etfRegion": "Region",
+  "discover.etfDiversification": "Streuung",
+  "discover.etfCosts": "Kosten",
+  "discover.noProfile": "Für dieses Instrument liegt noch kein Profil vor (kommt mit weiteren Inhalten).",
+  "discover.buyHeading": "Kaufen",
+  "inst.stock": "Aktie",
+  "inst.etf": "ETF",
+  // Handeln (TradePanel)
+  "trade.price": "Aktueller Kurs",
+  "trade.unit": "Stück (ganze)",
+  "trade.gross": "Kurswert",
+  "trade.fee": "Ordergebühr",
+  "trade.debit": "Abzug vom Cash",
+  "trade.credit": "Gutschrift aufs Cash",
+  "trade.buy": "Kaufen",
+  "trade.sell": "Verkaufen",
+  "trade.bought": "Gekauft: {qty} Stück.",
+  "trade.sold": "Verkauft: {qty} Stück.",
+  "trade.avail": "Verfügbares Cash: {cash}",
+  "trade.errFunds": "Dafür reicht dein Cash nicht. Tipp: auf die Wunschliste setzen.",
+  "trade.errHoldings": "So viele Stücke hast du nicht im Depot.",
+  "trade.errQuantity": "Bitte eine ganze Stückzahl größer 0 wählen.",
+  "trade.errGeneric": "Order nicht möglich.",
 };
 
 const en: Dict = {
@@ -73,10 +114,61 @@ const en: Dict = {
   "brand.adult": "Hofino · Adults",
   "brand.parent": "Hofino · Parents",
   "brand.teacher": "Hofino · Teacher",
+  // Discover
+  "discover.title": "Discover",
+  "discover.count": "{n} assets: well-known companies and ETFs as learning examples.",
+  "discover.watchlist": "Your watchlist",
+  "discover.all": "All assets",
+  "discover.back": "‹ Back",
+  "discover.watchOn": "★ On watchlist",
+  "discover.watchAdd": "☆ Add to watchlist",
+  "discover.about": "About {name}",
+  "discover.qWhat": "What does the company do?",
+  "discover.qEarns": "How does it earn money?",
+  "discover.qProducts": "Well-known products",
+  "discover.qCompetitors": "Competitors",
+  "discover.qOpportunities": "Opportunities",
+  "discover.qRisks": "Risks",
+  "discover.qWhy": "Why can the price move?",
+  "discover.etfNote": "neutral learning example, not investment advice",
+  "discover.etfTracks": "What does the ETF track?",
+  "discover.etfRegion": "Region",
+  "discover.etfDiversification": "Diversification",
+  "discover.etfCosts": "Costs",
+  "discover.noProfile": "No profile for this asset yet (coming with more content).",
+  "discover.buyHeading": "Buy",
+  "inst.stock": "Stock",
+  "inst.etf": "ETF",
+  // Trading
+  "trade.price": "Current price",
+  "trade.unit": "shares (whole)",
+  "trade.gross": "Market value",
+  "trade.fee": "Order fee",
+  "trade.debit": "Debited from cash",
+  "trade.credit": "Credited to cash",
+  "trade.buy": "Buy",
+  "trade.sell": "Sell",
+  "trade.bought": "Bought: {qty} shares.",
+  "trade.sold": "Sold: {qty} shares.",
+  "trade.avail": "Available cash: {cash}",
+  "trade.errFunds": "Not enough cash for that. Tip: add it to your watchlist.",
+  "trade.errHoldings": "You don't hold that many shares.",
+  "trade.errQuantity": "Please choose a whole quantity greater than 0.",
+  "trade.errGeneric": "Order not possible.",
 };
 
 const DICTS: Record<Lang, Dict> = { de, en };
 
-export function translate(lang: Lang, key: string): string {
-  return DICTS[lang][key] ?? DICTS.de[key] ?? key;
+export function translate(
+  lang: Lang,
+  key: string,
+  params?: Record<string, string | number>,
+): string {
+  let s = DICTS[lang][key] ?? DICTS.de[key] ?? key;
+  if (params) {
+    for (const [k, v] of Object.entries(params)) {
+      s = s.split(`{${k}}`).join(String(v));
+    }
+  }
+  return s;
 }

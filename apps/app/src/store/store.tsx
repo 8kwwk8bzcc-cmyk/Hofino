@@ -177,7 +177,7 @@ interface StoreApi {
   fetchMyClass: () => Promise<MyClass | null>;
   lang: Lang;
   setLang: (lang: Lang) => void;
-  t: (key: string) => string;
+  t: (key: string, params?: Record<string, string | number>) => string;
 }
 
 const StoreContext = createContext<StoreApi | null>(null);
@@ -198,7 +198,10 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
     }
     setLangState(l);
   }, []);
-  const t = useCallback((key: string) => translate(lang, key), [lang]);
+  const t = useCallback(
+    (key: string, params?: Record<string, string | number>) => translate(lang, key, params),
+    [lang],
+  );
 
   const load = useCallback(async () => {
    try {

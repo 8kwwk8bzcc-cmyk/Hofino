@@ -5,14 +5,14 @@ import { useStore, type OrderOutcome } from "../store/store.js";
 import { Button, Muted } from "./components.js";
 import { colors, font, radius, space } from "../theme.js";
 
-const REASONS: Record<string, string> = {
-  insufficient_funds: "Dafür reicht dein Cash nicht. Tipp: auf die Wunschliste setzen.",
-  insufficient_holdings: "So viele Stücke hast du nicht im Depot.",
-  invalid_quantity: "Bitte eine ganze Stückzahl größer 0 wählen.",
+const REASON_KEYS: Record<string, string> = {
+  insufficient_funds: "trade.errFunds",
+  insufficient_holdings: "trade.errHoldings",
+  invalid_quantity: "trade.errQuantity",
 };
 
 export function TradePanel({ instrumentId, mode }: { instrumentId: string; mode: "buy" | "sell" }) {
-  const { prices, buy, sell, state } = useStore();
+  const { prices, buy, sell, state, t } = useStore();
   const [qty, setQty] = useState(1);
   const [msg, setMsg] = useState<string | null>(null);
 
@@ -29,17 +29,17 @@ export function TradePanel({ instrumentId, mode }: { instrumentId: string; mode:
     setMsg(null);
     const r: OrderOutcome = mode === "buy" ? await buy(instrumentId, qty) : await sell(instrumentId, qty);
     if (r.ok) {
-      setMsg(mode === "buy" ? `Gekauft: ${qty} Stück.` : `Verkauft: ${qty} Stück.`);
+      setMsg(t(mode === "buy" ? "trade.bought" : "trade.sold", { qty }));
       setQty(1);
     } else {
-      setMsg(REASONS[r.reason] ?? "Order nicht möglich.");
+      setMsg(t(REASON_KEYS[r.reason] ?? "trade.errGeneric"));
     }
   };
 
   return (
     <View style={styles.panel}>
       <View style={styles.row}>
-        <Muted>Aktueller Kurs</Muted>
+        <Muted>{t("trade.price")}</Muted>
         <Text style={styles.price}>{formatEuros(price)}</Text>
       </View>
 
@@ -53,32 +53,32 @@ export function TradePanel({ instrumentId, mode }: { instrumentId: string; mode:
         <Pressable testID="qty-plus" onPress={() => step(1)} style={styles.stepBtn}>
           <Text style={styles.stepText}>+</Text>
         </Pressable>
-        <Text style={styles.unit}>Stück (ganze)</Text>
+        <Text style={styles.unit}>{t("trade.unit")}</Text>
       </View>
 
       <View style={styles.breakdown}>
         <View style={styles.row}>
-          <Muted>Kurswert</Muted>
+          <Muted>{t("trade.gross")}</Muted>
           <Text style={styles.val}>{formatEuros(gross)}</Text>
         </View>
         <View style={styles.row}>
-          <Muted>Ordergebühr</Muted>
+          <Muted>{t("trade.fee")}</Muted>
           <Text style={styles.val}>{mode === "buy" ? "+ " : "− "}{formatEuros(ORDER_FEE_CENTS)}</Text>
         </View>
         <View style={styles.row}>
-          <Text style={styles.totalLabel}>{mode === "buy" ? "Abzug vom Cash" : "Gutschrift aufs Cash"}</Text>
+          <Text style={styles.totalLabel}>{t(mode === "buy" ? "trade.debit" : "trade.credit")}</Text>
           <Text style={styles.total}>{formatEuros(Math.abs(total))}</Text>
         </View>
       </View>
 
       <Button
         testID={`${mode}-submit`}
-        title={mode === "buy" ? "Kaufen" : "Verkaufen"}
+        title={t(mode === "buy" ? "trade.buy" : "trade.sell")}
         onPress={submit}
         variant={mode === "buy" ? "primary" : "secondary"}
       />
       {msg && <Text style={styles.msg}>{msg}</Text>}
-      <Muted>Verfügbares Cash: {formatEuros(state.portfolio.cashCents)}</Muted>
+      <Muted>{t("trade.avail", { cash: formatEuros(state.portfolio.cashCents) })}</Muted>
     </View>
   );
 }

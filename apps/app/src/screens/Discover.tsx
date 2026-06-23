@@ -8,7 +8,7 @@ import { TradePanel } from "../ui/TradePanel.js";
 import { colors, font, space } from "../theme.js";
 
 function Detail({ id, onBack }: { id: string; onBack: () => void }) {
-  const { prices, state, toggleWatch, instrumentById } = useStore();
+  const { prices, state, toggleWatch, instrumentById, t } = useStore();
   const inst = instrumentById.get(id)!;
   const company = COMPANY_PROFILES.find((p) => p.ticker === inst.ticker);
   const etf = ETF_PROFILES.find((p) => p.ticker === inst.ticker);
@@ -16,19 +16,19 @@ function Detail({ id, onBack }: { id: string; onBack: () => void }) {
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      <Button title="‹ Zurück" onPress={onBack} variant="ghost" testID="detail-back" />
+      <Button title={t("discover.back")} onPress={onBack} variant="ghost" testID="detail-back" />
       <View style={styles.detailHead}>
         <H1>{inst.name}</H1>
         <Text style={styles.price}>{formatEuros(prices.get(id) ?? 0)}</Text>
       </View>
       <View style={styles.tags}>
-        <Pill label={inst.type === "etf" ? "ETF" : "Aktie"} />
+        <Pill label={inst.type === "etf" ? t("inst.etf") : t("inst.stock")} />
         <Pill label={inst.sector} />
         <Pill label={inst.country} />
       </View>
 
       <Button
-        title={watched ? "★ Auf Wunschliste" : "☆ Zur Wunschliste"}
+        title={watched ? t("discover.watchOn") : t("discover.watchAdd")}
         onPress={() => toggleWatch(id)}
         variant="secondary"
         testID="watch-toggle"
@@ -36,37 +36,37 @@ function Detail({ id, onBack }: { id: string; onBack: () => void }) {
 
       {company && (
         <Card>
-          <H2>Über {company.name}</H2>
-          <Field q="Was macht das Unternehmen?" a={company.whatDoes} />
-          <Field q="Wie verdient es Geld?" a={company.howEarns} />
-          <Field q="Bekannte Produkte" a={company.products} />
-          <Field q="Konkurrenten" a={company.competitors} />
-          <Field q="Chancen" a={company.opportunities} />
-          <Field q="Risiken" a={company.risks} />
-          <Field q="Warum kann der Kurs schwanken?" a={company.whyPriceMoves} />
+          <H2>{t("discover.about", { name: company.name })}</H2>
+          <Field q={t("discover.qWhat")} a={company.whatDoes} />
+          <Field q={t("discover.qEarns")} a={company.howEarns} />
+          <Field q={t("discover.qProducts")} a={company.products} />
+          <Field q={t("discover.qCompetitors")} a={company.competitors} />
+          <Field q={t("discover.qOpportunities")} a={company.opportunities} />
+          <Field q={t("discover.qRisks")} a={company.risks} />
+          <Field q={t("discover.qWhy")} a={company.whyPriceMoves} />
         </Card>
       )}
       {etf && (
         <Card>
           <H2>{etf.name}</H2>
           <Muted>
-            ISIN {etf.isin} · WKN {etf.wkn} · neutrales Lernbeispiel, keine Kaufempfehlung
+            ISIN {etf.isin} · WKN {etf.wkn} · {t("discover.etfNote")}
           </Muted>
-          <Field q="Was bildet der ETF ab?" a={etf.tracks} />
-          <Field q="Region" a={etf.region} />
-          <Field q="Streuung" a={etf.diversification} />
-          <Field q="Kosten" a={etf.costLogic} />
-          <Field q="Risiken" a={etf.risks} />
+          <Field q={t("discover.etfTracks")} a={etf.tracks} />
+          <Field q={t("discover.etfRegion")} a={etf.region} />
+          <Field q={t("discover.etfDiversification")} a={etf.diversification} />
+          <Field q={t("discover.etfCosts")} a={etf.costLogic} />
+          <Field q={t("discover.qRisks")} a={etf.risks} />
         </Card>
       )}
       {!company && !etf && (
         <Card>
-          <Muted>Für dieses Instrument liegt noch kein Profil vor (kommt mit weiteren Inhalten).</Muted>
+          <Muted>{t("discover.noProfile")}</Muted>
         </Card>
       )}
 
       <Card>
-        <H2>Kaufen</H2>
+        <H2>{t("discover.buyHeading")}</H2>
         <TradePanel instrumentId={id} mode="buy" />
       </Card>
     </ScrollView>
@@ -83,7 +83,7 @@ function Field({ q, a }: { q: string; a: string }) {
 }
 
 function Row({ id, onOpen }: { id: string; onOpen: (id: string) => void }) {
-  const { prices, state, instrumentById } = useStore();
+  const { prices, state, instrumentById, t } = useStore();
   const inst = instrumentById.get(id);
   if (!inst) return null;
   return (
@@ -91,7 +91,7 @@ function Row({ id, onOpen }: { id: string; onOpen: (id: string) => void }) {
       <View style={{ flex: 1 }}>
         <Text style={styles.rowName}>{inst.name}</Text>
         <Muted>
-          {inst.ticker} · {inst.type === "etf" ? "ETF" : "Aktie"}
+          {inst.ticker} · {inst.type === "etf" ? t("inst.etf") : t("inst.stock")}
         </Muted>
       </View>
       {state.watchlist.includes(id) && <Text style={styles.star}>★</Text>}
@@ -101,19 +101,19 @@ function Row({ id, onOpen }: { id: string; onOpen: (id: string) => void }) {
 }
 
 export function Discover() {
-  const { state, instruments } = useStore();
+  const { state, instruments, t } = useStore();
   const [selected, setSelected] = useState<string | null>(null);
 
   if (selected) return <Detail id={selected} onBack={() => setSelected(null)} />;
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      <H1>Entdecken</H1>
-      <Muted>{instruments.length} Werte: bekannte Unternehmen und ETFs als Lernbeispiele.</Muted>
+      <H1>{t("discover.title")}</H1>
+      <Muted>{t("discover.count", { n: instruments.length })}</Muted>
 
       {state.watchlist.length > 0 && (
         <Card>
-          <H2>Deine Wunschliste</H2>
+          <H2>{t("discover.watchlist")}</H2>
           {state.watchlist.map((id) => (
             <Row key={id} id={id} onOpen={setSelected} />
           ))}
@@ -121,7 +121,7 @@ export function Discover() {
       )}
 
       <Card>
-        <H2>Alle Werte</H2>
+        <H2>{t("discover.all")}</H2>
         {instruments.map((i) => (
           <Row key={i.id} id={i.id} onOpen={setSelected} />
         ))}
