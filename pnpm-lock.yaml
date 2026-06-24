@@ -81,7 +81,11 @@ importers:
         specifier: ~6.0.3
         version: 6.0.3
 
-  packages/content: {}
+  packages/content:
+    dependencies:
+      '@hofino/learning':
+        specifier: workspace:*
+        version: link:../learning
 
   packages/core: {}
 

@@ -1,7 +1,14 @@
 import { describe, it, expect } from "vitest";
+import { SEED } from "@hofino/learning";
 import { auditChildContent, checkText } from "./guard.js";
 
 describe("Kinderschutz-Guard", () => {
+  it("der Audit prüft tatsächlich vorhandene Lern-Inhalte (kein Leerlauf)", () => {
+    // Sonst wäre ein grünes [] wertlos, falls SEED versehentlich leer wäre.
+    expect(SEED.konzepte.length).toBeGreaterThan(0);
+    expect(SEED.fragen.length).toBeGreaterThan(0);
+  });
+
   it("kindgerichtete Inhalte enthalten keine verbotenen Elemente", () => {
     expect(auditChildContent()).toEqual([]);
   });

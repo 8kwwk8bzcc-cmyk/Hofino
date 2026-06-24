@@ -81,7 +81,8 @@ Definition of Done je Aufgabe: `pnpm lint && pnpm typecheck && pnpm test` grün.
       Lernen, Ligen, Family, Classroom, Onboarding-Plotnamen) über `t()` mit Sprachumschalter
       (`src/i18n.ts`). Offen: englische Lerninhalte (Module/Profile-Texte, redaktionell).
 - [x] Kinderschutz-Checks als Tests (`packages/content` `auditChildContent`): keine
-      Brokerlinks/Werbung/Anlageempfehlungen/Chat im Kindermodus.
+      Brokerlinks/Werbung/Anlageempfehlungen/Chat im Kindermodus. Prüft die real
+      angezeigten Inhalte: Lern-Inhalte (`@hofino/learning` SEED, de+en) + Profile.
 - [x] Manipulationsschutz: Rankings nur serverseitig (`ranking-recompute`); Order/Lernkapital
       serverseitig (`place_order`/`complete_module`); kein Self-Granting (RLS). Siehe `SECURITY.md`.
 - [x] Erfolgskriterien → Datenquellen dokumentiert (`SECURITY.md`); Datengrundlage vorhanden,
