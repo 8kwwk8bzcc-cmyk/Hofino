@@ -6,9 +6,9 @@ import { Body, Button, H1, HLogo, LangToggle, Muted } from "../ui/components.js"
 import { colors, font, radius, space } from "../theme.js";
 
 const PLOTS = [
-  { id: "wald", emoji: "🌲", label: "Wiese am Waldrand" },
-  { id: "see", emoji: "🏞️", label: "Grundstück am See" },
-  { id: "stadt", emoji: "🏙️", label: "Platz in der Stadt" },
+  { id: "wald", emoji: "🌲" },
+  { id: "see", emoji: "🏞️" },
+  { id: "stadt", emoji: "🏙️" },
 ];
 
 function NameInput({ value, onChange }: { value: string; onChange: (v: string) => void }) {
@@ -42,7 +42,7 @@ function PlotPicker({ value, onChange }: { value: string; onChange: (v: string) 
           style={[styles.plot, value === p.id && styles.plotActive]}
         >
           <Text style={styles.plotEmoji}>{p.emoji}</Text>
-          <Text style={styles.plotLabel}>{p.label}</Text>
+          <Text style={styles.plotLabel}>{t(`plot.${p.id}`)}</Text>
           {value === p.id && <Text style={styles.check}>✓</Text>}
         </Pressable>
       ))}
