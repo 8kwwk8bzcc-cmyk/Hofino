@@ -175,6 +175,10 @@ interface StoreApi {
   fetchTeacherClass: () => Promise<TeacherClass | null>;
   fetchClassOverview: (classId: string) => Promise<ClassOverviewRow[]>;
   fetchMyClass: () => Promise<MyClass | null>;
+  fetchAssignments: (classId: string) => Promise<string[]>;
+  assignKonzept: (classId: string, konzeptId: string) => Promise<void>;
+  unassignKonzept: (classId: string, konzeptId: string) => Promise<void>;
+  fetchMyAssignments: () => Promise<string[]>;
   lang: Lang;
   setLang: (lang: Lang) => void;
   t: (key: string, params?: Record<string, string | number>) => string;
@@ -551,6 +555,26 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
     return c.data ? { name: c.data.name, code: c.data.class_code } : null;
   }, []);
 
+  // Lehrer: Konzept-Zuweisungen einer Klasse lesen/setzen (RLS erlaubt nur eigene Klassen).
+  const fetchAssignments = useCallback<StoreApi["fetchAssignments"]>(async (classId) => {
+    const { data } = await supabase.from("class_assignments").select("konzept_id").eq("class_id", classId);
+    return (data ?? []).map((r) => r.konzept_id as string);
+  }, []);
+
+  const assignKonzept = useCallback<StoreApi["assignKonzept"]>(async (classId, konzeptId) => {
+    await supabase.from("class_assignments").insert({ class_id: classId, konzept_id: konzeptId });
+  }, []);
+
+  const unassignKonzept = useCallback<StoreApi["unassignKonzept"]>(async (classId, konzeptId) => {
+    await supabase.from("class_assignments").delete().eq("class_id", classId).eq("konzept_id", konzeptId);
+  }, []);
+
+  // Schüler: vom Lehrer zugewiesene Konzepte (RLS liefert nur die eigene Klasse).
+  const fetchMyAssignments = useCallback<StoreApi["fetchMyAssignments"]>(async () => {
+    const { data } = await supabase.from("class_assignments").select("konzept_id");
+    return (data ?? []).map((r) => r.konzept_id as string);
+  }, []);
+
   const portfolio: Portfolio = useMemo(
     () => ({
       cashCents: data.cashCents,
@@ -637,6 +661,10 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
     fetchTeacherClass,
     fetchClassOverview,
     fetchMyClass,
+    fetchAssignments,
+    assignKonzept,
+    unassignKonzept,
+    fetchMyAssignments,
     lang,
     setLang,
     t,

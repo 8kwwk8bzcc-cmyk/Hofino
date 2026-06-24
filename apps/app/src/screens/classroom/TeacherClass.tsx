@@ -1,25 +1,43 @@
 import React, { useCallback, useEffect, useState } from "react";
-import { ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
+import { Pressable, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 import { formatEuros, rank } from "@hofino/core";
 import { MODULES } from "@hofino/content";
+import { alleKonzepte } from "@hofino/learning";
 import { useStore, type ClassOverviewRow, type TeacherClass as TClass } from "../../store/store.js";
-import { Body, Button, Card, H1, H2, Muted } from "../../ui/components.js";
+import { Body, Button, Card, H1, H2, Muted, Pill } from "../../ui/components.js";
 import { colors, font, radius, space } from "../../theme.js";
 
 export function TeacherClass() {
-  const { fetchTeacherClass, fetchClassOverview, createClass, t } = useStore();
+  const { fetchTeacherClass, fetchClassOverview, createClass, fetchAssignments, assignKonzept, unassignKonzept, t } = useStore();
   const [cls, setCls] = useState<TClass | null>(null);
   const [rows, setRows] = useState<ClassOverviewRow[]>([]);
+  const [assigned, setAssigned] = useState<Set<string>>(new Set());
   const [loaded, setLoaded] = useState(false);
   const [name, setName] = useState("");
   const [msg, setMsg] = useState<string | null>(null);
+  const konzepte = alleKonzepte();
 
   const reload = useCallback(async () => {
     const c = await fetchTeacherClass();
     setCls(c);
     setRows(c ? await fetchClassOverview(c.id) : []);
+    setAssigned(c ? new Set(await fetchAssignments(c.id)) : new Set());
     setLoaded(true);
-  }, [fetchTeacherClass, fetchClassOverview]);
+  }, [fetchTeacherClass, fetchClassOverview, fetchAssignments]);
+
+  const toggleAssign = async (konzeptId: string) => {
+    if (!cls) return;
+    const next = new Set(assigned);
+    if (next.has(konzeptId)) {
+      next.delete(konzeptId);
+      setAssigned(next);
+      await unassignKonzept(cls.id, konzeptId);
+    } else {
+      next.add(konzeptId);
+      setAssigned(next);
+      await assignKonzept(cls.id, konzeptId);
+    }
+  };
 
   useEffect(() => {
     reload();
@@ -89,6 +107,25 @@ export function TeacherClass() {
             <Muted>{t("class.aggregatesOnly")}</Muted>
           </Card>
 
+          <Card>
+            <H2>{t("class.assignTitle")}</H2>
+            <Muted>{t("class.assignHint")}</Muted>
+            {konzepte.map((k) => {
+              const on = assigned.has(k.id);
+              return (
+                <Pressable
+                  key={k.id}
+                  testID={`assign-${k.id}`}
+                  onPress={() => toggleAssign(k.id)}
+                  style={[styles.assignRow, on && styles.assignRowOn]}
+                >
+                  <Text style={styles.assignName}>{k.titel.de}</Text>
+                  {on ? <Pill label={t("class.assigned")} tone="good" /> : <Text style={styles.assignAdd}>+</Text>}
+                </Pressable>
+              );
+            })}
+          </Card>
+
           {rows.length > 0 && (
             <Card>
               <H2>{t("class.challenge")}</H2>
@@ -122,6 +159,21 @@ const styles = StyleSheet.create({
   },
   msg: { fontSize: font.small, color: colors.primary, fontWeight: "600" },
   code: { fontSize: font.h1, fontWeight: "800", color: colors.primary, letterSpacing: 2 },
+  assignRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    paddingVertical: space.sm,
+    paddingHorizontal: space.md,
+    marginTop: space.xs,
+    borderWidth: 1,
+    borderColor: colors.border,
+    borderRadius: radius.md,
+    backgroundColor: colors.surface,
+  },
+  assignRowOn: { borderColor: colors.secondary, backgroundColor: "#F0FDF4" },
+  assignName: { fontSize: font.body, color: colors.text, flexShrink: 1, paddingRight: space.sm },
+  assignAdd: { fontSize: font.h2, color: colors.textMuted, fontWeight: "700" },
   studentRow: { paddingVertical: space.sm, borderBottomWidth: 1, borderBottomColor: colors.border, gap: 2 },
   studentName: { fontSize: font.body, fontWeight: "700", color: colors.text },
   metrics: { flexDirection: "row", justifyContent: "space-between" },

@@ -68,7 +68,7 @@ function baueInstanzBeliebig(konzept: Konzept, rng: () => number): FrageInstanz 
 }
 
 export function LearnPlus() {
-  const { t } = useStore();
+  const { t, fetchMyAssignments } = useStore();
   const konzepte = alleKonzepte();
   const [phase, setPhase] = useState<Phase>("liste");
   const [konzept, setKonzept] = useState<Konzept | null>(null);
@@ -85,6 +85,7 @@ export function LearnPlus() {
   const [zeigeErklaerung, setZeigeErklaerung] = useState(false);
   const [letzteXp, setLetzteXp] = useState(0);
   const [lernkapital, setLernkapital] = useState(0);
+  const [zugewiesen, setZugewiesen] = useState<Set<string>>(new Set());
 
   const heute = heuteISO();
   const faellig = konzepte.filter((k) => {
@@ -113,7 +114,8 @@ export function LearnPlus() {
     setKorrektGesamt(korrekt.count ?? 0);
     const fort = await supabase.from("lern_konzept_fortschritt").select("konzept_id, hoechste_abgeschlossene_stufe");
     setAbgeschlossen((fort.data ?? []).filter((r) => r.hoechste_abgeschlossene_stufe === "meistern").length);
-  }, []);
+    setZugewiesen(new Set(await fetchMyAssignments()));
+  }, [fetchMyAssignments]);
 
   useEffect(() => {
     ladeStatus();
@@ -285,20 +287,25 @@ export function LearnPlus() {
             />
           </Card>
         )}
-        {konzepte.map((k) => {
-          const sr = srMap[k.id];
-          return (
-            <Pressable key={k.id} testID={`konzept-${k.id}`} onPress={() => oeffneKonzept(k)}>
-              <Card>
-                <View style={styles.row}>
-                  <H2>{k.titel.de}</H2>
-                  {sr?.gemeistert ? <Pill label={t("learn.mastered")} tone="gold" /> : sr ? <Pill label={t("learn.box", { n: sr.leitner_box })} tone="good" /> : null}
-                </View>
-                <Muted>{k.ist_rechnerisch ? t("learn.calcType") : t("learn.understandType")}</Muted>
-              </Card>
-            </Pressable>
-          );
-        })}
+        {[...konzepte]
+          .sort((a, b) => Number(zugewiesen.has(b.id)) - Number(zugewiesen.has(a.id)))
+          .map((k) => {
+            const sr = srMap[k.id];
+            return (
+              <Pressable key={k.id} testID={`konzept-${k.id}`} onPress={() => oeffneKonzept(k)}>
+                <Card style={zugewiesen.has(k.id) ? { borderColor: colors.accent, borderWidth: 2 } : undefined}>
+                  <View style={styles.row}>
+                    <H2>{k.titel.de}</H2>
+                    <View style={styles.pillRow}>
+                      {zugewiesen.has(k.id) && <Pill label={t("learn.assignedByTeacher")} tone="gold" />}
+                      {sr?.gemeistert ? <Pill label={t("learn.mastered")} tone="gold" /> : sr ? <Pill label={t("learn.box", { n: sr.leitner_box })} tone="good" /> : null}
+                    </View>
+                  </View>
+                  <Muted>{k.ist_rechnerisch ? t("learn.calcType") : t("learn.understandType")}</Muted>
+                </Card>
+              </Pressable>
+            );
+          })}
       </ScrollView>
     );
   }
@@ -427,6 +434,7 @@ export function LearnPlus() {
 const styles = StyleSheet.create({
   container: { padding: space.lg, gap: space.md, backgroundColor: colors.background },
   row: { flexDirection: "row", justifyContent: "space-between", alignItems: "center" },
+  pillRow: { flexDirection: "row", gap: space.xs, alignItems: "center", flexShrink: 0 },
   option: {
     padding: space.md,
     borderRadius: radius.md,
