@@ -77,8 +77,9 @@ Definition of Done je Aufgabe: `pnpm lint && pnpm typecheck && pnpm test` grün.
 - [ ] Web-Ansicht für den Beamer (große Schrift, Klassenüberblick).
 
 ## M8 – Schliff & Absicherung
-- [~] i18n de/en: Grundlage (de/en) + UI-Hülle/Auth übersetzt mit Sprachumschalter
-      (`src/i18n.ts`). Offen: Inhaltsschirme schrittweise migrieren; englische Lerninhalte.
+- [~] i18n de/en: Grundlage (de/en) + alle UI-Screens (Auth, Zuhause, Depot, Entdecken,
+      Lernen, Ligen, Family, Classroom, Onboarding-Plotnamen) über `t()` mit Sprachumschalter
+      (`src/i18n.ts`). Offen: englische Lerninhalte (Module/Profile-Texte, redaktionell).
 - [x] Kinderschutz-Checks als Tests (`packages/content` `auditChildContent`): keine
       Brokerlinks/Werbung/Anlageempfehlungen/Chat im Kindermodus.
 - [x] Manipulationsschutz: Rankings nur serverseitig (`ranking-recompute`); Order/Lernkapital
