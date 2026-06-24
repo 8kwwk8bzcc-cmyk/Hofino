@@ -73,7 +73,9 @@ Definition of Done je Aufgabe: `pnpm lint && pnpm typecheck && pnpm test` grün.
 - [ ] Lehrer: Klasse erstellen, Klassencode generieren.
 - [ ] Schüler: per Code beitreten (keine offenen Profile, kein Chat).
 - [ ] Lehrer-Dashboard: nur Aggregate (Lernfortschritt, Wissenspunkte, Quiz, Klassenrankings, grobe Depotkennzahlen).
-- [ ] Module/Challenges zuweisen; Klassen-Challenge.
+- [~] Module/Challenges zuweisen; Klassen-Challenge. Modul-Zuweisung umgesetzt
+      (Lehrer weist Konzepte zu → Schüler sehen sie markiert/oben in „Lernen", RLS-geschützt).
+      Offen: zuweisbare Challenges.
 - [ ] Web-Ansicht für den Beamer (große Schrift, Klassenüberblick).
 
 ## M8 – Schliff & Absicherung
