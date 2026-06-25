@@ -55,8 +55,23 @@ async function main() {
   await up("fragen", seed.fragen, "id");
   await up("vorlagen", seed.vorlagen, "id");
 
+  // Lernen ↔ Werte: Konzepte mit passenden Markt-Labor-Werten verknüpfen (über Ticker auflösen).
+  const LINKS = {
+    konzept_unternehmen: "AAPL", konzept_aktie: "AAPL", konzept_umsatz: "AAPL",
+    konzept_gewinn: "MSFT", konzept_kurse: "NVDA", konzept_dividende: "ALV",
+    konzept_risiko: "TSLA", konzept_diversifikation: "IWDA", konzept_etf: "IWDA",
+    konzept_aktie_vs_etf: "IWDA", konzept_langfristig: "CSPX", konzept_sparplan: "CSPX",
+  };
+  const { data: instruments } = await admin.from("instruments").select("id, ticker");
+  const idByTicker = new Map((instruments ?? []).map((i) => [i.ticker, i.id]));
+  const konzeptIds = new Set(seed.konzepte.map((k) => k.id));
+  const links = Object.entries(LINKS)
+    .filter(([k, t]) => konzeptIds.has(k) && idByTicker.has(t))
+    .map(([k, t]) => ({ learning_module_id: k, asset_id: idByTicker.get(t) }));
+  await up("learning_module_asset_links", links, "learning_module_id,asset_id");
+
   console.log(
-    `✓ Lern-Inhalte importiert: ${seed.themenbloecke.length} Themenblöcke, ${seed.konzepte.length} Konzepte, ${seed.fragen.length} Fragen, ${seed.vorlagen.length} Vorlagen`
+    `✓ Lern-Inhalte importiert: ${seed.themenbloecke.length} Themenblöcke, ${seed.konzepte.length} Konzepte, ${seed.fragen.length} Fragen, ${seed.vorlagen.length} Vorlagen, ${links.length} Wert-Verknüpfungen`
   );
 }
 

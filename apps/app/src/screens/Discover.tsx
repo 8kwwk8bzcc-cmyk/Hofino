@@ -4,7 +4,6 @@ import { formatEuros } from "@hofino/core";
 import { COMPANY_PROFILES, ETF_PROFILES } from "@hofino/content";
 import { useStore } from "../store/store.js";
 import { Body, Button, Card, H1, H2, Muted, Pill } from "../ui/components.js";
-import { TradePanel } from "../ui/TradePanel.js";
 import { colors, font, space } from "../theme.js";
 
 function Detail({ id, onBack }: { id: string; onBack: () => void }) {
@@ -66,8 +65,9 @@ function Detail({ id, onBack }: { id: string; onBack: () => void }) {
       )}
 
       <Card>
-        <H2>{t("discover.buyHeading")}</H2>
-        <TradePanel instrumentId={id} mode="buy" />
+        <H2>{t("discover.whyExample")}</H2>
+        <Body>{t("discover.whyExampleBody")}</Body>
+        <Muted>{t("discover.practiceVia")}</Muted>
       </Card>
     </ScrollView>
   );

@@ -5,6 +5,7 @@ import { wissenslevel } from "@hofino/learning";
 import { useStore, type DailyPlan } from "../store/store.js";
 import { Body, Button, Card, H1, H2, Muted, Pill } from "../ui/components.js";
 import { DecisionFlow } from "./DecisionFlow.js";
+import { MarketLab } from "./MarketLab.js";
 import { ChildFamilyCard } from "./family/ChildFamilyCard.js";
 import { StudentClassCard } from "./classroom/StudentClassCard.js";
 import { useNav } from "../nav.js";
@@ -62,6 +63,7 @@ export function Start() {
 
   const [plan, setPlan] = useState<DailyPlan | null>(null);
   const [loaded, setLoaded] = useState(false);
+  const [marketOpen, setMarketOpen] = useState(false);
   const [decisionOpen, setDecisionOpen] = useState(false);
 
   const reload = useCallback(async () => {
@@ -74,6 +76,22 @@ export function Start() {
   }, [reload]);
 
   if (!loaded) return null;
+
+  if (marketOpen && plan?.instrumentId) {
+    return (
+      <MarketLab
+        instrumentId={plan.instrumentId}
+        onClose={async () => {
+          setMarketOpen(false);
+          await reload();
+        }}
+        onDecide={() => {
+          setMarketOpen(false);
+          setDecisionOpen(true);
+        }}
+      />
+    );
+  }
 
   if (decisionOpen && plan?.instrumentId) {
     return (
@@ -96,7 +114,7 @@ export function Start() {
 
   const openMarket = async () => {
     await markMarketViewed();
-    go("values");
+    setMarketOpen(true);
   };
 
   return (
