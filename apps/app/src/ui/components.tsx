@@ -2,7 +2,28 @@ import React from "react";
 import { Pressable, StyleSheet, Text, View, type ViewStyle } from "react-native";
 import { colors, font, fonts, radius, shadow, space } from "../theme.js";
 
-export function Card({ children, style }: { children: React.ReactNode; style?: ViewStyle }) {
+export function Card({
+  children,
+  style,
+  onPress,
+  testID,
+}: {
+  children: React.ReactNode;
+  style?: ViewStyle;
+  onPress?: () => void;
+  testID?: string;
+}) {
+  if (onPress) {
+    return (
+      <Pressable
+        testID={testID}
+        onPress={onPress}
+        style={({ pressed }) => [styles.card, style, pressed && styles.cardPressed]}
+      >
+        {children}
+      </Pressable>
+    );
+  }
   return <View style={[styles.card, style]}>{children}</View>;
 }
 
@@ -118,6 +139,7 @@ const styles = StyleSheet.create({
     gap: space.sm,
     ...shadow.card,
   },
+  cardPressed: { opacity: 0.82 },
   h1: { fontSize: font.h1, fontFamily: fonts.display, color: colors.text, lineHeight: 38 },
   h2: { fontSize: font.h2, fontFamily: fonts.display, color: colors.text, lineHeight: 30 },
   body: { fontSize: font.body, fontFamily: fonts.body, color: colors.text, lineHeight: 24 },

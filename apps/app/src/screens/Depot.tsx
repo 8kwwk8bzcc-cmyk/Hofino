@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from "react";
-import { ScrollView, StyleSheet, Text, View } from "react-native";
+import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { formatEuros } from "@hofino/core";
 import { useStore, type JournalEntry } from "../store/store.js";
 import { Body, Button, Card, H1, H2, Muted, Pill } from "../ui/components.js";
@@ -72,7 +72,10 @@ export function Depot() {
             const plPct = h.avgCostCents > 0 ? ((price - h.avgCostCents) / h.avgCostCents) * 100 : 0;
             return (
               <View key={h.instrumentId} style={styles.pos} testID={`pos-${h.instrumentId}`}>
-                <View style={styles.posTop}>
+                <Pressable
+                  style={({ pressed }) => [styles.posTop, pressed && { opacity: 0.6 }]}
+                  onPress={() => setSellId(sellId === h.instrumentId ? null : h.instrumentId)}
+                >
                   <View style={{ flex: 1 }}>
                     <Text style={styles.posName}>{inst?.name ?? h.instrumentId}</Text>
                     <Muted>{t("depot.qtyAvg", { qty: h.quantity, avg: formatEuros(h.avgCostCents) })}</Muted>
@@ -84,7 +87,7 @@ export function Depot() {
                       {plPct.toFixed(1)} %
                     </Text>
                   </View>
-                </View>
+                </Pressable>
                 <View style={styles.posActions}>
                   <Button title={t("depot.view")} variant="ghost" onPress={() => go("values")} testID={`view-${h.instrumentId}`} />
                   <Button

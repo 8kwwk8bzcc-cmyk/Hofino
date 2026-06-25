@@ -3,7 +3,7 @@ import { ScrollView, StyleSheet, Text, View } from "react-native";
 import { formatEuros } from "@hofino/core";
 import { wissenslevel } from "@hofino/learning";
 import { useStore, type DailyPlan } from "../store/store.js";
-import { Body, Button, Card, H1, H2, Muted, Pill } from "../ui/components.js";
+import { Body, Card, H1, H2, Muted, Pill } from "../ui/components.js";
 import { DecisionFlow } from "./DecisionFlow.js";
 import { MarketLab } from "./MarketLab.js";
 import { ChildFamilyCard } from "./family/ChildFamilyCard.js";
@@ -40,8 +40,13 @@ function TaskCard({
   onPress: () => void;
 }) {
   const { t } = useStore();
+  const tappable = !done && !locked;
   return (
-    <Card style={done ? styles.cardDone : undefined}>
+    <Card
+      onPress={tappable ? onPress : undefined}
+      testID={tappable ? `task-${step}` : undefined}
+      style={done ? styles.cardDone : undefined}
+    >
       <View style={styles.taskHead}>
         <Text style={styles.step}>{t("start.step", { n: step })}</Text>
         {done ? <Pill label={t("start.done")} tone="good" /> : locked ? <Pill label={t("start.locked")} tone="neutral" /> : null}
@@ -49,9 +54,7 @@ function TaskCard({
       <H2>{title}</H2>
       <Body>{content}</Body>
       <Muted>{meta}</Muted>
-      {!done && (
-        <Button title={cta} onPress={onPress} disabled={locked} variant={locked ? "secondary" : undefined} testID={`task-${step}`} />
-      )}
+      {tappable && <Text style={styles.cardCta}>{cta} ›</Text>}
     </Card>
   );
 }
@@ -176,12 +179,12 @@ export function Start() {
       )}
 
       <View style={styles.metricsRow}>
-        <Card style={styles.metric}>
+        <Card style={styles.metric} onPress={() => go("learn")} testID="metric-knowledge">
           <Muted>{t("start.knowledge")}</Muted>
           <Text style={styles.metricValue}>{derived.lernXpGesamt} XP</Text>
           <Muted>{t("start.toNextLevel", { xp: toNext, n: lvl.level + 1 })}</Muted>
         </Card>
-        <Card style={styles.metric}>
+        <Card style={styles.metric} onPress={() => go("depot")} testID="metric-portfolio">
           <Muted>{t("start.portfolio")}</Muted>
           <Text style={styles.metricValue}>{formatEuros(derived.equityCents)}</Text>
           <Pill label={t("start.virtual")} tone="neutral" />
@@ -208,6 +211,7 @@ const styles = StyleSheet.create({
   taskHead: { flexDirection: "row", justifyContent: "space-between", alignItems: "center" },
   step: { fontSize: font.small, fontWeight: "700", color: colors.textMuted, textTransform: "uppercase", fontFamily: fonts.bodyBold },
   cardDone: { borderColor: colors.secondary, backgroundColor: "#F0FDF4" },
+  cardCta: { color: colors.primary, fontFamily: fonts.bodyBold, fontSize: font.body, marginTop: space.xs },
   metricsRow: { flexDirection: "row", gap: space.md },
   metric: { flex: 1 },
   metricValue: { fontSize: font.h2, fontWeight: "800", color: colors.text, fontFamily: fonts.display },
