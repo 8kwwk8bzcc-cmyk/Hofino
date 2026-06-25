@@ -4,7 +4,7 @@ import { formatEuros } from "@hofino/core";
 import { COMPANY_PROFILES, ETF_PROFILES } from "@hofino/content";
 import { useStore } from "../store/store.js";
 import { Body, Button, Card, H1, H2, Muted, Pill } from "../ui/components.js";
-import { colors, font, space } from "../theme.js";
+import { colors, font, fonts, space } from "../theme.js";
 
 function Field({ q, a }: { q: string; a: string }) {
   return (
@@ -78,7 +78,7 @@ export function MarketLab({
 const styles = StyleSheet.create({
   container: { padding: space.lg, gap: space.md, backgroundColor: colors.background },
   head: { flexDirection: "row", justifyContent: "space-between", alignItems: "flex-start" },
-  price: { fontSize: font.h3, fontWeight: "800", color: colors.text },
-  fieldQ: { fontSize: font.small, fontWeight: "700", color: colors.textMuted },
+  price: { fontSize: font.h3, fontWeight: "800", color: colors.text, fontFamily: fonts.display },
+  fieldQ: { fontSize: font.small, fontWeight: "700", color: colors.textMuted, fontFamily: fonts.body },
   observe: { backgroundColor: "#EAF2FB" },
 });

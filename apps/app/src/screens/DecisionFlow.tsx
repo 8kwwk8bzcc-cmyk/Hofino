@@ -3,7 +3,7 @@ import { Pressable, ScrollView, StyleSheet, Text, TextInput, View } from "react-
 import { formatEuros } from "@hofino/core";
 import { useStore } from "../store/store.js";
 import { Body, Button, Card, H1, H2, Muted, Pill } from "../ui/components.js";
-import { colors, font, radius, space } from "../theme.js";
+import { colors, font, fonts, radius, space } from "../theme.js";
 
 type Action = "buy" | "sell" | "hold";
 type Step = "action" | "quantity" | "reason" | "review" | "done";
@@ -175,13 +175,13 @@ const styles = StyleSheet.create({
     borderWidth: 1, borderColor: colors.border, borderRadius: radius.md, padding: space.md,
     fontSize: font.body, color: colors.text, backgroundColor: colors.surface,
   },
-  total: { fontSize: font.h3, fontWeight: "800", color: colors.text },
-  err: { color: colors.danger, fontWeight: "600", fontSize: font.small },
+  total: { fontSize: font.h3, fontWeight: "800", color: colors.text, fontFamily: fonts.display },
+  err: { color: colors.danger, fontWeight: "600", fontSize: font.small, fontFamily: fonts.body },
   reason: { padding: space.md, borderRadius: radius.md, borderWidth: 1, borderColor: colors.border, backgroundColor: colors.surface },
   reasonActive: { borderColor: colors.secondary, backgroundColor: "#F0FDF4" },
-  reasonText: { fontSize: font.body, color: colors.text },
-  reasonTextActive: { fontWeight: "700", color: colors.text },
+  reasonText: { fontSize: font.body, color: colors.text, fontFamily: fonts.body },
+  reasonTextActive: { fontWeight: "700", color: colors.text, fontFamily: fonts.bodyBold },
   row: { flexDirection: "row", justifyContent: "space-between", alignItems: "center" },
-  val: { fontSize: font.body, fontWeight: "700", color: colors.text },
+  val: { fontSize: font.body, fontWeight: "700", color: colors.text, fontFamily: fonts.display },
   doneCard: { borderColor: colors.secondary, backgroundColor: "#F0FDF4" },
 });

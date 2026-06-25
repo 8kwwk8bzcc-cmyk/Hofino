@@ -4,7 +4,7 @@ import { formatEuros, rank } from "@hofino/core";
 import { MODULES } from "@hofino/content";
 import { useStore, type ChildSummary } from "../../store/store.js";
 import { Body, Card, H1, H2, Muted, Pill } from "../../ui/components.js";
-import { colors, font, space } from "../../theme.js";
+import { colors, font, fonts, space } from "../../theme.js";
 
 // Eltern-Dashboard: Lernfortschritt + Depotentwicklung der verknüpften Kinder (nur lesend).
 export function FamilyHome() {
@@ -89,6 +89,6 @@ const styles = StyleSheet.create({
   container: { padding: space.lg, gap: space.md, backgroundColor: colors.background },
   top: { marginTop: space.sm },
   row: { flexDirection: "row", justifyContent: "space-between", alignItems: "center" },
-  val: { fontSize: font.body, fontWeight: "700", color: colors.text },
-  rank: { fontSize: font.body, color: colors.text },
+  val: { fontSize: font.body, fontWeight: "700", fontFamily: fonts.display, color: colors.text },
+  rank: { fontSize: font.body, fontFamily: fonts.body, color: colors.text },
 });

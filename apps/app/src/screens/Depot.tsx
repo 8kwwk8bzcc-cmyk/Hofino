@@ -5,7 +5,7 @@ import { useStore, type JournalEntry } from "../store/store.js";
 import { Body, Button, Card, H1, H2, Muted, Pill } from "../ui/components.js";
 import { TradePanel } from "../ui/TradePanel.js";
 import { useNav } from "../nav.js";
-import { colors, font, space } from "../theme.js";
+import { colors, font, fonts, space } from "../theme.js";
 
 export function Depot() {
   const { state, prices, derived, instrumentById, fetchDecisionJournal, t } = useStore();
@@ -125,18 +125,18 @@ export function Depot() {
 const styles = StyleSheet.create({
   container: { padding: space.lg, gap: space.md, backgroundColor: colors.background },
   headRow: { flexDirection: "row", justifyContent: "space-between", alignItems: "flex-start" },
-  big: { fontSize: font.h1, fontWeight: "800", color: colors.text },
-  calmPct: { fontSize: font.small, color: colors.textMuted, fontWeight: "600" },
+  big: { fontSize: font.h1, fontWeight: "800", color: colors.text, fontFamily: fonts.display },
+  calmPct: { fontSize: font.small, color: colors.textMuted, fontWeight: "600", fontFamily: fonts.display },
   splitRow: { flexDirection: "row", justifyContent: "space-between" },
   feeCard: { backgroundColor: "#EAF2FB" },
   pos: { paddingVertical: space.sm, borderBottomWidth: 1, borderBottomColor: colors.border, gap: space.sm },
   posTop: { flexDirection: "row", alignItems: "center" },
-  posName: { fontSize: font.body, fontWeight: "700", color: colors.text },
-  posVal: { fontSize: font.body, fontWeight: "700", color: colors.text },
-  pl: { fontSize: font.small, fontWeight: "700" },
+  posName: { fontSize: font.body, fontWeight: "700", color: colors.text, fontFamily: fonts.bodyBold },
+  posVal: { fontSize: font.body, fontWeight: "700", color: colors.text, fontFamily: fonts.display },
+  pl: { fontSize: font.small, fontWeight: "700", fontFamily: fonts.display },
   posActions: { flexDirection: "row", gap: space.sm },
   entry: { paddingVertical: space.sm, borderBottomWidth: 1, borderBottomColor: colors.border, gap: 2 },
   entryHead: { flexDirection: "row", justifyContent: "space-between" },
-  entryName: { fontSize: font.body, fontWeight: "700", color: colors.text },
-  entryAction: { fontSize: font.body, fontWeight: "700", color: colors.primary },
+  entryName: { fontSize: font.body, fontWeight: "700", color: colors.text, fontFamily: fonts.bodyBold },
+  entryAction: { fontSize: font.body, fontWeight: "700", color: colors.primary, fontFamily: fonts.display },
 });

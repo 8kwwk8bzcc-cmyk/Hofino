@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, Pressable } from "react-native";
 import { formatEuros, ORDER_FEE_CENTS } from "@hofino/core";
 import { useStore, type OrderOutcome } from "../store/store.js";
 import { Button, Muted } from "./components.js";
-import { colors, font, radius, space } from "../theme.js";
+import { colors, font, fonts, radius, space } from "../theme.js";
 
 const REASON_KEYS: Record<string, string> = {
   insufficient_funds: "trade.errFunds",
@@ -86,7 +86,7 @@ export function TradePanel({ instrumentId, mode }: { instrumentId: string; mode:
 const styles = StyleSheet.create({
   panel: { gap: space.md },
   row: { flexDirection: "row", justifyContent: "space-between", alignItems: "center" },
-  price: { fontSize: font.h3, fontWeight: "800", color: colors.text },
+  price: { fontSize: font.h3, fontWeight: "800", color: colors.text, fontFamily: fonts.display },
   stepper: { flexDirection: "row", alignItems: "center", gap: space.md },
   stepBtn: {
     width: 44,
@@ -98,12 +98,12 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  stepText: { fontSize: 24, fontWeight: "800", color: colors.primary },
-  qty: { fontSize: font.h2, fontWeight: "800", color: colors.text, minWidth: 40, textAlign: "center" },
-  unit: { fontSize: font.small, color: colors.textMuted },
+  stepText: { fontSize: 24, fontWeight: "800", color: colors.primary, fontFamily: fonts.bodyBold },
+  qty: { fontSize: font.h2, fontWeight: "800", color: colors.text, minWidth: 40, textAlign: "center", fontFamily: fonts.display },
+  unit: { fontSize: font.small, color: colors.textMuted, fontFamily: fonts.body },
   breakdown: { gap: space.xs, paddingVertical: space.sm },
-  val: { fontSize: font.body, color: colors.text, fontWeight: "600" },
-  totalLabel: { fontSize: font.body, fontWeight: "700", color: colors.text },
-  total: { fontSize: font.h3, fontWeight: "800", color: colors.text },
-  msg: { fontSize: font.small, color: colors.primary, fontWeight: "600" },
+  val: { fontSize: font.body, color: colors.text, fontWeight: "600", fontFamily: fonts.display },
+  totalLabel: { fontSize: font.body, fontWeight: "700", color: colors.text, fontFamily: fonts.bodyBold },
+  total: { fontSize: font.h3, fontWeight: "800", color: colors.text, fontFamily: fonts.display },
+  msg: { fontSize: font.small, color: colors.primary, fontWeight: "600", fontFamily: fonts.body },
 });

@@ -37,7 +37,7 @@ import {
 } from "./ui/icons.js";
 import { translate } from "./i18n.js";
 import { NavContext } from "./nav.js";
-import { colors, space } from "./theme.js";
+import { colors, fonts, space } from "./theme.js";
 
 type IconCmp = (p: IconProps) => React.JSX.Element;
 
@@ -216,9 +216,9 @@ const styles = StyleSheet.create({
     borderBottomColor: colors.border,
     backgroundColor: colors.surface,
   },
-  brand: { fontWeight: "800", color: colors.primary, fontSize: 16 },
+  brand: { fontFamily: fonts.display, color: colors.primary, fontSize: 18 },
   topbarRight: { flexDirection: "row", alignItems: "center", gap: space.lg },
-  logout: { color: colors.textMuted, fontWeight: "600", fontSize: 13 },
+  logout: { color: colors.textMuted, fontFamily: fonts.body, fontSize: 13 },
   screen: { flex: 1 },
   tabbar: {
     flexDirection: "row",
@@ -229,6 +229,6 @@ const styles = StyleSheet.create({
     paddingTop: space.sm,
   },
   tab: { flex: 1, alignItems: "center", gap: 3 },
-  tabLabel: { fontSize: 11, color: colors.textMuted },
-  tabLabelActive: { color: colors.secondary, fontWeight: "700" },
+  tabLabel: { fontSize: 11, color: colors.textMuted, fontFamily: fonts.body },
+  tabLabelActive: { color: colors.secondary, fontFamily: fonts.bodyBold },
 });

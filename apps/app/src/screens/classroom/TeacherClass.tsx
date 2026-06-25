@@ -5,7 +5,7 @@ import { MODULES } from "@hofino/content";
 import { alleKonzepte } from "@hofino/learning";
 import { useStore, type ClassOverviewRow, type TeacherClass as TClass } from "../../store/store.js";
 import { Body, Button, Card, H1, H2, Muted, Pill } from "../../ui/components.js";
-import { colors, font, radius, space } from "../../theme.js";
+import { colors, font, fonts, radius, space } from "../../theme.js";
 
 export function TeacherClass() {
   const { fetchTeacherClass, fetchClassOverview, createClass, fetchAssignments, assignKonzept, unassignKonzept, t } = useStore();
@@ -154,11 +154,12 @@ const styles = StyleSheet.create({
     borderRadius: radius.md,
     padding: space.md,
     fontSize: font.body,
+    fontFamily: fonts.body,
     color: colors.text,
     backgroundColor: colors.surface,
   },
-  msg: { fontSize: font.small, color: colors.primary, fontWeight: "600" },
-  code: { fontSize: font.h1, fontWeight: "800", color: colors.primary, letterSpacing: 2 },
+  msg: { fontSize: font.small, color: colors.primary, fontWeight: "600", fontFamily: fonts.body },
+  code: { fontSize: font.h1, fontWeight: "800", fontFamily: fonts.display, color: colors.primary, letterSpacing: 2 },
   assignRow: {
     flexDirection: "row",
     alignItems: "center",
@@ -172,12 +173,12 @@ const styles = StyleSheet.create({
     backgroundColor: colors.surface,
   },
   assignRowOn: { borderColor: colors.secondary, backgroundColor: "#F0FDF4" },
-  assignName: { fontSize: font.body, color: colors.text, flexShrink: 1, paddingRight: space.sm },
-  assignAdd: { fontSize: font.h2, color: colors.textMuted, fontWeight: "700" },
+  assignName: { fontSize: font.body, fontFamily: fonts.body, color: colors.text, flexShrink: 1, paddingRight: space.sm },
+  assignAdd: { fontSize: font.h2, color: colors.textMuted, fontWeight: "700", fontFamily: fonts.bodyBold },
   studentRow: { paddingVertical: space.sm, borderBottomWidth: 1, borderBottomColor: colors.border, gap: 2 },
-  studentName: { fontSize: font.body, fontWeight: "700", color: colors.text },
+  studentName: { fontSize: font.body, fontWeight: "700", fontFamily: fonts.bodyBold, color: colors.text },
   metrics: { flexDirection: "row", justifyContent: "space-between" },
   rankRow: { flexDirection: "row", justifyContent: "space-between", paddingVertical: space.xs },
-  rankText: { fontSize: font.body, color: colors.text },
-  rankScore: { fontSize: font.body, fontWeight: "700", color: colors.text },
+  rankText: { fontSize: font.body, fontFamily: fonts.body, color: colors.text },
+  rankScore: { fontSize: font.body, fontWeight: "700", fontFamily: fonts.display, color: colors.text },
 });

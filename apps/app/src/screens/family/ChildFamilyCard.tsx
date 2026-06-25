@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { useStore } from "../../store/store.js";
 import { Body, Button, Card, H2, Muted } from "../../ui/components.js";
-import { colors, font, space } from "../../theme.js";
+import { colors, font, fonts, space } from "../../theme.js";
 
 // Auf dem Kinder-Zuhause: eigener Verknüpfungscode + Freigabe von Eltern-Anfragen.
 export function ChildFamilyCard() {
@@ -35,5 +35,5 @@ export function ChildFamilyCard() {
 const styles = StyleSheet.create({
   req: { gap: space.sm, paddingBottom: space.sm, borderBottomWidth: 1, borderBottomColor: colors.border },
   btns: { flexDirection: "row", gap: space.sm },
-  code: { fontSize: font.small, color: colors.text, fontFamily: "monospace" },
+  code: { fontSize: font.small, color: colors.text, fontFamily: fonts.display },
 });

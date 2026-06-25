@@ -9,7 +9,7 @@ import { MarketLab } from "./MarketLab.js";
 import { ChildFamilyCard } from "./family/ChildFamilyCard.js";
 import { StudentClassCard } from "./classroom/StudentClassCard.js";
 import { useNav } from "../nav.js";
-import { colors, font, space } from "../theme.js";
+import { colors, font, fonts, space } from "../theme.js";
 
 const WEEKDAYS = ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So"];
 
@@ -201,14 +201,14 @@ export function Start() {
 const styles = StyleSheet.create({
   container: { padding: space.lg, gap: space.lg, backgroundColor: colors.background },
   summary: { gap: space.sm },
-  status: { fontWeight: "700", color: colors.primary },
+  status: { fontWeight: "700", color: colors.primary, fontFamily: fonts.bodyBold },
   week: { flexDirection: "row", justifyContent: "space-between", marginTop: space.xs },
   weekDay: { alignItems: "center", gap: space.xs },
   dot: { width: 14, height: 14, borderRadius: 999, borderWidth: 2 },
   taskHead: { flexDirection: "row", justifyContent: "space-between", alignItems: "center" },
-  step: { fontSize: font.small, fontWeight: "700", color: colors.textMuted, textTransform: "uppercase" },
+  step: { fontSize: font.small, fontWeight: "700", color: colors.textMuted, textTransform: "uppercase", fontFamily: fonts.bodyBold },
   cardDone: { borderColor: colors.secondary, backgroundColor: "#F0FDF4" },
   metricsRow: { flexDirection: "row", gap: space.md },
   metric: { flex: 1 },
-  metricValue: { fontSize: font.h2, fontWeight: "800", color: colors.text },
+  metricValue: { fontSize: font.h2, fontWeight: "800", color: colors.text, fontFamily: fonts.display },
 });

@@ -4,7 +4,7 @@ import { formatEuros, START_CAPITAL_CENTS } from "@hofino/core";
 import { useStore } from "../store/store.js";
 import { Body, Button, H1, HLogo, LangToggle, Muted } from "../ui/components.js";
 import { FLAGS } from "../config/flags.js";
-import { colors, font, radius, space } from "../theme.js";
+import { colors, font, fonts, radius, space } from "../theme.js";
 
 const PLOTS = [
   { id: "wald", emoji: "🌲" },
@@ -237,16 +237,17 @@ const styles = StyleSheet.create({
   tabs: { flexDirection: "row", flexWrap: "wrap", gap: space.sm },
   tab: { flex: 1, padding: space.md, borderRadius: radius.md, alignItems: "center", backgroundColor: colors.surface, borderWidth: 1, borderColor: colors.border },
   tabActive: { borderColor: colors.primary, backgroundColor: colors.primary },
-  tabText: { fontWeight: "700", color: colors.primary },
+  tabText: { fontWeight: "700", fontFamily: fonts.bodyBold, color: colors.primary },
   tabTextActive: { color: "#FFFFFF" },
   block: { gap: space.sm },
-  label: { fontSize: font.h3, fontWeight: "700", color: colors.text },
+  label: { fontSize: font.h3, fontWeight: "700", fontFamily: fonts.bodyBold, color: colors.text },
   input: {
     borderWidth: 1,
     borderColor: colors.border,
     borderRadius: radius.md,
     padding: space.md,
     fontSize: font.body,
+    fontFamily: fonts.body,
     color: colors.text,
     backgroundColor: colors.surface,
   },
@@ -261,8 +262,8 @@ const styles = StyleSheet.create({
     backgroundColor: colors.surface,
   },
   plotActive: { borderColor: colors.secondary, backgroundColor: "#F0FDF4" },
-  plotEmoji: { fontSize: 28 },
-  plotLabel: { flex: 1, fontSize: font.body, fontWeight: "600", color: colors.text },
-  check: { color: colors.secondary, fontWeight: "800", fontSize: font.h3 },
-  error: { color: colors.danger, fontWeight: "600", fontSize: font.small },
+  plotEmoji: { fontSize: 28, fontFamily: fonts.body },
+  plotLabel: { flex: 1, fontSize: font.body, fontWeight: "600", fontFamily: fonts.body, color: colors.text },
+  check: { color: colors.secondary, fontWeight: "800", fontFamily: fonts.bodyBold, fontSize: font.h3 },
+  error: { color: colors.danger, fontWeight: "600", fontFamily: fonts.body, fontSize: font.small },
 });

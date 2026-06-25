@@ -21,7 +21,7 @@ import { formatEuros } from "@hofino/core";
 import { supabase } from "../lib/supabase.js";
 import { useStore } from "../store/store.js";
 import { Body, Button, Card, H1, H2, Muted, Pill, ProgressBar } from "../ui/components.js";
-import { colors, font, radius, space } from "../theme.js";
+import { colors, font, fonts, radius, space } from "../theme.js";
 
 type Phase =
   | "liste"
@@ -442,5 +442,5 @@ const styles = StyleSheet.create({
     borderColor: colors.border,
     backgroundColor: colors.surface,
   },
-  optionText: { fontSize: font.body, color: colors.text },
+  optionText: { fontSize: font.body, fontFamily: fonts.body, color: colors.text },
 });

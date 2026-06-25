@@ -3,7 +3,7 @@ import { ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 import { useStore } from "../../store/store.js";
 import { supabase } from "../../lib/supabase.js";
 import { Body, Button, Card, H1, H2, Muted } from "../../ui/components.js";
-import { colors, font, radius, space } from "../../theme.js";
+import { colors, font, fonts, radius, space } from "../../theme.js";
 
 interface LinkRow {
   childId: string;
@@ -90,11 +90,12 @@ const styles = StyleSheet.create({
     borderRadius: radius.md,
     padding: space.md,
     fontSize: font.body,
+    fontFamily: fonts.body,
     color: colors.text,
     backgroundColor: colors.surface,
   },
-  msg: { fontSize: font.small, color: colors.primary, fontWeight: "600" },
+  msg: { fontSize: font.small, color: colors.primary, fontWeight: "600", fontFamily: fonts.body },
   row: { flexDirection: "row", justifyContent: "space-between", paddingVertical: space.sm, borderBottomWidth: 1, borderBottomColor: colors.border },
-  name: { fontSize: font.body, color: colors.text, fontWeight: "600" },
-  status: { fontSize: font.small, color: colors.textMuted, fontWeight: "600" },
+  name: { fontSize: font.body, color: colors.text, fontWeight: "600", fontFamily: fonts.body },
+  status: { fontSize: font.small, color: colors.textMuted, fontWeight: "600", fontFamily: fonts.body },
 });

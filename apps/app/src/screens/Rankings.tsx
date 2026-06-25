@@ -3,7 +3,7 @@ import { ScrollView, StyleSheet, Text, View } from "react-native";
 import { formatEuros, rank, type RankEntry } from "@hofino/core";
 import { useStore } from "../store/store.js";
 import { Card, H1, H2, Muted } from "../ui/components.js";
-import { colors, font, radius, space } from "../theme.js";
+import { colors, font, fonts, radius, space } from "../theme.js";
 
 // Deterministische Mitstreiter, damit die Ligen auch lokal (Einzelnutzer) lebendig sind.
 const BOTS = [
@@ -90,9 +90,9 @@ const styles = StyleSheet.create({
   container: { padding: space.lg, gap: space.md, backgroundColor: colors.background },
   row: { flexDirection: "row", alignItems: "center", paddingVertical: space.sm, gap: space.md, borderBottomWidth: 1, borderBottomColor: colors.border },
   meRow: { backgroundColor: "#F0FDF4", borderRadius: radius.sm },
-  rank: { width: 44, fontSize: font.body, fontWeight: "700", color: colors.text },
-  name: { flex: 1, fontSize: font.body, color: colors.text },
-  score: { fontSize: font.body, fontWeight: "700", color: colors.text },
+  rank: { width: 44, fontSize: font.body, fontWeight: "700", fontFamily: fonts.bodyBold, color: colors.text },
+  name: { flex: 1, fontSize: font.body, fontFamily: fonts.body, color: colors.text },
+  score: { fontSize: font.body, fontWeight: "700", fontFamily: fonts.bodyBold, color: colors.text },
   tiles: { flexDirection: "row", flexWrap: "wrap", gap: space.sm },
   tile: {
     width: "47%",
@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
     gap: 4,
     opacity: 0.75,
   },
-  tileIcon: { fontSize: 28 },
-  tileLabel: { fontSize: font.small, fontWeight: "700", color: colors.text, textAlign: "center" },
-  lock: { fontSize: font.small },
+  tileIcon: { fontSize: 28, fontFamily: fonts.body },
+  tileLabel: { fontSize: font.small, fontWeight: "700", fontFamily: fonts.bodyBold, color: colors.text, textAlign: "center" },
+  lock: { fontSize: font.small, fontFamily: fonts.body },
 });
