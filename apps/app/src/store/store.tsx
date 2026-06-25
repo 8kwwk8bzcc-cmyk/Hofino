@@ -78,6 +78,15 @@ export interface DailyPlan {
   woche: { date: string; status: WeekDayStatus }[];
 }
 
+export interface JournalEntry {
+  id: string;
+  action: "buy" | "sell" | "hold";
+  instrumentId: string | null;
+  quantity: number;
+  reasonType: string;
+  createdAt: string;
+}
+
 export interface ChildSummary {
   profileId: string;
   displayName: string;
@@ -201,6 +210,7 @@ interface StoreApi {
     reason: string,
     reasonText?: string,
   ) => Promise<{ ok: boolean; reason?: string; xp?: number }>;
+  fetchDecisionJournal: () => Promise<JournalEntry[]>;
   lang: Lang;
   setLang: (lang: Lang) => void;
   t: (key: string, params?: Record<string, string | number>) => string;
@@ -632,6 +642,22 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
     return { ok: Boolean(d?.ok), reason: d?.reason, xp: d?.xp };
   }, [load]);
 
+  const fetchDecisionJournal = useCallback<StoreApi["fetchDecisionJournal"]>(async () => {
+    const { data } = await supabase
+      .from("trade_decisions")
+      .select("id, action, instrument_id, quantity, reason_type, created_at")
+      .order("created_at", { ascending: false })
+      .limit(20);
+    return (data ?? []).map((r) => ({
+      id: r.id as string,
+      action: r.action as "buy" | "sell" | "hold",
+      instrumentId: (r.instrument_id as string) ?? null,
+      quantity: Number(r.quantity ?? 0),
+      reasonType: r.reason_type as string,
+      createdAt: r.created_at as string,
+    }));
+  }, []);
+
   const portfolio: Portfolio = useMemo(
     () => ({
       cashCents: data.cashCents,
@@ -725,6 +751,7 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
     fetchDailyPlan,
     markMarketViewed,
     submitDecision,
+    fetchDecisionJournal,
     lang,
     setLang,
     t,

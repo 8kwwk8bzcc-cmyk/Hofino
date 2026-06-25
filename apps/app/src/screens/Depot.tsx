@@ -1,15 +1,31 @@
-import React, { useState } from "react";
-import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
+import React, { useCallback, useEffect, useState } from "react";
+import { ScrollView, StyleSheet, Text, View } from "react-native";
 import { formatEuros } from "@hofino/core";
-import { useStore } from "../store/store.js";
-import { Body, Card, H1, H2, Muted, Pill } from "../ui/components.js";
+import { useStore, type JournalEntry } from "../store/store.js";
+import { Body, Button, Card, H1, H2, Muted, Pill } from "../ui/components.js";
 import { TradePanel } from "../ui/TradePanel.js";
+import { useNav } from "../nav.js";
 import { colors, font, space } from "../theme.js";
 
 export function Depot() {
-  const { state, prices, derived, instrumentById, t } = useStore();
+  const { state, prices, derived, instrumentById, fetchDecisionJournal, t } = useStore();
+  const go = useNav();
   const [sellId, setSellId] = useState<string | null>(null);
+  const [journal, setJournal] = useState<JournalEntry[]>([]);
   const holdings = state.portfolio.holdings;
+
+  const loadJournal = useCallback(async () => {
+    setJournal(await fetchDecisionJournal());
+  }, [fetchDecisionJournal]);
+
+  useEffect(() => {
+    loadJournal();
+  }, [loadJournal]);
+
+  const actionText = (e: JournalEntry) =>
+    e.action === "hold"
+      ? t("depot.actHold")
+      : t(e.action === "buy" ? "depot.actBuy" : "depot.actSell", { n: e.quantity });
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
@@ -18,18 +34,27 @@ export function Depot() {
       <Card>
         <View style={styles.headRow}>
           <View>
-            <Muted>{t("depot.totalValue")}</Muted>
+            <Muted>{t("start.portfolio")}</Muted>
             <Text style={styles.big}>{formatEuros(derived.equityCents)}</Text>
           </View>
-          <Pill
-            label={`${derived.performancePercent >= 0 ? "+" : ""}${derived.performancePercent.toFixed(1)} %`}
-            tone={derived.performancePercent >= 0 ? "good" : "neutral"}
-          />
+          <View style={{ alignItems: "flex-end", gap: space.xs }}>
+            <Pill label={t("start.virtual")} tone="neutral" />
+            <Text style={styles.calmPct}>
+              {t("depot.today", {
+                pct: `${derived.performancePercent >= 0 ? "+" : ""}${derived.performancePercent.toFixed(1)}`,
+              })}
+            </Text>
+          </View>
         </View>
         <View style={styles.splitRow}>
           <Muted>{t("depot.cash", { cash: formatEuros(state.portfolio.cashCents) })}</Muted>
           <Muted>{t("depot.positions", { value: formatEuros(derived.holdingsValueCents) })}</Muted>
         </View>
+      </Card>
+
+      <Card style={styles.feeCard}>
+        <Body>{t("depot.feeTitle")}</Body>
+        <Muted>{t("depot.feeBody")}</Muted>
       </Card>
 
       {holdings.length === 0 ? (
@@ -46,36 +71,53 @@ export function Depot() {
             const value = price * h.quantity;
             const plPct = h.avgCostCents > 0 ? ((price - h.avgCostCents) / h.avgCostCents) * 100 : 0;
             return (
-              <Pressable
-                key={h.instrumentId}
-                testID={`pos-${h.instrumentId}`}
-                onPress={() => setSellId(sellId === h.instrumentId ? null : h.instrumentId)}
-                style={styles.pos}
-              >
-                <View style={{ flex: 1 }}>
-                  <Text style={styles.posName}>{inst?.name ?? h.instrumentId}</Text>
-                  <Muted>{t("depot.qtyAvg", { qty: h.quantity, avg: formatEuros(h.avgCostCents) })}</Muted>
+              <View key={h.instrumentId} style={styles.pos} testID={`pos-${h.instrumentId}`}>
+                <View style={styles.posTop}>
+                  <View style={{ flex: 1 }}>
+                    <Text style={styles.posName}>{inst?.name ?? h.instrumentId}</Text>
+                    <Muted>{t("depot.qtyAvg", { qty: h.quantity, avg: formatEuros(h.avgCostCents) })}</Muted>
+                  </View>
+                  <View style={{ alignItems: "flex-end" }}>
+                    <Text style={styles.posVal}>{formatEuros(value)}</Text>
+                    <Text style={[styles.pl, { color: plPct >= 0 ? colors.secondary : colors.danger }]}>
+                      {plPct >= 0 ? "+" : ""}
+                      {plPct.toFixed(1)} %
+                    </Text>
+                  </View>
                 </View>
-                <View style={{ alignItems: "flex-end" }}>
-                  <Text style={styles.posVal}>{formatEuros(value)}</Text>
-                  <Text style={[styles.pl, { color: plPct >= 0 ? colors.secondary : colors.danger }]}>
-                    {plPct >= 0 ? "+" : ""}
-                    {plPct.toFixed(1)} %
-                  </Text>
+                <View style={styles.posActions}>
+                  <Button title={t("depot.view")} variant="ghost" onPress={() => go("values")} testID={`view-${h.instrumentId}`} />
+                  <Button
+                    title={t("trade.sell")}
+                    variant="secondary"
+                    onPress={() => setSellId(sellId === h.instrumentId ? null : h.instrumentId)}
+                    testID={`decide-${h.instrumentId}`}
+                  />
                 </View>
-              </Pressable>
+                {sellId === h.instrumentId && <TradePanel instrumentId={h.instrumentId} mode="sell" />}
+              </View>
             );
           })}
-          <Muted>{t("depot.tapToSell")}</Muted>
         </Card>
       )}
 
-      {sellId && (
-        <Card>
-          <H2>{t("depot.sell", { name: instrumentById.get(sellId)?.name ?? "" })}</H2>
-          <TradePanel instrumentId={sellId} mode="sell" />
-        </Card>
-      )}
+      <Card>
+        <H2>{t("depot.journalTitle")}</H2>
+        {journal.length === 0 ? (
+          <Muted>{t("depot.journalEmpty")}</Muted>
+        ) : (
+          journal.map((e) => (
+            <View key={e.id} style={styles.entry}>
+              <View style={styles.entryHead}>
+                <Text style={styles.entryName}>{instrumentById.get(e.instrumentId ?? "")?.name ?? "—"}</Text>
+                <Text style={styles.entryAction}>{actionText(e)}</Text>
+              </View>
+              <Muted>{t(`reason.${e.reasonType}`)}</Muted>
+              <Muted>{e.createdAt.slice(0, 10)}</Muted>
+            </View>
+          ))
+        )}
+      </Card>
     </ScrollView>
   );
 }
@@ -84,15 +126,17 @@ const styles = StyleSheet.create({
   container: { padding: space.lg, gap: space.md, backgroundColor: colors.background },
   headRow: { flexDirection: "row", justifyContent: "space-between", alignItems: "flex-start" },
   big: { fontSize: font.h1, fontWeight: "800", color: colors.text },
+  calmPct: { fontSize: font.small, color: colors.textMuted, fontWeight: "600" },
   splitRow: { flexDirection: "row", justifyContent: "space-between" },
-  pos: {
-    flexDirection: "row",
-    alignItems: "center",
-    paddingVertical: space.sm,
-    borderBottomWidth: 1,
-    borderBottomColor: colors.border,
-  },
+  feeCard: { backgroundColor: "#EAF2FB" },
+  pos: { paddingVertical: space.sm, borderBottomWidth: 1, borderBottomColor: colors.border, gap: space.sm },
+  posTop: { flexDirection: "row", alignItems: "center" },
   posName: { fontSize: font.body, fontWeight: "700", color: colors.text },
   posVal: { fontSize: font.body, fontWeight: "700", color: colors.text },
   pl: { fontSize: font.small, fontWeight: "700" },
+  posActions: { flexDirection: "row", gap: space.sm },
+  entry: { paddingVertical: space.sm, borderBottomWidth: 1, borderBottomColor: colors.border, gap: 2 },
+  entryHead: { flexDirection: "row", justifyContent: "space-between" },
+  entryName: { fontSize: font.body, fontWeight: "700", color: colors.text },
+  entryAction: { fontSize: font.body, fontWeight: "700", color: colors.primary },
 });
