@@ -1,6 +1,6 @@
 import React from "react";
 import { Pressable, StyleSheet, Text, View, type ViewStyle } from "react-native";
-import { colors, font, radius, space } from "../theme.js";
+import { colors, font, radius, shadow, space } from "../theme.js";
 
 export function Card({ children, style }: { children: React.ReactNode; style?: ViewStyle }) {
   return <View style={[styles.card, style]}>{children}</View>;
@@ -111,17 +111,18 @@ export function HLogo({ size = 40 }: { size?: number }) {
 const styles = StyleSheet.create({
   card: {
     backgroundColor: colors.surface,
-    borderRadius: radius.lg,
-    padding: space.lg,
+    borderRadius: radius.card,
+    padding: 20,
     borderWidth: 1,
     borderColor: colors.border,
     gap: space.sm,
+    ...shadow.card,
   },
-  h1: { fontSize: font.h1, fontWeight: "800", color: colors.text },
-  h2: { fontSize: font.h2, fontWeight: "700", color: colors.text },
-  body: { fontSize: font.body, color: colors.text, lineHeight: 22 },
-  muted: { fontSize: font.small, color: colors.textMuted },
-  btn: { paddingVertical: space.md, paddingHorizontal: space.lg, borderRadius: radius.md, alignItems: "center" },
+  h1: { fontSize: font.h1, fontWeight: "800", color: colors.text, lineHeight: 38 },
+  h2: { fontSize: font.h2, fontWeight: "700", color: colors.text, lineHeight: 30 },
+  body: { fontSize: font.body, color: colors.text, lineHeight: 24 },
+  muted: { fontSize: font.small, color: colors.textMuted, lineHeight: 18 },
+  btn: { paddingVertical: space.lg, paddingHorizontal: space.lg, borderRadius: radius.lg, alignItems: "center" },
   btnPrimary: { backgroundColor: colors.primary },
   btnSecondary: { backgroundColor: colors.surface, borderWidth: 1, borderColor: colors.primary },
   btnGhost: { backgroundColor: "transparent" },
