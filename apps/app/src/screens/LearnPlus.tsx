@@ -292,18 +292,21 @@ export function LearnPlus() {
           .map((k) => {
             const sr = srMap[k.id];
             return (
-              <Pressable key={k.id} testID={`konzept-${k.id}`} onPress={() => oeffneKonzept(k)}>
-                <Card style={zugewiesen.has(k.id) ? { borderColor: colors.accent, borderWidth: 2 } : undefined}>
-                  <View style={styles.row}>
-                    <H2>{k.titel.de}</H2>
-                    <View style={styles.pillRow}>
-                      {zugewiesen.has(k.id) && <Pill label={t("learn.assignedByTeacher")} tone="gold" />}
-                      {sr?.gemeistert ? <Pill label={t("learn.mastered")} tone="gold" /> : sr ? <Pill label={t("learn.box", { n: sr.leitner_box })} tone="good" /> : null}
-                    </View>
+              <Card
+                key={k.id}
+                testID={`konzept-${k.id}`}
+                onPress={() => oeffneKonzept(k)}
+                style={zugewiesen.has(k.id) ? { borderColor: colors.accent, borderWidth: 2 } : undefined}
+              >
+                <View style={styles.row}>
+                  <H2>{k.titel.de}</H2>
+                  <View style={styles.pillRow}>
+                    {zugewiesen.has(k.id) && <Pill label={t("learn.assignedByTeacher")} tone="gold" />}
+                    {sr?.gemeistert ? <Pill label={t("learn.mastered")} tone="gold" /> : sr ? <Pill label={t("learn.box", { n: sr.leitner_box })} tone="good" /> : null}
                   </View>
-                  <Muted>{k.ist_rechnerisch ? t("learn.calcType") : t("learn.understandType")}</Muted>
-                </Card>
-              </Pressable>
+                </View>
+                <Muted>{k.ist_rechnerisch ? t("learn.calcType") : t("learn.understandType")}</Muted>
+              </Card>
             );
           })}
       </ScrollView>
