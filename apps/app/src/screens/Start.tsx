@@ -1,20 +1,19 @@
 import React, { useCallback, useEffect, useState } from "react";
-import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
+import { ScrollView, StyleSheet, Text, View } from "react-native";
 import { formatEuros } from "@hofino/core";
 import { wissenslevel } from "@hofino/learning";
 import { useStore, type DailyPlan } from "../store/store.js";
 import { Body, Button, Card, H1, H2, Muted, Pill } from "../ui/components.js";
+import { DecisionFlow } from "./DecisionFlow.js";
 import { ChildFamilyCard } from "./family/ChildFamilyCard.js";
 import { StudentClassCard } from "./classroom/StudentClassCard.js";
 import { useNav } from "../nav.js";
-import { colors, font, radius, space } from "../theme.js";
+import { colors, font, space } from "../theme.js";
 
 const WEEKDAYS = ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So"];
-const REASONS = ["long_term_growth", "reduce_risk", "not_enough_information", "diversify"] as const;
 
 function StatusDot({ status }: { status: DailyPlan["woche"][number]["status"] }) {
-  const bg =
-    status === "completed" ? colors.secondary : status === "today_open" ? colors.accent : "transparent";
+  const bg = status === "completed" ? colors.secondary : status === "today_open" ? colors.accent : "transparent";
   const border = status === "missed" || status === "future" ? colors.border : bg;
   return <View style={[styles.dot, { backgroundColor: bg, borderColor: border }]} />;
 }
@@ -57,15 +56,13 @@ function TaskCard({
 }
 
 export function Start() {
-  const { state, derived, t, fetchDailyPlan, markMarketViewed, submitHold } = useStore();
+  const { state, derived, t, fetchDailyPlan, markMarketViewed } = useStore();
   const go = useNav();
   const isAdult = state.role === "adult";
 
   const [plan, setPlan] = useState<DailyPlan | null>(null);
   const [loaded, setLoaded] = useState(false);
   const [decisionOpen, setDecisionOpen] = useState(false);
-  const [reason, setReason] = useState<string | null>(null);
-  const [busy, setBusy] = useState(false);
 
   const reload = useCallback(async () => {
     setPlan(await fetchDailyPlan());
@@ -78,6 +75,20 @@ export function Start() {
 
   if (!loaded) return null;
 
+  if (decisionOpen && plan?.instrumentId) {
+    return (
+      <DecisionFlow
+        instrumentId={plan.instrumentId}
+        instrumentName={plan.instrumentName ?? "—"}
+        onClose={() => setDecisionOpen(false)}
+        onDone={async () => {
+          setDecisionOpen(false);
+          await reload();
+        }}
+      />
+    );
+  }
+
   const openCount = plan ? [plan.learningDone, plan.marketViewed, plan.decisionDone].filter((x) => !x).length : 3;
   const allDone = openCount === 0;
   const lvl = wissenslevel(derived.lernXpGesamt);
@@ -86,18 +97,6 @@ export function Start() {
   const openMarket = async () => {
     await markMarketViewed();
     go("values");
-  };
-
-  const confirmHold = async () => {
-    if (!reason) return;
-    setBusy(true);
-    const r = await submitHold(reason);
-    setBusy(false);
-    if (r.ok) {
-      setDecisionOpen(false);
-      setReason(null);
-      await reload();
-    }
   };
 
   return (
@@ -143,9 +142,9 @@ export function Start() {
             <Pill label={t("start.done")} tone="good" />
           </View>
           <H2>{t("start.decisionTitle")}</H2>
-          <Body>{t("decision.holdSuccessBody")}</Body>
+          <Body>{t("decision.doneNote")}</Body>
         </Card>
-      ) : !decisionOpen ? (
+      ) : (
         <TaskCard
           step={3}
           title={t("start.decisionTitle")}
@@ -156,33 +155,6 @@ export function Start() {
           cta={t("start.decisionCta")}
           onPress={() => setDecisionOpen(true)}
         />
-      ) : (
-        <Card>
-          <H2>{t("start.decisionTitle")}</H2>
-          <Muted>{t("decision.reasonTitle")}</Muted>
-          <View style={styles.reasons}>
-            {REASONS.map((r) => (
-              <Pressable
-                key={r}
-                testID={`reason-${r}`}
-                onPress={() => setReason(r)}
-                style={[styles.reason, reason === r && styles.reasonActive]}
-              >
-                <Text style={[styles.reasonText, reason === r && styles.reasonTextActive]}>{t(`reason.${r}`)}</Text>
-              </Pressable>
-            ))}
-          </View>
-          <Button
-            title={busy ? t("auth.wait") : t("decision.holdConfirm")}
-            onPress={confirmHold}
-            disabled={!reason || busy}
-            testID="hold-confirm"
-          />
-          <Button title={t("decision.buy")} variant="secondary" onPress={() => go("values")} />
-          <Button title={t("decision.sell")} variant="secondary" onPress={() => go("depot")} />
-          <Muted>{t("decision.buySellHint")}</Muted>
-          <Button title={t("discover.back")} variant="ghost" onPress={() => setDecisionOpen(false)} />
-        </Card>
       )}
 
       <View style={styles.metricsRow}>
@@ -218,11 +190,6 @@ const styles = StyleSheet.create({
   taskHead: { flexDirection: "row", justifyContent: "space-between", alignItems: "center" },
   step: { fontSize: font.small, fontWeight: "700", color: colors.textMuted, textTransform: "uppercase" },
   cardDone: { borderColor: colors.secondary, backgroundColor: "#F0FDF4" },
-  reasons: { gap: space.sm },
-  reason: { padding: space.md, borderRadius: radius.md, borderWidth: 1, borderColor: colors.border, backgroundColor: colors.surface },
-  reasonActive: { borderColor: colors.secondary, backgroundColor: "#F0FDF4" },
-  reasonText: { fontSize: font.body, color: colors.text },
-  reasonTextActive: { fontWeight: "700", color: colors.text },
   metricsRow: { flexDirection: "row", gap: space.md },
   metric: { flex: 1 },
   metricValue: { fontSize: font.h2, fontWeight: "800", color: colors.text },

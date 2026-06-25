@@ -195,7 +195,12 @@ interface StoreApi {
   fetchMyAssignments: () => Promise<string[]>;
   fetchDailyPlan: () => Promise<DailyPlan | null>;
   markMarketViewed: () => Promise<void>;
-  submitHold: (reason: string, reasonText?: string) => Promise<{ ok: boolean; reason?: string }>;
+  submitDecision: (
+    action: "buy" | "sell" | "hold",
+    quantity: number,
+    reason: string,
+    reasonText?: string,
+  ) => Promise<{ ok: boolean; reason?: string; xp?: number }>;
   lang: Lang;
   setLang: (lang: Lang) => void;
   t: (key: string, params?: Record<string, string | number>) => string;
@@ -614,12 +619,18 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
     await supabase.rpc("tagesplan_markt_gesehen");
   }, []);
 
-  const submitHold = useCallback<StoreApi["submitHold"]>(async (reason, reasonText) => {
-    const { data, error } = await supabase.rpc("tagesentscheidung_halten", { p_reason: reason, p_reason_text: reasonText ?? null });
+  const submitDecision = useCallback<StoreApi["submitDecision"]>(async (action, quantity, reason, reasonText) => {
+    const { data, error } = await supabase.rpc("tagesentscheidung_speichern", {
+      p_action: action,
+      p_quantity: quantity,
+      p_reason: reason,
+      p_reason_text: reasonText ?? null,
+    });
     if (error) return { ok: false, reason: error.message };
-    const d = data as { ok: boolean; reason?: string };
-    return { ok: Boolean(d?.ok), reason: d?.reason };
-  }, []);
+    const d = data as { ok: boolean; reason?: string; xp?: number };
+    if (d?.ok) await load();
+    return { ok: Boolean(d?.ok), reason: d?.reason, xp: d?.xp };
+  }, [load]);
 
   const portfolio: Portfolio = useMemo(
     () => ({
@@ -713,7 +724,7 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
     fetchMyAssignments,
     fetchDailyPlan,
     markMarketViewed,
-    submitHold,
+    submitDecision,
     lang,
     setLang,
     t,
