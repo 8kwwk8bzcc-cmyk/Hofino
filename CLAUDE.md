@@ -155,17 +155,26 @@ Verlustschutzschild. (Der Erwachsenen-Modus ist jetzt im MVP enthalten.)
 
 ## 11. Design-Tokens (verbindlich)
 
+> Stand „Mission Board / Daily Finance Workout" (Spec `specs/mission_board_no_house_spec.json`).
+> Maßgeblich ist `apps/app/src/theme.ts`.
+
 | Token | Wert | Bedeutung |
 |---|---|---|
-| `primary` | `#0D2B45` | Dunkelblau/Petrol – Vertrauen, Wissen |
+| `primary` | `#081F3A` | Navy – Vertrauen, Wissen |
 | `secondary` | `#22C55E` | Grün – Wachstum, Lernen |
-| `accent` | `#F4C542` | Gold/Gelb – Erfolge, Abzeichen, Belohnungen |
-| `background` | `#F5F7FA` | ruhige Flächen |
+| `accent` | `#F2C94C` | Gold – XP, Erfolge, Belohnungen |
+| `background` | `#F3F6FA` | ruhige Flächen |
 | `surface` | `#FFFFFF` | Karten/Flächen |
+| `textMuted` | `#64748B` | Sekundärtext |
+| `border` | `#D8E2EA` | Rahmen |
+| `danger` | `#D96B6B` | zurückhaltendes Negativ-Rot |
 
+- Schriften: **Space Grotesk** (Display/Überschriften/Zahlen), **Inter** (Fließtext).
+- Form: Karten-Radius 22, weicher Schatten; Buttons Radius 16.
+- Icons: konsistentes Outline-Set (`ui/icons.tsx`), **keine Emojis** in der Tab-Bar.
 - Logo: stilisiertes **H mit Wachstumslinie**. Keine €/$-Zeichen, keine Münze als Hauptsymbol.
-- Anmutung: modern, vertrauensvoll, freundlich. Nicht wie eine Bank, nicht wie eine Trading-App,
-  nicht wie ein reines Kinderspiel.
+- Anmutung: modern, vertrauensvoll, freundlich, lernorientiert. Nicht wie eine Bank, nicht wie eine
+  Trading-App, nicht wie ein reines Kinderspiel.
 
 ## 12. Code-Konventionen & Definition of Done
 
