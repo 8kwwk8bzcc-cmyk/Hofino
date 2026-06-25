@@ -8,23 +8,17 @@ import { HouseScene } from "../ui/HouseScene.js";
 import { ChildFamilyCard } from "./family/ChildFamilyCard.js";
 import { StudentClassCard } from "./classroom/StudentClassCard.js";
 import { useNav } from "../nav.js";
+import { FLAGS } from "../config/flags.js";
 import { colors, font, space } from "../theme.js";
 
-const STAGES: { id: string; emoji: string }[] = [
-  { id: "grundstueck", emoji: "🟫" },
-  { id: "fundament", emoji: "🧱" },
-  { id: "waende", emoji: "🏗️" },
-  { id: "dach", emoji: "🏠" },
-  { id: "erstes_haus", emoji: "🏡" },
-  { id: "ausbauten", emoji: "🏘️" },
-];
+// Haus-Stufen – nur relevant, solange FLAGS.house_enabled aktiv ist (Pivot: Haus ausgeblendet).
+const STAGES = ["grundstueck", "fundament", "waende", "dach", "erstes_haus", "ausbauten"];
 
 export function Home() {
   const { state, derived, t } = useStore();
   const go = useNav();
-  const stageIndex = STAGES.findIndex((s) => s.id === derived.houseStage);
-  const stage = STAGES[Math.max(0, stageIndex)]!;
 
+  const stageIndex = Math.max(0, STAGES.indexOf(derived.houseStage));
   const noInvest = state.portfolio.holdings.length === 0;
   const mission = noInvest
     ? t("home.missionInvest")
@@ -33,7 +27,7 @@ export function Home() {
       : derived.completedCount < MODULES.length
         ? t("home.missionKeepLearning")
         : t("home.missionAllDone");
-  const missionTab = noInvest ? "discover" : "uebung";
+  const missionTab = noInvest ? "values" : "learn";
   const missionCta = noInvest ? t("home.ctaDiscover") : t("home.ctaLearn");
 
   return (
@@ -46,17 +40,19 @@ export function Home() {
         </View>
       </View>
 
-      <Card>
-        <H2>{t("home.house")}</H2>
-        <View style={styles.house}>
-          <HouseScene stage={derived.houseStage} size={96} />
-          <View style={{ flex: 1, gap: space.xs }}>
-            <Text style={styles.stageLabel}>{t(`house.${stage.id}`)}</Text>
-            <ProgressBar value={(stageIndex + 1) / STAGES.length} />
-            <Muted>{t("home.stage", { n: stageIndex + 1, total: STAGES.length })}</Muted>
+      {FLAGS.house_enabled && (
+        <Card>
+          <H2>{t("home.house")}</H2>
+          <View style={styles.house}>
+            <HouseScene stage={derived.houseStage} size={96} />
+            <View style={{ flex: 1, gap: space.xs }}>
+              <Text style={styles.stageLabel}>{t(`house.${STAGES[stageIndex]}`)}</Text>
+              <ProgressBar value={(stageIndex + 1) / STAGES.length} />
+              <Muted>{t("home.stage", { n: stageIndex + 1, total: STAGES.length })}</Muted>
+            </View>
           </View>
-        </View>
-      </Card>
+        </Card>
+      )}
 
       <View style={styles.statsRow}>
         <Card style={styles.stat}>

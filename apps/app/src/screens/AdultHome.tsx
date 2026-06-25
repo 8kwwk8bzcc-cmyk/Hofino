@@ -18,7 +18,7 @@ export function AdultHome() {
     : derived.completedCount < MODULES.length
       ? t("adult.next2")
       : t("adult.next3");
-  const nextTab = noInvest ? "discover" : "uebung";
+  const nextTab = noInvest ? "values" : "learn";
   const nextCta = noInvest ? t("home.ctaDiscover") : t("home.ctaLearn");
 
   return (

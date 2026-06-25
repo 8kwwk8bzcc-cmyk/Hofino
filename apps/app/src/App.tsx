@@ -22,9 +22,23 @@ import { FamilyLink } from "./screens/family/FamilyLink.js";
 import { TeacherClass } from "./screens/classroom/TeacherClass.js";
 import { TeacherBeamer } from "./screens/classroom/TeacherBeamer.js";
 import { LangToggle } from "./ui/components.js";
+import {
+  IconBeamer,
+  IconClass,
+  IconDepot,
+  IconFamily,
+  IconLeague,
+  IconLearn,
+  IconLink,
+  IconStart,
+  IconValues,
+  type IconProps,
+} from "./ui/icons.js";
 import { translate } from "./i18n.js";
 import { NavContext } from "./nav.js";
 import { colors, space } from "./theme.js";
+
+type IconCmp = (p: IconProps) => React.JSX.Element;
 
 function TopBar({ brand }: { brand: string }) {
   const { signOut, lang, setLang } = useStore();
@@ -41,19 +55,46 @@ function TopBar({ brand }: { brand: string }) {
   );
 }
 
-type TabId = "home" | "uebung" | "depot" | "discover" | "rankings";
+type TabId = "start" | "learn" | "depot" | "values" | "league";
 
-const TABS: { id: TabId; icon: string; label: string }[] = [
-  { id: "home", icon: "🏠", label: "Zuhause" },
-  { id: "uebung", icon: "📚", label: "Lernen" },
-  { id: "depot", icon: "💼", label: "Depot" },
-  { id: "discover", icon: "🔍", label: "Entdecken" },
-  { id: "rankings", icon: "🏆", label: "Ligen" },
+const TABS: { id: TabId; Icon: IconCmp }[] = [
+  { id: "start", Icon: IconStart },
+  { id: "learn", Icon: IconLearn },
+  { id: "depot", Icon: IconDepot },
+  { id: "values", Icon: IconValues },
+  { id: "league", Icon: IconLeague },
 ];
+
+function TabBar<T extends string>({
+  tabs,
+  active,
+  onSelect,
+  labelFor,
+}: {
+  tabs: { id: T; Icon: IconCmp }[];
+  active: T;
+  onSelect: (id: T) => void;
+  labelFor: (id: T) => string;
+}) {
+  return (
+    <View style={styles.tabbar}>
+      {tabs.map((item) => {
+        const isActive = item.id === active;
+        const color = isActive ? colors.secondary : colors.textMuted;
+        return (
+          <Pressable key={item.id} testID={`tab-${item.id}`} onPress={() => onSelect(item.id)} style={styles.tab}>
+            <item.Icon size={24} color={color} />
+            <Text style={[styles.tabLabel, isActive && styles.tabLabelActive]}>{labelFor(item.id)}</Text>
+          </Pressable>
+        );
+      })}
+    </View>
+  );
+}
 
 function Main() {
   const { state, t } = useStore();
-  const [tab, setTab] = useState<TabId>("home");
+  const [tab, setTab] = useState<TabId>("start");
   const isAdult = state.role === "adult";
 
   return (
@@ -61,33 +102,27 @@ function Main() {
       <TopBar brand={isAdult ? t("brand.adult") : "Hofino"} />
       <NavContext.Provider value={setTab}>
         <View style={styles.screen}>
-          {tab === "home" && (isAdult ? <AdultHome /> : <Home />)}
-          {tab === "uebung" && <LearnPlus />}
+          {tab === "start" && (isAdult ? <AdultHome /> : <Home />)}
+          {tab === "learn" && <LearnPlus />}
           {tab === "depot" && <Depot />}
-          {tab === "discover" && <Discover />}
-          {tab === "rankings" && <Rankings />}
+          {tab === "values" && <Discover />}
+          {tab === "league" && <Rankings />}
         </View>
       </NavContext.Provider>
-      <View style={styles.tabbar}>
-        {TABS.map((item) => {
-          const active = item.id === tab;
-          const label = item.id === "home" && isAdult ? t("tab.overview") : t(`tab.${item.id}`);
-          return (
-            <Pressable key={item.id} testID={`tab-${item.id}`} onPress={() => setTab(item.id)} style={styles.tab}>
-              <Text style={[styles.tabIcon, active && styles.tabIconActive]}>{item.icon}</Text>
-              <Text style={[styles.tabLabel, active && styles.tabLabelActive]}>{label}</Text>
-            </Pressable>
-          );
-        })}
-      </View>
+      <TabBar
+        tabs={TABS}
+        active={tab}
+        onSelect={setTab}
+        labelFor={(id) => (id === "start" && isAdult ? t("tab.overview") : t(`tab.${id}`))}
+      />
     </View>
   );
 }
 
 type ParentTab = "family" | "link";
-const PARENT_TABS: { id: ParentTab; icon: string; label: string }[] = [
-  { id: "family", icon: "👪", label: "Familie" },
-  { id: "link", icon: "🔗", label: "Verknüpfen" },
+const PARENT_TABS: { id: ParentTab; Icon: IconCmp }[] = [
+  { id: "family", Icon: IconFamily },
+  { id: "link", Icon: IconLink },
 ];
 
 function ParentShell() {
@@ -100,25 +135,15 @@ function ParentShell() {
         {tab === "family" && <FamilyHome />}
         {tab === "link" && <FamilyLink />}
       </View>
-      <View style={styles.tabbar}>
-        {PARENT_TABS.map((item) => {
-          const active = item.id === tab;
-          return (
-            <Pressable key={item.id} testID={`tab-${item.id}`} onPress={() => setTab(item.id)} style={styles.tab}>
-              <Text style={[styles.tabIcon, active && styles.tabIconActive]}>{item.icon}</Text>
-              <Text style={[styles.tabLabel, active && styles.tabLabelActive]}>{t(`tab.${item.id}`)}</Text>
-            </Pressable>
-          );
-        })}
-      </View>
+      <TabBar tabs={PARENT_TABS} active={tab} onSelect={setTab} labelFor={(id) => t(`tab.${id}`)} />
     </View>
   );
 }
 
 type TeacherTab = "class" | "beamer";
-const TEACHER_TABS: { id: TeacherTab; icon: string; label: string }[] = [
-  { id: "class", icon: "🏫", label: "Klasse" },
-  { id: "beamer", icon: "📽️", label: "Beamer" },
+const TEACHER_TABS: { id: TeacherTab; Icon: IconCmp }[] = [
+  { id: "class", Icon: IconClass },
+  { id: "beamer", Icon: IconBeamer },
 ];
 
 function TeacherShell() {
@@ -131,17 +156,7 @@ function TeacherShell() {
         {tab === "class" && <TeacherClass />}
         {tab === "beamer" && <TeacherBeamer />}
       </View>
-      <View style={styles.tabbar}>
-        {TEACHER_TABS.map((item) => {
-          const active = item.id === tab;
-          return (
-            <Pressable key={item.id} testID={`tab-${item.id}`} onPress={() => setTab(item.id)} style={styles.tab}>
-              <Text style={[styles.tabIcon, active && styles.tabIconActive]}>{item.icon}</Text>
-              <Text style={[styles.tabLabel, active && styles.tabLabelActive]}>{t(`tab.${item.id}`)}</Text>
-            </Pressable>
-          );
-        })}
-      </View>
+      <TabBar tabs={TEACHER_TABS} active={tab} onSelect={setTab} labelFor={(id) => t(`tab.${id}`)} />
     </View>
   );
 }
@@ -199,9 +214,7 @@ const styles = StyleSheet.create({
     paddingBottom: space.sm,
     paddingTop: space.sm,
   },
-  tab: { flex: 1, alignItems: "center", gap: 2 },
-  tabIcon: { fontSize: 22, opacity: 0.5 },
-  tabIconActive: { opacity: 1 },
-  tabLabel: { fontSize: 10, color: colors.textMuted },
-  tabLabelActive: { color: colors.primary, fontWeight: "700" },
+  tab: { flex: 1, alignItems: "center", gap: 3 },
+  tabLabel: { fontSize: 11, color: colors.textMuted },
+  tabLabelActive: { color: colors.secondary, fontWeight: "700" },
 });

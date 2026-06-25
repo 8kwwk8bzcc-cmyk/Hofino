@@ -3,6 +3,7 @@ import { Pressable, ScrollView, StyleSheet, Text, TextInput, View } from "react-
 import { formatEuros, START_CAPITAL_CENTS } from "@hofino/core";
 import { useStore } from "../store/store.js";
 import { Body, Button, H1, HLogo, LangToggle, Muted } from "../ui/components.js";
+import { FLAGS } from "../config/flags.js";
 import { colors, font, radius, space } from "../theme.js";
 
 const PLOTS = [
@@ -128,7 +129,7 @@ export function Onboarding() {
   const [busy, setBusy] = useState(false);
 
   const emailOk = /.+@.+\..+/.test(email);
-  const plotOk = role !== "child" || plot !== "";
+  const plotOk = !FLAGS.house_enabled || role !== "child" || plot !== "";
   const canRegister = name.trim().length >= 2 && plotOk && emailOk && password.length >= 6;
   const canLogin = emailOk && password.length >= 6;
 
@@ -167,7 +168,7 @@ export function Onboarding() {
         <>
           <RoleToggle role={role} onChange={setRole} />
           <NameInput value={name} onChange={setName} />
-          {role === "child" && <PlotPicker value={plot} onChange={setPlot} />}
+          {FLAGS.house_enabled && role === "child" && <PlotPicker value={plot} onChange={setPlot} />}
         </>
       )}
       <Credentials email={email} password={password} onEmail={setEmail} onPassword={setPassword} />
@@ -204,7 +205,7 @@ export function ProfileSetup() {
   const [plot, setPlot] = useState("");
   const [error, setError] = useState<string | null>(null);
 
-  const plotOk = role !== "child" || plot !== "";
+  const plotOk = !FLAGS.house_enabled || role !== "child" || plot !== "";
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
@@ -214,7 +215,7 @@ export function ProfileSetup() {
       </View>
       <RoleToggle role={role} onChange={setRole} />
       <NameInput value={name} onChange={setName} />
-      {role === "child" && <PlotPicker value={plot} onChange={setPlot} />}
+      {FLAGS.house_enabled && role === "child" && <PlotPicker value={plot} onChange={setPlot} />}
       {error && <Text style={styles.error}>{error}</Text>}
       <Button
         testID="create-profile"

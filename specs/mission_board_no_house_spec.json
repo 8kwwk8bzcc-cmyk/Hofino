@@ -1,0 +1,1693 @@
+{
+  "project": {
+    "name": "Hofino",
+    "spec_version": "mission-board-no-house-v1",
+    "created_at": "2026-06-25",
+    "primary_language": "de",
+    "target_stack": [
+      "React Native",
+      "react-native-web"
+    ],
+    "viewport_baseline": {
+      "mobile_width_px": [
+        375,
+        390
+      ],
+      "reference_height_px": 844,
+      "tablet_web_scaling": true
+    },
+    "one_sentence_product_direction": "Hofino wird vom Haus-Dashboard zu einem täglichen Finanztraining mit Lernmission, Markt-Labor und virtuellem Musterdepot.",
+    "implementation_intent": "Diese JSON ist als direkt verwertbare Produkt-, IA-, UI- und Datenmodell-Spezifikation für Claude Code gedacht."
+  },
+  "source_context": {
+    "existing_product_facts": {
+      "claim": "Geld verstehen. Investieren üben.",
+      "virtual_money_only": true,
+      "real_money": false,
+      "real_securities": false,
+      "starting_capital_eur": 5000,
+      "order_fee_eur": 5,
+      "fractional_shares": false,
+      "quotes_frequency": "hourly",
+      "learning_modules_count": 20,
+      "current_modes": [
+        "kids",
+        "family",
+        "adult",
+        "classroom"
+      ],
+      "current_baseline_screens": [
+        "01-onboarding.png",
+        "02-kids-home.png",
+        "03-learn.png",
+        "04-depot.png",
+        "05-discover.png",
+        "06-classroom.png"
+      ]
+    },
+    "baseline_observation": "Der aktuelle Stand ist karten- und textlastig, nutzt Emojis in der Tab-Bar und stellt im Kids-Modus ein Haus- und Grundstückssystem prominent dar. Diese Logik wird in dieser Spezifikation entfernt oder ausgeblendet."
+  },
+  "product_decision": {
+    "decision": "remove_house_from_core_product",
+    "old_focus": "Haus wächst durch Lernen; Depot und Lernen sind Nebenbereiche.",
+    "new_focus": "Daily Finance Workout: täglich kurz lernen, ein Unternehmen/ETF beobachten und eine virtuelle Entscheidung begründen.",
+    "positioning": "Bildungs- und Trainings-App, nicht Broker-App.",
+    "house_strategy": {
+      "enabled_in_primary_ui": false,
+      "remove_from_onboarding": true,
+      "remove_from_start_screen": true,
+      "remove_from_primary_navigation": true,
+      "data_deletion_required_now": false,
+      "recommended_feature_flag": "house_enabled",
+      "recommended_feature_flag_value": false,
+      "future_options": [
+        "später komplett löschen",
+        "optional als Achievement-System zurückbringen",
+        "nur saisonal oder nur in einer separaten Kids-Belohnung nutzen"
+      ]
+    }
+  },
+  "core_principles": [
+    "Bildung first: Lernen, Verstehen und Begründen stehen über Performance.",
+    "Jede Order ist virtuell und eindeutig als Übungsorder gekennzeichnet.",
+    "Halten zählt als vollständige tägliche Entscheidung.",
+    "Tägliche Nutzung entsteht durch einen ruhigen Trainingsrhythmus, nicht durch Kauf-/Verkaufsdruck.",
+    "Keine Anlageempfehlungen, keine Brokerlinks, keine Werbung, kein Chat, keine offenen Profile.",
+    "Keine Trading-, Gambling- oder Daytrading-Anmutung.",
+    "Rot/Grün für Kursbewegungen zurückhaltend einsetzen; keine blinkenden Ticker.",
+    "Große Tap-Ziele, klare Hierarchie und WCAG-AA-Kontrast.",
+    "Eine gemeinsame UI-Basis für Kids, Adult, Family und Classroom."
+  ],
+  "feature_flags": {
+    "house_enabled": false,
+    "daily_workout_enabled": true,
+    "market_lab_enabled": true,
+    "decision_journal_enabled": true,
+    "hold_decision_enabled": true,
+    "order_fee_enabled": true,
+    "rankings_enabled": true,
+    "classroom_enabled": true,
+    "family_readonly_enabled": true,
+    "dark_mode_enabled_initially": false
+  },
+  "modes": {
+    "kids": {
+      "audience": "10-15",
+      "tone": "freundlich, motivierend, klar, nicht kindisch",
+      "uses_house": false,
+      "uses_virtual_depot": true,
+      "uses_daily_workout": true,
+      "safety": [
+        "Anzeigename statt Klarname",
+        "kein Chat",
+        "keine offenen Profile",
+        "keine Brokerlinks",
+        "keine Werbung"
+      ]
+    },
+    "adult": {
+      "audience": "Erwachsene",
+      "tone": "sachlicher, ruhiger, lernorientiert",
+      "uses_house": false,
+      "uses_virtual_depot": true,
+      "uses_daily_workout": true
+    },
+    "family": {
+      "audience": "Eltern",
+      "tone": "transparent, vertrauensvoll, lesend",
+      "uses_house": false,
+      "uses_virtual_depot": false,
+      "access": "readonly_child_overview"
+    },
+    "classroom": {
+      "audience": "Lehrer und Schüler",
+      "tone": "strukturiert, datensparsam, großbildtauglich",
+      "uses_house": false,
+      "uses_virtual_depot": true,
+      "access": "teacher_dashboard_with_aggregates_only"
+    }
+  },
+  "navigation": {
+    "main_tabs": [
+      {
+        "key": "start",
+        "label_de": "Start",
+        "label_en": "Start",
+        "route": "StartScreen",
+        "replaces": "Zuhause",
+        "icon": "home-or-activity",
+        "purpose": "Daily Finance Workout und heutiger Tagesplan"
+      },
+      {
+        "key": "learn",
+        "label_de": "Lernen",
+        "label_en": "Learn",
+        "route": "LearnScreen",
+        "replaces": null,
+        "icon": "book-open",
+        "purpose": "Level, XP, Tagesmission, Module und Frage-Flow"
+      },
+      {
+        "key": "depot",
+        "label_de": "Depot",
+        "label_en": "Portfolio",
+        "route": "DepotScreen",
+        "replaces": null,
+        "icon": "briefcase",
+        "purpose": "Virtuelles Musterdepot, Positionen, Übungsorders, Journal"
+      },
+      {
+        "key": "values",
+        "label_de": "Werte",
+        "label_en": "Assets",
+        "route": "ValuesScreen",
+        "replaces": "Entdecken",
+        "icon": "search-or-library",
+        "purpose": "Unternehmen und ETFs als neutrale Lernbeispiele"
+      },
+      {
+        "key": "league",
+        "label_de": "Liga",
+        "label_en": "League",
+        "route": "LeagueScreen",
+        "replaces": "Ligen",
+        "icon": "trophy",
+        "purpose": "Wissensliga, Trainingsliga und ruhige Musterdepot-Rankings"
+      }
+    ],
+    "teacher_tabs": [
+      {
+        "key": "class",
+        "label_de": "Klasse",
+        "label_en": "Class",
+        "route": "TeacherClassScreen",
+        "icon": "school"
+      },
+      {
+        "key": "modules",
+        "label_de": "Module",
+        "label_en": "Modules",
+        "route": "TeacherModulesScreen",
+        "icon": "list-check"
+      },
+      {
+        "key": "beamer",
+        "label_de": "Beamer",
+        "label_en": "Projector",
+        "route": "TeacherBeamerScreen",
+        "icon": "monitor"
+      }
+    ],
+    "legacy_tab_replacements": {
+      "Zuhause": "Start",
+      "Entdecken": "Werte",
+      "Ligen": "Liga"
+    }
+  },
+  "terminology": {
+    "principle": "UI-Sprache soll nach Training und Bildung klingen, nicht nach Broker oder Hype.",
+    "replace_terms": [
+      {
+        "avoid": "Trade",
+        "use_de": "Übungsentscheidung",
+        "use_en": "Practice decision"
+      },
+      {
+        "avoid": "Trading",
+        "use_de": "Finanztraining",
+        "use_en": "Finance workout"
+      },
+      {
+        "avoid": "Portfolio",
+        "use_de": "Musterdepot",
+        "use_en": "Practice portfolio"
+      },
+      {
+        "avoid": "Watchlist",
+        "use_de": "Merkliste",
+        "use_en": "Watchlist"
+      },
+      {
+        "avoid": "Jetzt kaufen",
+        "use_de": "Kaufen üben",
+        "use_en": "Practice buying"
+      },
+      {
+        "avoid": "Verkaufen",
+        "use_de": "Verkaufen üben",
+        "use_en": "Practice selling"
+      },
+      {
+        "avoid": "Top Aktie",
+        "use_de": "Lernbeispiel",
+        "use_en": "Learning example"
+      },
+      {
+        "avoid": "Gewinnchance",
+        "use_de": "Entwicklung",
+        "use_en": "Development"
+      },
+      {
+        "avoid": "Signal",
+        "use_de": "Beobachtung",
+        "use_en": "Observation"
+      },
+      {
+        "avoid": "Hot",
+        "use_de": "Neu gelernt",
+        "use_en": "Newly learned"
+      }
+    ],
+    "allowed_action_labels": {
+      "buy": {
+        "de": "Kaufen üben",
+        "en": "Practice buying"
+      },
+      "sell": {
+        "de": "Verkaufen üben",
+        "en": "Practice selling"
+      },
+      "hold": {
+        "de": "Halten",
+        "en": "Hold"
+      }
+    }
+  },
+  "design_direction": {
+    "name": "Mission Board / Daily Finance Workout",
+    "description": "Ein klares, modernes Lern-Cockpit. Nutzer sehen jeden Tag eine Lernmission, ein Markt-Labor und eine Übungsentscheidung.",
+    "visual_character": [
+      "modern",
+      "klar",
+      "freundlich",
+      "lernorientiert",
+      "nicht verspielt-kindisch",
+      "nicht brokerhaft"
+    ],
+    "do": [
+      "große Cards",
+      "klare Tagesstruktur",
+      "starke Typografie",
+      "ruhiger Hintergrund",
+      "konsistente Icons statt Emojis",
+      "Zahlen sichtbar, aber sekundär",
+      "CTA lernorientiert formulieren"
+    ],
+    "dont": [
+      "Emojis in der Tab-Bar",
+      "blinkende Kursticker",
+      "laute rot-grüne Kursdramatik",
+      "Broker-Buttons",
+      "Kaufdrucksprache",
+      "Haus-Illustration als Startseiten-Held",
+      "Gambling-/Lootbox-Anmutung",
+      "Performance als alleiniger Wettbewerb"
+    ],
+    "colors": {
+      "primary_navy": "#081F3A",
+      "growth_green": "#22C55E",
+      "background": "#F3F6FA",
+      "surface": "#FFFFFF",
+      "soft_blue": "#EAF2FB",
+      "soft_mint": "#E4F8EF",
+      "gold_xp": "#F2C94C",
+      "muted_text": "#64748B",
+      "border": "#D8E2EA",
+      "calm_negative": "#D96B6B",
+      "success": "#16A34A",
+      "warning": "#F2B705",
+      "info": "#3B82F6"
+    },
+    "typography": {
+      "heading_font": "Space Grotesk",
+      "body_font": "Inter",
+      "numbers_font": "Space Grotesk",
+      "scale_px": {
+        "h1": {
+          "font_size": 36,
+          "line_height": 42,
+          "font_weight": "700"
+        },
+        "h2": {
+          "font_size": 28,
+          "line_height": 34,
+          "font_weight": "700"
+        },
+        "h3": {
+          "font_size": 22,
+          "line_height": 28,
+          "font_weight": "700"
+        },
+        "body": {
+          "font_size": 16,
+          "line_height": 24,
+          "font_weight": "500"
+        },
+        "body_strong": {
+          "font_size": 16,
+          "line_height": 24,
+          "font_weight": "700"
+        },
+        "caption": {
+          "font_size": 13,
+          "line_height": 18,
+          "font_weight": "600"
+        },
+        "metric": {
+          "font_size": 34,
+          "line_height": 40,
+          "font_weight": "700"
+        }
+      }
+    },
+    "spacing": {
+      "screen_horizontal_padding": 24,
+      "card_padding": 20,
+      "card_gap": 16,
+      "section_gap": 24,
+      "small_gap": 8,
+      "button_height": 56,
+      "tab_bar_height": 76,
+      "minimum_tap_target": 44
+    },
+    "radii": {
+      "card": 22,
+      "button": 16,
+      "pill": 999,
+      "input": 16,
+      "bottom_sheet_top": 28
+    },
+    "shadows": {
+      "card": {
+        "ios": {
+          "shadowColor": "#081F3A",
+          "shadowOpacity": 0.08,
+          "shadowRadius": 14,
+          "shadowOffset": {
+            "width": 0,
+            "height": 6
+          }
+        },
+        "android": {
+          "elevation": 3
+        },
+        "web": "0 8px 24px rgba(8, 31, 58, 0.08)"
+      }
+    },
+    "icons": {
+      "style": "consistent rounded outline icons with optional filled active state",
+      "library_suggestion": [
+        "lucide-react-native",
+        "phosphor-react-native"
+      ],
+      "stroke_width": 2.25,
+      "tab_bar_emojis_allowed": false
+    }
+  },
+  "component_specs": {
+    "screen_shell": {
+      "background_color_token": "background",
+      "horizontal_padding": 24,
+      "top_safe_area": true,
+      "bottom_tab_safe_area": true,
+      "max_content_width_web": 520
+    },
+    "card": {
+      "background_color_token": "surface",
+      "border_color_token": "border",
+      "border_width": 1,
+      "radius": 22,
+      "padding": 20,
+      "shadow": "card",
+      "variants": [
+        "default",
+        "soft_blue",
+        "soft_mint",
+        "danger_soft",
+        "compact"
+      ]
+    },
+    "primary_button": {
+      "height": 56,
+      "radius": 16,
+      "background_color_token": "primary_navy",
+      "text_color": "#FFFFFF",
+      "font_weight": "700",
+      "disabled_opacity": 0.45
+    },
+    "secondary_button": {
+      "height": 56,
+      "radius": 16,
+      "background_color": "#FFFFFF",
+      "border_color_token": "primary_navy",
+      "text_color_token": "primary_navy",
+      "font_weight": "700"
+    },
+    "ghost_button": {
+      "height": 44,
+      "text_color_token": "primary_navy",
+      "font_weight": "700"
+    },
+    "pill": {
+      "height_min": 28,
+      "horizontal_padding": 12,
+      "radius": 999,
+      "variants": {
+        "xp": {
+          "background": "#FFF3C4",
+          "text": "#081F3A"
+        },
+        "recommended": {
+          "background": "#DCFCE7",
+          "text": "#14532D"
+        },
+        "locked": {
+          "background": "#E2E8F0",
+          "text": "#64748B"
+        },
+        "virtual": {
+          "background": "#EAF2FB",
+          "text": "#081F3A"
+        },
+        "negative_calm": {
+          "background": "#FEE2E2",
+          "text": "#991B1B"
+        }
+      }
+    },
+    "progress_bar": {
+      "height": 10,
+      "radius": 999,
+      "track_color": "#E2E8F0",
+      "fill_color_token": "growth_green"
+    },
+    "metric_card": {
+      "layout": "two-column on mobile where space allows, single-column fallback",
+      "primary_text_style": "metric",
+      "label_style": "body",
+      "value_emphasis": "high",
+      "use_for": [
+        "Wissen",
+        "Musterdepot",
+        "Cash",
+        "Positionen"
+      ]
+    },
+    "daily_task_card": {
+      "states": [
+        "open",
+        "active",
+        "completed",
+        "locked_until_previous_done"
+      ],
+      "fields": [
+        "step_number",
+        "title",
+        "subtitle",
+        "duration",
+        "cta_label",
+        "status"
+      ],
+      "completed_visual": "green check pill, not confetti-heavy"
+    },
+    "decision_action_card": {
+      "actions": [
+        "buy",
+        "sell",
+        "hold"
+      ],
+      "requires_reason": true,
+      "fee_visible_before_submit": true,
+      "hold_has_no_fee": true
+    },
+    "decision_journal_entry": {
+      "fields": [
+        "date_label",
+        "asset_name",
+        "action_label",
+        "summary_text",
+        "xp_awarded"
+      ],
+      "tone": "reflective and educational"
+    },
+    "tab_bar": {
+      "height": 76,
+      "background": "#FFFFFF",
+      "border_top_color_token": "border",
+      "active_color_token": "growth_green",
+      "inactive_color_token": "muted_text",
+      "icon_size": 24,
+      "label_font_size": 12,
+      "emoji_icons": false
+    },
+    "input": {
+      "height": 56,
+      "radius": 16,
+      "border_color_token": "border",
+      "background": "#FFFFFF",
+      "label_position": "above or accessible placeholder",
+      "error_color_token": "calm_negative"
+    }
+  },
+  "screen_specs": {
+    "onboarding_auth": {
+      "route": "OnboardingScreen",
+      "status": "modify_existing",
+      "remove": [
+        "Grundstück wählen",
+        "Wiese am Waldrand",
+        "Grundstück am See",
+        "Platz in der Stadt",
+        "jede Haus-/Grundstücksentscheidung"
+      ],
+      "sections_order": [
+        {
+          "key": "welcome",
+          "title_de": "Willkommen bei Hofino",
+          "subtitle_de": "Geld verstehen. Investieren üben."
+        },
+        {
+          "key": "role_selection",
+          "title_de": "Ich bin ...",
+          "options": [
+            {
+              "key": "kid",
+              "label_de": "Kind",
+              "description_de": "10–15 Jahre"
+            },
+            {
+              "key": "adult",
+              "label_de": "Erwachsene",
+              "description_de": "Eigenes Training"
+            },
+            {
+              "key": "parent",
+              "label_de": "Elternteil",
+              "description_de": "Kind begleiten"
+            },
+            {
+              "key": "teacher",
+              "label_de": "Lehrer",
+              "description_de": "Klasse verwalten"
+            }
+          ]
+        },
+        {
+          "key": "practice_goal_optional",
+          "title_de": "Was möchtest du üben?",
+          "optional": true,
+          "options": [
+            {
+              "key": "money_basics",
+              "label_de": "Geld verstehen"
+            },
+            {
+              "key": "companies",
+              "label_de": "Unternehmen kennenlernen"
+            },
+            {
+              "key": "investing",
+              "label_de": "Investieren üben"
+            }
+          ]
+        },
+        {
+          "key": "account_fields",
+          "fields": [
+            {
+              "key": "display_name",
+              "label_de": "Anzeigename",
+              "required": true,
+              "note_de": "Kein echter Name nötig"
+            },
+            {
+              "key": "email",
+              "label_de": "E-Mail",
+              "required": true
+            },
+            {
+              "key": "password",
+              "label_de": "Passwort",
+              "required": true,
+              "min_length": 8
+            }
+          ]
+        }
+      ],
+      "primary_cta_de": "Weiter",
+      "language_switcher": [
+        "DE",
+        "EN"
+      ]
+    },
+    "start": {
+      "route": "StartScreen",
+      "replaces": "KidsHomeScreen",
+      "purpose": "Tagesplan für das Daily Finance Workout",
+      "headline_de": "Dein Finanztraining heute",
+      "subheadline_rule": "Zeige Anzahl offener Aufgaben, z. B. '1 Lernmission · 1 Marktentscheidung'.",
+      "layout_order": [
+        "top_bar",
+        "daily_summary",
+        "weekly_tracker",
+        "learning_mission_card",
+        "market_lab_card",
+        "practice_decision_card",
+        "secondary_status_metrics",
+        "optional_tip_or_safety_note"
+      ],
+      "top_bar": {
+        "left": "Hofino",
+        "right": [
+          "XP pill",
+          "profile or settings"
+        ],
+        "avoid": [
+          "Haus-Icon",
+          "Grundstück-Icon"
+        ]
+      },
+      "daily_summary": {
+        "title_de": "Dein Finanztraining heute",
+        "subtitle_de": "Lernen, beobachten und entscheiden.",
+        "status_examples": [
+          "3 von 3 Aufgaben offen",
+          "1 von 3 Aufgaben erledigt",
+          "Training für heute abgeschlossen"
+        ]
+      },
+      "weekly_tracker": {
+        "display": "Mo Di Mi Do Fr Sa So",
+        "states": [
+          "completed",
+          "today_open",
+          "future",
+          "missed_without_penalty"
+        ],
+        "no_loss_language": true
+      },
+      "cards": [
+        {
+          "key": "learning_mission",
+          "step": 1,
+          "title_de": "Lernmission",
+          "example_content_de": "Was ist ein Unternehmen?",
+          "meta_de": "5 Minuten · Verständnis",
+          "cta_de": "Lernen starten",
+          "completed_cta_de": "Erneut ansehen"
+        },
+        {
+          "key": "market_lab",
+          "step": 2,
+          "title_de": "Markt-Labor",
+          "example_content_de": "Heute beobachten: Apple",
+          "meta_de": "Was macht das Unternehmen?",
+          "cta_de": "Ansehen",
+          "locked_until": "learning_mission_completed_optional"
+        },
+        {
+          "key": "practice_decision",
+          "step": 3,
+          "title_de": "Übungsentscheidung",
+          "example_content_de": "Kaufen üben, verkaufen üben oder halten?",
+          "meta_de": "Begründe deine Entscheidung.",
+          "cta_de": "Entscheidung treffen",
+          "locked_until": "market_lab_viewed"
+        }
+      ],
+      "secondary_status_metrics": [
+        {
+          "key": "knowledge",
+          "label_de": "Wissen",
+          "example_value": "250 XP",
+          "secondary_de": "+50 bis Level 2"
+        },
+        {
+          "key": "practice_portfolio",
+          "label_de": "Musterdepot",
+          "example_value": "7.495,00 €",
+          "secondary_de": "virtuell"
+        }
+      ],
+      "avoid_primary_focus": [
+        "Depotwert mit rotem/grünem Prozentwert als Hauptbotschaft",
+        "Hausfortschritt",
+        "Performance-Ranking"
+      ]
+    },
+    "learn": {
+      "route": "LearnScreen",
+      "status": "adapt_existing",
+      "purpose": "Level, XP, tägliche Lernmission und Module",
+      "layout_order": [
+        "level_card",
+        "today_learning_status",
+        "daily_mini_task",
+        "module_list",
+        "awards"
+      ],
+      "level_card": {
+        "title_de": "Wissenslevel 1",
+        "value_example": "250 XP",
+        "progress_example_de": "Noch 50 XP bis Level 2"
+      },
+      "today_learning_status": {
+        "title_de": "Heute",
+        "metrics": [
+          "0/1 Lernmission",
+          "0/1 Wiederholung"
+        ]
+      },
+      "module_card_fields": [
+        "title",
+        "subtitle",
+        "status_badge",
+        "box_label",
+        "teacher_assigned_badge",
+        "locked_state"
+      ],
+      "example_modules": [
+        {
+          "title_de": "Was ist ein Unternehmen?",
+          "subtitle_de": "Verständnisfragen",
+          "badge_de": "Box 2"
+        },
+        {
+          "title_de": "Was kostet Kaufen und Verkaufen?",
+          "subtitle_de": "Mit Rechenaufgaben",
+          "badge_de": "Offen"
+        },
+        {
+          "title_de": "Was ist Geld?",
+          "subtitle_de": "Grundlagen",
+          "badge_de": "Box 3"
+        }
+      ],
+      "question_flow": {
+        "steps": [
+          "explanation_page",
+          "multiple_choice_question",
+          "feedback_correct_or_wrong_with_explanation",
+          "completion_reward"
+        ],
+        "reward_tone": "ruhig und motivierend, keine lauten Glücksspiel-Effekte"
+      }
+    },
+    "market_lab": {
+      "route": "MarketLabScreen",
+      "status": "new_screen_or_modal",
+      "purpose": "Ein Wert wird neutral beobachtet, bevor eine Übungsentscheidung getroffen wird.",
+      "headline_de": "Markt-Labor",
+      "content_blocks": [
+        {
+          "key": "asset_header",
+          "fields": [
+            "name",
+            "ticker",
+            "asset_type",
+            "price",
+            "virtual_label"
+          ]
+        },
+        {
+          "key": "what_company_does",
+          "title_de": "Was macht das Unternehmen?"
+        },
+        {
+          "key": "revenue_model",
+          "title_de": "Womit verdient es Geld?"
+        },
+        {
+          "key": "influencing_factors",
+          "title_de": "Was kann den Wert beeinflussen?"
+        },
+        {
+          "key": "risks",
+          "title_de": "Welche Risiken gibt es?"
+        },
+        {
+          "key": "neutral_observation",
+          "title_de": "Deine Beobachtung"
+        }
+      ],
+      "forbidden_copy": [
+        "Jetzt kaufen",
+        "Kaufchance",
+        "Signal",
+        "solltest du kaufen",
+        "Hot",
+        "Gewinner des Tages"
+      ],
+      "primary_cta_de": "Entscheidung treffen"
+    },
+    "decision_flow": {
+      "route": "DecisionFlowScreen",
+      "status": "new_or_refactor_trade_flow",
+      "purpose": "Virtuelle Entscheidung mit Begründung und Journal-Eintrag.",
+      "entry_points": [
+        "StartScreen.practice_decision_card",
+        "DepotScreen.position_decide_button",
+        "ValuesDetailScreen.market_lab_cta"
+      ],
+      "steps": [
+        {
+          "key": "choose_action",
+          "title_de": "Was möchtest du mit {assetName} machen?",
+          "actions": [
+            {
+              "key": "buy",
+              "label_de": "Kaufen üben",
+              "requires_quantity": true,
+              "fee_eur": 5
+            },
+            {
+              "key": "sell",
+              "label_de": "Verkaufen üben",
+              "requires_quantity": true,
+              "fee_eur": 5
+            },
+            {
+              "key": "hold",
+              "label_de": "Halten",
+              "requires_quantity": false,
+              "fee_eur": 0
+            }
+          ]
+        },
+        {
+          "key": "quantity_and_fee",
+          "show_for_actions": [
+            "buy",
+            "sell"
+          ],
+          "fields": [
+            "quantity"
+          ],
+          "validations": [
+            "quantity must be integer",
+            "quantity must be greater than 0",
+            "buy requires enough virtual cash including fee",
+            "sell requires enough owned shares",
+            "no fractional shares"
+          ],
+          "fee_notice_de": "Für diese Übungsorder fallen virtuell 5,00 € Gebühr an."
+        },
+        {
+          "key": "reason",
+          "title_de": "Warum entscheidest du dich so?",
+          "required": true,
+          "options": [
+            {
+              "key": "long_term_growth",
+              "label_de": "Ich glaube, das Unternehmen wächst langfristig."
+            },
+            {
+              "key": "reduce_risk",
+              "label_de": "Ich möchte mein Risiko senken."
+            },
+            {
+              "key": "not_enough_information",
+              "label_de": "Ich habe noch nicht genug Informationen."
+            },
+            {
+              "key": "diversify",
+              "label_de": "Ich möchte mein Geld breiter verteilen."
+            },
+            {
+              "key": "own_reason",
+              "label_de": "Eigene Begründung"
+            }
+          ],
+          "own_reason_min_length": 5
+        },
+        {
+          "key": "review",
+          "title_de": "Deine Übungsentscheidung",
+          "must_show": [
+            "asset name",
+            "action",
+            "quantity if buy/sell",
+            "virtual price",
+            "fee",
+            "reason",
+            "virtual-only note"
+          ],
+          "submit_cta_de": "Entscheidung speichern"
+        },
+        {
+          "key": "completion",
+          "outcomes": {
+            "buy": {
+              "title_de": "Übungsorder gespeichert",
+              "body_de": "Du hast deine Kaufentscheidung begründet.",
+              "xp_awarded": 15
+            },
+            "sell": {
+              "title_de": "Übungsorder gespeichert",
+              "body_de": "Du hast deine Verkaufsentscheidung begründet.",
+              "xp_awarded": 15
+            },
+            "hold": {
+              "title_de": "Du hast heute gehalten",
+              "body_de": "Das ist auch eine Entscheidung. Du hast begründet, warum du nicht handelst.",
+              "xp_awarded": 15
+            }
+          },
+          "creates_journal_entry": true
+        }
+      ]
+    },
+    "depot": {
+      "route": "DepotScreen",
+      "status": "refactor_existing",
+      "purpose": "Virtuelles Musterdepot plus Entscheidungsjournal, nicht Broker-Dashboard.",
+      "headline_de": "Depot",
+      "primary_card": {
+        "title_de": "Musterdepot",
+        "value_example": "7.495,00 €",
+        "virtual_label_de": "virtuell",
+        "fields": [
+          {
+            "key": "cash",
+            "label_de": "Cash",
+            "example": "6.865,00 €"
+          },
+          {
+            "key": "positions_value",
+            "label_de": "Positionen",
+            "example": "630,00 €"
+          },
+          {
+            "key": "today_change",
+            "label_de": "Heute",
+            "example": "-0,1 %",
+            "style": "calm"
+          }
+        ]
+      },
+      "positions": {
+        "title_de": "Deine Positionen",
+        "row_fields": [
+          "asset_logo",
+          "asset_name",
+          "ticker",
+          "quantity",
+          "average_price",
+          "current_value",
+          "change"
+        ],
+        "row_actions": [
+          {
+            "key": "view",
+            "label_de": "Ansehen"
+          },
+          {
+            "key": "decide",
+            "label_de": "Entscheiden"
+          }
+        ],
+        "example_position": {
+          "asset_name": "Apple",
+          "ticker": "AAPL",
+          "quantity": 3,
+          "average_price_eur": 210,
+          "current_value_eur": 630,
+          "change_percent": 0
+        }
+      },
+      "fee_notice": {
+        "title_de": "Übungsorder-Gebühr",
+        "body_de": "5,00 € pro Kauf oder Verkauf",
+        "show_before_order_submit": true
+      },
+      "journal": {
+        "title_de": "Entscheidungsjournal",
+        "empty_state_de": "Noch keine Entscheidungen gespeichert.",
+        "example_entries": [
+          {
+            "date_label_de": "Heute",
+            "summary_de": "Apple gehalten",
+            "reason_de": "Noch nicht genug Informationen."
+          },
+          {
+            "date_label_de": "Gestern",
+            "summary_de": "Apple gekauft",
+            "reason_de": "Unternehmen besser verstanden."
+          }
+        ]
+      }
+    },
+    "values": {
+      "route": "ValuesScreen",
+      "replaces": "DiscoverScreen",
+      "status": "rename_and_refactor_existing",
+      "headline_de": "Werte",
+      "subtitle_de": "Unternehmen und ETFs als Lernbeispiele.",
+      "list_title_de": "Alle Werte",
+      "row_fields": [
+        "logo",
+        "name",
+        "ticker",
+        "asset_type",
+        "current_price"
+      ],
+      "example_rows": [
+        {
+          "name": "Apple",
+          "ticker": "AAPL",
+          "asset_type_de": "Aktie",
+          "current_price_eur": 210
+        },
+        {
+          "name": "Microsoft",
+          "ticker": "MSFT",
+          "asset_type_de": "Aktie",
+          "current_price_eur": 420
+        },
+        {
+          "name": "Amazon",
+          "ticker": "AMZN",
+          "asset_type_de": "Aktie",
+          "current_price_eur": 190
+        },
+        {
+          "name": "ETF Welt",
+          "ticker": "WORLD",
+          "asset_type_de": "ETF",
+          "current_price_eur": 100
+        }
+      ],
+      "detail_screen": {
+        "route": "ValueDetailScreen",
+        "sections": [
+          {
+            "key": "what_it_does",
+            "title_de": "Was macht das Unternehmen?"
+          },
+          {
+            "key": "business_model",
+            "title_de": "Womit verdient es Geld?"
+          },
+          {
+            "key": "influences",
+            "title_de": "Was kann den Wert beeinflussen?"
+          },
+          {
+            "key": "risks",
+            "title_de": "Welche Risiken gibt es?"
+          },
+          {
+            "key": "learning_context",
+            "title_de": "Warum ist das ein Lernbeispiel?"
+          }
+        ],
+        "ctas": [
+          {
+            "key": "market_lab",
+            "label_de": "Zum Markt-Labor"
+          },
+          {
+            "key": "watchlist",
+            "label_de": "Zur Merkliste"
+          }
+        ],
+        "forbidden_ctas": [
+          "Kaufen",
+          "Jetzt handeln",
+          "Trade starten"
+        ]
+      }
+    },
+    "league": {
+      "route": "LeagueScreen",
+      "status": "adapt_existing_or_create",
+      "purpose": "Motivation ohne aggressive Performance-Fixierung.",
+      "rankings": [
+        {
+          "key": "knowledge_league",
+          "label_de": "Wissensliga",
+          "metric_de": "abgeschlossene Module und XP",
+          "recommended_order": 1
+        },
+        {
+          "key": "training_league",
+          "label_de": "Trainingsliga",
+          "metric_de": "regelmäßig begründete Entscheidungen",
+          "recommended_order": 2
+        },
+        {
+          "key": "portfolio_development",
+          "label_de": "Musterdepot-Entwicklung",
+          "metric_de": "virtuelle Entwicklung",
+          "recommended_order": 3
+        }
+      ],
+      "rules": [
+        "Performance-Ranking nie als alleinige oder prominenteste Rangliste verwenden.",
+        "Keine aggressive Gewinner-/Verlierer-Rhetorik.",
+        "Keine Copy wie 'Du bist schlechter als ...'."
+      ]
+    },
+    "family": {
+      "route": "FamilyScreen",
+      "status": "adapt_existing_or_create",
+      "purpose": "Eltern sehen Lernfortschritt und Musterdepotentwicklung lesend.",
+      "sections": [
+        "Kind verknüpfen",
+        "Freigabe-Flow",
+        "Tagestraining abgeschlossen/nicht abgeschlossen",
+        "Lernfortschritt",
+        "Musterdepot-Entwicklung lesend",
+        "letzte begründete Entscheidungen ohne private Notizen, falls Kinderschutz dies erfordert"
+      ],
+      "actions_allowed": [
+        "view",
+        "link_child",
+        "unlink_child"
+      ],
+      "actions_forbidden": [
+        "order_create",
+        "decision_submit_for_child",
+        "chat"
+      ]
+    },
+    "classroom": {
+      "route": "TeacherClassScreen",
+      "status": "adapt_existing",
+      "purpose": "Lehrer-Dashboard ohne Haus, mit Klassen-Code, Aggregaten und Modulen.",
+      "sections": [
+        {
+          "key": "class_code",
+          "title_de": "Klasse 6b",
+          "fields": [
+            "class_code",
+            "refresh_code_button"
+          ]
+        },
+        {
+          "key": "students",
+          "title_de": "Schüler",
+          "privacy_rule": "nur Aggregate, keine Einzelorders, keine privaten Daten",
+          "row_fields": [
+            "display_name",
+            "modules_completed",
+            "xp",
+            "approx_portfolio_value"
+          ]
+        },
+        {
+          "key": "assign_modules",
+          "title_de": "Module zuweisen",
+          "row_actions": [
+            "recommend_module_to_class"
+          ]
+        },
+        {
+          "key": "class_challenge",
+          "title_de": "Klassen-Challenge",
+          "examples": [
+            "10 begründete Entscheidungen als Klasse",
+            "5 Module gemeinsam abschließen"
+          ]
+        }
+      ],
+      "teacher_shell_tabs": [
+        "Klasse",
+        "Module",
+        "Beamer"
+      ]
+    },
+    "beamer": {
+      "route": "TeacherBeamerScreen",
+      "status": "adapt_existing_or_create",
+      "purpose": "Großbild-Web-Ansicht für Whiteboard/Beamer.",
+      "layout_rules": [
+        "große Schrift",
+        "wenige Daten pro Screen",
+        "nur Klassenaggregate",
+        "keine privaten Entscheidungsbegründungen",
+        "responsive width"
+      ],
+      "sections": [
+        "Klassenfortschritt",
+        "heutige Lernmission",
+        "Trainingsfortschritt",
+        "Top Lernfortschritte ohne Bloßstellung"
+      ]
+    }
+  },
+  "daily_workout": {
+    "name": "Daily Finance Workout",
+    "max_tasks_per_day": 3,
+    "task_order": [
+      "learning_mission",
+      "market_lab",
+      "practice_decision"
+    ],
+    "completion_rule": "Ein Tag gilt als abgeschlossen, wenn Lernmission, Markt-Labor und eine Übungsentscheidung abgeschlossen wurden. Die Übungsentscheidung kann buy, sell oder hold sein.",
+    "xp_rules": {
+      "learning_mission_completed": 20,
+      "market_lab_viewed": 5,
+      "practice_decision_completed": 15,
+      "hold_decision_completed": 15,
+      "daily_workout_completed_bonus": 10
+    },
+    "streak_policy": {
+      "use_soft_weekly_tracker": true,
+      "no_loss_language": true,
+      "no_guilt_copy": true,
+      "copy_examples_de": [
+        "Heute reichen 5 Minuten.",
+        "Du kannst mit Halten abschließen.",
+        "Morgen geht es weiter."
+      ]
+    },
+    "daily_plan_generation": {
+      "inputs": [
+        "user_role",
+        "learning_progress",
+        "assigned_module_id",
+        "current_positions",
+        "watchlist",
+        "diversification_state",
+        "last_asset_seen"
+      ],
+      "rules": [
+        "Wenn Lehrer ein Modul zugewiesen hat, priorisieren.",
+        "Wenn kein Modul zugewiesen ist, nächstes offenes Modul wählen.",
+        "Wenn der Nutzer eine Position hält, bevorzugt diese Position für Markt-Labor wählen.",
+        "Wenn keine Position vorhanden ist, ein bekanntes Unternehmen oder ETF als Lernbeispiel wählen.",
+        "Nicht denselben Asset-Impuls zu oft hintereinander wählen."
+      ]
+    }
+  },
+  "data_model": {
+    "notes": [
+      "Bestehende Haus-/Grundstücksdaten nicht sofort löschen, aber UI-seitig deaktivieren.",
+      "Alle Beträge in Cent oder Decimal speichern, konsistent mit bestehendem Code.",
+      "Hold-Entscheidungen erzeugen keinen Order-Datensatz mit Gebühr, aber einen Decision-/Journal-Datensatz."
+    ],
+    "enums": {
+      "decision_action": [
+        "buy",
+        "sell",
+        "hold"
+      ],
+      "reason_type": [
+        "long_term_growth",
+        "reduce_risk",
+        "not_enough_information",
+        "diversify",
+        "own_reason"
+      ],
+      "daily_task_status": [
+        "open",
+        "completed",
+        "locked",
+        "skipped_without_penalty"
+      ],
+      "asset_type": [
+        "stock",
+        "etf"
+      ]
+    },
+    "tables": {
+      "daily_plans": {
+        "purpose": "Tagesplan pro Nutzer",
+        "columns": {
+          "id": "uuid primary key",
+          "user_id": "uuid not null",
+          "date": "date not null",
+          "learning_module_id": "uuid nullable",
+          "market_asset_id": "uuid nullable",
+          "decision_required": "boolean default true",
+          "learning_completed_at": "timestamp nullable",
+          "market_viewed_at": "timestamp nullable",
+          "decision_completed_at": "timestamp nullable",
+          "created_at": "timestamp not null",
+          "updated_at": "timestamp not null"
+        },
+        "constraints": [
+          "unique(user_id, date)"
+        ]
+      },
+      "trade_decisions": {
+        "purpose": "Virtuelle Übungsentscheidungen inklusive Halten",
+        "columns": {
+          "id": "uuid primary key",
+          "user_id": "uuid not null",
+          "asset_id": "uuid not null",
+          "daily_plan_id": "uuid nullable",
+          "action": "decision_action not null",
+          "quantity": "integer not null default 0",
+          "virtual_price_cents": "integer nullable",
+          "fee_cents": "integer not null default 0",
+          "reason_type": "reason_type not null",
+          "reason_text": "text nullable",
+          "created_at": "timestamp not null"
+        },
+        "constraints": [
+          "if action is hold then quantity = 0 and fee_cents = 0",
+          "if action is buy or sell then quantity > 0 and fee_cents = 500",
+          "quantity must be integer"
+        ]
+      },
+      "decision_journal": {
+        "purpose": "Reflexionshistorie für Nutzer",
+        "columns": {
+          "id": "uuid primary key",
+          "user_id": "uuid not null",
+          "trade_decision_id": "uuid not null",
+          "summary_text": "text not null",
+          "created_at": "timestamp not null"
+        }
+      },
+      "learning_module_asset_links": {
+        "purpose": "Verknüpft Lernmodule mit passenden Markt-Labor-Aufgaben",
+        "columns": {
+          "id": "uuid primary key",
+          "learning_module_id": "uuid not null",
+          "asset_id": "uuid not null",
+          "prompt_de": "text nullable",
+          "prompt_en": "text nullable"
+        }
+      },
+      "user_weekly_training_status": {
+        "purpose": "Optionaler Cache für Wochenübersicht",
+        "columns": {
+          "id": "uuid primary key",
+          "user_id": "uuid not null",
+          "week_start_date": "date not null",
+          "mon_status": "daily_task_status",
+          "tue_status": "daily_task_status",
+          "wed_status": "daily_task_status",
+          "thu_status": "daily_task_status",
+          "fri_status": "daily_task_status",
+          "sat_status": "daily_task_status",
+          "sun_status": "daily_task_status"
+        }
+      }
+    }
+  },
+  "business_rules": {
+    "orders": [
+      "Orders sind nur virtuell.",
+      "Ordergebühr beträgt 5,00 € pro Kauf oder Verkauf.",
+      "Halten kostet keine Gebühr.",
+      "Keine Bruchstücke.",
+      "Käufe müssen Cash inklusive Gebühr prüfen.",
+      "Verkäufe müssen vorhandene Stückzahl prüfen.",
+      "Kurse sind stündlich und nicht als Realtime-Trading zu inszenieren.",
+      "Jede Kauf-/Verkaufsaktion muss vor Abschluss Gebühr und Virtualität anzeigen."
+    ],
+    "daily_decisions": [
+      "Buy, sell und hold sind gleichwertige Abschlussoptionen für den Tagesplan.",
+      "Eine Begründung ist Pflicht.",
+      "XP gibt es für begründete Entscheidung, nicht für möglichst viele Transaktionen.",
+      "Halten wird positiv formuliert: 'Das ist auch eine Entscheidung.'"
+    ],
+    "recommendations": [
+      "Keine Anlageempfehlungen.",
+      "Keine Kauf-/Verkaufsaufforderungen.",
+      "Assets werden als Lernbeispiele erklärt.",
+      "Markt-Labor darf Pro/Contra und Risiken erklären, aber keine Empfehlung abgeben."
+    ],
+    "child_safety": [
+      "Keine Werbung.",
+      "Kein Chat.",
+      "Keine offenen Profile.",
+      "Keine Brokerlinks.",
+      "Anzeigenamen statt Klarnamen.",
+      "Lehrer sehen nur Aggregate."
+    ]
+  },
+  "copy_de": {
+    "global": {
+      "claim": "Geld verstehen. Investieren üben.",
+      "virtual_note": "Alles ist virtuell. Es fließt kein echtes Geld.",
+      "no_advice_note": "Dies ist ein Lernbeispiel und keine Empfehlung."
+    },
+    "start": {
+      "headline": "Dein Finanztraining heute",
+      "subtitle": "Lernen, beobachten und entscheiden.",
+      "learning_card_title": "Lernmission",
+      "market_card_title": "Markt-Labor",
+      "decision_card_title": "Übungsentscheidung",
+      "learning_cta": "Lernen starten",
+      "market_cta": "Ansehen",
+      "decision_cta": "Entscheidung treffen",
+      "completed": "Training für heute abgeschlossen"
+    },
+    "decision": {
+      "choose_title": "Was möchtest du mit {assetName} machen?",
+      "buy": "Kaufen üben",
+      "sell": "Verkaufen üben",
+      "hold": "Halten",
+      "reason_title": "Warum entscheidest du dich so?",
+      "fee_notice": "Für diese Übungsorder fallen virtuell 5,00 € Gebühr an.",
+      "submit": "Entscheidung speichern",
+      "hold_success_title": "Du hast heute gehalten",
+      "hold_success_body": "Das ist auch eine Entscheidung. Du hast begründet, warum du nicht handelst.",
+      "order_success_title": "Übungsorder gespeichert",
+      "journal_created": "Eintrag im Entscheidungsjournal gespeichert"
+    },
+    "depot": {
+      "headline": "Depot",
+      "portfolio_title": "Musterdepot",
+      "cash": "Cash",
+      "positions": "Positionen",
+      "fee_title": "Übungsorder-Gebühr",
+      "fee_body": "5,00 € pro Kauf oder Verkauf",
+      "journal_title": "Entscheidungsjournal",
+      "empty_journal": "Noch keine Entscheidungen gespeichert."
+    },
+    "values": {
+      "headline": "Werte",
+      "subtitle": "Unternehmen und ETFs als Lernbeispiele.",
+      "all_values": "Alle Werte",
+      "market_lab_cta": "Zum Markt-Labor",
+      "watchlist_cta": "Zur Merkliste"
+    },
+    "league": {
+      "knowledge": "Wissensliga",
+      "training": "Trainingsliga",
+      "portfolio": "Musterdepot-Entwicklung"
+    }
+  },
+  "analytics_events": [
+    {
+      "name": "daily_workout_viewed",
+      "properties": [
+        "user_id",
+        "date",
+        "tasks_completed_count"
+      ]
+    },
+    {
+      "name": "learning_mission_started",
+      "properties": [
+        "user_id",
+        "module_id",
+        "daily_plan_id"
+      ]
+    },
+    {
+      "name": "learning_mission_completed",
+      "properties": [
+        "user_id",
+        "module_id",
+        "xp_awarded"
+      ]
+    },
+    {
+      "name": "market_lab_viewed",
+      "properties": [
+        "user_id",
+        "asset_id",
+        "daily_plan_id"
+      ]
+    },
+    {
+      "name": "practice_decision_started",
+      "properties": [
+        "user_id",
+        "asset_id",
+        "source"
+      ]
+    },
+    {
+      "name": "practice_decision_submitted",
+      "properties": [
+        "user_id",
+        "asset_id",
+        "action",
+        "reason_type",
+        "xp_awarded"
+      ]
+    },
+    {
+      "name": "hold_decision_submitted",
+      "properties": [
+        "user_id",
+        "asset_id",
+        "reason_type"
+      ]
+    },
+    {
+      "name": "daily_workout_completed",
+      "properties": [
+        "user_id",
+        "date",
+        "xp_awarded_total"
+      ]
+    },
+    {
+      "name": "house_ui_hidden",
+      "properties": [
+        "user_id",
+        "role"
+      ]
+    }
+  ],
+  "implementation_phases": [
+    {
+      "phase": 1,
+      "name": "IA und Copy",
+      "tasks": [
+        "Tab-Bar umbenennen: Zuhause -> Start, Entdecken -> Werte, Ligen -> Liga.",
+        "Haus-UI und Grundstücksauswahl per Feature-Flag ausblenden.",
+        "Brokerhafte Begriffe durch Trainingsbegriffe ersetzen.",
+        "Tab-Bar-Emojis durch konsistente Icons ersetzen."
+      ]
+    },
+    {
+      "phase": 2,
+      "name": "Startscreen Mission Board",
+      "tasks": [
+        "StartScreen mit Tagesstruktur bauen.",
+        "Cards für Lernmission, Markt-Labor und Übungsentscheidung erstellen.",
+        "Wochenstatus integrieren.",
+        "XP und Musterdepot als sekundäre Statuskarten zeigen."
+      ]
+    },
+    {
+      "phase": 3,
+      "name": "Entscheidungsflow",
+      "tasks": [
+        "Aktionen Kaufen üben, Verkaufen üben und Halten implementieren.",
+        "Begründungspflicht implementieren.",
+        "Gebührenanzeige vor Kauf/Verkauf implementieren.",
+        "Journal-Eintrag nach Abschluss erzeugen.",
+        "Halten als gültigen Abschluss inklusive XP speichern."
+      ]
+    },
+    {
+      "phase": 4,
+      "name": "Depot umbauen",
+      "tasks": [
+        "Depot als Musterdepot rahmen.",
+        "Positionen mit Ansehen- und Entscheiden-Aktion versehen.",
+        "Übungsorder-Gebühr sichtbar machen.",
+        "Entscheidungsjournal einbauen."
+      ]
+    },
+    {
+      "phase": 5,
+      "name": "Lernen und Werte verbinden",
+      "tasks": [
+        "Module mit Markt-Labor-Aufgaben verknüpfen.",
+        "Werte-Detailseiten neutraler und erklärender machen.",
+        "Keine Kaufempfehlungs- oder Hype-Copy verwenden."
+      ]
+    }
+  ],
+  "legacy_removal_checklist": [
+    "Keine Grundstücksauswahl im Onboarding.",
+    "Keine Haus-Karte im Startscreen.",
+    "Keine Haus-Stufe, kein Fundament/Wände/Dach/Ausbauten in aktiver UI.",
+    "Kein Tab oder Menüpunkt 'Zuhause' mit Hausmetapher.",
+    "Keine Emoji-Tab-Bar.",
+    "Keine primäre Visualisierung, die das Haus als Ziel zeigt."
+  ],
+  "acceptance_criteria": [
+    "Ein neuer Kids-Account sieht kein Haus und keine Grundstücksauswahl.",
+    "Der Startscreen zeigt Lernmission, Markt-Labor und Übungsentscheidung.",
+    "Der Startscreen zeigt Depotwert nur sekundär und mit virtuellem Kontext.",
+    "Ein Nutzer kann die Tagesaufgabe abschließen, ohne zu kaufen oder zu verkaufen.",
+    "Halten wird als gültige Entscheidung gespeichert und belohnt.",
+    "Jede Kauf-/Verkaufsaktion ist eindeutig als virtuelle Übungsorder gekennzeichnet.",
+    "Die 5 € Ordergebühr wird vor Abschluss jeder Kauf-/Verkaufsaktion sichtbar angezeigt.",
+    "Der Depotbereich heißt im UI Musterdepot oder erklärt sichtbar, dass er virtuell ist.",
+    "Der Wertebereich enthält neutrale Lerninformationen und keine Kaufempfehlungen.",
+    "Die Tab-Bar enthält keine Emojis.",
+    "Classroom zeigt nur Aggregate und keine Einzelorders oder privaten Begründungen.",
+    "Performance-Ranking ist nicht die einzige oder prominenteste Rangliste.",
+    "Alle Screens sind bei 375–390 px Breite bedienbar.",
+    "Alle interaktiven Elemente haben mindestens 44 px Tap-Ziel."
+  ],
+  "test_cases": [
+    {
+      "id": "TC-001",
+      "title": "Kids-Onboarding ohne Haus",
+      "given": "Nutzer wählt Rolle Kind",
+      "when": "Onboarding angezeigt wird",
+      "then": "keine Grundstücksauswahl und keine Hausoptionen sichtbar"
+    },
+    {
+      "id": "TC-002",
+      "title": "Startscreen zeigt Daily Workout",
+      "given": "Kids-Nutzer ist eingeloggt",
+      "when": "Start geöffnet wird",
+      "then": "Lernmission, Markt-Labor und Übungsentscheidung sind sichtbar"
+    },
+    {
+      "id": "TC-003",
+      "title": "Halten schließt Tagesentscheidung ab",
+      "given": "Nutzer hat Markt-Labor angesehen",
+      "when": "Nutzer wählt Halten und gibt Begründung ab",
+      "then": "Entscheidung wird gespeichert, XP vergeben, Journal-Eintrag erstellt und Tagesplan aktualisiert"
+    },
+    {
+      "id": "TC-004",
+      "title": "Kaufen zeigt Gebühr",
+      "given": "Nutzer wählt Kaufen üben",
+      "when": "Review-Schritt angezeigt wird",
+      "then": "5,00 € virtuelle Gebühr ist vor Speichern sichtbar"
+    },
+    {
+      "id": "TC-005",
+      "title": "Bruchstücke nicht erlaubt",
+      "given": "Nutzer gibt Menge 1.5 ein",
+      "when": "Kaufen oder Verkaufen validiert wird",
+      "then": "Validierungsfehler wird angezeigt"
+    },
+    {
+      "id": "TC-006",
+      "title": "Werte-Detail ohne Empfehlung",
+      "given": "Nutzer öffnet Apple Detailseite",
+      "when": "Content angezeigt wird",
+      "then": "keine Copy wie Jetzt kaufen, Kaufchance oder Empfehlung ist sichtbar"
+    },
+    {
+      "id": "TC-007",
+      "title": "Teacher sieht nur Aggregate",
+      "given": "Lehrer öffnet Klasse",
+      "when": "Schülerliste angezeigt wird",
+      "then": "Module, XP und ungefährer Depotwert sichtbar; keine Einzelorders oder privaten Gründe sichtbar"
+    }
+  ],
+  "claude_code_prompt": {
+    "role": "You are Claude Code working in the Hofino React Native / react-native-web codebase.",
+    "instruction_de": "Setze diese Spezifikation schrittweise um. Beginne mit Feature-Flags, Navigation und Umbenennungen. Danach baue StartScreen als Mission Board, den Entscheidungsflow mit buy/sell/hold inklusive Begründung und das Musterdepot mit Entscheidungsjournal. Entferne Haus- und Grundstücks-UI aus aktiven Screens, lösche bestehende Daten aber nicht ohne gesonderte Freigabe.",
+    "priority_order": [
+      "feature flags and legacy hide",
+      "navigation rename",
+      "StartScreen Mission Board",
+      "DecisionFlow buy/sell/hold with reasons",
+      "Depot Musterdepot + Journal",
+      "Values rename/refactor",
+      "Classroom aggregate check",
+      "tests"
+    ]
+  }
+}
