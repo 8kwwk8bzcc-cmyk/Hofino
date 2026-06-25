@@ -11,8 +11,7 @@ import {
 } from "react-native";
 import { StoreProvider, useStore } from "./store/store.js";
 import { Onboarding, ProfileSetup } from "./screens/Onboarding.js";
-import { Home } from "./screens/Home.js";
-import { AdultHome } from "./screens/AdultHome.js";
+import { Start } from "./screens/Start.js";
 import { Discover } from "./screens/Discover.js";
 import { Depot } from "./screens/Depot.js";
 import { Rankings } from "./screens/Rankings.js";
@@ -102,7 +101,7 @@ function Main() {
       <TopBar brand={isAdult ? t("brand.adult") : "Hofino"} />
       <NavContext.Provider value={setTab}>
         <View style={styles.screen}>
-          {tab === "start" && (isAdult ? <AdultHome /> : <Home />)}
+          {tab === "start" && <Start />}
           {tab === "learn" && <LearnPlus />}
           {tab === "depot" && <Depot />}
           {tab === "values" && <Discover />}

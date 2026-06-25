@@ -64,6 +64,20 @@ export interface MyClass {
   code: string;
 }
 
+export type WeekDayStatus = "future" | "today_open" | "completed" | "missed";
+
+export interface DailyPlan {
+  konzeptId: string | null;
+  konzeptTitel: string | null;
+  instrumentId: string | null;
+  instrumentName: string | null;
+  instrumentTicker: string | null;
+  learningDone: boolean;
+  marketViewed: boolean;
+  decisionDone: boolean;
+  woche: { date: string; status: WeekDayStatus }[];
+}
+
 export interface ChildSummary {
   profileId: string;
   displayName: string;
@@ -179,6 +193,9 @@ interface StoreApi {
   assignKonzept: (classId: string, konzeptId: string) => Promise<void>;
   unassignKonzept: (classId: string, konzeptId: string) => Promise<void>;
   fetchMyAssignments: () => Promise<string[]>;
+  fetchDailyPlan: () => Promise<DailyPlan | null>;
+  markMarketViewed: () => Promise<void>;
+  submitHold: (reason: string, reasonText?: string) => Promise<{ ok: boolean; reason?: string }>;
   lang: Lang;
   setLang: (lang: Lang) => void;
   t: (key: string, params?: Record<string, string | number>) => string;
@@ -575,6 +592,35 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
     return (data ?? []).map((r) => r.konzept_id as string);
   }, []);
 
+  // Daily Finance Workout: Tagesplan holen/erzeugen, Schritte markieren.
+  const fetchDailyPlan = useCallback<StoreApi["fetchDailyPlan"]>(async () => {
+    const { data, error } = await supabase.rpc("tagesplan_heute");
+    if (error || !data?.ok) return null;
+    const d = data as Record<string, unknown>;
+    return {
+      konzeptId: (d.konzept_id as string) ?? null,
+      konzeptTitel: (d.konzept_titel as string) ?? null,
+      instrumentId: (d.instrument_id as string) ?? null,
+      instrumentName: (d.instrument_name as string) ?? null,
+      instrumentTicker: (d.instrument_ticker as string) ?? null,
+      learningDone: Boolean(d.learning_done),
+      marketViewed: Boolean(d.market_viewed),
+      decisionDone: Boolean(d.decision_done),
+      woche: ((d.woche as { date: string; status: WeekDayStatus }[]) ?? []),
+    };
+  }, []);
+
+  const markMarketViewed = useCallback<StoreApi["markMarketViewed"]>(async () => {
+    await supabase.rpc("tagesplan_markt_gesehen");
+  }, []);
+
+  const submitHold = useCallback<StoreApi["submitHold"]>(async (reason, reasonText) => {
+    const { data, error } = await supabase.rpc("tagesentscheidung_halten", { p_reason: reason, p_reason_text: reasonText ?? null });
+    if (error) return { ok: false, reason: error.message };
+    const d = data as { ok: boolean; reason?: string };
+    return { ok: Boolean(d?.ok), reason: d?.reason };
+  }, []);
+
   const portfolio: Portfolio = useMemo(
     () => ({
       cashCents: data.cashCents,
@@ -665,6 +711,9 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
     assignKonzept,
     unassignKonzept,
     fetchMyAssignments,
+    fetchDailyPlan,
+    markMarketViewed,
+    submitHold,
     lang,
     setLang,
     t,
