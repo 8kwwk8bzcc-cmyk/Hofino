@@ -30,6 +30,15 @@ export const font = {
   small: 13,
 } as const;
 
+// Schriftfamilien (geladen in App.tsx via expo-google-fonts).
+// Space Grotesk = Display/Überschriften/Zahlen, Inter = Fließtext.
+export const fonts = {
+  display: "SpaceGrotesk_700Bold",
+  displaySemi: "SpaceGrotesk_600SemiBold",
+  body: "Inter_500Medium",
+  bodyBold: "Inter_700Bold",
+} as const;
+
 // Weiche Karten-Schatten (react-native-web bildet shadow* auf box-shadow ab).
 export const shadow = {
   card: {

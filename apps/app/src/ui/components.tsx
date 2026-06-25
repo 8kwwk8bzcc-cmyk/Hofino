@@ -1,6 +1,6 @@
 import React from "react";
 import { Pressable, StyleSheet, Text, View, type ViewStyle } from "react-native";
-import { colors, font, radius, shadow, space } from "../theme.js";
+import { colors, font, fonts, radius, shadow, space } from "../theme.js";
 
 export function Card({ children, style }: { children: React.ReactNode; style?: ViewStyle }) {
   return <View style={[styles.card, style]}>{children}</View>;
@@ -118,19 +118,19 @@ const styles = StyleSheet.create({
     gap: space.sm,
     ...shadow.card,
   },
-  h1: { fontSize: font.h1, fontWeight: "800", color: colors.text, lineHeight: 38 },
-  h2: { fontSize: font.h2, fontWeight: "700", color: colors.text, lineHeight: 30 },
-  body: { fontSize: font.body, color: colors.text, lineHeight: 24 },
-  muted: { fontSize: font.small, color: colors.textMuted, lineHeight: 18 },
+  h1: { fontSize: font.h1, fontFamily: fonts.display, color: colors.text, lineHeight: 38 },
+  h2: { fontSize: font.h2, fontFamily: fonts.display, color: colors.text, lineHeight: 30 },
+  body: { fontSize: font.body, fontFamily: fonts.body, color: colors.text, lineHeight: 24 },
+  muted: { fontSize: font.small, fontFamily: fonts.body, color: colors.textMuted, lineHeight: 18 },
   btn: { paddingVertical: space.lg, paddingHorizontal: space.lg, borderRadius: radius.lg, alignItems: "center" },
   btnPrimary: { backgroundColor: colors.primary },
   btnSecondary: { backgroundColor: colors.surface, borderWidth: 1, borderColor: colors.primary },
   btnGhost: { backgroundColor: "transparent" },
   btnDisabled: { opacity: 0.45 },
   btnPressed: { opacity: 0.85 },
-  btnText: { color: "#FFFFFF", fontWeight: "700", fontSize: font.body },
+  btnText: { color: "#FFFFFF", fontFamily: fonts.bodyBold, fontSize: font.body },
   pill: { backgroundColor: colors.background, borderRadius: radius.pill, paddingVertical: 4, paddingHorizontal: 10, alignSelf: "flex-start" },
-  pillText: { fontSize: font.small, color: colors.text, fontWeight: "600" },
+  pillText: { fontSize: font.small, color: colors.text, fontFamily: fonts.bodyBold },
   progressTrack: { height: 10, backgroundColor: colors.border, borderRadius: radius.pill, overflow: "hidden" },
   progressFill: { height: "100%", backgroundColor: colors.secondary },
   logo: { backgroundColor: colors.primary, alignItems: "center", justifyContent: "center" },

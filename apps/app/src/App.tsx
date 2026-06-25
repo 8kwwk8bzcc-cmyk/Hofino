@@ -9,6 +9,8 @@ import {
   Text,
   View,
 } from "react-native";
+import { useFonts, Inter_400Regular, Inter_500Medium, Inter_700Bold } from "@expo-google-fonts/inter";
+import { SpaceGrotesk_600SemiBold, SpaceGrotesk_700Bold } from "@expo-google-fonts/space-grotesk";
 import { StoreProvider, useStore } from "./store/store.js";
 import { Onboarding, ProfileSetup } from "./screens/Onboarding.js";
 import { Start } from "./screens/Start.js";
@@ -177,12 +179,25 @@ function Gate() {
 }
 
 export default function App() {
+  const [fontsLoaded] = useFonts({
+    Inter_400Regular,
+    Inter_500Medium,
+    Inter_700Bold,
+    SpaceGrotesk_600SemiBold,
+    SpaceGrotesk_700Bold,
+  });
   return (
     <SafeAreaView style={styles.safe}>
       <StatusBar barStyle="dark-content" />
-      <StoreProvider>
-        <Gate />
-      </StoreProvider>
+      {fontsLoaded ? (
+        <StoreProvider>
+          <Gate />
+        </StoreProvider>
+      ) : (
+        <View style={styles.center}>
+          <ActivityIndicator color={colors.primary} />
+        </View>
+      )}
     </SafeAreaView>
   );
 }
