@@ -276,20 +276,10 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
     }
     const profileId = profileRes.data.id as string;
 
-    // Jüngste Kurs-Charge bestimmen.
-    const latest = await supabase
-      .from("price_snapshots")
-      .select("as_of")
-      .order("as_of", { ascending: false })
-      .limit(1);
-    const asOf = latest.data?.[0]?.as_of as string | undefined;
-
     const [instrumentsRes, pricesRes, portfolioRes, holdingsRes, watchRes, learnRes, pointsRes, grantsRes, ordersRes, pendingRes, fortschrittRes, statusRes, korrektRes] =
       await Promise.all([
         supabase.from("instruments").select("id, ticker, name, type, sector, country"),
-        asOf
-          ? supabase.from("price_snapshots").select("instrument_id, price_cents").eq("as_of", asOf)
-          : Promise.resolve({ data: [] as { instrument_id: string; price_cents: number }[] }),
+        supabase.from("prices").select("instrument_id, price_cents"),
         supabase.from("portfolios").select("cash_cents").eq("owner_profile_id", profileId).maybeSingle(),
         supabase.from("holdings").select("instrument_id, quantity, avg_cost_cents"),
         supabase.from("watchlist").select("instrument_id"),
