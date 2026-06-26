@@ -109,7 +109,7 @@ const de: Dict = {
   "marketlab.observeHint": "Beobachte in Ruhe – du musst heute nichts kaufen. Halten ist auch eine Entscheidung.",
   "discover.whyExample": "Warum ist das ein Lernbeispiel?",
   "discover.whyExampleBody": "Bekannte Werte helfen dir, Unternehmen, Chancen und Risiken zu verstehen – ganz ohne echtes Geld.",
-  "discover.practiceVia": "Käufe und Verkäufe übst du über deine tägliche Übungsentscheidung auf „Start“.",
+  "discover.practiceVia": "Hier kannst du jederzeit Kaufen üben – oder geführt über deine tägliche Übungsentscheidung auf „Start“.",
   "tab.family": "Familie",
   "tab.link": "Verknüpfen",
   "tab.class": "Klasse",
@@ -140,6 +140,7 @@ const de: Dict = {
   "discover.etfCosts": "Kosten",
   "discover.noProfile": "Für dieses Instrument liegt noch kein Profil vor (kommt mit weiteren Inhalten).",
   "discover.buyHeading": "Kaufen üben",
+  "discover.buySafety": "Übung mit virtuellem Geld – keine Anlageempfehlung, kein echtes Geld.",
   "inst.stock": "Aktie",
   "inst.etf": "ETF",
   // Handeln (TradePanel)
@@ -405,7 +406,7 @@ const en: Dict = {
   "marketlab.observeHint": "Observe calmly – you don't have to buy anything today. Holding is a decision too.",
   "discover.whyExample": "Why is this a learning example?",
   "discover.whyExampleBody": "Well-known assets help you understand companies, opportunities and risks – without any real money.",
-  "discover.practiceVia": "You practice buying and selling via your daily practice decision on “Start”.",
+  "discover.practiceVia": "You can practice buying here any time – or in a guided way via your daily practice decision on “Start”.",
   "tab.family": "Family",
   "tab.link": "Link",
   "tab.class": "Class",
@@ -436,6 +437,7 @@ const en: Dict = {
   "discover.etfCosts": "Costs",
   "discover.noProfile": "No profile for this asset yet (coming with more content).",
   "discover.buyHeading": "Practice buying",
+  "discover.buySafety": "Practice with virtual money – not investment advice, no real money.",
   "inst.stock": "Stock",
   "inst.etf": "ETF",
   // Trading

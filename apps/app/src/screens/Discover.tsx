@@ -1,15 +1,17 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { formatEuros } from "@hofino/core";
 import { COMPANY_PROFILES, ETF_PROFILES } from "@hofino/content";
 import { useStore } from "../store/store.js";
 import { Body, Button, Card, H1, H2, Muted, Pill } from "../ui/components.js";
+import { TradePanel } from "../ui/TradePanel.js";
 import { font, fonts, space, type Palette } from "../theme.js";
 import { useThemedStyles } from "../theme/ThemeProvider.js";
 
 function Detail({ id, onBack }: { id: string; onBack: () => void }) {
   const { prices, state, toggleWatch, instrumentById, t } = useStore();
   const styles = useThemedStyles(makeStyles);
+  const [buyOpen, setBuyOpen] = useState(false);
   const inst = instrumentById.get(id)!;
   const company = COMPANY_PROFILES.find((p) => p.ticker === inst.ticker);
   const etf = ETF_PROFILES.find((p) => p.ticker === inst.ticker);
@@ -71,6 +73,21 @@ function Detail({ id, onBack }: { id: string; onBack: () => void }) {
         <Body>{t("discover.whyExampleBody")}</Body>
         <Muted>{t("discover.practiceVia")}</Muted>
       </Card>
+
+      <Card tone="softBlue">
+        <Muted>{t("discover.buySafety")}</Muted>
+      </Card>
+      <Button
+        title={t("discover.buyHeading")}
+        onPress={() => setBuyOpen((o) => !o)}
+        variant="accent"
+        testID="buy-open"
+      />
+      {buyOpen && (
+        <Card>
+          <TradePanel instrumentId={id} mode="buy" />
+        </Card>
+      )}
     </ScrollView>
   );
 }
@@ -104,10 +121,24 @@ function Row({ id, onOpen }: { id: string; onOpen: (id: string) => void }) {
   );
 }
 
-export function Discover() {
+export function Discover({
+  focusInstrument,
+  onFocusConsumed,
+}: {
+  focusInstrument?: string;
+  onFocusConsumed?: () => void;
+} = {}) {
   const { state, instruments, t } = useStore();
   const styles = useThemedStyles(makeStyles);
   const [selected, setSelected] = useState<string | null>(null);
+
+  // „Ansehen" aus dem Depot öffnet das konkrete Instrument direkt.
+  useEffect(() => {
+    if (focusInstrument) {
+      setSelected(focusInstrument);
+      onFocusConsumed?.();
+    }
+  }, [focusInstrument, onFocusConsumed]);
 
   if (selected) return <Detail id={selected} onBack={() => setSelected(null)} />;
 

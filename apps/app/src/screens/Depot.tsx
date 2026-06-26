@@ -92,7 +92,12 @@ export function Depot() {
                   </View>
                 </Pressable>
                 <View style={styles.posActions}>
-                  <Button title={t("depot.view")} variant="ghost" onPress={() => go("values")} testID={`view-${h.instrumentId}`} />
+                  <Button
+                    title={t("depot.view")}
+                    variant="ghost"
+                    onPress={() => go("values", { instrumentId: h.instrumentId })}
+                    testID={`view-${h.instrumentId}`}
+                  />
                   <Button
                     title={t("trade.sell")}
                     variant="secondary"

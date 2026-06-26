@@ -42,7 +42,7 @@ import {
   type IconProps,
 } from "./ui/icons.js";
 import { translate } from "./i18n.js";
-import { NavContext } from "./nav.js";
+import { NavContext, type NavOpts } from "./nav.js";
 import { fonts, space, type Palette } from "./theme.js";
 import { ThemeProvider, useColors, useTheme, useThemedStyles } from "./theme/ThemeProvider.js";
 
@@ -107,18 +107,26 @@ function TabBar<T extends string>({
 function Main() {
   const { state, t } = useStore();
   const [tab, setTab] = useState<TabId>("start");
+  const [focusInstrument, setFocusInstrument] = useState<string | undefined>(undefined);
   const isAdult = state.role === "adult";
   const s = useThemedStyles(makeStyles);
+
+  const navigate = (id: TabId, opts?: NavOpts) => {
+    setTab(id);
+    if (opts?.instrumentId) setFocusInstrument(opts.instrumentId);
+  };
 
   return (
     <View style={s.shell}>
       <TopBar brand={isAdult ? t("brand.adult") : "Hofino"} />
-      <NavContext.Provider value={setTab}>
+      <NavContext.Provider value={navigate}>
         <View style={s.screen}>
           {tab === "start" && <Start />}
           {tab === "learn" && <LearnPlus />}
           {tab === "depot" && <Depot />}
-          {tab === "values" && <Discover />}
+          {tab === "values" && (
+            <Discover focusInstrument={focusInstrument} onFocusConsumed={() => setFocusInstrument(undefined)} />
+          )}
           {tab === "league" && <Rankings />}
         </View>
       </NavContext.Provider>
