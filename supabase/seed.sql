@@ -46,6 +46,42 @@ insert into instruments (type, name, ticker, sector, country, provider_symbol) v
   ('stock', 'Ferrari',               'RACE', 'Consumer Discretionary', 'IT',     'RACE'),
   ('stock', 'Airbus',                'AIR',  'Industrials',            'FR',     'AIR:XETR'),
   ('stock', 'ASML',                  'ASML', 'Technology',             'NL',     'ASML:XETR'),
+  ('stock', 'JPMorgan Chase',        'JPM',  'Financials',             'US',     'JPM'),
+  ('stock', 'Walmart',               'WMT',  'Consumer Staples',       'US',     'WMT'),
+  ('stock', 'Home Depot',            'HD',   'Consumer Discretionary', 'US',     'HD'),
+  ('stock', 'Costco',                'COST', 'Consumer Staples',       'US',     'COST'),
+  ('stock', 'Procter & Gamble',      'PG',   'Consumer Staples',       'US',     'PG'),
+  ('stock', 'Johnson & Johnson',     'JNJ',  'Health Care',            'US',     'JNJ'),
+  ('stock', 'Pfizer',                'PFE',  'Health Care',            'US',     'PFE'),
+  ('stock', 'Eli Lilly',             'LLY',  'Health Care',            'US',     'LLY'),
+  ('stock', 'Exxon Mobil',           'XOM',  'Energy',                 'US',     'XOM'),
+  ('stock', 'Chevron',               'CVX',  'Energy',                 'US',     'CVX'),
+  ('stock', 'Boeing',                'BA',   'Industrials',            'US',     'BA'),
+  ('stock', 'Caterpillar',           'CAT',  'Industrials',            'US',     'CAT'),
+  ('stock', 'Salesforce',            'CRM',  'Technology',             'US',     'CRM'),
+  ('stock', 'Adobe',                 'ADBE', 'Technology',             'US',     'ADBE'),
+  ('stock', 'Broadcom',              'AVGO', 'Technology',             'US',     'AVGO'),
+  ('stock', 'Cisco',                 'CSCO', 'Technology',             'US',     'CSCO'),
+  ('stock', 'Qualcomm',              'QCOM', 'Technology',             'US',     'QCOM'),
+  ('stock', 'Spotify',               'SPOT', 'Communication Services', 'US',     'SPOT'),
+  ('stock', 'Shopify',               'SHOP', 'Technology',             'CA',     'SHOP'),
+  ('stock', 'Alibaba',               'BABA', 'Consumer Discretionary', 'CN',     'BABA'),
+  ('stock', 'Deutsche Bank',         'DBK',  'Financials',             'DE',     'DBK:XETR'),
+  ('stock', 'DHL Group',             'DHL',  'Industrials',            'DE',     'DHL:XETR'),
+  ('stock', 'Infineon',              'IFX',  'Technology',             'DE',     'IFX:XETR'),
+  ('stock', 'Beiersdorf',            'BEI',  'Consumer Staples',       'DE',     'BEI:XETR'),
+  ('stock', 'Henkel',                'HEN3', 'Consumer Staples',       'DE',     'HEN3:XETR'),
+  ('stock', 'RWE',                   'RWE',  'Utilities',              'DE',     'RWE:XETR'),
+  ('stock', 'E.ON',                  'EOAN', 'Utilities',              'DE',     'EOAN:XETR'),
+  ('stock', 'Novartis',              'NOVN', 'Health Care',            'CH',     'NOVN'),
+  ('stock', 'Roche',                 'ROG',  'Health Care',            'CH',     'ROG'),
+  ('stock', 'TotalEnergies',         'TTE',  'Energy',                 'FR',     'TTE'),
+  ('stock', 'Inditex',               'ITX',  'Consumer Discretionary', 'ES',     'ITX'),
+  ('stock', 'Shell',                 'SHEL', 'Energy',                 'GB',     'SHEL'),
+  ('stock', 'Unilever',              'ULVR', 'Consumer Staples',       'GB',     'ULVR'),
+  ('stock', 'AstraZeneca',           'AZN',  'Health Care',            'GB',     'AZN'),
+  ('stock', 'L''Oréal',              'OR',   'Consumer Staples',       'FR',     'OR'),
+  ('stock', 'Novo Nordisk',          'NOVO-B','Health Care',           'DK',     'NOVO-B'),
   ('etf',   'iShares Core MSCI World',          'IWDA', 'Welt',             'Global', 'IWDA:XETR'),
   ('etf',   'iShares Core S&P 500',             'CSPX', 'USA',              'US',     'CSPX:XETR'),
   ('etf',   'iShares Core MSCI EM IMI',         'EIMI', 'Schwellenländer',  'Global', 'EIMI:XETR');
@@ -67,7 +103,17 @@ select id,
     when 'AMD' then 14000 when 'ORCL' then 16000 when 'UBER' then 7000 when 'ABNB' then 12000
     when 'BMW' then 8500 when 'P911' then 4500 when 'DTE' then 2800 when 'BAS' then 4500
     when 'BAYN' then 2700 when 'PUM' then 3500 when 'ZAL' then 3000 when 'RACE' then 38000
-    when 'AIR' then 16000 when 'ASML' then 75000 else 10000
+    when 'AIR' then 16000 when 'ASML' then 75000
+    when 'JPM' then 22000 when 'WMT' then 9000 when 'HD' then 38000 when 'COST' then 90000
+    when 'PG' then 16000 when 'JNJ' then 15000 when 'PFE' then 2800 when 'LLY' then 90000
+    when 'XOM' then 11000 when 'CVX' then 15000 when 'BA' then 18000 when 'CAT' then 35000
+    when 'CRM' then 28000 when 'ADBE' then 50000 when 'AVGO' then 16000 when 'CSCO' then 5500
+    when 'QCOM' then 17000 when 'SPOT' then 45000 when 'SHOP' then 9000 when 'BABA' then 9000
+    when 'DBK' then 1600 when 'DHL' then 4000 when 'IFX' then 3300 when 'BEI' then 13000
+    when 'HEN3' then 7500 when 'RWE' then 3300 when 'EOAN' then 1200 when 'NOVN' then 9500
+    when 'ROG' then 25000 when 'TTE' then 6000 when 'ITX' then 4500 when 'SHEL' then 3000
+    when 'ULVR' then 4800 when 'AZN' then 12000 when 'OR' then 38000 when 'NOVO-B' then 9000
+    else 10000
   end,
   now(), 'simulated'
 from instruments;
