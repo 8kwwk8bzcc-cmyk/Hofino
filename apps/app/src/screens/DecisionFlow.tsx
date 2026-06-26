@@ -3,7 +3,8 @@ import { Pressable, ScrollView, StyleSheet, Text, TextInput, View } from "react-
 import { formatEuros } from "@hofino/core";
 import { useStore } from "../store/store.js";
 import { Body, Button, Card, H1, H2, Muted, Pill } from "../ui/components.js";
-import { colors, font, fonts, radius, space } from "../theme.js";
+import { font, fonts, radius, space, type Palette } from "../theme.js";
+import { useColors, useThemedStyles } from "../theme/ThemeProvider.js";
 
 type Action = "buy" | "sell" | "hold";
 type Step = "action" | "quantity" | "reason" | "review" | "done";
@@ -22,6 +23,8 @@ export function DecisionFlow({
   onDone: () => void;
 }) {
   const { t, prices, state, submitDecision } = useStore();
+  const c = useColors();
+  const styles = useThemedStyles(makeStyles);
   const [step, setStep] = useState<Step>("action");
   const [action, setAction] = useState<Action>("hold");
   const [qty, setQty] = useState("1");
@@ -96,7 +99,7 @@ export function DecisionFlow({
             value={qty}
             onChangeText={setQty}
             keyboardType="number-pad"
-            placeholderTextColor={colors.textMuted}
+            placeholderTextColor={c.muted}
             style={styles.input}
           />
           <Muted>{t("decision.feeNotice")}</Muted>
@@ -124,7 +127,7 @@ export function DecisionFlow({
               value={reasonText}
               onChangeText={setReasonText}
               placeholder={t("decision.ownPlaceholder")}
-              placeholderTextColor={colors.textMuted}
+              placeholderTextColor={c.muted}
               style={styles.input}
               multiline
             />
@@ -169,19 +172,20 @@ export function DecisionFlow({
   );
 }
 
-const styles = StyleSheet.create({
-  container: { padding: space.lg, gap: space.lg, backgroundColor: colors.background },
-  input: {
-    borderWidth: 1, borderColor: colors.border, borderRadius: radius.md, padding: space.md,
-    fontSize: font.body, color: colors.text, backgroundColor: colors.surface,
-  },
-  total: { fontSize: font.h3, fontWeight: "800", color: colors.text, fontFamily: fonts.display },
-  err: { color: colors.danger, fontWeight: "600", fontSize: font.small, fontFamily: fonts.body },
-  reason: { padding: space.md, borderRadius: radius.md, borderWidth: 1, borderColor: colors.border, backgroundColor: colors.surface },
-  reasonActive: { borderColor: colors.secondary, backgroundColor: "#F0FDF4" },
-  reasonText: { fontSize: font.body, color: colors.text, fontFamily: fonts.body },
-  reasonTextActive: { fontWeight: "700", color: colors.text, fontFamily: fonts.bodyBold },
-  row: { flexDirection: "row", justifyContent: "space-between", alignItems: "center" },
-  val: { fontSize: font.body, fontWeight: "700", color: colors.text, fontFamily: fonts.display },
-  doneCard: { borderColor: colors.secondary, backgroundColor: "#F0FDF4" },
-});
+const makeStyles = (c: Palette) =>
+  StyleSheet.create({
+    container: { padding: space.lg, gap: space.lg, backgroundColor: c.bg },
+    input: {
+      borderWidth: 1, borderColor: c.border, borderRadius: radius.md, padding: space.md,
+      fontSize: font.body, color: c.text, backgroundColor: c.surface,
+    },
+    total: { fontSize: font.h3, fontWeight: "800", color: c.text, fontFamily: fonts.display },
+    err: { color: c.danger, fontWeight: "600", fontSize: font.small, fontFamily: fonts.body },
+    reason: { padding: space.md, borderRadius: radius.md, borderWidth: 1, borderColor: c.border, backgroundColor: c.surface },
+    reasonActive: { borderColor: c.green, backgroundColor: c.mint },
+    reasonText: { fontSize: font.body, color: c.text, fontFamily: fonts.body },
+    reasonTextActive: { fontWeight: "700", color: c.text, fontFamily: fonts.bodyBold },
+    row: { flexDirection: "row", justifyContent: "space-between", alignItems: "center" },
+    val: { fontSize: font.body, fontWeight: "700", color: c.text, fontFamily: fonts.display },
+    doneCard: { borderColor: c.green, backgroundColor: c.mint },
+  });

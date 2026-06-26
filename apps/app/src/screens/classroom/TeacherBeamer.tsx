@@ -4,11 +4,13 @@ import { rank } from "@hofino/core";
 import { MODULES } from "@hofino/content";
 import { useStore, type ClassOverviewRow } from "../../store/store.js";
 import { Button } from "../../ui/components.js";
-import { colors, fonts, space } from "../../theme.js";
+import { fonts, space, type Palette } from "../../theme.js";
+import { useThemedStyles } from "../../theme/ThemeProvider.js";
 
 // Große Klassenansicht für den Beamer.
 export function TeacherBeamer() {
   const { fetchTeacherClass, fetchClassOverview, t } = useStore();
+  const styles = useThemedStyles(makeStyles);
   const [title, setTitle] = useState("");
   const [rows, setRows] = useState<ClassOverviewRow[]>([]);
   const [empty, setEmpty] = useState(false);
@@ -60,13 +62,14 @@ export function TeacherBeamer() {
   );
 }
 
-const styles = StyleSheet.create({
-  container: { padding: space.xl, gap: space.lg, backgroundColor: colors.primary, flexGrow: 1 },
-  center: { flex: 1, alignItems: "center", justifyContent: "center", backgroundColor: colors.primary },
-  title: { fontSize: 40, fontWeight: "800", fontFamily: fonts.bodyBold, color: "#FFFFFF" },
-  big: { fontSize: 40, fontWeight: "800", fontFamily: fonts.display, color: "#FFFFFF" },
-  row: { flexDirection: "row", alignItems: "center", gap: space.lg, borderBottomWidth: 1, borderBottomColor: "rgba(255,255,255,0.2)", paddingVertical: space.md },
-  rank: { fontSize: 40, fontWeight: "800", fontFamily: fonts.bodyBold, color: colors.accent, width: 60 },
-  name: { fontSize: 36, fontWeight: "700", fontFamily: fonts.bodyBold, color: "#FFFFFF", flex: 1 },
-  meta: { fontSize: 28, color: colors.secondary, fontWeight: "700", fontFamily: fonts.bodyBold },
-});
+const makeStyles = (c: Palette) =>
+  StyleSheet.create({
+    container: { padding: space.xl, gap: space.lg, backgroundColor: c.navy, flexGrow: 1 },
+    center: { flex: 1, alignItems: "center", justifyContent: "center", backgroundColor: c.navy },
+    title: { fontSize: 40, fontWeight: "800", fontFamily: fonts.bodyBold, color: "#FFFFFF" },
+    big: { fontSize: 40, fontWeight: "800", fontFamily: fonts.display, color: "#FFFFFF" },
+    row: { flexDirection: "row", alignItems: "center", gap: space.lg, borderBottomWidth: 1, borderBottomColor: "rgba(255,255,255,0.2)", paddingVertical: space.md },
+    rank: { fontSize: 40, fontWeight: "800", fontFamily: fonts.bodyBold, color: c.gold, width: 60 },
+    name: { fontSize: 36, fontWeight: "700", fontFamily: fonts.bodyBold, color: "#FFFFFF", flex: 1 },
+    meta: { fontSize: 28, color: c.green, fontWeight: "700", fontFamily: fonts.bodyBold },
+  });

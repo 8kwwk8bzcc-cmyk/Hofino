@@ -1,0 +1,59 @@
+/* Hofino · Corporate Design "Grünanlage" — Token-Variablen (Web / react-native-web).
+   Verbindlich für alle neuen und bestehenden Oberflächen. */
+:root {
+  /* Farben — Light (Standard) */
+  --color-navy: #0E2A47;
+  --color-navy-soft: #1C3D5C;
+  --color-green: #1F9D6B;
+  --color-gold: #E7BD57;
+  --color-bg: #F2F6FA;
+  --color-surface: #FFFFFF;
+  --color-soft-blue: #E8F0FA;
+  --color-mint: #E4F4EC;
+  --color-gold-soft: #FBF1D6;
+  --color-text: #0E2A47;
+  --color-muted: #5C7184;
+  --color-faint: #9AA7B4;
+  --color-border: #DCE6EE;
+  --color-danger: #D96B6B;
+  --color-success: #1F8A5B;
+
+  /* Radien */
+  --radius-sm: 10px;
+  --radius-button: 14px;
+  --radius-input: 16px;
+  --radius-card: 22px;
+  --radius-pill: 999px;
+
+  /* Spacing (4er) */
+  --space-1: 4px; --space-2: 8px; --space-3: 12px; --space-4: 16px;
+  --space-5: 20px; --space-6: 24px; --space-8: 32px; --space-10: 40px;
+
+  /* Schatten */
+  --shadow-sm: 0 1px 3px rgba(20,40,60,.08);
+  --shadow-md: 0 8px 24px rgba(20,40,60,.08);
+  --shadow-lg: 0 20px 48px rgba(20,40,60,.12);
+
+  /* Typografie */
+  --font-display: 'Space Grotesk';
+  --font-body: 'Hanken Grotesk';
+}
+
+/* Dark Mode — gleiche Token-Namen, andere Werte (ein Theme-Switch). */
+:root[data-theme="dark"] {
+  --color-navy: #34B97E;
+  --color-navy-soft: #173049;
+  --color-green: #34B97E;
+  --color-gold: #E7BD57;
+  --color-bg: #0A1A2C;
+  --color-surface: #12263C;
+  --color-soft-blue: #173049;
+  --color-mint: rgba(52,185,126,.14);
+  --color-gold-soft: rgba(231,189,87,.16);
+  --color-text: #EAF1F8;
+  --color-muted: #8FA6BC;
+  --color-faint: #6B829A;
+  --color-border: #244763;
+  --color-danger: #E58A8A;
+  --color-success: #34B97E;
+}

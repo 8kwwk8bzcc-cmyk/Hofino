@@ -3,7 +3,8 @@ import { ScrollView, StyleSheet, Text, View } from "react-native";
 import { formatEuros, rank, type RankEntry } from "@hofino/core";
 import { useStore } from "../store/store.js";
 import { Card, H1, H2, Muted } from "../ui/components.js";
-import { colors, font, fonts, radius, space } from "../theme.js";
+import { font, fonts, radius, space, type Palette } from "../theme.js";
+import { useColors, useThemedStyles } from "../theme/ThemeProvider.js";
 
 // Deterministische Mitstreiter, damit die Ligen auch lokal (Einzelnutzer) lebendig sind.
 const BOTS = [
@@ -26,6 +27,8 @@ function League({
   format: (score: number) => string;
   meLabel: string;
 }) {
+  const c = useColors();
+  const styles = useThemedStyles(makeStyles);
   const ranked = rank(entries, 10);
   return (
     <Card>
@@ -34,7 +37,7 @@ function League({
         const me = e.id === "me";
         return (
           <View key={e.id} style={[styles.row, me && styles.meRow]}>
-            <Text style={[styles.rank, e.awarded && { color: colors.accent }]}>
+            <Text style={[styles.rank, e.awarded && { color: c.gold }]}>
               {e.awarded ? `🏅 ${e.rank}` : e.rank}
             </Text>
             <Text style={[styles.name, me && { fontWeight: "800" }]}>{me ? meLabel : NAMES[e.id]}</Text>
@@ -55,6 +58,7 @@ const PREMIUM = [
 
 export function Rankings() {
   const { derived, t } = useStore();
+  const styles = useThemedStyles(makeStyles);
 
   const perf: RankEntry[] = [...BOTS.map((b) => ({ id: b.id, score: b.perf })), { id: "me", score: derived.performancePercent }];
   const capital: RankEntry[] = [...BOTS.map((b) => ({ id: b.id, score: b.capital })), { id: "me", score: derived.equityCents }];
@@ -86,26 +90,27 @@ export function Rankings() {
   );
 }
 
-const styles = StyleSheet.create({
-  container: { padding: space.lg, gap: space.md, backgroundColor: colors.background },
-  row: { flexDirection: "row", alignItems: "center", paddingVertical: space.sm, gap: space.md, borderBottomWidth: 1, borderBottomColor: colors.border },
-  meRow: { backgroundColor: "#F0FDF4", borderRadius: radius.sm },
-  rank: { width: 44, fontSize: font.body, fontWeight: "700", fontFamily: fonts.bodyBold, color: colors.text },
-  name: { flex: 1, fontSize: font.body, fontFamily: fonts.body, color: colors.text },
-  score: { fontSize: font.body, fontWeight: "700", fontFamily: fonts.bodyBold, color: colors.text },
-  tiles: { flexDirection: "row", flexWrap: "wrap", gap: space.sm },
-  tile: {
-    width: "47%",
-    backgroundColor: colors.background,
-    borderRadius: radius.md,
-    borderWidth: 1,
-    borderColor: colors.border,
-    padding: space.md,
-    alignItems: "center",
-    gap: 4,
-    opacity: 0.75,
-  },
-  tileIcon: { fontSize: 28, fontFamily: fonts.body },
-  tileLabel: { fontSize: font.small, fontWeight: "700", fontFamily: fonts.bodyBold, color: colors.text, textAlign: "center" },
-  lock: { fontSize: font.small, fontFamily: fonts.body },
-});
+const makeStyles = (c: Palette) =>
+  StyleSheet.create({
+    container: { padding: space.lg, gap: space.md, backgroundColor: c.bg },
+    row: { flexDirection: "row", alignItems: "center", paddingVertical: space.sm, gap: space.md, borderBottomWidth: 1, borderBottomColor: c.border },
+    meRow: { backgroundColor: c.mint, borderRadius: radius.sm },
+    rank: { width: 44, fontSize: font.body, fontWeight: "700", fontFamily: fonts.bodyBold, color: c.text },
+    name: { flex: 1, fontSize: font.body, fontFamily: fonts.body, color: c.text },
+    score: { fontSize: font.body, fontWeight: "700", fontFamily: fonts.bodyBold, color: c.text },
+    tiles: { flexDirection: "row", flexWrap: "wrap", gap: space.sm },
+    tile: {
+      width: "47%",
+      backgroundColor: c.bg,
+      borderRadius: radius.md,
+      borderWidth: 1,
+      borderColor: c.border,
+      padding: space.md,
+      alignItems: "center",
+      gap: 4,
+      opacity: 0.75,
+    },
+    tileIcon: { fontSize: 28, fontFamily: fonts.body },
+    tileLabel: { fontSize: font.small, fontWeight: "700", fontFamily: fonts.bodyBold, color: c.text, textAlign: "center" },
+    lock: { fontSize: font.small, fontFamily: fonts.body },
+  });

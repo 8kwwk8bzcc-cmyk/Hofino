@@ -9,7 +9,13 @@ import {
   Text,
   View,
 } from "react-native";
-import { useFonts, Inter_400Regular, Inter_500Medium, Inter_700Bold } from "@expo-google-fonts/inter";
+import {
+  useFonts,
+  HankenGrotesk_400Regular,
+  HankenGrotesk_500Medium,
+  HankenGrotesk_600SemiBold,
+  HankenGrotesk_700Bold,
+} from "@expo-google-fonts/hanken-grotesk";
 import { SpaceGrotesk_600SemiBold, SpaceGrotesk_700Bold } from "@expo-google-fonts/space-grotesk";
 import { StoreProvider, useStore } from "./store/store.js";
 import { Onboarding, ProfileSetup } from "./screens/Onboarding.js";
@@ -22,7 +28,7 @@ import { FamilyHome } from "./screens/family/FamilyHome.js";
 import { FamilyLink } from "./screens/family/FamilyLink.js";
 import { TeacherClass } from "./screens/classroom/TeacherClass.js";
 import { TeacherBeamer } from "./screens/classroom/TeacherBeamer.js";
-import { LangToggle } from "./ui/components.js";
+import { LangToggle, ThemeToggle } from "./ui/components.js";
 import {
   IconBeamer,
   IconClass,
@@ -37,19 +43,22 @@ import {
 } from "./ui/icons.js";
 import { translate } from "./i18n.js";
 import { NavContext } from "./nav.js";
-import { colors, fonts, space } from "./theme.js";
+import { fonts, space, type Palette } from "./theme.js";
+import { ThemeProvider, useColors, useTheme, useThemedStyles } from "./theme/ThemeProvider.js";
 
 type IconCmp = (p: IconProps) => React.JSX.Element;
 
 function TopBar({ brand }: { brand: string }) {
   const { signOut, lang, setLang } = useStore();
+  const s = useThemedStyles(makeStyles);
   return (
-    <View style={styles.topbar}>
-      <Text style={styles.brand}>{brand}</Text>
-      <View style={styles.topbarRight}>
+    <View style={s.topbar}>
+      <Text style={s.brand}>{brand}</Text>
+      <View style={s.topbarRight}>
+        <ThemeToggle />
         <LangToggle lang={lang} onChange={setLang} />
         <Pressable testID="logout" onPress={signOut}>
-          <Text style={styles.logout}>{translate(lang, "common.logout")}</Text>
+          <Text style={s.logout}>{translate(lang, "common.logout")}</Text>
         </Pressable>
       </View>
     </View>
@@ -77,15 +86,17 @@ function TabBar<T extends string>({
   onSelect: (id: T) => void;
   labelFor: (id: T) => string;
 }) {
+  const c = useColors();
+  const s = useThemedStyles(makeStyles);
   return (
-    <View style={styles.tabbar}>
+    <View style={s.tabbar}>
       {tabs.map((item) => {
         const isActive = item.id === active;
-        const color = isActive ? colors.secondary : colors.textMuted;
+        const color = isActive ? c.green : c.faint;
         return (
-          <Pressable key={item.id} testID={`tab-${item.id}`} onPress={() => onSelect(item.id)} style={styles.tab}>
-            <item.Icon size={24} color={color} />
-            <Text style={[styles.tabLabel, isActive && styles.tabLabelActive]}>{labelFor(item.id)}</Text>
+          <Pressable key={item.id} testID={`tab-${item.id}`} onPress={() => onSelect(item.id)} style={s.tab}>
+            <item.Icon size={24} color={color} filled={isActive} />
+            <Text style={[s.tabLabel, { color }, isActive && s.tabLabelActive]}>{labelFor(item.id)}</Text>
           </Pressable>
         );
       })}
@@ -97,12 +108,13 @@ function Main() {
   const { state, t } = useStore();
   const [tab, setTab] = useState<TabId>("start");
   const isAdult = state.role === "adult";
+  const s = useThemedStyles(makeStyles);
 
   return (
-    <View style={styles.shell}>
+    <View style={s.shell}>
       <TopBar brand={isAdult ? t("brand.adult") : "Hofino"} />
       <NavContext.Provider value={setTab}>
-        <View style={styles.screen}>
+        <View style={s.screen}>
           {tab === "start" && <Start />}
           {tab === "learn" && <LearnPlus />}
           {tab === "depot" && <Depot />}
@@ -129,10 +141,11 @@ const PARENT_TABS: { id: ParentTab; Icon: IconCmp }[] = [
 function ParentShell() {
   const { t } = useStore();
   const [tab, setTab] = useState<ParentTab>("family");
+  const s = useThemedStyles(makeStyles);
   return (
-    <View style={styles.shell}>
+    <View style={s.shell}>
       <TopBar brand={t("brand.parent")} />
-      <View style={styles.screen}>
+      <View style={s.screen}>
         {tab === "family" && <FamilyHome />}
         {tab === "link" && <FamilyLink />}
       </View>
@@ -150,10 +163,11 @@ const TEACHER_TABS: { id: TeacherTab; Icon: IconCmp }[] = [
 function TeacherShell() {
   const { t } = useStore();
   const [tab, setTab] = useState<TeacherTab>("class");
+  const s = useThemedStyles(makeStyles);
   return (
-    <View style={styles.shell}>
+    <View style={s.shell}>
       <TopBar brand={t("brand.teacher")} />
-      <View style={styles.screen}>
+      <View style={s.screen}>
         {tab === "class" && <TeacherClass />}
         {tab === "beamer" && <TeacherBeamer />}
       </View>
@@ -164,10 +178,11 @@ function TeacherShell() {
 
 function Gate() {
   const { state } = useStore();
+  const c = useColors();
   if (state.loading) {
     return (
-      <View style={styles.center}>
-        <ActivityIndicator color={colors.primary} />
+      <View style={[styles.center, { backgroundColor: c.bg }]}>
+        <ActivityIndicator color={c.green} />
       </View>
     );
   }
@@ -178,57 +193,73 @@ function Gate() {
   return <Main />;
 }
 
-export default function App() {
-  const [fontsLoaded] = useFonts({
-    Inter_400Regular,
-    Inter_500Medium,
-    Inter_700Bold,
-    SpaceGrotesk_600SemiBold,
-    SpaceGrotesk_700Bold,
-  });
+function Root({ fontsLoaded }: { fontsLoaded: boolean }) {
+  const c = useColors();
+  const { mode } = useTheme();
   return (
-    <SafeAreaView style={styles.safe}>
-      <StatusBar barStyle="dark-content" />
+    <SafeAreaView style={[styles.safe, { backgroundColor: c.bg }]}>
+      <StatusBar barStyle={mode === "dark" ? "light-content" : "dark-content"} />
       {fontsLoaded ? (
         <StoreProvider>
           <Gate />
         </StoreProvider>
       ) : (
-        <View style={styles.center}>
-          <ActivityIndicator color={colors.primary} />
+        <View style={[styles.center, { backgroundColor: c.bg }]}>
+          <ActivityIndicator color={c.green} />
         </View>
       )}
     </SafeAreaView>
   );
 }
 
+export default function App() {
+  const [fontsLoaded] = useFonts({
+    HankenGrotesk_400Regular,
+    HankenGrotesk_500Medium,
+    HankenGrotesk_600SemiBold,
+    HankenGrotesk_700Bold,
+    SpaceGrotesk_600SemiBold,
+    SpaceGrotesk_700Bold,
+  });
+  return (
+    <ThemeProvider>
+      <Root fontsLoaded={fontsLoaded} />
+    </ThemeProvider>
+  );
+}
+
 const styles = StyleSheet.create({
-  safe: { flex: 1, backgroundColor: colors.background, paddingTop: Platform.OS === "android" ? 24 : 0 },
+  safe: { flex: 1, paddingTop: Platform.OS === "android" ? 24 : 0 },
   center: { flex: 1, alignItems: "center", justifyContent: "center" },
-  shell: { flex: 1 },
-  topbar: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-    paddingHorizontal: space.lg,
-    paddingVertical: space.sm,
-    borderBottomWidth: 1,
-    borderBottomColor: colors.border,
-    backgroundColor: colors.surface,
-  },
-  brand: { fontFamily: fonts.display, color: colors.primary, fontSize: 18 },
-  topbarRight: { flexDirection: "row", alignItems: "center", gap: space.lg },
-  logout: { color: colors.textMuted, fontFamily: fonts.body, fontSize: 13 },
-  screen: { flex: 1 },
-  tabbar: {
-    flexDirection: "row",
-    borderTopWidth: 1,
-    borderTopColor: colors.border,
-    backgroundColor: colors.surface,
-    paddingBottom: space.sm,
-    paddingTop: space.sm,
-  },
-  tab: { flex: 1, alignItems: "center", gap: 3 },
-  tabLabel: { fontSize: 11, color: colors.textMuted, fontFamily: fonts.body },
-  tabLabelActive: { color: colors.secondary, fontFamily: fonts.bodyBold },
 });
+
+const makeStyles = (c: Palette) =>
+  StyleSheet.create({
+    shell: { flex: 1, backgroundColor: c.bg },
+    screen: { flex: 1 },
+    topbar: {
+      flexDirection: "row",
+      justifyContent: "space-between",
+      alignItems: "center",
+      paddingHorizontal: space.lg,
+      paddingVertical: space.sm,
+      borderBottomWidth: 1,
+      borderBottomColor: c.border,
+      backgroundColor: c.surface,
+    },
+    brand: { fontFamily: fonts.display, color: c.navy, fontSize: 18 },
+    topbarRight: { flexDirection: "row", alignItems: "center", gap: space.lg },
+    logout: { color: c.muted, fontFamily: fonts.body, fontSize: 13 },
+    tabbar: {
+      flexDirection: "row",
+      borderTopWidth: 1,
+      borderTopColor: c.border,
+      backgroundColor: c.surface,
+      paddingBottom: space.sm,
+      paddingTop: space.sm,
+      height: 74,
+    },
+    tab: { flex: 1, alignItems: "center", gap: 4, justifyContent: "center" },
+    tabLabel: { fontSize: 10.5, fontFamily: fonts.body },
+    tabLabelActive: { fontFamily: fonts.bodyBold },
+  });

@@ -4,7 +4,8 @@ import { formatEuros, START_CAPITAL_CENTS } from "@hofino/core";
 import { useStore } from "../store/store.js";
 import { Body, Button, H1, HLogo, LangToggle, Muted } from "../ui/components.js";
 import { FLAGS } from "../config/flags.js";
-import { colors, font, fonts, radius, space } from "../theme.js";
+import { font, fonts, radius, space, type Palette } from "../theme.js";
+import { useColors, useThemedStyles } from "../theme/ThemeProvider.js";
 
 const PLOTS = [
   { id: "wald", emoji: "🌲" },
@@ -14,6 +15,8 @@ const PLOTS = [
 
 function NameInput({ value, onChange }: { value: string; onChange: (v: string) => void }) {
   const { t } = useStore();
+  const c = useColors();
+  const styles = useThemedStyles(makeStyles);
   return (
     <View style={styles.block}>
       <Text style={styles.label}>{t("auth.name")}</Text>
@@ -22,7 +25,7 @@ function NameInput({ value, onChange }: { value: string; onChange: (v: string) =
         value={value}
         onChangeText={onChange}
         placeholder={t("auth.namePlaceholder")}
-        placeholderTextColor={colors.textMuted}
+        placeholderTextColor={c.muted}
         style={styles.input}
         maxLength={20}
       />
@@ -32,6 +35,7 @@ function NameInput({ value, onChange }: { value: string; onChange: (v: string) =
 
 function PlotPicker({ value, onChange }: { value: string; onChange: (v: string) => void }) {
   const { t } = useStore();
+  const styles = useThemedStyles(makeStyles);
   return (
     <View style={styles.block}>
       <Text style={styles.label}>{t("auth.plot")}</Text>
@@ -63,6 +67,8 @@ function Credentials({
   onPassword: (v: string) => void;
 }) {
   const { t } = useStore();
+  const c = useColors();
+  const styles = useThemedStyles(makeStyles);
   return (
     <View style={styles.block}>
       <TextInput
@@ -72,7 +78,7 @@ function Credentials({
         placeholder={t("auth.email")}
         autoCapitalize="none"
         keyboardType="email-address"
-        placeholderTextColor={colors.textMuted}
+        placeholderTextColor={c.muted}
         style={styles.input}
       />
       <TextInput
@@ -81,7 +87,7 @@ function Credentials({
         onChangeText={onPassword}
         placeholder={t("auth.password")}
         secureTextEntry
-        placeholderTextColor={colors.textMuted}
+        placeholderTextColor={c.muted}
         style={styles.input}
       />
     </View>
@@ -98,6 +104,7 @@ const ROLE_OPTIONS: { id: RegRole; label: string }[] = [
 
 function RoleToggle({ role, onChange }: { role: RegRole; onChange: (r: RegRole) => void }) {
   const { t } = useStore();
+  const styles = useThemedStyles(makeStyles);
   return (
     <View style={styles.block}>
       <Text style={styles.label}>{t("auth.roleQuestion")}</Text>
@@ -119,6 +126,7 @@ function RoleToggle({ role, onChange }: { role: RegRole; onChange: (r: RegRole) 
 
 export function Onboarding() {
   const { register, login, t, lang, setLang } = useStore();
+  const styles = useThemedStyles(makeStyles);
   const [mode, setMode] = useState<"register" | "login">("register");
   const [role, setRole] = useState<RegRole>("child");
   const [name, setName] = useState("");
@@ -200,6 +208,7 @@ export function Onboarding() {
 
 export function ProfileSetup() {
   const { createProfile, signOut } = useStore();
+  const styles = useThemedStyles(makeStyles);
   const [role, setRole] = useState<RegRole>("child");
   const [name, setName] = useState("");
   const [plot, setPlot] = useState("");
@@ -231,39 +240,40 @@ export function ProfileSetup() {
   );
 }
 
-const styles = StyleSheet.create({
-  container: { padding: space.xl, gap: space.lg, backgroundColor: colors.background, flexGrow: 1 },
-  header: { alignItems: "center", gap: space.sm, marginTop: space.lg },
-  tabs: { flexDirection: "row", flexWrap: "wrap", gap: space.sm },
-  tab: { flex: 1, padding: space.md, borderRadius: radius.md, alignItems: "center", backgroundColor: colors.surface, borderWidth: 1, borderColor: colors.border },
-  tabActive: { borderColor: colors.primary, backgroundColor: colors.primary },
-  tabText: { fontWeight: "700", fontFamily: fonts.bodyBold, color: colors.primary },
-  tabTextActive: { color: "#FFFFFF" },
-  block: { gap: space.sm },
-  label: { fontSize: font.h3, fontWeight: "700", fontFamily: fonts.bodyBold, color: colors.text },
-  input: {
-    borderWidth: 1,
-    borderColor: colors.border,
-    borderRadius: radius.md,
-    padding: space.md,
-    fontSize: font.body,
-    fontFamily: fonts.body,
-    color: colors.text,
-    backgroundColor: colors.surface,
-  },
-  plot: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: space.md,
-    padding: space.md,
-    borderRadius: radius.md,
-    borderWidth: 2,
-    borderColor: colors.border,
-    backgroundColor: colors.surface,
-  },
-  plotActive: { borderColor: colors.secondary, backgroundColor: "#F0FDF4" },
-  plotEmoji: { fontSize: 28, fontFamily: fonts.body },
-  plotLabel: { flex: 1, fontSize: font.body, fontWeight: "600", fontFamily: fonts.body, color: colors.text },
-  check: { color: colors.secondary, fontWeight: "800", fontFamily: fonts.bodyBold, fontSize: font.h3 },
-  error: { color: colors.danger, fontWeight: "600", fontFamily: fonts.body, fontSize: font.small },
-});
+const makeStyles = (c: Palette) =>
+  StyleSheet.create({
+    container: { padding: space.xl, gap: space.lg, backgroundColor: c.bg, flexGrow: 1 },
+    header: { alignItems: "center", gap: space.sm, marginTop: space.lg },
+    tabs: { flexDirection: "row", flexWrap: "wrap", gap: space.sm },
+    tab: { flex: 1, padding: space.md, borderRadius: radius.md, alignItems: "center", backgroundColor: c.surface, borderWidth: 1, borderColor: c.border },
+    tabActive: { borderColor: c.navy, backgroundColor: c.navy },
+    tabText: { fontWeight: "700", fontFamily: fonts.bodyBold, color: c.navy },
+    tabTextActive: { color: "#FFFFFF" },
+    block: { gap: space.sm },
+    label: { fontSize: font.h3, fontWeight: "700", fontFamily: fonts.bodyBold, color: c.text },
+    input: {
+      borderWidth: 1,
+      borderColor: c.border,
+      borderRadius: radius.md,
+      padding: space.md,
+      fontSize: font.body,
+      fontFamily: fonts.body,
+      color: c.text,
+      backgroundColor: c.surface,
+    },
+    plot: {
+      flexDirection: "row",
+      alignItems: "center",
+      gap: space.md,
+      padding: space.md,
+      borderRadius: radius.md,
+      borderWidth: 2,
+      borderColor: c.border,
+      backgroundColor: c.surface,
+    },
+    plotActive: { borderColor: c.green, backgroundColor: c.mint },
+    plotEmoji: { fontSize: 28, fontFamily: fonts.body },
+    plotLabel: { flex: 1, fontSize: font.body, fontWeight: "600", fontFamily: fonts.body, color: c.text },
+    check: { color: c.green, fontWeight: "800", fontFamily: fonts.bodyBold, fontSize: font.h3 },
+    error: { color: c.danger, fontWeight: "600", fontFamily: fonts.body, fontSize: font.small },
+  });

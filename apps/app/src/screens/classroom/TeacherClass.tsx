@@ -5,10 +5,13 @@ import { MODULES } from "@hofino/content";
 import { alleKonzepte } from "@hofino/learning";
 import { useStore, type ClassOverviewRow, type TeacherClass as TClass } from "../../store/store.js";
 import { Body, Button, Card, H1, H2, Muted, Pill } from "../../ui/components.js";
-import { colors, font, fonts, radius, space } from "../../theme.js";
+import { font, fonts, radius, space, type Palette } from "../../theme.js";
+import { useColors, useThemedStyles } from "../../theme/ThemeProvider.js";
 
 export function TeacherClass() {
   const { fetchTeacherClass, fetchClassOverview, createClass, fetchAssignments, assignKonzept, unassignKonzept, t } = useStore();
+  const c = useColors();
+  const styles = useThemedStyles(makeStyles);
   const [cls, setCls] = useState<TClass | null>(null);
   const [rows, setRows] = useState<ClassOverviewRow[]>([]);
   const [assigned, setAssigned] = useState<Set<string>>(new Set());
@@ -72,7 +75,7 @@ export function TeacherClass() {
             value={name}
             onChangeText={setName}
             placeholder={t("class.namePlaceholder")}
-            placeholderTextColor={colors.textMuted}
+            placeholderTextColor={c.muted}
             style={styles.input}
           />
           <Button title={t("class.create")} onPress={create} disabled={name.trim().length < 1} testID="create-class" />
@@ -146,39 +149,40 @@ export function TeacherClass() {
   );
 }
 
-const styles = StyleSheet.create({
-  container: { padding: space.lg, gap: space.md, backgroundColor: colors.background },
-  input: {
-    borderWidth: 1,
-    borderColor: colors.border,
-    borderRadius: radius.md,
-    padding: space.md,
-    fontSize: font.body,
-    fontFamily: fonts.body,
-    color: colors.text,
-    backgroundColor: colors.surface,
-  },
-  msg: { fontSize: font.small, color: colors.primary, fontWeight: "600", fontFamily: fonts.body },
-  code: { fontSize: font.h1, fontWeight: "800", fontFamily: fonts.display, color: colors.primary, letterSpacing: 2 },
-  assignRow: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-    paddingVertical: space.sm,
-    paddingHorizontal: space.md,
-    marginTop: space.xs,
-    borderWidth: 1,
-    borderColor: colors.border,
-    borderRadius: radius.md,
-    backgroundColor: colors.surface,
-  },
-  assignRowOn: { borderColor: colors.secondary, backgroundColor: "#F0FDF4" },
-  assignName: { fontSize: font.body, fontFamily: fonts.body, color: colors.text, flexShrink: 1, paddingRight: space.sm },
-  assignAdd: { fontSize: font.h2, color: colors.textMuted, fontWeight: "700", fontFamily: fonts.bodyBold },
-  studentRow: { paddingVertical: space.sm, borderBottomWidth: 1, borderBottomColor: colors.border, gap: 2 },
-  studentName: { fontSize: font.body, fontWeight: "700", fontFamily: fonts.bodyBold, color: colors.text },
-  metrics: { flexDirection: "row", justifyContent: "space-between" },
-  rankRow: { flexDirection: "row", justifyContent: "space-between", paddingVertical: space.xs },
-  rankText: { fontSize: font.body, fontFamily: fonts.body, color: colors.text },
-  rankScore: { fontSize: font.body, fontWeight: "700", fontFamily: fonts.display, color: colors.text },
-});
+const makeStyles = (c: Palette) =>
+  StyleSheet.create({
+    container: { padding: space.lg, gap: space.md, backgroundColor: c.bg },
+    input: {
+      borderWidth: 1,
+      borderColor: c.border,
+      borderRadius: radius.md,
+      padding: space.md,
+      fontSize: font.body,
+      fontFamily: fonts.body,
+      color: c.text,
+      backgroundColor: c.surface,
+    },
+    msg: { fontSize: font.small, color: c.navy, fontWeight: "600", fontFamily: fonts.body },
+    code: { fontSize: font.h1, fontWeight: "800", fontFamily: fonts.display, color: c.navy, letterSpacing: 2 },
+    assignRow: {
+      flexDirection: "row",
+      alignItems: "center",
+      justifyContent: "space-between",
+      paddingVertical: space.sm,
+      paddingHorizontal: space.md,
+      marginTop: space.xs,
+      borderWidth: 1,
+      borderColor: c.border,
+      borderRadius: radius.md,
+      backgroundColor: c.surface,
+    },
+    assignRowOn: { borderColor: c.green, backgroundColor: c.mint },
+    assignName: { fontSize: font.body, fontFamily: fonts.body, color: c.text, flexShrink: 1, paddingRight: space.sm },
+    assignAdd: { fontSize: font.h2, color: c.muted, fontWeight: "700", fontFamily: fonts.bodyBold },
+    studentRow: { paddingVertical: space.sm, borderBottomWidth: 1, borderBottomColor: c.border, gap: 2 },
+    studentName: { fontSize: font.body, fontWeight: "700", fontFamily: fonts.bodyBold, color: c.text },
+    metrics: { flexDirection: "row", justifyContent: "space-between" },
+    rankRow: { flexDirection: "row", justifyContent: "space-between", paddingVertical: space.xs },
+    rankText: { fontSize: font.body, fontFamily: fonts.body, color: c.text },
+    rankScore: { fontSize: font.body, fontWeight: "700", fontFamily: fonts.display, color: c.text },
+  });

@@ -4,10 +4,12 @@ import { formatEuros } from "@hofino/core";
 import { COMPANY_PROFILES, ETF_PROFILES } from "@hofino/content";
 import { useStore } from "../store/store.js";
 import { Body, Button, Card, H1, H2, Muted, Pill } from "../ui/components.js";
-import { colors, font, fonts, space } from "../theme.js";
+import { font, fonts, space, type Palette } from "../theme.js";
+import { useThemedStyles } from "../theme/ThemeProvider.js";
 
 function Detail({ id, onBack }: { id: string; onBack: () => void }) {
   const { prices, state, toggleWatch, instrumentById, t } = useStore();
+  const styles = useThemedStyles(makeStyles);
   const inst = instrumentById.get(id)!;
   const company = COMPANY_PROFILES.find((p) => p.ticker === inst.ticker);
   const etf = ETF_PROFILES.find((p) => p.ticker === inst.ticker);
@@ -74,6 +76,7 @@ function Detail({ id, onBack }: { id: string; onBack: () => void }) {
 }
 
 function Field({ q, a }: { q: string; a: string }) {
+  const styles = useThemedStyles(makeStyles);
   return (
     <View style={{ gap: 2 }}>
       <Text style={styles.fieldQ}>{q}</Text>
@@ -84,6 +87,7 @@ function Field({ q, a }: { q: string; a: string }) {
 
 function Row({ id, onOpen }: { id: string; onOpen: (id: string) => void }) {
   const { prices, state, instrumentById, t } = useStore();
+  const styles = useThemedStyles(makeStyles);
   const inst = instrumentById.get(id);
   if (!inst) return null;
   return (
@@ -102,6 +106,7 @@ function Row({ id, onOpen }: { id: string; onOpen: (id: string) => void }) {
 
 export function Discover() {
   const { state, instruments, t } = useStore();
+  const styles = useThemedStyles(makeStyles);
   const [selected, setSelected] = useState<string | null>(null);
 
   if (selected) return <Detail id={selected} onBack={() => setSelected(null)} />;
@@ -130,21 +135,22 @@ export function Discover() {
   );
 }
 
-const styles = StyleSheet.create({
-  container: { padding: space.lg, gap: space.md, backgroundColor: colors.background },
-  detailHead: { flexDirection: "row", justifyContent: "space-between", alignItems: "flex-end" },
-  price: { fontSize: font.h2, fontWeight: "800", color: colors.text, fontFamily: fonts.display },
-  tags: { flexDirection: "row", gap: space.sm, flexWrap: "wrap" },
-  fieldQ: { fontSize: font.small, fontWeight: "700", color: colors.textMuted, fontFamily: fonts.body },
-  row: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: space.sm,
-    paddingVertical: space.sm,
-    borderBottomWidth: 1,
-    borderBottomColor: colors.border,
-  },
-  rowName: { fontSize: font.body, fontWeight: "700", color: colors.text, fontFamily: fonts.bodyBold },
-  rowPrice: { fontSize: font.body, fontWeight: "700", color: colors.text, fontFamily: fonts.display },
-  star: { color: colors.accent, fontSize: font.h3, fontFamily: fonts.body },
-});
+const makeStyles = (c: Palette) =>
+  StyleSheet.create({
+    container: { padding: space.lg, gap: space.md, backgroundColor: c.bg },
+    detailHead: { flexDirection: "row", justifyContent: "space-between", alignItems: "flex-end" },
+    price: { fontSize: font.h2, fontWeight: "800", color: c.text, fontFamily: fonts.display },
+    tags: { flexDirection: "row", gap: space.sm, flexWrap: "wrap" },
+    fieldQ: { fontSize: font.small, fontWeight: "700", color: c.muted, fontFamily: fonts.body },
+    row: {
+      flexDirection: "row",
+      alignItems: "center",
+      gap: space.sm,
+      paddingVertical: space.sm,
+      borderBottomWidth: 1,
+      borderBottomColor: c.border,
+    },
+    rowName: { fontSize: font.body, fontWeight: "700", color: c.text, fontFamily: fonts.bodyBold },
+    rowPrice: { fontSize: font.body, fontWeight: "700", color: c.text, fontFamily: fonts.display },
+    star: { color: c.gold, fontSize: font.h3, fontFamily: fonts.body },
+  });

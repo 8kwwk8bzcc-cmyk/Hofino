@@ -21,7 +21,8 @@ import { formatEuros } from "@hofino/core";
 import { supabase } from "../lib/supabase.js";
 import { useStore } from "../store/store.js";
 import { Body, Button, Card, H1, H2, Muted, Pill, ProgressBar } from "../ui/components.js";
-import { colors, font, fonts, radius, space } from "../theme.js";
+import { font, fonts, radius, space, type Palette } from "../theme.js";
+import { useColors, useThemedStyles } from "../theme/ThemeProvider.js";
 
 type Phase =
   | "liste"
@@ -69,6 +70,8 @@ function baueInstanzBeliebig(konzept: Konzept, rng: () => number): FrageInstanz 
 
 export function LearnPlus() {
   const { t, fetchMyAssignments } = useStore();
+  const c = useColors();
+  const styles = useThemedStyles(makeStyles);
   const konzepte = alleKonzepte();
   const [phase, setPhase] = useState<Phase>("liste");
   const [konzept, setKonzept] = useState<Konzept | null>(null);
@@ -276,7 +279,7 @@ export function LearnPlus() {
           <ProgressBar value={tages.neu / 10} />
         </Card>
         {faellig.length > 0 && (
-          <Card style={{ borderColor: colors.accent, borderWidth: 2 }}>
+          <Card style={{ borderColor: c.gold, borderWidth: 2 }}>
             <H2>{t("learn.miniTask")}</H2>
             <Body>{t("learn.dueToReview", { n: faellig.length })}</Body>
             <Button
@@ -296,7 +299,7 @@ export function LearnPlus() {
                 key={k.id}
                 testID={`konzept-${k.id}`}
                 onPress={() => oeffneKonzept(k)}
-                style={zugewiesen.has(k.id) ? { borderColor: colors.accent, borderWidth: 2 } : undefined}
+                style={zugewiesen.has(k.id) ? { borderColor: c.gold, borderWidth: 2 } : undefined}
               >
                 <View style={styles.row}>
                   <H2>{k.titel.de}</H2>
@@ -346,7 +349,7 @@ export function LearnPlus() {
     const korrekt = !!instanz.optionen[gewaehlt]?.korrekt;
     return (
       <ScrollView contentContainerStyle={styles.container}>
-        <Card style={{ borderColor: korrekt ? colors.secondary : colors.danger, borderWidth: 2 }}>
+        <Card style={{ borderColor: korrekt ? c.green : c.danger, borderWidth: 2 }}>
           <H2>{korrekt ? t("learn.correct") : t("learn.close")}</H2>
           {!korrekt && (
             <Body>{t("learn.correctWould", { text: instanz.optionen.find((o) => o.korrekt)?.text ?? "" })}</Body>
@@ -363,7 +366,7 @@ export function LearnPlus() {
   if (phase === "konzept_fertig" && konzept) {
     return (
       <ScrollView contentContainerStyle={styles.container}>
-        <Card style={{ borderColor: colors.secondary, borderWidth: 2 }}>
+        <Card style={{ borderColor: c.green, borderWidth: 2 }}>
           <H1>{t("learn.conceptDone")}</H1>
           <Body>{t("learn.youCompleted", { title: konzept.titel.de })}</Body>
           {lernkapital > 0 ? (
@@ -411,7 +414,7 @@ export function LearnPlus() {
     const korrekt = !!instanz.optionen[gewaehlt]?.korrekt;
     return (
       <ScrollView contentContainerStyle={styles.container}>
-        <Card style={{ borderColor: korrekt ? colors.secondary : colors.danger, borderWidth: 2 }}>
+        <Card style={{ borderColor: korrekt ? c.green : c.danger, borderWidth: 2 }}>
           <H2>{korrekt ? t("learn.correct") : t("learn.close")}</H2>
           {!korrekt && <Body>{t("learn.correctWould", { text: instanz.optionen.find((o) => o.korrekt)?.text ?? "" })}</Body>}
           {!korrekt && instanz.erklaerung_nach_antwort ? <Body>{instanz.erklaerung_nach_antwort}</Body> : null}
@@ -434,16 +437,17 @@ export function LearnPlus() {
   );
 }
 
-const styles = StyleSheet.create({
-  container: { padding: space.lg, gap: space.md, backgroundColor: colors.background },
-  row: { flexDirection: "row", justifyContent: "space-between", alignItems: "center" },
-  pillRow: { flexDirection: "row", gap: space.xs, alignItems: "center", flexShrink: 0 },
-  option: {
-    padding: space.md,
-    borderRadius: radius.md,
-    borderWidth: 1,
-    borderColor: colors.border,
-    backgroundColor: colors.surface,
-  },
-  optionText: { fontSize: font.body, fontFamily: fonts.body, color: colors.text },
-});
+const makeStyles = (c: Palette) =>
+  StyleSheet.create({
+    container: { padding: space.lg, gap: space.md, backgroundColor: c.bg },
+    row: { flexDirection: "row", justifyContent: "space-between", alignItems: "center" },
+    pillRow: { flexDirection: "row", gap: space.xs, alignItems: "center", flexShrink: 0 },
+    option: {
+      padding: space.md,
+      borderRadius: radius.md,
+      borderWidth: 1,
+      borderColor: c.border,
+      backgroundColor: c.surface,
+    },
+    optionText: { fontSize: font.body, fontFamily: fonts.body, color: c.text },
+  });

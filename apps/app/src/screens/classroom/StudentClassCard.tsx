@@ -2,11 +2,14 @@ import React, { useCallback, useEffect, useState } from "react";
 import { StyleSheet, Text, TextInput } from "react-native";
 import { useStore, type MyClass } from "../../store/store.js";
 import { Body, Button, Card, H2, Muted } from "../../ui/components.js";
-import { colors, font, fonts, radius, space } from "../../theme.js";
+import { font, fonts, radius, space, type Palette } from "../../theme.js";
+import { useColors, useThemedStyles } from "../../theme/ThemeProvider.js";
 
 // Auf dem Kinder-Zuhause: Klasse beitreten bzw. aktuelle Klasse anzeigen.
 export function StudentClassCard() {
   const { joinClass, fetchMyClass, t } = useStore();
+  const c = useColors();
+  const styles = useThemedStyles(makeStyles);
   const [myClass, setMyClass] = useState<MyClass | null>(null);
   const [loaded, setLoaded] = useState(false);
   const [code, setCode] = useState("");
@@ -52,7 +55,7 @@ export function StudentClassCard() {
             onChangeText={setCode}
             placeholder={t("class.codePlaceholder")}
             autoCapitalize="characters"
-            placeholderTextColor={colors.textMuted}
+            placeholderTextColor={c.muted}
             style={styles.input}
           />
           <Button title={t("class.join")} onPress={submit} disabled={code.trim().length < 4} testID="join-class" />
@@ -63,16 +66,17 @@ export function StudentClassCard() {
   );
 }
 
-const styles = StyleSheet.create({
-  input: {
-    borderWidth: 1,
-    borderColor: colors.border,
-    borderRadius: radius.md,
-    padding: space.md,
-    fontSize: font.body,
-    fontFamily: fonts.body,
-    color: colors.text,
-    backgroundColor: colors.surface,
-  },
-  msg: { fontSize: font.small, color: colors.primary, fontWeight: "600", fontFamily: fonts.body },
-});
+const makeStyles = (c: Palette) =>
+  StyleSheet.create({
+    input: {
+      borderWidth: 1,
+      borderColor: c.border,
+      borderRadius: radius.md,
+      padding: space.md,
+      fontSize: font.body,
+      fontFamily: fonts.body,
+      color: c.text,
+      backgroundColor: c.surface,
+    },
+    msg: { fontSize: font.small, color: c.navy, fontWeight: "600", fontFamily: fonts.body },
+  });

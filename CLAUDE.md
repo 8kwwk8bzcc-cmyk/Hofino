@@ -153,28 +153,40 @@ Keine aktive Bezahlung im MVP. Der spätere KI-Coach ist Sparringspartner, **nie
 Audio/Video, aktive Bezahlung, Brokervermittlung, Krypto, Rohstoffe, Derivate, Chat,
 Verlustschutzschild. (Der Erwachsenen-Modus ist jetzt im MVP enthalten.)
 
-## 11. Design-Tokens (verbindlich)
+## 11. Design-Tokens (verbindlich) – Corporate Design „Grünanlage"
 
-> Stand „Mission Board / Daily Finance Workout" (Spec `specs/mission_board_no_house_spec.json`).
-> Maßgeblich ist `apps/app/src/theme.ts`.
+> **Verbindliches CD** (Claude-Design-Handoff, freigegeben). Quelle der Wahrheit ist
+> `apps/app/src/theme.ts` (Light **und** Dark). Referenz-Handoff liegt unter `design/handoff/`.
+> Runtime-Theming über `theme/ThemeProvider.tsx` (`useColors()` / `useThemedStyles()` /
+> `ThemeToggle`). Neue UI **immer** über die Tokens + Hook bauen, **nie** Hex hart verdrahten.
 
-| Token | Wert | Bedeutung |
-|---|---|---|
-| `primary` | `#081F3A` | Navy – Vertrauen, Wissen |
-| `secondary` | `#22C55E` | Grün – Wachstum, Lernen |
-| `accent` | `#F2C94C` | Gold – XP, Erfolge, Belohnungen |
-| `background` | `#F3F6FA` | ruhige Flächen |
-| `surface` | `#FFFFFF` | Karten/Flächen |
-| `textMuted` | `#64748B` | Sekundärtext |
-| `border` | `#D8E2EA` | Rahmen |
-| `danger` | `#D96B6B` | zurückhaltendes Negativ-Rot |
+| Token | Light | Dark | Bedeutung |
+|---|---|---|---|
+| `navy` | `#0E2A47` | `#34B97E` | primary · Vertrauen, Wissen (im Dark → Grün-hell) |
+| `navySoft` | `#1C3D5C` | `#173049` | sekundäre Flächen/Icons |
+| `green` | `#1F9D6B` | `#34B97E` | secondary · Wachstum, Lernen, **aktive Tabs** |
+| `gold` | `#E7BD57` | `#E7BD57` | accent · XP, Erfolge (dezent) |
+| `bg` | `#F2F6FA` | `#0A1A2C` | App-Hintergrund |
+| `surface` | `#FFFFFF` | `#12263C` | Karten |
+| `softBlue` | `#E8F0FA` | `#173049` | weiche Akzentfläche / Hinweis |
+| `mint` | `#E4F4EC` | `rgba(52,185,126,.14)` | Erfolg/Highlight |
+| `goldSoft` | `#FBF1D6` | `rgba(231,189,87,.16)` | weiche Gold-Fläche |
+| `text` | `#0E2A47` | `#EAF1F8` | Primärtext |
+| `muted` | `#5C7184` | `#8FA6BC` | Sekundärtext |
+| `faint` | `#9AA7B4` | `#6B829A` | Tertiär/Labels/Placeholder |
+| `border` | `#DCE6EE` | `#244763` | Rahmen/Trennlinien |
+| `danger` | `#D96B6B` | `#E58A8A` | zurückhaltendes Negativ-Rot |
+| `success` | `#1F8A5B` | `#34B97E` | kontraststarkes Text-Grün |
 
-- Schriften: **Space Grotesk** (Display/Überschriften/Zahlen), **Inter** (Fließtext).
-- Form: Karten-Radius 22, weicher Schatten; Buttons Radius 16.
-- Icons: konsistentes Outline-Set (`ui/icons.tsx`), **keine Emojis** in der Tab-Bar.
-- Logo: stilisiertes **H mit Wachstumslinie**. Keine €/$-Zeichen, keine Münze als Hauptsymbol.
+- Schriften: **Space Grotesk** (Display/Überschriften/Zahlen), **Hanken Grotesk** (Fließtext/UI).
+  Skala: H1 30/700 · H2 24/700 · H3 19/700 · BodyL 16 · Body 14.5 · Caption 12.5 · Overline 11 (upper).
+- Form: Radien sm 10 · button 14 · input 16 · card 22 · pill 999. Schatten sm/md/lg (md = Karte).
+- Icons: konsistentes Outline-Set (`ui/icons.tsx`); **aktiv = gefüllt (FILL) + grün**, inaktiv Outline `faint`.
+  **Keine Emojis** in der Tab-Bar.
+- Logo: stilisiertes **H mit grüner Glyphe + Gold-Wachstumspfeil** (`HLogo`). Keine €/$-Zeichen, keine Münze.
+- Dark Mode: ein Token-Set (gleiche Namen), System-Preference + manueller `ThemeToggle` (persistiert).
 - Anmutung: modern, vertrauensvoll, freundlich, lernorientiert. Nicht wie eine Bank, nicht wie eine
-  Trading-App, nicht wie ein reines Kinderspiel.
+  Trading-App, nicht wie ein reines Kinderspiel. **Haus-System aktuell ausgeblendet** (Mission-Board-Pivot).
 
 ## 12. Code-Konventionen & Definition of Done
 

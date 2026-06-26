@@ -3,7 +3,8 @@ import { StyleSheet, Text, View, Pressable } from "react-native";
 import { formatEuros, ORDER_FEE_CENTS } from "@hofino/core";
 import { useStore, type OrderOutcome } from "../store/store.js";
 import { Button, Muted } from "./components.js";
-import { colors, font, fonts, radius, space } from "../theme.js";
+import { font, fonts, radius, space, type Palette } from "../theme.js";
+import { useThemedStyles } from "../theme/ThemeProvider.js";
 
 const REASON_KEYS: Record<string, string> = {
   insufficient_funds: "trade.errFunds",
@@ -13,6 +14,7 @@ const REASON_KEYS: Record<string, string> = {
 
 export function TradePanel({ instrumentId, mode }: { instrumentId: string; mode: "buy" | "sell" }) {
   const { prices, buy, sell, state, t } = useStore();
+  const styles = useThemedStyles(makeStyles);
   const [qty, setQty] = useState(1);
   const [msg, setMsg] = useState<string | null>(null);
 
@@ -83,27 +85,28 @@ export function TradePanel({ instrumentId, mode }: { instrumentId: string; mode:
   );
 }
 
-const styles = StyleSheet.create({
-  panel: { gap: space.md },
-  row: { flexDirection: "row", justifyContent: "space-between", alignItems: "center" },
-  price: { fontSize: font.h3, fontWeight: "800", color: colors.text, fontFamily: fonts.display },
-  stepper: { flexDirection: "row", alignItems: "center", gap: space.md },
-  stepBtn: {
-    width: 44,
-    height: 44,
-    borderRadius: radius.md,
-    backgroundColor: colors.background,
-    borderWidth: 1,
-    borderColor: colors.border,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  stepText: { fontSize: 24, fontWeight: "800", color: colors.primary, fontFamily: fonts.bodyBold },
-  qty: { fontSize: font.h2, fontWeight: "800", color: colors.text, minWidth: 40, textAlign: "center", fontFamily: fonts.display },
-  unit: { fontSize: font.small, color: colors.textMuted, fontFamily: fonts.body },
-  breakdown: { gap: space.xs, paddingVertical: space.sm },
-  val: { fontSize: font.body, color: colors.text, fontWeight: "600", fontFamily: fonts.display },
-  totalLabel: { fontSize: font.body, fontWeight: "700", color: colors.text, fontFamily: fonts.bodyBold },
-  total: { fontSize: font.h3, fontWeight: "800", color: colors.text, fontFamily: fonts.display },
-  msg: { fontSize: font.small, color: colors.primary, fontWeight: "600", fontFamily: fonts.body },
-});
+const makeStyles = (c: Palette) =>
+  StyleSheet.create({
+    panel: { gap: space.md },
+    row: { flexDirection: "row", justifyContent: "space-between", alignItems: "center" },
+    price: { fontSize: font.h3, fontWeight: "800", color: c.text, fontFamily: fonts.display },
+    stepper: { flexDirection: "row", alignItems: "center", gap: space.md },
+    stepBtn: {
+      width: 44,
+      height: 44,
+      borderRadius: radius.md,
+      backgroundColor: c.bg,
+      borderWidth: 1,
+      borderColor: c.border,
+      alignItems: "center",
+      justifyContent: "center",
+    },
+    stepText: { fontSize: 24, fontWeight: "800", color: c.navy, fontFamily: fonts.bodyBold },
+    qty: { fontSize: font.h2, fontWeight: "800", color: c.text, minWidth: 40, textAlign: "center", fontFamily: fonts.display },
+    unit: { fontSize: font.small, color: c.muted, fontFamily: fonts.body },
+    breakdown: { gap: space.xs, paddingVertical: space.sm },
+    val: { fontSize: font.body, color: c.text, fontWeight: "600", fontFamily: fonts.display },
+    totalLabel: { fontSize: font.body, fontWeight: "700", color: c.text, fontFamily: fonts.bodyBold },
+    total: { fontSize: font.h3, fontWeight: "800", color: c.text, fontFamily: fonts.display },
+    msg: { fontSize: font.small, color: c.navy, fontWeight: "600", fontFamily: fonts.body },
+  });

@@ -8,11 +8,22 @@ import { colors } from "../theme.js";
 export interface IconProps {
   size?: number;
   color?: string;
+  filled?: boolean; // aktiver Zustand (Tab-Bar): zarte Füllung
 }
 
-function Base({ size = 24, color = colors.textMuted, children }: IconProps & { children: React.ReactNode }) {
+function Base({ size = 24, color = colors.muted, filled, children }: IconProps & { children: React.ReactNode }) {
   return (
-    <Svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth={2.25} strokeLinecap="round" strokeLinejoin="round">
+    <Svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill={filled ? color : "none"}
+      fillOpacity={filled ? 0.16 : 0}
+      stroke={color}
+      strokeWidth={2.25}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
       {children}
     </Svg>
   );

@@ -3,7 +3,8 @@ import { ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 import { useStore } from "../../store/store.js";
 import { supabase } from "../../lib/supabase.js";
 import { Body, Button, Card, H1, H2, Muted } from "../../ui/components.js";
-import { colors, font, fonts, radius, space } from "../../theme.js";
+import { font, fonts, radius, space, type Palette } from "../../theme.js";
+import { useColors, useThemedStyles } from "../../theme/ThemeProvider.js";
 
 interface LinkRow {
   childId: string;
@@ -44,6 +45,9 @@ export function FamilyLink() {
     }
   };
 
+  const c = useColors();
+  const styles = useThemedStyles(makeStyles);
+
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <H1>{t("family.linkChild")}</H1>
@@ -56,7 +60,7 @@ export function FamilyLink() {
           onChangeText={setCode}
           placeholder={t("family.codePlaceholder")}
           autoCapitalize="none"
-          placeholderTextColor={colors.textMuted}
+          placeholderTextColor={c.muted}
           style={styles.input}
         />
         <Button title={t("family.requestLink")} onPress={submit} disabled={code.trim().length < 8} testID="link-submit" />
@@ -71,7 +75,7 @@ export function FamilyLink() {
           links.map((l) => (
             <View key={l.childId} style={styles.row}>
               <Text style={styles.name}>{names.get(l.childId) ?? t("family.codeFallback", { tail: l.childId.slice(-6) })}</Text>
-              <Text style={[styles.status, l.status === "approved" && { color: colors.secondary }]}>
+              <Text style={[styles.status, l.status === "approved" && { color: c.green }]}>
                 {l.status === "approved" ? t("family.statusApproved") : l.status === "declined" ? t("family.statusDeclined") : t("family.statusPending")}
               </Text>
             </View>
@@ -82,20 +86,21 @@ export function FamilyLink() {
   );
 }
 
-const styles = StyleSheet.create({
-  container: { padding: space.lg, gap: space.md, backgroundColor: colors.background },
-  input: {
-    borderWidth: 1,
-    borderColor: colors.border,
-    borderRadius: radius.md,
-    padding: space.md,
-    fontSize: font.body,
-    fontFamily: fonts.body,
-    color: colors.text,
-    backgroundColor: colors.surface,
-  },
-  msg: { fontSize: font.small, color: colors.primary, fontWeight: "600", fontFamily: fonts.body },
-  row: { flexDirection: "row", justifyContent: "space-between", paddingVertical: space.sm, borderBottomWidth: 1, borderBottomColor: colors.border },
-  name: { fontSize: font.body, color: colors.text, fontWeight: "600", fontFamily: fonts.body },
-  status: { fontSize: font.small, color: colors.textMuted, fontWeight: "600", fontFamily: fonts.body },
-});
+const makeStyles = (c: Palette) =>
+  StyleSheet.create({
+    container: { padding: space.lg, gap: space.md, backgroundColor: c.bg },
+    input: {
+      borderWidth: 1,
+      borderColor: c.border,
+      borderRadius: radius.md,
+      padding: space.md,
+      fontSize: font.body,
+      fontFamily: fonts.body,
+      color: c.text,
+      backgroundColor: c.surface,
+    },
+    msg: { fontSize: font.small, color: c.navy, fontWeight: "600", fontFamily: fonts.body },
+    row: { flexDirection: "row", justifyContent: "space-between", paddingVertical: space.sm, borderBottomWidth: 1, borderBottomColor: c.border },
+    name: { fontSize: font.body, color: c.text, fontWeight: "600", fontFamily: fonts.body },
+    status: { fontSize: font.small, color: c.muted, fontWeight: "600", fontFamily: fonts.body },
+  });

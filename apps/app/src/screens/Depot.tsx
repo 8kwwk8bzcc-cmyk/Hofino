@@ -5,11 +5,14 @@ import { useStore, type JournalEntry } from "../store/store.js";
 import { Body, Button, Card, H1, H2, Muted, Pill } from "../ui/components.js";
 import { TradePanel } from "../ui/TradePanel.js";
 import { useNav } from "../nav.js";
-import { colors, font, fonts, space } from "../theme.js";
+import { font, fonts, space, type Palette } from "../theme.js";
+import { useColors, useThemedStyles } from "../theme/ThemeProvider.js";
 
 export function Depot() {
   const { state, prices, derived, instrumentById, fetchDecisionJournal, t } = useStore();
   const go = useNav();
+  const c = useColors();
+  const styles = useThemedStyles(makeStyles);
   const [sellId, setSellId] = useState<string | null>(null);
   const [journal, setJournal] = useState<JournalEntry[]>([]);
   const holdings = state.portfolio.holdings;
@@ -82,7 +85,7 @@ export function Depot() {
                   </View>
                   <View style={{ alignItems: "flex-end" }}>
                     <Text style={styles.posVal}>{formatEuros(value)}</Text>
-                    <Text style={[styles.pl, { color: plPct >= 0 ? colors.secondary : colors.danger }]}>
+                    <Text style={[styles.pl, { color: plPct >= 0 ? c.green : c.danger }]}>
                       {plPct >= 0 ? "+" : ""}
                       {plPct.toFixed(1)} %
                     </Text>
@@ -125,21 +128,22 @@ export function Depot() {
   );
 }
 
-const styles = StyleSheet.create({
-  container: { padding: space.lg, gap: space.md, backgroundColor: colors.background },
-  headRow: { flexDirection: "row", justifyContent: "space-between", alignItems: "flex-start" },
-  big: { fontSize: font.h1, fontWeight: "800", color: colors.text, fontFamily: fonts.display },
-  calmPct: { fontSize: font.small, color: colors.textMuted, fontWeight: "600", fontFamily: fonts.display },
-  splitRow: { flexDirection: "row", justifyContent: "space-between" },
-  feeCard: { backgroundColor: "#EAF2FB" },
-  pos: { paddingVertical: space.sm, borderBottomWidth: 1, borderBottomColor: colors.border, gap: space.sm },
-  posTop: { flexDirection: "row", alignItems: "center" },
-  posName: { fontSize: font.body, fontWeight: "700", color: colors.text, fontFamily: fonts.bodyBold },
-  posVal: { fontSize: font.body, fontWeight: "700", color: colors.text, fontFamily: fonts.display },
-  pl: { fontSize: font.small, fontWeight: "700", fontFamily: fonts.display },
-  posActions: { flexDirection: "row", gap: space.sm },
-  entry: { paddingVertical: space.sm, borderBottomWidth: 1, borderBottomColor: colors.border, gap: 2 },
-  entryHead: { flexDirection: "row", justifyContent: "space-between" },
-  entryName: { fontSize: font.body, fontWeight: "700", color: colors.text, fontFamily: fonts.bodyBold },
-  entryAction: { fontSize: font.body, fontWeight: "700", color: colors.primary, fontFamily: fonts.display },
-});
+const makeStyles = (c: Palette) =>
+  StyleSheet.create({
+    container: { padding: space.lg, gap: space.md, backgroundColor: c.bg },
+    headRow: { flexDirection: "row", justifyContent: "space-between", alignItems: "flex-start" },
+    big: { fontSize: font.h1, fontWeight: "800", color: c.text, fontFamily: fonts.display },
+    calmPct: { fontSize: font.small, color: c.muted, fontWeight: "600", fontFamily: fonts.display },
+    splitRow: { flexDirection: "row", justifyContent: "space-between" },
+    feeCard: { backgroundColor: c.softBlue },
+    pos: { paddingVertical: space.sm, borderBottomWidth: 1, borderBottomColor: c.border, gap: space.sm },
+    posTop: { flexDirection: "row", alignItems: "center" },
+    posName: { fontSize: font.body, fontWeight: "700", color: c.text, fontFamily: fonts.bodyBold },
+    posVal: { fontSize: font.body, fontWeight: "700", color: c.text, fontFamily: fonts.display },
+    pl: { fontSize: font.small, fontWeight: "700", fontFamily: fonts.display },
+    posActions: { flexDirection: "row", gap: space.sm },
+    entry: { paddingVertical: space.sm, borderBottomWidth: 1, borderBottomColor: c.border, gap: 2 },
+    entryHead: { flexDirection: "row", justifyContent: "space-between" },
+    entryName: { fontSize: font.body, fontWeight: "700", color: c.text, fontFamily: fonts.bodyBold },
+    entryAction: { fontSize: font.body, fontWeight: "700", color: c.navy, fontFamily: fonts.display },
+  });

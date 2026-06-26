@@ -4,9 +4,11 @@ import { formatEuros } from "@hofino/core";
 import { COMPANY_PROFILES, ETF_PROFILES } from "@hofino/content";
 import { useStore } from "../store/store.js";
 import { Body, Button, Card, H1, H2, Muted, Pill } from "../ui/components.js";
-import { colors, font, fonts, space } from "../theme.js";
+import { font, fonts, space, type Palette } from "../theme.js";
+import { useThemedStyles } from "../theme/ThemeProvider.js";
 
 function Field({ q, a }: { q: string; a: string }) {
+  const styles = useThemedStyles(makeStyles);
   return (
     <View style={{ gap: 2 }}>
       <Text style={styles.fieldQ}>{q}</Text>
@@ -26,6 +28,7 @@ export function MarketLab({
   onDecide: () => void;
 }) {
   const { instrumentById, prices, t } = useStore();
+  const styles = useThemedStyles(makeStyles);
   const inst = instrumentById.get(instrumentId);
   const company = COMPANY_PROFILES.find((p) => p.ticker === inst?.ticker);
   const etf = ETF_PROFILES.find((p) => p.ticker === inst?.ticker);
@@ -75,10 +78,11 @@ export function MarketLab({
   );
 }
 
-const styles = StyleSheet.create({
-  container: { padding: space.lg, gap: space.md, backgroundColor: colors.background },
-  head: { flexDirection: "row", justifyContent: "space-between", alignItems: "flex-start" },
-  price: { fontSize: font.h3, fontWeight: "800", color: colors.text, fontFamily: fonts.display },
-  fieldQ: { fontSize: font.small, fontWeight: "700", color: colors.textMuted, fontFamily: fonts.body },
-  observe: { backgroundColor: "#EAF2FB" },
-});
+const makeStyles = (c: Palette) =>
+  StyleSheet.create({
+    container: { padding: space.lg, gap: space.md, backgroundColor: c.bg },
+    head: { flexDirection: "row", justifyContent: "space-between", alignItems: "flex-start" },
+    price: { fontSize: font.h3, fontWeight: "800", color: c.text, fontFamily: fonts.display },
+    fieldQ: { fontSize: font.small, fontWeight: "700", color: c.muted, fontFamily: fonts.body },
+    observe: { backgroundColor: c.softBlue },
+  });

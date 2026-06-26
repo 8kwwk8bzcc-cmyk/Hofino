@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Hanken+Grotesk:wght@400;500;600;700&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,500,1,0&display=swap" rel="stylesheet">
+<style>
+  /* Hofino · Grünanlage — Design Tokens (Light). 1:1 nach theme.ts übernehmbar. */
+  :root{
+    --color-navy:#0E2A47; --color-navy-soft:#1C3D5C;
+    --color-green:#1F9D6B; --color-gold:#E7BD57;
+    --color-bg:#F2F6FA; --color-surface:#FFFFFF;
+    --color-soft-blue:#E8F0FA; --color-mint:#E4F4EC; --color-gold-soft:#FBF1D6;
+    --color-text:#0E2A47; --color-muted:#5C7184; --color-faint:#9AA7B4;
+    --color-border:#DCE6EE; --color-danger:#D96B6B;
+    --radius-card:22px; --radius-button:14px; --radius-input:16px; --radius-pill:999px; --radius-sm:10px;
+    --space-1:4px; --space-2:8px; --space-3:12px; --space-4:16px; --space-5:20px; --space-6:24px; --space-8:32px; --space-10:40px;
+    --shadow-sm:0 1px 3px rgba(20,40,60,.08);
+    --shadow-md:0 8px 24px rgba(20,40,60,.08);
+    --shadow-lg:0 20px 48px rgba(20,40,60,.12);
+    --font-display:'Space Grotesk'; --font-body:'Hanken Grotesk';
+  }
+  *{ box-sizing:border-box; }
+  body{ margin:0; font-family:'Hanken Grotesk',system-ui,sans-serif; -webkit-font-smoothing:antialiased; }
+</style>
+</helmet>
+
+<div style="position:absolute; left:80px; top:0; width:1000px;">
+  <div style="font-family:'Space Grotesk'; font-size:13px; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; color:#9AA7B4;">Hofino · Edu-Fintech · Richtung Grünanlage</div>
+  <div style="font-family:'Space Grotesk'; font-size:34px; font-weight:700; color:#0E2A47; margin-top:4px;">Design-System</div>
+  <div style="font-size:15px; color:#5C7184; margin-top:6px;">Foundations → Komponenten → 9 Screens + Beamer → Haus-System → Dark Mode. Mobile-first, RN-tauglich.</div>
+</div>
+
+<!-- ============================ 01 · FOUNDATIONS ============================ -->
+<div style="position:absolute; left:80px; top:112px; width:600px; font-family:'Space Grotesk'; font-size:15px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#1F9D6B;">01 · Foundations</div>
+
+<!-- Colors -->
+<div style="position:absolute; left:80px; top:152px; width:660px; background:#FFFFFF; border:1px solid #DCE6EE; border-radius:22px; padding:26px; box-shadow:0 8px 24px rgba(20,40,60,.08);">
+  <div style="font-family:'Space Grotesk'; font-size:20px; font-weight:700; color:#0E2A47;">Farben</div>
+  <div style="font-size:13px; color:#9AA7B4; margin-top:2px;">Token-Werte als CSS-Variablen (siehe <code>:root</code>).</div>
+  <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-top:18px;">
+    <div><div style="height:54px; border-radius:12px; background:#0E2A47;"></div><div style="font-size:12px; font-weight:600; color:#0E2A47; margin-top:6px;">Navy</div><div style="font-size:11px; color:#9AA7B4;">--navy · #0E2A47</div></div>
+    <div><div style="height:54px; border-radius:12px; background:#1C3D5C;"></div><div style="font-size:12px; font-weight:600; color:#0E2A47; margin-top:6px;">Navy-soft</div><div style="font-size:11px; color:#9AA7B4;">#1C3D5C</div></div>
+    <div><div style="height:54px; border-radius:12px; background:#1F9D6B;"></div><div style="font-size:12px; font-weight:600; color:#0E2A47; margin-top:6px;">Grün</div><div style="font-size:11px; color:#9AA7B4;">--green · #1F9D6B</div></div>
+    <div><div style="height:54px; border-radius:12px; background:#E7BD57;"></div><div style="font-size:12px; font-weight:600; color:#0E2A47; margin-top:6px;">Gold</div><div style="font-size:11px; color:#9AA7B4;">--gold · #E7BD57</div></div>
+    <div><div style="height:54px; border-radius:12px; background:#F2F6FA; border:1px solid #DCE6EE;"></div><div style="font-size:12px; font-weight:600; color:#0E2A47; margin-top:6px;">Background</div><div style="font-size:11px; color:#9AA7B4;">#F2F6FA</div></div>
+    <div><div style="height:54px; border-radius:12px; background:#FFFFFF; border:1px solid #DCE6EE;"></div><div style="font-size:12px; font-weight:600; color:#0E2A47; margin-top:6px;">Surface</div><div style="font-size:11px; color:#9AA7B4;">#FFFFFF</div></div>
+    <div><div style="height:54px; border-radius:12px; background:#E8F0FA;"></div><div style="font-size:12px; font-weight:600; color:#0E2A47; margin-top:6px;">Soft-Blue</div><div style="font-size:11px; color:#9AA7B4;">#E8F0FA</div></div>
+    <div><div style="height:54px; border-radius:12px; background:#E4F4EC;"></div><div style="font-size:12px; font-weight:600; color:#0E2A47; margin-top:6px;">Mint</div><div style="font-size:11px; color:#9AA7B4;">#E4F4EC</div></div>
+    <div><div style="height:54px; border-radius:12px; background:#FBF1D6;"></div><div style="font-size:12px; font-weight:600; color:#0E2A47; margin-top:6px;">Gold-soft</div><div style="font-size:11px; color:#9AA7B4;">#FBF1D6</div></div>
+    <div><div style="height:54px; border-radius:12px; background:#5C7184;"></div><div style="font-size:12px; font-weight:600; color:#0E2A47; margin-top:6px;">Muted</div><div style="font-size:11px; color:#9AA7B4;">#5C7184</div></div>
+    <div><div style="height:54px; border-radius:12px; background:#DCE6EE;"></div><div style="font-size:12px; font-weight:600; color:#0E2A47; margin-top:6px;">Border</div><div style="font-size:11px; color:#9AA7B4;">#DCE6EE</div></div>
+    <div><div style="height:54px; border-radius:12px; background:#D96B6B;"></div><div style="font-size:12px; font-weight:600; color:#0E2A47; margin-top:6px;">Danger</div><div style="font-size:11px; color:#9AA7B4;">#D96B6B</div></div>
+  </div>
+</div>
+
+<!-- Type -->
+<div style="position:absolute; left:780px; top:152px; width:520px; background:#FFFFFF; border:1px solid #DCE6EE; border-radius:22px; padding:26px; box-shadow:0 8px 24px rgba(20,40,60,.08);">
+  <div style="font-family:'Space Grotesk'; font-size:20px; font-weight:700; color:#0E2A47;">Typografie</div>
+  <div style="font-size:13px; color:#9AA7B4; margin-top:2px;">Space Grotesk (Display/Zahlen) · Hanken Grotesk (Text)</div>
+  <div style="margin-top:20px; display:flex; flex-direction:column; gap:16px;">
+    <div style="display:flex; align-items:baseline; justify-content:space-between; border-bottom:1px solid #EEF2F6; padding-bottom:14px;"><span style="font-family:'Space Grotesk'; font-size:30px; font-weight:700; color:#0E2A47;">Display H1</span><span style="font-size:11px; color:#9AA7B4;">SG 30 / 700</span></div>
+    <div style="display:flex; align-items:baseline; justify-content:space-between; border-bottom:1px solid #EEF2F6; padding-bottom:14px;"><span style="font-family:'Space Grotesk'; font-size:24px; font-weight:700; color:#0E2A47;">Überschrift H2</span><span style="font-size:11px; color:#9AA7B4;">SG 24 / 700</span></div>
+    <div style="display:flex; align-items:baseline; justify-content:space-between; border-bottom:1px solid #EEF2F6; padding-bottom:14px;"><span style="font-family:'Space Grotesk'; font-size:19px; font-weight:700; color:#0E2A47;">Titel H3</span><span style="font-size:11px; color:#9AA7B4;">SG 19 / 700</span></div>
+    <div style="display:flex; align-items:baseline; justify-content:space-between; border-bottom:1px solid #EEF2F6; padding-bottom:14px;"><span style="font-size:16px; color:#0E2A47;">Body L — Fließtext für Erklärungen.</span><span style="font-size:11px; color:#9AA7B4;">HG 16 / 400</span></div>
+    <div style="display:flex; align-items:baseline; justify-content:space-between; border-bottom:1px solid #EEF2F6; padding-bottom:14px;"><span style="font-size:14.5px; color:#0E2A47;">Body — Standardtext.</span><span style="font-size:11px; color:#9AA7B4;">HG 14.5 / 400</span></div>
+    <div style="display:flex; align-items:baseline; justify-content:space-between; border-bottom:1px solid #EEF2F6; padding-bottom:14px;"><span style="font-size:12.5px; font-weight:500; color:#5C7184;">Caption — sekundär</span><span style="font-size:11px; color:#9AA7B4;">HG 12.5 / 500</span></div>
+    <div style="display:flex; align-items:baseline; justify-content:space-between;"><span style="font-size:11px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#9AA7B4;">Overline · Label</span><span style="font-size:11px; color:#9AA7B4;">HG 11 / 600</span></div>
+  </div>
+</div>
+
+<!-- Spacing -->
+<div style="position:absolute; left:1340px; top:152px; width:380px; background:#FFFFFF; border:1px solid #DCE6EE; border-radius:22px; padding:24px; box-shadow:0 8px 24px rgba(20,40,60,.08);">
+  <div style="font-family:'Space Grotesk'; font-size:18px; font-weight:700; color:#0E2A47;">Spacing</div>
+  <div style="font-size:12.5px; color:#9AA7B4; margin-top:2px;">4er-Skala</div>
+  <div style="display:flex; flex-direction:column; gap:9px; margin-top:16px;">
+    <div style="display:flex; align-items:center; gap:12px;"><div style="height:14px; width:4px; background:#1F9D6B; border-radius:2px;"></div><span style="font-size:12.5px; color:#5C7184;">4 · space-1</span></div>
+    <div style="display:flex; align-items:center; gap:12px;"><div style="height:14px; width:8px; background:#1F9D6B; border-radius:2px;"></div><span style="font-size:12.5px; color:#5C7184;">8 · space-2</span></div>
+    <div style="display:flex; align-items:center; gap:12px;"><div style="height:14px; width:12px; background:#1F9D6B; border-radius:2px;"></div><span style="font-size:12.5px; color:#5C7184;">12 · space-3</span></div>
+    <div style="display:flex; align-items:center; gap:12px;"><div style="height:14px; width:16px; background:#1F9D6B; border-radius:2px;"></div><span style="font-size:12.5px; color:#5C7184;">16 · space-4</span></div>
+    <div style="display:flex; align-items:center; gap:12px;"><div style="height:14px; width:24px; background:#1F9D6B; border-radius:2px;"></div><span style="font-size:12.5px; color:#5C7184;">24 · space-6</span></div>
+    <div style="display:flex; align-items:center; gap:12px;"><div style="height:14px; width:32px; background:#1F9D6B; border-radius:2px;"></div><span style="font-size:12.5px; color:#5C7184;">32 · space-8</span></div>
+    <div style="display:flex; align-items:center; gap:12px;"><div style="height:14px; width:40px; background:#1F9D6B; border-radius:2px;"></div><span style="font-size:12.5px; color:#5C7184;">40 · space-10</span></div>
+  </div>
+</div>
+
+<!-- Radii & Shadows -->
+<div style="position:absolute; left:1340px; top:472px; width:380px; background:#FFFFFF; border:1px solid #DCE6EE; border-radius:22px; padding:24px; box-shadow:0 8px 24px rgba(20,40,60,.08);">
+  <div style="font-family:'Space Grotesk'; font-size:18px; font-weight:700; color:#0E2A47;">Radien &amp; Schatten</div>
+  <div style="display:flex; gap:10px; margin-top:16px;">
+    <div style="flex:1; text-align:center;"><div style="height:48px; background:#E8F0FA; border-radius:10px;"></div><div style="font-size:11px; color:#9AA7B4; margin-top:6px;">sm 10</div></div>
+    <div style="flex:1; text-align:center;"><div style="height:48px; background:#E8F0FA; border-radius:14px;"></div><div style="font-size:11px; color:#9AA7B4; margin-top:6px;">btn 14</div></div>
+    <div style="flex:1; text-align:center;"><div style="height:48px; background:#E8F0FA; border-radius:16px;"></div><div style="font-size:11px; color:#9AA7B4; margin-top:6px;">input 16</div></div>
+    <div style="flex:1; text-align:center;"><div style="height:48px; background:#E8F0FA; border-radius:22px;"></div><div style="font-size:11px; color:#9AA7B4; margin-top:6px;">card 22</div></div>
+  </div>
+  <div style="display:flex; gap:14px; margin-top:22px;">
+    <div style="flex:1; text-align:center;"><div style="height:48px; background:#FFFFFF; border-radius:12px; box-shadow:0 1px 3px rgba(20,40,60,.08);"></div><div style="font-size:11px; color:#9AA7B4; margin-top:10px;">shadow-sm</div></div>
+    <div style="flex:1; text-align:center;"><div style="height:48px; background:#FFFFFF; border-radius:12px; box-shadow:0 8px 24px rgba(20,40,60,.08);"></div><div style="font-size:11px; color:#9AA7B4; margin-top:10px;">shadow-md</div></div>
+    <div style="flex:1; text-align:center;"><div style="height:48px; background:#FFFFFF; border-radius:12px; box-shadow:0 20px 48px rgba(20,40,60,.12);"></div><div style="font-size:11px; color:#9AA7B4; margin-top:10px;">shadow-lg</div></div>
+  </div>
+</div>
+
+
+<!-- ============================ 02 · COMPONENTS ============================ -->
+<div style="position:absolute; left:80px; top:792px; width:600px; font-family:'Space Grotesk'; font-size:15px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#1F9D6B;">02 · Components</div>
+
+<!-- Buttons -->
+<div style="position:absolute; left:80px; top:832px; width:380px; background:#FFFFFF; border:1px solid #DCE6EE; border-radius:22px; padding:24px; box-shadow:0 8px 24px rgba(20,40,60,.08);">
+  <div style="font-family:'Space Grotesk'; font-size:17px; font-weight:700; color:#0E2A47;">Buttons</div>
+  <div style="display:flex; flex-direction:column; gap:12px; margin-top:18px;">
+    <div style="background:#0E2A47; color:#fff; text-align:center; font-weight:700; font-size:15px; padding:14px; border-radius:14px;">Primär</div>
+    <div style="background:#1F9D6B; color:#fff; text-align:center; font-weight:700; font-size:15px; padding:14px; border-radius:14px;">Akzent · Lernen starten</div>
+    <div style="background:#FFFFFF; color:#0E2A47; text-align:center; font-weight:700; font-size:15px; padding:13px; border-radius:14px; border:1.5px solid #DCE6EE;">Sekundär</div>
+    <div style="display:flex; gap:12px;">
+      <div style="flex:1; color:#1F9D6B; text-align:center; font-weight:700; font-size:15px; padding:13px;">Ghost ›</div>
+      <div style="flex:1; background:#C7D2DC; color:#fff; text-align:center; font-weight:700; font-size:15px; padding:14px; border-radius:14px;">Inaktiv</div>
+    </div>
+  </div>
+</div>
+
+<!-- Pills / Badges -->
+<div style="position:absolute; left:490px; top:832px; width:380px; background:#FFFFFF; border:1px solid #DCE6EE; border-radius:22px; padding:24px; box-shadow:0 8px 24px rgba(20,40,60,.08);">
+  <div style="font-family:'Space Grotesk'; font-size:17px; font-weight:700; color:#0E2A47;">Pills &amp; Badges</div>
+  <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:18px;">
+    <span style="background:#E4F4EC; color:#1F8A5B; font-weight:600; font-size:13px; padding:7px 14px; border-radius:999px;">Gemeistert</span>
+    <span style="background:#E8F0FA; color:#1C3D5C; font-weight:600; font-size:13px; padding:7px 14px; border-radius:999px;">Box 3</span>
+    <span style="background:#FBF1D6; color:#9A7A1E; font-weight:600; font-size:13px; padding:7px 14px; border-radius:999px;">Vom Lehrer</span>
+    <span style="background:#EDF1F5; color:#5C7184; font-weight:600; font-size:13px; padding:7px 14px; border-radius:999px;">Gesperrt</span>
+    <span style="background:#FFFFFF; border:1px solid #DCE6EE; color:#5C7184; font-weight:600; font-size:13px; padding:6px 13px; border-radius:999px;">virtuell</span>
+  </div>
+  <div style="display:flex; gap:10px; margin-top:16px; align-items:center;">
+    <span style="background:#E7BD57; color:#0E2A47; font-weight:700; font-size:13px; padding:6px 12px; border-radius:999px;">+50 XP</span>
+    <span style="display:inline-flex; align-items:center; gap:5px; background:#E4F4EC; color:#1F8A5B; font-weight:600; font-size:13px; padding:6px 12px; border-radius:999px;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1; font-size:16px;">trending_up</span>+2,1 %</span>
+    <span style="display:inline-flex; align-items:center; gap:5px; background:#FBEAEA; color:#C25555; font-weight:600; font-size:13px; padding:6px 12px; border-radius:999px;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1; font-size:16px;">trending_down</span>−0,1 %</span>
+  </div>
+</div>
+
+<!-- Progress -->
+<div style="position:absolute; left:900px; top:832px; width:380px; background:#FFFFFF; border:1px solid #DCE6EE; border-radius:22px; padding:24px; box-shadow:0 8px 24px rgba(20,40,60,.08);">
+  <div style="font-family:'Space Grotesk'; font-size:17px; font-weight:700; color:#0E2A47;">Progress</div>
+  <div style="margin-top:18px;">
+    <div style="display:flex; justify-content:space-between; font-size:12.5px; color:#5C7184; margin-bottom:6px;"><span>XP bis Level 2</span><span style="font-weight:600; color:#0E2A47;">250 / 300</span></div>
+    <div style="height:10px; border-radius:999px; background:#DCE6EE;"><div style="width:83%; height:100%; border-radius:999px; background:#1F9D6B;"></div></div>
+  </div>
+  <div style="margin-top:18px;">
+    <div style="display:flex; justify-content:space-between; font-size:12.5px; color:#5C7184; margin-bottom:6px;"><span>Haus-Fortschritt</span><span style="font-weight:600; color:#0E2A47;">3 / 6</span></div>
+    <div style="height:10px; border-radius:999px; background:#DCE6EE;"><div style="width:50%; height:100%; border-radius:999px; background:#E7BD57;"></div></div>
+  </div>
+  <div style="margin-top:18px;">
+    <div style="font-size:12.5px; color:#5C7184; margin-bottom:8px;">Frage-Schritte</div>
+    <div style="display:flex; gap:6px;"><div style="flex:1; height:8px; border-radius:999px; background:#1F9D6B;"></div><div style="flex:1; height:8px; border-radius:999px; background:#1F9D6B;"></div><div style="flex:1; height:8px; border-radius:999px; background:#1F9D6B;"></div><div style="flex:1; height:8px; border-radius:999px; background:#DCE6EE;"></div><div style="flex:1; height:8px; border-radius:999px; background:#DCE6EE;"></div></div>
+  </div>
+</div>
+
+<!-- Inputs -->
+<div style="position:absolute; left:1310px; top:832px; width:410px; background:#FFFFFF; border:1px solid #DCE6EE; border-radius:22px; padding:24px; box-shadow:0 8px 24px rgba(20,40,60,.08);">
+  <div style="font-family:'Space Grotesk'; font-size:17px; font-weight:700; color:#0E2A47;">Eingabefelder</div>
+  <div style="display:flex; flex-direction:column; gap:14px; margin-top:18px;">
+    <div>
+      <div style="font-size:11px; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color:#9AA7B4; margin-bottom:6px;">Anzeigename</div>
+      <div style="background:#FFFFFF; border:1.5px solid #DCE6EE; border-radius:16px; padding:14px 16px; font-size:15px; color:#9AA7B4;">z.&nbsp;B. SparfuchsMia</div>
+    </div>
+    <div>
+      <div style="font-size:11px; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color:#1F9D6B; margin-bottom:6px;">E-Mail · Fokus</div>
+      <div style="background:#FFFFFF; border:2px solid #1F9D6B; border-radius:16px; padding:13px 16px; font-size:15px; color:#0E2A47; box-shadow:0 0 0 4px rgba(31,157,107,0.12);">mia@beispiel.de</div>
+    </div>
+    <div>
+      <div style="font-size:11px; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color:#D96B6B; margin-bottom:6px;">Passwort · Fehler</div>
+      <div style="background:#FFFFFF; border:1.5px solid #D96B6B; border-radius:16px; padding:14px 16px; font-size:15px; color:#0E2A47;">••••</div>
+      <div style="font-size:12px; color:#D96B6B; margin-top:5px;">Mind. 6 Zeichen.</div>
+    </div>
+  </div>
+</div>
+
+<!-- Card sample -->
+<div style="position:absolute; left:80px; top:1152px; width:380px; background:#FFFFFF; border:1px solid #DCE6EE; border-radius:22px; padding:24px; box-shadow:0 8px 24px rgba(20,40,60,.08);">
+  <div style="font-family:'Space Grotesk'; font-size:17px; font-weight:700; color:#0E2A47;">Karte</div>
+  <div style="margin-top:16px; background:#F2F6FA; border:1px solid #DCE6EE; border-radius:18px; padding:18px;">
+    <div style="font-size:11px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#9AA7B4;">Schritt 1</div>
+    <div style="font-family:'Space Grotesk'; font-size:18px; font-weight:700; color:#0E2A47; margin-top:6px;">Lernmission</div>
+    <div style="font-size:14px; color:#5C7184; margin-top:4px;">Sparen vs. Ausgeben · 5 Min</div>
+    <div style="display:flex; align-items:center; gap:6px; margin-top:12px; color:#1F9D6B; font-weight:700; font-size:14px;">Lernen starten <span style="font-family:'Material Symbols Rounded'; font-size:18px;">chevron_right</span></div>
+  </div>
+</div>
+
+<!-- List row -->
+<div style="position:absolute; left:490px; top:1152px; width:380px; background:#FFFFFF; border:1px solid #DCE6EE; border-radius:22px; padding:24px; box-shadow:0 8px 24px rgba(20,40,60,.08);">
+  <div style="font-family:'Space Grotesk'; font-size:17px; font-weight:700; color:#0E2A47;">Listenzeile</div>
+  <div style="margin-top:14px;">
+    <div style="display:flex; align-items:center; gap:14px; padding:14px 0; border-bottom:1px solid #EEF2F6;">
+      <div style="width:40px; height:40px; border-radius:12px; background:#E8F0FA; display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk'; font-weight:700; color:#1C3D5C; font-size:14px;">A</div>
+      <div style="flex:1;"><div style="font-size:15px; font-weight:700; color:#0E2A47;">Apple</div><div style="font-size:12.5px; color:#9AA7B4;">AAPL · Aktie</div></div>
+      <div style="text-align:right;"><div style="font-family:'Space Grotesk'; font-weight:700; color:#0E2A47;">210,00 €</div><div style="font-size:12.5px; color:#1F8A5B; font-weight:600;">+0,8 %</div></div>
+    </div>
+    <div style="display:flex; align-items:center; gap:14px; padding:14px 0;">
+      <div style="width:40px; height:40px; border-radius:12px; background:#E8F0FA; display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk'; font-weight:700; color:#1C3D5C; font-size:14px;">M</div>
+      <div style="flex:1;"><div style="font-size:15px; font-weight:700; color:#0E2A47;">Microsoft</div><div style="font-size:12.5px; color:#9AA7B4;">MSFT · Aktie</div></div>
+      <div style="text-align:right;"><div style="font-family:'Space Grotesk'; font-weight:700; color:#0E2A47;">420,00 €</div><div style="font-size:12.5px; color:#5C7184; font-weight:600;">0,0 %</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- Reward moment -->
+<div style="position:absolute; left:900px; top:1152px; width:380px; background:#FFFFFF; border:1px solid #DCE6EE; border-radius:22px; padding:24px; box-shadow:0 8px 24px rgba(20,40,60,.08);">
+  <div style="font-family:'Space Grotesk'; font-size:17px; font-weight:700; color:#0E2A47;">Belohnungs-Moment</div>
+  <div style="margin-top:16px; background:#E4F4EC; border-radius:18px; padding:20px; text-align:center;">
+    <div style="width:56px; height:56px; margin:0 auto; border-radius:50%; background:#1F9D6B; display:flex; align-items:center; justify-content:center;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1; font-size:34px; color:#fff;">check</span></div>
+    <div style="font-family:'Space Grotesk'; font-size:19px; font-weight:700; color:#0E2A47; margin-top:12px;">Richtig!</div>
+    <div style="font-size:13.5px; color:#5C7184; margin-top:4px; line-height:1.45;">Ein ETF bündelt viele Aktien.</div>
+    <span style="display:inline-block; margin-top:12px; background:#E7BD57; color:#0E2A47; font-weight:700; font-size:13px; padding:7px 16px; border-radius:999px;">+10 XP</span>
+  </div>
+</div>
+
+<!-- Tab Bar -->
+<div style="position:absolute; left:1310px; top:1152px; width:410px; background:#FFFFFF; border:1px solid #DCE6EE; border-radius:22px; padding:24px; box-shadow:0 8px 24px rgba(20,40,60,.08);">
+  <div style="font-family:'Space Grotesk'; font-size:17px; font-weight:700; color:#0E2A47;">Tab-Bar</div>
+  <div style="font-size:12.5px; color:#9AA7B4; margin-top:2px;">Duotone-Icons, kein Emoji. Aktiv = Grün.</div>
+  <div style="margin-top:18px; border:1px solid #DCE6EE; border-radius:18px; overflow:hidden;">
+    <div style="height:72px; background:#FFFFFF; display:flex; padding:9px 4px 0;">
+      <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px; color:#1F9D6B;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1; font-size:24px;">cottage</span><span style="font-size:10.5px; font-weight:600;">Start</span></div>
+      <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px; color:#9AA7B4;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 0; font-size:24px;">menu_book</span><span style="font-size:10.5px;">Lernen</span></div>
+      <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px; color:#9AA7B4;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 0; font-size:24px;">work</span><span style="font-size:10.5px;">Depot</span></div>
+      <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px; color:#9AA7B4;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 0; font-size:24px;">explore</span><span style="font-size:10.5px;">Werte</span></div>
+      <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px; color:#9AA7B4;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 0; font-size:24px;">emoji_events</span><span style="font-size:10.5px;">Liga</span></div>
+    </div>
+  </div>
+  <div style="font-size:12px; color:#9AA7B4; margin-top:14px; line-height:1.5;">Icons: cottage · menu_book · work · explore · emoji_events (Material Symbols Rounded).</div>
+</div>
+
+<!-- ============================ 03 · SCREENS ============================ -->
+<div style="position:absolute; left:80px; top:1500px; width:600px; font-family:'Space Grotesk'; font-size:15px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#1F9D6B;">03 · Screens · Kids &amp; Kern</div>
+
+<!-- 1 · Onboarding -->
+<div data-drags-parent="1" style="position:absolute; left:80px; top:1548px; width:390px; font-family:'Space Grotesk'; font-size:12.5px; font-weight:600; letter-spacing:0.04em; color:#5C7184; text-transform:uppercase;">1 · Onboarding / Auth</div>
+<div data-screen-label="Onboarding" style="position:absolute; left:80px; top:1584px; width:390px; height:844px; border-radius:46px; background:#F2F6FA; border:10px solid #11151b; box-shadow:0 30px 60px rgba(20,40,60,.28); overflow:hidden; display:flex; flex-direction:column;">
+  <div style="height:44px; display:flex; align-items:center; justify-content:space-between; padding:0 24px; flex:0 0 auto;">
+    <span style="font-weight:600; font-size:14px; color:#0E2A47;">9:41</span>
+    <div style="display:flex; gap:6px; align-items:center; color:#0E2A47;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1; font-size:17px;">signal_cellular_alt</span><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1; font-size:17px;">wifi</span><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1; font-size:18px;">battery_full</span></div>
+  </div>
+  <div style="flex:1; overflow:hidden; padding:8px 22px 0;">
+    <div style="display:flex; justify-content:flex-end; gap:6px; font-size:13px; font-weight:600;"><span style="color:#0E2A47; border-bottom:2px solid #1F9D6B; padding-bottom:1px;">DE</span><span style="color:#9AA7B4;">EN</span></div>
+    <div style="position:relative; overflow:hidden; width:60px; height:60px; border-radius:18px; background:#0E2A47; display:flex; align-items:center; justify-content:center; margin-top:10px;"><span style="position:relative; z-index:1; font-family:'Space Grotesk'; font-weight:700; color:#1F9D6B; font-size:30px;">H</span><div style="position:absolute; left:13px; bottom:16px; width:33px; height:4px; border-radius:2px; background:#E7BD57; transform:rotate(-30deg); transform-origin:left center; z-index:2;"></div><div style="position:absolute; left:40px; bottom:26px; width:0; height:0; border-top:5px solid transparent; border-bottom:5px solid transparent; border-left:9px solid #E7BD57; transform:rotate(-30deg); transform-origin:left center; z-index:2;"></div></div>
+    <div style="font-family:'Space Grotesk'; font-size:27px; font-weight:700; color:#0E2A47; line-height:1.1; margin-top:14px;">Willkommen bei Hofino</div>
+    <div style="font-size:14px; color:#5C7184; margin-top:6px;">Geld verstehen. Investieren üben.</div>
+
+    <div style="display:flex; gap:8px; background:#E8F0FA; border-radius:14px; padding:4px; margin-top:18px;">
+      <div style="flex:1; text-align:center; font-size:13.5px; font-weight:700; color:#fff; background:#0E2A47; border-radius:11px; padding:11px 0;">Neu hier</div>
+      <div style="flex:1; text-align:center; font-size:13.5px; font-weight:600; color:#5C7184; padding:11px 0;">Anmelden</div>
+    </div>
+
+    <div style="font-size:11px; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color:#9AA7B4; margin-top:18px;">Für wen ist das Konto?</div>
+    <div style="display:flex; gap:8px; margin-top:10px;">
+      <div style="flex:1; text-align:center; background:#0E2A47; color:#fff; font-weight:700; font-size:12px; padding:11px 0; border-radius:12px;">Kind<br><span style="font-weight:500; font-size:10.5px; opacity:.8;">10–15</span></div>
+      <div style="flex:1; text-align:center; background:#fff; border:1px solid #DCE6EE; color:#5C7184; font-weight:600; font-size:12px; padding:11px 0; border-radius:12px;">Erwach&shy;sene</div>
+      <div style="flex:1; text-align:center; background:#fff; border:1px solid #DCE6EE; color:#5C7184; font-weight:600; font-size:12px; padding:11px 0; border-radius:12px;">Eltern</div>
+      <div style="flex:1; text-align:center; background:#fff; border:1px solid #DCE6EE; color:#5C7184; font-weight:600; font-size:12px; padding:11px 0; border-radius:12px;">Lehrer</div>
+    </div>
+
+    <div style="font-size:11px; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color:#9AA7B4; margin-top:18px;">Grundstück wählen</div>
+    <div style="display:flex; gap:10px; margin-top:10px;">
+      <div style="flex:1; border:2px solid #1F9D6B; border-radius:14px; padding:10px; background:#fff;"><div style="height:42px; border-radius:9px; background:linear-gradient(180deg,#E4F4EC,#CDEBD9); position:relative;"><div style="position:absolute; left:50%; bottom:6px; transform:translateX(-50%); width:0; height:0; border-left:9px solid transparent; border-right:9px solid transparent; border-bottom:14px solid #1F9D6B;"></div></div><div style="font-size:11.5px; font-weight:600; color:#0E2A47; text-align:center; margin-top:7px;">Wald</div></div>
+      <div style="flex:1; border:1px solid #DCE6EE; border-radius:14px; padding:10px; background:#fff;"><div style="height:42px; border-radius:9px; background:linear-gradient(180deg,#E8F0FA,#CFE3F5);"></div><div style="font-size:11.5px; font-weight:600; color:#5C7184; text-align:center; margin-top:7px;">See</div></div>
+      <div style="flex:1; border:1px solid #DCE6EE; border-radius:14px; padding:10px; background:#fff;"><div style="height:42px; border-radius:9px; background:linear-gradient(180deg,#EDEFF3,#DBE0E8); position:relative;"><div style="position:absolute; left:14px; bottom:6px; width:9px; height:20px; background:#9AA7B4; border-radius:2px;"></div><div style="position:absolute; left:26px; bottom:6px; width:9px; height:28px; background:#B7C0CC; border-radius:2px;"></div></div><div style="font-size:11.5px; font-weight:600; color:#5C7184; text-align:center; margin-top:7px;">Stadt</div></div>
+    </div>
+
+    <div style="background:#FBF1D6; border-radius:12px; padding:11px 14px; font-size:12.5px; color:#7A6420; margin-top:16px; line-height:1.4;">Zum Start: <b>5.000,00 €</b> virtuelles Übungsgeld — kein echtes Geld.</div>
+    <div style="background:#1F9D6B; color:#fff; text-align:center; font-weight:700; font-size:15px; padding:15px; border-radius:14px; margin-top:12px;">Los geht’s</div>
+  </div>
+</div>
+
+<!-- 2 · Zuhause Kids -->
+<div data-drags-parent="1" style="position:absolute; left:550px; top:1548px; width:390px; font-family:'Space Grotesk'; font-size:12.5px; font-weight:600; letter-spacing:0.04em; color:#5C7184; text-transform:uppercase;">2 · Zuhause · Kids</div>
+<div data-screen-label="KidsHome" style="position:absolute; left:550px; top:1584px; width:390px; height:844px; border-radius:46px; background:#F2F6FA; border:10px solid #11151b; box-shadow:0 30px 60px rgba(20,40,60,.28); overflow:hidden; display:flex; flex-direction:column;">
+  <div style="height:44px; display:flex; align-items:center; justify-content:space-between; padding:0 24px; flex:0 0 auto;">
+    <span style="font-weight:600; font-size:14px; color:#0E2A47;">9:41</span>
+    <div style="display:flex; gap:6px; align-items:center; color:#0E2A47;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1; font-size:17px;">signal_cellular_alt</span><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1; font-size:17px;">wifi</span><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1; font-size:18px;">battery_full</span></div>
+  </div>
+  <div style="flex:1; overflow:hidden; padding:6px 18px 0;">
+    <div style="display:flex; align-items:center; justify-content:space-between;">
+      <div><div style="font-size:14px; color:#5C7184;">Hallo,</div><div style="font-family:'Space Grotesk'; font-size:26px; font-weight:700; color:#0E2A47; line-height:1.05;">Mia</div></div>
+      <div style="position:relative; overflow:hidden; width:42px; height:42px; border-radius:14px; background:#0E2A47; display:flex; align-items:center; justify-content:center;"><span style="position:relative; z-index:1; font-family:'Space Grotesk'; font-weight:700; color:#1F9D6B; font-size:20px;">H</span><div style="position:absolute; left:9px; bottom:11px; width:23px; height:3px; border-radius:2px; background:#E7BD57; transform:rotate(-30deg); transform-origin:left center; z-index:2;"></div><div style="position:absolute; left:28px; bottom:18px; width:0; height:0; border-top:3.5px solid transparent; border-bottom:3.5px solid transparent; border-left:6px solid #E7BD57; transform:rotate(-30deg); transform-origin:left center; z-index:2;"></div></div>
+    </div>
+    <div style="margin-top:14px; border-radius:22px; overflow:hidden; background:linear-gradient(180deg,#E8F0FA 0%,#EAF6EF 100%); border:1px solid #DCE6EE; position:relative; height:208px;">
+      <div style="position:absolute; left:0; right:0; bottom:0; height:74px; background:#CDEBD9; border-radius:50% 50% 0 0 / 60px 60px 0 0;"></div>
+      <div style="position:absolute; top:18px; right:20px; width:34px; height:34px; border-radius:50%; background:#E7BD57;"></div>
+      <div style="position:absolute; left:40px; bottom:54px; width:14px; height:30px; background:#1F9D6B; border-radius:7px;"></div>
+      <div style="position:absolute; left:30px; bottom:74px; width:34px; height:34px; border-radius:50%; background:#3AB07F;"></div>
+      <div style="position:absolute; left:50%; bottom:46px; transform:translateX(-50%); width:104px; height:78px; background:#FFFFFF; border:2px solid #0E2A47; border-radius:6px;"></div>
+      <div style="position:absolute; left:50%; bottom:118px; transform:translateX(-50%); width:0; height:0; border-left:64px solid transparent; border-right:64px solid transparent; border-bottom:42px solid #0E2A47;"></div>
+      <div style="position:absolute; left:50%; bottom:46px; transform:translateX(-50%); margin-left:-22px; width:24px; height:36px; background:#E7BD57; border:2px solid #0E2A47; border-radius:4px 4px 0 0;"></div>
+      <div style="position:absolute; left:50%; bottom:70px; transform:translateX(-50%); margin-left:22px; width:22px; height:22px; background:#E8F0FA; border:2px solid #0E2A47; border-radius:4px;"></div>
+      <div style="position:absolute; top:14px; left:14px; background:rgba(255,255,255,0.85); border:1px solid #DCE6EE; border-radius:999px; padding:5px 11px; font-size:12px; font-weight:600; color:#0E2A47;">Stufe 3 · Wände</div>
+    </div>
+    <div style="margin-top:10px;">
+      <div style="display:flex; justify-content:space-between; font-size:12.5px; color:#5C7184; margin-bottom:6px;"><span>Dein Haus wächst</span><span style="font-weight:600; color:#0E2A47;">3 / 6</span></div>
+      <div style="height:9px; border-radius:999px; background:#DCE6EE;"><div style="width:50%; height:100%; border-radius:999px; background:#1F9D6B;"></div></div>
+    </div>
+    <div style="display:flex; gap:12px; margin-top:14px;">
+      <div style="flex:1; background:#FFFFFF; border:1px solid #DCE6EE; border-radius:18px; padding:14px;"><div style="font-size:12px; color:#5C7184;">Musterdepot</div><div style="font-family:'Space Grotesk'; font-size:19px; font-weight:700; color:#0E2A47; margin-top:3px;">7.495,00 €</div><div style="font-size:12.5px; color:#1F8A5B; font-weight:600; margin-top:2px;">+2,1 %</div></div>
+      <div style="flex:1; background:#FFFFFF; border:1px solid #DCE6EE; border-radius:18px; padding:14px;"><div style="font-size:12px; color:#5C7184;">Wissen</div><div style="font-family:'Space Grotesk'; font-size:19px; font-weight:700; color:#0E2A47; margin-top:3px;">250 P</div><div style="font-size:12.5px; color:#5C7184; margin-top:2px;">1 / 20 Module</div></div>
+    </div>
+    <div style="margin-top:14px; background:#0E2A47; border-radius:18px; padding:16px;">
+      <div style="font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:#7FBF9E; font-weight:600;">Nächste Mission</div>
+      <div style="font-family:'Space Grotesk'; font-size:17px; font-weight:700; color:#fff; margin-top:5px;">Was ist ein ETF?</div>
+      <div style="display:flex; align-items:center; justify-content:space-between; margin-top:12px;"><span style="font-size:12.5px; color:#A9C2D6;">5 Min · +50 XP</span><span style="background:#1F9D6B; color:#fff; font-weight:700; font-size:13px; padding:8px 16px; border-radius:12px;">Starten</span></div>
+    </div>
+  </div>
+  <div style="flex:0 0 auto; height:74px; border-top:1px solid #DCE6EE; background:#FFFFFF; display:flex; padding:9px 4px 0;">
+    <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px; color:#1F9D6B;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1; font-size:24px;">cottage</span><span style="font-size:10.5px; font-weight:600;">Start</span></div>
+    <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px; color:#9AA7B4;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 0; font-size:24px;">menu_book</span><span style="font-size:10.5px;">Lernen</span></div>
+    <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px; color:#9AA7B4;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 0; font-size:24px;">work</span><span style="font-size:10.5px;">Depot</span></div>
+    <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px; color:#9AA7B4;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 0; font-size:24px;">explore</span><span style="font-size:10.5px;">Werte</span></div>
+    <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px; color:#9AA7B4;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 0; font-size:24px;">emoji_events</span><span style="font-size:10.5px;">Liga</span></div>
+  </div>
+</div>
+
+<!-- 3 · Zuhause Adult (ruhiger, kein Haus) -->
+<div data-drags-parent="1" style="position:absolute; left:1020px; top:1548px; width:390px; font-family:'Space Grotesk'; font-size:12.5px; font-weight:600; letter-spacing:0.04em; color:#5C7184; text-transform:uppercase;">3 · Zuhause · Adult</div>
+<div data-screen-label="AdultHome" style="position:absolute; left:1020px; top:1584px; width:390px; height:844px; border-radius:46px; background:#F2F6FA; border:10px solid #11151b; box-shadow:0 30px 60px rgba(20,40,60,.28); overflow:hidden; display:flex; flex-direction:column;">
+  <div style="height:44px; display:flex; align-items:center; justify-content:space-between; padding:0 24px; flex:0 0 auto;">
+    <span style="font-weight:600; font-size:14px; color:#0E2A47;">9:41</span>
+    <div style="display:flex; gap:6px; align-items:center; color:#0E2A47;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1; font-size:17px;">signal_cellular_alt</span><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1; font-size:17px;">wifi</span><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1; font-size:18px;">battery_full</span></div>
+  </div>
+  <div style="flex:1; overflow:hidden; padding:6px 20px 0;">
+    <div style="font-size:13px; color:#9AA7B4; margin-top:4px;">Übersicht</div>
+    <div style="font-family:'Space Grotesk'; font-size:26px; font-weight:700; color:#0E2A47; line-height:1.1; margin-top:2px;">Guten Morgen, Jonas</div>
+
+    <div style="margin-top:18px; background:#FFFFFF; border:1px solid #DCE6EE; border-radius:20px; padding:20px;">
+      <div style="font-size:12.5px; color:#5C7184;">Musterdepot · virtuell</div>
+      <div style="font-family:'Space Grotesk'; font-size:32px; font-weight:700; color:#0E2A47; margin-top:4px;">7.495,00 €</div>
+      <div style="display:flex; gap:16px; margin-top:10px; font-size:12.5px;"><span style="color:#5C7184;">Cash <b style="color:#0E2A47;">6.865 €</b></span><span style="color:#5C7184;">Positionen <b style="color:#0E2A47;">630 €</b></span><span style="color:#1F8A5B; font-weight:600;">+2,1 %</span></div>
+    </div>
+
+    <div style="margin-top:14px; background:#FFFFFF; border:1px solid #DCE6EE; border-radius:20px; padding:18px;">
+      <div style="font-family:'Space Grotesk'; font-size:16px; font-weight:700; color:#0E2A47;">Lernfortschritt</div>
+      <div style="display:flex; justify-content:space-between; font-size:12.5px; color:#5C7184; margin:12px 0 6px;"><span>Wissenslevel 1</span><span style="font-weight:600; color:#0E2A47;">250 / 300 XP</span></div>
+      <div style="height:9px; border-radius:999px; background:#DCE6EE;"><div style="width:83%; height:100%; border-radius:999px; background:#1F9D6B;"></div></div>
+      <div style="font-size:12.5px; color:#5C7184; margin-top:8px;">1 von 20 Modulen abgeschlossen.</div>
+    </div>
+
+    <div style="margin-top:14px; background:#FFFFFF; border:1px solid #DCE6EE; border-radius:20px; padding:18px;">
+      <div style="display:flex; align-items:center; justify-content:space-between;"><div style="font-family:'Space Grotesk'; font-size:16px; font-weight:700; color:#0E2A47;">Deine Liga</div><span style="font-size:12.5px; color:#1F9D6B; font-weight:600;">Alle ansehen ›</span></div>
+      <div style="display:flex; align-items:center; gap:12px; margin-top:12px;"><span style="width:24px; height:24px; border-radius:50%; background:#E8F0FA; color:#1C3D5C; font-weight:700; font-size:12px; display:flex; align-items:center; justify-content:center;">5</span><span style="flex:1; font-size:14.5px; font-weight:600; color:#0E2A47;">Du</span><span style="font-family:'Space Grotesk'; font-weight:700; color:#5C7184; font-size:14px;">−0,1 %</span></div>
+    </div>
+    <div style="margin-top:14px; background:#1F9D6B; color:#fff; text-align:center; font-weight:700; font-size:15px; padding:15px; border-radius:14px;">Weiterlernen</div>
+  </div>
+  <div style="flex:0 0 auto; height:74px; border-top:1px solid #DCE6EE; background:#FFFFFF; display:flex; padding:9px 4px 0;">
+    <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px; color:#1F9D6B;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1; font-size:24px;">monitoring</span><span style="font-size:10.5px; font-weight:600;">Start</span></div>
+    <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px; color:#9AA7B4;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 0; font-size:24px;">menu_book</span><span style="font-size:10.5px;">Lernen</span></div>
+    <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px; color:#9AA7B4;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 0; font-size:24px;">work</span><span style="font-size:10.5px;">Depot</span></div>
+    <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px; color:#9AA7B4;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 0; font-size:24px;">explore</span><span style="font-size:10.5px;">Werte</span></div>
+    <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px; color:#9AA7B4;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 0; font-size:24px;">emoji_events</span><span style="font-size:10.5px;">Liga</span></div>
+  </div>
+</div>
+
+<!-- 4 · Lernen Übersicht -->
+<div data-drags-parent="1" style="position:absolute; left:1490px; top:1548px; width:390px; font-family:'Space Grotesk'; font-size:12.5px; font-weight:600; letter-spacing:0.04em; color:#5C7184; text-transform:uppercase;">4 · Lernen · Übersicht</div>
+<div data-screen-label="Lernen" style="position:absolute; left:1490px; top:1584px; width:390px; height:844px; border-radius:46px; background:#F2F6FA; border:10px solid #11151b; box-shadow:0 30px 60px rgba(20,40,60,.28); overflow:hidden; display:flex; flex-direction:column;">
+  <div style="height:44px; display:flex; align-items:center; justify-content:space-between; padding:0 24px; flex:0 0 auto;">
+    <span style="font-weight:600; font-size:14px; color:#0E2A47;">9:41</span>
+    <div style="display:flex; gap:6px; align-items:center; color:#0E2A47;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1; font-size:17px;">signal_cellular_alt</span><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1; font-size:17px;">wifi</span><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1; font-size:18px;">battery_full</span></div>
+  </div>
+  <div style="flex:1; overflow:hidden; padding:6px 18px 0;">
+    <div style="font-family:'Space Grotesk'; font-size:26px; font-weight:700; color:#0E2A47;">Lernen</div>
+    <div style="margin-top:12px; background:#FFFFFF; border:1px solid #DCE6EE; border-radius:18px; padding:16px;">
+      <div style="display:flex; align-items:center; justify-content:space-between;"><div style="font-family:'Space Grotesk'; font-size:18px; font-weight:700; color:#0E2A47;">Wissenslevel 1</div><span style="background:#FBF1D6; color:#9A7A1E; font-weight:700; font-size:12.5px; padding:5px 12px; border-radius:999px;">250 XP</span></div>
+      <div style="height:9px; border-radius:999px; background:#DCE6EE; margin-top:12px;"><div style="width:83%; height:100%; border-radius:999px; background:#1F9D6B;"></div></div>
+      <div style="font-size:12.5px; color:#5C7184; margin-top:8px;">Noch 50 XP bis Level 2</div>
+    </div>
+    <div style="margin-top:12px; background:#FFFFFF; border:1px solid #DCE6EE; border-radius:18px; padding:16px;">
+      <div style="font-family:'Space Grotesk'; font-size:16px; font-weight:700; color:#0E2A47;">Auszeichnungen</div>
+      <div style="display:flex; align-items:center; gap:12px; margin-top:12px;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1; font-size:22px; color:#1F9D6B;">school</span><span style="flex:1; font-size:14px; color:#0E2A47;">Fleißig gelernt</span><span style="font-size:13px; color:#9AA7B4; font-weight:600;">2/10</span></div>
+      <div style="display:flex; align-items:center; gap:12px; margin-top:10px;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1; font-size:22px; color:#E7BD57;">workspace_premium</span><span style="flex:1; font-size:14px; color:#0E2A47;">Konzept-Sammler</span><span style="font-size:13px; color:#9AA7B4; font-weight:600;">1/5</span></div>
+    </div>
+    <div style="margin-top:12px; background:#FBF1D6; border:1.5px solid #E7BD57; border-radius:18px; padding:16px;">
+      <div style="font-family:'Space Grotesk'; font-size:16px; font-weight:700; color:#0E2A47;">Tägliche Mini-Aufgabe</div>
+      <div style="font-size:13.5px; color:#7A6420; margin-top:4px;">2 Konzepte heute fällig zum Wiederholen.</div>
+      <div style="margin-top:12px; background:#0E2A47; color:#fff; text-align:center; font-weight:700; font-size:14px; padding:12px; border-radius:13px;">Wiederholen starten</div>
+    </div>
+    <div style="margin-top:12px;">
+      <div style="font-size:11px; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color:#9AA7B4; margin-bottom:8px;">Konzepte</div>
+      <div style="background:#FFFFFF; border:1px solid #DCE6EE; border-radius:14px; padding:14px 16px; display:flex; align-items:center; justify-content:space-between;"><span style="font-size:14.5px; font-weight:600; color:#0E2A47;">Was ist ein Unternehmen?</span><span style="background:#E4F4EC; color:#1F8A5B; font-weight:600; font-size:11.5px; padding:5px 10px; border-radius:999px;">Gemeistert</span></div>
+    </div>
+  </div>
+  <div style="flex:0 0 auto; height:74px; border-top:1px solid #DCE6EE; background:#FFFFFF; display:flex; padding:9px 4px 0;">
+    <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px; color:#9AA7B4;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 0; font-size:24px;">cottage</span><span style="font-size:10.5px;">Start</span></div>
+    <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px; color:#1F9D6B;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1; font-size:24px;">menu_book</span><span style="font-size:10.5px; font-weight:600;">Lernen</span></div>
+    <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px; color:#9AA7B4;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 0; font-size:24px;">work</span><span style="font-size:10.5px;">Depot</span></div>
+    <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px; color:#9AA7B4;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 0; font-size:24px;">explore</span><span style="font-size:10.5px;">Werte</span></div>
+    <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px; color:#9AA7B4;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 0; font-size:24px;">emoji_events</span><span style="font-size:10.5px;">Liga</span></div>
+  </div>
+</div>
+
+<!-- 5 · Lernen Frage-Flow -->
+<div data-drags-parent="1" style="position:absolute; left:1960px; top:1548px; width:390px; font-family:'Space Grotesk'; font-size:12.5px; font-weight:600; letter-spacing:0.04em; color:#5C7184; text-transform:uppercase;">5 · Lernen · Frage-Flow</div>
+<div data-screen-label="FrageFlow" style="position:absolute; left:1960px; top:1584px; width:390px; height:844px; border-radius:46px; background:#F2F6FA; border:10px solid #11151b; box-shadow:0 30px 60px rgba(20,40,60,.28); overflow:hidden; display:flex; flex-direction:column;">
+  <div style="height:44px; display:flex; align-items:center; justify-content:space-between; padding:0 24px; flex:0 0 auto;">
+    <span style="font-weight:600; font-size:14px; color:#0E2A47;">9:41</span>
+    <div style="display:flex; gap:6px; align-items:center; color:#0E2A47;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1; font-size:17px;">signal_cellular_alt</span><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1; font-size:17px;">wifi</span><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1; font-size:18px;">battery_full</span></div>
+  </div>
+  <div style="flex:1; overflow:hidden; padding:6px 18px 0; display:flex; flex-direction:column;">
+    <div style="display:flex; align-items:center; gap:12px;"><span style="font-family:'Material Symbols Rounded'; font-size:24px; color:#0E2A47;">arrow_back</span><div style="flex:1; height:9px; border-radius:999px; background:#DCE6EE;"><div style="width:60%; height:100%; border-radius:999px; background:#1F9D6B;"></div></div><span style="font-size:13px; font-weight:600; color:#5C7184;">3/5</span></div>
+    <div style="font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:#9AA7B4; font-weight:600; margin-top:20px;">Modul · Was ist ein ETF?</div>
+    <div style="font-family:'Space Grotesk'; font-size:23px; font-weight:700; color:#0E2A47; line-height:1.2; margin-top:8px;">Was beschreibt einen ETF am besten?</div>
+    <div style="display:flex; flex-direction:column; gap:10px; margin-top:20px;">
+      <div style="background:#FFFFFF; border:1.5px solid #DCE6EE; border-radius:16px; padding:14px 16px; font-size:14.5px; color:#3f566b;">Eine einzelne Aktie eines Unternehmens</div>
+      <div style="background:#E4F4EC; border:1.5px solid #1F9D6B; border-radius:16px; padding:14px 16px; font-size:14.5px; color:#0E2A47; font-weight:600; display:flex; align-items:center; justify-content:space-between;">Ein Korb aus vielen Aktien<span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1; font-size:22px; color:#1F9D6B;">check_circle</span></div>
+      <div style="background:#FFFFFF; border:1.5px solid #DCE6EE; border-radius:16px; padding:14px 16px; font-size:14.5px; color:#3f566b;">Ein Konto bei der Bank</div>
+      <div style="background:#FFFFFF; border:1.5px solid #DCE6EE; border-radius:16px; padding:14px 16px; font-size:14.5px; color:#3f566b;">Ein Kredit fürs Investieren</div>
+    </div>
+    <div style="margin-top:auto; margin-bottom:14px; background:#E4F4EC; border-radius:18px; padding:16px;">
+      <div style="display:flex; align-items:center; gap:8px;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1; font-size:22px; color:#1F9D6B;">verified</span><span style="font-family:'Space Grotesk'; font-weight:700; font-size:16px; color:#0E2A47;">Richtig!</span><span style="margin-left:auto; background:#E7BD57; color:#0E2A47; font-weight:700; font-size:12px; padding:4px 10px; border-radius:999px;">+10 XP</span></div>
+      <div style="font-size:13.5px; color:#3f566b; margin-top:8px; line-height:1.5;">Ein ETF bündelt viele Aktien — so verteilst du Risiko, ohne alles einzeln zu kaufen.</div>
+      <div style="margin-top:12px; background:#0E2A47; color:#fff; text-align:center; font-weight:700; font-size:14.5px; padding:13px; border-radius:14px;">Weiter</div>
+    </div>
+  </div>
+  <div style="flex:0 0 auto; height:74px; border-top:1px solid #DCE6EE; background:#FFFFFF; display:flex; padding:9px 4px 0;">
+    <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px; color:#9AA7B4;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 0; font-size:24px;">cottage</span><span style="font-size:10.5px;">Start</span></div>
+    <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px; color:#1F9D6B;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1; font-size:24px;">menu_book</span><span style="font-size:10.5px; font-weight:600;">Lernen</span></div>
+    <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px; color:#9AA7B4;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 0; font-size:24px;">work</span><span style="font-size:10.5px;">Depot</span></div>
+    <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px; color:#9AA7B4;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 0; font-size:24px;">explore</span><span style="font-size:10.5px;">Werte</span></div>
+    <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px; color:#9AA7B4;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 0; font-size:24px;">emoji_events</span><span style="font-size:10.5px;">Liga</span></div>
+  </div>
+</div>
+
+<div style="position:absolute; left:80px; top:2440px; width:600px; font-family:'Space Grotesk'; font-size:15px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#1F9D6B;">03 · Screens · Depot, Entdecken &amp; Modi</div>
+
+<!-- 6 · Depot -->
+<div data-drags-parent="1" style="position:absolute; left:80px; top:2488px; width:390px; font-family:'Space Grotesk'; font-size:12.5px; font-weight:600; letter-spacing:0.04em; color:#5C7184; text-transform:uppercase;">6 · Depot</div>
+<div data-screen-label="Depot" style="position:absolute; left:80px; top:2524px; width:390px; height:844px; border-radius:46px; background:#F2F6FA; border:10px solid #11151b; box-shadow:0 30px 60px rgba(20,40,60,.28); overflow:hidden; display:flex; flex-direction:column;">
+  <div style="height:44px; display:flex; align-items:center; justify-content:space-between; padding:0 24px; flex:0 0 auto;">
+    <span style="font-weight:600; font-size:14px; color:#0E2A47;">9:41</span>
+    <div style="display:flex; gap:6px; align-items:center; color:#0E2A47;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1; font-size:17px;">signal_cellular_alt</span><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1; font-size:17px;">wifi</span><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1; font-size:18px;">battery_full</span></div>
+  </div>
+  <div style="flex:1; overflow:hidden; padding:6px 18px 0;">
+    <div style="font-family:'Space Grotesk'; font-size:26px; font-weight:700; color:#0E2A47;">Depot</div>
+    <div style="margin-top:12px; background:#FFFFFF; border:1px solid #DCE6EE; border-radius:20px; padding:18px;">
+      <div style="display:flex; align-items:flex-start; justify-content:space-between;"><div style="font-size:12.5px; color:#5C7184;">Musterdepot</div><span style="background:#E8F0FA; color:#1C3D5C; font-weight:600; font-size:11.5px; padding:5px 11px; border-radius:999px;">virtuell</span></div>
+      <div style="font-family:'Space Grotesk'; font-size:30px; font-weight:700; color:#0E2A47; margin-top:4px;">7.495,00 €</div>
+      <div style="display:flex; justify-content:space-between; margin-top:10px; font-size:12.5px; color:#5C7184;"><span>Cash: <b style="color:#0E2A47;">6.865,00 €</b></span><span>Positionen: <b style="color:#0E2A47;">630,00 €</b></span></div>
+    </div>
+    <div style="margin-top:12px; background:#E8F0FA; border-radius:14px; padding:13px 16px; font-size:12.5px; color:#1C3D5C;"><b>Übungsorder-Gebühr:</b> 5,00 € pro Kauf oder Verkauf · keine Bruchstücke.</div>
+    <div style="margin-top:12px; background:#FFFFFF; border:1px solid #DCE6EE; border-radius:20px; padding:18px;">
+      <div style="font-family:'Space Grotesk'; font-size:17px; font-weight:700; color:#0E2A47;">Deine Positionen</div>
+      <div style="display:flex; align-items:center; gap:12px; margin-top:14px;">
+        <div style="width:40px; height:40px; border-radius:12px; background:#E8F0FA; display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk'; font-weight:700; color:#1C3D5C;">A</div>
+        <div style="flex:1;"><div style="font-size:15px; font-weight:700; color:#0E2A47;">Apple</div><div style="font-size:12px; color:#9AA7B4;">3 Stück · Ø 210,00 €</div></div>
+        <div style="text-align:right;"><div style="font-family:'Space Grotesk'; font-weight:700; color:#0E2A47;">630,00 €</div><div style="font-size:12px; color:#1F8A5B; font-weight:600;">+0,8 %</div></div>
+      </div>
+      <div style="display:flex; gap:10px; margin-top:14px;"><div style="flex:1; text-align:center; border:1px solid #DCE6EE; border-radius:12px; padding:11px; font-weight:700; font-size:13.5px; color:#0E2A47;">Ansehen</div><div style="flex:1; text-align:center; background:#0E2A47; color:#fff; border-radius:12px; padding:11px; font-weight:700; font-size:13.5px;">Verkaufen üben</div></div>
+    </div>
+    <div style="margin-top:12px; background:#FFFFFF; border:1px solid #DCE6EE; border-radius:20px; padding:18px;"><div style="font-family:'Space Grotesk'; font-size:16px; font-weight:700; color:#0E2A47;">Entscheidungsjournal</div><div style="font-size:12.5px; color:#9AA7B4; margin-top:4px;">Noch keine Entscheidungen gespeichert.</div></div>
+  </div>
+  <div style="flex:0 0 auto; height:74px; border-top:1px solid #DCE6EE; background:#FFFFFF; display:flex; padding:9px 4px 0;">
+    <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px; color:#9AA7B4;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 0; font-size:24px;">cottage</span><span style="font-size:10.5px;">Start</span></div>
+    <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px; color:#9AA7B4;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 0; font-size:24px;">menu_book</span><span style="font-size:10.5px;">Lernen</span></div>
+    <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px; color:#1F9D6B;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1; font-size:24px;">work</span><span style="font-size:10.5px; font-weight:600;">Depot</span></div>
+    <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px; color:#9AA7B4;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 0; font-size:24px;">explore</span><span style="font-size:10.5px;">Werte</span></div>
+    <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px; color:#9AA7B4;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 0; font-size:24px;">emoji_events</span><span style="font-size:10.5px;">Liga</span></div>
+  </div>
+</div>
+
+<!-- 7 · Entdecken Liste -->
+<div data-drags-parent="1" style="position:absolute; left:550px; top:2488px; width:390px; font-family:'Space Grotesk'; font-size:12.5px; font-weight:600; letter-spacing:0.04em; color:#5C7184; text-transform:uppercase;">7 · Entdecken · Werte</div>
+<div data-screen-label="Entdecken" style="position:absolute; left:550px; top:2524px; width:390px; height:844px; border-radius:46px; background:#F2F6FA; border:10px solid #11151b; box-shadow:0 30px 60px rgba(20,40,60,.28); overflow:hidden; display:flex; flex-direction:column;">
+  <div style="height:44px; display:flex; align-items:center; justify-content:space-between; padding:0 24px; flex:0 0 auto;">
+    <span style="font-weight:600; font-size:14px; color:#0E2A47;">9:41</span>
+    <div style="display:flex; gap:6px; align-items:center; color:#0E2A47;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1; font-size:17px;">signal_cellular_alt</span><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1; font-size:17px;">wifi</span><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1; font-size:18px;">battery_full</span></div>
+  </div>
+  <div style="flex:1; overflow:hidden; padding:6px 18px 0;">
+    <div style="font-family:'Space Grotesk'; font-size:26px; font-weight:700; color:#0E2A47;">Werte</div>
+    <div style="font-size:13px; color:#5C7184; margin-top:2px;">17 Werte · bekannte Firmen &amp; ETFs als Lernbeispiele.</div>
+    <div style="display:flex; align-items:center; gap:10px; background:#FFFFFF; border:1px solid #DCE6EE; border-radius:14px; padding:11px 14px; margin-top:14px;"><span style="font-family:'Material Symbols Rounded'; font-size:20px; color:#9AA7B4;">search</span><span style="font-size:14px; color:#9AA7B4;">Suchen …</span></div>
+    <div style="background:#FFFFFF; border:1px solid #DCE6EE; border-radius:18px; padding:4px 16px; margin-top:14px;">
+      <div style="display:flex; align-items:center; gap:12px; padding:13px 0; border-bottom:1px solid #EEF2F6;"><div style="width:38px; height:38px; border-radius:11px; background:#E8F0FA; display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk'; font-weight:700; color:#1C3D5C; font-size:13px;">A</div><div style="flex:1;"><div style="font-size:14.5px; font-weight:700; color:#0E2A47;">Apple</div><div style="font-size:11.5px; color:#9AA7B4;">AAPL · Aktie</div></div><div style="font-family:'Space Grotesk'; font-weight:700; color:#0E2A47;">210,00 €</div></div>
+      <div style="display:flex; align-items:center; gap:12px; padding:13px 0; border-bottom:1px solid #EEF2F6;"><div style="width:38px; height:38px; border-radius:11px; background:#E8F0FA; display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk'; font-weight:700; color:#1C3D5C; font-size:13px;">M</div><div style="flex:1;"><div style="font-size:14.5px; font-weight:700; color:#0E2A47;">Microsoft</div><div style="font-size:11.5px; color:#9AA7B4;">MSFT · Aktie</div></div><div style="font-family:'Space Grotesk'; font-weight:700; color:#0E2A47;">420,00 €</div></div>
+      <div style="display:flex; align-items:center; gap:12px; padding:13px 0; border-bottom:1px solid #EEF2F6;"><div style="width:38px; height:38px; border-radius:11px; background:#E4F4EC; display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk'; font-weight:700; color:#1F8A5B; font-size:11px;">ETF</div><div style="flex:1;"><div style="font-size:14.5px; font-weight:700; color:#0E2A47;">Welt-ETF</div><div style="font-size:11.5px; color:#9AA7B4;">IWDA · ETF</div></div><div style="font-family:'Space Grotesk'; font-weight:700; color:#0E2A47;">95,00 €</div></div>
+      <div style="display:flex; align-items:center; gap:12px; padding:13px 0; border-bottom:1px solid #EEF2F6;"><div style="width:38px; height:38px; border-radius:11px; background:#E8F0FA; display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk'; font-weight:700; color:#1C3D5C; font-size:13px;">S</div><div style="flex:1;"><div style="font-size:14.5px; font-weight:700; color:#0E2A47;">SAP</div><div style="font-size:11.5px; color:#9AA7B4;">SAP · Aktie</div></div><div style="font-family:'Space Grotesk'; font-weight:700; color:#0E2A47;">220,00 €</div></div>
+      <div style="display:flex; align-items:center; gap:12px; padding:13px 0;"><div style="width:38px; height:38px; border-radius:11px; background:#E8F0FA; display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk'; font-weight:700; color:#1C3D5C; font-size:13px;">V</div><div style="flex:1;"><div style="font-size:14.5px; font-weight:700; color:#0E2A47;">Volkswagen</div><div style="font-size:11.5px; color:#9AA7B4;">VOW3 · Aktie</div></div><div style="font-family:'Space Grotesk'; font-weight:700; color:#0E2A47;">95,00 €</div></div>
+    </div>
+  </div>
+  <div style="flex:0 0 auto; height:74px; border-top:1px solid #DCE6EE; background:#FFFFFF; display:flex; padding:9px 4px 0;">
+    <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px; color:#9AA7B4;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 0; font-size:24px;">cottage</span><span style="font-size:10.5px;">Start</span></div>
+    <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px; color:#9AA7B4;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 0; font-size:24px;">menu_book</span><span style="font-size:10.5px;">Lernen</span></div>
+    <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px; color:#9AA7B4;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 0; font-size:24px;">work</span><span style="font-size:10.5px;">Depot</span></div>
+    <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px; color:#1F9D6B;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1; font-size:24px;">explore</span><span style="font-size:10.5px; font-weight:600;">Werte</span></div>
+    <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px; color:#9AA7B4;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 0; font-size:24px;">emoji_events</span><span style="font-size:10.5px;">Liga</span></div>
+  </div>
+</div>
+
+<!-- 8 · Entdecken Detail -->
+<div data-drags-parent="1" style="position:absolute; left:1020px; top:2488px; width:390px; font-family:'Space Grotesk'; font-size:12.5px; font-weight:600; letter-spacing:0.04em; color:#5C7184; text-transform:uppercase;">8 · Werte · Faktensheet</div>
+<div data-screen-label="EntdeckenDetail" style="position:absolute; left:1020px; top:2524px; width:390px; height:844px; border-radius:46px; background:#F2F6FA; border:10px solid #11151b; box-shadow:0 30px 60px rgba(20,40,60,.28); overflow:hidden; display:flex; flex-direction:column;">
+  <div style="height:44px; display:flex; align-items:center; justify-content:space-between; padding:0 24px; flex:0 0 auto;">
+    <span style="font-weight:600; font-size:14px; color:#0E2A47;">9:41</span>
+    <div style="display:flex; gap:6px; align-items:center; color:#0E2A47;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1; font-size:17px;">signal_cellular_alt</span><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1; font-size:17px;">wifi</span><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1; font-size:18px;">battery_full</span></div>
+  </div>
+  <div style="flex:1; overflow:hidden; padding:6px 18px 0;">
+    <div style="display:flex; align-items:center; gap:10px;"><span style="font-family:'Material Symbols Rounded'; font-size:24px; color:#0E2A47;">arrow_back</span><span style="font-size:13px; color:#9AA7B4;">Werte</span></div>
+    <div style="display:flex; align-items:center; gap:14px; margin-top:14px;"><div style="width:52px; height:52px; border-radius:15px; background:#E8F0FA; display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk'; font-weight:700; color:#1C3D5C; font-size:20px;">A</div><div><div style="font-family:'Space Grotesk'; font-size:22px; font-weight:700; color:#0E2A47;">Apple</div><div style="font-size:12.5px; color:#9AA7B4;">AAPL · Aktie · stündlich</div></div></div>
+    <div style="display:flex; align-items:baseline; gap:10px; margin-top:12px;"><span style="font-family:'Space Grotesk'; font-size:28px; font-weight:700; color:#0E2A47;">210,00 €</span><span style="font-size:13px; color:#1F8A5B; font-weight:600;">+0,8 % heute</span></div>
+    <div style="margin-top:14px; background:#FFFFFF; border:1px solid #DCE6EE; border-radius:16px; padding:16px;"><div style="font-family:'Space Grotesk'; font-size:15px; font-weight:700; color:#0E2A47;">Was macht das Unternehmen?</div><div style="font-size:13.5px; color:#5C7184; margin-top:6px; line-height:1.5;">Apple entwickelt und verkauft Geräte wie iPhone und Mac sowie Dienste. Geld verdient die Firma mit Produkten und Abos.</div></div>
+    <div style="display:flex; gap:12px; margin-top:12px;">
+      <div style="flex:1; background:#E4F4EC; border-radius:16px; padding:14px;"><div style="font-size:11px; font-weight:700; letter-spacing:0.05em; text-transform:uppercase; color:#1F8A5B;">Chancen</div><div style="font-size:12.5px; color:#3f566b; margin-top:6px; line-height:1.45;">Starke Marke, viele Stammkunden.</div></div>
+      <div style="flex:1; background:#FBEAEA; border-radius:16px; padding:14px;"><div style="font-size:11px; font-weight:700; letter-spacing:0.05em; text-transform:uppercase; color:#C25555;">Risiken</div><div style="font-size:12.5px; color:#3f566b; margin-top:6px; line-height:1.45;">Abhängig von wenigen Produkten.</div></div>
+    </div>
+    <div style="margin-top:12px; background:#E8F0FA; border-radius:12px; padding:12px 14px; font-size:12px; color:#1C3D5C; line-height:1.45;"><b>Hinweis:</b> Neutrale Lerninfo, keine Anlageempfehlung. Es fließt kein echtes Geld.</div>
+    <div style="margin-top:12px; display:flex; align-items:center; justify-content:space-between;"><span style="font-size:12px; color:#5C7184;">Übungsgebühr 5,00 €</span><span style="background:#0E2A47; color:#fff; font-weight:700; font-size:14px; padding:12px 22px; border-radius:14px;">Kaufen üben</span></div>
+  </div>
+  <div style="flex:0 0 auto; height:74px; border-top:1px solid #DCE6EE; background:#FFFFFF; display:flex; padding:9px 4px 0;">
+    <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px; color:#9AA7B4;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 0; font-size:24px;">cottage</span><span style="font-size:10.5px;">Start</span></div>
+    <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px; color:#9AA7B4;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 0; font-size:24px;">menu_book</span><span style="font-size:10.5px;">Lernen</span></div>
+    <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px; color:#9AA7B4;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 0; font-size:24px;">work</span><span style="font-size:10.5px;">Depot</span></div>
+    <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px; color:#1F9D6B;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1; font-size:24px;">explore</span><span style="font-size:10.5px; font-weight:600;">Werte</span></div>
+    <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px; color:#9AA7B4;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 0; font-size:24px;">emoji_events</span><span style="font-size:10.5px;">Liga</span></div>
+  </div>
+</div>
+
+<!-- 9 · Liga -->
+<div data-drags-parent="1" style="position:absolute; left:1490px; top:2488px; width:390px; font-family:'Space Grotesk'; font-size:12.5px; font-weight:600; letter-spacing:0.04em; color:#5C7184; text-transform:uppercase;">9a · Liga / Rankings</div>
+<div data-screen-label="Liga" style="position:absolute; left:1490px; top:2524px; width:390px; height:844px; border-radius:46px; background:#F2F6FA; border:10px solid #11151b; box-shadow:0 30px 60px rgba(20,40,60,.28); overflow:hidden; display:flex; flex-direction:column;">
+  <div style="height:44px; display:flex; align-items:center; justify-content:space-between; padding:0 24px; flex:0 0 auto;">
+    <span style="font-weight:600; font-size:14px; color:#0E2A47;">9:41</span>
+    <div style="display:flex; gap:6px; align-items:center; color:#0E2A47;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1; font-size:17px;">signal_cellular_alt</span><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1; font-size:17px;">wifi</span><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1; font-size:18px;">battery_full</span></div>
+  </div>
+  <div style="flex:1; overflow:hidden; padding:6px 18px 0;">
+    <div style="font-family:'Space Grotesk'; font-size:26px; font-weight:700; color:#0E2A47;">Ligen</div>
+    <div style="font-size:13px; color:#5C7184; margin-top:2px;">Top 10 jeder Liga erhalten Auszeichnungen.</div>
+    <div style="display:flex; gap:6px; background:#E8F0FA; border-radius:14px; padding:4px; margin-top:14px;">
+      <div style="flex:1; text-align:center; font-size:12.5px; font-weight:700; color:#fff; background:#0E2A47; border-radius:10px; padding:9px 0;">Performance</div>
+      <div style="flex:1; text-align:center; font-size:12.5px; font-weight:600; color:#5C7184; padding:9px 0;">Kapital</div>
+      <div style="flex:1; text-align:center; font-size:12.5px; font-weight:600; color:#5C7184; padding:9px 0;">Wissen</div>
+    </div>
+    <div style="background:#FFFFFF; border:1px solid #DCE6EE; border-radius:20px; padding:6px 16px; margin-top:14px;">
+      <div style="display:flex; align-items:center; gap:14px; padding:13px 0; border-bottom:1px solid #EEF2F6;"><span style="width:26px; height:26px; border-radius:50%; background:#E7BD57; color:#0E2A47; font-weight:700; font-size:13px; display:flex; align-items:center; justify-content:center;">1</span><span style="flex:1; font-size:15px; font-weight:600; color:#0E2A47;">Tom</span><span style="font-family:'Space Grotesk'; font-weight:700; color:#1F8A5B;">+21,0 %</span></div>
+      <div style="display:flex; align-items:center; gap:14px; padding:13px 0; border-bottom:1px solid #EEF2F6;"><span style="width:26px; height:26px; border-radius:50%; background:#C7CFD6; color:#0E2A47; font-weight:700; font-size:13px; display:flex; align-items:center; justify-content:center;">2</span><span style="flex:1; font-size:15px; font-weight:600; color:#0E2A47;">Lina</span><span style="font-family:'Space Grotesk'; font-weight:700; color:#1F8A5B;">+12,4 %</span></div>
+      <div style="display:flex; align-items:center; gap:14px; padding:13px 0; border-bottom:1px solid #EEF2F6;"><span style="width:26px; height:26px; border-radius:50%; background:#D9A36A; color:#fff; font-weight:700; font-size:13px; display:flex; align-items:center; justify-content:center;">3</span><span style="flex:1; font-size:15px; font-weight:600; color:#0E2A47;">Ayla</span><span style="font-family:'Space Grotesk'; font-weight:700; color:#1F8A5B;">+7,8 %</span></div>
+      <div style="display:flex; align-items:center; gap:14px; padding:13px 0; border-bottom:1px solid #EEF2F6;"><span style="width:26px; text-align:center; color:#9AA7B4; font-weight:700; font-size:13px;">4</span><span style="flex:1; font-size:15px; font-weight:600; color:#0E2A47;">Nora</span><span style="font-family:'Space Grotesk'; font-weight:700; color:#1F8A5B;">+1,2 %</span></div>
+      <div style="display:flex; align-items:center; gap:14px; padding:13px 0; margin:4px -10px 0; background:#E4F4EC; border-radius:14px; padding-left:10px; padding-right:10px;"><span style="width:26px; text-align:center; color:#0E2A47; font-weight:700; font-size:13px;">5</span><span style="flex:1; font-size:15px; font-weight:700; color:#0E2A47;">Du</span><span style="font-family:'Space Grotesk'; font-weight:700; color:#5C7184;">−0,1 %</span></div>
+    </div>
+    <div style="background:#FFFFFF; border:1px solid #DCE6EE; border-radius:20px; padding:16px; margin-top:14px; display:flex; align-items:center; gap:14px;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1; font-size:30px; color:#E7BD57;">workspace_premium</span><div style="flex:1;"><div style="font-size:14.5px; font-weight:700; color:#0E2A47;">Wochen-Challenge</div><div style="font-size:12.5px; color:#5C7184; margin-top:2px;">Noch 4 Tage · halte deine Top-10-Platzierung</div></div></div>
+  </div>
+  <div style="flex:0 0 auto; height:74px; border-top:1px solid #DCE6EE; background:#FFFFFF; display:flex; padding:9px 4px 0;">
+    <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px; color:#9AA7B4;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 0; font-size:24px;">cottage</span><span style="font-size:10.5px;">Start</span></div>
+    <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px; color:#9AA7B4;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 0; font-size:24px;">menu_book</span><span style="font-size:10.5px;">Lernen</span></div>
+    <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px; color:#9AA7B4;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 0; font-size:24px;">work</span><span style="font-size:10.5px;">Depot</span></div>
+    <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px; color:#9AA7B4;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 0; font-size:24px;">explore</span><span style="font-size:10.5px;">Werte</span></div>
+    <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px; color:#1F9D6B;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1; font-size:24px;">emoji_events</span><span style="font-size:10.5px; font-weight:600;">Liga</span></div>
+  </div>
+</div>
+
+<!-- 10 · Family (Eltern, lesend) -->
+<div data-drags-parent="1" style="position:absolute; left:1960px; top:2488px; width:390px; font-family:'Space Grotesk'; font-size:12.5px; font-weight:600; letter-spacing:0.04em; color:#5C7184; text-transform:uppercase;">9b · Family · Eltern</div>
+<div data-screen-label="Family" style="position:absolute; left:1960px; top:2524px; width:390px; height:844px; border-radius:46px; background:#F2F6FA; border:10px solid #11151b; box-shadow:0 30px 60px rgba(20,40,60,.28); overflow:hidden; display:flex; flex-direction:column;">
+  <div style="height:44px; display:flex; align-items:center; justify-content:space-between; padding:0 24px; flex:0 0 auto;">
+    <span style="font-weight:600; font-size:14px; color:#0E2A47;">9:41</span>
+    <div style="display:flex; gap:6px; align-items:center; color:#0E2A47;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1; font-size:17px;">signal_cellular_alt</span><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1; font-size:17px;">wifi</span><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1; font-size:18px;">battery_full</span></div>
+  </div>
+  <div style="flex:1; overflow:hidden; padding:6px 18px 0;">
+    <div style="font-size:13px; color:#9AA7B4;">Family · Begleitblick</div>
+    <div style="font-family:'Space Grotesk'; font-size:26px; font-weight:700; color:#0E2A47; line-height:1.05;">Mias Fortschritt</div>
+    <div style="margin-top:14px; background:#FFFFFF; border:1px solid #DCE6EE; border-radius:18px; padding:16px; display:flex; align-items:center; gap:14px;">
+      <div style="width:46px; height:46px; border-radius:14px; background:#E4F4EC; display:flex; align-items:center; justify-content:center;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1; font-size:26px; color:#1F9D6B;">link</span></div>
+      <div style="flex:1;"><div style="font-size:14.5px; font-weight:700; color:#0E2A47;">Verknüpft mit Mia</div><div style="font-size:12px; color:#9AA7B4;">Nur lesend · kein eigenes Depot</div></div>
+      <span style="background:#E4F4EC; color:#1F8A5B; font-weight:600; font-size:11.5px; padding:5px 10px; border-radius:999px;">Aktiv</span>
+    </div>
+    <div style="margin-top:12px; background:#FFFFFF; border:1px solid #DCE6EE; border-radius:18px; padding:16px;">
+      <div style="font-family:'Space Grotesk'; font-size:16px; font-weight:700; color:#0E2A47;">Lernfortschritt</div>
+      <div style="display:flex; justify-content:space-between; font-size:12.5px; color:#5C7184; margin:12px 0 6px;"><span>Wissenslevel 1 · 1/20 Module</span><span style="font-weight:600; color:#0E2A47;">250 XP</span></div>
+      <div style="height:9px; border-radius:999px; background:#DCE6EE;"><div style="width:42%; height:100%; border-radius:999px; background:#1F9D6B;"></div></div>
+      <div style="font-size:12px; color:#9AA7B4; margin-top:10px;">Letzte Aktivität: heute · „Was ist ein ETF?“</div>
+    </div>
+    <div style="margin-top:12px; background:#FFFFFF; border:1px solid #DCE6EE; border-radius:18px; padding:16px;">
+      <div style="font-family:'Space Grotesk'; font-size:16px; font-weight:700; color:#0E2A47;">Depotentwicklung</div>
+      <div style="display:flex; align-items:baseline; gap:10px; margin-top:8px;"><span style="font-family:'Space Grotesk'; font-size:24px; font-weight:700; color:#0E2A47;">7.000,00 €</span><span style="font-size:12.5px; color:#5C7184;">virtuell</span></div>
+      <div style="display:flex; align-items:flex-end; gap:5px; height:54px; margin-top:12px;"><div style="flex:1; background:#CDE3F2; border-radius:4px 4px 0 0; height:40%;"></div><div style="flex:1; background:#CDE3F2; border-radius:4px 4px 0 0; height:55%;"></div><div style="flex:1; background:#CDE3F2; border-radius:4px 4px 0 0; height:48%;"></div><div style="flex:1; background:#CDE3F2; border-radius:4px 4px 0 0; height:70%;"></div><div style="flex:1; background:#1F9D6B; border-radius:4px 4px 0 0; height:85%;"></div></div>
+    </div>
+    <div style="margin-top:12px; background:#E8F0FA; border-radius:12px; padding:11px 14px; font-size:12px; color:#1C3D5C; line-height:1.45;">Kinderschutz: keine Klarnamen, kein Chat, keine Brokerlinks.</div>
+  </div>
+  <div style="flex:0 0 auto; height:74px; border-top:1px solid #DCE6EE; background:#FFFFFF; display:flex; padding:9px 4px 0;">
+    <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px; color:#1F9D6B;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1; font-size:24px;">visibility</span><span style="font-size:10.5px; font-weight:600;">Übersicht</span></div>
+    <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px; color:#9AA7B4;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 0; font-size:24px;">menu_book</span><span style="font-size:10.5px;">Lernen</span></div>
+    <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px; color:#9AA7B4;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 0; font-size:24px;">work</span><span style="font-size:10.5px;">Depot</span></div>
+    <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px; color:#9AA7B4;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 0; font-size:24px;">settings</span><span style="font-size:10.5px;">Konto</span></div>
+  </div>
+</div>
+
+<!-- 11 · Classroom (Lehrer) -->
+<div data-drags-parent="1" style="position:absolute; left:2430px; top:2488px; width:390px; font-family:'Space Grotesk'; font-size:12.5px; font-weight:600; letter-spacing:0.04em; color:#5C7184; text-transform:uppercase;">9c · Classroom · Lehrer</div>
+<div data-screen-label="Classroom" style="position:absolute; left:2430px; top:2524px; width:390px; height:844px; border-radius:46px; background:#F2F6FA; border:10px solid #11151b; box-shadow:0 30px 60px rgba(20,40,60,.28); overflow:hidden; display:flex; flex-direction:column;">
+  <div style="height:44px; display:flex; align-items:center; justify-content:space-between; padding:0 24px; flex:0 0 auto;">
+    <span style="font-weight:600; font-size:14px; color:#0E2A47;">9:41</span>
+    <div style="display:flex; gap:6px; align-items:center; color:#0E2A47;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1; font-size:17px;">signal_cellular_alt</span><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1; font-size:17px;">wifi</span><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1; font-size:18px;">battery_full</span></div>
+  </div>
+  <div style="flex:1; overflow:hidden; padding:6px 18px 0;">
+    <div style="font-size:13px; color:#9AA7B4;">Hofino · Lehrer</div>
+    <div style="font-family:'Space Grotesk'; font-size:26px; font-weight:700; color:#0E2A47; line-height:1.05;">Klasse 6b</div>
+    <div style="margin-top:14px; background:#0E2A47; border-radius:18px; padding:18px;">
+      <div style="font-size:12px; color:#A9C2D6;">Klassencode (zum Beitreten)</div>
+      <div style="font-family:'Space Grotesk'; font-size:32px; font-weight:700; color:#fff; letter-spacing:0.08em; margin-top:4px;">TEST6B</div>
+      <div style="margin-top:12px; display:flex; gap:10px;"><div style="flex:1; text-align:center; background:rgba(255,255,255,.12); color:#fff; border-radius:12px; padding:11px; font-weight:700; font-size:13.5px;">Code teilen</div><div style="flex:1; text-align:center; background:#1F9D6B; color:#fff; border-radius:12px; padding:11px; font-weight:700; font-size:13.5px;">Neu generieren</div></div>
+    </div>
+    <div style="margin-top:12px; background:#FFFFFF; border:1px solid #DCE6EE; border-radius:18px; padding:16px;">
+      <div style="display:flex; align-items:center; justify-content:space-between;"><div style="font-family:'Space Grotesk'; font-size:16px; font-weight:700; color:#0E2A47;">Schüler (2)</div><span style="font-size:11.5px; color:#9AA7B4;">nur Aggregate</span></div>
+      <div style="display:flex; align-items:center; gap:12px; margin-top:12px; padding-bottom:11px; border-bottom:1px solid #EEF2F6;"><div style="flex:1;"><div style="font-size:14.5px; font-weight:700; color:#0E2A47;">Mia</div><div style="font-size:12px; color:#9AA7B4;">1/20 Module · 250 P</div></div><span style="font-family:'Space Grotesk'; font-weight:700; color:#0E2A47;">≈ 7.000 €</span></div>
+      <div style="display:flex; align-items:center; gap:12px; margin-top:11px;"><div style="flex:1;"><div style="font-size:14.5px; font-weight:700; color:#0E2A47;">Tom</div><div style="font-size:12px; color:#9AA7B4;">0/20 Module · 0 P</div></div><span style="font-family:'Space Grotesk'; font-weight:700; color:#0E2A47;">≈ 6.000 €</span></div>
+    </div>
+    <div style="margin-top:12px; background:#FFFFFF; border:1px solid #DCE6EE; border-radius:18px; padding:16px;">
+      <div style="font-family:'Space Grotesk'; font-size:16px; font-weight:700; color:#0E2A47;">Module zuweisen</div>
+      <div style="font-size:12.5px; color:#5C7184; margin-top:4px; line-height:1.4;">Empfiehl ein Modul — Schüler sehen es markiert (kein Zwang).</div>
+      <div style="display:flex; align-items:center; justify-content:space-between; background:#F2F6FA; border:1px solid #DCE6EE; border-radius:12px; padding:12px 14px; margin-top:10px;"><span style="font-size:13.5px; font-weight:600; color:#0E2A47;">Was ist ein Unternehmen?</span><span style="font-family:'Material Symbols Rounded'; font-size:22px; color:#1F9D6B;">add_circle</span></div>
+    </div>
+  </div>
+  <div style="flex:0 0 auto; height:74px; border-top:1px solid #DCE6EE; background:#FFFFFF; display:flex; padding:9px 4px 0;">
+    <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px; color:#1F9D6B;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1; font-size:24px;">groups</span><span style="font-size:10.5px; font-weight:600;">Klasse</span></div>
+    <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px; color:#9AA7B4;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 0; font-size:24px;">cast</span><span style="font-size:10.5px;">Beamer</span></div>
+  </div>
+</div>
+
+<!-- ============================ 04 · BEAMER ============================ -->
+<div style="position:absolute; left:80px; top:3440px; width:600px; font-family:'Space Grotesk'; font-size:15px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#1F9D6B;">04 · Classroom · Beamer-Großbild</div>
+<div data-drags-parent="1" style="position:absolute; left:80px; top:3480px; width:600px; font-family:'Space Grotesk'; font-size:12.5px; font-weight:600; letter-spacing:0.04em; color:#5C7184; text-transform:uppercase;">Web · Whiteboard-Ansicht 1280×800</div>
+<div data-screen-label="Beamer" style="position:absolute; left:80px; top:3516px; width:1280px; height:800px; border-radius:20px; background:#F2F6FA; border:1px solid #DCE6EE; box-shadow:0 30px 60px rgba(20,40,60,.22); overflow:hidden; display:flex; flex-direction:column;">
+  <div style="height:64px; background:#0E2A47; display:flex; align-items:center; justify-content:space-between; padding:0 32px; flex:0 0 auto;">
+    <div style="display:flex; align-items:center; gap:14px;"><div style="position:relative; overflow:hidden; width:38px; height:38px; border-radius:11px; background:#fff; display:flex; align-items:center; justify-content:center;"><span style="position:relative; z-index:1; font-family:'Space Grotesk'; font-weight:700; color:#1F9D6B; font-size:20px;">H</span><div style="position:absolute; left:8px; bottom:10px; width:21px; height:3px; border-radius:2px; background:#E7BD57; transform:rotate(-30deg); transform-origin:left center; z-index:2;"></div><div style="position:absolute; left:25px; bottom:16px; width:0; height:0; border-top:3px solid transparent; border-bottom:3px solid transparent; border-left:5px solid #E7BD57; transform:rotate(-30deg); transform-origin:left center; z-index:2;"></div></div><span style="font-family:'Space Grotesk'; font-size:20px; font-weight:700; color:#fff;">Hofino · Klasse 6b</span></div>
+    <div style="display:flex; align-items:center; gap:16px;"><span style="font-size:15px; color:#A9C2D6;">Beitreten mit Code</span><span style="font-family:'Space Grotesk'; font-size:26px; font-weight:700; color:#E7BD57; letter-spacing:0.08em;">TEST6B</span></div>
+  </div>
+  <div style="flex:1; display:flex; gap:24px; padding:28px 32px;">
+    <div style="flex:1.3; background:#FFFFFF; border:1px solid #DCE6EE; border-radius:20px; padding:26px;">
+      <div style="display:flex; align-items:center; justify-content:space-between;"><div style="font-family:'Space Grotesk'; font-size:26px; font-weight:700; color:#0E2A47;">Klassen-Challenge</div><span style="background:#E4F4EC; color:#1F8A5B; font-weight:700; font-size:15px; padding:8px 16px; border-radius:999px;">Wissensliga</span></div>
+      <div style="margin-top:20px; display:flex; flex-direction:column; gap:14px;">
+        <div style="display:flex; align-items:center; gap:20px; background:#FBF1D6; border-radius:16px; padding:16px 22px;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1; font-size:36px; color:#E7BD57;">workspace_premium</span><span style="font-family:'Space Grotesk'; font-size:24px; font-weight:700; color:#0E2A47; width:36px;">1</span><span style="flex:1; font-size:24px; font-weight:700; color:#0E2A47;">Mia</span><span style="font-family:'Space Grotesk'; font-size:24px; font-weight:700; color:#1F8A5B;">250 P</span></div>
+        <div style="display:flex; align-items:center; gap:20px; padding:16px 22px;"><span style="width:36px;"></span><span style="font-family:'Space Grotesk'; font-size:24px; font-weight:700; color:#5C7184; width:36px;">2</span><span style="flex:1; font-size:24px; font-weight:600; color:#0E2A47;">Ayla</span><span style="font-family:'Space Grotesk'; font-size:24px; font-weight:700; color:#0E2A47;">180 P</span></div>
+        <div style="display:flex; align-items:center; gap:20px; padding:16px 22px; border-top:1px solid #EEF2F6;"><span style="width:36px;"></span><span style="font-family:'Space Grotesk'; font-size:24px; font-weight:700; color:#5C7184; width:36px;">3</span><span style="flex:1; font-size:24px; font-weight:600; color:#0E2A47;">Tom</span><span style="font-family:'Space Grotesk'; font-size:24px; font-weight:700; color:#0E2A47;">0 P</span></div>
+      </div>
+      <div style="font-size:14px; color:#9AA7B4; margin-top:18px;">Nur Aggregate · keine Einzelorders · keine privaten Daten.</div>
+    </div>
+    <div style="flex:1; display:flex; flex-direction:column; gap:24px;">
+      <div style="background:#FFFFFF; border:1px solid #DCE6EE; border-radius:20px; padding:26px;">
+        <div style="font-size:14px; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color:#9AA7B4;">Modul des Tages</div>
+        <div style="font-family:'Space Grotesk'; font-size:28px; font-weight:700; color:#0E2A47; margin-top:8px; line-height:1.1;">Was ist ein ETF?</div>
+        <div style="font-size:16px; color:#5C7184; margin-top:8px;">5 Minuten · gemeinsam lösen</div>
+      </div>
+      <div style="background:#0E2A47; border-radius:20px; padding:26px; color:#fff;">
+        <div style="font-size:14px; color:#A9C2D6;">Klasse gesamt</div>
+        <div style="display:flex; justify-content:space-between; align-items:baseline; margin-top:10px;"><span style="font-family:'Space Grotesk'; font-size:34px; font-weight:700;">1 / 20</span><span style="font-size:16px; color:#A9C2D6;">Module</span></div>
+        <div style="height:12px; border-radius:999px; background:rgba(255,255,255,.15); margin-top:14px;"><div style="width:18%; height:100%; border-radius:999px; background:#1F9D6B;"></div></div>
+        <div style="font-size:14px; color:#A9C2D6; margin-top:14px;">2 Schüler aktiv · zusammen 250 Punkte</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================ 05 · HAUS-SYSTEM ============================ -->
+<div style="position:absolute; left:80px; top:4400px; width:900px; font-family:'Space Grotesk'; font-size:15px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#1F9D6B;">05 · Haus-System · Kids</div>
+<div style="position:absolute; left:80px; top:4434px; width:1100px; font-size:14px; color:#5C7184; line-height:1.5;">Flache Vektor-Illustration, einfache geometrische Flächen. Das Haus stürzt nie ein — positive Bildsprache. 6 Bau-Stufen am Beispiel <b>Wald/Wiese</b>, darunter die Grundstücks-Varianten See &amp; Stadt + Auszeichnungs-Objekte.</div>
+
+<!-- 6 stages (Wald/Wiese) -->
+<div data-drags-parent="1" style="position:absolute; left:80px; top:4500px; width:220px; background:#FFFFFF; border:1px solid #DCE6EE; border-radius:18px; padding:14px; box-shadow:0 8px 24px rgba(20,40,60,.06);">
+  <div style="height:130px; border-radius:12px; overflow:hidden; background:linear-gradient(180deg,#E8F0FA,#EAF6EF); position:relative;">
+    <div style="position:absolute; left:0; right:0; bottom:0; height:38px; background:#CDEBD9; border-radius:50% 50% 0 0 / 30px 30px 0 0;"></div>
+    <div style="position:absolute; left:26px; bottom:30px; width:9px; height:18px; background:#1F9D6B; border-radius:4px;"></div>
+    <div style="position:absolute; left:20px; bottom:42px; width:22px; height:22px; border-radius:50%; background:#3AB07F;"></div>
+    <div style="position:absolute; left:96px; bottom:24px; width:60px; height:26px; border:2px dashed #9AA7B4; border-radius:6px;"></div>
+  </div>
+  <div style="font-size:11px; font-weight:600; letter-spacing:0.05em; text-transform:uppercase; color:#9AA7B4; margin-top:10px;">Stufe 1</div>
+  <div style="font-family:'Space Grotesk'; font-size:15px; font-weight:700; color:#0E2A47;">Grundstück</div>
+</div>
+<div data-drags-parent="1" style="position:absolute; left:316px; top:4500px; width:220px; background:#FFFFFF; border:1px solid #DCE6EE; border-radius:18px; padding:14px; box-shadow:0 8px 24px rgba(20,40,60,.06);">
+  <div style="height:130px; border-radius:12px; overflow:hidden; background:linear-gradient(180deg,#E8F0FA,#EAF6EF); position:relative;">
+    <div style="position:absolute; left:0; right:0; bottom:0; height:38px; background:#CDEBD9; border-radius:50% 50% 0 0 / 30px 30px 0 0;"></div>
+    <div style="position:absolute; left:26px; bottom:30px; width:9px; height:18px; background:#1F9D6B; border-radius:4px;"></div>
+    <div style="position:absolute; left:20px; bottom:42px; width:22px; height:22px; border-radius:50%; background:#3AB07F;"></div>
+    <div style="position:absolute; left:96px; bottom:30px; width:64px; height:16px; background:#1C3D5C; border-radius:4px;"></div>
+  </div>
+  <div style="font-size:11px; font-weight:600; letter-spacing:0.05em; text-transform:uppercase; color:#9AA7B4; margin-top:10px;">Stufe 2</div>
+  <div style="font-family:'Space Grotesk'; font-size:15px; font-weight:700; color:#0E2A47;">Fundament</div>
+</div>
+<div data-drags-parent="1" style="position:absolute; left:552px; top:4500px; width:220px; background:#FFFFFF; border:1px solid #DCE6EE; border-radius:18px; padding:14px; box-shadow:0 8px 24px rgba(20,40,60,.06);">
+  <div style="height:130px; border-radius:12px; overflow:hidden; background:linear-gradient(180deg,#E8F0FA,#EAF6EF); position:relative;">
+    <div style="position:absolute; left:0; right:0; bottom:0; height:38px; background:#CDEBD9; border-radius:50% 50% 0 0 / 30px 30px 0 0;"></div>
+    <div style="position:absolute; left:26px; bottom:30px; width:9px; height:18px; background:#1F9D6B; border-radius:4px;"></div>
+    <div style="position:absolute; left:20px; bottom:42px; width:22px; height:22px; border-radius:50%; background:#3AB07F;"></div>
+    <div style="position:absolute; left:98px; bottom:30px; width:60px; height:44px; background:#FFFFFF; border:2px solid #0E2A47; border-radius:4px;"></div>
+  </div>
+  <div style="font-size:11px; font-weight:600; letter-spacing:0.05em; text-transform:uppercase; color:#9AA7B4; margin-top:10px;">Stufe 3</div>
+  <div style="font-family:'Space Grotesk'; font-size:15px; font-weight:700; color:#0E2A47;">Wände</div>
+</div>
+<div data-drags-parent="1" style="position:absolute; left:788px; top:4500px; width:220px; background:#FFFFFF; border:1px solid #DCE6EE; border-radius:18px; padding:14px; box-shadow:0 8px 24px rgba(20,40,60,.06);">
+  <div style="height:130px; border-radius:12px; overflow:hidden; background:linear-gradient(180deg,#E8F0FA,#EAF6EF); position:relative;">
+    <div style="position:absolute; left:0; right:0; bottom:0; height:38px; background:#CDEBD9; border-radius:50% 50% 0 0 / 30px 30px 0 0;"></div>
+    <div style="position:absolute; left:26px; bottom:30px; width:9px; height:18px; background:#1F9D6B; border-radius:4px;"></div>
+    <div style="position:absolute; left:20px; bottom:42px; width:22px; height:22px; border-radius:50%; background:#3AB07F;"></div>
+    <div style="position:absolute; left:98px; bottom:30px; width:60px; height:44px; background:#FFFFFF; border:2px solid #0E2A47; border-radius:4px;"></div>
+    <div style="position:absolute; left:91px; bottom:74px; width:0; height:0; border-left:38px solid transparent; border-right:38px solid transparent; border-bottom:26px solid #0E2A47;"></div>
+  </div>
+  <div style="font-size:11px; font-weight:600; letter-spacing:0.05em; text-transform:uppercase; color:#9AA7B4; margin-top:10px;">Stufe 4</div>
+  <div style="font-family:'Space Grotesk'; font-size:15px; font-weight:700; color:#0E2A47;">Dach</div>
+</div>
+<div data-drags-parent="1" style="position:absolute; left:1024px; top:4500px; width:220px; background:#FFFFFF; border:1px solid #DCE6EE; border-radius:18px; padding:14px; box-shadow:0 8px 24px rgba(20,40,60,.06);">
+  <div style="height:130px; border-radius:12px; overflow:hidden; background:linear-gradient(180deg,#E8F0FA,#EAF6EF); position:relative;">
+    <div style="position:absolute; left:0; right:0; bottom:0; height:38px; background:#CDEBD9; border-radius:50% 50% 0 0 / 30px 30px 0 0;"></div>
+    <div style="position:absolute; top:12px; right:18px; width:20px; height:20px; border-radius:50%; background:#E7BD57;"></div>
+    <div style="position:absolute; left:26px; bottom:30px; width:9px; height:18px; background:#1F9D6B; border-radius:4px;"></div>
+    <div style="position:absolute; left:20px; bottom:42px; width:22px; height:22px; border-radius:50%; background:#3AB07F;"></div>
+    <div style="position:absolute; left:98px; bottom:30px; width:60px; height:44px; background:#FFFFFF; border:2px solid #0E2A47; border-radius:4px;"></div>
+    <div style="position:absolute; left:91px; bottom:74px; width:0; height:0; border-left:38px solid transparent; border-right:38px solid transparent; border-bottom:26px solid #0E2A47;"></div>
+    <div style="position:absolute; left:108px; bottom:30px; width:14px; height:22px; background:#E7BD57; border:1.5px solid #0E2A47; border-radius:3px 3px 0 0;"></div>
+    <div style="position:absolute; left:136px; bottom:48px; width:12px; height:12px; background:#E8F0FA; border:1.5px solid #0E2A47; border-radius:2px;"></div>
+  </div>
+  <div style="font-size:11px; font-weight:600; letter-spacing:0.05em; text-transform:uppercase; color:#9AA7B4; margin-top:10px;">Stufe 5</div>
+  <div style="font-family:'Space Grotesk'; font-size:15px; font-weight:700; color:#0E2A47;">Erstes Haus</div>
+</div>
+<div data-drags-parent="1" style="position:absolute; left:1260px; top:4500px; width:220px; background:#FFFFFF; border:1px solid #DCE6EE; border-radius:18px; padding:14px; box-shadow:0 8px 24px rgba(20,40,60,.06);">
+  <div style="height:130px; border-radius:12px; overflow:hidden; background:linear-gradient(180deg,#E8F0FA,#EAF6EF); position:relative;">
+    <div style="position:absolute; left:0; right:0; bottom:0; height:38px; background:#CDEBD9; border-radius:50% 50% 0 0 / 30px 30px 0 0;"></div>
+    <div style="position:absolute; top:12px; right:18px; width:20px; height:20px; border-radius:50%; background:#E7BD57;"></div>
+    <div style="position:absolute; left:18px; bottom:30px; width:42px; height:30px; background:#EAF2E6; border:2px solid #0E2A47; border-radius:3px;"></div>
+    <div style="position:absolute; left:14px; bottom:58px; width:0; height:0; border-left:25px solid transparent; border-right:25px solid transparent; border-bottom:18px solid #1F9D6B;"></div>
+    <div style="position:absolute; left:84px; bottom:30px; width:60px; height:44px; background:#FFFFFF; border:2px solid #0E2A47; border-radius:4px;"></div>
+    <div style="position:absolute; left:77px; bottom:74px; width:0; height:0; border-left:38px solid transparent; border-right:38px solid transparent; border-bottom:26px solid #0E2A47;"></div>
+    <div style="position:absolute; left:94px; bottom:30px; width:14px; height:22px; background:#E7BD57; border:1.5px solid #0E2A47; border-radius:3px 3px 0 0;"></div>
+    <div style="position:absolute; left:158px; bottom:30px; width:9px; height:18px; background:#1F9D6B; border-radius:4px;"></div>
+    <div style="position:absolute; left:152px; bottom:42px; width:22px; height:22px; border-radius:50%; background:#3AB07F;"></div>
+  </div>
+  <div style="font-size:11px; font-weight:600; letter-spacing:0.05em; text-transform:uppercase; color:#9AA7B4; margin-top:10px;">Stufe 6</div>
+  <div style="font-family:'Space Grotesk'; font-size:15px; font-weight:700; color:#0E2A47;">Ausbauten</div>
+</div>
+
+<!-- Plot variants -->
+<div data-drags-parent="1" style="position:absolute; left:80px; top:4724px; width:280px; background:#FFFFFF; border:1px solid #DCE6EE; border-radius:18px; padding:16px; box-shadow:0 8px 24px rgba(20,40,60,.06);">
+  <div style="font-size:11px; font-weight:600; letter-spacing:0.05em; text-transform:uppercase; color:#9AA7B4;">Grundstück A</div>
+  <div style="font-family:'Space Grotesk'; font-size:16px; font-weight:700; color:#0E2A47; margin-bottom:10px;">Wald / Wiese</div>
+  <div style="height:150px; border-radius:12px; overflow:hidden; background:linear-gradient(180deg,#E8F0FA,#EAF6EF); position:relative;">
+    <div style="position:absolute; left:0; right:0; bottom:0; height:50px; background:#CDEBD9; border-radius:50% 50% 0 0 / 40px 40px 0 0;"></div>
+    <div style="position:absolute; top:16px; right:24px; width:26px; height:26px; border-radius:50%; background:#E7BD57;"></div>
+    <div style="position:absolute; left:34px; bottom:42px; width:12px; height:24px; background:#1F9D6B; border-radius:5px;"></div>
+    <div style="position:absolute; left:26px; bottom:58px; width:28px; height:28px; border-radius:50%; background:#3AB07F;"></div>
+    <div style="position:absolute; left:50%; bottom:40px; transform:translateX(-50%); width:82px; height:58px; background:#FFFFFF; border:2px solid #0E2A47; border-radius:5px;"></div>
+    <div style="position:absolute; left:50%; bottom:94px; transform:translateX(-50%); width:0; height:0; border-left:50px solid transparent; border-right:50px solid transparent; border-bottom:32px solid #0E2A47;"></div>
+    <div style="position:absolute; left:50%; bottom:40px; transform:translateX(-50%); margin-left:-18px; width:18px; height:28px; background:#E7BD57; border:1.5px solid #0E2A47; border-radius:3px 3px 0 0;"></div>
+  </div>
+</div>
+<div data-drags-parent="1" style="position:absolute; left:396px; top:4724px; width:280px; background:#FFFFFF; border:1px solid #DCE6EE; border-radius:18px; padding:16px; box-shadow:0 8px 24px rgba(20,40,60,.06);">
+  <div style="font-size:11px; font-weight:600; letter-spacing:0.05em; text-transform:uppercase; color:#9AA7B4;">Grundstück B</div>
+  <div style="font-family:'Space Grotesk'; font-size:16px; font-weight:700; color:#0E2A47; margin-bottom:10px;">See</div>
+  <div style="height:150px; border-radius:12px; overflow:hidden; background:linear-gradient(180deg,#E8F0FA,#EAF3FB); position:relative;">
+    <div style="position:absolute; left:0; right:0; bottom:0; height:44px; background:#BBD9F2; border-radius:50% 50% 0 0 / 30px 30px 0 0;"></div>
+    <div style="position:absolute; top:16px; right:24px; width:26px; height:26px; border-radius:50%; background:#E7BD57;"></div>
+    <div style="position:absolute; left:50%; bottom:44px; transform:translateX(-50%); width:120px; height:24px; background:#CDEBD9; border-radius:50%;"></div>
+    <div style="position:absolute; left:50%; bottom:48px; transform:translateX(-50%); width:82px; height:54px; background:#FFFFFF; border:2px solid #0E2A47; border-radius:5px;"></div>
+    <div style="position:absolute; left:50%; bottom:98px; transform:translateX(-50%); width:0; height:0; border-left:50px solid transparent; border-right:50px solid transparent; border-bottom:30px solid #0E2A47;"></div>
+    <div style="position:absolute; left:50%; bottom:48px; transform:translateX(-50%); margin-left:-16px; width:18px; height:26px; background:#1F9D6B; border:1.5px solid #0E2A47; border-radius:3px 3px 0 0;"></div>
+    <div style="position:absolute; left:34px; bottom:18px; width:30px; height:5px; background:#9FC7E8; border-radius:3px;"></div>
+    <div style="position:absolute; left:60px; bottom:10px; width:40px; height:5px; background:#9FC7E8; border-radius:3px;"></div>
+  </div>
+</div>
+<div data-drags-parent="1" style="position:absolute; left:712px; top:4724px; width:280px; background:#FFFFFF; border:1px solid #DCE6EE; border-radius:18px; padding:16px; box-shadow:0 8px 24px rgba(20,40,60,.06);">
+  <div style="font-size:11px; font-weight:600; letter-spacing:0.05em; text-transform:uppercase; color:#9AA7B4;">Grundstück C</div>
+  <div style="font-family:'Space Grotesk'; font-size:16px; font-weight:700; color:#0E2A47; margin-bottom:10px;">Stadt</div>
+  <div style="height:150px; border-radius:12px; overflow:hidden; background:linear-gradient(180deg,#EEF1F5,#E8F0FA); position:relative;">
+    <div style="position:absolute; left:0; right:0; bottom:0; height:42px; background:#DBE0E8; border-radius:50% 50% 0 0 / 26px 26px 0 0;"></div>
+    <div style="position:absolute; top:16px; right:24px; width:26px; height:26px; border-radius:50%; background:#E7BD57;"></div>
+    <div style="position:absolute; left:30px; bottom:34px; width:34px; height:64px; background:#C3CDD8; border:2px solid #0E2A47; border-radius:3px;"></div>
+    <div style="position:absolute; right:30px; bottom:34px; width:30px; height:50px; background:#C3CDD8; border:2px solid #0E2A47; border-radius:3px;"></div>
+    <div style="position:absolute; left:50%; bottom:34px; transform:translateX(-50%); width:78px; height:56px; background:#FFFFFF; border:2px solid #0E2A47; border-radius:5px;"></div>
+    <div style="position:absolute; left:50%; bottom:90px; transform:translateX(-50%); width:0; height:0; border-left:48px solid transparent; border-right:48px solid transparent; border-bottom:28px solid #0E2A47;"></div>
+    <div style="position:absolute; left:50%; bottom:34px; transform:translateX(-50%); margin-left:-15px; width:18px; height:26px; background:#E7BD57; border:1.5px solid #0E2A47; border-radius:3px 3px 0 0;"></div>
+  </div>
+</div>
+
+<!-- Awards -->
+<div data-drags-parent="1" style="position:absolute; left:1028px; top:4724px; width:452px; background:#FFFFFF; border:1px solid #DCE6EE; border-radius:18px; padding:20px; box-shadow:0 8px 24px rgba(20,40,60,.06);">
+  <div style="font-size:11px; font-weight:600; letter-spacing:0.05em; text-transform:uppercase; color:#9AA7B4;">Auszeichnungen</div>
+  <div style="font-family:'Space Grotesk'; font-size:16px; font-weight:700; color:#0E2A47;">Belohnungs-Objekte</div>
+  <div style="display:flex; gap:18px; margin-top:18px; flex-wrap:wrap;">
+    <div style="text-align:center;"><div style="width:60px; height:60px; border-radius:50%; background:#E7BD57; border:3px solid #C9A23C; display:flex; align-items:center; justify-content:center;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1; font-size:30px; color:#fff;">star</span></div><div style="font-size:11px; color:#5C7184; margin-top:6px;">Gold</div></div>
+    <div style="text-align:center;"><div style="width:60px; height:60px; border-radius:50%; background:#C7CFD6; border:3px solid #A9B4BF; display:flex; align-items:center; justify-content:center;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1; font-size:30px; color:#fff;">star</span></div><div style="font-size:11px; color:#5C7184; margin-top:6px;">Silber</div></div>
+    <div style="text-align:center;"><div style="width:60px; height:60px; border-radius:50%; background:#D9A36A; border:3px solid #B98449; display:flex; align-items:center; justify-content:center;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1; font-size:30px; color:#fff;">star</span></div><div style="font-size:11px; color:#5C7184; margin-top:6px;">Bronze</div></div>
+    <div style="text-align:center;"><div style="width:60px; height:60px; border-radius:18px; background:#E4F4EC; border:2px solid #1F9D6B; display:flex; align-items:center; justify-content:center;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1; font-size:30px; color:#1F9D6B;">school</span></div><div style="font-size:11px; color:#5C7184; margin-top:6px;">Wissen</div></div>
+    <div style="text-align:center;"><div style="width:60px; height:60px; border-radius:18px; background:#0E2A47; display:flex; align-items:center; justify-content:center;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1; font-size:30px; color:#E7BD57;">emoji_events</span></div><div style="font-size:11px; color:#5C7184; margin-top:6px;">Liga</div></div>
+  </div>
+</div>
+
+<!-- ============================ 06 · DARK MODE ============================ -->
+<div style="position:absolute; left:80px; top:5080px; width:900px; font-family:'Space Grotesk'; font-size:15px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#1F9D6B;">06 · Dark Mode</div>
+
+<!-- Dark tokens -->
+<div style="position:absolute; left:80px; top:5120px; width:420px; background:#0A1A2C; border:1px solid #244763; border-radius:22px; padding:26px; box-shadow:0 16px 40px rgba(5,15,30,.4);">
+  <div style="font-family:'Space Grotesk'; font-size:20px; font-weight:700; color:#EAF1F8;">Dark-Tokens</div>
+  <div style="font-size:13px; color:#8FA6BC; margin-top:4px; line-height:1.5;">Gleiche Token-<i>Namen</i>, andere Werte — ein Theme-Switch, keine zweite App. Grün leicht heller für AA-Kontrast.</div>
+  <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:18px;">
+    <div><div style="height:46px; border-radius:10px; background:#0A1A2C; border:1px solid #244763;"></div><div style="font-size:11px; color:#8FA6BC; margin-top:6px;">bg<br>#0A1A2C</div></div>
+    <div><div style="height:46px; border-radius:10px; background:#12263C; border:1px solid #244763;"></div><div style="font-size:11px; color:#8FA6BC; margin-top:6px;">surface<br>#12263C</div></div>
+    <div><div style="height:46px; border-radius:10px; background:#173049; border:1px solid #244763;"></div><div style="font-size:11px; color:#8FA6BC; margin-top:6px;">surface-2<br>#173049</div></div>
+    <div><div style="height:46px; border-radius:10px; background:#34B97E;"></div><div style="font-size:11px; color:#8FA6BC; margin-top:6px;">green<br>#34B97E</div></div>
+    <div><div style="height:46px; border-radius:10px; background:#E7BD57;"></div><div style="font-size:11px; color:#8FA6BC; margin-top:6px;">gold<br>#E7BD57</div></div>
+    <div><div style="height:46px; border-radius:10px; background:#EAF1F8;"></div><div style="font-size:11px; color:#8FA6BC; margin-top:6px;">text<br>#EAF1F8</div></div>
+  </div>
+</div>
+
+<!-- Dark KidsHome -->
+<div data-drags-parent="1" style="position:absolute; left:560px; top:5120px; width:390px; font-family:'Space Grotesk'; font-size:12.5px; font-weight:600; letter-spacing:0.04em; color:#5C7184; text-transform:uppercase;">Kids-Zuhause · Dark</div>
+<div data-screen-label="KidsHomeDark" style="position:absolute; left:560px; top:5156px; width:390px; height:844px; border-radius:46px; background:#0A1A2C; border:10px solid #05101c; box-shadow:0 30px 60px rgba(5,15,30,.5); overflow:hidden; display:flex; flex-direction:column;">
+  <div style="height:44px; display:flex; align-items:center; justify-content:space-between; padding:0 24px; flex:0 0 auto;">
+    <span style="font-weight:600; font-size:14px; color:#EAF1F8;">9:41</span>
+    <div style="display:flex; gap:6px; align-items:center; color:#EAF1F8;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1; font-size:17px;">signal_cellular_alt</span><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1; font-size:17px;">wifi</span><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1; font-size:18px;">battery_full</span></div>
+  </div>
+  <div style="flex:1; overflow:hidden; padding:6px 18px 0;">
+    <div style="display:flex; align-items:center; justify-content:space-between;">
+      <div><div style="font-size:14px; color:#8FA6BC;">Hallo,</div><div style="font-family:'Space Grotesk'; font-size:26px; font-weight:700; color:#EAF1F8; line-height:1.05;">Mia</div></div>
+      <div style="position:relative; overflow:hidden; width:42px; height:42px; border-radius:14px; background:#12263C; border:1px solid #244763; display:flex; align-items:center; justify-content:center;"><span style="position:relative; z-index:1; font-family:'Space Grotesk'; font-weight:700; color:#34B97E; font-size:20px;">H</span><div style="position:absolute; left:9px; bottom:11px; width:23px; height:3px; border-radius:2px; background:#E7BD57; transform:rotate(-30deg); transform-origin:left center; z-index:2;"></div><div style="position:absolute; left:28px; bottom:18px; width:0; height:0; border-top:3.5px solid transparent; border-bottom:3.5px solid transparent; border-left:6px solid #E7BD57; transform:rotate(-30deg); transform-origin:left center; z-index:2;"></div></div>
+    </div>
+    <div style="margin-top:14px; border-radius:22px; overflow:hidden; background:linear-gradient(180deg,#13263b 0%,#0e2034 100%); border:1px solid #244763; position:relative; height:208px;">
+      <div style="position:absolute; left:0; right:0; bottom:0; height:74px; background:#1C3A50; border-radius:50% 50% 0 0 / 60px 60px 0 0;"></div>
+      <div style="position:absolute; top:18px; right:20px; width:34px; height:34px; border-radius:50%; background:#E7BD57; box-shadow:0 0 22px rgba(231,189,87,.4);"></div>
+      <div style="position:absolute; left:40px; bottom:54px; width:14px; height:30px; background:#34B97E; border-radius:7px;"></div>
+      <div style="position:absolute; left:30px; bottom:74px; width:34px; height:34px; border-radius:50%; background:#3FC089;"></div>
+      <div style="position:absolute; left:50%; bottom:46px; transform:translateX(-50%); width:104px; height:78px; background:#16304A; border:2px solid #34B97E; border-radius:6px;"></div>
+      <div style="position:absolute; left:50%; bottom:118px; transform:translateX(-50%); width:0; height:0; border-left:64px solid transparent; border-right:64px solid transparent; border-bottom:42px solid #34B97E;"></div>
+      <div style="position:absolute; left:50%; bottom:46px; transform:translateX(-50%); margin-left:-22px; width:24px; height:36px; background:#E7BD57; border:2px solid #0A1A2C; border-radius:4px 4px 0 0;"></div>
+      <div style="position:absolute; left:50%; bottom:70px; transform:translateX(-50%); margin-left:22px; width:22px; height:22px; background:#0E2A47; border:2px solid #34B97E; border-radius:4px;"></div>
+      <div style="position:absolute; top:14px; left:14px; background:rgba(10,26,44,0.7); border:1px solid #244763; border-radius:999px; padding:5px 11px; font-size:12px; font-weight:600; color:#34B97E;">Stufe 3 · Wände</div>
+    </div>
+    <div style="margin-top:10px;">
+      <div style="display:flex; justify-content:space-between; font-size:12.5px; color:#8FA6BC; margin-bottom:6px;"><span>Dein Haus wächst</span><span style="font-weight:600; color:#EAF1F8;">3 / 6</span></div>
+      <div style="height:9px; border-radius:999px; background:#1C3A50;"><div style="width:50%; height:100%; border-radius:999px; background:#34B97E;"></div></div>
+    </div>
+    <div style="display:flex; gap:12px; margin-top:14px;">
+      <div style="flex:1; background:#12263C; border:1px solid #244763; border-radius:18px; padding:14px;"><div style="font-size:12px; color:#8FA6BC;">Musterdepot</div><div style="font-family:'Space Grotesk'; font-size:19px; font-weight:700; color:#EAF1F8; margin-top:3px;">7.495,00 €</div><div style="font-size:12.5px; color:#34B97E; font-weight:600; margin-top:2px;">+2,1 %</div></div>
+      <div style="flex:1; background:#12263C; border:1px solid #244763; border-radius:18px; padding:14px;"><div style="font-size:12px; color:#8FA6BC;">Wissen</div><div style="font-family:'Space Grotesk'; font-size:19px; font-weight:700; color:#EAF1F8; margin-top:3px;">250 P</div><div style="font-size:12.5px; color:#8FA6BC; margin-top:2px;">1 / 20 Module</div></div>
+    </div>
+    <div style="margin-top:14px; background:#173049; border:1px solid #244763; border-radius:18px; padding:16px;">
+      <div style="font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:#7FBF9E; font-weight:600;">Nächste Mission</div>
+      <div style="font-family:'Space Grotesk'; font-size:17px; font-weight:700; color:#EAF1F8; margin-top:5px;">Was ist ein ETF?</div>
+      <div style="display:flex; align-items:center; justify-content:space-between; margin-top:12px;"><span style="font-size:12.5px; color:#8FA6BC;">5 Min · +50 XP</span><span style="background:#34B97E; color:#06241a; font-weight:700; font-size:13px; padding:8px 16px; border-radius:12px;">Starten</span></div>
+    </div>
+  </div>
+  <div style="flex:0 0 auto; height:74px; border-top:1px solid #244763; background:#0C1E31; display:flex; padding:9px 4px 0;">
+    <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px; color:#34B97E;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1; font-size:24px;">cottage</span><span style="font-size:10.5px; font-weight:600;">Start</span></div>
+    <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px; color:#6B829A;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 0; font-size:24px;">menu_book</span><span style="font-size:10.5px;">Lernen</span></div>
+    <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px; color:#6B829A;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 0; font-size:24px;">work</span><span style="font-size:10.5px;">Depot</span></div>
+    <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px; color:#6B829A;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 0; font-size:24px;">explore</span><span style="font-size:10.5px;">Werte</span></div>
+    <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px; color:#6B829A;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 0; font-size:24px;">emoji_events</span><span style="font-size:10.5px;">Liga</span></div>
+  </div>
+</div>
+
+<!-- Dark FrageFlow -->
+<div data-drags-parent="1" style="position:absolute; left:1030px; top:5120px; width:390px; font-family:'Space Grotesk'; font-size:12.5px; font-weight:600; letter-spacing:0.04em; color:#5C7184; text-transform:uppercase;">Frage-Flow · Dark</div>
+<div data-screen-label="FrageFlowDark" style="position:absolute; left:1030px; top:5156px; width:390px; height:844px; border-radius:46px; background:#0A1A2C; border:10px solid #05101c; box-shadow:0 30px 60px rgba(5,15,30,.5); overflow:hidden; display:flex; flex-direction:column;">
+  <div style="height:44px; display:flex; align-items:center; justify-content:space-between; padding:0 24px; flex:0 0 auto;">
+    <span style="font-weight:600; font-size:14px; color:#EAF1F8;">9:41</span>
+    <div style="display:flex; gap:6px; align-items:center; color:#EAF1F8;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1; font-size:17px;">signal_cellular_alt</span><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1; font-size:17px;">wifi</span><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1; font-size:18px;">battery_full</span></div>
+  </div>
+  <div style="flex:1; overflow:hidden; padding:6px 18px 0; display:flex; flex-direction:column;">
+    <div style="display:flex; align-items:center; gap:12px;"><span style="font-family:'Material Symbols Rounded'; font-size:24px; color:#EAF1F8;">arrow_back</span><div style="flex:1; height:9px; border-radius:999px; background:#1C3A50;"><div style="width:60%; height:100%; border-radius:999px; background:#34B97E;"></div></div><span style="font-size:13px; font-weight:600; color:#8FA6BC;">3/5</span></div>
+    <div style="font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:#6B829A; font-weight:600; margin-top:20px;">Modul · Was ist ein ETF?</div>
+    <div style="font-family:'Space Grotesk'; font-size:23px; font-weight:700; color:#EAF1F8; line-height:1.2; margin-top:8px;">Was beschreibt einen ETF am besten?</div>
+    <div style="display:flex; flex-direction:column; gap:10px; margin-top:20px;">
+      <div style="background:#12263C; border:1.5px solid #244763; border-radius:16px; padding:14px 16px; font-size:14.5px; color:#B6C6D6;">Eine einzelne Aktie eines Unternehmens</div>
+      <div style="background:rgba(52,185,126,0.14); border:1.5px solid #34B97E; border-radius:16px; padding:14px 16px; font-size:14.5px; color:#EAF1F8; font-weight:600; display:flex; align-items:center; justify-content:space-between;">Ein Korb aus vielen Aktien<span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1; font-size:22px; color:#34B97E;">check_circle</span></div>
+      <div style="background:#12263C; border:1.5px solid #244763; border-radius:16px; padding:14px 16px; font-size:14.5px; color:#B6C6D6;">Ein Konto bei der Bank</div>
+      <div style="background:#12263C; border:1.5px solid #244763; border-radius:16px; padding:14px 16px; font-size:14.5px; color:#B6C6D6;">Ein Kredit fürs Investieren</div>
+    </div>
+    <div style="margin-top:auto; margin-bottom:14px; background:rgba(52,185,126,0.12); border:1px solid #34B97E; border-radius:18px; padding:16px;">
+      <div style="display:flex; align-items:center; gap:8px;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1; font-size:22px; color:#34B97E;">verified</span><span style="font-family:'Space Grotesk'; font-weight:700; font-size:16px; color:#EAF1F8;">Richtig!</span><span style="margin-left:auto; background:#E7BD57; color:#06241a; font-weight:700; font-size:12px; padding:4px 10px; border-radius:999px;">+10 XP</span></div>
+      <div style="font-size:13.5px; color:#B6C6D6; margin-top:8px; line-height:1.5;">Ein ETF bündelt viele Aktien — so verteilst du Risiko, ohne alles einzeln zu kaufen.</div>
+      <div style="margin-top:12px; background:#34B97E; color:#06241a; text-align:center; font-weight:700; font-size:14.5px; padding:13px; border-radius:14px;">Weiter</div>
+    </div>
+  </div>
+  <div style="flex:0 0 auto; height:74px; border-top:1px solid #244763; background:#0C1E31; display:flex; padding:9px 4px 0;">
+    <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px; color:#6B829A;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 0; font-size:24px;">cottage</span><span style="font-size:10.5px;">Start</span></div>
+    <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px; color:#34B97E;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1; font-size:24px;">menu_book</span><span style="font-size:10.5px; font-weight:600;">Lernen</span></div>
+    <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px; color:#6B829A;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 0; font-size:24px;">work</span><span style="font-size:10.5px;">Depot</span></div>
+    <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px; color:#6B829A;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 0; font-size:24px;">explore</span><span style="font-size:10.5px;">Werte</span></div>
+    <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px; color:#6B829A;"><span style="font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 0; font-size:24px;">emoji_events</span><span style="font-size:10.5px;">Liga</span></div>
+  </div>
+</div>
+
+<!-- Logo (neu: H + Börsenpfeil) -->
+<div style="position:absolute; left:1740px; top:152px; width:380px; background:#FFFFFF; border:1px solid #DCE6EE; border-radius:22px; padding:26px; box-shadow:0 8px 24px rgba(20,40,60,.08);">
+  <div style="font-family:'Space Grotesk'; font-size:20px; font-weight:700; color:#0E2A47;">Logo</div>
+  <div style="font-size:13px; color:#9AA7B4; margin-top:2px;">H mit integriertem Börsenpfeil (steigende Kurse).</div>
+  <div style="display:flex; align-items:flex-end; gap:24px; margin-top:22px;">
+    <!-- big mark 96 -->
+    <div style="position:relative; width:96px; height:96px; border-radius:26px; background:#0E2A47; overflow:hidden; display:flex; align-items:center; justify-content:center; flex:0 0 auto;">
+      <span style="position:relative; z-index:1; font-family:'Space Grotesk'; font-weight:700; color:#1F9D6B; font-size:50px; line-height:1;">H</span>
+      <div style="position:absolute; left:22px; bottom:26px; width:52px; height:6px; border-radius:3px; background:#E7BD57; transform:rotate(-30deg); transform-origin:left center; z-index:2;"></div>
+      <div style="position:absolute; left:66px; bottom:43px; width:0; height:0; border-top:7px solid transparent; border-bottom:7px solid transparent; border-left:13px solid #E7BD57; transform:rotate(-30deg); transform-origin:left center; z-index:2;"></div>
+    </div>
+    <!-- 42 -->
+    <div style="position:relative; width:42px; height:42px; border-radius:14px; background:#0E2A47; overflow:hidden; display:flex; align-items:center; justify-content:center; flex:0 0 auto;">
+      <span style="position:relative; z-index:1; font-family:'Space Grotesk'; font-weight:700; color:#1F9D6B; font-size:22px; line-height:1;">H</span>
+      <div style="position:absolute; left:9px; bottom:11px; width:23px; height:3px; border-radius:2px; background:#E7BD57; transform:rotate(-30deg); transform-origin:left center; z-index:2;"></div>
+      <div style="position:absolute; left:28px; bottom:18px; width:0; height:0; border-top:3.5px solid transparent; border-bottom:3.5px solid transparent; border-left:6px solid #E7BD57; transform:rotate(-30deg); transform-origin:left center; z-index:2;"></div>
+    </div>
+    <!-- 30 on white (Beamer/Inverse context shown on navy) -->
+    <div style="position:relative; width:42px; height:42px; border-radius:14px; background:#fff; border:1px solid #DCE6EE; overflow:hidden; display:flex; align-items:center; justify-content:center; flex:0 0 auto;">
+      <span style="position:relative; z-index:1; font-family:'Space Grotesk'; font-weight:700; color:#1F9D6B; font-size:22px; line-height:1;">H</span>
+      <div style="position:absolute; left:9px; bottom:11px; width:23px; height:3px; border-radius:2px; background:#E7BD57; transform:rotate(-30deg); transform-origin:left center; z-index:2;"></div>
+      <div style="position:absolute; left:28px; bottom:18px; width:0; height:0; border-top:3.5px solid transparent; border-bottom:3.5px solid transparent; border-left:6px solid #E7BD57; transform:rotate(-30deg); transform-origin:left center; z-index:2;"></div>
+    </div>
+  </div>
+  <div style="font-size:12.5px; color:#5C7184; margin-top:20px; line-height:1.55;">Bestehende Marke bleibt: grünes <b>H</b> auf Navy, abgerundetes Quadrat. Neu: ein <b>Gold-Pfeil</b> (#E7BD57) steigt diagonal nach oben rechts — Wachstum/steigende Kurse. Kein €/$-Zeichen, keine Münze.</div>
+</div>
+</x-dc>
+</body>
+</html>

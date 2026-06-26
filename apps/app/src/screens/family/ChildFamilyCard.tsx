@@ -2,11 +2,13 @@ import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { useStore } from "../../store/store.js";
 import { Body, Button, Card, H2, Muted } from "../../ui/components.js";
-import { colors, font, fonts, space } from "../../theme.js";
+import { font, fonts, space, type Palette } from "../../theme.js";
+import { useThemedStyles } from "../../theme/ThemeProvider.js";
 
 // Auf dem Kinder-Zuhause: eigener Verknüpfungscode + Freigabe von Eltern-Anfragen.
 export function ChildFamilyCard() {
   const { state, respondToLink, t } = useStore();
+  const styles = useThemedStyles(makeStyles);
 
   return (
     <Card>
@@ -32,8 +34,9 @@ export function ChildFamilyCard() {
   );
 }
 
-const styles = StyleSheet.create({
-  req: { gap: space.sm, paddingBottom: space.sm, borderBottomWidth: 1, borderBottomColor: colors.border },
-  btns: { flexDirection: "row", gap: space.sm },
-  code: { fontSize: font.small, color: colors.text, fontFamily: fonts.display },
-});
+const makeStyles = (c: Palette) =>
+  StyleSheet.create({
+    req: { gap: space.sm, paddingBottom: space.sm, borderBottomWidth: 1, borderBottomColor: c.border },
+    btns: { flexDirection: "row", gap: space.sm },
+    code: { fontSize: font.small, color: c.text, fontFamily: fonts.display },
+  });

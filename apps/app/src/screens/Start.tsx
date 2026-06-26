@@ -9,13 +9,16 @@ import { MarketLab } from "./MarketLab.js";
 import { ChildFamilyCard } from "./family/ChildFamilyCard.js";
 import { StudentClassCard } from "./classroom/StudentClassCard.js";
 import { useNav } from "../nav.js";
-import { colors, font, fonts, space } from "../theme.js";
+import { font, fonts, space, type Palette } from "../theme.js";
+import { useColors, useThemedStyles } from "../theme/ThemeProvider.js";
 
 const WEEKDAYS = ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So"];
 
 function StatusDot({ status }: { status: DailyPlan["woche"][number]["status"] }) {
-  const bg = status === "completed" ? colors.secondary : status === "today_open" ? colors.accent : "transparent";
-  const border = status === "missed" || status === "future" ? colors.border : bg;
+  const c = useColors();
+  const styles = useThemedStyles(makeStyles);
+  const bg = status === "completed" ? c.green : status === "today_open" ? c.gold : "transparent";
+  const border = status === "missed" || status === "future" ? c.border : bg;
   return <View style={[styles.dot, { backgroundColor: bg, borderColor: border }]} />;
 }
 
@@ -40,6 +43,7 @@ function TaskCard({
   onPress: () => void;
 }) {
   const { t } = useStore();
+  const styles = useThemedStyles(makeStyles);
   const tappable = !done && !locked;
   return (
     <Card
@@ -62,6 +66,7 @@ function TaskCard({
 export function Start() {
   const { state, derived, t, fetchDailyPlan, markMarketViewed } = useStore();
   const go = useNav();
+  const styles = useThemedStyles(makeStyles);
   const isAdult = state.role === "adult";
 
   const [plan, setPlan] = useState<DailyPlan | null>(null);
@@ -201,18 +206,19 @@ export function Start() {
   );
 }
 
-const styles = StyleSheet.create({
-  container: { padding: space.lg, gap: space.lg, backgroundColor: colors.background },
-  summary: { gap: space.sm },
-  status: { fontWeight: "700", color: colors.primary, fontFamily: fonts.bodyBold },
-  week: { flexDirection: "row", justifyContent: "space-between", marginTop: space.xs },
-  weekDay: { alignItems: "center", gap: space.xs },
-  dot: { width: 14, height: 14, borderRadius: 999, borderWidth: 2 },
-  taskHead: { flexDirection: "row", justifyContent: "space-between", alignItems: "center" },
-  step: { fontSize: font.small, fontWeight: "700", color: colors.textMuted, textTransform: "uppercase", fontFamily: fonts.bodyBold },
-  cardDone: { borderColor: colors.secondary, backgroundColor: "#F0FDF4" },
-  cardCta: { color: colors.primary, fontFamily: fonts.bodyBold, fontSize: font.body, marginTop: space.xs },
-  metricsRow: { flexDirection: "row", gap: space.md },
-  metric: { flex: 1 },
-  metricValue: { fontSize: font.h2, fontWeight: "800", color: colors.text, fontFamily: fonts.display },
-});
+const makeStyles = (c: Palette) =>
+  StyleSheet.create({
+    container: { padding: space.lg, gap: space.lg, backgroundColor: c.bg },
+    summary: { gap: space.sm },
+    status: { color: c.navy, fontFamily: fonts.bodyBold },
+    week: { flexDirection: "row", justifyContent: "space-between", marginTop: space.xs },
+    weekDay: { alignItems: "center", gap: space.xs },
+    dot: { width: 14, height: 14, borderRadius: 999, borderWidth: 2 },
+    taskHead: { flexDirection: "row", justifyContent: "space-between", alignItems: "center" },
+    step: { fontSize: font.small, color: c.muted, textTransform: "uppercase", fontFamily: fonts.bodyBold, letterSpacing: 0.9 },
+    cardDone: { borderColor: c.green, backgroundColor: c.mint },
+    cardCta: { color: c.green, fontFamily: fonts.bodyBold, fontSize: font.body, marginTop: space.xs },
+    metricsRow: { flexDirection: "row", gap: space.md },
+    metric: { flex: 1 },
+    metricValue: { fontSize: font.h2, color: c.text, fontFamily: fonts.display },
+  });
