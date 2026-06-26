@@ -3,7 +3,7 @@ import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { formatEuros } from "@hofino/core";
 import { COMPANY_PROFILES, ETF_PROFILES } from "@hofino/content";
 import { useStore } from "../store/store.js";
-import { Body, Button, Card, H1, H2, Muted, Pill } from "../ui/components.js";
+import { Body, Button, Card, H1, H2, InstrumentAvatar, Muted, Pill } from "../ui/components.js";
 import { TradePanel } from "../ui/TradePanel.js";
 import { font, fonts, space, type Palette } from "../theme.js";
 import { useThemedStyles } from "../theme/ThemeProvider.js";
@@ -21,7 +21,10 @@ function Detail({ id, onBack }: { id: string; onBack: () => void }) {
     <ScrollView contentContainerStyle={styles.container}>
       <Button title={t("discover.back")} onPress={onBack} variant="ghost" testID="detail-back" />
       <View style={styles.detailHead}>
-        <H1>{inst.name}</H1>
+        <View style={styles.detailHeadLeft}>
+          <InstrumentAvatar name={inst.name} symbol={inst.ticker ?? undefined} type={inst.type} size={52} />
+          <H1 style={{ flexShrink: 1 }}>{inst.name}</H1>
+        </View>
         <Text style={styles.price}>{formatEuros(prices.get(id) ?? 0)}</Text>
       </View>
       <View style={styles.tags}>
@@ -109,6 +112,7 @@ function Row({ id, onOpen }: { id: string; onOpen: (id: string) => void }) {
   if (!inst) return null;
   return (
     <Pressable testID={`inst-${id}`} onPress={() => onOpen(id)} style={styles.row}>
+      <InstrumentAvatar name={inst.name} symbol={inst.ticker ?? undefined} type={inst.type} size={40} />
       <View style={{ flex: 1 }}>
         <Text style={styles.rowName}>{inst.name}</Text>
         <Muted>
@@ -169,7 +173,8 @@ export function Discover({
 const makeStyles = (c: Palette) =>
   StyleSheet.create({
     container: { padding: space.lg, gap: space.md, backgroundColor: c.bg },
-    detailHead: { flexDirection: "row", justifyContent: "space-between", alignItems: "flex-end" },
+    detailHead: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", gap: space.sm },
+    detailHeadLeft: { flexDirection: "row", alignItems: "center", gap: space.sm, flex: 1 },
     price: { fontSize: font.h2, fontWeight: "800", color: c.text, fontFamily: fonts.display },
     tags: { flexDirection: "row", gap: space.sm, flexWrap: "wrap" },
     fieldQ: { fontSize: font.small, fontWeight: "700", color: c.muted, fontFamily: fonts.body },

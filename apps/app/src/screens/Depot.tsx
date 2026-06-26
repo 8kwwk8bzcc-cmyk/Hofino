@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState } from "react";
 import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { formatEuros } from "@hofino/core";
 import { useStore, type JournalEntry } from "../store/store.js";
-import { Body, Button, Card, H1, H2, Muted, Pill } from "../ui/components.js";
+import { Body, Button, Card, H1, H2, InstrumentAvatar, Muted, Pill } from "../ui/components.js";
 import { TradePanel } from "../ui/TradePanel.js";
 import { useNav } from "../nav.js";
 import { font, fonts, space, type Palette } from "../theme.js";
@@ -79,6 +79,7 @@ export function Depot() {
                   style={({ pressed }) => [styles.posTop, pressed && { opacity: 0.6 }]}
                   onPress={() => setSellId(sellId === h.instrumentId ? null : h.instrumentId)}
                 >
+                  <InstrumentAvatar name={inst?.name ?? h.instrumentId} symbol={inst?.ticker ?? undefined} type={inst?.type} size={40} />
                   <View style={{ flex: 1 }}>
                     <Text style={styles.posName}>{inst?.name ?? h.instrumentId}</Text>
                     <Muted>{t("depot.qtyAvg", { qty: h.quantity, avg: formatEuros(h.avgCostCents) })}</Muted>
@@ -142,7 +143,7 @@ const makeStyles = (c: Palette) =>
     splitRow: { flexDirection: "row", justifyContent: "space-between" },
     feeCard: { backgroundColor: c.softBlue },
     pos: { paddingVertical: space.sm, borderBottomWidth: 1, borderBottomColor: c.border, gap: space.sm },
-    posTop: { flexDirection: "row", alignItems: "center" },
+    posTop: { flexDirection: "row", alignItems: "center", gap: space.sm },
     posName: { fontSize: font.body, fontWeight: "700", color: c.text, fontFamily: fonts.bodyBold },
     posVal: { fontSize: font.body, fontWeight: "700", color: c.text, fontFamily: fonts.display },
     pl: { fontSize: font.small, fontWeight: "700", fontFamily: fonts.display },

@@ -392,6 +392,59 @@ export function HLogo({ size = 40 }: { size?: number }) {
   );
 }
 
+// ── Instrument-Avatar (Marken-Monogramm) ────────────────────────────────────
+// Ersetzt echte Firmenlogos: deterministische Markenfarbe + Initiale. Offline,
+// rechtssicher, neutral. Größe 40 (Liste) / 52 (Faktensheet).
+function avatarHue(seed: string): number {
+  let h = 0;
+  for (let i = 0; i < seed.length; i++) h = (h * 31 + seed.charCodeAt(i)) % 360;
+  return h;
+}
+
+function monogram(name: string, symbol: string | undefined, type: string | undefined): string {
+  if (type === "etf" && symbol) return symbol.slice(0, 2).toUpperCase();
+  const first = name.trim()[0] ?? symbol?.[0] ?? "?";
+  return first.toUpperCase();
+}
+
+export function InstrumentAvatar({
+  name,
+  symbol,
+  type,
+  size = 40,
+}: {
+  name: string;
+  symbol?: string;
+  type?: string;
+  size?: number;
+}) {
+  const label = monogram(name, symbol, type);
+  const bg = `hsl(${avatarHue(symbol || name)}, 48%, 42%)`;
+  return (
+    <View
+      style={{
+        width: size,
+        height: size,
+        borderRadius: size * 0.28,
+        backgroundColor: bg,
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
+      <Text
+        style={{
+          color: "#FFFFFF",
+          fontFamily: fonts.display,
+          fontSize: size * (label.length > 1 ? 0.34 : 0.42),
+          lineHeight: size * (label.length > 1 ? 0.4 : 0.5),
+        }}
+      >
+        {label}
+      </Text>
+    </View>
+  );
+}
+
 // ── Styles-Factory (theme-abhängig) ─────────────────────────────────────────
 const makeStyles = (c: Palette) =>
   StyleSheet.create({
