@@ -104,6 +104,23 @@ export function TeacherClass() {
     await reload();
   };
 
+  // Saison-Wertung: pro Kategorie der/die Führende – bewusst MEHRERE Titel statt nur Gewinn,
+  // und ohne reine %-Performance (Prozess/Wissen schlagen Zufallsgewinn).
+  const seasonLeader = (sel: (r: ClassOverviewRow) => number, mode: "max" | "min", onlyInvested = false) => {
+    const cand = rows.filter((r) => (onlyInvested ? r.ordersCount > 0 : true));
+    if (cand.length === 0) return null;
+    const best = cand.reduce((a, b) => (mode === "max" ? (sel(b) > sel(a) ? b : a) : sel(b) < sel(a) ? b : a));
+    if (mode === "max" && sel(best) <= 0) return null; // niemand hat hier etwas erreicht
+    return { name: best.displayName, value: sel(best) };
+  };
+  const seasonTitles: { key: string; leader: { name: string; value: number } | null }[] = [
+    { key: "class.seasonKonzepte", leader: seasonLeader((r) => r.modulesCompleted, "max") },
+    { key: "class.seasonXp", leader: seasonLeader((r) => r.knowledgePoints, "max") },
+    { key: "class.seasonStreuung", leader: seasonLeader((r) => r.sectorsCount, "max") },
+    { key: "class.seasonRuhig", leader: seasonLeader((r) => r.ordersCount, "min", true) },
+    { key: "class.seasonEtf", leader: seasonLeader((r) => r.etfCount, "max") },
+  ];
+
   const toggleAssign = async (konzeptId: string) => {
     if (!cls) return;
     const next = new Set(assigned);
@@ -286,6 +303,21 @@ export function TeacherClass() {
               })
             )}
           </Card>
+
+          {rows.length > 0 && (
+            <Card>
+              <H2>{t("class.seasonTitle")}</H2>
+              <Muted>{t("class.seasonHint")}</Muted>
+              {seasonTitles.map((s) => (
+                <View key={s.key} style={styles.rankRow}>
+                  <Text style={styles.rankText}>🏅 {t(s.key)}</Text>
+                  <Text style={styles.rankScore}>
+                    {s.leader ? `${s.leader.name} (${s.leader.value})` : t("class.seasonNobody")}
+                  </Text>
+                </View>
+              ))}
+            </Card>
+          )}
 
           {rows.length > 0 && (
             <Card>
