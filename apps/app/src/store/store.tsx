@@ -1,5 +1,5 @@
 // Spielstand aus Supabase: Auth-Session, Lesen via RLS, Schreiben über serverseitige
-// RPCs (place_order, complete_module). Ersetzt den früheren lokalen Store.
+// RPCs (place_order, lern_*). Ersetzt den früheren lokalen Store.
 import React, { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from "react";
 import {
   depotValueCents,
@@ -31,11 +31,6 @@ export interface Instrument {
   type: "stock" | "etf";
   sector: string;
   country: string;
-}
-
-interface QuizResult {
-  score: number;
-  perfect: boolean;
 }
 
 export type Role = "child" | "adult" | "parent" | "teacher" | "student";
@@ -105,10 +100,7 @@ interface Data {
   cashCents: number;
   holdings: { instrumentId: string; quantity: number; avgCostCents: number }[];
   watchlist: string[];
-  completed: string[];
-  quiz: Record<string, QuizResult>;
   completedKonzepte: string[];
-  knowledgePoints: number;
   lernXpGesamt: number;
   lernXpSaison: number;
   korrekteAntworten: number;
@@ -129,10 +121,7 @@ const EMPTY: Data = {
   cashCents: 0,
   holdings: [],
   watchlist: [],
-  completed: [],
-  quiz: {},
   completedKonzepte: [],
-  knowledgePoints: 0,
   lernXpGesamt: 0,
   lernXpSaison: 0,
   korrekteAntworten: 0,
@@ -163,8 +152,6 @@ interface StoreApi {
     plot: string;
     portfolio: Portfolio;
     watchlist: string[];
-    completed: string[];
-    quiz: Record<string, QuizResult>;
     pendingLinks: PendingLink[];
   };
   instruments: Instrument[];
@@ -174,7 +161,6 @@ interface StoreApi {
     holdingsValueCents: number;
     equityCents: number;
     learningCapitalCents: number;
-    knowledgePoints: number;
     performancePercent: number;
     houseStage: HouseStage;
     completedCount: number;
@@ -189,7 +175,6 @@ interface StoreApi {
   buy: (instrumentId: string, quantity: number) => Promise<OrderOutcome>;
   sell: (instrumentId: string, quantity: number) => Promise<OrderOutcome>;
   toggleWatch: (instrumentId: string) => Promise<void>;
-  completeModule: (moduleId: string, correct: number, total: number) => Promise<void>;
   linkChild: (childCode: string) => Promise<AuthOutcome>;
   respondToLink: (parentProfileId: string, approve: boolean) => Promise<void>;
   fetchFamily: () => Promise<ChildSummary[]>;
@@ -276,15 +261,13 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
     }
     const profileId = profileRes.data.id as string;
 
-    const [instrumentsRes, pricesRes, portfolioRes, holdingsRes, watchRes, learnRes, pointsRes, grantsRes, ordersRes, pendingRes, fortschrittRes, statusRes, korrektRes] =
+    const [instrumentsRes, pricesRes, portfolioRes, holdingsRes, watchRes, grantsRes, ordersRes, pendingRes, fortschrittRes, statusRes, korrektRes] =
       await Promise.all([
         supabase.from("instruments").select("id, ticker, name, type, sector, country"),
         supabase.from("prices").select("instrument_id, price_cents"),
         supabase.from("portfolios").select("cash_cents").eq("owner_profile_id", profileId).maybeSingle(),
         supabase.from("holdings").select("instrument_id, quantity, avg_cost_cents"),
         supabase.from("watchlist").select("instrument_id"),
-        supabase.from("learning_progress").select("module_id, quiz_score, perfect, completed_at"),
-        supabase.from("knowledge_points").select("points"),
         supabase.from("capital_grants").select("amount_cents"),
         supabase.from("orders").select("id").limit(1),
         supabase
@@ -303,15 +286,6 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
     const prices = new Map<string, number>();
     for (const p of pricesRes.data ?? []) prices.set(p.instrument_id, p.price_cents);
 
-    const completed: string[] = [];
-    const quiz: Record<string, QuizResult> = {};
-    if (isPlayer) {
-      for (const lp of learnRes.data ?? []) {
-        if (lp.completed_at) completed.push(lp.module_id);
-        quiz[lp.module_id] = { score: lp.quiz_score ?? 0, perfect: !!lp.perfect };
-      }
-    }
-
     setData({
       sessionUserId: user.id,
       profileId,
@@ -327,14 +301,11 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
           }))
         : [],
       watchlist: isPlayer ? (watchRes.data ?? []).map((w) => w.instrument_id) : [],
-      completed,
-      quiz,
       completedKonzepte: isPlayer
         ? (fortschrittRes.data ?? [])
             .filter((r) => r.hoechste_abgeschlossene_stufe === "meistern")
             .map((r) => r.konzept_id)
         : [],
-      knowledgePoints: isPlayer ? (pointsRes.data ?? []).reduce((s, r) => s + r.points, 0) : 0,
       lernXpGesamt: isPlayer ? Number(statusRes.data?.xp_gesamt ?? 0) : 0,
       lernXpSaison: isPlayer ? Number(statusRes.data?.xp_saison ?? 0) : 0,
       korrekteAntworten: isPlayer ? korrektRes.count ?? 0 : 0,
@@ -440,14 +411,6 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
     [load]
   );
 
-  const completeModule = useCallback<StoreApi["completeModule"]>(
-    async (moduleId, correct, total) => {
-      await supabase.rpc("complete_module", { p_module: moduleId, p_correct: correct, p_total: total });
-      await load();
-    },
-    [load]
-  );
-
   const linkChild = useCallback<StoreApi["linkChild"]>(async (childCode) => {
     const profileId = dataRef.current.profileId;
     if (!profileId) return { ok: false, message: "Nicht angemeldet." };
@@ -479,12 +442,12 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
     const childIds = (links.data ?? []).map((l) => l.child_profile_id as string);
     if (childIds.length === 0) return [];
 
-    const [profilesRes, portfoliosRes, holdingsRes, learnRes, pointsRes, grantsRes] = await Promise.all([
+    const [profilesRes, portfoliosRes, holdingsRes, fortschrittRes, statusRes, grantsRes] = await Promise.all([
       supabase.from("profiles").select("id, display_name").in("id", childIds),
       supabase.from("portfolios").select("id, owner_profile_id, cash_cents").in("owner_profile_id", childIds),
       supabase.from("holdings").select("portfolio_id, instrument_id, quantity"),
-      supabase.from("learning_progress").select("profile_id, completed_at"),
-      supabase.from("knowledge_points").select("profile_id, points"),
+      supabase.from("lern_konzept_fortschritt").select("profile_id, hoechste_abgeschlossene_stufe").in("profile_id", childIds),
+      supabase.from("lern_status").select("profile_id, xp_gesamt").in("profile_id", childIds),
       supabase.from("capital_grants").select("profile_id, amount_cents"),
     ]);
 
@@ -501,12 +464,15 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
       if (!child) continue;
       equityByChild.set(child, (equityByChild.get(child) ?? 0) + (prices.get(h.instrument_id) ?? 0) * h.quantity);
     }
+    // Abgeschlossene Konzepte = Stufe 'meistern' (identische Definition wie Schüler-Lerntab/class_overview).
     const completedByChild = new Map<string, number>();
-    for (const lp of learnRes.data ?? []) {
-      if (lp.completed_at) completedByChild.set(lp.profile_id, (completedByChild.get(lp.profile_id) ?? 0) + 1);
+    for (const f of fortschrittRes.data ?? []) {
+      if (f.hoechste_abgeschlossene_stufe === "meistern")
+        completedByChild.set(f.profile_id, (completedByChild.get(f.profile_id) ?? 0) + 1);
     }
+    // Wissenspunkte = lern_status.xp_gesamt (eine Zeile je Profil).
     const pointsByChild = new Map<string, number>();
-    for (const r of pointsRes.data ?? []) pointsByChild.set(r.profile_id, (pointsByChild.get(r.profile_id) ?? 0) + r.points);
+    for (const r of statusRes.data ?? []) pointsByChild.set(r.profile_id, Number(r.xp_gesamt ?? 0));
     const capitalByChild = new Map<string, number>();
     for (const r of grantsRes.data ?? []) capitalByChild.set(r.profile_id, (capitalByChild.get(r.profile_id) ?? 0) + r.amount_cents);
 
@@ -672,7 +638,6 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
       holdingsValueCents: holdingsValueCents(portfolio, data.prices),
       equityCents,
       learningCapitalCents: data.learningCapitalCents,
-      knowledgePoints: data.knowledgePoints,
       performancePercent: performancePercent(equityCents, data.learningCapitalCents),
       houseStage: houseStage({
         hasInvested: data.hasInvested,
@@ -692,7 +657,6 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
     data.prices,
     data.completedKonzepte,
     data.learningCapitalCents,
-    data.knowledgePoints,
     data.hasInvested,
     data.lernXpGesamt,
     data.lernXpSaison,
@@ -710,8 +674,6 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
       plot: data.plot,
       portfolio,
       watchlist: data.watchlist,
-      completed: data.completed,
-      quiz: data.quiz,
       pendingLinks: data.pendingLinks,
     },
     instruments: data.instruments,
@@ -725,7 +687,6 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
     buy: (id, qty) => order(id, qty, "buy"),
     sell: (id, qty) => order(id, qty, "sell"),
     toggleWatch,
-    completeModule,
     linkChild,
     respondToLink,
     fetchFamily,

@@ -31,11 +31,13 @@ Deno.serve(async () => {
     Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
   );
 
+  // Wissensliga = lebenslange XP aus dem Lern-Kern (lern_status.xp_gesamt); die alten
+  // Tabellen learning_progress/knowledge_points werden nicht mehr befüllt (abgelöst 2026-06-27).
   const [portfolios, holdings, grants, points] = await Promise.all([
     sb.from("portfolios").select("owner_profile_id, cash_cents, id"),
     sb.from("holdings").select("portfolio_id, instrument_id, quantity"),
     sb.from("capital_grants").select("profile_id, amount_cents"),
-    sb.from("knowledge_points").select("profile_id, points"),
+    sb.from("lern_status").select("profile_id, xp_gesamt"),
   ]);
   for (const r of [portfolios, holdings, grants, points]) {
     if (r.error) return json({ error: r.error.message }, 500);
@@ -71,7 +73,7 @@ Deno.serve(async () => {
   }
   const pointsByProfile = new Map<string, number>();
   for (const p of points.data ?? []) {
-    pointsByProfile.set(p.profile_id, (pointsByProfile.get(p.profile_id) ?? 0) + p.points);
+    pointsByProfile.set(p.profile_id, p.xp_gesamt ?? 0);
   }
 
   const totalCapital: Entry[] = [];

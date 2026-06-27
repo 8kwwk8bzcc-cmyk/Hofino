@@ -62,16 +62,29 @@ async function resetPlayer(profileId) {
     await admin.from("portfolios").update({ cash_cents: 500000 }).eq("id", pf.id);
   }
   await admin.from("capital_grants").delete().eq("profile_id", profileId);
-  await admin.from("knowledge_points").delete().eq("profile_id", profileId);
-  await admin.from("learning_progress").delete().eq("profile_id", profileId);
+  await admin.from("lern_konzept_fortschritt").delete().eq("profile_id", profileId);
+  await admin.from("lern_status").delete().eq("profile_id", profileId);
+  await admin.from("lern_antworten").delete().eq("profile_id", profileId);
+  await admin.from("lern_tageszaehler").delete().eq("profile_id", profileId);
+  await admin.from("lern_sr_zustand").delete().eq("profile_id", profileId);
 }
 
 // Aktivität über die echten RPCs (eigene Session je Kind) – damit Dashboards Daten zeigen.
-async function seedActivity(email, { modules, buyTicker, buyQty }) {
+// Lernfortschritt läuft über den neuen Lern-Kern (lern_*): Konzept abschließen (Kapital +
+// Stufe 'meistern') plus eine korrekte Antwort je Konzept für XP (lern_status.xp_gesamt).
+async function seedActivity(email, { konzepte, buyTicker, buyQty }) {
   const c = createClient(URL, ANON, { auth: { persistSession: false, autoRefreshToken: false } });
   const { error: sErr } = await c.auth.signInWithPassword({ email, password: PASSWORD });
   if (sErr) throw new Error(`signin ${email}: ${sErr.message}`);
-  for (const m of modules) await c.rpc("complete_module", { p_module: m, p_correct: 3, p_total: 3 });
+  const today = new Date().toISOString().slice(0, 10);
+  for (const k of konzepte) {
+    await c.rpc("lern_antwort_speichern", {
+      p_konzept: k, p_stufe: "kennen", p_frage_id: "", p_vorlage_id: "",
+      p_korrekt: true, p_ist_wiederholung: false, p_basis_xp: 10,
+      p_box: 1, p_richtig_in_folge: 1, p_gemeistert: false, p_faellig: today,
+    });
+    await c.rpc("lern_konzept_abschliessen", { p_konzept: k });
+  }
   if (buyTicker) {
     const { data: inst } = await c.from("instruments").select("id").eq("ticker", buyTicker).single();
     if (inst) await c.rpc("place_order", { p_instrument: inst.id, p_side: "buy", p_qty: buyQty });
@@ -105,8 +118,8 @@ async function main() {
   // Aktivität zurücksetzen + neu erzeugen (reproduzierbar).
   await resetPlayer(c.mia.profileId);
   await resetPlayer(c.tom.profileId);
-  await seedActivity("mia@hofino.test", { modules: ["m01", "m02"], buyTicker: "AAPL", buyQty: 3 });
-  await seedActivity("tom@hofino.test", { modules: ["m01"], buyTicker: "SAP", buyQty: 2 });
+  await seedActivity("mia@hofino.test", { konzepte: ["konzept_geld", "konzept_sparen"], buyTicker: "AAPL", buyQty: 3 });
+  await seedActivity("tom@hofino.test", { konzepte: ["konzept_geld"], buyTicker: "SAP", buyQty: 2 });
 
   console.log("✓ Test-Nutzer geseedet (Passwort: " + PASSWORD + "):");
   for (const u of USERS) console.log(`  - ${u.email}  [${u.role}]  ${u.name}`);
