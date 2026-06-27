@@ -399,7 +399,7 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
     async (name, plot, role) => {
       const { data: auth } = await supabase.auth.getUser();
       const user = auth.user;
-      if (!user) return { ok: false, message: "Nicht angemeldet." };
+      if (!user) return { ok: false, message: t("store.notLoggedIn") };
       const ins = await supabase.from("profiles").insert({ auth_user_id: user.id, role, display_name: name });
       if (ins.error) return { ok: false, message: ins.error.message };
       try {
@@ -410,7 +410,7 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
       await load();
       return { ok: true };
     },
-    [load]
+    [load, t]
   );
 
   const login = useCallback<StoreApi["login"]>(
@@ -471,15 +471,15 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
 
   const linkChild = useCallback<StoreApi["linkChild"]>(async (childCode) => {
     const profileId = dataRef.current.profileId;
-    if (!profileId) return { ok: false, message: "Nicht angemeldet." };
+    if (!profileId) return { ok: false, message: t("store.notLoggedIn") };
     const code = childCode.trim();
-    if (code === profileId) return { ok: false, message: "Das ist dein eigener Code." };
+    if (code === profileId) return { ok: false, message: t("store.ownCode") };
     const ins = await supabase
       .from("parent_child_links")
       .insert({ parent_profile_id: profileId, child_profile_id: code, status: "pending" });
-    if (ins.error) return { ok: false, message: "Code ungültig oder bereits angefragt." };
+    if (ins.error) return { ok: false, message: t("store.codeInvalid") };
     return { ok: true };
-  }, []);
+  }, [t]);
 
   const respondToLink = useCallback<StoreApi["respondToLink"]>(
     async (parentProfileId, approve) => {
@@ -550,19 +550,20 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
   const createClass = useCallback<StoreApi["createClass"]>(async (name) => {
     const { data: res, error } = await supabase.rpc("create_class", { p_name: name });
     if (error) return { ok: false, message: error.message };
-    if (!res?.ok) return { ok: false, message: res?.reason ?? "Fehler" };
+    if (!res?.ok) return { ok: false, message: res?.reason ?? t("store.genericError") };
     return { ok: true, code: res.class_code as string };
-  }, []);
+  }, [t]);
 
   const joinClass = useCallback<StoreApi["joinClass"]>(
     async (code) => {
       const { data: res, error } = await supabase.rpc("join_class", { p_code: code });
       if (error) return { ok: false, message: error.message };
-      if (!res?.ok) return { ok: false, message: res?.reason === "not_found" ? "Code nicht gefunden." : "Fehler" };
+      if (!res?.ok)
+        return { ok: false, message: res?.reason === "not_found" ? t("store.codeNotFound") : t("store.genericError") };
       await load();
       return { ok: true };
     },
-    [load]
+    [load, t]
   );
 
   const fetchTeacherClass = useCallback<StoreApi["fetchTeacherClass"]>(async () => {

@@ -358,6 +358,12 @@ const de: Dict = {
   "class.noClass": "Noch keine Klasse",
   "class.beamerTitle": "{name} · Code {code}",
   "class.beamerMeta": "{done}/{total} · {points} P",
+  // Store-Meldungen
+  "store.notLoggedIn": "Nicht angemeldet.",
+  "store.ownCode": "Das ist dein eigener Code.",
+  "store.codeInvalid": "Code ungültig oder bereits angefragt.",
+  "store.genericError": "Fehler",
+  "store.codeNotFound": "Code nicht gefunden.",
 };
 
 const en: Dict = {
@@ -713,6 +719,12 @@ const en: Dict = {
   "class.noClass": "No class yet",
   "class.beamerTitle": "{name} · code {code}",
   "class.beamerMeta": "{done}/{total} · {points} pts",
+  // Store messages
+  "store.notLoggedIn": "Not signed in.",
+  "store.ownCode": "That's your own code.",
+  "store.codeInvalid": "Code invalid or already requested.",
+  "store.genericError": "Error",
+  "store.codeNotFound": "Code not found.",
 };
 
 const DICTS: Record<Lang, Dict> = { de, en };
