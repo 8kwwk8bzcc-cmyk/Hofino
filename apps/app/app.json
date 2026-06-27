@@ -7,8 +7,10 @@
     "orientation": "portrait",
     "userInterfaceStyle": "light",
     "backgroundColor": "#F5F7FA",
+    "icon": "./assets/icon.png",
     "splash": {
-      "backgroundColor": "#0D2B45",
+      "image": "./assets/icon.png",
+      "backgroundColor": "#0F172A",
       "resizeMode": "contain"
     },
     "ios": {
@@ -16,12 +18,14 @@
     },
     "android": {
       "adaptiveIcon": {
-        "backgroundColor": "#0D2B45"
+        "foregroundImage": "./assets/icon.png",
+        "backgroundColor": "#0F172A"
       }
     },
     "web": {
       "bundler": "metro",
-      "output": "single"
+      "output": "single",
+      "favicon": "./assets/favicon.png"
     },
     "plugins": [
       "expo-status-bar"

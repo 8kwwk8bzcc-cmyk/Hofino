@@ -8,7 +8,7 @@ import {
   type TextStyle,
   type ViewStyle,
 } from "react-native";
-import Svg, { Path, Polygon, Rect } from "react-native-svg";
+import Svg, { Defs, LinearGradient, Path, Polygon, Polyline, Rect, Stop } from "react-native-svg";
 import { font, fonts, radius, shadow, space, type Palette } from "../theme.js";
 import { useColors, useThemedStyles, useTheme } from "../theme/ThemeProvider.js";
 import { IconMedal } from "./icons.js";
@@ -423,19 +423,38 @@ export function ThemeToggle() {
   );
 }
 
-// ── Logo (H + Gold-Wachstumspfeil) ───────────────────────────────────────────
+// ── Logo (H mit grüner Kurslinie als Querstrich + Pfeil) ─────────────────────
+// Markenkonstante (Light & Dark identisch): weißes H auf dunkelblauem Verlauf;
+// der Querstrich ist eine steigende grüne Zickzack-Kurslinie mit Pfeil.
 export function HLogo({ size = 40 }: { size?: number }) {
-  const c = useColors();
-  const r = size * 0.22;
-  const navy = "#0E2A47"; // Logo-Kachel bleibt navy (Markenkonstante, auch im Dark)
   return (
     <Svg width={size} height={size} viewBox="0 0 100 100">
-      <Rect x={0} y={0} width={100} height={100} rx={r * (100 / size)} fill={navy} />
-      {/* H */}
-      <Path d="M32 28 V72 M68 28 V72 M32 50 H68" stroke="#34B97E" strokeWidth={9} strokeLinecap="round" fill="none" />
-      {/* Gold-Wachstumspfeil über dem H, ca. -30° */}
-      <Path d="M30 64 L72 40" stroke={c.gold} strokeWidth={6} strokeLinecap="round" fill="none" />
-      <Polygon points="72,40 60,40 68,52" fill={c.gold} />
+      <Defs>
+        <LinearGradient id="hofinoBg" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
+          <Stop offset="0" stopColor="#0F172A" />
+          <Stop offset="1" stopColor="#1E293B" />
+        </LinearGradient>
+        <LinearGradient id="hofinoLine" x1="12" y1="70" x2="88" y2="24" gradientUnits="userSpaceOnUse">
+          <Stop offset="0" stopColor="#22C55E" />
+          <Stop offset="1" stopColor="#7ED957" />
+        </LinearGradient>
+      </Defs>
+      {/* Hintergrund-Kachel: dunkelblauer Diagonal-Verlauf */}
+      <Rect x={0} y={0} width={100} height={100} rx={22} fill="url(#hofinoBg)" />
+      {/* H – zwei massive weiße Balken mit abgerundeten Ecken */}
+      <Rect x={27} y={22} width={12} height={58} rx={5} fill="#FFFFFF" />
+      <Rect x={61} y={22} width={12} height={58} rx={5} fill="#FFFFFF" />
+      {/* Querstrich = steigende grüne Kurslinie (Zickzack) von links unten nach rechts oben */}
+      <Polyline
+        points="14,69 27,59 37,64 49,49 60,54 79,31"
+        fill="none"
+        stroke="url(#hofinoLine)"
+        strokeWidth={7}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      {/* Pfeilspitze am Ende */}
+      <Polygon points="88,22 75,26 83,37" fill="#7ED957" />
     </Svg>
   );
 }
