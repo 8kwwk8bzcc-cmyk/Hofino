@@ -187,7 +187,7 @@ Verlustschutzschild. (Der Erwachsenen-Modus ist jetzt im MVP enthalten.)
 - Form: Radien sm 10 · button 14 · input 16 · card 22 · pill 999. Schatten sm/md/lg (md = Karte).
 - Icons: konsistentes Outline-Set (`ui/icons.tsx`); **aktiv = gefüllt (FILL) + grün**, inaktiv Outline `faint`.
   **Keine Emojis** in der Tab-Bar.
-- Logo: stilisiertes **weißes „H" auf dunkelblauem Verlauf (#0F172A→#1E293B); der Querstrich ist eine steigende grüne Kurslinie (#22C55E→#7ED957) mit Pfeil** nach rechts oben (`HLogo`). Keine €/$-Zeichen, keine Münze. App-Icons unter `apps/app/assets/` (icon.png 1024, favicon.png 256), verdrahtet in `app.json`.
+- Logo: **freigegebenes PNG-Asset** (NICHT neu zeichnen / kein SVG/Canvas) — weißes „H" mit grünem steigendem Kursverlauf/Pfeil auf dunklem Navy. Assets unter `apps/app/assets/`: `logo.png` (rounded+transparent, In-App via `HLogo`-`Image`), `icon.png` (square, ohne Alpha → `expo.icon`/Splash/Android-Adaptive), `favicon.png` (rounded+transparent → `web.favicon`); verdrahtet in `app.json`. Quelle: `~/Downloads/hofino_logo_assets_corrected`. Keine €/$-Zeichen, keine Münze.
 - Dark Mode: ein Token-Set (gleiche Namen), System-Preference + manueller `ThemeToggle` (persistiert).
 - Anmutung: modern, vertrauensvoll, freundlich, lernorientiert. Nicht wie eine Bank, nicht wie eine
   Trading-App, nicht wie ein reines Kinderspiel. **Haus-System aktuell ausgeblendet** (Mission-Board-Pivot).

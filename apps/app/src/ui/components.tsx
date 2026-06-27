@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  Image,
   Pressable,
   StyleSheet,
   Text,
@@ -8,7 +9,8 @@ import {
   type TextStyle,
   type ViewStyle,
 } from "react-native";
-import Svg, { Defs, LinearGradient, Path, Polygon, Polyline, Rect, Stop } from "react-native-svg";
+import Svg, { Path } from "react-native-svg";
+import logoSource from "../../assets/logo.png";
 import { font, fonts, radius, shadow, space, type Palette } from "../theme.js";
 import { useColors, useThemedStyles, useTheme } from "../theme/ThemeProvider.js";
 import { IconMedal } from "./icons.js";
@@ -423,39 +425,13 @@ export function ThemeToggle() {
   );
 }
 
-// ── Logo (H mit grüner Kurslinie als Querstrich + Pfeil) ─────────────────────
-// Markenkonstante (Light & Dark identisch): weißes H auf dunkelblauem Verlauf;
-// der Querstrich ist eine steigende grüne Zickzack-Kurslinie mit Pfeil.
+// ── Logo ─────────────────────────────────────────────────────────────────────
+// Offizielles Hofino-App-Icon (freigegebenes PNG-Asset, NICHT neu gezeichnet):
+// weißes „H" mit grünem steigendem Kursverlauf/Pfeil auf dunklem Navy.
+// Abgerundete Ecken + Transparenz stecken im PNG → passt auf jeden Hintergrund.
 export function HLogo({ size = 40 }: { size?: number }) {
   return (
-    <Svg width={size} height={size} viewBox="0 0 100 100">
-      <Defs>
-        <LinearGradient id="hofinoBg" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
-          <Stop offset="0" stopColor="#0F172A" />
-          <Stop offset="1" stopColor="#1E293B" />
-        </LinearGradient>
-        <LinearGradient id="hofinoLine" x1="12" y1="70" x2="88" y2="24" gradientUnits="userSpaceOnUse">
-          <Stop offset="0" stopColor="#22C55E" />
-          <Stop offset="1" stopColor="#7ED957" />
-        </LinearGradient>
-      </Defs>
-      {/* Hintergrund-Kachel: dunkelblauer Diagonal-Verlauf */}
-      <Rect x={0} y={0} width={100} height={100} rx={22} fill="url(#hofinoBg)" />
-      {/* H – zwei massive weiße Balken mit abgerundeten Ecken */}
-      <Rect x={27} y={22} width={12} height={58} rx={5} fill="#FFFFFF" />
-      <Rect x={61} y={22} width={12} height={58} rx={5} fill="#FFFFFF" />
-      {/* Querstrich = steigende grüne Kurslinie (Zickzack) von links unten nach rechts oben */}
-      <Polyline
-        points="14,69 27,59 37,64 49,49 60,54 79,31"
-        fill="none"
-        stroke="url(#hofinoLine)"
-        strokeWidth={7}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      {/* Pfeilspitze am Ende */}
-      <Polygon points="88,22 75,26 83,37" fill="#7ED957" />
-    </Svg>
+    <Image source={logoSource} style={{ width: size, height: size }} resizeMode="contain" />
   );
 }
 
