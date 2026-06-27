@@ -114,6 +114,11 @@ async function main() {
     { class_id: cls.id, child_profile_id: c.mia.profileId },
     { class_id: cls.id, child_profile_id: c.tom.profileId },
   ]);
+  // Beispiel-Klassen-Challenges (messbares Ziel; Fortschritt client-seitig).
+  await admin.from("challenges").insert([
+    { scope: "class", class_id: cls.id, created_by: c.lehrer.profileId, goal_metric: "konzepte", goal_target: 3, title: "3 Konzepte meistern" },
+    { scope: "class", class_id: cls.id, created_by: c.lehrer.profileId, goal_metric: "xp", goal_target: 10, title: "10 Wissenspunkte sammeln" },
+  ]);
 
   // Aktivität zurücksetzen + neu erzeugen (reproduzierbar).
   await resetPlayer(c.mia.profileId);

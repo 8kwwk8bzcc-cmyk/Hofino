@@ -19,7 +19,7 @@ import {
 } from "@hofino/learning";
 import { formatEuros } from "@hofino/core";
 import { supabase } from "../lib/supabase.js";
-import { useStore } from "../store/store.js";
+import { useStore, type ClassChallenge } from "../store/store.js";
 import { AwardBadge, Body, Button, Card, H1, H2, Muted, Pill, ProgressBar } from "../ui/components.js";
 import { font, fonts, radius, space, type Palette } from "../theme.js";
 import { useColors, useThemedStyles } from "../theme/ThemeProvider.js";
@@ -69,7 +69,7 @@ function baueInstanzBeliebig(konzept: Konzept, rng: () => number): FrageInstanz 
 }
 
 export function LearnPlus() {
-  const { t, fetchMyAssignments } = useStore();
+  const { t, fetchMyAssignments, fetchMyChallenges } = useStore();
   const c = useColors();
   const styles = useThemedStyles(makeStyles);
   const konzepte = alleKonzepte();
@@ -89,6 +89,7 @@ export function LearnPlus() {
   const [letzteXp, setLetzteXp] = useState(0);
   const [lernkapital, setLernkapital] = useState(0);
   const [zugewiesen, setZugewiesen] = useState<Set<string>>(new Set());
+  const [challenges, setChallenges] = useState<ClassChallenge[]>([]);
 
   const heute = heuteISO();
   const faellig = konzepte.filter((k) => {
@@ -118,7 +119,8 @@ export function LearnPlus() {
     const fort = await supabase.from("lern_konzept_fortschritt").select("konzept_id, hoechste_abgeschlossene_stufe");
     setAbgeschlossen((fort.data ?? []).filter((r) => r.hoechste_abgeschlossene_stufe === "meistern").length);
     setZugewiesen(new Set(await fetchMyAssignments()));
-  }, [fetchMyAssignments]);
+    setChallenges(await fetchMyChallenges());
+  }, [fetchMyAssignments, fetchMyChallenges]);
 
   useEffect(() => {
     ladeStatus();
@@ -290,6 +292,28 @@ export function LearnPlus() {
             );
           })}
         </Card>
+        {challenges.length > 0 && (
+          <Card>
+            <H2>{t("learn.classChallenges")}</H2>
+            {challenges.map((ch) => {
+              const wert = ch.metric === "xp" ? xpGesamt : abgeschlossen;
+              const reached = wert >= ch.target;
+              const label = t(ch.metric === "xp" ? "class.challengeGoalXp" : "class.challengeGoalKonzepte", { n: ch.target });
+              return (
+                <View key={ch.id} style={{ gap: 6, marginTop: space.xs }}>
+                  <View style={styles.row}>
+                    <Body>{label}</Body>
+                    {reached && <Pill label={t("learn.challengeDone")} tone="good" />}
+                  </View>
+                  <ProgressBar value={ch.target ? wert / ch.target : 0} variant="gold" />
+                  <Muted>
+                    {Math.min(wert, ch.target)}/{ch.target}
+                  </Muted>
+                </View>
+              );
+            })}
+          </Card>
+        )}
         <Card>
           <Muted>{t("learn.todayLearned")}</Muted>
           <Body>{t("learn.todayCounts", { neu: tages.neu, wieder: tages.wieder })}</Body>

@@ -59,6 +59,14 @@ export interface MyClass {
   code: string;
 }
 
+export type ChallengeMetric = "konzepte" | "xp";
+export interface ClassChallenge {
+  id: string;
+  title: string;
+  metric: ChallengeMetric;
+  target: number;
+}
+
 export type WeekDayStatus = "future" | "today_open" | "completed" | "missed";
 
 export interface DailyPlan {
@@ -187,6 +195,10 @@ interface StoreApi {
   assignKonzept: (classId: string, konzeptId: string) => Promise<void>;
   unassignKonzept: (classId: string, konzeptId: string) => Promise<void>;
   fetchMyAssignments: () => Promise<string[]>;
+  fetchClassChallenges: (classId: string) => Promise<ClassChallenge[]>;
+  createChallenge: (classId: string, metric: ChallengeMetric, target: number, title: string) => Promise<void>;
+  deleteChallenge: (id: string) => Promise<void>;
+  fetchMyChallenges: () => Promise<ClassChallenge[]>;
   fetchDailyPlan: () => Promise<DailyPlan | null>;
   markMarketViewed: () => Promise<void>;
   submitDecision: (
@@ -563,6 +575,49 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
     return (data ?? []).map((r) => r.konzept_id as string);
   }, []);
 
+  // Klassen-Challenges: messbares Ziel (Konzepte/XP). RLS regelt Lehrer-Schreiben/Mitglied-Lesen.
+  const mapChallenge = (r: { id: string; title: string; goal_metric: string | null; goal_target: number | null }): ClassChallenge => ({
+    id: r.id,
+    title: r.title,
+    metric: (r.goal_metric as ChallengeMetric) ?? "konzepte",
+    target: r.goal_target ?? 0,
+  });
+
+  const fetchClassChallenges = useCallback<StoreApi["fetchClassChallenges"]>(async (classId) => {
+    const { data } = await supabase
+      .from("challenges")
+      .select("id, title, goal_metric, goal_target")
+      .eq("class_id", classId)
+      .eq("scope", "class")
+      .order("created_at", { ascending: true });
+    return (data ?? []).map(mapChallenge);
+  }, []);
+
+  const createChallenge = useCallback<StoreApi["createChallenge"]>(async (classId, metric, target, title) => {
+    await supabase.from("challenges").insert({
+      scope: "class",
+      class_id: classId,
+      title,
+      goal_metric: metric,
+      goal_target: target,
+      created_by: dataRef.current.profileId,
+    });
+  }, []);
+
+  const deleteChallenge = useCallback<StoreApi["deleteChallenge"]>(async (id) => {
+    await supabase.from("challenges").delete().eq("id", id);
+  }, []);
+
+  // Schüler: Challenges der eigenen Klasse (RLS liefert nur die eigene Klasse).
+  const fetchMyChallenges = useCallback<StoreApi["fetchMyChallenges"]>(async () => {
+    const { data } = await supabase
+      .from("challenges")
+      .select("id, title, goal_metric, goal_target")
+      .eq("scope", "class")
+      .order("created_at", { ascending: true });
+    return (data ?? []).map(mapChallenge);
+  }, []);
+
   // Daily Finance Workout: Tagesplan holen/erzeugen, Schritte markieren.
   const fetchDailyPlan = useCallback<StoreApi["fetchDailyPlan"]>(async () => {
     const { data, error } = await supabase.rpc("tagesplan_heute");
@@ -699,6 +754,10 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
     assignKonzept,
     unassignKonzept,
     fetchMyAssignments,
+    fetchClassChallenges,
+    createChallenge,
+    deleteChallenge,
+    fetchMyChallenges,
     fetchDailyPlan,
     markMarketViewed,
     submitDecision,

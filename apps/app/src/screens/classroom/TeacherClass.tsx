@@ -2,18 +2,38 @@ import React, { useCallback, useEffect, useState } from "react";
 import { Pressable, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 import { formatEuros, rank } from "@hofino/core";
 import { alleKonzepte } from "@hofino/learning";
-import { useStore, type ClassOverviewRow, type TeacherClass as TClass } from "../../store/store.js";
-import { Body, Button, Card, H1, H2, Muted, Pill } from "../../ui/components.js";
+import {
+  useStore,
+  type ChallengeMetric,
+  type ClassChallenge,
+  type ClassOverviewRow,
+  type TeacherClass as TClass,
+} from "../../store/store.js";
+import { Body, Button, Card, H1, H2, Muted, Pill, ProgressBar } from "../../ui/components.js";
 import { font, fonts, radius, space, type Palette } from "../../theme.js";
 import { useColors, useThemedStyles } from "../../theme/ThemeProvider.js";
 
 export function TeacherClass() {
-  const { fetchTeacherClass, fetchClassOverview, createClass, fetchAssignments, assignKonzept, unassignKonzept, t } = useStore();
+  const {
+    fetchTeacherClass,
+    fetchClassOverview,
+    createClass,
+    fetchAssignments,
+    assignKonzept,
+    unassignKonzept,
+    fetchClassChallenges,
+    createChallenge,
+    deleteChallenge,
+    t,
+  } = useStore();
   const c = useColors();
   const styles = useThemedStyles(makeStyles);
   const [cls, setCls] = useState<TClass | null>(null);
   const [rows, setRows] = useState<ClassOverviewRow[]>([]);
   const [assigned, setAssigned] = useState<Set<string>>(new Set());
+  const [challenges, setChallenges] = useState<ClassChallenge[]>([]);
+  const [metric, setMetric] = useState<ChallengeMetric>("konzepte");
+  const [target, setTarget] = useState("");
   const [loaded, setLoaded] = useState(false);
   const [name, setName] = useState("");
   const [msg, setMsg] = useState<string | null>(null);
@@ -24,8 +44,33 @@ export function TeacherClass() {
     setCls(c);
     setRows(c ? await fetchClassOverview(c.id) : []);
     setAssigned(c ? new Set(await fetchAssignments(c.id)) : new Set());
+    setChallenges(c ? await fetchClassChallenges(c.id) : []);
     setLoaded(true);
-  }, [fetchTeacherClass, fetchClassOverview, fetchAssignments]);
+  }, [fetchTeacherClass, fetchClassOverview, fetchAssignments, fetchClassChallenges]);
+
+  // Lesbares Ziel-Label aus Metrik + Zielzahl (auch als gespeicherter Titel verwendet).
+  const goalLabel = useCallback(
+    (m: ChallengeMetric, n: number) =>
+      t(m === "xp" ? "class.challengeGoalXp" : "class.challengeGoalKonzepte", { n }),
+    [t],
+  );
+  // Wert eines Schülers für die Metrik (aus den groben Klassen-Aggregaten).
+  const valueFor = (m: ChallengeMetric, r: ClassOverviewRow) =>
+    m === "xp" ? r.knowledgePoints : r.modulesCompleted;
+
+  const createChallengeFromForm = async () => {
+    if (!cls) return;
+    const n = parseInt(target, 10);
+    if (!Number.isFinite(n) || n <= 0) return;
+    await createChallenge(cls.id, metric, n, goalLabel(metric, n));
+    setTarget("");
+    await reload();
+  };
+
+  const removeChallenge = async (id: string) => {
+    await deleteChallenge(id);
+    await reload();
+  };
 
   const toggleAssign = async (konzeptId: string) => {
     if (!cls) return;
@@ -128,9 +173,62 @@ export function TeacherClass() {
             })}
           </Card>
 
+          <Card>
+            <H2>{t("class.challengesTitle")}</H2>
+            <Muted>{t("class.challengesHint")}</Muted>
+            <View style={styles.metricRow}>
+              {(["konzepte", "xp"] as ChallengeMetric[]).map((m) => (
+                <Pressable
+                  key={m}
+                  testID={`challenge-metric-${m}`}
+                  onPress={() => setMetric(m)}
+                  style={[styles.metricBtn, metric === m && styles.metricBtnOn]}
+                >
+                  <Text style={[styles.metricText, metric === m && styles.metricTextOn]}>
+                    {t(m === "xp" ? "class.challengeMetricXp" : "class.challengeMetricKonzepte")}
+                  </Text>
+                </Pressable>
+              ))}
+            </View>
+            <TextInput
+              testID="challenge-target"
+              value={target}
+              onChangeText={setTarget}
+              keyboardType="number-pad"
+              placeholder={t("class.challengeTargetPlaceholder")}
+              placeholderTextColor={c.muted}
+              style={styles.input}
+            />
+            <Button
+              title={t("class.challengeCreate")}
+              onPress={createChallengeFromForm}
+              disabled={!(parseInt(target, 10) > 0)}
+              testID="create-challenge"
+            />
+            {challenges.length === 0 ? (
+              <Muted>{t("class.challengeNone")}</Muted>
+            ) : (
+              challenges.map((ch) => {
+                const done = rows.filter((r) => valueFor(ch.metric, r) >= ch.target).length;
+                return (
+                  <View key={ch.id} style={styles.challengeRow}>
+                    <View style={styles.challengeHead}>
+                      <Text style={styles.challengeTitle}>{goalLabel(ch.metric, ch.target)}</Text>
+                      <Pressable testID={`delete-challenge-${ch.id}`} onPress={() => removeChallenge(ch.id)} hitSlop={8}>
+                        <Text style={styles.challengeDelete}>✕</Text>
+                      </Pressable>
+                    </View>
+                    <ProgressBar value={rows.length ? done / rows.length : 0} variant="gold" />
+                    <Muted>{t("class.challengeReached", { done, total: rows.length })}</Muted>
+                  </View>
+                );
+              })
+            )}
+          </Card>
+
           {rows.length > 0 && (
             <Card>
-              <H2>{t("class.challenge")}</H2>
+              <H2>{t("class.leaderboard")}</H2>
               <Muted>{t("family.challengeQ")}</Muted>
               {ranked.map((e) => (
                 <View key={e.id} style={styles.rankRow}>
@@ -181,6 +279,24 @@ const makeStyles = (c: Palette) =>
     studentRow: { paddingVertical: space.sm, borderBottomWidth: 1, borderBottomColor: c.border, gap: 2 },
     studentName: { fontSize: font.body, fontWeight: "700", fontFamily: fonts.bodyBold, color: c.text },
     metrics: { flexDirection: "row", justifyContent: "space-between" },
+    metricRow: { flexDirection: "row", gap: space.sm, marginTop: space.xs },
+    metricBtn: {
+      flex: 1,
+      paddingVertical: space.sm,
+      paddingHorizontal: space.md,
+      borderWidth: 1,
+      borderColor: c.border,
+      borderRadius: radius.md,
+      backgroundColor: c.surface,
+      alignItems: "center",
+    },
+    metricBtnOn: { borderColor: c.green, backgroundColor: c.mint },
+    metricText: { fontSize: font.small, fontFamily: fonts.bodyMed, color: c.muted, textAlign: "center" },
+    metricTextOn: { color: c.success, fontFamily: fonts.bodySemi },
+    challengeRow: { paddingVertical: space.sm, gap: 6, borderTopWidth: 1, borderTopColor: c.border, marginTop: space.xs },
+    challengeHead: { flexDirection: "row", justifyContent: "space-between", alignItems: "center" },
+    challengeTitle: { fontSize: font.body, fontFamily: fonts.bodySemi, color: c.text, flexShrink: 1, paddingRight: space.sm },
+    challengeDelete: { fontSize: font.h3, color: c.muted, fontFamily: fonts.bodyBold },
     rankRow: { flexDirection: "row", justifyContent: "space-between", paddingVertical: space.xs },
     rankText: { fontSize: font.body, fontFamily: fonts.body, color: c.text },
     rankScore: { fontSize: font.body, fontWeight: "700", fontFamily: fonts.display, color: c.text },
