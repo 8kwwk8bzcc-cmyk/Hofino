@@ -2,7 +2,7 @@
 // Stil lt. Spec: gerundete Outline-Icons, stroke 2.25, round caps/joins. Abhängigkeitsfrei
 // über react-native-svg (bereits im Projekt). Farbe via Prop (aktiv = growth_green).
 import React from "react";
-import Svg, { Circle, Line, Path, Polyline, Rect } from "react-native-svg";
+import Svg, { Circle, Line, Path, Polygon, Polyline, Rect } from "react-native-svg";
 import { colors } from "../theme.js";
 
 export interface IconProps {
@@ -135,6 +135,18 @@ export function IconLink(p: IconProps) {
       <Path d="M9.5 14.5 14.5 9.5" />
       <Path d="M8 11 6 13a3.5 3.5 0 0 0 5 5l2-2" />
       <Path d="M16 13l2-2a3.5 3.5 0 0 0-5-5l-2 2" />
+    </Base>
+  );
+}
+
+// Auszeichnung – Medaille (Band + Scheibe + Stern). Für die Badge-Anzeige.
+export function IconMedal(p: IconProps) {
+  return (
+    <Base {...p}>
+      <Path d="M9 3.5l1.8 5" />
+      <Path d="M15 3.5l-1.8 5" />
+      <Circle cx="12" cy="14.6" r="6.4" />
+      <Polygon points="12,11.4 12.76,13.55 15.04,13.61 13.24,15 13.88,17.19 12,15.9 10.12,17.19 10.76,15 8.96,13.61 11.24,13.55" />
     </Base>
   );
 }

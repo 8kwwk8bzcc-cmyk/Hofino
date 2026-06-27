@@ -20,7 +20,7 @@ import {
 import { formatEuros } from "@hofino/core";
 import { supabase } from "../lib/supabase.js";
 import { useStore } from "../store/store.js";
-import { Body, Button, Card, H1, H2, Muted, Pill, ProgressBar } from "../ui/components.js";
+import { AwardBadge, Body, Button, Card, H1, H2, Muted, Pill, ProgressBar } from "../ui/components.js";
 import { font, fonts, radius, space, type Palette } from "../theme.js";
 import { useColors, useThemedStyles } from "../theme/ThemeProvider.js";
 
@@ -246,7 +246,16 @@ export function LearnPlus() {
       konzepteAbgeschlossen: abgeschlossen,
       wissenslevel: lvl.level,
     });
-    const rangEmoji: Record<string, string> = { bronze: "🥉", silber: "🥈", gold: "🥇" };
+    const rangLabelKey: Record<string, string> = {
+      bronze: "learn.rankBronze",
+      silber: "learn.rankSilber",
+      gold: "learn.rankGold",
+    };
+    const naechsterRangKey: Record<string, string> = {
+      none: "learn.rankBronze",
+      bronze: "learn.rankSilber",
+      silber: "learn.rankGold",
+    };
     return (
       <ScrollView contentContainerStyle={styles.container}>
         <H1>{t("learn.title")}</H1>
@@ -262,16 +271,24 @@ export function LearnPlus() {
         </Card>
         <Card>
           <H2>{t("learn.awards")}</H2>
-          {auszeichnungen.map((a) => (
-            <View key={a.id} style={styles.row}>
-              <Body>
-                {a.rang ? rangEmoji[a.rang] : "▫️"} {a.titel}
-              </Body>
-              <Muted>
-                {a.naechsteSchwelle === null ? t("learn.goldReached") : `${a.wert}/${a.naechsteSchwelle}`}
-              </Muted>
-            </View>
-          ))}
+          <Muted>{t("learn.awardsSubtitle")}</Muted>
+          {auszeichnungen.map((a) => {
+            const naechsterRang = t(naechsterRangKey[a.rang ?? "none"]);
+            return (
+              <AwardBadge
+                key={a.id}
+                title={a.titel}
+                rank={a.rang}
+                rankLabel={a.rang ? t(rangLabelKey[a.rang]) : t("learn.rankNone")}
+                progress={a.naechsteSchwelle === null ? 1 : a.wert / a.naechsteSchwelle}
+                progressLabel={
+                  a.naechsteSchwelle === null
+                    ? t("learn.goldReached")
+                    : t("learn.toNextRank", { wert: a.wert, schwelle: a.naechsteSchwelle, rang: naechsterRang })
+                }
+              />
+            );
+          })}
         </Card>
         <Card>
           <Muted>{t("learn.todayLearned")}</Muted>

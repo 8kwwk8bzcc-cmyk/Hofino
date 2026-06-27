@@ -11,6 +11,7 @@ import {
 import Svg, { Path, Polygon, Rect } from "react-native-svg";
 import { font, fonts, radius, shadow, space, type Palette } from "../theme.js";
 import { useColors, useThemedStyles, useTheme } from "../theme/ThemeProvider.js";
+import { IconMedal } from "./icons.js";
 
 // ── Karte ────────────────────────────────────────────────────────────────
 export function Card({
@@ -209,6 +210,53 @@ export function StepProgress({ total, filled }: { total: number; filled: number 
           }}
         />
       ))}
+    </View>
+  );
+}
+
+// ── Auszeichnung / Badge ─────────────────────────────────────────────────
+// Gestufte Medaille (Bronze/Silber/Gold) mit Fortschritt zur nächsten Stufe.
+// rank = null → noch nicht erreicht (matte Scheibe, Fortschritt zur Bronze-Schwelle).
+// Texte werden vom Aufrufer (i18n) übergeben; Komponente bleibt sprachneutral.
+export function AwardBadge({
+  title,
+  rank,
+  rankLabel,
+  progress,
+  progressLabel,
+}: {
+  title: string;
+  rank: "bronze" | "silber" | "gold" | null;
+  rankLabel: string;
+  progress: number; // 0..1
+  progressLabel: string;
+}) {
+  const c = useColors();
+  const s = useThemedStyles(makeStyles);
+  const tier =
+    rank === "gold"
+      ? { ring: c.gold, tint: c.goldSoft }
+      : rank === "silber"
+        ? { ring: "#8FA1B0", tint: "rgba(143,161,176,0.16)" }
+        : rank === "bronze"
+          ? { ring: "#B87333", tint: "rgba(184,115,51,0.15)" }
+          : { ring: c.faint, tint: c.bg };
+  const pct = Math.max(0, Math.min(1, progress));
+  return (
+    <View style={s.awardRow}>
+      <View style={[s.medalDisc, { backgroundColor: tier.tint, borderColor: tier.ring }]}>
+        <IconMedal size={28} color={tier.ring} filled={!!rank} />
+      </View>
+      <View style={{ flex: 1, gap: 7 }}>
+        <View style={s.awardHead}>
+          <Text style={[s.awardTitle, !rank && { color: c.muted }]}>{title}</Text>
+          <Text style={[s.awardRank, { color: tier.ring }]}>{rankLabel}</Text>
+        </View>
+        <View style={s.progressTrack}>
+          <View style={[s.progressFill, { width: `${pct * 100}%`, backgroundColor: tier.ring }]} />
+        </View>
+        <Text style={s.caption}>{progressLabel}</Text>
+      </View>
     </View>
   );
 }
@@ -497,6 +545,18 @@ const makeStyles = (c: Palette) =>
     pillText: { fontSize: 13, fontFamily: fonts.bodySemi },
     progressTrack: { height: 10, backgroundColor: c.border, borderRadius: radius.pill, overflow: "hidden" },
     progressFill: { height: "100%", borderRadius: radius.pill },
+    awardRow: { flexDirection: "row", alignItems: "center", gap: 14, paddingVertical: 4 },
+    medalDisc: {
+      width: 52,
+      height: 52,
+      borderRadius: 26,
+      borderWidth: 1.5,
+      alignItems: "center",
+      justifyContent: "center",
+    },
+    awardHead: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", gap: 8 },
+    awardTitle: { fontSize: font.body, fontFamily: fonts.bodySemi, color: c.text, flex: 1 },
+    awardRank: { fontSize: font.caption, fontFamily: fonts.bodySemi },
     input: {
       backgroundColor: c.surface,
       borderWidth: 1.5,
