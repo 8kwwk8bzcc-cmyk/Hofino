@@ -128,7 +128,7 @@ Stufen: `Grundstück` (Start) → `Fundament` (erstes Investment) → `Wände` (
 
 | Modus | Zielgruppe | Rolle im MVP |
 |---|---|---|
-| Hofino Kids | Kinder 10–15 (`child`) | Hauptmodus: Haus-System, verspielte Anmutung |
+| Hofino Kids | Kinder 10–15 (`child`) | Hauptmodus: tägliches Finanz-Training (Mission Board), kindgerechte Anmutung; Haus-System ausgeblendet (`house_enabled=false`, s. §6) |
 | Hofino Family | Eltern (`parent`) | Begleit-/Kontrollmodus, verknüpft mit Kind |
 | Hofino Adult | Erwachsene (`adult`) | Eigenes Depot, sachlicheres Design, **kein** Haus-System |
 | Hofino Classroom | Lehrer (`teacher`) + Schüler (`student`) | Eigener Modus, Klassen-Code |
