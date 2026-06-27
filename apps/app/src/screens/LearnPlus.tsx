@@ -70,7 +70,7 @@ function baueInstanzBeliebig(konzept: Konzept, rng: () => number): FrageInstanz 
 }
 
 export function LearnPlus() {
-  const { t, state, instrumentById, fetchMyAssignments, fetchMyChallenges } = useStore();
+  const { t, state, instrumentById, fetchMyAssignments, fetchMyChallenges, fetchClassXp } = useStore();
   const c = useColors();
   const styles = useThemedStyles(makeStyles);
   const konzepte = alleKonzepte();
@@ -91,11 +91,17 @@ export function LearnPlus() {
   const [lernkapital, setLernkapital] = useState(0);
   const [zugewiesen, setZugewiesen] = useState<Set<string>>(new Set());
   const [challenges, setChallenges] = useState<ClassChallenge[]>([]);
+  const [gemeisterteIds, setGemeisterteIds] = useState<Set<string>>(new Set());
+  const [classXpSum, setClassXpSum] = useState(0);
 
   // Eigene Challenge-Kennzahlen (für die persönliche Fortschrittsanzeige).
   const myStats: ChallengeStudentStats = useMemo(() => {
     const held = state.portfolio.holdings.filter((h) => h.quantity > 0);
     const insts = held.map((h) => instrumentById.get(h.instrumentId)).filter((i): i is NonNullable<typeof i> => !!i);
+    const blocksMastered: Record<string, number> = {};
+    for (const k of konzepte) {
+      if (gemeisterteIds.has(k.id)) blocksMastered[k.themenblock_id] = (blocksMastered[k.themenblock_id] ?? 0) + 1;
+    }
     return {
       konzepte: abgeschlossen,
       xp: xpGesamt,
@@ -103,8 +109,10 @@ export function LearnPlus() {
       regionen: new Set(insts.map((i) => i.country).filter(Boolean)).size,
       etf: insts.filter((i) => i.type === "etf").length,
       orders: state.ordersCount,
+      blocksMastered,
+      classXpSum,
     };
-  }, [state.portfolio.holdings, state.ordersCount, instrumentById, abgeschlossen, xpGesamt]);
+  }, [state.portfolio.holdings, state.ordersCount, instrumentById, abgeschlossen, xpGesamt, gemeisterteIds, classXpSum, konzepte]);
 
   const heute = heuteISO();
   const faellig = konzepte.filter((k) => {
@@ -132,10 +140,13 @@ export function LearnPlus() {
     const korrekt = await supabase.from("lern_antworten").select("id", { count: "exact", head: true }).eq("korrekt", true);
     setKorrektGesamt(korrekt.count ?? 0);
     const fort = await supabase.from("lern_konzept_fortschritt").select("konzept_id, hoechste_abgeschlossene_stufe");
-    setAbgeschlossen((fort.data ?? []).filter((r) => r.hoechste_abgeschlossene_stufe === "meistern").length);
+    const gemeistert = (fort.data ?? []).filter((r) => r.hoechste_abgeschlossene_stufe === "meistern");
+    setAbgeschlossen(gemeistert.length);
+    setGemeisterteIds(new Set(gemeistert.map((r) => r.konzept_id as string)));
+    setClassXpSum(await fetchClassXp());
     setZugewiesen(new Set(await fetchMyAssignments()));
     setChallenges(await fetchMyChallenges());
-  }, [fetchMyAssignments, fetchMyChallenges]);
+  }, [fetchMyAssignments, fetchMyChallenges, fetchClassXp]);
 
   useEffect(() => {
     ladeStatus();
@@ -312,13 +323,14 @@ export function LearnPlus() {
             <H2>{t("learn.classChallenges")}</H2>
             {challenges.map((ch) => {
               const def = CHALLENGE_METRICS[ch.metric];
-              const value = challengeValue(ch.metric, myStats);
+              const value = challengeValue(ch.metric, myStats, ch.ref);
               const reached = challengeReached(ch.metric, value, ch.target);
-              const label = t(def.goalKey, { n: ch.target });
+              const label = ch.metric === "themenblock" ? ch.title : t(def.goalKey, { n: ch.target });
+              const isClass = def.scope === "class";
               return (
                 <View key={ch.id} style={{ gap: 6, marginTop: space.xs }}>
                   <View style={styles.row}>
-                    <Body>{label}</Body>
+                    <Body>{isClass ? `🤝 ${label}` : label}</Body>
                     {reached && <Pill label={t("learn.challengeDone")} tone="good" />}
                   </View>
                   <ProgressBar
@@ -328,7 +340,9 @@ export function LearnPlus() {
                   <Muted>
                     {def.compare === "lte"
                       ? t("learn.challengeAtMost", { value, target: ch.target })
-                      : `${Math.min(value, ch.target)}/${ch.target}`}
+                      : isClass
+                        ? t("learn.challengeClass", { value, target: ch.target })
+                        : `${Math.min(value, ch.target)}/${ch.target}`}
                   </Muted>
                 </View>
               );

@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { Pressable, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 import { formatEuros, rank } from "@hofino/core";
-import { alleKonzepte } from "@hofino/learning";
+import { alleKonzepte, alleThemenbloecke } from "@hofino/learning";
 import {
   useStore,
   type ChallengeMetric,
@@ -41,10 +41,14 @@ export function TeacherClass() {
   const [challenges, setChallenges] = useState<ClassChallenge[]>([]);
   const [metric, setMetric] = useState<ChallengeMetric>("konzepte");
   const [target, setTarget] = useState("");
+  const [blockRef, setBlockRef] = useState<string | null>(null);
   const [loaded, setLoaded] = useState(false);
   const [name, setName] = useState("");
   const [msg, setMsg] = useState<string | null>(null);
   const konzepte = alleKonzepte();
+  const bloecke = alleThemenbloecke();
+  const blockSize = (id: string) => konzepte.filter((k) => k.themenblock_id === id).length;
+  const classXpSum = rows.reduce((s, r) => s + r.knowledgePoints, 0);
 
   const reload = useCallback(async () => {
     const c = await fetchTeacherClass();
@@ -55,8 +59,11 @@ export function TeacherClass() {
     setLoaded(true);
   }, [fetchTeacherClass, fetchClassOverview, fetchAssignments, fetchClassChallenges]);
 
-  // Lesbares Ziel-Label aus Metrik + Zielzahl (auch als gespeicherter Titel verwendet).
-  const goalLabel = useCallback((m: ChallengeMetric, n: number) => t(CHALLENGE_METRICS[m].goalKey, { n }), [t]);
+  // Anzeige-Titel einer Challenge (Themenblock nutzt den gespeicherten Titel mit Blockname).
+  const challengeTitle = useCallback(
+    (ch: ClassChallenge) => (ch.metric === "themenblock" ? ch.title : t(CHALLENGE_METRICS[ch.metric].goalKey, { n: ch.target })),
+    [t],
+  );
   // Grobe Aggregate einer Klassenzeile → Challenge-Stats (Datenschutz: nur Zahlen).
   const statsFromRow = (r: ClassOverviewRow): ChallengeStudentStats => ({
     konzepte: r.modulesCompleted,
@@ -65,17 +72,30 @@ export function TeacherClass() {
     regionen: r.regionsCount,
     etf: r.etfCount,
     orders: r.ordersCount,
+    blocksMastered: r.blocksMastered,
+    classXpSum,
   });
-  // Wie viele Schüler haben das Ziel erreicht?
+  // Wie viele Schüler haben das (individuelle) Ziel erreicht?
   const reachedCount = (ch: ClassChallenge) =>
-    rows.filter((r) => challengeReached(ch.metric, challengeValue(ch.metric, statsFromRow(r)), ch.target)).length;
+    rows.filter((r) => challengeReached(ch.metric, challengeValue(ch.metric, statsFromRow(r), ch.ref), ch.target)).length;
+  // Kooperatives Ziel erreicht? (Klassensumme)
+  const classReached = (ch: ClassChallenge) => challengeReached(ch.metric, classXpSum, ch.target);
 
   const createChallengeFromForm = async () => {
     if (!cls) return;
-    const n = parseInt(target, 10);
-    if (!Number.isFinite(n) || n <= 0) return;
-    await createChallenge(cls.id, metric, n, goalLabel(metric, n));
-    setTarget("");
+    if (metric === "themenblock") {
+      if (!blockRef) return;
+      const block = bloecke.find((b) => b.id === blockRef);
+      const size = blockSize(blockRef);
+      if (!block || size <= 0) return;
+      await createChallenge(cls.id, metric, size, t("class.challengeGoalThemenblock", { block: block.titel.de }), blockRef);
+      setBlockRef(null);
+    } else {
+      const n = parseInt(target, 10);
+      if (!Number.isFinite(n) || n <= 0) return;
+      await createChallenge(cls.id, metric, n, t(CHALLENGE_METRICS[metric].goalKey, { n }));
+      setTarget("");
+    }
     await reload();
   };
 
@@ -202,36 +222,65 @@ export function TeacherClass() {
                 </Pressable>
               ))}
             </View>
-            <TextInput
-              testID="challenge-target"
-              value={target}
-              onChangeText={setTarget}
-              keyboardType="number-pad"
-              placeholder={t("class.challengeTargetPlaceholder")}
-              placeholderTextColor={c.muted}
-              style={styles.input}
-            />
+            {metric === "themenblock" ? (
+              <View style={styles.metricRow}>
+                {bloecke.map((b) => (
+                  <Pressable
+                    key={b.id}
+                    testID={`challenge-block-${b.id}`}
+                    onPress={() => setBlockRef(b.id)}
+                    style={[styles.metricBtn, blockRef === b.id && styles.metricBtnOn]}
+                  >
+                    <Text style={[styles.metricText, blockRef === b.id && styles.metricTextOn]}>{b.titel.de}</Text>
+                  </Pressable>
+                ))}
+              </View>
+            ) : (
+              <TextInput
+                testID="challenge-target"
+                value={target}
+                onChangeText={setTarget}
+                keyboardType="number-pad"
+                placeholder={t("class.challengeTargetPlaceholder")}
+                placeholderTextColor={c.muted}
+                style={styles.input}
+              />
+            )}
             <Button
               title={t("class.challengeCreate")}
               onPress={createChallengeFromForm}
-              disabled={!(parseInt(target, 10) > 0)}
+              disabled={metric === "themenblock" ? !blockRef : !(parseInt(target, 10) > 0)}
               testID="create-challenge"
             />
             {challenges.length === 0 ? (
               <Muted>{t("class.challengeNone")}</Muted>
             ) : (
               challenges.map((ch) => {
-                const done = reachedCount(ch);
+                const isClass = CHALLENGE_METRICS[ch.metric].scope === "class";
+                const done = isClass ? 0 : reachedCount(ch);
                 return (
                   <View key={ch.id} style={styles.challengeRow}>
                     <View style={styles.challengeHead}>
-                      <Text style={styles.challengeTitle}>{goalLabel(ch.metric, ch.target)}</Text>
+                      <Text style={styles.challengeTitle}>{challengeTitle(ch)}</Text>
                       <Pressable testID={`delete-challenge-${ch.id}`} onPress={() => removeChallenge(ch.id)} hitSlop={8}>
                         <Text style={styles.challengeDelete}>✕</Text>
                       </Pressable>
                     </View>
-                    <ProgressBar value={rows.length ? done / rows.length : 0} variant="gold" />
-                    <Muted>{t("class.challengeReached", { done, total: rows.length })}</Muted>
+                    {isClass ? (
+                      <>
+                        <ProgressBar value={ch.target ? Math.min(classXpSum / ch.target, 1) : 0} variant="gold" />
+                        <Muted>
+                          {classReached(ch)
+                            ? t("class.challengeClassDone")
+                            : t("class.challengeClassProgress", { value: classXpSum, target: ch.target })}
+                        </Muted>
+                      </>
+                    ) : (
+                      <>
+                        <ProgressBar value={rows.length ? done / rows.length : 0} variant="gold" />
+                        <Muted>{t("class.challengeReached", { done, total: rows.length })}</Muted>
+                      </>
+                    )}
                   </View>
                 );
               })

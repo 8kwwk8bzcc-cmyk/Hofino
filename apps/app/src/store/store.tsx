@@ -59,6 +59,7 @@ export interface ClassOverviewRow {
   sectorsCount: number;
   regionsCount: number;
   etfCount: number;
+  blocksMastered: Record<string, number>;
 }
 
 export interface MyClass {
@@ -71,6 +72,7 @@ export interface ClassChallenge {
   title: string;
   metric: ChallengeMetric;
   target: number;
+  ref: string | null;
 }
 
 export type WeekDayStatus = "future" | "today_open" | "completed" | "missed";
@@ -221,9 +223,10 @@ interface StoreApi {
   unassignKonzept: (classId: string, konzeptId: string) => Promise<void>;
   fetchMyAssignments: () => Promise<string[]>;
   fetchClassChallenges: (classId: string) => Promise<ClassChallenge[]>;
-  createChallenge: (classId: string, metric: ChallengeMetric, target: number, title: string) => Promise<void>;
+  createChallenge: (classId: string, metric: ChallengeMetric, target: number, title: string, ref?: string | null) => Promise<void>;
   deleteChallenge: (id: string) => Promise<void>;
   fetchMyChallenges: () => Promise<ClassChallenge[]>;
+  fetchClassXp: () => Promise<number>;
   fetchDailyPlan: () => Promise<DailyPlan | null>;
   markMarketViewed: () => Promise<void>;
   submitDecision: (
@@ -594,6 +597,7 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
       sectorsCount: Number(r.sectors_count ?? 0),
       regionsCount: Number(r.regions_count ?? 0),
       etfCount: Number(r.etf_count ?? 0),
+      blocksMastered: (r.blocks_mastered as Record<string, number>) ?? {},
     }));
   }, []);
 
@@ -627,30 +631,39 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   // Klassen-Challenges: messbares Ziel (Konzepte/XP). RLS regelt Lehrer-Schreiben/Mitglied-Lesen.
-  const mapChallenge = (r: { id: string; title: string; goal_metric: string | null; goal_target: number | null }): ClassChallenge => ({
+  // Klassen-Challenges: messbares Ziel (Lernen/Depot/kooperativ). RLS regelt Lehrer-Schreiben/Mitglied-Lesen.
+  const mapChallenge = (r: {
+    id: string;
+    title: string;
+    goal_metric: string | null;
+    goal_target: number | null;
+    goal_ref: string | null;
+  }): ClassChallenge => ({
     id: r.id,
     title: r.title,
     metric: (r.goal_metric as ChallengeMetric) ?? "konzepte",
     target: r.goal_target ?? 0,
+    ref: r.goal_ref ?? null,
   });
 
   const fetchClassChallenges = useCallback<StoreApi["fetchClassChallenges"]>(async (classId) => {
     const { data } = await supabase
       .from("challenges")
-      .select("id, title, goal_metric, goal_target")
+      .select("id, title, goal_metric, goal_target, goal_ref")
       .eq("class_id", classId)
       .eq("scope", "class")
       .order("created_at", { ascending: true });
     return (data ?? []).map(mapChallenge);
   }, []);
 
-  const createChallenge = useCallback<StoreApi["createChallenge"]>(async (classId, metric, target, title) => {
+  const createChallenge = useCallback<StoreApi["createChallenge"]>(async (classId, metric, target, title, ref) => {
     await supabase.from("challenges").insert({
       scope: "class",
       class_id: classId,
       title,
       goal_metric: metric,
       goal_target: target,
+      goal_ref: ref ?? null,
       created_by: dataRef.current.profileId,
     });
   }, []);
@@ -663,10 +676,16 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
   const fetchMyChallenges = useCallback<StoreApi["fetchMyChallenges"]>(async () => {
     const { data } = await supabase
       .from("challenges")
-      .select("id, title, goal_metric, goal_target")
+      .select("id, title, goal_metric, goal_target, goal_ref")
       .eq("scope", "class")
       .order("created_at", { ascending: true });
     return (data ?? []).map(mapChallenge);
+  }, []);
+
+  // Summe der Klassen-XP (Schüler-Sicht auf das kooperative Ziel); 0 falls keine Klasse.
+  const fetchClassXp = useCallback<StoreApi["fetchClassXp"]>(async () => {
+    const { data } = await supabase.rpc("lern_klassen_xp");
+    return data?.ok ? Number(data.sum ?? 0) : 0;
   }, []);
 
   // Daily Finance Workout: Tagesplan holen/erzeugen, Schritte markieren.
@@ -827,6 +846,7 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
     createChallenge,
     deleteChallenge,
     fetchMyChallenges,
+    fetchClassXp,
     fetchDailyPlan,
     markMarketViewed,
     submitDecision,
