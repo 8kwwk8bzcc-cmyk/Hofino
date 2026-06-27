@@ -82,9 +82,40 @@ insert into instruments (type, name, ticker, sector, country, provider_symbol) v
   ('stock', 'AstraZeneca',           'AZN',  'Health Care',            'GB',     'AZN'),
   ('stock', 'L''Oréal',              'OR',   'Consumer Staples',       'FR',     'OR'),
   ('stock', 'Novo Nordisk',          'NOVO-B','Health Care',           'DK',     'NOVO-B'),
+  ('stock', 'Berkshire Hathaway',    'BRK.B','Financials',             'US',     'BRK.B'),
+  ('stock', 'Bank of America',       'BAC',  'Financials',             'US',     'BAC'),
+  ('stock', 'Goldman Sachs',         'GS',   'Financials',             'US',     'GS'),
+  ('stock', 'UnitedHealth Group',    'UNH',  'Health Care',            'US',     'UNH'),
+  ('stock', 'AbbVie',                'ABBV', 'Health Care',            'US',     'ABBV'),
+  ('stock', 'Merck & Co.',           'MRK',  'Health Care',            'US',     'MRK'),
+  ('stock', 'Texas Instruments',     'TXN',  'Technology',             'US',     'TXN'),
+  ('stock', 'IBM',                   'IBM',  'Technology',             'US',     'IBM'),
+  ('stock', 'Verizon',               'VZ',   'Communication Services', 'US',     'VZ'),
+  ('stock', 'Comcast',               'CMCSA','Communication Services', 'US',     'CMCSA'),
+  ('stock', 'Ford',                  'F',    'Consumer Discretionary', 'US',     'F'),
+  ('stock', 'General Motors',        'GM',   'Consumer Discretionary', 'US',     'GM'),
+  ('stock', 'Sony',                  'SONY', 'Technology',             'JP',     'SONY'),
+  ('stock', 'Toyota',                'TM',   'Consumer Discretionary', 'JP',     'TM'),
+  ('stock', 'TSMC',                  'TSM',  'Technology',             'TW',     'TSM'),
+  ('stock', 'Munich Re',             'MUV2', 'Financials',             'DE',     'MUV2:XETR'),
+  ('stock', 'Deutsche Börse',        'DB1',  'Financials',             'DE',     'DB1:XETR'),
+  ('stock', 'Siemens Healthineers',  'SHL',  'Health Care',            'DE',     'SHL:XETR'),
+  ('stock', 'Continental',           'CON',  'Consumer Discretionary', 'DE',     'CON:XETR'),
+  ('stock', 'ABB',                   'ABBN', 'Industrials',            'CH',     'ABBN'),
+  ('stock', 'UBS',                   'UBSG', 'Financials',             'CH',     'UBSG'),
+  ('stock', 'BNP Paribas',           'BNP',  'Financials',             'FR',     'BNP'),
+  ('stock', 'Philips',               'PHIA', 'Health Care',            'NL',     'PHIA'),
+  ('stock', 'BP',                    'BP',   'Energy',                 'GB',     'BP'),
   ('etf',   'iShares Core MSCI World',          'IWDA', 'Welt',             'Global', 'IWDA:XETR'),
   ('etf',   'iShares Core S&P 500',             'CSPX', 'USA',              'US',     'CSPX:XETR'),
-  ('etf',   'iShares Core MSCI EM IMI',         'EIMI', 'Schwellenländer',  'Global', 'EIMI:XETR');
+  ('etf',   'iShares Core MSCI EM IMI',         'EIMI', 'Schwellenländer',  'Global', 'EIMI:XETR'),
+  ('etf',   'Vanguard FTSE All-World (Acc)',     'VWCE', 'Welt',             'Global', 'VWCE:XETR'),
+  ('etf',   'Invesco EQQQ Nasdaq-100',           'EQQQ', 'USA/Technik',      'US',     'EQQQ:XETR'),
+  ('etf',   'iShares Core DAX',                  'EXS1', 'Deutschland',      'DE',     'EXS1:XETR'),
+  ('etf',   'iShares STOXX Europe 600',          'EXSA', 'Europa',           'Europe', 'EXSA:XETR'),
+  ('etf',   'iShares Core EURO STOXX 50',        'SXRT', 'Eurozone',         'Europe', 'SXRT:XETR'),
+  ('etf',   'iShares Core Global Aggregate Bond','AGGH', 'Anleihen Welt',    'Global', 'AGGH:XETR'),
+  ('etf',   'Vanguard FTSE All-World High Div.', 'VHYL', 'Welt/Dividende',   'Global', 'VHYL:XETR');
 
 -- Start-Kurse, damit die App sofort Preise hat. Im Betrieb aktualisiert der
 -- Cron `update-prices` diese stündlich über die aktive MarketDataSource.
@@ -113,6 +144,14 @@ select id,
     when 'HEN3' then 7500 when 'RWE' then 3300 when 'EOAN' then 1200 when 'NOVN' then 9500
     when 'ROG' then 25000 when 'TTE' then 6000 when 'ITX' then 4500 when 'SHEL' then 3000
     when 'ULVR' then 4800 when 'AZN' then 12000 when 'OR' then 38000 when 'NOVO-B' then 9000
+    when 'BRK.B' then 38000 when 'BAC' then 3500 when 'GS' then 38000 when 'UNH' then 48000
+    when 'ABBV' then 16000 when 'MRK' then 11000 when 'TXN' then 18000 when 'IBM' then 17000
+    when 'VZ' then 4000 when 'CMCSA' then 4000 when 'F' then 1200 when 'GM' then 4500
+    when 'SONY' then 8000 when 'TM' then 18000 when 'TSM' then 15000 when 'MUV2' then 42000
+    when 'DB1' then 19000 when 'SHL' then 5000 when 'CON' then 6500 when 'ABBN' then 4500
+    when 'UBSG' then 2600 when 'BNP' then 6000 when 'PHIA' then 2500 when 'BP' then 4500
+    when 'VWCE' then 12000 when 'EQQQ' then 40000 when 'EXS1' then 15000 when 'EXSA' then 2700
+    when 'SXRT' then 5500 when 'AGGH' then 500 when 'VHYL' then 6000
     else 10000
   end,
   now(), 'simulated'
