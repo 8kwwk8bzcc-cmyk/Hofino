@@ -20,6 +20,7 @@ import { SpaceGrotesk_600SemiBold, SpaceGrotesk_700Bold } from "@expo-google-fon
 import { StoreProvider, useStore } from "./store/store.js";
 import { Onboarding, ProfileSetup } from "./screens/Onboarding.js";
 import { Start } from "./screens/Start.js";
+import { WelcomeTutorial } from "./screens/WelcomeTutorial.js";
 import { Discover } from "./screens/Discover.js";
 import { Depot } from "./screens/Depot.js";
 import { Rankings } from "./screens/Rankings.js";
@@ -105,7 +106,7 @@ function TabBar<T extends string>({
 }
 
 function Main() {
-  const { state, t } = useStore();
+  const { state, t, completeTutorial } = useStore();
   const [tab, setTab] = useState<TabId>("start");
   const [focusInstrument, setFocusInstrument] = useState<string | undefined>(undefined);
   const isAdult = state.role === "adult";
@@ -136,6 +137,15 @@ function Main() {
         onSelect={setTab}
         labelFor={(id) => (id === "start" && isAdult ? t("tab.overview") : t(`tab.${id}`))}
       />
+      {!state.tutorialDone && (
+        <WelcomeTutorial
+          onFinish={() => {
+            completeTutorial();
+            setTab("learn");
+          }}
+          onSkip={completeTutorial}
+        />
+      )}
     </View>
   );
 }

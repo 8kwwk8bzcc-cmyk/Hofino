@@ -12,7 +12,15 @@ const REASON_KEYS: Record<string, string> = {
   invalid_quantity: "trade.errQuantity",
 };
 
-export function TradePanel({ instrumentId, mode }: { instrumentId: string; mode: "buy" | "sell" }) {
+export function TradePanel({
+  instrumentId,
+  mode,
+  onSuccess,
+}: {
+  instrumentId: string;
+  mode: "buy" | "sell";
+  onSuccess?: () => void;
+}) {
   const { prices, buy, sell, state, t } = useStore();
   const styles = useThemedStyles(makeStyles);
   const [qty, setQty] = useState(1);
@@ -33,6 +41,7 @@ export function TradePanel({ instrumentId, mode }: { instrumentId: string; mode:
     if (r.ok) {
       setMsg(t(mode === "buy" ? "trade.bought" : "trade.sold", { qty }));
       setQty(1);
+      onSuccess?.();
     } else {
       setMsg(t(REASON_KEYS[r.reason] ?? "trade.errGeneric"));
     }

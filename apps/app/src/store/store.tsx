@@ -113,6 +113,7 @@ interface Data {
   role: Role;
   displayName: string;
   plot: string;
+  tutorialDone: boolean;
   cashCents: number;
   holdings: { instrumentId: string; quantity: number; avgCostCents: number }[];
   watchlist: string[];
@@ -134,6 +135,7 @@ const EMPTY: Data = {
   role: "child",
   displayName: "",
   plot: "",
+  tutorialDone: false,
   cashCents: 0,
   holdings: [],
   watchlist: [],
@@ -154,6 +156,10 @@ function plotKey(userId: string) {
   return `hofino:plot:${userId}`;
 }
 
+function tutorialKey(userId: string) {
+  return `hofino:tutorial:${userId}`;
+}
+
 export type OrderOutcome = { ok: true } | { ok: false; reason: OrderError | "error" };
 export type AuthOutcome = { ok: true } | { ok: false; message: string };
 
@@ -166,6 +172,7 @@ interface StoreApi {
     profileId: string | null;
     displayName: string;
     plot: string;
+    tutorialDone: boolean;
     portfolio: Portfolio;
     watchlist: string[];
     pendingLinks: PendingLink[];
@@ -188,6 +195,7 @@ interface StoreApi {
   login: (email: string, password: string) => Promise<AuthOutcome>;
   createProfile: (name: string, plot: string, role: Role) => Promise<AuthOutcome>;
   signOut: () => Promise<void>;
+  completeTutorial: () => void;
   buy: (instrumentId: string, quantity: number) => Promise<OrderOutcome>;
   sell: (instrumentId: string, quantity: number) => Promise<OrderOutcome>;
   toggleWatch: (instrumentId: string) => Promise<void>;
@@ -319,6 +327,7 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
       role,
       displayName: (profileRes.data.display_name as string) ?? "",
       plot: globalThis.localStorage?.getItem(plotKey(user.id)) ?? "",
+      tutorialDone: globalThis.localStorage?.getItem(tutorialKey(user.id)) === "1",
       cashCents: isPlayer ? portfolioRes.data?.cash_cents ?? 0 : 0,
       holdings: isPlayer
         ? (holdingsRes.data ?? []).map((h) => ({
@@ -407,6 +416,18 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
   const signOut = useCallback(async () => {
     await supabase.auth.signOut();
     setData({ ...EMPTY, loading: false });
+  }, []);
+
+  const completeTutorial = useCallback<StoreApi["completeTutorial"]>(() => {
+    const uid = dataRef.current.sessionUserId;
+    if (uid) {
+      try {
+        globalThis.localStorage?.setItem(tutorialKey(uid), "1");
+      } catch {
+        // localStorage nicht verfügbar (z. B. nativ) → nur In-Memory merken.
+      }
+    }
+    setData((d) => ({ ...d, tutorialDone: true }));
   }, []);
 
   const order = useCallback(
@@ -757,6 +778,7 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
       profileId: data.profileId,
       displayName: data.displayName,
       plot: data.plot,
+      tutorialDone: data.tutorialDone,
       portfolio,
       watchlist: data.watchlist,
       pendingLinks: data.pendingLinks,
@@ -769,6 +791,7 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
     login,
     createProfile,
     signOut,
+    completeTutorial,
     buy: (id, qty) => order(id, qty, "buy"),
     sell: (id, qty) => order(id, qty, "sell"),
     toggleWatch,
