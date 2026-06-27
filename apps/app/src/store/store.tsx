@@ -90,6 +90,14 @@ export interface JournalEntry {
   createdAt: string;
 }
 
+export interface DividendEntry {
+  id: string;
+  instrumentId: string;
+  amountCents: number;
+  period: string;
+  paidAt: string;
+}
+
 export interface ChildSummary {
   profileId: string;
   displayName: string;
@@ -208,6 +216,7 @@ interface StoreApi {
     reasonText?: string,
   ) => Promise<{ ok: boolean; reason?: string; xp?: number }>;
   fetchDecisionJournal: () => Promise<JournalEntry[]>;
+  fetchDividends: () => Promise<DividendEntry[]>;
   lang: Lang;
   setLang: (lang: Lang) => void;
   t: (key: string, params?: Record<string, string | number>) => string;
@@ -272,6 +281,12 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
       return;
     }
     const profileId = profileRes.data.id as string;
+
+    // Fällige Dividenden des aktuellen Monats gutschreiben, BEVOR Cash/Depot gelesen wird
+    // (idempotent serverseitig; nur Spieler-Rollen haben ein Depot).
+    if (profileRes.data.role !== "parent" && profileRes.data.role !== "teacher") {
+      await supabase.rpc("dividenden_nachzahlen");
+    }
 
     const [instrumentsRes, pricesRes, portfolioRes, holdingsRes, watchRes, grantsRes, ordersRes, pendingRes, fortschrittRes, statusRes, korrektRes] =
       await Promise.all([
@@ -669,6 +684,21 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
     }));
   }, []);
 
+  const fetchDividends = useCallback<StoreApi["fetchDividends"]>(async () => {
+    const { data } = await supabase
+      .from("dividend_payments")
+      .select("id, instrument_id, amount_cents, period, paid_at")
+      .order("paid_at", { ascending: false })
+      .limit(20);
+    return (data ?? []).map((r) => ({
+      id: r.id as string,
+      instrumentId: r.instrument_id as string,
+      amountCents: Number(r.amount_cents ?? 0),
+      period: r.period as string,
+      paidAt: r.paid_at as string,
+    }));
+  }, []);
+
   const portfolio: Portfolio = useMemo(
     () => ({
       cashCents: data.cashCents,
@@ -762,6 +792,7 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
     markMarketViewed,
     submitDecision,
     fetchDecisionJournal,
+    fetchDividends,
     lang,
     setLang,
     t,

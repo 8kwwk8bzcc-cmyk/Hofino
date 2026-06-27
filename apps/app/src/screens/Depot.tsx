@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { formatEuros } from "@hofino/core";
-import { useStore, type JournalEntry } from "../store/store.js";
+import { useStore, type DividendEntry, type JournalEntry } from "../store/store.js";
 import { Body, Button, Card, H1, H2, InstrumentAvatar, Muted, Pill } from "../ui/components.js";
 import { TradePanel } from "../ui/TradePanel.js";
 import { useNav } from "../nav.js";
@@ -9,17 +9,19 @@ import { font, fonts, space, type Palette } from "../theme.js";
 import { useColors, useThemedStyles } from "../theme/ThemeProvider.js";
 
 export function Depot() {
-  const { state, prices, derived, instrumentById, fetchDecisionJournal, t } = useStore();
+  const { state, prices, derived, instrumentById, fetchDecisionJournal, fetchDividends, t } = useStore();
   const go = useNav();
   const c = useColors();
   const styles = useThemedStyles(makeStyles);
   const [sellId, setSellId] = useState<string | null>(null);
   const [journal, setJournal] = useState<JournalEntry[]>([]);
+  const [dividends, setDividends] = useState<DividendEntry[]>([]);
   const holdings = state.portfolio.holdings;
 
   const loadJournal = useCallback(async () => {
     setJournal(await fetchDecisionJournal());
-  }, [fetchDecisionJournal]);
+    setDividends(await fetchDividends());
+  }, [fetchDecisionJournal, fetchDividends]);
 
   useEffect(() => {
     loadJournal();
@@ -113,6 +115,22 @@ export function Depot() {
         </Card>
       )}
 
+      {dividends.length > 0 && (
+        <Card>
+          <H2>{t("depot.dividendsTitle")}</H2>
+          <Muted>{t("depot.dividendsHint")}</Muted>
+          {dividends.map((d) => (
+            <View key={d.id} style={styles.entry}>
+              <View style={styles.entryHead}>
+                <Text style={styles.entryName}>{instrumentById.get(d.instrumentId)?.name ?? "—"}</Text>
+                <Text style={styles.divAmount}>+{formatEuros(d.amountCents)}</Text>
+              </View>
+              <Muted>{d.period}</Muted>
+            </View>
+          ))}
+        </Card>
+      )}
+
       <Card>
         <H2>{t("depot.journalTitle")}</H2>
         {journal.length === 0 ? (
@@ -152,4 +170,5 @@ const makeStyles = (c: Palette) =>
     entryHead: { flexDirection: "row", justifyContent: "space-between" },
     entryName: { fontSize: font.body, fontWeight: "700", color: c.text, fontFamily: fonts.bodyBold },
     entryAction: { fontSize: font.body, fontWeight: "700", color: c.navy, fontFamily: fonts.display },
+    divAmount: { fontSize: font.body, fontWeight: "700", color: c.success, fontFamily: fonts.display },
   });

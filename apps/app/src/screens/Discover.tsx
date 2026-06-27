@@ -50,6 +50,7 @@ function Detail({ id, onBack }: { id: string; onBack: () => void }) {
           <Field q={t("discover.qOpportunities")} a={company.opportunities} />
           <Field q={t("discover.qRisks")} a={company.risks} />
           <Field q={t("discover.qDividend")} a={company.dividend} />
+          <Field q={t("discover.qDividendWhen")} a={company.dividendSchedule} />
           <Field q={t("discover.qWhy")} a={company.whyPriceMoves} />
         </Card>
       )}

@@ -117,6 +117,20 @@ insert into instruments (type, name, ticker, sector, country, provider_symbol) v
   ('etf',   'iShares Core Global Aggregate Bond','AGGH', 'Anleihen Welt',    'Global', 'AGGH:XETR'),
   ('etf',   'Vanguard FTSE All-World High Div.', 'VHYL', 'Welt/Dividende',   'Global', 'VHYL:XETR');
 
+-- Dividenden-Renditen (vereinfachtes Kategorie-Modell, Basispunkte p.a.) – nur für die
+-- virtuelle Dividenden-Gutschrift (RPC dividenden_nachzahlen), keine angezeigte Rendite.
+-- Basis 2,0 % für Zahler; Aristokraten höher; Wachstums-/Kleinzahler niedriger; 0 = keine.
+update instruments set dividend_yield_bps = 200 where type = 'stock';
+update instruments set dividend_yield_bps = 250 where ticker in ('KO','PEP','PG','JNJ','MCD','WMT','NESN','CAT','XOM','CVX','ROG');
+update instruments set dividend_yield_bps = 90  where ticker in ('AAPL','V','MA','NKE','ADS','PUM','RACE','BEI','COST','DIS');
+update instruments set dividend_yield_bps = 120 where ticker in ('BAYN','INTC');
+update instruments set dividend_yield_bps = 40  where ticker in ('GOOGL','META','BABA','CRM');
+update instruments set dividend_yield_bps = 30  where ticker in ('NVDA');
+update instruments set dividend_yield_bps = 0   where ticker in ('AMZN','TSLA','NFLX','BRK.B','UBER','ABNB','PYPL','SPOT','SHOP','ZAL','AMD','ADBE','BA');
+-- ETFs: nur ausschüttende zahlen Cash; thesaurierende (Acc) reinvestieren intern (0).
+update instruments set dividend_yield_bps = 200 where ticker = 'EXSA';
+update instruments set dividend_yield_bps = 350 where ticker = 'VHYL';
+
 -- Start-Kurse, damit die App sofort Preise hat. Im Betrieb aktualisiert der
 -- Cron `update-prices` diese stündlich über die aktive MarketDataSource.
 insert into price_snapshots (instrument_id, price_cents, as_of, source)

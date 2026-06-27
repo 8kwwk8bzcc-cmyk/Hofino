@@ -17,6 +17,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Starke Abhängigkeit vom iPhone, Wettbewerb, Lieferketten in Asien.",
     whyPriceMoves: "Neue Produkte, Verkaufszahlen und die allgemeine Tech-Stimmung können den Kurs bewegen.",
     dividend: "Zahlt eine eher kleine, regelmäßige Dividende; der größere Teil des Gewinns bleibt in der Firma.",
+    dividendSchedule: "Meist vierteljährlich (typisch für US-Unternehmen).",
   },
   {
     ticker: "SAP",
@@ -30,6 +31,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Harter Cloud-Wettbewerb, aufwendige Umstellungen bei Kunden.",
     whyPriceMoves: "Cloud-Wachstum, Quartalszahlen und Ausblicke beeinflussen den Kurs.",
     dividend: "Zahlt regelmäßig eine Dividende – also einen Teil des Gewinns an die Aktionäre.",
+    dividendSchedule: "Meist einmal im Jahr, oft im Frühjahr nach der Hauptversammlung.",
   },
   {
     ticker: "SIE",
@@ -43,6 +45,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Abhängigkeit von der Konjunktur, große langlaufende Projekte.",
     whyPriceMoves: "Auftragslage, Konjunktur und Großaufträge wirken auf den Kurs.",
     dividend: "Zahlt regelmäßig eine Dividende – also einen Teil des Gewinns an die Aktionäre.",
+    dividendSchedule: "Meist einmal im Jahr, oft im Frühjahr nach der Hauptversammlung.",
   },
   {
     ticker: "NESN",
@@ -56,6 +59,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Rohstoffpreise, Wechselkurse, Diskussionen um Gesundheit und Nachhaltigkeit.",
     whyPriceMoves: "Absatzmengen, Preise und Wechselkurse können den Kurs bewegen.",
     dividend: "Zahlt seit vielen Jahren verlässlich eine Dividende und hat sie immer wieder erhöht.",
+    dividendSchedule: "Meist einmal im Jahr, oft im Frühjahr nach der Hauptversammlung.",
   },
   {
     ticker: "MSFT",
@@ -69,6 +73,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Harter Cloud-Wettbewerb, Abhängigkeit von Firmenkunden, Regulierung.",
     whyPriceMoves: "Cloud-Wachstum, Quartalszahlen und die Tech-Stimmung bewegen den Kurs.",
     dividend: "Zahlt regelmäßig eine Dividende – also einen Teil des Gewinns an die Aktionäre.",
+    dividendSchedule: "Meist vierteljährlich (typisch für US-Unternehmen).",
   },
   {
     ticker: "AMZN",
@@ -82,6 +87,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Niedrige Handelsmargen, hohe Kosten, Wettbewerb und Regulierung.",
     whyPriceMoves: "Wachstum von Handel und AWS sowie Gewinnentwicklung bewegen den Kurs.",
     dividend: "Zahlt aktuell keine Dividende – die Gewinne fließen ins Wachstum.",
+    dividendSchedule: "Entfällt – zahlt derzeit keine Dividende.",
   },
   {
     ticker: "GOOGL",
@@ -95,6 +101,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Abhängigkeit von Werbung, Datenschutz- und Wettbewerbsregeln.",
     whyPriceMoves: "Werbeeinnahmen, Nutzerzahlen und Regulierung bewegen den Kurs.",
     dividend: "Investiert die Gewinne vor allem ins Wachstum; die Dividende ist nur gering.",
+    dividendSchedule: "Meist vierteljährlich (typisch für US-Unternehmen).",
   },
   {
     ticker: "NVDA",
@@ -108,6 +115,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Starke Schwankungen, Abhängigkeit vom KI-Boom, Wettbewerb, Lieferketten.",
     whyPriceMoves: "Nachfrage nach KI-Chips und Quartalszahlen bewegen den Kurs stark.",
     dividend: "Zahlt nur eine sehr kleine Dividende und investiert stark ins Wachstum.",
+    dividendSchedule: "Meist vierteljährlich (typisch für US-Unternehmen).",
   },
   {
     ticker: "TSLA",
@@ -121,6 +129,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Starke Kursschwankungen, harter Wettbewerb, Abhängigkeit von wenigen Modellen.",
     whyPriceMoves: "Verkaufszahlen, Preise und Erwartungen bewegen den Kurs oft stark.",
     dividend: "Zahlt aktuell keine Dividende – die Gewinne fließen ins Wachstum.",
+    dividendSchedule: "Entfällt – zahlt derzeit keine Dividende.",
   },
   {
     ticker: "VOW3",
@@ -134,6 +143,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Abhängigkeit von der Konjunktur, teurer Umbau zur E-Mobilität, Wettbewerb.",
     whyPriceMoves: "Absatzzahlen, Konjunktur und der E-Auto-Umstieg bewegen den Kurs.",
     dividend: "Zahlt regelmäßig eine Dividende – also einen Teil des Gewinns an die Aktionäre.",
+    dividendSchedule: "Meist einmal im Jahr, oft im Frühjahr nach der Hauptversammlung.",
   },
   {
     ticker: "ALV",
@@ -147,6 +157,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Große Schäden (z. B. Katastrophen), Zinsänderungen, Finanzmärkte.",
     whyPriceMoves: "Zinsen, Schadensereignisse und Finanzmärkte bewegen den Kurs.",
     dividend: "Zahlt regelmäßig eine Dividende – also einen Teil des Gewinns an die Aktionäre.",
+    dividendSchedule: "Meist einmal im Jahr, oft im Frühjahr nach der Hauptversammlung.",
   },
   {
     ticker: "ADS",
@@ -160,6 +171,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Modetrends, Wettbewerb, Lieferketten und Wechselkurse.",
     whyPriceMoves: "Verkaufszahlen, Trends und Markenstärke bewegen den Kurs.",
     dividend: "Zahlt eine eher kleine, regelmäßige Dividende; der größere Teil des Gewinns bleibt in der Firma.",
+    dividendSchedule: "Meist einmal im Jahr, oft im Frühjahr nach der Hauptversammlung.",
   },
   {
     ticker: "MBG",
@@ -173,6 +185,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Konjunktur, Wettbewerb, teurer E-Umbau, Wechselkurse.",
     whyPriceMoves: "Absatz in der Oberklasse, Konjunktur und E-Mobilität bewegen den Kurs.",
     dividend: "Zahlt regelmäßig eine Dividende – also einen Teil des Gewinns an die Aktionäre.",
+    dividendSchedule: "Meist einmal im Jahr, oft im Frühjahr nach der Hauptversammlung.",
   },
   {
     ticker: "MC",
@@ -186,6 +199,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Abhängigkeit von der Kauflaune Wohlhabender, Konjunktur, Wechselkurse.",
     whyPriceMoves: "Nachfrage nach Luxus, Konjunktur und Tourismus bewegen den Kurs.",
     dividend: "Zahlt regelmäßig eine Dividende – also einen Teil des Gewinns an die Aktionäre.",
+    dividendSchedule: "Meist einmal im Jahr, oft im Frühjahr nach der Hauptversammlung.",
   },
   {
     ticker: "META",
@@ -199,6 +213,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Abhängigkeit vom Werbemarkt, Datenschutzregeln, junge Konkurrenz.",
     whyPriceMoves: "Nutzerzahlen, Werbeeinnahmen und Ausgaben für neue Projekte bewegen den Kurs.",
     dividend: "Investiert die Gewinne vor allem ins Wachstum; die Dividende ist nur gering.",
+    dividendSchedule: "Meist vierteljährlich (typisch für US-Unternehmen).",
   },
   {
     ticker: "NFLX",
@@ -212,6 +227,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Starker Wettbewerb, hohe Produktionskosten, gesättigte Märkte.",
     whyPriceMoves: "Zahl neuer Abonnenten und Erfolg von Serien wirken auf den Kurs.",
     dividend: "Zahlt aktuell keine Dividende – die Gewinne fließen ins Wachstum.",
+    dividendSchedule: "Entfällt – zahlt derzeit keine Dividende.",
   },
   {
     ticker: "DIS",
@@ -225,6 +241,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Teure Filmproduktionen, schwankende Park-Besuche, Streaming-Wettbewerb.",
     whyPriceMoves: "Kinoerfolge, Streaming-Zahlen und Park-Besucher beeinflussen den Kurs.",
     dividend: "Zahlt wieder eine (kleinere) Dividende, nachdem sie zeitweise ausgesetzt war.",
+    dividendSchedule: "Meist vierteljährlich (typisch für US-Unternehmen).",
   },
   {
     ticker: "KO",
@@ -238,6 +255,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Gesundheitstrends weg von Zucker, Rohstoff- und Wechselkurse.",
     whyPriceMoves: "Absatzmengen, Preise und Wechselkurse können den Kurs bewegen.",
     dividend: "Zahlt seit vielen Jahren verlässlich eine Dividende und hat sie immer wieder erhöht.",
+    dividendSchedule: "Meist vierteljährlich (typisch für US-Unternehmen).",
   },
   {
     ticker: "PEP",
@@ -251,6 +269,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Gesundheitstrends, Rohstoffpreise, Wechselkurse.",
     whyPriceMoves: "Verkaufsmengen und Preise der Marken wirken auf den Kurs.",
     dividend: "Zahlt seit vielen Jahren verlässlich eine Dividende und hat sie immer wieder erhöht.",
+    dividendSchedule: "Meist vierteljährlich (typisch für US-Unternehmen).",
   },
   {
     ticker: "MCD",
@@ -264,6 +283,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Gesundheitsdebatten, Lohn- und Rohstoffkosten, Wettbewerb.",
     whyPriceMoves: "Umsatz je Restaurant und Zahl der Standorte beeinflussen den Kurs.",
     dividend: "Zahlt seit vielen Jahren verlässlich eine Dividende und hat sie immer wieder erhöht.",
+    dividendSchedule: "Meist einmal im Jahr, oft im Frühjahr nach der Hauptversammlung.",
   },
   {
     ticker: "SBUX",
@@ -277,6 +297,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Kaffeepreise, Konjunktur, starker lokaler Wettbewerb.",
     whyPriceMoves: "Besucherzahlen und Umsatz je Filiale wirken auf den Kurs.",
     dividend: "Zahlt regelmäßig eine Dividende – also einen Teil des Gewinns an die Aktionäre.",
+    dividendSchedule: "Meist vierteljährlich (typisch für US-Unternehmen).",
   },
   {
     ticker: "NKE",
@@ -290,6 +311,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Modetrends, Lieferketten in Asien, Wettbewerb.",
     whyPriceMoves: "Verkaufszahlen, Lagerbestände und Modetrends bewegen den Kurs.",
     dividend: "Zahlt eine eher kleine, regelmäßige Dividende; der größere Teil des Gewinns bleibt in der Firma.",
+    dividendSchedule: "Meist vierteljährlich (typisch für US-Unternehmen).",
   },
   {
     ticker: "V",
@@ -303,6 +325,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Regulierung der Gebühren, neue Bezahlmethoden, Konjunktur.",
     whyPriceMoves: "Zahl und Höhe der Zahlungen weltweit beeinflussen den Kurs.",
     dividend: "Zahlt eine eher kleine, regelmäßige Dividende; der größere Teil des Gewinns bleibt in der Firma.",
+    dividendSchedule: "Meist vierteljährlich (typisch für US-Unternehmen).",
   },
   {
     ticker: "MA",
@@ -316,6 +339,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Regulierung, neue Konkurrenz, Konjunktur.",
     whyPriceMoves: "Weltweites Zahlungsvolumen und neue Dienste wirken auf den Kurs.",
     dividend: "Zahlt eine eher kleine, regelmäßige Dividende; der größere Teil des Gewinns bleibt in der Firma.",
+    dividendSchedule: "Meist vierteljährlich (typisch für US-Unternehmen).",
   },
   {
     ticker: "PYPL",
@@ -329,6 +353,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Starker Wettbewerb, Margendruck, Regulierung.",
     whyPriceMoves: "Zahl der Zahlungen und aktiven Konten beeinflusst den Kurs.",
     dividend: "Zahlt aktuell keine Dividende – die Gewinne fließen ins Wachstum.",
+    dividendSchedule: "Entfällt – zahlt derzeit keine Dividende.",
   },
   {
     ticker: "INTC",
@@ -342,6 +367,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Starker Wettbewerb, teure Fabriken, schneller Technikwandel.",
     whyPriceMoves: "Nachfrage nach Chips und Fortschritte in der Fertigung bewegen den Kurs.",
     dividend: "Zahlt eine Dividende, die zuletzt aber gekürzt wurde.",
+    dividendSchedule: "Meist vierteljährlich (typisch für US-Unternehmen).",
   },
   {
     ticker: "AMD",
@@ -355,6 +381,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Abhängigkeit von Auftragsfertigern, harter Wettbewerb.",
     whyPriceMoves: "Nachfrage nach leistungsfähigen Chips und neue Modelle wirken auf den Kurs.",
     dividend: "Zahlt aktuell keine Dividende – die Gewinne fließen ins Wachstum.",
+    dividendSchedule: "Entfällt – zahlt derzeit keine Dividende.",
   },
   {
     ticker: "ORCL",
@@ -368,6 +395,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Cloud-Wettbewerb, aufwendige Umstellungen bei Kunden.",
     whyPriceMoves: "Cloud-Wachstum und Quartalszahlen beeinflussen den Kurs.",
     dividend: "Zahlt regelmäßig eine Dividende – also einen Teil des Gewinns an die Aktionäre.",
+    dividendSchedule: "Meist vierteljährlich (typisch für US-Unternehmen).",
   },
   {
     ticker: "UBER",
@@ -381,6 +409,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Regulierung, Wettbewerb, Rechte der Fahrerinnen und Fahrer.",
     whyPriceMoves: "Zahl der Fahrten und Lieferungen sowie die Kostenlage wirken auf den Kurs.",
     dividend: "Zahlt aktuell keine Dividende – die Gewinne fließen ins Wachstum.",
+    dividendSchedule: "Entfällt – zahlt derzeit keine Dividende.",
   },
   {
     ticker: "ABNB",
@@ -394,6 +423,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Regeln für Kurzzeitvermietung, Konjunktur, Wettbewerb.",
     whyPriceMoves: "Zahl der Buchungen und Reisetrends beeinflussen den Kurs.",
     dividend: "Zahlt aktuell keine Dividende – die Gewinne fließen ins Wachstum.",
+    dividendSchedule: "Entfällt – zahlt derzeit keine Dividende.",
   },
   {
     ticker: "BMW",
@@ -407,6 +437,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Hohe Entwicklungskosten, Konjunktur, Wettbewerb bei E-Autos.",
     whyPriceMoves: "Absatzzahlen, Konjunktur und Fortschritt bei E-Autos bewegen den Kurs.",
     dividend: "Zahlt regelmäßig eine Dividende – also einen Teil des Gewinns an die Aktionäre.",
+    dividendSchedule: "Meist einmal im Jahr, oft im Frühjahr nach der Hauptversammlung.",
   },
   {
     ticker: "P911",
@@ -420,6 +451,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Abhängigkeit von der Konjunktur im Luxussegment, Wettbewerb.",
     whyPriceMoves: "Absatz im Premiumbereich und Modellzyklen wirken auf den Kurs.",
     dividend: "Zahlt regelmäßig eine Dividende – also einen Teil des Gewinns an die Aktionäre.",
+    dividendSchedule: "Meist einmal im Jahr, oft im Frühjahr nach der Hauptversammlung.",
   },
   {
     ticker: "DTE",
@@ -433,6 +465,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Hohe Kosten für Netzausbau, Wettbewerb, Regulierung.",
     whyPriceMoves: "Kundenzahlen und Investitionen in die Netze beeinflussen den Kurs.",
     dividend: "Zahlt regelmäßig eine Dividende – also einen Teil des Gewinns an die Aktionäre.",
+    dividendSchedule: "Meist einmal im Jahr, oft im Frühjahr nach der Hauptversammlung.",
   },
   {
     ticker: "BAS",
@@ -446,6 +479,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Energiekosten, Konjunktur, strenge Umweltauflagen.",
     whyPriceMoves: "Konjunktur, Energiepreise und Nachfrage der Industrie wirken auf den Kurs.",
     dividend: "Zahlt regelmäßig eine Dividende – also einen Teil des Gewinns an die Aktionäre.",
+    dividendSchedule: "Meist einmal im Jahr, oft im Frühjahr nach der Hauptversammlung.",
   },
   {
     ticker: "BAYN",
@@ -459,6 +493,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Lange teure Forschung, Patentabläufe, Rechtsstreitigkeiten.",
     whyPriceMoves: "Erfolge in der Forschung und rechtliche Themen bewegen den Kurs.",
     dividend: "Zahlt eine Dividende, die zuletzt aber stark gekürzt wurde.",
+    dividendSchedule: "Meist einmal im Jahr, oft im Frühjahr nach der Hauptversammlung.",
   },
   {
     ticker: "PUM",
@@ -472,6 +507,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Modetrends, Lieferketten, starker Wettbewerb.",
     whyPriceMoves: "Verkaufszahlen und Modetrends beeinflussen den Kurs.",
     dividend: "Zahlt eine eher kleine, regelmäßige Dividende; der größere Teil des Gewinns bleibt in der Firma.",
+    dividendSchedule: "Meist einmal im Jahr, oft im Frühjahr nach der Hauptversammlung.",
   },
   {
     ticker: "ZAL",
@@ -485,6 +521,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Retouren, harter Wettbewerb, schwankende Kauflaune.",
     whyPriceMoves: "Bestellmengen und Gewinnmargen wirken auf den Kurs.",
     dividend: "Zahlt aktuell keine Dividende – die Gewinne fließen ins Wachstum.",
+    dividendSchedule: "Entfällt – zahlt derzeit keine Dividende.",
   },
   {
     ticker: "RACE",
@@ -498,6 +535,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Abhängigkeit vom Luxussegment, Umstieg auf E-Antrieb.",
     whyPriceMoves: "Auslieferungen und die Marke im Luxusbereich wirken auf den Kurs.",
     dividend: "Zahlt eine eher kleine, regelmäßige Dividende; der größere Teil des Gewinns bleibt in der Firma.",
+    dividendSchedule: "Meist einmal im Jahr, oft im Frühjahr nach der Hauptversammlung.",
   },
   {
     ticker: "AIR",
@@ -511,6 +549,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Lieferketten, lange Bauzeiten, Konjunktur im Luftverkehr.",
     whyPriceMoves: "Bestellungen und Auslieferungen von Flugzeugen bewegen den Kurs.",
     dividend: "Zahlt regelmäßig eine Dividende – also einen Teil des Gewinns an die Aktionäre.",
+    dividendSchedule: "Meist einmal im Jahr, oft im Frühjahr nach der Hauptversammlung.",
   },
   {
     ticker: "ASML",
@@ -524,6 +563,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Wenige Großkunden, Exportregeln, schwankende Chip-Nachfrage.",
     whyPriceMoves: "Bestellungen der Chip-Hersteller und Exportregeln wirken auf den Kurs.",
     dividend: "Zahlt regelmäßig eine Dividende – also einen Teil des Gewinns an die Aktionäre.",
+    dividendSchedule: "Meist einmal im Jahr, oft im Frühjahr nach der Hauptversammlung.",
   },
   {
     ticker: "JPM",
@@ -537,6 +577,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Konjunktur und Zinsen, Kreditausfälle, strenge Regulierung.",
     whyPriceMoves: "Zinsen, Konjunktur und Kreditausfälle bewegen den Kurs.",
     dividend: "Zahlt regelmäßig eine Dividende – also einen Teil des Gewinns an die Aktionäre.",
+    dividendSchedule: "Meist vierteljährlich (typisch für US-Unternehmen).",
   },
   {
     ticker: "WMT",
@@ -550,6 +591,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Geringe Margen, harter Preiswettbewerb, Lohnkosten.",
     whyPriceMoves: "Umsatz je Markt und Onlinewachstum wirken auf den Kurs.",
     dividend: "Zahlt seit vielen Jahren verlässlich eine Dividende und hat sie immer wieder erhöht.",
+    dividendSchedule: "Meist vierteljährlich (typisch für US-Unternehmen).",
   },
   {
     ticker: "HD",
@@ -563,6 +605,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Abhängigkeit vom Wohnungsmarkt und der Konjunktur.",
     whyPriceMoves: "Bau- und Renovierungsnachfrage beeinflusst den Kurs.",
     dividend: "Zahlt regelmäßig eine Dividende – also einen Teil des Gewinns an die Aktionäre.",
+    dividendSchedule: "Meist vierteljährlich (typisch für US-Unternehmen).",
   },
   {
     ticker: "COST",
@@ -576,6 +619,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Geringe Margen, Abhängigkeit von Mitgliederzahlen.",
     whyPriceMoves: "Mitgliederzahl und Umsatz je Markt wirken auf den Kurs.",
     dividend: "Zahlt eine eher kleine, regelmäßige Dividende; der größere Teil des Gewinns bleibt in der Firma.",
+    dividendSchedule: "Meist vierteljährlich (typisch für US-Unternehmen).",
   },
   {
     ticker: "PG",
@@ -589,6 +633,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Rohstoffpreise, Wechselkurse, Eigenmarken der Händler.",
     whyPriceMoves: "Absatzmengen und Preise der Marken bewegen den Kurs.",
     dividend: "Zahlt seit vielen Jahren verlässlich eine Dividende und hat sie immer wieder erhöht.",
+    dividendSchedule: "Meist vierteljährlich (typisch für US-Unternehmen).",
   },
   {
     ticker: "JNJ",
@@ -602,6 +647,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Lange teure Forschung, Patentabläufe, Rechtsstreitigkeiten.",
     whyPriceMoves: "Forschungserfolge und rechtliche Themen wirken auf den Kurs.",
     dividend: "Zahlt seit vielen Jahren verlässlich eine Dividende und hat sie immer wieder erhöht.",
+    dividendSchedule: "Meist vierteljährlich (typisch für US-Unternehmen).",
   },
   {
     ticker: "PFE",
@@ -615,6 +661,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Patentabläufe, schwankende Nachfrage, teure Forschung.",
     whyPriceMoves: "Erfolg neuer Medikamente und Patentabläufe bewegen den Kurs.",
     dividend: "Zahlt regelmäßig eine Dividende – also einen Teil des Gewinns an die Aktionäre.",
+    dividendSchedule: "Meist vierteljährlich (typisch für US-Unternehmen).",
   },
   {
     ticker: "LLY",
@@ -628,6 +675,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Abhängigkeit von einzelnen Medikamenten, Patentabläufe.",
     whyPriceMoves: "Erfolg wichtiger Medikamente beeinflusst den Kurs.",
     dividend: "Zahlt regelmäßig eine Dividende – also einen Teil des Gewinns an die Aktionäre.",
+    dividendSchedule: "Meist vierteljährlich (typisch für US-Unternehmen).",
   },
   {
     ticker: "XOM",
@@ -641,6 +689,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Schwankende Öl-/Gaspreise, Klimaregeln, Umstieg auf saubere Energie.",
     whyPriceMoves: "Vor allem der Öl- und Gaspreis bewegt den Kurs.",
     dividend: "Zahlt seit vielen Jahren verlässlich eine Dividende und hat sie immer wieder erhöht.",
+    dividendSchedule: "Meist vierteljährlich (typisch für US-Unternehmen).",
   },
   {
     ticker: "CVX",
@@ -654,6 +703,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Schwankende Energiepreise, Klimaregeln, hohe Investitionen.",
     whyPriceMoves: "Öl- und Gaspreise sowie Fördermengen wirken auf den Kurs.",
     dividend: "Zahlt seit vielen Jahren verlässlich eine Dividende und hat sie immer wieder erhöht.",
+    dividendSchedule: "Meist vierteljährlich (typisch für US-Unternehmen).",
   },
   {
     ticker: "BA",
@@ -667,6 +717,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Qualitäts- und Sicherheitsthemen, Lieferketten, lange Bauzeiten.",
     whyPriceMoves: "Bestellungen, Auslieferungen und Sicherheitsthemen bewegen den Kurs.",
     dividend: "Zahlt aktuell keine Dividende – sie ist seit 2020 ausgesetzt.",
+    dividendSchedule: "Derzeit ausgesetzt – keine Zahlung.",
   },
   {
     ticker: "CAT",
@@ -680,6 +731,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Stark von der Konjunktur abhängig, Rohstoffpreise.",
     whyPriceMoves: "Bau- und Bergbaukonjunktur beeinflusst den Kurs.",
     dividend: "Zahlt seit vielen Jahren verlässlich eine Dividende und hat sie immer wieder erhöht.",
+    dividendSchedule: "Meist vierteljährlich (typisch für US-Unternehmen).",
   },
   {
     ticker: "CRM",
@@ -693,6 +745,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Starker Wettbewerb, Konjunktur bei Firmenkunden.",
     whyPriceMoves: "Abo-Wachstum und Quartalszahlen wirken auf den Kurs.",
     dividend: "Investiert die Gewinne vor allem ins Wachstum; die Dividende ist nur gering.",
+    dividendSchedule: "Meist vierteljährlich (typisch für US-Unternehmen).",
   },
   {
     ticker: "ADBE",
@@ -706,6 +759,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Neue günstige Konkurrenz, Konjunktur.",
     whyPriceMoves: "Abo-Wachstum und neue Funktionen beeinflussen den Kurs.",
     dividend: "Zahlt aktuell keine Dividende – die Gewinne fließen ins Wachstum.",
+    dividendSchedule: "Entfällt – zahlt derzeit keine Dividende.",
   },
   {
     ticker: "AVGO",
@@ -719,6 +773,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Wenige Großkunden, schwankende Chip-Nachfrage.",
     whyPriceMoves: "Chip-Nachfrage und große Aufträge bewegen den Kurs.",
     dividend: "Zahlt regelmäßig eine Dividende – also einen Teil des Gewinns an die Aktionäre.",
+    dividendSchedule: "Meist vierteljährlich (typisch für US-Unternehmen).",
   },
   {
     ticker: "CSCO",
@@ -732,6 +787,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Wettbewerb, Wandel hin zu Software, Konjunktur.",
     whyPriceMoves: "Nachfrage nach Netzwerktechnik wirkt auf den Kurs.",
     dividend: "Zahlt regelmäßig eine Dividende – also einen Teil des Gewinns an die Aktionäre.",
+    dividendSchedule: "Meist vierteljährlich (typisch für US-Unternehmen).",
   },
   {
     ticker: "QCOM",
@@ -745,6 +801,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Abhängigkeit vom Smartphone-Markt, Streit um Lizenzen.",
     whyPriceMoves: "Smartphone-Nachfrage und Lizenzeinnahmen bewegen den Kurs.",
     dividend: "Zahlt regelmäßig eine Dividende – also einen Teil des Gewinns an die Aktionäre.",
+    dividendSchedule: "Meist vierteljährlich (typisch für US-Unternehmen).",
   },
   {
     ticker: "SPOT",
@@ -758,6 +815,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Hohe Abgaben an Musikfirmen, starker Wettbewerb.",
     whyPriceMoves: "Zahl der Abonnenten und die Margen wirken auf den Kurs.",
     dividend: "Zahlt aktuell keine Dividende – die Gewinne fließen ins Wachstum.",
+    dividendSchedule: "Entfällt – zahlt derzeit keine Dividende.",
   },
   {
     ticker: "SHOP",
@@ -771,6 +829,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Abhängigkeit von der Konjunktur kleiner Händler, Wettbewerb.",
     whyPriceMoves: "Umsatz der Händler und neue Dienste beeinflussen den Kurs.",
     dividend: "Zahlt aktuell keine Dividende – die Gewinne fließen ins Wachstum.",
+    dividendSchedule: "Entfällt – zahlt derzeit keine Dividende.",
   },
   {
     ticker: "BABA",
@@ -784,6 +843,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Regulierung in China, Wettbewerb, politische Unsicherheit.",
     whyPriceMoves: "Handelsvolumen und politische/regulatorische Themen bewegen den Kurs.",
     dividend: "Investiert die Gewinne vor allem ins Wachstum; die Dividende ist nur gering.",
+    dividendSchedule: "Meist einmal im Jahr, oft im Frühjahr nach der Hauptversammlung.",
   },
   {
     ticker: "DBK",
@@ -797,6 +857,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Konjunktur, Kreditausfälle, strenge Regulierung.",
     whyPriceMoves: "Zinsen, Konjunktur und Kreditrisiken wirken auf den Kurs.",
     dividend: "Zahlt regelmäßig eine Dividende – also einen Teil des Gewinns an die Aktionäre.",
+    dividendSchedule: "Meist einmal im Jahr, oft im Frühjahr nach der Hauptversammlung.",
   },
   {
     ticker: "DHL",
@@ -810,6 +871,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Konjunktur, Spritkosten, Wettbewerb im Paketmarkt.",
     whyPriceMoves: "Paketmengen und Logistiknachfrage beeinflussen den Kurs.",
     dividend: "Zahlt regelmäßig eine Dividende – also einen Teil des Gewinns an die Aktionäre.",
+    dividendSchedule: "Meist einmal im Jahr, oft im Frühjahr nach der Hauptversammlung.",
   },
   {
     ticker: "IFX",
@@ -823,6 +885,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Schwankende Chip-Nachfrage, Konjunktur, Wettbewerb.",
     whyPriceMoves: "Nachfrage aus Auto- und Energiebranche bewegt den Kurs.",
     dividend: "Zahlt regelmäßig eine Dividende – also einen Teil des Gewinns an die Aktionäre.",
+    dividendSchedule: "Meist einmal im Jahr, oft im Frühjahr nach der Hauptversammlung.",
   },
   {
     ticker: "BEI",
@@ -836,6 +899,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Rohstoffpreise, Wechselkurse, Wettbewerb.",
     whyPriceMoves: "Absatzmengen und Preise der Marken wirken auf den Kurs.",
     dividend: "Zahlt eine eher kleine, regelmäßige Dividende; der größere Teil des Gewinns bleibt in der Firma.",
+    dividendSchedule: "Meist einmal im Jahr, oft im Frühjahr nach der Hauptversammlung.",
   },
   {
     ticker: "HEN3",
@@ -849,6 +913,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Rohstoffpreise, Konjunktur, Wettbewerb.",
     whyPriceMoves: "Absatz und Rohstoffkosten beeinflussen den Kurs.",
     dividend: "Zahlt regelmäßig eine Dividende – also einen Teil des Gewinns an die Aktionäre.",
+    dividendSchedule: "Meist einmal im Jahr, oft im Frühjahr nach der Hauptversammlung.",
   },
   {
     ticker: "RWE",
@@ -862,6 +927,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Schwankende Strompreise, hohe Investitionen, Politik.",
     whyPriceMoves: "Strompreise und der Ausbau erneuerbarer Energien wirken auf den Kurs.",
     dividend: "Zahlt regelmäßig eine Dividende – also einen Teil des Gewinns an die Aktionäre.",
+    dividendSchedule: "Meist einmal im Jahr, oft im Frühjahr nach der Hauptversammlung.",
   },
   {
     ticker: "EOAN",
@@ -875,6 +941,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Regulierung der Netze, hohe Investitionen, Politik.",
     whyPriceMoves: "Netzregulierung und Energiepreise beeinflussen den Kurs.",
     dividend: "Zahlt regelmäßig eine Dividende – also einen Teil des Gewinns an die Aktionäre.",
+    dividendSchedule: "Meist einmal im Jahr, oft im Frühjahr nach der Hauptversammlung.",
   },
   {
     ticker: "NOVN",
@@ -888,6 +955,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Patentabläufe, teure Forschung, Preisdruck.",
     whyPriceMoves: "Forschungserfolge und Patentabläufe bewegen den Kurs.",
     dividend: "Zahlt regelmäßig eine Dividende – also einen Teil des Gewinns an die Aktionäre.",
+    dividendSchedule: "Meist einmal im Jahr, oft im Frühjahr nach der Hauptversammlung.",
   },
   {
     ticker: "ROG",
@@ -901,6 +969,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Patentabläufe, teure Forschung, Preisdruck.",
     whyPriceMoves: "Forschungserfolge und die Nachfrage nach Tests wirken auf den Kurs.",
     dividend: "Zahlt seit vielen Jahren verlässlich eine Dividende und hat sie immer wieder erhöht.",
+    dividendSchedule: "Meist einmal im Jahr, oft im Frühjahr nach der Hauptversammlung.",
   },
   {
     ticker: "TTE",
@@ -914,6 +983,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Schwankende Energiepreise, Klimaregeln, hohe Investitionen.",
     whyPriceMoves: "Öl-, Gas- und Strompreise bewegen den Kurs.",
     dividend: "Zahlt regelmäßig eine Dividende – also einen Teil des Gewinns an die Aktionäre.",
+    dividendSchedule: "Meist einmal im Jahr, oft im Frühjahr nach der Hauptversammlung.",
   },
   {
     ticker: "ITX",
@@ -927,6 +997,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Modetrends, Konjunktur, Lieferketten.",
     whyPriceMoves: "Verkaufszahlen und Modetrends beeinflussen den Kurs.",
     dividend: "Zahlt regelmäßig eine Dividende – also einen Teil des Gewinns an die Aktionäre.",
+    dividendSchedule: "Meist einmal im Jahr, oft im Frühjahr nach der Hauptversammlung.",
   },
   {
     ticker: "SHEL",
@@ -940,6 +1011,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Schwankende Energiepreise, Klimaregeln, hohe Investitionen.",
     whyPriceMoves: "Öl- und Gaspreise wirken stark auf den Kurs.",
     dividend: "Zahlt regelmäßig eine Dividende – also einen Teil des Gewinns an die Aktionäre.",
+    dividendSchedule: "Meist einmal im Jahr, oft im Frühjahr nach der Hauptversammlung.",
   },
   {
     ticker: "ULVR",
@@ -953,6 +1025,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Rohstoffpreise, Wechselkurse, Eigenmarken der Händler.",
     whyPriceMoves: "Absatzmengen und Preise der Marken bewegen den Kurs.",
     dividend: "Zahlt regelmäßig eine Dividende – also einen Teil des Gewinns an die Aktionäre.",
+    dividendSchedule: "Meist einmal im Jahr, oft im Frühjahr nach der Hauptversammlung.",
   },
   {
     ticker: "AZN",
@@ -966,6 +1039,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Patentabläufe, teure Forschung, Preisdruck.",
     whyPriceMoves: "Forschungserfolge und Zulassungen bewegen den Kurs.",
     dividend: "Zahlt regelmäßig eine Dividende – also einen Teil des Gewinns an die Aktionäre.",
+    dividendSchedule: "Meist einmal im Jahr, oft im Frühjahr nach der Hauptversammlung.",
   },
   {
     ticker: "OR",
@@ -979,6 +1053,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Konjunktur, Modetrends, Wechselkurse.",
     whyPriceMoves: "Absatz im Kosmetikmarkt und Trends wirken auf den Kurs.",
     dividend: "Zahlt regelmäßig eine Dividende – also einen Teil des Gewinns an die Aktionäre.",
+    dividendSchedule: "Meist einmal im Jahr, oft im Frühjahr nach der Hauptversammlung.",
   },
   {
     ticker: "NOVO-B",
@@ -992,6 +1067,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Abhängigkeit von wenigen Medikamenten, Wettbewerb, Preisdruck.",
     whyPriceMoves: "Erfolg der wichtigen Medikamente beeinflusst den Kurs.",
     dividend: "Zahlt regelmäßig eine Dividende – also einen Teil des Gewinns an die Aktionäre.",
+    dividendSchedule: "Meist einmal im Jahr, oft im Frühjahr nach der Hauptversammlung.",
   },
   {
     ticker: "BRK.B",
@@ -1005,6 +1081,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Abhängig von der Gesamtkonjunktur, sehr großer Konzern.",
     whyPriceMoves: "Ergebnisse der Beteiligungen und die allgemeine Wirtschaftslage bewegen den Kurs.",
     dividend: "Zahlt aktuell keine Dividende – die Gewinne fließen ins Wachstum.",
+    dividendSchedule: "Entfällt – zahlt derzeit keine Dividende.",
   },
   {
     ticker: "BAC",
@@ -1018,6 +1095,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Konjunktur, Kreditausfälle, strenge Regulierung.",
     whyPriceMoves: "Zinsen, Konjunktur und Kreditrisiken wirken auf den Kurs.",
     dividend: "Zahlt regelmäßig eine Dividende – also einen Teil des Gewinns an die Aktionäre.",
+    dividendSchedule: "Meist vierteljährlich (typisch für US-Unternehmen).",
   },
   {
     ticker: "GS",
@@ -1031,6 +1109,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Stark von den Finanzmärkten und der Konjunktur abhängig.",
     whyPriceMoves: "Aktivität an den Märkten und große Deals bewegen den Kurs.",
     dividend: "Zahlt regelmäßig eine Dividende – also einen Teil des Gewinns an die Aktionäre.",
+    dividendSchedule: "Meist vierteljährlich (typisch für US-Unternehmen).",
   },
   {
     ticker: "UNH",
@@ -1044,6 +1123,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Regulierung im Gesundheitswesen, steigende Behandlungskosten.",
     whyPriceMoves: "Mitgliederzahlen und Kostenentwicklung beeinflussen den Kurs.",
     dividend: "Zahlt regelmäßig eine Dividende – also einen Teil des Gewinns an die Aktionäre.",
+    dividendSchedule: "Meist vierteljährlich (typisch für US-Unternehmen).",
   },
   {
     ticker: "ABBV",
@@ -1057,6 +1137,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Patentabläufe wichtiger Medikamente, teure Forschung.",
     whyPriceMoves: "Erfolg der wichtigen Medikamente und Patentabläufe bewegen den Kurs.",
     dividend: "Zahlt regelmäßig eine Dividende – also einen Teil des Gewinns an die Aktionäre.",
+    dividendSchedule: "Meist vierteljährlich (typisch für US-Unternehmen).",
   },
   {
     ticker: "MRK",
@@ -1070,6 +1151,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Patentabläufe, teure Forschung, Preisdruck.",
     whyPriceMoves: "Forschungserfolge und Zulassungen wirken auf den Kurs.",
     dividend: "Zahlt regelmäßig eine Dividende – also einen Teil des Gewinns an die Aktionäre.",
+    dividendSchedule: "Meist vierteljährlich (typisch für US-Unternehmen).",
   },
   {
     ticker: "TXN",
@@ -1083,6 +1165,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Schwankende Nachfrage, Konjunktur, Wettbewerb.",
     whyPriceMoves: "Nachfrage aus Industrie und Auto beeinflusst den Kurs.",
     dividend: "Zahlt regelmäßig eine Dividende – also einen Teil des Gewinns an die Aktionäre.",
+    dividendSchedule: "Meist vierteljährlich (typisch für US-Unternehmen).",
   },
   {
     ticker: "IBM",
@@ -1096,6 +1179,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Starker Wettbewerb, langsamer Wandel, Konjunktur.",
     whyPriceMoves: "Cloud- und Beratungsgeschäft sowie Quartalszahlen wirken auf den Kurs.",
     dividend: "Zahlt regelmäßig eine Dividende – also einen Teil des Gewinns an die Aktionäre.",
+    dividendSchedule: "Meist vierteljährlich (typisch für US-Unternehmen).",
   },
   {
     ticker: "VZ",
@@ -1109,6 +1193,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Hohe Kosten für Netzausbau, harter Preiswettbewerb.",
     whyPriceMoves: "Kundenzahlen und Netzinvestitionen beeinflussen den Kurs.",
     dividend: "Zahlt regelmäßig eine Dividende – also einen Teil des Gewinns an die Aktionäre.",
+    dividendSchedule: "Meist vierteljährlich (typisch für US-Unternehmen).",
   },
   {
     ticker: "CMCSA",
@@ -1122,6 +1207,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Kabelkunden wandern ab, Streaming-Wettbewerb.",
     whyPriceMoves: "Internet-Kundenzahlen und Medienerfolge wirken auf den Kurs.",
     dividend: "Zahlt regelmäßig eine Dividende – also einen Teil des Gewinns an die Aktionäre.",
+    dividendSchedule: "Meist vierteljährlich (typisch für US-Unternehmen).",
   },
   {
     ticker: "F",
@@ -1135,6 +1221,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Konjunktur, hohe Kosten für E-Auto-Umbau, Wettbewerb.",
     whyPriceMoves: "Absatzzahlen und Fortschritt bei E-Autos bewegen den Kurs.",
     dividend: "Zahlt regelmäßig eine Dividende – also einen Teil des Gewinns an die Aktionäre.",
+    dividendSchedule: "Meist vierteljährlich (typisch für US-Unternehmen).",
   },
   {
     ticker: "GM",
@@ -1148,6 +1235,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Konjunktur, teurer E-Auto-Umbau, Wettbewerb.",
     whyPriceMoves: "Absatzzahlen und E-Auto-Pläne beeinflussen den Kurs.",
     dividend: "Zahlt regelmäßig eine Dividende – also einen Teil des Gewinns an die Aktionäre.",
+    dividendSchedule: "Meist vierteljährlich (typisch für US-Unternehmen).",
   },
   {
     ticker: "SONY",
@@ -1161,6 +1249,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Modetrends in der Unterhaltung, Wettbewerb, Konjunktur.",
     whyPriceMoves: "Erfolg von Spielen und Elektronik wirkt auf den Kurs.",
     dividend: "Zahlt regelmäßig eine Dividende – also einen Teil des Gewinns an die Aktionäre.",
+    dividendSchedule: "Meist einmal im Jahr, oft im Frühjahr nach der Hauptversammlung.",
   },
   {
     ticker: "TM",
@@ -1174,6 +1263,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Wechselkurse, Konjunktur, Wettbewerb bei E-Autos.",
     whyPriceMoves: "Absatzzahlen und Wechselkurse bewegen den Kurs.",
     dividend: "Zahlt regelmäßig eine Dividende – also einen Teil des Gewinns an die Aktionäre.",
+    dividendSchedule: "Meist einmal im Jahr, oft im Frühjahr nach der Hauptversammlung.",
   },
   {
     ticker: "TSM",
@@ -1187,6 +1277,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Politische Lage in der Region, sehr teure Fabriken.",
     whyPriceMoves: "Chip-Nachfrage und politische Themen beeinflussen den Kurs.",
     dividend: "Zahlt regelmäßig eine Dividende – also einen Teil des Gewinns an die Aktionäre.",
+    dividendSchedule: "Meist einmal im Jahr, oft im Frühjahr nach der Hauptversammlung.",
   },
   {
     ticker: "MUV2",
@@ -1200,6 +1291,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Große Schäden durch Naturkatastrophen, Konjunktur.",
     whyPriceMoves: "Schadenslage und Zinsen wirken auf den Kurs.",
     dividend: "Zahlt regelmäßig eine Dividende – also einen Teil des Gewinns an die Aktionäre.",
+    dividendSchedule: "Meist einmal im Jahr, oft im Frühjahr nach der Hauptversammlung.",
   },
   {
     ticker: "DB1",
@@ -1213,6 +1305,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Ruhige Börsenphasen, Wettbewerb, Regulierung.",
     whyPriceMoves: "Handelsaktivität an den Märkten beeinflusst den Kurs.",
     dividend: "Zahlt regelmäßig eine Dividende – also einen Teil des Gewinns an die Aktionäre.",
+    dividendSchedule: "Meist einmal im Jahr, oft im Frühjahr nach der Hauptversammlung.",
   },
   {
     ticker: "SHL",
@@ -1226,6 +1319,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Lange Investitionszyklen der Kliniken, Wettbewerb.",
     whyPriceMoves: "Bestellungen der Kliniken und neue Geräte wirken auf den Kurs.",
     dividend: "Zahlt regelmäßig eine Dividende – also einen Teil des Gewinns an die Aktionäre.",
+    dividendSchedule: "Meist einmal im Jahr, oft im Frühjahr nach der Hauptversammlung.",
   },
   {
     ticker: "CON",
@@ -1239,6 +1333,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Abhängigkeit von der Autokonjunktur, Rohstoffpreise.",
     whyPriceMoves: "Autoproduktion und Reifennachfrage beeinflussen den Kurs.",
     dividend: "Zahlt regelmäßig eine Dividende – also einen Teil des Gewinns an die Aktionäre.",
+    dividendSchedule: "Meist einmal im Jahr, oft im Frühjahr nach der Hauptversammlung.",
   },
   {
     ticker: "ABBN",
@@ -1252,6 +1347,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Abhängigkeit von der Industriekonjunktur, Wettbewerb.",
     whyPriceMoves: "Auftragslage der Industrie wirkt auf den Kurs.",
     dividend: "Zahlt regelmäßig eine Dividende – also einen Teil des Gewinns an die Aktionäre.",
+    dividendSchedule: "Meist einmal im Jahr, oft im Frühjahr nach der Hauptversammlung.",
   },
   {
     ticker: "UBSG",
@@ -1265,6 +1361,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Finanzmarktschwankungen, Regulierung, Konjunktur.",
     whyPriceMoves: "Vermögensentwicklung der Kunden und Märkte bewegen den Kurs.",
     dividend: "Zahlt regelmäßig eine Dividende – also einen Teil des Gewinns an die Aktionäre.",
+    dividendSchedule: "Meist einmal im Jahr, oft im Frühjahr nach der Hauptversammlung.",
   },
   {
     ticker: "BNP",
@@ -1278,6 +1375,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Konjunktur, Kreditausfälle, Regulierung.",
     whyPriceMoves: "Zinsen, Konjunktur und Kreditrisiken wirken auf den Kurs.",
     dividend: "Zahlt regelmäßig eine Dividende – also einen Teil des Gewinns an die Aktionäre.",
+    dividendSchedule: "Meist einmal im Jahr, oft im Frühjahr nach der Hauptversammlung.",
   },
   {
     ticker: "PHIA",
@@ -1291,6 +1389,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Rückrufe und Qualitätsthemen, Wettbewerb, Konjunktur.",
     whyPriceMoves: "Bestellungen und Qualitätsthemen beeinflussen den Kurs.",
     dividend: "Zahlt regelmäßig eine Dividende – also einen Teil des Gewinns an die Aktionäre.",
+    dividendSchedule: "Meist einmal im Jahr, oft im Frühjahr nach der Hauptversammlung.",
   },
   {
     ticker: "BP",
@@ -1304,6 +1403,7 @@ export const COMPANY_PROFILES: CompanyProfile[] = [
     risks: "Schwankende Energiepreise, Klimaregeln, hohe Investitionen.",
     whyPriceMoves: "Öl- und Gaspreise wirken stark auf den Kurs.",
     dividend: "Zahlt regelmäßig eine Dividende – also einen Teil des Gewinns an die Aktionäre.",
+    dividendSchedule: "Meist einmal im Jahr, oft im Frühjahr nach der Hauptversammlung.",
   },
 ];
 

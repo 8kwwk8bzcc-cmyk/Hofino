@@ -38,6 +38,7 @@ export interface CompanyProfile {
   risks: string; // Risiken
   whyPriceMoves: string; // Warum kann der Kurs schwanken?
   dividend: string; // Zahlt das Unternehmen eine Dividende? (qualitativ, keine Renditezahl)
+  dividendSchedule: string; // Wann wird gezahlt? (z. B. vierteljährlich / einmal im Jahr)
 }
 
 export interface EtfProfile {
@@ -109,7 +110,7 @@ export function validateModuleSet(modules: readonly LearningModule[]): string[] 
 export function validateCompanyProfile(p: CompanyProfile): string[] {
   const errors: string[] = [];
   (
-    ["name", "whatDoes", "howEarns", "products", "sector", "competitors", "opportunities", "risks", "whyPriceMoves", "dividend"] as const
+    ["name", "whatDoes", "howEarns", "products", "sector", "competitors", "opportunities", "risks", "whyPriceMoves", "dividend", "dividendSchedule"] as const
   ).forEach((f) => nonEmpty(`${p.ticker}: ${f}`, p[f], errors));
   nonEmpty(`Profil: ticker`, p.ticker, errors);
   return errors;
