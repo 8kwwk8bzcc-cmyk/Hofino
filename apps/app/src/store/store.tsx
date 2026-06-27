@@ -60,6 +60,7 @@ export interface ClassOverviewRow {
   regionsCount: number;
   etfCount: number;
   blocksMastered: Record<string, number>;
+  decisionsCount: number;
 }
 
 export interface MyClass {
@@ -132,6 +133,7 @@ interface Data {
   learningCapitalCents: number;
   hasInvested: boolean;
   ordersCount: number;
+  decisionsCount: number;
   instruments: Instrument[];
   prices: Map<string, number>;
   pendingLinks: PendingLink[];
@@ -155,6 +157,7 @@ const EMPTY: Data = {
   learningCapitalCents: 0,
   hasInvested: false,
   ordersCount: 0,
+  decisionsCount: 0,
   instruments: [],
   prices: new Map(),
   pendingLinks: [],
@@ -186,6 +189,7 @@ interface StoreApi {
     portfolio: Portfolio;
     watchlist: string[];
     ordersCount: number;
+    decisionsCount: number;
     pendingLinks: PendingLink[];
   };
   instruments: Instrument[];
@@ -308,7 +312,7 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
       await supabase.rpc("dividenden_nachzahlen");
     }
 
-    const [instrumentsRes, pricesRes, portfolioRes, holdingsRes, watchRes, grantsRes, ordersRes, pendingRes, fortschrittRes, statusRes, korrektRes] =
+    const [instrumentsRes, pricesRes, portfolioRes, holdingsRes, watchRes, grantsRes, ordersRes, pendingRes, fortschrittRes, statusRes, korrektRes, decisionsRes] =
       await Promise.all([
         supabase.from("instruments").select("id, ticker, name, type, sector, country"),
         supabase.from("prices").select("instrument_id, price_cents"),
@@ -325,6 +329,7 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
         supabase.from("lern_konzept_fortschritt").select("konzept_id, hoechste_abgeschlossene_stufe"),
         supabase.from("lern_status").select("xp_gesamt, xp_saison").eq("profile_id", profileId).maybeSingle(),
         supabase.from("lern_antworten").select("id", { count: "exact", head: true }).eq("korrekt", true),
+        supabase.from("trade_decisions").select("id", { count: "exact", head: true }),
       ]);
 
     const role = (profileRes.data.role as Role) ?? "child";
@@ -360,6 +365,7 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
       learningCapitalCents: isPlayer ? (grantsRes.data ?? []).reduce((s, r) => s + r.amount_cents, 0) : 0,
       hasInvested: isPlayer ? (ordersRes.count ?? 0) > 0 : false,
       ordersCount: isPlayer ? ordersRes.count ?? 0 : 0,
+      decisionsCount: isPlayer ? decisionsRes.count ?? 0 : 0,
       instruments: (instrumentsRes.data ?? []) as Instrument[],
       prices,
       pendingLinks: (pendingRes.data ?? []).map((r) => ({ parentProfileId: r.parent_profile_id })),
@@ -598,6 +604,7 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
       regionsCount: Number(r.regions_count ?? 0),
       etfCount: Number(r.etf_count ?? 0),
       blocksMastered: (r.blocks_mastered as Record<string, number>) ?? {},
+      decisionsCount: Number(r.decisions_count ?? 0),
     }));
   }, []);
 
@@ -816,6 +823,7 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
       portfolio,
       watchlist: data.watchlist,
       ordersCount: data.ordersCount,
+      decisionsCount: data.decisionsCount,
       pendingLinks: data.pendingLinks,
     },
     instruments: data.instruments,

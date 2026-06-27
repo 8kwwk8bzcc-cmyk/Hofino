@@ -109,10 +109,11 @@ export function LearnPlus() {
       regionen: new Set(insts.map((i) => i.country).filter(Boolean)).size,
       etf: insts.filter((i) => i.type === "etf").length,
       orders: state.ordersCount,
+      decisions: state.decisionsCount,
       blocksMastered,
       classXpSum,
     };
-  }, [state.portfolio.holdings, state.ordersCount, instrumentById, abgeschlossen, xpGesamt, gemeisterteIds, classXpSum, konzepte]);
+  }, [state.portfolio.holdings, state.ordersCount, state.decisionsCount, instrumentById, abgeschlossen, xpGesamt, gemeisterteIds, classXpSum, konzepte]);
 
   const heute = heuteISO();
   const faellig = konzepte.filter((k) => {

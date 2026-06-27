@@ -72,6 +72,7 @@ export function TeacherClass() {
     regionen: r.regionsCount,
     etf: r.etfCount,
     orders: r.ordersCount,
+    decisions: r.decisionsCount,
     blocksMastered: r.blocksMastered,
     classXpSum,
   });

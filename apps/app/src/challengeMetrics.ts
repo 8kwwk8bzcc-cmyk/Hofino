@@ -9,6 +9,7 @@ export type ChallengeMetric =
   | "xp"
   | "xp_klasse"
   | "themenblock"
+  | "begruendungen"
   | "branchen"
   | "regionen"
   | "etf"
@@ -29,6 +30,7 @@ export const CHALLENGE_METRICS: Record<ChallengeMetric, MetricDef> = {
   xp: { compare: "gte", scope: "individual", source: "learning", labelKey: "class.challengeMetricXp", goalKey: "class.challengeGoalXp" },
   xp_klasse: { compare: "gte", scope: "class", source: "learning", labelKey: "class.challengeMetricXpKlasse", goalKey: "class.challengeGoalXpKlasse" },
   themenblock: { compare: "gte", scope: "individual", source: "learning", needsRef: true, labelKey: "class.challengeMetricThemenblock", goalKey: "" },
+  begruendungen: { compare: "gte", scope: "individual", source: "learning", labelKey: "class.challengeMetricBegruendung", goalKey: "class.challengeGoalBegruendung" },
   branchen: { compare: "gte", scope: "individual", source: "depot", labelKey: "class.challengeMetricBranchen", goalKey: "class.challengeGoalBranchen" },
   regionen: { compare: "gte", scope: "individual", source: "depot", labelKey: "class.challengeMetricRegionen", goalKey: "class.challengeGoalRegionen" },
   etf: { compare: "gte", scope: "individual", source: "depot", labelKey: "class.challengeMetricEtf", goalKey: "class.challengeGoalEtf" },
@@ -41,6 +43,7 @@ export const CHALLENGE_METRIC_ORDER: ChallengeMetric[] = [
   "xp",
   "xp_klasse",
   "themenblock",
+  "begruendungen",
   "branchen",
   "regionen",
   "etf",
@@ -60,6 +63,7 @@ export interface ChallengeStudentStats {
   regionen: number; // verschiedene Länder/Regionen im Depot
   etf: number; // Anzahl ETF-Positionen
   orders: number; // Anzahl getätigter Orders
+  decisions: number; // Anzahl begründeter Tagesentscheidungen
   blocksMastered: Record<string, number>; // gemeisterte Konzepte je Themenblock-ID
   classXpSum: number; // Summe der Klassen-XP (für kooperative Ziele)
 }
@@ -75,6 +79,8 @@ export function challengeValue(metric: ChallengeMetric, s: ChallengeStudentStats
       return s.classXpSum;
     case "themenblock":
       return ref ? (s.blocksMastered[ref] ?? 0) : 0;
+    case "begruendungen":
+      return s.decisions;
     case "branchen":
       return s.branchen;
     case "regionen":
