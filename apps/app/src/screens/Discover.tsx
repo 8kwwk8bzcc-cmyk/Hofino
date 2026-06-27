@@ -49,6 +49,7 @@ function Detail({ id, onBack }: { id: string; onBack: () => void }) {
           <Field q={t("discover.qCompetitors")} a={company.competitors} />
           <Field q={t("discover.qOpportunities")} a={company.opportunities} />
           <Field q={t("discover.qRisks")} a={company.risks} />
+          <Field q={t("discover.qDividend")} a={company.dividend} />
           <Field q={t("discover.qWhy")} a={company.whyPriceMoves} />
         </Card>
       )}
@@ -62,6 +63,7 @@ function Detail({ id, onBack }: { id: string; onBack: () => void }) {
           <Field q={t("discover.etfRegion")} a={etf.region} />
           <Field q={t("discover.etfDiversification")} a={etf.diversification} />
           <Field q={t("discover.etfCosts")} a={etf.costLogic} />
+          <Field q={t("discover.etfDividend")} a={etf.dividend} />
           <Field q={t("discover.qRisks")} a={etf.risks} />
         </Card>
       )}

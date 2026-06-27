@@ -37,6 +37,7 @@ export interface CompanyProfile {
   opportunities: string; // Chancen
   risks: string; // Risiken
   whyPriceMoves: string; // Warum kann der Kurs schwanken?
+  dividend: string; // Zahlt das Unternehmen eine Dividende? (qualitativ, keine Renditezahl)
 }
 
 export interface EtfProfile {
@@ -50,6 +51,7 @@ export interface EtfProfile {
   diversification: string; // Streuung
   costLogic: string; // Kostenlogik (z. B. TER)
   risks: string;
+  dividend: string; // Ausschüttend oder thesaurierend?
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -107,7 +109,7 @@ export function validateModuleSet(modules: readonly LearningModule[]): string[] 
 export function validateCompanyProfile(p: CompanyProfile): string[] {
   const errors: string[] = [];
   (
-    ["name", "whatDoes", "howEarns", "products", "sector", "competitors", "opportunities", "risks", "whyPriceMoves"] as const
+    ["name", "whatDoes", "howEarns", "products", "sector", "competitors", "opportunities", "risks", "whyPriceMoves", "dividend"] as const
   ).forEach((f) => nonEmpty(`${p.ticker}: ${f}`, p[f], errors));
   nonEmpty(`Profil: ticker`, p.ticker, errors);
   return errors;
@@ -115,7 +117,7 @@ export function validateCompanyProfile(p: CompanyProfile): string[] {
 
 export function validateEtfProfile(p: EtfProfile): string[] {
   const errors: string[] = [];
-  (["ticker", "name", "tracks", "region", "sector", "diversification", "costLogic", "risks"] as const).forEach(
+  (["ticker", "name", "tracks", "region", "sector", "diversification", "costLogic", "risks", "dividend"] as const).forEach(
     (f) => nonEmpty(`${p.ticker}: ${f}`, p[f], errors)
   );
   return errors;
