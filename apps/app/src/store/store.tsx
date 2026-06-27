@@ -13,6 +13,9 @@ import {
 import { alleKonzepte } from "@hofino/learning";
 import { supabase } from "../lib/supabase.js";
 import { translate, type Lang } from "../i18n.js";
+import type { ChallengeMetric } from "../challengeMetrics.js";
+
+export type { ChallengeMetric } from "../challengeMetrics.js";
 
 // Konzept → Themenblock (für die Haus-Stufen aus dem neuen Lernsystem).
 const KONZEPT_BLOCK_IDS: Record<string, string[]> = alleKonzepte().reduce(
@@ -52,6 +55,10 @@ export interface ClassOverviewRow {
   knowledgePoints: number;
   avgQuiz: number | null;
   depotValueRoundedCents: number;
+  ordersCount: number;
+  sectorsCount: number;
+  regionsCount: number;
+  etfCount: number;
 }
 
 export interface MyClass {
@@ -59,7 +66,6 @@ export interface MyClass {
   code: string;
 }
 
-export type ChallengeMetric = "konzepte" | "xp";
 export interface ClassChallenge {
   id: string;
   title: string;
@@ -123,6 +129,7 @@ interface Data {
   korrekteAntworten: number;
   learningCapitalCents: number;
   hasInvested: boolean;
+  ordersCount: number;
   instruments: Instrument[];
   prices: Map<string, number>;
   pendingLinks: PendingLink[];
@@ -145,6 +152,7 @@ const EMPTY: Data = {
   korrekteAntworten: 0,
   learningCapitalCents: 0,
   hasInvested: false,
+  ordersCount: 0,
   instruments: [],
   prices: new Map(),
   pendingLinks: [],
@@ -175,6 +183,7 @@ interface StoreApi {
     tutorialDone: boolean;
     portfolio: Portfolio;
     watchlist: string[];
+    ordersCount: number;
     pendingLinks: PendingLink[];
   };
   instruments: Instrument[];
@@ -304,7 +313,7 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
         supabase.from("holdings").select("instrument_id, quantity, avg_cost_cents"),
         supabase.from("watchlist").select("instrument_id"),
         supabase.from("capital_grants").select("amount_cents"),
-        supabase.from("orders").select("id").limit(1),
+        supabase.from("orders").select("id", { count: "exact", head: true }),
         supabase
           .from("parent_child_links")
           .select("parent_profile_id")
@@ -346,7 +355,8 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
       lernXpSaison: isPlayer ? Number(statusRes.data?.xp_saison ?? 0) : 0,
       korrekteAntworten: isPlayer ? korrektRes.count ?? 0 : 0,
       learningCapitalCents: isPlayer ? (grantsRes.data ?? []).reduce((s, r) => s + r.amount_cents, 0) : 0,
-      hasInvested: isPlayer ? (ordersRes.data ?? []).length > 0 : false,
+      hasInvested: isPlayer ? (ordersRes.count ?? 0) > 0 : false,
+      ordersCount: isPlayer ? ordersRes.count ?? 0 : 0,
       instruments: (instrumentsRes.data ?? []) as Instrument[],
       prices,
       pendingLinks: (pendingRes.data ?? []).map((r) => ({ parentProfileId: r.parent_profile_id })),
@@ -579,6 +589,10 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
       knowledgePoints: Number(r.knowledge_points ?? 0),
       avgQuiz: r.avg_quiz === null || r.avg_quiz === undefined ? null : Number(r.avg_quiz),
       depotValueRoundedCents: Number(r.depot_value_rounded_cents ?? 0),
+      ordersCount: Number(r.orders_count ?? 0),
+      sectorsCount: Number(r.sectors_count ?? 0),
+      regionsCount: Number(r.regions_count ?? 0),
+      etfCount: Number(r.etf_count ?? 0),
     }));
   }, []);
 
@@ -781,6 +795,7 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
       tutorialDone: data.tutorialDone,
       portfolio,
       watchlist: data.watchlist,
+      ordersCount: data.ordersCount,
       pendingLinks: data.pendingLinks,
     },
     instruments: data.instruments,

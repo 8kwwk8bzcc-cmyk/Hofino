@@ -10,6 +10,13 @@ import {
   type TeacherClass as TClass,
 } from "../../store/store.js";
 import { Body, Button, Card, H1, H2, Muted, Pill, ProgressBar } from "../../ui/components.js";
+import {
+  CHALLENGE_METRICS,
+  CHALLENGE_METRIC_ORDER,
+  challengeReached,
+  challengeValue,
+  type ChallengeStudentStats,
+} from "../../challengeMetrics.js";
 import { font, fonts, radius, space, type Palette } from "../../theme.js";
 import { useColors, useThemedStyles } from "../../theme/ThemeProvider.js";
 
@@ -49,14 +56,19 @@ export function TeacherClass() {
   }, [fetchTeacherClass, fetchClassOverview, fetchAssignments, fetchClassChallenges]);
 
   // Lesbares Ziel-Label aus Metrik + Zielzahl (auch als gespeicherter Titel verwendet).
-  const goalLabel = useCallback(
-    (m: ChallengeMetric, n: number) =>
-      t(m === "xp" ? "class.challengeGoalXp" : "class.challengeGoalKonzepte", { n }),
-    [t],
-  );
-  // Wert eines Schülers für die Metrik (aus den groben Klassen-Aggregaten).
-  const valueFor = (m: ChallengeMetric, r: ClassOverviewRow) =>
-    m === "xp" ? r.knowledgePoints : r.modulesCompleted;
+  const goalLabel = useCallback((m: ChallengeMetric, n: number) => t(CHALLENGE_METRICS[m].goalKey, { n }), [t]);
+  // Grobe Aggregate einer Klassenzeile → Challenge-Stats (Datenschutz: nur Zahlen).
+  const statsFromRow = (r: ClassOverviewRow): ChallengeStudentStats => ({
+    konzepte: r.modulesCompleted,
+    xp: r.knowledgePoints,
+    branchen: r.sectorsCount,
+    regionen: r.regionsCount,
+    etf: r.etfCount,
+    orders: r.ordersCount,
+  });
+  // Wie viele Schüler haben das Ziel erreicht?
+  const reachedCount = (ch: ClassChallenge) =>
+    rows.filter((r) => challengeReached(ch.metric, challengeValue(ch.metric, statsFromRow(r)), ch.target)).length;
 
   const createChallengeFromForm = async () => {
     if (!cls) return;
@@ -177,7 +189,7 @@ export function TeacherClass() {
             <H2>{t("class.challengesTitle")}</H2>
             <Muted>{t("class.challengesHint")}</Muted>
             <View style={styles.metricRow}>
-              {(["konzepte", "xp"] as ChallengeMetric[]).map((m) => (
+              {CHALLENGE_METRIC_ORDER.map((m) => (
                 <Pressable
                   key={m}
                   testID={`challenge-metric-${m}`}
@@ -185,7 +197,7 @@ export function TeacherClass() {
                   style={[styles.metricBtn, metric === m && styles.metricBtnOn]}
                 >
                   <Text style={[styles.metricText, metric === m && styles.metricTextOn]}>
-                    {t(m === "xp" ? "class.challengeMetricXp" : "class.challengeMetricKonzepte")}
+                    {t(CHALLENGE_METRICS[m].labelKey)}
                   </Text>
                 </Pressable>
               ))}
@@ -209,7 +221,7 @@ export function TeacherClass() {
               <Muted>{t("class.challengeNone")}</Muted>
             ) : (
               challenges.map((ch) => {
-                const done = rows.filter((r) => valueFor(ch.metric, r) >= ch.target).length;
+                const done = reachedCount(ch);
                 return (
                   <View key={ch.id} style={styles.challengeRow}>
                     <View style={styles.challengeHead}>
@@ -279,14 +291,13 @@ const makeStyles = (c: Palette) =>
     studentRow: { paddingVertical: space.sm, borderBottomWidth: 1, borderBottomColor: c.border, gap: 2 },
     studentName: { fontSize: font.body, fontWeight: "700", fontFamily: fonts.bodyBold, color: c.text },
     metrics: { flexDirection: "row", justifyContent: "space-between" },
-    metricRow: { flexDirection: "row", gap: space.sm, marginTop: space.xs },
+    metricRow: { flexDirection: "row", flexWrap: "wrap", gap: space.sm, marginTop: space.xs },
     metricBtn: {
-      flex: 1,
       paddingVertical: space.sm,
       paddingHorizontal: space.md,
       borderWidth: 1,
       borderColor: c.border,
-      borderRadius: radius.md,
+      borderRadius: radius.pill,
       backgroundColor: c.surface,
       alignItems: "center",
     },

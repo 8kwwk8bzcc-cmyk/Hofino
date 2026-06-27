@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import {
   alleKonzepte,
@@ -20,6 +20,7 @@ import {
 import { formatEuros } from "@hofino/core";
 import { supabase } from "../lib/supabase.js";
 import { useStore, type ClassChallenge } from "../store/store.js";
+import { CHALLENGE_METRICS, challengeReached, challengeValue, type ChallengeStudentStats } from "../challengeMetrics.js";
 import { AwardBadge, Body, Button, Card, H1, H2, Muted, Pill, ProgressBar } from "../ui/components.js";
 import { font, fonts, radius, space, type Palette } from "../theme.js";
 import { useColors, useThemedStyles } from "../theme/ThemeProvider.js";
@@ -69,7 +70,7 @@ function baueInstanzBeliebig(konzept: Konzept, rng: () => number): FrageInstanz 
 }
 
 export function LearnPlus() {
-  const { t, fetchMyAssignments, fetchMyChallenges } = useStore();
+  const { t, state, instrumentById, fetchMyAssignments, fetchMyChallenges } = useStore();
   const c = useColors();
   const styles = useThemedStyles(makeStyles);
   const konzepte = alleKonzepte();
@@ -90,6 +91,20 @@ export function LearnPlus() {
   const [lernkapital, setLernkapital] = useState(0);
   const [zugewiesen, setZugewiesen] = useState<Set<string>>(new Set());
   const [challenges, setChallenges] = useState<ClassChallenge[]>([]);
+
+  // Eigene Challenge-Kennzahlen (für die persönliche Fortschrittsanzeige).
+  const myStats: ChallengeStudentStats = useMemo(() => {
+    const held = state.portfolio.holdings.filter((h) => h.quantity > 0);
+    const insts = held.map((h) => instrumentById.get(h.instrumentId)).filter((i): i is NonNullable<typeof i> => !!i);
+    return {
+      konzepte: abgeschlossen,
+      xp: xpGesamt,
+      branchen: new Set(insts.map((i) => i.sector).filter(Boolean)).size,
+      regionen: new Set(insts.map((i) => i.country).filter(Boolean)).size,
+      etf: insts.filter((i) => i.type === "etf").length,
+      orders: state.ordersCount,
+    };
+  }, [state.portfolio.holdings, state.ordersCount, instrumentById, abgeschlossen, xpGesamt]);
 
   const heute = heuteISO();
   const faellig = konzepte.filter((k) => {
@@ -296,18 +311,24 @@ export function LearnPlus() {
           <Card>
             <H2>{t("learn.classChallenges")}</H2>
             {challenges.map((ch) => {
-              const wert = ch.metric === "xp" ? xpGesamt : abgeschlossen;
-              const reached = wert >= ch.target;
-              const label = t(ch.metric === "xp" ? "class.challengeGoalXp" : "class.challengeGoalKonzepte", { n: ch.target });
+              const def = CHALLENGE_METRICS[ch.metric];
+              const value = challengeValue(ch.metric, myStats);
+              const reached = challengeReached(ch.metric, value, ch.target);
+              const label = t(def.goalKey, { n: ch.target });
               return (
                 <View key={ch.id} style={{ gap: 6, marginTop: space.xs }}>
                   <View style={styles.row}>
                     <Body>{label}</Body>
                     {reached && <Pill label={t("learn.challengeDone")} tone="good" />}
                   </View>
-                  <ProgressBar value={ch.target ? wert / ch.target : 0} variant="gold" />
+                  <ProgressBar
+                    value={def.compare === "lte" ? (reached ? 1 : 0) : ch.target ? value / ch.target : 0}
+                    variant="gold"
+                  />
                   <Muted>
-                    {Math.min(wert, ch.target)}/{ch.target}
+                    {def.compare === "lte"
+                      ? t("learn.challengeAtMost", { value, target: ch.target })
+                      : `${Math.min(value, ch.target)}/${ch.target}`}
                   </Muted>
                 </View>
               );
