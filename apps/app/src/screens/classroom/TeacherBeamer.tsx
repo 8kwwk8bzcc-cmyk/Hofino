@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { ScrollView, StyleSheet, Text, View } from "react-native";
 import { rank } from "@hofino/core";
-import { MODULES } from "@hofino/content";
+import { alleKonzepte } from "@hofino/learning";
 import { useStore, type ClassOverviewRow } from "../../store/store.js";
 import { Button } from "../../ui/components.js";
 import { fonts, space, type Palette } from "../../theme.js";
@@ -53,7 +53,7 @@ export function TeacherBeamer() {
             <Text style={styles.rank}>{e.rank}</Text>
             <Text style={styles.name}>{row?.displayName}</Text>
             <Text style={styles.meta}>
-              {t("class.beamerMeta", { done: row?.modulesCompleted ?? 0, total: MODULES.length, points: row?.knowledgePoints ?? 0 })}
+              {t("class.beamerMeta", { done: row?.modulesCompleted ?? 0, total: alleKonzepte().length, points: row?.knowledgePoints ?? 0 })}
             </Text>
           </View>
         );

@@ -1,7 +1,6 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { Pressable, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 import { formatEuros, rank } from "@hofino/core";
-import { MODULES } from "@hofino/content";
 import { alleKonzepte } from "@hofino/learning";
 import { useStore, type ClassOverviewRow, type TeacherClass as TClass } from "../../store/store.js";
 import { Body, Button, Card, H1, H2, Muted, Pill } from "../../ui/components.js";
@@ -101,7 +100,7 @@ export function TeacherClass() {
                 <View key={r.childProfileId} style={styles.studentRow}>
                   <Text style={styles.studentName}>{r.displayName}</Text>
                   <View style={styles.metrics}>
-                    <Muted>{t("class.studentMetrics", { done: r.modulesCompleted, total: MODULES.length, points: r.knowledgePoints })}</Muted>
+                    <Muted>{t("class.studentMetrics", { done: r.modulesCompleted, total: konzepte.length, points: r.knowledgePoints })}</Muted>
                     <Muted>≈ {formatEuros(r.depotValueRoundedCents)}</Muted>
                   </View>
                 </View>

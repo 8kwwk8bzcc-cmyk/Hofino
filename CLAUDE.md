@@ -111,6 +111,10 @@ Investment-Performance werden **getrennt** ausgewertet.
 - **Wissensliga:** Summe der Wissenspunkte.
 
 ### Haus-System (nur Kindermodus)
+> **Status (Mission-Board-Pivot):** UI **ausgeblendet** über `house_enabled=false`
+> (`apps/app/src/config/flags.ts`). Logik/Daten bleiben erhalten; die Regeln unten gelten
+> weiterhin, sobald das Feature-Flag wieder aktiviert wird. Siehe §11.
+
 Stufen: `Grundstück` (Start) → `Fundament` (erstes Investment) → `Wände` (erste Lernmodule)
 → `Dach` (Risiko & Diversifikation verstanden) → `Erstes Haus` (erster Themenblock)
 → `Ausbauten` (weitere Meilensteine).

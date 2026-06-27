@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { ScrollView, StyleSheet, Text, View } from "react-native";
 import { formatEuros, rank } from "@hofino/core";
-import { MODULES } from "@hofino/content";
+import { alleKonzepte } from "@hofino/learning";
 import { useStore, type ChildSummary } from "../../store/store.js";
 import { Body, Card, H1, H2, Muted, Pill } from "../../ui/components.js";
 import { font, fonts, space, type Palette } from "../../theme.js";
@@ -57,7 +57,7 @@ export function FamilyHome() {
               </View>
               <View style={styles.row}>
                 <Muted>{t("adult.learnProgress")}</Muted>
-                <Text style={styles.val}>{t("home.modulesPill", { done: c.completedCount, total: MODULES.length })}</Text>
+                <Text style={styles.val}>{t("home.modulesPill", { done: c.completedCount, total: alleKonzepte().length })}</Text>
               </View>
               <View style={styles.row}>
                 <Muted>{t("home.knowledge")}</Muted>
