@@ -1,0 +1,65 @@
+name: Deploy Web (GitHub Pages)
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: # manuell auslösbar im Actions-Tab
+
+# Rechte, die der Pages-Deploy braucht
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Immer nur ein Deploy gleichzeitig
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      # Cloud-Backend (anon-Key ist öffentlich, durch RLS geschützt – kein Geheimnis)
+      EXPO_PUBLIC_SUPABASE_URL: https://iprjhnfrpefsmngvskeh.supabase.co
+      EXPO_PUBLIC_SUPABASE_ANON_KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImlwcmpobmZycGVmc21uZ3Zza2VoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODI2MDIzMzUsImV4cCI6MjA5ODE3ODMzNX0.m6Z40c_iUNFPM33kcideccETsPxrTC6M_HmoYht7Vac
+      # Unterpfad auf GitHub Pages: https://<user>.github.io/Hofino/
+      EXPO_BASE_URL: /Hofino
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.8.0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - name: Install
+        run: pnpm install --frozen-lockfile
+
+      - name: Build web
+        working-directory: apps/app
+        run: CI=1 ./node_modules/.bin/expo export --platform web --clear
+
+      - name: SPA-Fallback (404 -> index)
+        run: cp apps/app/dist/index.html apps/app/dist/404.html
+
+      - name: Nojekyll (verhindert, dass _expo/ ignoriert wird)
+        run: touch apps/app/dist/.nojekyll
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: apps/app/dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
