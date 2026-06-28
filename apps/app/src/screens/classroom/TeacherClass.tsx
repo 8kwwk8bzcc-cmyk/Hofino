@@ -15,6 +15,8 @@ import {
   CHALLENGE_METRIC_ORDER,
   challengeReached,
   challengeValue,
+  challengeEnded,
+  formatDateDE,
   type ChallengeStudentStats,
 } from "../../challengeMetrics.js";
 import { font, fonts, radius, space, type Palette } from "../../theme.js";
@@ -42,6 +44,8 @@ export function TeacherClass() {
   const [metric, setMetric] = useState<ChallengeMetric>("konzepte");
   const [target, setTarget] = useState("");
   const [blockRef, setBlockRef] = useState<string | null>(null);
+  const [durationWeeks, setDurationWeeks] = useState<number | null>(null);
+  const now = new Date();
   const [loaded, setLoaded] = useState(false);
   const [name, setName] = useState("");
   const [msg, setMsg] = useState<string | null>(null);
@@ -82,23 +86,37 @@ export function TeacherClass() {
   // Kooperatives Ziel erreicht? (Klassensumme)
   const classReached = (ch: ClassChallenge) => challengeReached(ch.metric, classXpSum, ch.target);
 
+  const endsAtFromDuration = () =>
+    durationWeeks ? new Date(now.getTime() + durationWeeks * 7 * 24 * 60 * 60 * 1000).toISOString() : null;
+
   const createChallengeFromForm = async () => {
     if (!cls) return;
+    const endsAt = endsAtFromDuration();
     if (metric === "themenblock") {
       if (!blockRef) return;
       const block = bloecke.find((b) => b.id === blockRef);
       const size = blockSize(blockRef);
       if (!block || size <= 0) return;
-      await createChallenge(cls.id, metric, size, t("class.challengeGoalThemenblock", { block: block.titel.de }), blockRef);
+      await createChallenge(cls.id, metric, size, t("class.challengeGoalThemenblock", { block: block.titel.de }), blockRef, endsAt);
       setBlockRef(null);
     } else {
       const n = parseInt(target, 10);
       if (!Number.isFinite(n) || n <= 0) return;
-      await createChallenge(cls.id, metric, n, t(CHALLENGE_METRICS[metric].goalKey, { n }));
+      await createChallenge(cls.id, metric, n, t(CHALLENGE_METRICS[metric].goalKey, { n }), null, endsAt);
       setTarget("");
     }
     await reload();
   };
+
+  const DURATIONS: { key: string; weeks: number | null }[] = [
+    { key: "class.dur1w", weeks: 1 },
+    { key: "class.dur4w", weeks: 4 },
+    { key: "class.dur8w", weeks: 8 },
+    { key: "class.durHalf", weeks: 26 },
+    { key: "class.durNone", weeks: null },
+  ];
+  const statusText = (ch: ClassChallenge) =>
+    !ch.endsAt ? null : challengeEnded(ch.endsAt, now) ? t("class.challengeEnded") : t("class.challengeRunsUntil", { date: formatDateDE(ch.endsAt) });
 
   const removeChallenge = async (id: string) => {
     await deleteChallenge(id);
@@ -264,6 +282,19 @@ export function TeacherClass() {
                 style={styles.input}
               />
             )}
+            <Muted>{t("class.challengeDuration")}</Muted>
+            <View style={styles.metricRow}>
+              {DURATIONS.map((d) => (
+                <Pressable
+                  key={d.key}
+                  testID={`challenge-dur-${d.weeks ?? "none"}`}
+                  onPress={() => setDurationWeeks(d.weeks)}
+                  style={[styles.metricBtn, durationWeeks === d.weeks && styles.metricBtnOn]}
+                >
+                  <Text style={[styles.metricText, durationWeeks === d.weeks && styles.metricTextOn]}>{t(d.key)}</Text>
+                </Pressable>
+              ))}
+            </View>
             <Button
               title={t("class.challengeCreate")}
               onPress={createChallengeFromForm}
@@ -298,6 +329,11 @@ export function TeacherClass() {
                         <ProgressBar value={rows.length ? done / rows.length : 0} variant="gold" />
                         <Muted>{t("class.challengeReached", { done, total: rows.length })}</Muted>
                       </>
+                    )}
+                    {statusText(ch) && (
+                      <Text style={[styles.challengeStatus, challengeEnded(ch.endsAt, now) && styles.challengeStatusEnded]}>
+                        {statusText(ch)}
+                      </Text>
                     )}
                   </View>
                 );
@@ -390,6 +426,8 @@ const makeStyles = (c: Palette) =>
     challengeHead: { flexDirection: "row", justifyContent: "space-between", alignItems: "center" },
     challengeTitle: { fontSize: font.body, fontFamily: fonts.bodySemi, color: c.text, flexShrink: 1, paddingRight: space.sm },
     challengeDelete: { fontSize: font.h3, color: c.muted, fontFamily: fonts.bodyBold },
+    challengeStatus: { fontSize: font.caption, fontFamily: fonts.bodyMed, color: c.success },
+    challengeStatusEnded: { color: c.muted },
     rankRow: { flexDirection: "row", justifyContent: "space-between", paddingVertical: space.xs },
     rankText: { fontSize: font.body, fontFamily: fonts.body, color: c.text },
     rankScore: { fontSize: font.body, fontWeight: "700", fontFamily: fonts.display, color: c.text },

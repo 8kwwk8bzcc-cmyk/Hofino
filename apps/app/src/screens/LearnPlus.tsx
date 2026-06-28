@@ -20,7 +20,14 @@ import {
 import { formatEuros } from "@hofino/core";
 import { supabase } from "../lib/supabase.js";
 import { useStore, type ClassChallenge } from "../store/store.js";
-import { CHALLENGE_METRICS, challengeReached, challengeValue, type ChallengeStudentStats } from "../challengeMetrics.js";
+import {
+  CHALLENGE_METRICS,
+  challengeReached,
+  challengeValue,
+  challengeEnded,
+  formatDateDE,
+  type ChallengeStudentStats,
+} from "../challengeMetrics.js";
 import { AwardBadge, Body, Button, Card, H1, H2, Muted, Pill, ProgressBar } from "../ui/components.js";
 import { font, fonts, radius, space, type Palette } from "../theme.js";
 import { useColors, useThemedStyles } from "../theme/ThemeProvider.js";
@@ -345,6 +352,13 @@ export function LearnPlus() {
                         ? t("learn.challengeClass", { value, target: ch.target })
                         : `${Math.min(value, ch.target)}/${ch.target}`}
                   </Muted>
+                  {ch.endsAt && (
+                    <Muted>
+                      {challengeEnded(ch.endsAt, new Date())
+                        ? t("class.challengeEnded")
+                        : t("class.challengeRunsUntil", { date: formatDateDE(ch.endsAt) })}
+                    </Muted>
+                  )}
                 </View>
               );
             })}

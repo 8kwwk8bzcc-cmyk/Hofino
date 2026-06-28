@@ -74,6 +74,7 @@ export interface ClassChallenge {
   metric: ChallengeMetric;
   target: number;
   ref: string | null;
+  endsAt: string | null;
 }
 
 export type WeekDayStatus = "future" | "today_open" | "completed" | "missed";
@@ -227,7 +228,7 @@ interface StoreApi {
   unassignKonzept: (classId: string, konzeptId: string) => Promise<void>;
   fetchMyAssignments: () => Promise<string[]>;
   fetchClassChallenges: (classId: string) => Promise<ClassChallenge[]>;
-  createChallenge: (classId: string, metric: ChallengeMetric, target: number, title: string, ref?: string | null) => Promise<void>;
+  createChallenge: (classId: string, metric: ChallengeMetric, target: number, title: string, ref?: string | null, endsAt?: string | null) => Promise<void>;
   deleteChallenge: (id: string) => Promise<void>;
   fetchMyChallenges: () => Promise<ClassChallenge[]>;
   fetchClassXp: () => Promise<number>;
@@ -645,25 +646,27 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
     goal_metric: string | null;
     goal_target: number | null;
     goal_ref: string | null;
+    ends_at: string | null;
   }): ClassChallenge => ({
     id: r.id,
     title: r.title,
     metric: (r.goal_metric as ChallengeMetric) ?? "konzepte",
     target: r.goal_target ?? 0,
     ref: r.goal_ref ?? null,
+    endsAt: r.ends_at ?? null,
   });
 
   const fetchClassChallenges = useCallback<StoreApi["fetchClassChallenges"]>(async (classId) => {
     const { data } = await supabase
       .from("challenges")
-      .select("id, title, goal_metric, goal_target, goal_ref")
+      .select("id, title, goal_metric, goal_target, goal_ref, ends_at")
       .eq("class_id", classId)
       .eq("scope", "class")
       .order("created_at", { ascending: true });
     return (data ?? []).map(mapChallenge);
   }, []);
 
-  const createChallenge = useCallback<StoreApi["createChallenge"]>(async (classId, metric, target, title, ref) => {
+  const createChallenge = useCallback<StoreApi["createChallenge"]>(async (classId, metric, target, title, ref, endsAt) => {
     await supabase.from("challenges").insert({
       scope: "class",
       class_id: classId,
@@ -671,6 +674,8 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
       goal_metric: metric,
       goal_target: target,
       goal_ref: ref ?? null,
+      starts_at: new Date().toISOString(),
+      ends_at: endsAt ?? null,
       created_by: dataRef.current.profileId,
     });
   }, []);
@@ -683,7 +688,7 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
   const fetchMyChallenges = useCallback<StoreApi["fetchMyChallenges"]>(async () => {
     const { data } = await supabase
       .from("challenges")
-      .select("id, title, goal_metric, goal_target, goal_ref")
+      .select("id, title, goal_metric, goal_target, goal_ref, ends_at")
       .eq("scope", "class")
       .order("created_at", { ascending: true });
     return (data ?? []).map(mapChallenge);

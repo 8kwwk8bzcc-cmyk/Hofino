@@ -56,6 +56,17 @@ export function challengeReached(metric: ChallengeMetric, value: number, target:
   return CHALLENGE_METRICS[metric].compare === "lte" ? value <= target : value >= target;
 }
 
+/** Challenge nach Enddatum abgelaufen? */
+export function challengeEnded(endsAt: string | null, now: Date): boolean {
+  return !!endsAt && new Date(endsAt).getTime() < now.getTime();
+}
+
+/** ISO-Datum (YYYY-MM-DD…) → TT.MM.JJJJ. */
+export function formatDateDE(iso: string): string {
+  const [y, m, d] = iso.slice(0, 10).split("-");
+  return d && m && y ? `${d}.${m}.${y}` : iso;
+}
+
 export interface ChallengeStudentStats {
   konzepte: number;
   xp: number;

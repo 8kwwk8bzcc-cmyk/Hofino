@@ -118,7 +118,7 @@ async function main() {
   await admin.from("challenges").insert([
     { scope: "class", class_id: cls.id, created_by: c.lehrer.profileId, goal_metric: "konzepte", goal_target: 3, title: "3 Konzepte meistern" },
     { scope: "class", class_id: cls.id, created_by: c.lehrer.profileId, goal_metric: "xp", goal_target: 10, title: "10 Wissenspunkte sammeln" },
-    { scope: "class", class_id: cls.id, created_by: c.lehrer.profileId, goal_metric: "branchen", goal_target: 3, title: "Aus 3 Branchen investieren" },
+    { scope: "class", class_id: cls.id, created_by: c.lehrer.profileId, goal_metric: "branchen", goal_target: 3, title: "Aus 3 Branchen investieren", starts_at: new Date().toISOString(), ends_at: new Date(Date.now() + 28 * 864e5).toISOString() },
     { scope: "class", class_id: cls.id, created_by: c.lehrer.profileId, goal_metric: "wenig_orders", goal_target: 5, title: "Mit höchstens 5 Orders investiert bleiben" },
     { scope: "class", class_id: cls.id, created_by: c.lehrer.profileId, goal_metric: "themenblock", goal_target: 4, goal_ref: "tb_geld_grundlagen", title: "Themenblock „Geld-Grundlagen“ abschließen" },
     { scope: "class", class_id: cls.id, created_by: c.lehrer.profileId, goal_metric: "xp_klasse", goal_target: 50, title: "Gemeinsam 50 Wissenspunkte sammeln" },
