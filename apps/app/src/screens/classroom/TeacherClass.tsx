@@ -19,6 +19,7 @@ import {
   formatDateDE,
   type ChallengeStudentStats,
 } from "../../challengeMetrics.js";
+import { TeacherPresentation } from "./TeacherPresentation.js";
 import { font, fonts, radius, space, type Palette } from "../../theme.js";
 import { useColors, useThemedStyles } from "../../theme/ThemeProvider.js";
 
@@ -45,6 +46,7 @@ export function TeacherClass() {
   const [target, setTarget] = useState("");
   const [blockRef, setBlockRef] = useState<string | null>(null);
   const [durationWeeks, setDurationWeeks] = useState<number | null>(null);
+  const [presenting, setPresenting] = useState(false);
   const now = new Date();
   const [loaded, setLoaded] = useState(false);
   const [name, setName] = useState("");
@@ -174,6 +176,10 @@ export function TeacherClass() {
 
   if (!loaded) return null;
 
+  if (presenting && cls) {
+    return <TeacherPresentation classCode={cls.code} onClose={() => setPresenting(false)} />;
+  }
+
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <H1>{t("tab.class")}</H1>
@@ -202,6 +208,7 @@ export function TeacherClass() {
               {cls.code}
             </Text>
             <Button title={t("class.refresh")} variant="secondary" onPress={reload} testID="refresh-class" />
+            <Button title={t("present.start")} onPress={() => setPresenting(true)} testID="start-present" />
           </Card>
 
           <Card>
