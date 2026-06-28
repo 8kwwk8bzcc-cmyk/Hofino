@@ -100,6 +100,12 @@ export interface JournalEntry {
   createdAt: string;
 }
 
+export interface LessonEntry {
+  name: string;
+  text: string;
+  updatedAt: string;
+}
+
 export interface DividendEntry {
   id: string;
   instrumentId: string;
@@ -232,6 +238,9 @@ interface StoreApi {
   deleteChallenge: (id: string) => Promise<void>;
   fetchMyChallenges: () => Promise<ClassChallenge[]>;
   fetchClassXp: () => Promise<number>;
+  fetchMyLesson: () => Promise<string>;
+  saveLesson: (text: string) => Promise<{ ok: boolean; reason?: string }>;
+  fetchClassLessons: (classId: string) => Promise<LessonEntry[]>;
   fetchDailyPlan: () => Promise<DailyPlan | null>;
   markMarketViewed: () => Promise<void>;
   submitDecision: (
@@ -700,6 +709,26 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
     return data?.ok ? Number(data.sum ?? 0) : 0;
   }, []);
 
+  // Lessons Learned: Schüler liest/speichert eigene Reflexion; Lehrer liest die der Klasse.
+  const fetchMyLesson = useCallback<StoreApi["fetchMyLesson"]>(async () => {
+    const { data } = await supabase.from("lessons_learned").select("text").maybeSingle();
+    return (data?.text as string) ?? "";
+  }, []);
+
+  const saveLesson = useCallback<StoreApi["saveLesson"]>(async (text) => {
+    const { data } = await supabase.rpc("lektion_speichern", { p_text: text });
+    return { ok: !!data?.ok, reason: data?.reason as string | undefined };
+  }, []);
+
+  const fetchClassLessons = useCallback<StoreApi["fetchClassLessons"]>(async (classId) => {
+    const { data } = await supabase.rpc("class_lektionen", { p_class_id: classId });
+    return (data ?? []).map((r: { display_name: string; text: string; updated_at: string }) => ({
+      name: r.display_name,
+      text: r.text,
+      updatedAt: r.updated_at,
+    }));
+  }, []);
+
   // Daily Finance Workout: Tagesplan holen/erzeugen, Schritte markieren.
   const fetchDailyPlan = useCallback<StoreApi["fetchDailyPlan"]>(async () => {
     const { data, error } = await supabase.rpc("tagesplan_heute");
@@ -860,6 +889,9 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
     deleteChallenge,
     fetchMyChallenges,
     fetchClassXp,
+    fetchMyLesson,
+    saveLesson,
+    fetchClassLessons,
     fetchDailyPlan,
     markMarketViewed,
     submitDecision,

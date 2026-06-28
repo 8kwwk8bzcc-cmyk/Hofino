@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useMemo, useState } from "react";
-import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
+import { Pressable, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 import {
   alleKonzepte,
   fragenFuer,
@@ -77,7 +77,7 @@ function baueInstanzBeliebig(konzept: Konzept, rng: () => number): FrageInstanz 
 }
 
 export function LearnPlus() {
-  const { t, state, instrumentById, fetchMyAssignments, fetchMyChallenges, fetchClassXp } = useStore();
+  const { t, state, instrumentById, fetchMyAssignments, fetchMyChallenges, fetchClassXp, fetchMyLesson, saveLesson } = useStore();
   const c = useColors();
   const styles = useThemedStyles(makeStyles);
   const konzepte = alleKonzepte();
@@ -100,6 +100,8 @@ export function LearnPlus() {
   const [challenges, setChallenges] = useState<ClassChallenge[]>([]);
   const [gemeisterteIds, setGemeisterteIds] = useState<Set<string>>(new Set());
   const [classXpSum, setClassXpSum] = useState(0);
+  const [lesson, setLesson] = useState("");
+  const [lessonMsg, setLessonMsg] = useState<string | null>(null);
 
   // Eigene Challenge-Kennzahlen (für die persönliche Fortschrittsanzeige).
   const myStats: ChallengeStudentStats = useMemo(() => {
@@ -154,7 +156,14 @@ export function LearnPlus() {
     setClassXpSum(await fetchClassXp());
     setZugewiesen(new Set(await fetchMyAssignments()));
     setChallenges(await fetchMyChallenges());
-  }, [fetchMyAssignments, fetchMyChallenges, fetchClassXp]);
+    setLesson(await fetchMyLesson());
+  }, [fetchMyAssignments, fetchMyChallenges, fetchClassXp, fetchMyLesson]);
+
+  const speichereLektion = async () => {
+    setLessonMsg(null);
+    const r = await saveLesson(lesson);
+    setLessonMsg(r.ok ? t("learn.lessonSaved") : t(r.reason === "too_short" ? "learn.lessonTooShort" : "learn.lessonError"));
+  };
 
   useEffect(() => {
     ladeStatus();
@@ -369,6 +378,24 @@ export function LearnPlus() {
           <Body>{t("learn.todayCounts", { neu: tages.neu, wieder: tages.wieder })}</Body>
           <ProgressBar value={tages.neu / 10} />
         </Card>
+        <Card>
+          <H2>{t("learn.lessonTitle")}</H2>
+          <Muted>{t("learn.lessonHint")}</Muted>
+          <TextInput
+            testID="lesson-input"
+            value={lesson}
+            onChangeText={(v) => {
+              setLesson(v);
+              setLessonMsg(null);
+            }}
+            placeholder={t("learn.lessonPlaceholder")}
+            placeholderTextColor={c.muted}
+            multiline
+            style={styles.lessonInput}
+          />
+          <Button title={t("learn.lessonSave")} onPress={speichereLektion} disabled={lesson.trim().length < 5} testID="lesson-save" />
+          {lessonMsg && <Muted>{lessonMsg}</Muted>}
+        </Card>
         {faellig.length > 0 && (
           <Card style={{ borderColor: c.gold, borderWidth: 2 }}>
             <H2>{t("learn.miniTask")}</H2>
@@ -532,6 +559,18 @@ const makeStyles = (c: Palette) =>
   StyleSheet.create({
     container: { padding: space.lg, gap: space.md, backgroundColor: c.bg },
     row: { flexDirection: "row", justifyContent: "space-between", alignItems: "center" },
+    lessonInput: {
+      borderWidth: 1,
+      borderColor: c.border,
+      borderRadius: radius.md,
+      padding: space.md,
+      minHeight: 90,
+      textAlignVertical: "top",
+      fontSize: font.body,
+      fontFamily: fonts.body,
+      color: c.text,
+      backgroundColor: c.surface,
+    },
     pillRow: { flexDirection: "row", gap: space.xs, alignItems: "center", flexShrink: 0 },
     option: {
       padding: space.md,

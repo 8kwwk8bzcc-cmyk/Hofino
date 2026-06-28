@@ -7,6 +7,7 @@ import {
   type ChallengeMetric,
   type ClassChallenge,
   type ClassOverviewRow,
+  type LessonEntry,
   type TeacherClass as TClass,
 } from "../../store/store.js";
 import { Body, Button, Card, H1, H2, Muted, Pill, ProgressBar } from "../../ui/components.js";
@@ -34,6 +35,7 @@ export function TeacherClass() {
     fetchClassChallenges,
     createChallenge,
     deleteChallenge,
+    fetchClassLessons,
     t,
   } = useStore();
   const c = useColors();
@@ -42,6 +44,7 @@ export function TeacherClass() {
   const [rows, setRows] = useState<ClassOverviewRow[]>([]);
   const [assigned, setAssigned] = useState<Set<string>>(new Set());
   const [challenges, setChallenges] = useState<ClassChallenge[]>([]);
+  const [lessons, setLessons] = useState<LessonEntry[]>([]);
   const [metric, setMetric] = useState<ChallengeMetric>("konzepte");
   const [target, setTarget] = useState("");
   const [blockRef, setBlockRef] = useState<string | null>(null);
@@ -62,8 +65,9 @@ export function TeacherClass() {
     setRows(c ? await fetchClassOverview(c.id) : []);
     setAssigned(c ? new Set(await fetchAssignments(c.id)) : new Set());
     setChallenges(c ? await fetchClassChallenges(c.id) : []);
+    setLessons(c ? await fetchClassLessons(c.id) : []);
     setLoaded(true);
-  }, [fetchTeacherClass, fetchClassOverview, fetchAssignments, fetchClassChallenges]);
+  }, [fetchTeacherClass, fetchClassOverview, fetchAssignments, fetchClassChallenges, fetchClassLessons]);
 
   // Anzeige-Titel einer Challenge (Themenblock nutzt den gespeicherten Titel mit Blockname).
   const challengeTitle = useCallback(
@@ -377,6 +381,20 @@ export function TeacherClass() {
               ))}
             </Card>
           )}
+
+          <Card>
+            <H2>{t("class.lessonsTitle")}</H2>
+            {lessons.length === 0 ? (
+              <Muted>{t("class.lessonsEmpty")}</Muted>
+            ) : (
+              lessons.map((l, idx) => (
+                <View key={idx} style={styles.lessonRow}>
+                  <Text style={styles.studentName}>{l.name}</Text>
+                  <Body>{l.text}</Body>
+                </View>
+              ))
+            )}
+          </Card>
         </>
       )}
     </ScrollView>
@@ -435,6 +453,7 @@ const makeStyles = (c: Palette) =>
     challengeDelete: { fontSize: font.h3, color: c.muted, fontFamily: fonts.bodyBold },
     challengeStatus: { fontSize: font.caption, fontFamily: fonts.bodyMed, color: c.success },
     challengeStatusEnded: { color: c.muted },
+    lessonRow: { paddingVertical: space.sm, gap: 2, borderTopWidth: 1, borderTopColor: c.border, marginTop: space.xs },
     rankRow: { flexDirection: "row", justifyContent: "space-between", paddingVertical: space.xs },
     rankText: { fontSize: font.body, fontFamily: fonts.body, color: c.text },
     rankScore: { fontSize: font.body, fontWeight: "700", fontFamily: fonts.display, color: c.text },

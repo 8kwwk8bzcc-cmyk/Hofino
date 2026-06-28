@@ -125,6 +125,13 @@ async function main() {
     { scope: "class", class_id: cls.id, created_by: c.lehrer.profileId, goal_metric: "begruendungen", goal_target: 3, title: "3 Entscheidungen begründen" },
   ]);
 
+  // Beispiel-Reflexion (Lessons Learned) – damit das Lehrer-Review etwas zeigt.
+  await admin.from("lessons_learned").upsert({
+    profile_id: c.mia.profileId,
+    class_id: cls.id,
+    text: "Streuung senkt das Risiko. Gebühren fressen Gewinn. Lernen bringt Lernkapital.",
+  });
+
   // Aktivität zurücksetzen + neu erzeugen (reproduzierbar).
   await resetPlayer(c.mia.profileId);
   await resetPlayer(c.tom.profileId);
