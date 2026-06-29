@@ -192,8 +192,10 @@ const de: Dict = {
   // Handeln (TradePanel)
   "trade.price": "Aktueller Kurs",
   "trade.unit": "Stück (ganze)",
+  "trade.quantity": "Anzahl",
   "trade.gross": "Kurswert",
   "trade.fee": "Ordergebühr",
+  "trade.feeFree": "gratis",
   "trade.debit": "Abzug vom Cash",
   "trade.credit": "Gutschrift aufs Cash",
   "trade.buy": "Kaufen üben",
@@ -605,8 +607,10 @@ const en: Dict = {
   // Trading
   "trade.price": "Current price",
   "trade.unit": "shares (whole)",
+  "trade.quantity": "Quantity",
   "trade.gross": "Market value",
   "trade.fee": "Order fee",
+  "trade.feeFree": "free",
   "trade.debit": "Debited from cash",
   "trade.credit": "Credited to cash",
   "trade.buy": "Practice buying",

@@ -273,6 +273,8 @@ export function Input({
   secureTextEntry,
   keyboardType,
   autoCapitalize,
+  returnKeyType,
+  onSubmitEditing,
   testID,
 }: {
   value: string;
@@ -283,6 +285,8 @@ export function Input({
   secureTextEntry?: boolean;
   keyboardType?: "default" | "email-address";
   autoCapitalize?: "none" | "sentences";
+  returnKeyType?: "done" | "search" | "go" | "next";
+  onSubmitEditing?: () => void;
   testID?: string;
 }) {
   const c = useColors();
@@ -300,6 +304,8 @@ export function Input({
         secureTextEntry={secureTextEntry}
         keyboardType={keyboardType}
         autoCapitalize={autoCapitalize}
+        returnKeyType={returnKeyType}
+        onSubmitEditing={onSubmitEditing}
         onFocus={() => setFocused(true)}
         onBlur={() => setFocused(false)}
         style={[

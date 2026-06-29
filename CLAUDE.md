@@ -84,6 +84,10 @@ testbare Funktionen ohne UI und ohne externe Aufrufe.
 - **5 €** (= `500` Cent) **pro Order** (Kauf oder Verkauf), **nicht pro Aktie**.
 - Gebühr wird vollständig in Gewinn/Verlust eingerechnet.
 - Beispiel: 4 Aktien à 120 € = 480 € + 5 € Gebühr = **485 €** Abzug vom Verrechnungskonto.
+- **Ausnahme Ersteinrichtungsassistent:** Die **allererste** Order eines Nutzers (der Übungskauf
+  im Intro, genau 1 Stück) ist **gebührenfrei**. Serverseitig an „erste Order" gekoppelt
+  (`place_order(..., p_waive_fee)` greift nur bei Order-Anzahl 0), daher nicht durch den Client
+  manipulierbar. Alle weiteren Orders kosten regulär 5 €.
 
 ### Lernkapital (virtuell, je Nutzer nur EINMAL pro Ereignis)
 | Ereignis | Lernkapital |

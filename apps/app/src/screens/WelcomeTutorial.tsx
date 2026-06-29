@@ -1,13 +1,25 @@
 import React, { useMemo, useState } from "react";
-import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
+import { Keyboard, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { formatEuros } from "@hofino/core";
+import { COMPANY_PROFILES, ETF_PROFILES } from "@hofino/content";
 import { useStore } from "../store/store.js";
 import { Body, BodyL, Button, Card, H1, H2, InstrumentAvatar, Input, Muted, Pill, StepProgress } from "../ui/components.js";
 import { TradePanel } from "../ui/TradePanel.js";
 import { font, fonts, radius, space, type Palette } from "../theme.js";
-import { useColors, useThemedStyles } from "../theme/ThemeProvider.js";
+import { useThemedStyles } from "../theme/ThemeProvider.js";
 
 type Step = "welcome" | "pick" | "buy" | "learn";
+
+// Kurze Frage/Antwort-Zeile für die Firmen-/ETF-Erklärung im Kauf-Schritt.
+function Field({ q, a }: { q: string; a: string }) {
+  const styles = useThemedStyles(makeStyles);
+  return (
+    <View style={{ gap: 2 }}>
+      <Text style={styles.fieldQ}>{q}</Text>
+      <Body>{a}</Body>
+    </View>
+  );
+}
 
 // Autobauer liegen in der Quelle unter „Consumer Discretionary" – eigene Kategorie per Ticker.
 const AUTO = new Set(["TSLA", "VOW3", "MBG", "BMW", "P911", "RACE", "F", "GM", "TM", "CON"]);
@@ -42,7 +54,6 @@ const CATEGORIES: { key: string; labelKey: string; match: (i: Instrument) => boo
 
 export function WelcomeTutorial({ onFinish, onSkip }: { onFinish: () => void; onSkip: () => void }) {
   const { instruments, prices, instrumentById, t } = useStore();
-  const c = useColors();
   const styles = useThemedStyles(makeStyles);
   const [step, setStep] = useState<Step>("welcome");
   const [query, setQuery] = useState("");
@@ -66,15 +77,30 @@ export function WelcomeTutorial({ onFinish, onSkip }: { onFinish: () => void; on
 
   const stepNum = step === "welcome" ? 1 : step === "pick" ? 2 : step === "buy" ? 3 : 4;
   const chosenInst = chosen ? instrumentById.get(chosen) : undefined;
+  const chosenCompany = chosenInst ? COMPANY_PROFILES.find((p) => p.ticker === chosenInst.ticker) : undefined;
+  const chosenEtf = chosenInst ? ETF_PROFILES.find((p) => p.ticker === chosenInst.ticker) : undefined;
 
   const pick = (id: string) => {
+    Keyboard.dismiss();
     setChosen(id);
     setStep("buy");
   };
 
+  // Tastatur-„Suchen/Enter" bestätigt direkt den ersten Treffer (mobil verdeckt die
+  // Tastatur sonst die Ergebnisliste, sodass kein Tippen auf eine Zeile möglich ist).
+  const submitSearch = () => {
+    if (results.length > 0) pick(results[0].id);
+    else Keyboard.dismiss();
+  };
+
+  const backToPick = () => {
+    setChosen(null);
+    setStep("pick");
+  };
+
   return (
     <View style={styles.overlay}>
-      <ScrollView contentContainerStyle={styles.container} keyboardShouldPersistTaps="handled">
+      <ScrollView contentContainerStyle={styles.container} keyboardShouldPersistTaps="always">
         <View style={styles.headRow}>
           <Pill label={t("tutorial.badge")} tone="good" />
           <Pressable onPress={onSkip} testID="tutorial-skip" hitSlop={8}>
@@ -104,6 +130,8 @@ export function WelcomeTutorial({ onFinish, onSkip }: { onFinish: () => void; on
                 }}
                 placeholder={t("tutorial.searchPlaceholder")}
                 autoCapitalize="none"
+                returnKeyType="search"
+                onSubmitEditing={submitSearch}
                 testID="tutorial-search"
               />
               <Muted>{t("tutorial.noIdea")}</Muted>
@@ -148,17 +176,42 @@ export function WelcomeTutorial({ onFinish, onSkip }: { onFinish: () => void; on
         )}
 
         {step === "buy" && chosenInst && (
-          <Card>
-            <View style={styles.rowLeft}>
-              <InstrumentAvatar name={chosenInst.name} symbol={chosenInst.ticker} type={chosenInst.type} size={44} />
-              <H2>{chosenInst.name}</H2>
-            </View>
-            <Muted>{t("tutorial.buyBody")}</Muted>
-            <TradePanel instrumentId={chosenInst.id} mode="buy" onSuccess={() => setStep("learn")} />
-            <Pressable onPress={() => setStep("pick")} testID="tutorial-pick-other" hitSlop={8}>
-              <Text style={styles.link}>{t("tutorial.buyAnother")}</Text>
-            </Pressable>
-          </Card>
+          <>
+            <Card>
+              <View style={styles.rowLeft}>
+                <InstrumentAvatar name={chosenInst.name} symbol={chosenInst.ticker} type={chosenInst.type} size={44} />
+                <H2>{chosenInst.name}</H2>
+              </View>
+              {chosenCompany && (
+                <View style={styles.profile}>
+                  <Field q={t("discover.qWhat")} a={chosenCompany.whatDoes} />
+                  <Field q={t("discover.qEarns")} a={chosenCompany.howEarns} />
+                </View>
+              )}
+              {chosenEtf && (
+                <View style={styles.profile}>
+                  <Field q={t("discover.etfTracks")} a={chosenEtf.tracks} />
+                  <Field q={t("discover.etfDiversification")} a={chosenEtf.diversification} />
+                </View>
+              )}
+            </Card>
+            <Card>
+              <Muted>{t("tutorial.buyBody")}</Muted>
+              <TradePanel
+                instrumentId={chosenInst.id}
+                mode="buy"
+                fixedQuantity={1}
+                waiveFee
+                onSuccess={() => setStep("learn")}
+              />
+              <Button
+                title={t("tutorial.buyAnother")}
+                variant="secondary"
+                onPress={backToPick}
+                testID="tutorial-pick-other"
+              />
+            </Card>
+          </>
         )}
 
         {step === "learn" && (
@@ -179,7 +232,8 @@ const makeStyles = (c: Palette) =>
     container: { padding: space.lg, gap: space.md, paddingBottom: space.xl * 2 },
     headRow: { flexDirection: "row", justifyContent: "space-between", alignItems: "center" },
     skip: { fontSize: font.body, color: c.muted, fontFamily: fonts.body },
-    link: { fontSize: font.body, color: c.green, fontFamily: fonts.bodySemi, paddingTop: space.sm },
+    profile: { gap: space.sm, marginTop: space.xs },
+    fieldQ: { fontSize: font.small, fontFamily: fonts.bodySemi, color: c.muted },
     chips: { flexDirection: "row", flexWrap: "wrap", gap: space.sm, marginTop: space.xs },
     chip: {
       paddingVertical: space.sm,

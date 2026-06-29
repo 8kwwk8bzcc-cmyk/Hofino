@@ -16,19 +16,26 @@ export function TradePanel({
   instrumentId,
   mode,
   onSuccess,
+  fixedQuantity,
+  waiveFee = false,
 }: {
   instrumentId: string;
   mode: "buy" | "sell";
   onSuccess?: () => void;
+  // Intro: feste Stückzahl (Stepper ausgeblendet) und gebührenfreie erste Order.
+  fixedQuantity?: number;
+  waiveFee?: boolean;
 }) {
   const { prices, buy, sell, state, t } = useStore();
   const styles = useThemedStyles(makeStyles);
-  const [qty, setQty] = useState(1);
+  const [qtyState, setQty] = useState(1);
   const [msg, setMsg] = useState<string | null>(null);
 
+  const qty = fixedQuantity ?? qtyState;
+  const fee = waiveFee ? 0 : ORDER_FEE_CENTS;
   const price = prices.get(instrumentId) ?? 0;
   const gross = price * qty;
-  const total = mode === "buy" ? gross + ORDER_FEE_CENTS : gross - ORDER_FEE_CENTS;
+  const total = mode === "buy" ? gross + fee : gross - fee;
 
   const step = (d: number) => {
     setMsg(null);
@@ -37,7 +44,7 @@ export function TradePanel({
 
   const submit = async () => {
     setMsg(null);
-    const r: OrderOutcome = mode === "buy" ? await buy(instrumentId, qty) : await sell(instrumentId, qty);
+    const r: OrderOutcome = mode === "buy" ? await buy(instrumentId, qty, waiveFee) : await sell(instrumentId, qty);
     if (r.ok) {
       setMsg(t(mode === "buy" ? "trade.bought" : "trade.sold", { qty }));
       setQty(1);
@@ -54,18 +61,25 @@ export function TradePanel({
         <Text style={styles.price}>{formatEuros(price)}</Text>
       </View>
 
-      <View style={styles.stepper}>
-        <Pressable testID="qty-minus" onPress={() => step(-1)} style={styles.stepBtn}>
-          <Text style={styles.stepText}>−</Text>
-        </Pressable>
-        <Text testID="qty-value" style={styles.qty}>
-          {qty}
-        </Text>
-        <Pressable testID="qty-plus" onPress={() => step(1)} style={styles.stepBtn}>
-          <Text style={styles.stepText}>+</Text>
-        </Pressable>
-        <Text style={styles.unit}>{t("trade.unit")}</Text>
-      </View>
+      {fixedQuantity == null ? (
+        <View style={styles.stepper}>
+          <Pressable testID="qty-minus" onPress={() => step(-1)} style={styles.stepBtn}>
+            <Text style={styles.stepText}>−</Text>
+          </Pressable>
+          <Text testID="qty-value" style={styles.qty}>
+            {qty}
+          </Text>
+          <Pressable testID="qty-plus" onPress={() => step(1)} style={styles.stepBtn}>
+            <Text style={styles.stepText}>+</Text>
+          </Pressable>
+          <Text style={styles.unit}>{t("trade.unit")}</Text>
+        </View>
+      ) : (
+        <View style={styles.row}>
+          <Muted>{t("trade.quantity")}</Muted>
+          <Text testID="qty-value" style={styles.val}>{`${qty} ${t("trade.unit")}`}</Text>
+        </View>
+      )}
 
       <View style={styles.breakdown}>
         <View style={styles.row}>
@@ -74,7 +88,11 @@ export function TradePanel({
         </View>
         <View style={styles.row}>
           <Muted>{t("trade.fee")}</Muted>
-          <Text style={styles.val}>{mode === "buy" ? "+ " : "− "}{formatEuros(ORDER_FEE_CENTS)}</Text>
+          {waiveFee ? (
+            <Text style={styles.feeFree}>{t("trade.feeFree")}</Text>
+          ) : (
+            <Text style={styles.val}>{mode === "buy" ? "+ " : "− "}{formatEuros(ORDER_FEE_CENTS)}</Text>
+          )}
         </View>
         <View style={styles.row}>
           <Text style={styles.totalLabel}>{t(mode === "buy" ? "trade.debit" : "trade.credit")}</Text>
@@ -99,6 +117,7 @@ const makeStyles = (c: Palette) =>
     panel: { gap: space.md },
     row: { flexDirection: "row", justifyContent: "space-between", alignItems: "center" },
     price: { fontSize: font.h3, fontWeight: "800", color: c.text, fontFamily: fonts.display },
+    feeFree: { fontSize: font.body, color: c.success, fontWeight: "700", fontFamily: fonts.display },
     stepper: { flexDirection: "row", alignItems: "center", gap: space.md },
     stepBtn: {
       width: 44,

@@ -218,7 +218,7 @@ interface StoreApi {
   createProfile: (name: string, plot: string, role: Role) => Promise<AuthOutcome>;
   signOut: () => Promise<void>;
   completeTutorial: () => void;
-  buy: (instrumentId: string, quantity: number) => Promise<OrderOutcome>;
+  buy: (instrumentId: string, quantity: number, waiveFee?: boolean) => Promise<OrderOutcome>;
   sell: (instrumentId: string, quantity: number) => Promise<OrderOutcome>;
   toggleWatch: (instrumentId: string) => Promise<void>;
   linkChild: (childCode: string) => Promise<AuthOutcome>;
@@ -460,11 +460,12 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   const order = useCallback(
-    async (instrumentId: string, quantity: number, side: "buy" | "sell"): Promise<OrderOutcome> => {
+    async (instrumentId: string, quantity: number, side: "buy" | "sell", waiveFee = false): Promise<OrderOutcome> => {
       const { data: res, error } = await supabase.rpc("place_order", {
         p_instrument: instrumentId,
         p_side: side,
         p_qty: quantity,
+        p_waive_fee: waiveFee,
       });
       if (error) return { ok: false, reason: "error" };
       if (!res?.ok) return { ok: false, reason: (res?.reason as OrderError) ?? "error" };
@@ -869,7 +870,7 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
     createProfile,
     signOut,
     completeTutorial,
-    buy: (id, qty) => order(id, qty, "buy"),
+    buy: (id, qty, waiveFee) => order(id, qty, "buy", waiveFee),
     sell: (id, qty) => order(id, qty, "sell"),
     toggleWatch,
     linkChild,
