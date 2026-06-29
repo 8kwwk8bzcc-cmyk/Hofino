@@ -25,7 +25,7 @@ echo "▶ Cockpit bauen…"
 echo "▶ Server starten (Port 8099)…"
 # alten Server auf 8099 beenden, dann neu starten
 lsof -ti tcp:8099 2>/dev/null | xargs kill -9 2>/dev/null || true
-( cd apps/app/dist && nohup python3 -m http.server 8099 >/tmp/hofino-cockpit.log 2>&1 & )
+( nohup python3 apps/app/scripts/serve-utf8.py 8099 apps/app/dist >/tmp/hofino-cockpit.log 2>&1 & )
 sleep 1
 
 URL="http://localhost:8099/cockpit.html"

@@ -34,4 +34,4 @@ echo ""
 echo "   Test-Login (oder neu registrieren als Kind):"
 echo "   E-Mail: mia@hofino.test   Passwort: hofino-dev-123"
 echo ""
-exec /usr/bin/python3 -m http.server "$PORT" --bind 0.0.0.0 --directory dist
+exec /usr/bin/python3 scripts/serve-utf8.py "$PORT" dist
