@@ -12,20 +12,23 @@ export interface Quote {
 
 export interface MarketDataSource {
   readonly name: string; // landet in prices.source / price_snapshots.source
-  fetchQuotes(providerSymbols: string[]): Promise<Quote[]>;
+  // baseCentsBySymbol: kuratierter Basiskurs je Symbol (vom Aufrufer aus der DB).
+  // Quellen mit echten Kursen (z. B. TwelveData) ignorieren ihn.
+  fetchQuotes(providerSymbols: string[], baseCentsBySymbol?: Record<string, number>): Promise<Quote[]>;
 }
 
-// Deterministische Pseudo-Kurse (Random-Walk je Symbol). Default für lokale Entwicklung
-// und Offline-Fallback ohne Internet/Vertrag.
+// Deterministische Pseudo-Kurse je Symbol. Default für lokale Entwicklung und
+// Offline-Fallback ohne Internet/Vertrag. Schwankt ±12 % um den kuratierten
+// Basiskurs (baseCentsBySymbol); fehlt er, wird er aus der ID abgeleitet.
 export class SimulatedSource implements MarketDataSource {
   readonly name = "simulated";
   constructor(private readonly now: () => number = () => Date.now()) {}
-  async fetchQuotes(providerSymbols: string[]): Promise<Quote[]> {
+  async fetchQuotes(providerSymbols: string[], baseCentsBySymbol?: Record<string, number>): Promise<Quote[]> {
     const atMs = floorToHourMs(this.now());
     const asOf = new Date(atMs).toISOString();
     return providerSymbols.map((s) => ({
       providerSymbol: s,
-      priceCents: priceAtCents(s, deriveBaseCents(s), DEFAULT_VOLATILITY, atMs),
+      priceCents: priceAtCents(s, baseCentsBySymbol?.[s] ?? deriveBaseCents(s), DEFAULT_VOLATILITY, atMs),
       asOf,
     }));
   }

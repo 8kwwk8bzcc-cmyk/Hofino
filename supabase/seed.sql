@@ -176,3 +176,10 @@ insert into prices (instrument_id, price_cents, as_of, source)
 select instrument_id, price_cents, as_of, source from price_snapshots
 on conflict (instrument_id) do update
   set price_cents = excluded.price_cents, as_of = excluded.as_of, source = excluded.source;
+
+-- Basiskurs verankern: der Simulator schwankt realistisch um diesen kuratierten
+-- Startkurs (statt um einen ID-Hash). Siehe Migration 20260629100000_live_prices.
+update instruments i
+set base_price_cents = ps.price_cents
+from price_snapshots ps
+where ps.instrument_id = i.id;

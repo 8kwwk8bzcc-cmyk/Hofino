@@ -39,15 +39,19 @@ Deno.serve(async (req) => {
 
   const { data: instruments, error } = await sb
     .from("instruments")
-    .select("id, ticker, provider_symbol")
+    .select("id, ticker, provider_symbol, base_price_cents")
     .eq("is_active", true);
   if (error) return json({ error: error.message }, 500);
 
-  // Quellen-Symbol → Instrument-ID. Fällt auf ticker zurück, wenn kein provider_symbol gesetzt ist.
+  // Quellen-Symbol → Instrument-ID + kuratierter Basiskurs (für den Simulator).
+  // Fällt auf ticker zurück, wenn kein provider_symbol gesetzt ist.
   const symbolToId = new Map<string, string>();
+  const baseBySymbol: Record<string, number> = {};
   for (const i of instruments ?? []) {
     const sym = (i.provider_symbol ?? i.ticker) as string | null;
-    if (sym) symbolToId.set(sym, i.id as string);
+    if (!sym) continue;
+    symbolToId.set(sym, i.id as string);
+    if (i.base_price_cents != null) baseBySymbol[sym] = Number(i.base_price_cents);
   }
   const total = symbolToId.size;
 
@@ -57,7 +61,7 @@ Deno.serve(async (req) => {
 
   let quotes;
   try {
-    quotes = await source.fetchQuotes([...symbolToId.keys()]);
+    quotes = await source.fetchQuotes([...symbolToId.keys()], baseBySymbol);
   } catch (e) {
     return json({ error: String((e as Error)?.message ?? e) }, 500);
   }
