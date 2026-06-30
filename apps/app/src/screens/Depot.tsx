@@ -1,27 +1,30 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { formatEuros } from "@hofino/core";
-import { useStore, type DividendEntry, type JournalEntry } from "../store/store.js";
+import { useStore, type DividendEntry, type HistoryPoint, type JournalEntry } from "../store/store.js";
 import { Body, Button, Card, H1, H2, InstrumentAvatar, Muted, Pill } from "../ui/components.js";
+import { LineChart } from "../ui/LineChart.js";
 import { TradePanel } from "../ui/TradePanel.js";
 import { useNav } from "../nav.js";
 import { font, fonts, space, type Palette } from "../theme.js";
 import { useColors, useThemedStyles } from "../theme/ThemeProvider.js";
 
 export function Depot() {
-  const { state, prices, derived, instrumentById, fetchDecisionJournal, fetchDividends, t } = useStore();
+  const { state, prices, derived, instrumentById, fetchDecisionJournal, fetchDividends, fetchPortfolioHistory, t } = useStore();
   const go = useNav();
   const c = useColors();
   const styles = useThemedStyles(makeStyles);
   const [sellId, setSellId] = useState<string | null>(null);
   const [journal, setJournal] = useState<JournalEntry[]>([]);
   const [dividends, setDividends] = useState<DividendEntry[]>([]);
+  const [history, setHistory] = useState<HistoryPoint[]>([]);
   const holdings = state.portfolio.holdings;
 
   const loadJournal = useCallback(async () => {
     setJournal(await fetchDecisionJournal());
     setDividends(await fetchDividends());
-  }, [fetchDecisionJournal, fetchDividends]);
+    setHistory(await fetchPortfolioHistory());
+  }, [fetchDecisionJournal, fetchDividends, fetchPortfolioHistory]);
 
   useEffect(() => {
     loadJournal();
@@ -54,6 +57,9 @@ export function Depot() {
         <View style={styles.splitRow}>
           <Muted>{t("depot.cash", { cash: formatEuros(state.portfolio.cashCents) })}</Muted>
           <Muted>{t("depot.positions", { value: formatEuros(derived.holdingsValueCents) })}</Muted>
+        </View>
+        <View style={styles.chartWrap}>
+          <LineChart values={history.map((p) => p.valueCents)} emptyHint={t("chart.valueEmpty")} />
         </View>
       </Card>
 
@@ -159,6 +165,7 @@ const makeStyles = (c: Palette) =>
     big: { fontSize: font.h1, fontWeight: "800", color: c.text, fontFamily: fonts.display },
     calmPct: { fontSize: font.small, color: c.muted, fontWeight: "600", fontFamily: fonts.display },
     splitRow: { flexDirection: "row", justifyContent: "space-between" },
+    chartWrap: { marginTop: space.sm },
     feeCard: { backgroundColor: c.softBlue },
     pos: { paddingVertical: space.sm, borderBottomWidth: 1, borderBottomColor: c.border, gap: space.sm },
     posTop: { flexDirection: "row", alignItems: "center", gap: space.sm },

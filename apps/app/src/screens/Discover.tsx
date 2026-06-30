@@ -4,15 +4,26 @@ import { formatEuros } from "@hofino/core";
 import { COMPANY_PROFILES, ETF_PROFILES } from "@hofino/content";
 import { useStore } from "../store/store.js";
 import { Body, Button, Card, H1, H2, InstrumentAvatar, Muted, Pill } from "../ui/components.js";
+import { LineChart } from "../ui/LineChart.js";
 import { TradePanel } from "../ui/TradePanel.js";
+import type { HistoryPoint } from "../store/store.js";
 import { font, fonts, space, type Palette } from "../theme.js";
 import { useThemedStyles } from "../theme/ThemeProvider.js";
 
 function Detail({ id, onBack }: { id: string; onBack: () => void }) {
-  const { prices, state, toggleWatch, instrumentById, t } = useStore();
+  const { prices, state, toggleWatch, instrumentById, fetchPriceHistory, t } = useStore();
   const styles = useThemedStyles(makeStyles);
   const [buyOpen, setBuyOpen] = useState(false);
+  const [history, setHistory] = useState<HistoryPoint[]>([]);
   const inst = instrumentById.get(id)!;
+
+  useEffect(() => {
+    let alive = true;
+    fetchPriceHistory(id).then((h) => alive && setHistory(h));
+    return () => {
+      alive = false;
+    };
+  }, [id, fetchPriceHistory]);
   const company = COMPANY_PROFILES.find((p) => p.ticker === inst.ticker);
   const etf = ETF_PROFILES.find((p) => p.ticker === inst.ticker);
   const watched = state.watchlist.includes(id);
@@ -32,6 +43,11 @@ function Detail({ id, onBack }: { id: string; onBack: () => void }) {
         <Pill label={inst.sector} />
         <Pill label={inst.country} />
       </View>
+
+      <Card>
+        <H2>{t("chart.priceTitle")}</H2>
+        <LineChart values={history.map((p) => p.valueCents)} emptyHint={t("chart.priceEmpty")} />
+      </Card>
 
       <Button
         title={watched ? t("discover.watchOn") : t("discover.watchAdd")}

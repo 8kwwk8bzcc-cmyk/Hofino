@@ -231,6 +231,9 @@ const de: Dict = {
   "house.ausbauten": "Ausbauten",
   // Depot
   "depot.title": "Depot",
+  "chart.priceTitle": "Kursverlauf",
+  "chart.priceEmpty": "Der Kursverlauf erscheint, sobald ein paar Stundenkurse gesammelt sind.",
+  "chart.valueEmpty": "Deine Depotwert-Kurve wächst mit jedem Tag.",
   "depot.totalValue": "Depotwert gesamt",
   "depot.cash": "Cash: {cash}",
   "depot.positions": "Positionen: {value}",
@@ -646,6 +649,9 @@ const en: Dict = {
   "house.ausbauten": "Extensions",
   // Portfolio
   "depot.title": "Portfolio",
+  "chart.priceTitle": "Price history",
+  "chart.priceEmpty": "The price history appears once a few hourly prices have been collected.",
+  "chart.valueEmpty": "Your portfolio value curve grows every day.",
   "depot.totalValue": "Total portfolio value",
   "depot.cash": "Cash: {cash}",
   "depot.positions": "Positions: {value}",

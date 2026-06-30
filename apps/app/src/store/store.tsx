@@ -114,6 +114,11 @@ export interface DividendEntry {
   paidAt: string;
 }
 
+export interface HistoryPoint {
+  asOf: string;
+  valueCents: number;
+}
+
 export interface ChildSummary {
   profileId: string;
   displayName: string;
@@ -251,6 +256,8 @@ interface StoreApi {
   ) => Promise<{ ok: boolean; reason?: string; xp?: number }>;
   fetchDecisionJournal: () => Promise<JournalEntry[]>;
   fetchDividends: () => Promise<DividendEntry[]>;
+  fetchPriceHistory: (instrumentId: string) => Promise<HistoryPoint[]>;
+  fetchPortfolioHistory: () => Promise<HistoryPoint[]>;
   lang: Lang;
   setLang: (lang: Lang) => void;
   t: (key: string, params?: Record<string, string | number>) => string;
@@ -381,6 +388,8 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
       pendingLinks: (pendingRes.data ?? []).map((r) => ({ parentProfileId: r.parent_profile_id })),
       loading: false,
     });
+    // Tages-Snapshot des Depotwerts festhalten (idempotent), damit die Wertkurve wächst.
+    if (isPlayer) void supabase.rpc("capture_portfolio_snapshot");
    } catch {
      // Netzwerk/Backend nicht erreichbar → nicht hängen bleiben, sondern Login zeigen.
      setData({ ...EMPTY, loading: false });
@@ -796,6 +805,31 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
     }));
   }, []);
 
+  // Kursverlauf eines Instruments (älteste → neueste) für den Detail-Chart.
+  const fetchPriceHistory = useCallback<StoreApi["fetchPriceHistory"]>(async (instrumentId) => {
+    const { data } = await supabase
+      .from("price_snapshots")
+      .select("price_cents, as_of")
+      .eq("instrument_id", instrumentId)
+      .order("as_of", { ascending: false })
+      .limit(60);
+    return (data ?? [])
+      .map((r) => ({ asOf: r.as_of as string, valueCents: Number(r.price_cents ?? 0) }))
+      .reverse();
+  }, []);
+
+  // Depotwert über Zeit (älteste → neueste) für den Depot-Chart.
+  const fetchPortfolioHistory = useCallback<StoreApi["fetchPortfolioHistory"]>(async () => {
+    const { data } = await supabase
+      .from("portfolio_snapshots")
+      .select("total_value_cents, as_of")
+      .order("as_of", { ascending: false })
+      .limit(90);
+    return (data ?? [])
+      .map((r) => ({ asOf: r.as_of as string, valueCents: Number(r.total_value_cents ?? 0) }))
+      .reverse();
+  }, []);
+
   const portfolio: Portfolio = useMemo(
     () => ({
       cashCents: data.cashCents,
@@ -898,6 +932,8 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
     submitDecision,
     fetchDecisionJournal,
     fetchDividends,
+    fetchPriceHistory,
+    fetchPortfolioHistory,
     lang,
     setLang,
     t,
