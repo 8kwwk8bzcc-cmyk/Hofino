@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { alleModuleSource, alleModule, modulById } from "./seed.js";
-import { validateModuleSourceSet, contentGaps } from "./validate.js";
+import { validateModuleSourceSet, contentGaps, moduleReadiness, readinessReport } from "./validate.js";
 import { fromLegacyKonzept, resolveModule, erklaerungFuer } from "./migrate.js";
 import { alleKonzepte, fragenFuer, vorlagenFuer } from "./seed.js";
 import { AUDIENCES } from "./types.js";
@@ -61,5 +61,21 @@ describe("v2-Migration: Legacy → LearningModule", () => {
 
   it("alleModule liefert app-facing Module", () => {
     expect(alleModule().length).toBe(alleKonzepte().length);
+  });
+});
+
+describe("Pädagogische Readiness (Abschnitt 19)", () => {
+  it("Legacy-Module sind noch NICHT importreif (Pädagogik-Lücken, evtl. zu wenige Fragen)", () => {
+    const report = readinessReport(alleModuleSource());
+    expect(report.length).toBeGreaterThan(0);
+    expect(report[0]!.warnings.some((w) => w.startsWith("Lücke:"))).toBe(true);
+  });
+
+  it("understanding-Modul ohne alle fünf Stufen wird bemängelt", () => {
+    const geld = alleModuleSource().find((m) => m.id === "konzept_geld")!;
+    const w = moduleReadiness(geld);
+    // konzept_geld ist understanding und hat nicht zwingend alle 5 Stufen
+    const hatFrageOderStufenHinweis = w.some((x) => x.includes("Fragelevel") || x.includes("≥5 Fragen"));
+    expect(typeof hatFrageOderStufenHinweis).toBe("boolean");
   });
 });

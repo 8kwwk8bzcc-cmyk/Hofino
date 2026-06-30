@@ -7,6 +7,7 @@ import {
   type Audience,
   type LangText,
   type LearningModuleSource,
+  type QuestionLevel,
   type QuestionSource,
   type CalculationTemplateSource,
 } from "./types.js";
@@ -98,4 +99,60 @@ export function contentGaps(modules: readonly LearningModuleSource[]): ContentGa
     if (missing.length) out.push({ moduleId: m.id, missing });
   }
   return out;
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Pädagogische Readiness (Abschnitt 19): WEICHE Regeln für die Import-Reife eines
+// fertigen v2-Moduls. Legacy-migrierte Module erfüllen diese (z. B. ≥5 Fragen über
+// alle Stufen) noch nicht – die Funktion treibt die redaktionelle Fertigstellung.
+// ─────────────────────────────────────────────────────────────────────────────
+const ALL_LEVELS: QuestionLevel[] = ["explain", "recognize", "understand", "apply", "master"];
+
+export interface ReadinessIssue {
+  moduleId: string;
+  warnings: string[];
+}
+
+/** Prüft ein Modul gegen die pädagogischen Mindestanforderungen. Leer = importreif. */
+export function moduleReadiness(m: LearningModuleSource): string[] {
+  const w: string[] = [];
+
+  // Verständnis-Module: ≥5 Fragen, alle fünf Stufen abgedeckt.
+  if (m.type === "understanding") {
+    if (m.questions.length < 5) w.push(`braucht ≥5 Fragen (hat ${m.questions.length})`);
+    const levels = new Set(m.questions.map((q) => q.level));
+    const fehlend = ALL_LEVELS.filter((l) => !levels.has(l));
+    if (fehlend.length) w.push(`Fragelevel fehlen: ${fehlend.join(", ")}`);
+  }
+
+  // Rechnerische Module: ≥1 Vorlage (empfohlen apply + master).
+  if (m.type === "calculation") {
+    const tmpl = m.calculationTemplates ?? [];
+    if (!tmpl.length) w.push("braucht ≥1 calculationTemplate");
+    else if (!tmpl.some((t) => t.level === "master")) w.push("empfohlen: zusätzliche master-Vorlage");
+  }
+
+  // Jede Frage: korrekte Antwort, ≥3 Distraktoren, Nachklärung.
+  m.questions.forEach((q, i) => {
+    if (langLeer(q.correctAnswer)) w.push(`Frage ${i + 1}: correctAnswer fehlt`);
+    if (q.distractors.length < 3) w.push(`Frage ${i + 1}: braucht 3 Distraktoren (hat ${q.distractors.length})`);
+    if (langLeer(q.explanationAfterAnswer)) w.push(`Frage ${i + 1}: explanationAfterAnswer fehlt`);
+    // Distraktoren ab Stufe „understand" sollen echte Fehlvorstellungen sein (closeness ≥2).
+    if ((q.level === "understand" || q.level === "apply" || q.level === "master") &&
+        q.distractors.every((d) => d.closeness < 2)) {
+      w.push(`Frage ${i + 1}: Distraktoren zu „albern" (closeness <2 auf höherer Stufe)`);
+    }
+  });
+
+  // Pädagogik + Zielgruppen vollständig (delegiert an contentGaps-Logik).
+  const gaps = contentGaps([m]);
+  if (gaps.length) w.push(...gaps[0]!.missing.map((g) => `Lücke: ${g}`));
+
+  return w;
+}
+
+export function readinessReport(modules: readonly LearningModuleSource[]): ReadinessIssue[] {
+  return modules
+    .map((m) => ({ moduleId: m.id, warnings: moduleReadiness(m) }))
+    .filter((r) => r.warnings.length > 0);
 }

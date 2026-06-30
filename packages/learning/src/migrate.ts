@@ -124,6 +124,7 @@ export function fromLegacyKonzept(
     glossaryTerms: [],
     teacherSupport: undefined,
     parentSupport: undefined,
+    legacyId: konzept.id,
     _legacy: true,
     _needsContent: needs,
   };
@@ -199,5 +200,7 @@ export function resolveModule(src: LearningModuleSource, lang: "de" | "en" = "de
           everydayExercise: pick(src.parentSupport.everydayExercise, lang),
         }
       : undefined,
+    legacyId: src.legacyId,
+    difficulty: src.difficulty,
   };
 }

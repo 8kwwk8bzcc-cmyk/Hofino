@@ -202,6 +202,8 @@ export const AUDIENCES: readonly Audience[] = ["learners_10_14", "young_adults",
 
 export type ModuleType = "understanding" | "calculation" | "decision" | "reflection";
 
+export type Difficulty = "basic" | "intermediate" | "advanced";
+
 /** Englische Stufen-Namen (1:1 zu `Stufe`). */
 export type QuestionLevel = "explain" | "recognize" | "understand" | "apply" | "master";
 
@@ -312,6 +314,9 @@ export interface LearningModule {
   glossaryTerms: string[];
   teacherSupport?: TeacherSupport;
   parentSupport?: ParentSupport;
+  /** Herkunfts-ID aus dem alten Seed (für Fortschritts-/Content-Migration). */
+  legacyId?: string;
+  difficulty?: Difficulty;
 }
 
 // ── Speicher-/Autorenform (LangText) ────────────────────────────────────────
@@ -352,6 +357,8 @@ export interface LearningModuleSource {
   glossaryTerms: string[];
   teacherSupport?: TeacherSupportSource;
   parentSupport?: ParentSupportSource;
+  legacyId?: string;
+  difficulty?: Difficulty;
   /** Migrations-Marker: true → aus Legacy-Inhalten erzeugt, v2-Felder sind Platzhalter. */
   _legacy?: boolean;
   /** Felder, die noch redaktionell befüllt werden müssen (von migrate.ts gesetzt). */
