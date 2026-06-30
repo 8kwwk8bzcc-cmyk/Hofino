@@ -5,7 +5,8 @@ import unternehmenAktien from "./content/unternehmen_aktien.json";
 import risikoEtf from "./content/risiko_etf.json";
 import depotKosten from "./content/depot_kosten.json";
 import haltungLangfrist from "./content/haltung_langfrist.json";
-import type { Frage, InhaltsSeed, Konzept, Stufe, Themenblock, Vorlage } from "./types.js";
+import type { Frage, InhaltsSeed, Konzept, Stufe, Themenblock, Vorlage, LearningModule, LearningModuleSource } from "./types.js";
+import { fromLegacyKonzept, resolveModule } from "./migrate.js";
 
 const QUELLEN = [
   raw,
@@ -47,4 +48,23 @@ export function fragenFuer(konzeptId: string, stufe?: Stufe): Frage[] {
 
 export function vorlagenFuer(konzeptId: string, stufe?: Stufe): Vorlage[] {
   return SEED.vorlagen.filter((v) => v.konzept_id === konzeptId && (stufe === undefined || v.stufe === stufe));
+}
+
+// ── Neue Bildungsarchitektur (v2): Legacy-Inhalte als LearningModule(Source) ──
+// Solange die Inhalte nicht blockweise neu geschrieben sind, werden sie über
+// fromLegacyKonzept() adaptiert (mit markierten Platzhaltern für v2-Felder).
+
+/** Alle Konzepte als v2-Source-Module (LangText, mit Migrations-Markern). */
+export function alleModuleSource(): LearningModuleSource[] {
+  return SEED.konzepte.map((k) => fromLegacyKonzept(k, fragenFuer(k.id), vorlagenFuer(k.id)));
+}
+
+/** Alle Module app-facing aufgelöst (string), Default-Sprache de. */
+export function alleModule(lang: "de" | "en" = "de"): LearningModule[] {
+  return alleModuleSource().map((m) => resolveModule(m, lang));
+}
+
+export function modulById(id: string, lang: "de" | "en" = "de"): LearningModule | undefined {
+  const k = konzeptById(id);
+  return k ? resolveModule(fromLegacyKonzept(k, fragenFuer(k.id), vorlagenFuer(k.id)), lang) : undefined;
 }
