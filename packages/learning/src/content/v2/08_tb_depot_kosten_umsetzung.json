@@ -1,0 +1,1865 @@
+{
+  "schemaVersion": "2.0.0",
+  "generatedAt": "2026-06-30",
+  "targetGroups": [
+    "learners_10_14",
+    "young_adults",
+    "parents_teachers"
+  ],
+  "blockOrder": 8,
+  "block": {
+    "id": "tb_depot_kosten_umsetzung",
+    "title": "Depot, Kosten und Umsetzung",
+    "unlockLevel": 33,
+    "goal": "Lernende verstehen die praktische Umsetzung von Käufen, Verkäufen, Gebühren, Sparplänen und Dokumentation.",
+    "pedagogicalIdea": "Dieser Block macht aus Anlagewissen Umsetzungskompetenz: Depot, Verrechnungskonto, Orders, Kosten, Sparplan und Entscheidungsdokumentation.",
+    "modules": [
+      {
+        "id": "konzept_depot",
+        "title": "Was ist ein Depot?",
+        "type": "understanding",
+        "unlockLevel": 33,
+        "prerequisites": [
+          "konzept_etf",
+          "konzept_aktie"
+        ],
+        "pedagogy": {
+          "learningGoal": "Depot als Aufbewahrungs- und Verwaltungsort für Wertpapiere verstehen.",
+          "coreIdea": "Im Depot liegen Wertpapiere; auf dem Verrechnungskonto liegt Geld.",
+          "everydayScenario": "Nach dem Kauf siehst du einen ETF als Position im Depot.",
+          "misconception": "Im Depot liegt einfach mein Bargeld.",
+          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Was ist ein Depot?' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
+          "reflectionPrompt": "Welche Fehlvorstellung zu 'Was ist ein Depot?' könnte dich zu einer schlechten Entscheidung verleiten?"
+        },
+        "glossaryTerms": [
+          "Depot",
+          "Wertpapier",
+          "Position",
+          "Aktie",
+          "ETF",
+          "Kurswert",
+          "Verrechnungskonto",
+          "Transaktion"
+        ],
+        "targetGroups": [
+          "learners_10_14",
+          "young_adults",
+          "parents_teachers"
+        ],
+        "explanations": {
+          "learners_10_14": "Was ist ein Depot?: Im Depot liegen Wertpapiere; auf dem Verrechnungskonto liegt Geld. Beispiel: Nach dem Kauf siehst du einen ETF als Position im Depot. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Im Depot liegt einfach mein Bargeld.“.",
+          "young_adults": "Was ist ein Depot?: Im Depot liegen Wertpapiere; auf dem Verrechnungskonto liegt Geld. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Nach dem Kauf siehst du einen ETF als Position im Depot.",
+          "parents_teachers": "Lernziel: Depot als Aufbewahrungs- und Verwaltungsort für Wertpapiere verstehen. Didaktischer Fokus: Im Depot liegen Wertpapiere; auf dem Verrechnungskonto liegt Geld. Typische Fehlvorstellung: „Im Depot liegt einfach mein Bargeld.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+        },
+        "questions": [
+          {
+            "id": "q_depot_001",
+            "level": "explain",
+            "question": "Was beschreibt „Was ist ein Depot?“ am besten?",
+            "points": 100,
+            "correctAnswer": "Im Depot liegen Wertpapiere; auf dem Verrechnungskonto liegt Geld.",
+            "distractors": [
+              {
+                "text": "Im Depot liegt einfach mein Bargeld.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "closeness": 3
+              },
+              {
+                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Richtig: Im Depot liegen Wertpapiere; auf dem Verrechnungskonto liegt Geld."
+          },
+          {
+            "id": "q_depot_002",
+            "level": "recognize",
+            "question": "Welches Beispiel passt am ehesten zu „Was ist ein Depot?“?",
+            "points": 100,
+            "correctAnswer": "Nach dem Kauf siehst du einen ETF als Position im Depot.",
+            "distractors": [
+              {
+                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "closeness": 2
+              },
+              {
+                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "closeness": 3
+              },
+              {
+                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+          },
+          {
+            "id": "q_depot_003",
+            "level": "understand",
+            "question": "Warum ist „Was ist ein Depot?“ für Finanzbildung wichtig?",
+            "points": 120,
+            "correctAnswer": "Depot als Aufbewahrungs- und Verwaltungsort für Wertpapiere verstehen.",
+            "distractors": [
+              {
+                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "closeness": 3
+              },
+              {
+                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "closeness": 2
+              },
+              {
+                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Lernziel ist: Depot als Aufbewahrungs- und Verwaltungsort für Wertpapiere verstehen."
+          },
+          {
+            "id": "q_depot_004",
+            "level": "apply",
+            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "points": 150,
+            "correctAnswer": "Den Begriff verstehen, Beispiele erkennen und ihn von ähnlichen Begriffen abgrenzen.",
+            "distractors": [
+              {
+                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "closeness": 3
+              },
+              {
+                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "closeness": 3
+              },
+              {
+                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+          },
+          {
+            "id": "q_depot_005",
+            "level": "master",
+            "question": "Welche Aussage zu „Was ist ein Depot?“ stimmt am besten?",
+            "points": 200,
+            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "distractors": [
+              {
+                "text": "Es ersetzt jede weitere Prüfung.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert schnelle Gewinne.",
+                "closeness": 3
+              },
+              {
+                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+          }
+        ],
+        "calculationTemplates": [],
+        "teacherSupport": {
+          "competenceGoal": "Depot als Aufbewahrungs- und Verwaltungsort für Wertpapiere verstehen.",
+          "typicalMisconception": "Im Depot liegt einfach mein Bargeld.",
+          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Im Depot liegt einfach mein Bargeld.“ glaubt?",
+          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Was ist ein Depot?“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+        },
+        "parentSupport": {
+          "conversationPrompt": "Wo begegnet uns „Was ist ein Depot?“ im Alltag?",
+          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Was ist ein Depot?“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+        },
+        "reviewStatus": "editorial_review_recommended"
+      },
+      {
+        "id": "konzept_verrechnungskonto",
+        "title": "Was ist ein Verrechnungskonto?",
+        "type": "calculation",
+        "unlockLevel": 33,
+        "prerequisites": [
+          "konzept_depot",
+          "konzept_geld_auf_konto"
+        ],
+        "pedagogy": {
+          "learningGoal": "Verrechnungskonto als Geldseite des Depots verstehen.",
+          "coreIdea": "Das Verrechnungskonto wickelt Käufe, Verkäufe, Gebühren und Ausschüttungen ab.",
+          "everydayScenario": "Beim ETF-Kauf wird Geld vom Verrechnungskonto abgebucht.",
+          "misconception": "Wenn ich einen ETF verkaufe, bekomme ich sofort Bargeld in die Hand.",
+          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Was ist ein Verrechnungskonto?' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
+          "reflectionPrompt": "Welche Fehlvorstellung zu 'Was ist ein Verrechnungskonto?' könnte dich zu einer schlechten Entscheidung verleiten?"
+        },
+        "glossaryTerms": [
+          "Verrechnungskonto",
+          "Kaufbetrag",
+          "Verkaufserlös",
+          "Ausschüttung",
+          "Gebühr",
+          "Kontostand",
+          "Liquidität"
+        ],
+        "targetGroups": [
+          "learners_10_14",
+          "young_adults",
+          "parents_teachers"
+        ],
+        "explanations": {
+          "learners_10_14": "Was ist ein Verrechnungskonto?: Das Verrechnungskonto wickelt Käufe, Verkäufe, Gebühren und Ausschüttungen ab. Beispiel: Beim ETF-Kauf wird Geld vom Verrechnungskonto abgebucht. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Wenn ich einen ETF verkaufe, bekomme ich sofort Bargeld in die Hand.“.",
+          "young_adults": "Was ist ein Verrechnungskonto?: Das Verrechnungskonto wickelt Käufe, Verkäufe, Gebühren und Ausschüttungen ab. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Beim ETF-Kauf wird Geld vom Verrechnungskonto abgebucht.",
+          "parents_teachers": "Lernziel: Verrechnungskonto als Geldseite des Depots verstehen. Didaktischer Fokus: Das Verrechnungskonto wickelt Käufe, Verkäufe, Gebühren und Ausschüttungen ab. Typische Fehlvorstellung: „Wenn ich einen ETF verkaufe, bekomme ich sofort Bargeld in die Hand.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+        },
+        "questions": [
+          {
+            "id": "q_verrechnungskonto_001",
+            "level": "explain",
+            "question": "Was beschreibt „Was ist ein Verrechnungskonto?“ am besten?",
+            "points": 100,
+            "correctAnswer": "Das Verrechnungskonto wickelt Käufe, Verkäufe, Gebühren und Ausschüttungen ab.",
+            "distractors": [
+              {
+                "text": "Wenn ich einen ETF verkaufe, bekomme ich sofort Bargeld in die Hand.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "closeness": 3
+              },
+              {
+                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Richtig: Das Verrechnungskonto wickelt Käufe, Verkäufe, Gebühren und Ausschüttungen ab."
+          },
+          {
+            "id": "q_verrechnungskonto_002",
+            "level": "recognize",
+            "question": "Welches Beispiel passt am ehesten zu „Was ist ein Verrechnungskonto?“?",
+            "points": 100,
+            "correctAnswer": "Beim ETF-Kauf wird Geld vom Verrechnungskonto abgebucht.",
+            "distractors": [
+              {
+                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "closeness": 2
+              },
+              {
+                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "closeness": 3
+              },
+              {
+                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+          },
+          {
+            "id": "q_verrechnungskonto_003",
+            "level": "understand",
+            "question": "Warum ist „Was ist ein Verrechnungskonto?“ für Finanzbildung wichtig?",
+            "points": 120,
+            "correctAnswer": "Verrechnungskonto als Geldseite des Depots verstehen.",
+            "distractors": [
+              {
+                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "closeness": 3
+              },
+              {
+                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "closeness": 2
+              },
+              {
+                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Lernziel ist: Verrechnungskonto als Geldseite des Depots verstehen."
+          },
+          {
+            "id": "q_verrechnungskonto_004",
+            "level": "apply",
+            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "points": 150,
+            "correctAnswer": "Die passenden Werte einsetzen, sauber rechnen und das Ergebnis im Kontext prüfen.",
+            "distractors": [
+              {
+                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "closeness": 3
+              },
+              {
+                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "closeness": 3
+              },
+              {
+                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+          },
+          {
+            "id": "q_verrechnungskonto_005",
+            "level": "master",
+            "question": "Welche Aussage zu „Was ist ein Verrechnungskonto?“ stimmt am besten?",
+            "points": 200,
+            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "distractors": [
+              {
+                "text": "Es ersetzt jede weitere Prüfung.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert schnelle Gewinne.",
+                "closeness": 3
+              },
+              {
+                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+          }
+        ],
+        "calculationTemplates": [
+          {
+            "id": "tmpl_verrechnungskonto_kauf",
+            "level": "apply",
+            "points": 150,
+            "questionTemplate": "Auf dem Verrechnungskonto liegen {start} Euro. Du kaufst für {kauf} Euro und zahlst {gebuehr} Euro Gebühr. Wie viel bleibt übrig?",
+            "parameters": {
+              "start": {
+                "min": 100,
+                "max": 2000
+              },
+              "kauf": {
+                "min": 20,
+                "max": 1500
+              },
+              "gebuehr": {
+                "min": 1,
+                "max": 20
+              }
+            },
+            "solutionFormula": "start - kauf - gebuehr",
+            "distractorFormulas": [
+              "start - kauf",
+              "start + kauf - gebuehr",
+              "start - gebuehr"
+            ],
+            "explanationTemplate": "Vom Startbetrag werden Kaufbetrag und Gebühr abgezogen.",
+            "unit": "Euro"
+          }
+        ],
+        "teacherSupport": {
+          "competenceGoal": "Verrechnungskonto als Geldseite des Depots verstehen.",
+          "typicalMisconception": "Wenn ich einen ETF verkaufe, bekomme ich sofort Bargeld in die Hand.",
+          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Wenn ich einen ETF verkaufe, bekomme ich sofort Bargeld in die Hand.“ glaubt?",
+          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Was ist ein Verrechnungskonto?“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+        },
+        "parentSupport": {
+          "conversationPrompt": "Wo begegnet uns „Was ist ein Verrechnungskonto?“ im Alltag?",
+          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Was ist ein Verrechnungskonto?“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+        },
+        "reviewStatus": "editorial_review_recommended"
+      },
+      {
+        "id": "konzept_kaufen_verkaufen",
+        "title": "Kaufen und Verkaufen",
+        "type": "calculation",
+        "unlockLevel": 34,
+        "prerequisites": [
+          "konzept_verrechnungskonto",
+          "konzept_boerse_als_marktplatz"
+        ],
+        "pedagogy": {
+          "learningGoal": "Kaufen und Verkaufen über Orders verstehen.",
+          "coreIdea": "Kaufen und Verkaufen sind bewusste Aufträge, bei denen Geld und Wertpapier die Seite wechseln.",
+          "everydayScenario": "Eine Kauforder bringt ETF-Anteile ins Depot und belastet das Verrechnungskonto.",
+          "misconception": "Wenn ich auf Kaufen klicke, ist der Preis immer genau der angezeigte Kurs.",
+          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Kaufen und Verkaufen' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
+          "reflectionPrompt": "Welche Fehlvorstellung zu 'Kaufen und Verkaufen' könnte dich zu einer schlechten Entscheidung verleiten?"
+        },
+        "glossaryTerms": [
+          "Order",
+          "Kauforder",
+          "Verkaufsorder",
+          "Ausführung",
+          "Stückzahl",
+          "Kaufbetrag",
+          "Verkaufserlös",
+          "Handelsplatz"
+        ],
+        "targetGroups": [
+          "learners_10_14",
+          "young_adults",
+          "parents_teachers"
+        ],
+        "explanations": {
+          "learners_10_14": "Kaufen und Verkaufen: Kaufen und Verkaufen sind bewusste Aufträge, bei denen Geld und Wertpapier die Seite wechseln. Beispiel: Eine Kauforder bringt ETF-Anteile ins Depot und belastet das Verrechnungskonto. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Wenn ich auf Kaufen klicke, ist der Preis immer genau der angezeigte Kurs.“.",
+          "young_adults": "Kaufen und Verkaufen: Kaufen und Verkaufen sind bewusste Aufträge, bei denen Geld und Wertpapier die Seite wechseln. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Eine Kauforder bringt ETF-Anteile ins Depot und belastet das Verrechnungskonto.",
+          "parents_teachers": "Lernziel: Kaufen und Verkaufen über Orders verstehen. Didaktischer Fokus: Kaufen und Verkaufen sind bewusste Aufträge, bei denen Geld und Wertpapier die Seite wechseln. Typische Fehlvorstellung: „Wenn ich auf Kaufen klicke, ist der Preis immer genau der angezeigte Kurs.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+        },
+        "questions": [
+          {
+            "id": "q_kaufen_verkaufen_001",
+            "level": "explain",
+            "question": "Was beschreibt „Kaufen und Verkaufen“ am besten?",
+            "points": 100,
+            "correctAnswer": "Kaufen und Verkaufen sind bewusste Aufträge, bei denen Geld und Wertpapier die Seite wechseln.",
+            "distractors": [
+              {
+                "text": "Wenn ich auf Kaufen klicke, ist der Preis immer genau der angezeigte Kurs.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "closeness": 3
+              },
+              {
+                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Richtig: Kaufen und Verkaufen sind bewusste Aufträge, bei denen Geld und Wertpapier die Seite wechseln."
+          },
+          {
+            "id": "q_kaufen_verkaufen_002",
+            "level": "recognize",
+            "question": "Welches Beispiel passt am ehesten zu „Kaufen und Verkaufen“?",
+            "points": 100,
+            "correctAnswer": "Eine Kauforder bringt ETF-Anteile ins Depot und belastet das Verrechnungskonto.",
+            "distractors": [
+              {
+                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "closeness": 2
+              },
+              {
+                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "closeness": 3
+              },
+              {
+                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+          },
+          {
+            "id": "q_kaufen_verkaufen_003",
+            "level": "understand",
+            "question": "Warum ist „Kaufen und Verkaufen“ für Finanzbildung wichtig?",
+            "points": 120,
+            "correctAnswer": "Kaufen und Verkaufen über Orders verstehen.",
+            "distractors": [
+              {
+                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "closeness": 3
+              },
+              {
+                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "closeness": 2
+              },
+              {
+                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Lernziel ist: Kaufen und Verkaufen über Orders verstehen."
+          },
+          {
+            "id": "q_kaufen_verkaufen_004",
+            "level": "apply",
+            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "points": 150,
+            "correctAnswer": "Die passenden Werte einsetzen, sauber rechnen und das Ergebnis im Kontext prüfen.",
+            "distractors": [
+              {
+                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "closeness": 3
+              },
+              {
+                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "closeness": 3
+              },
+              {
+                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+          },
+          {
+            "id": "q_kaufen_verkaufen_005",
+            "level": "master",
+            "question": "Welche Aussage zu „Kaufen und Verkaufen“ stimmt am besten?",
+            "points": 200,
+            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "distractors": [
+              {
+                "text": "Es ersetzt jede weitere Prüfung.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert schnelle Gewinne.",
+                "closeness": 3
+              },
+              {
+                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+          }
+        ],
+        "calculationTemplates": [
+          {
+            "id": "tmpl_kaufbetrag",
+            "level": "apply",
+            "points": 150,
+            "questionTemplate": "Du kaufst {anzahl} Anteile zu je {preis} Euro. Wie hoch ist der Kaufbetrag ohne Gebühren?",
+            "parameters": {
+              "anzahl": {
+                "min": 1,
+                "max": 100
+              },
+              "preis": {
+                "min": 5,
+                "max": 300
+              }
+            },
+            "solutionFormula": "anzahl * preis",
+            "distractorFormulas": [
+              "anzahl + preis",
+              "preis - anzahl",
+              "preis"
+            ],
+            "explanationTemplate": "Kaufbetrag = Anzahl mal Preis.",
+            "unit": "Euro"
+          }
+        ],
+        "teacherSupport": {
+          "competenceGoal": "Kaufen und Verkaufen über Orders verstehen.",
+          "typicalMisconception": "Wenn ich auf Kaufen klicke, ist der Preis immer genau der angezeigte Kurs.",
+          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Wenn ich auf Kaufen klicke, ist der Preis immer genau der angezeigte Kurs.“ glaubt?",
+          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Kaufen und Verkaufen“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+        },
+        "parentSupport": {
+          "conversationPrompt": "Wo begegnet uns „Kaufen und Verkaufen“ im Alltag?",
+          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Kaufen und Verkaufen“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+        },
+        "reviewStatus": "editorial_review_recommended"
+      },
+      {
+        "id": "konzept_orderarten",
+        "title": "Orderarten",
+        "type": "decision",
+        "unlockLevel": 34,
+        "prerequisites": [
+          "konzept_kaufen_verkaufen",
+          "konzept_geldkurs_briefkurs"
+        ],
+        "pedagogy": {
+          "learningGoal": "Market- und Limit-Order als unterschiedliche Ausführungslogiken verstehen.",
+          "coreIdea": "Orderarten steuern, ob schnelle Ausführung oder Preisgrenze wichtiger ist.",
+          "everydayScenario": "Du kaufst sofort zum aktuellen Preis oder nur, wenn der Preis höchstens 20 Euro beträgt.",
+          "misconception": "Jede Order funktioniert gleich.",
+          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Orderarten' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
+          "reflectionPrompt": "Welche Fehlvorstellung zu 'Orderarten' könnte dich zu einer schlechten Entscheidung verleiten?"
+        },
+        "glossaryTerms": [
+          "Orderart",
+          "Market-Order",
+          "Limit-Order",
+          "Kauflimit",
+          "Verkaufslimit",
+          "Ausführung",
+          "Preisgrenze"
+        ],
+        "targetGroups": [
+          "learners_10_14",
+          "young_adults",
+          "parents_teachers"
+        ],
+        "explanations": {
+          "learners_10_14": "Orderarten: Orderarten steuern, ob schnelle Ausführung oder Preisgrenze wichtiger ist. Beispiel: Du kaufst sofort zum aktuellen Preis oder nur, wenn der Preis höchstens 20 Euro beträgt. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Jede Order funktioniert gleich.“.",
+          "young_adults": "Orderarten: Orderarten steuern, ob schnelle Ausführung oder Preisgrenze wichtiger ist. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Du kaufst sofort zum aktuellen Preis oder nur, wenn der Preis höchstens 20 Euro beträgt.",
+          "parents_teachers": "Lernziel: Market- und Limit-Order als unterschiedliche Ausführungslogiken verstehen. Didaktischer Fokus: Orderarten steuern, ob schnelle Ausführung oder Preisgrenze wichtiger ist. Typische Fehlvorstellung: „Jede Order funktioniert gleich.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+        },
+        "questions": [
+          {
+            "id": "q_orderarten_001",
+            "level": "explain",
+            "question": "Was beschreibt „Orderarten“ am besten?",
+            "points": 100,
+            "correctAnswer": "Orderarten steuern, ob schnelle Ausführung oder Preisgrenze wichtiger ist.",
+            "distractors": [
+              {
+                "text": "Jede Order funktioniert gleich.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "closeness": 3
+              },
+              {
+                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Richtig: Orderarten steuern, ob schnelle Ausführung oder Preisgrenze wichtiger ist."
+          },
+          {
+            "id": "q_orderarten_002",
+            "level": "recognize",
+            "question": "Welches Beispiel passt am ehesten zu „Orderarten“?",
+            "points": 100,
+            "correctAnswer": "Du kaufst sofort zum aktuellen Preis oder nur, wenn der Preis höchstens 20 Euro beträgt.",
+            "distractors": [
+              {
+                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "closeness": 2
+              },
+              {
+                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "closeness": 3
+              },
+              {
+                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+          },
+          {
+            "id": "q_orderarten_003",
+            "level": "understand",
+            "question": "Warum ist „Orderarten“ für Finanzbildung wichtig?",
+            "points": 120,
+            "correctAnswer": "Market- und Limit-Order als unterschiedliche Ausführungslogiken verstehen.",
+            "distractors": [
+              {
+                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "closeness": 3
+              },
+              {
+                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "closeness": 2
+              },
+              {
+                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Lernziel ist: Market- und Limit-Order als unterschiedliche Ausführungslogiken verstehen."
+          },
+          {
+            "id": "q_orderarten_004",
+            "level": "apply",
+            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "points": 150,
+            "correctAnswer": "Innehalten, Informationen prüfen und erst dann passend zum eigenen Ziel handeln.",
+            "distractors": [
+              {
+                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "closeness": 3
+              },
+              {
+                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "closeness": 3
+              },
+              {
+                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+          },
+          {
+            "id": "q_orderarten_005",
+            "level": "master",
+            "question": "Welche Aussage zu „Orderarten“ stimmt am besten?",
+            "points": 200,
+            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "distractors": [
+              {
+                "text": "Es ersetzt jede weitere Prüfung.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert schnelle Gewinne.",
+                "closeness": 3
+              },
+              {
+                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+          }
+        ],
+        "calculationTemplates": [],
+        "teacherSupport": {
+          "competenceGoal": "Market- und Limit-Order als unterschiedliche Ausführungslogiken verstehen.",
+          "typicalMisconception": "Jede Order funktioniert gleich.",
+          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Jede Order funktioniert gleich.“ glaubt?",
+          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Orderarten“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+        },
+        "parentSupport": {
+          "conversationPrompt": "Wo begegnet uns „Orderarten“ im Alltag?",
+          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Orderarten“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+        },
+        "reviewStatus": "editorial_review_recommended"
+      },
+      {
+        "id": "konzept_ordergebuehren",
+        "title": "Ordergebühren",
+        "type": "calculation",
+        "unlockLevel": 35,
+        "prerequisites": [
+          "konzept_kaufen_verkaufen"
+        ],
+        "pedagogy": {
+          "learningGoal": "Ordergebühren als Transaktionskosten verstehen.",
+          "coreIdea": "Jeder Kauf und Verkauf kann Kosten verursachen; Hofino simuliert 5 Euro pro Order.",
+          "everydayScenario": "Du kaufst für 100 Euro und zahlst zusätzlich 5 Euro Gebühr.",
+          "misconception": "Wenn ich 100 Euro investiere, werden immer genau 100 Euro abgebucht.",
+          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Ordergebühren' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
+          "reflectionPrompt": "Welche Fehlvorstellung zu 'Ordergebühren' könnte dich zu einer schlechten Entscheidung verleiten?"
+        },
+        "glossaryTerms": [
+          "Ordergebühr",
+          "Transaktionskosten",
+          "Kaufgebühr",
+          "Verkaufsgebühr",
+          "Bruttoergebnis",
+          "Nettoergebnis",
+          "Hofino-Simulation"
+        ],
+        "targetGroups": [
+          "learners_10_14",
+          "young_adults",
+          "parents_teachers"
+        ],
+        "explanations": {
+          "learners_10_14": "Ordergebühren: Jeder Kauf und Verkauf kann Kosten verursachen; Hofino simuliert 5 Euro pro Order. Beispiel: Du kaufst für 100 Euro und zahlst zusätzlich 5 Euro Gebühr. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Wenn ich 100 Euro investiere, werden immer genau 100 Euro abgebucht.“.",
+          "young_adults": "Ordergebühren: Jeder Kauf und Verkauf kann Kosten verursachen; Hofino simuliert 5 Euro pro Order. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Du kaufst für 100 Euro und zahlst zusätzlich 5 Euro Gebühr.",
+          "parents_teachers": "Lernziel: Ordergebühren als Transaktionskosten verstehen. Didaktischer Fokus: Jeder Kauf und Verkauf kann Kosten verursachen; Hofino simuliert 5 Euro pro Order. Typische Fehlvorstellung: „Wenn ich 100 Euro investiere, werden immer genau 100 Euro abgebucht.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+        },
+        "questions": [
+          {
+            "id": "q_ordergebuehren_001",
+            "level": "explain",
+            "question": "Was beschreibt „Ordergebühren“ am besten?",
+            "points": 100,
+            "correctAnswer": "Jeder Kauf und Verkauf kann Kosten verursachen; Hofino simuliert 5 Euro pro Order.",
+            "distractors": [
+              {
+                "text": "Wenn ich 100 Euro investiere, werden immer genau 100 Euro abgebucht.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "closeness": 3
+              },
+              {
+                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Richtig: Jeder Kauf und Verkauf kann Kosten verursachen; Hofino simuliert 5 Euro pro Order."
+          },
+          {
+            "id": "q_ordergebuehren_002",
+            "level": "recognize",
+            "question": "Welches Beispiel passt am ehesten zu „Ordergebühren“?",
+            "points": 100,
+            "correctAnswer": "Du kaufst für 100 Euro und zahlst zusätzlich 5 Euro Gebühr.",
+            "distractors": [
+              {
+                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "closeness": 2
+              },
+              {
+                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "closeness": 3
+              },
+              {
+                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+          },
+          {
+            "id": "q_ordergebuehren_003",
+            "level": "understand",
+            "question": "Warum ist „Ordergebühren“ für Finanzbildung wichtig?",
+            "points": 120,
+            "correctAnswer": "Ordergebühren als Transaktionskosten verstehen.",
+            "distractors": [
+              {
+                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "closeness": 3
+              },
+              {
+                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "closeness": 2
+              },
+              {
+                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Lernziel ist: Ordergebühren als Transaktionskosten verstehen."
+          },
+          {
+            "id": "q_ordergebuehren_004",
+            "level": "apply",
+            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "points": 150,
+            "correctAnswer": "Die passenden Werte einsetzen, sauber rechnen und das Ergebnis im Kontext prüfen.",
+            "distractors": [
+              {
+                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "closeness": 3
+              },
+              {
+                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "closeness": 3
+              },
+              {
+                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+          },
+          {
+            "id": "q_ordergebuehren_005",
+            "level": "master",
+            "question": "Welche Aussage zu „Ordergebühren“ stimmt am besten?",
+            "points": 200,
+            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "distractors": [
+              {
+                "text": "Es ersetzt jede weitere Prüfung.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert schnelle Gewinne.",
+                "closeness": 3
+              },
+              {
+                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+          }
+        ],
+        "calculationTemplates": [
+          {
+            "id": "tmpl_ordergebuehr_kauf",
+            "level": "apply",
+            "points": 150,
+            "questionTemplate": "Du kaufst {anzahl} Anteile zu je {preis} Euro. Die Ordergebühr beträgt 5 Euro. Wie viel wird insgesamt abgebucht?",
+            "parameters": {
+              "anzahl": {
+                "min": 1,
+                "max": 50
+              },
+              "preis": {
+                "min": 5,
+                "max": 300
+              }
+            },
+            "solutionFormula": "anzahl * preis + 5",
+            "distractorFormulas": [
+              "anzahl * preis",
+              "anzahl * preis + 5 * anzahl",
+              "anzahl * preis - 5"
+            ],
+            "explanationTemplate": "Kaufbetrag plus einmal 5 Euro Gebühr.",
+            "unit": "Euro"
+          }
+        ],
+        "teacherSupport": {
+          "competenceGoal": "Ordergebühren als Transaktionskosten verstehen.",
+          "typicalMisconception": "Wenn ich 100 Euro investiere, werden immer genau 100 Euro abgebucht.",
+          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Wenn ich 100 Euro investiere, werden immer genau 100 Euro abgebucht.“ glaubt?",
+          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Ordergebühren“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+        },
+        "parentSupport": {
+          "conversationPrompt": "Wo begegnet uns „Ordergebühren“ im Alltag?",
+          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Ordergebühren“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+        },
+        "reviewStatus": "editorial_review_recommended"
+      },
+      {
+        "id": "konzept_spread_kostenfaktor",
+        "title": "Spread als Kostenfaktor",
+        "type": "calculation",
+        "unlockLevel": 35,
+        "prerequisites": [
+          "konzept_spread",
+          "konzept_ordergebuehren"
+        ],
+        "pedagogy": {
+          "learningGoal": "Spread als indirekten Handelskostenfaktor verstehen.",
+          "coreIdea": "Nicht alle Kosten stehen als Gebühr auf der Abrechnung.",
+          "everydayScenario": "Du kaufst zu 101 Euro und könntest sofort nur zu 99 Euro verkaufen.",
+          "misconception": "Wenn keine Gebühr angezeigt wird, ist der Handel kostenlos.",
+          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Spread als Kostenfaktor' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
+          "reflectionPrompt": "Welche Fehlvorstellung zu 'Spread als Kostenfaktor' könnte dich zu einer schlechten Entscheidung verleiten?"
+        },
+        "glossaryTerms": [
+          "Spread",
+          "Geldkurs",
+          "Briefkurs",
+          "implizite Kosten",
+          "Ausführungspreis",
+          "Handelskosten",
+          "Nettorendite"
+        ],
+        "targetGroups": [
+          "learners_10_14",
+          "young_adults",
+          "parents_teachers"
+        ],
+        "explanations": {
+          "learners_10_14": "Spread als Kostenfaktor: Nicht alle Kosten stehen als Gebühr auf der Abrechnung. Beispiel: Du kaufst zu 101 Euro und könntest sofort nur zu 99 Euro verkaufen. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Wenn keine Gebühr angezeigt wird, ist der Handel kostenlos.“.",
+          "young_adults": "Spread als Kostenfaktor: Nicht alle Kosten stehen als Gebühr auf der Abrechnung. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Du kaufst zu 101 Euro und könntest sofort nur zu 99 Euro verkaufen.",
+          "parents_teachers": "Lernziel: Spread als indirekten Handelskostenfaktor verstehen. Didaktischer Fokus: Nicht alle Kosten stehen als Gebühr auf der Abrechnung. Typische Fehlvorstellung: „Wenn keine Gebühr angezeigt wird, ist der Handel kostenlos.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+        },
+        "questions": [
+          {
+            "id": "q_spread_kostenfaktor_001",
+            "level": "explain",
+            "question": "Was beschreibt „Spread als Kostenfaktor“ am besten?",
+            "points": 100,
+            "correctAnswer": "Nicht alle Kosten stehen als Gebühr auf der Abrechnung.",
+            "distractors": [
+              {
+                "text": "Wenn keine Gebühr angezeigt wird, ist der Handel kostenlos.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "closeness": 3
+              },
+              {
+                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Richtig: Nicht alle Kosten stehen als Gebühr auf der Abrechnung."
+          },
+          {
+            "id": "q_spread_kostenfaktor_002",
+            "level": "recognize",
+            "question": "Welches Beispiel passt am ehesten zu „Spread als Kostenfaktor“?",
+            "points": 100,
+            "correctAnswer": "Du kaufst zu 101 Euro und könntest sofort nur zu 99 Euro verkaufen.",
+            "distractors": [
+              {
+                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "closeness": 2
+              },
+              {
+                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "closeness": 3
+              },
+              {
+                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+          },
+          {
+            "id": "q_spread_kostenfaktor_003",
+            "level": "understand",
+            "question": "Warum ist „Spread als Kostenfaktor“ für Finanzbildung wichtig?",
+            "points": 120,
+            "correctAnswer": "Spread als indirekten Handelskostenfaktor verstehen.",
+            "distractors": [
+              {
+                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "closeness": 3
+              },
+              {
+                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "closeness": 2
+              },
+              {
+                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Lernziel ist: Spread als indirekten Handelskostenfaktor verstehen."
+          },
+          {
+            "id": "q_spread_kostenfaktor_004",
+            "level": "apply",
+            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "points": 150,
+            "correctAnswer": "Die passenden Werte einsetzen, sauber rechnen und das Ergebnis im Kontext prüfen.",
+            "distractors": [
+              {
+                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "closeness": 3
+              },
+              {
+                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "closeness": 3
+              },
+              {
+                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+          },
+          {
+            "id": "q_spread_kostenfaktor_005",
+            "level": "master",
+            "question": "Welche Aussage zu „Spread als Kostenfaktor“ stimmt am besten?",
+            "points": 200,
+            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "distractors": [
+              {
+                "text": "Es ersetzt jede weitere Prüfung.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert schnelle Gewinne.",
+                "closeness": 3
+              },
+              {
+                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+          }
+        ],
+        "calculationTemplates": [
+          {
+            "id": "tmpl_spread_kosten",
+            "level": "apply",
+            "points": 150,
+            "questionTemplate": "Der Spread beträgt {spread} Euro pro Anteil. Du handelst {anzahl} Anteile. Wie groß ist der Spread-Abstand insgesamt?",
+            "parameters": {
+              "spread": {
+                "min": 0.1,
+                "max": 5.0
+              },
+              "anzahl": {
+                "min": 1,
+                "max": 200
+              }
+            },
+            "solutionFormula": "spread * anzahl",
+            "distractorFormulas": [
+              "spread + anzahl",
+              "anzahl - spread",
+              "spread"
+            ],
+            "explanationTemplate": "Spread-Abstand insgesamt = Spread pro Anteil mal Anzahl.",
+            "unit": "Euro"
+          }
+        ],
+        "teacherSupport": {
+          "competenceGoal": "Spread als indirekten Handelskostenfaktor verstehen.",
+          "typicalMisconception": "Wenn keine Gebühr angezeigt wird, ist der Handel kostenlos.",
+          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Wenn keine Gebühr angezeigt wird, ist der Handel kostenlos.“ glaubt?",
+          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Spread als Kostenfaktor“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+        },
+        "parentSupport": {
+          "conversationPrompt": "Wo begegnet uns „Spread als Kostenfaktor“ im Alltag?",
+          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Spread als Kostenfaktor“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+        },
+        "reviewStatus": "editorial_review_recommended"
+      },
+      {
+        "id": "konzept_sparplan",
+        "title": "Sparplan",
+        "type": "calculation",
+        "unlockLevel": 36,
+        "prerequisites": [
+          "konzept_langfristig",
+          "konzept_verrechnungskonto"
+        ],
+        "pedagogy": {
+          "learningGoal": "Sparplan als regelmäßige automatische Investition verstehen.",
+          "coreIdea": "Ein Sparplan macht Investieren regelmäßig und planbar.",
+          "everydayScenario": "Du investierst jeden Monat automatisch 25 Euro in einen ETF.",
+          "misconception": "Ein Sparplan garantiert Gewinn.",
+          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Sparplan' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
+          "reflectionPrompt": "Welche Fehlvorstellung zu 'Sparplan' könnte dich zu einer schlechten Entscheidung verleiten?"
+        },
+        "glossaryTerms": [
+          "Sparplan",
+          "Rate",
+          "Ausführung",
+          "Automatisierung",
+          "ETF-Sparplan",
+          "Disziplin",
+          "Verrechnungskonto",
+          "Marktrisiko"
+        ],
+        "targetGroups": [
+          "learners_10_14",
+          "young_adults",
+          "parents_teachers"
+        ],
+        "explanations": {
+          "learners_10_14": "Sparplan: Ein Sparplan macht Investieren regelmäßig und planbar. Beispiel: Du investierst jeden Monat automatisch 25 Euro in einen ETF. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Ein Sparplan garantiert Gewinn.“.",
+          "young_adults": "Sparplan: Ein Sparplan macht Investieren regelmäßig und planbar. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Du investierst jeden Monat automatisch 25 Euro in einen ETF.",
+          "parents_teachers": "Lernziel: Sparplan als regelmäßige automatische Investition verstehen. Didaktischer Fokus: Ein Sparplan macht Investieren regelmäßig und planbar. Typische Fehlvorstellung: „Ein Sparplan garantiert Gewinn.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+        },
+        "questions": [
+          {
+            "id": "q_sparplan_001",
+            "level": "explain",
+            "question": "Was beschreibt „Sparplan“ am besten?",
+            "points": 100,
+            "correctAnswer": "Ein Sparplan macht Investieren regelmäßig und planbar.",
+            "distractors": [
+              {
+                "text": "Ein Sparplan garantiert Gewinn.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "closeness": 3
+              },
+              {
+                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Richtig: Ein Sparplan macht Investieren regelmäßig und planbar."
+          },
+          {
+            "id": "q_sparplan_002",
+            "level": "recognize",
+            "question": "Welches Beispiel passt am ehesten zu „Sparplan“?",
+            "points": 100,
+            "correctAnswer": "Du investierst jeden Monat automatisch 25 Euro in einen ETF.",
+            "distractors": [
+              {
+                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "closeness": 2
+              },
+              {
+                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "closeness": 3
+              },
+              {
+                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+          },
+          {
+            "id": "q_sparplan_003",
+            "level": "understand",
+            "question": "Warum ist „Sparplan“ für Finanzbildung wichtig?",
+            "points": 120,
+            "correctAnswer": "Sparplan als regelmäßige automatische Investition verstehen.",
+            "distractors": [
+              {
+                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "closeness": 3
+              },
+              {
+                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "closeness": 2
+              },
+              {
+                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Lernziel ist: Sparplan als regelmäßige automatische Investition verstehen."
+          },
+          {
+            "id": "q_sparplan_004",
+            "level": "apply",
+            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "points": 150,
+            "correctAnswer": "Die passenden Werte einsetzen, sauber rechnen und das Ergebnis im Kontext prüfen.",
+            "distractors": [
+              {
+                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "closeness": 3
+              },
+              {
+                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "closeness": 3
+              },
+              {
+                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+          },
+          {
+            "id": "q_sparplan_005",
+            "level": "master",
+            "question": "Welche Aussage zu „Sparplan“ stimmt am besten?",
+            "points": 200,
+            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "distractors": [
+              {
+                "text": "Es ersetzt jede weitere Prüfung.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert schnelle Gewinne.",
+                "closeness": 3
+              },
+              {
+                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+          }
+        ],
+        "calculationTemplates": [
+          {
+            "id": "tmpl_sparplan_einzahlungen",
+            "level": "apply",
+            "points": 150,
+            "questionTemplate": "Du investierst {rate} Euro pro Monat für {jahre} Jahre. Wie viel zahlst du insgesamt ein?",
+            "parameters": {
+              "rate": {
+                "min": 10,
+                "max": 200
+              },
+              "jahre": {
+                "min": 1,
+                "max": 20
+              }
+            },
+            "solutionFormula": "rate * 12 * jahre",
+            "distractorFormulas": [
+              "rate * jahre",
+              "rate * 12",
+              "rate + jahre"
+            ],
+            "explanationTemplate": "Monatsrate mal 12 Monate mal Jahre.",
+            "unit": "Euro"
+          }
+        ],
+        "teacherSupport": {
+          "competenceGoal": "Sparplan als regelmäßige automatische Investition verstehen.",
+          "typicalMisconception": "Ein Sparplan garantiert Gewinn.",
+          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Ein Sparplan garantiert Gewinn.“ glaubt?",
+          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Sparplan“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+        },
+        "parentSupport": {
+          "conversationPrompt": "Wo begegnet uns „Sparplan“ im Alltag?",
+          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Sparplan“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+        },
+        "reviewStatus": "editorial_review_recommended"
+      },
+      {
+        "id": "konzept_einmalanlage_vs_sparplan",
+        "title": "Einmalanlage vs. Sparplan",
+        "type": "calculation",
+        "unlockLevel": 36,
+        "prerequisites": [
+          "konzept_sparplan",
+          "konzept_panik",
+          "konzept_fomo"
+        ],
+        "pedagogy": {
+          "learningGoal": "Einmalanlage und Sparplan nach Timing, Risikoempfinden und Disziplin unterscheiden.",
+          "coreIdea": "Einmalanlage investiert sofort; Sparplan verteilt Käufe über Zeit.",
+          "everydayScenario": "Du hast 1.200 Euro und investierst alles sofort oder 100 Euro pro Monat.",
+          "misconception": "Sparplan ist immer besser als Einmalanlage oder umgekehrt.",
+          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Einmalanlage vs. Sparplan' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
+          "reflectionPrompt": "Welche Fehlvorstellung zu 'Einmalanlage vs. Sparplan' könnte dich zu einer schlechten Entscheidung verleiten?"
+        },
+        "glossaryTerms": [
+          "Einmalanlage",
+          "Sparplan",
+          "Timing",
+          "Einstiegszeitpunkt",
+          "gestaffelter Einstieg",
+          "Risikogefühl",
+          "Liquidität"
+        ],
+        "targetGroups": [
+          "learners_10_14",
+          "young_adults",
+          "parents_teachers"
+        ],
+        "explanations": {
+          "learners_10_14": "Einmalanlage vs. Sparplan: Einmalanlage investiert sofort; Sparplan verteilt Käufe über Zeit. Beispiel: Du hast 1.200 Euro und investierst alles sofort oder 100 Euro pro Monat. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Sparplan ist immer besser als Einmalanlage oder umgekehrt.“.",
+          "young_adults": "Einmalanlage vs. Sparplan: Einmalanlage investiert sofort; Sparplan verteilt Käufe über Zeit. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Du hast 1.200 Euro und investierst alles sofort oder 100 Euro pro Monat.",
+          "parents_teachers": "Lernziel: Einmalanlage und Sparplan nach Timing, Risikoempfinden und Disziplin unterscheiden. Didaktischer Fokus: Einmalanlage investiert sofort; Sparplan verteilt Käufe über Zeit. Typische Fehlvorstellung: „Sparplan ist immer besser als Einmalanlage oder umgekehrt.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+        },
+        "questions": [
+          {
+            "id": "q_einmalanlage_vs_sparplan_001",
+            "level": "explain",
+            "question": "Was beschreibt „Einmalanlage vs. Sparplan“ am besten?",
+            "points": 100,
+            "correctAnswer": "Einmalanlage investiert sofort; Sparplan verteilt Käufe über Zeit.",
+            "distractors": [
+              {
+                "text": "Sparplan ist immer besser als Einmalanlage oder umgekehrt.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "closeness": 3
+              },
+              {
+                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Richtig: Einmalanlage investiert sofort; Sparplan verteilt Käufe über Zeit."
+          },
+          {
+            "id": "q_einmalanlage_vs_sparplan_002",
+            "level": "recognize",
+            "question": "Welches Beispiel passt am ehesten zu „Einmalanlage vs. Sparplan“?",
+            "points": 100,
+            "correctAnswer": "Du hast 1.200 Euro und investierst alles sofort oder 100 Euro pro Monat.",
+            "distractors": [
+              {
+                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "closeness": 2
+              },
+              {
+                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "closeness": 3
+              },
+              {
+                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+          },
+          {
+            "id": "q_einmalanlage_vs_sparplan_003",
+            "level": "understand",
+            "question": "Warum ist „Einmalanlage vs. Sparplan“ für Finanzbildung wichtig?",
+            "points": 120,
+            "correctAnswer": "Einmalanlage und Sparplan nach Timing, Risikoempfinden und Disziplin unterscheiden.",
+            "distractors": [
+              {
+                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "closeness": 3
+              },
+              {
+                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "closeness": 2
+              },
+              {
+                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Lernziel ist: Einmalanlage und Sparplan nach Timing, Risikoempfinden und Disziplin unterscheiden."
+          },
+          {
+            "id": "q_einmalanlage_vs_sparplan_004",
+            "level": "apply",
+            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "points": 150,
+            "correctAnswer": "Die passenden Werte einsetzen, sauber rechnen und das Ergebnis im Kontext prüfen.",
+            "distractors": [
+              {
+                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "closeness": 3
+              },
+              {
+                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "closeness": 3
+              },
+              {
+                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+          },
+          {
+            "id": "q_einmalanlage_vs_sparplan_005",
+            "level": "master",
+            "question": "Welche Aussage zu „Einmalanlage vs. Sparplan“ stimmt am besten?",
+            "points": 200,
+            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "distractors": [
+              {
+                "text": "Es ersetzt jede weitere Prüfung.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert schnelle Gewinne.",
+                "closeness": 3
+              },
+              {
+                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+          }
+        ],
+        "calculationTemplates": [
+          {
+            "id": "tmpl_sparplan_verteilung",
+            "level": "apply",
+            "points": 150,
+            "questionTemplate": "Du möchtest {summe} Euro über {monate} Monate gleichmäßig investieren. Wie hoch ist die monatliche Rate?",
+            "parameters": {
+              "summe": {
+                "min": 120,
+                "max": 5000
+              },
+              "monate": {
+                "min": 3,
+                "max": 24
+              }
+            },
+            "solutionFormula": "summe / monate",
+            "distractorFormulas": [
+              "summe * monate",
+              "summe - monate",
+              "summe + monate"
+            ],
+            "explanationTemplate": "Monatsrate = Gesamtsumme geteilt durch Monate.",
+            "unit": "Euro"
+          }
+        ],
+        "teacherSupport": {
+          "competenceGoal": "Einmalanlage und Sparplan nach Timing, Risikoempfinden und Disziplin unterscheiden.",
+          "typicalMisconception": "Sparplan ist immer besser als Einmalanlage oder umgekehrt.",
+          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Sparplan ist immer besser als Einmalanlage oder umgekehrt.“ glaubt?",
+          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Einmalanlage vs. Sparplan“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+        },
+        "parentSupport": {
+          "conversationPrompt": "Wo begegnet uns „Einmalanlage vs. Sparplan“ im Alltag?",
+          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Einmalanlage vs. Sparplan“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+        },
+        "reviewStatus": "editorial_review_recommended"
+      },
+      {
+        "id": "konzept_gebuehren_nettorendite",
+        "title": "Gebühren und Nettorendite",
+        "type": "calculation",
+        "unlockLevel": 37,
+        "prerequisites": [
+          "konzept_ordergebuehren",
+          "konzept_etf_kosten",
+          "konzept_gesamtrendite"
+        ],
+        "pedagogy": {
+          "learningGoal": "Brutto- und Nettoergebnis nach Kosten unterscheiden.",
+          "coreIdea": "Entscheidend ist, was nach Kosten übrig bleibt.",
+          "everydayScenario": "20 Euro Kursgewinn minus 10 Euro Gebühren ergeben 10 Euro netto.",
+          "misconception": "Wenn der Kurs steigt, habe ich automatisch Gewinn gemacht.",
+          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Gebühren und Nettorendite' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
+          "reflectionPrompt": "Welche Fehlvorstellung zu 'Gebühren und Nettorendite' könnte dich zu einer schlechten Entscheidung verleiten?"
+        },
+        "glossaryTerms": [
+          "Brutto",
+          "netto",
+          "Gebühren",
+          "Nettorendite",
+          "Bruttorendite",
+          "Spread",
+          "laufende Kosten",
+          "Ergebnis"
+        ],
+        "targetGroups": [
+          "learners_10_14",
+          "young_adults",
+          "parents_teachers"
+        ],
+        "explanations": {
+          "learners_10_14": "Gebühren und Nettorendite: Entscheidend ist, was nach Kosten übrig bleibt. Beispiel: 20 Euro Kursgewinn minus 10 Euro Gebühren ergeben 10 Euro netto. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Wenn der Kurs steigt, habe ich automatisch Gewinn gemacht.“.",
+          "young_adults": "Gebühren und Nettorendite: Entscheidend ist, was nach Kosten übrig bleibt. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: 20 Euro Kursgewinn minus 10 Euro Gebühren ergeben 10 Euro netto.",
+          "parents_teachers": "Lernziel: Brutto- und Nettoergebnis nach Kosten unterscheiden. Didaktischer Fokus: Entscheidend ist, was nach Kosten übrig bleibt. Typische Fehlvorstellung: „Wenn der Kurs steigt, habe ich automatisch Gewinn gemacht.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+        },
+        "questions": [
+          {
+            "id": "q_gebuehren_nettorendite_001",
+            "level": "explain",
+            "question": "Was beschreibt „Gebühren und Nettorendite“ am besten?",
+            "points": 100,
+            "correctAnswer": "Entscheidend ist, was nach Kosten übrig bleibt.",
+            "distractors": [
+              {
+                "text": "Wenn der Kurs steigt, habe ich automatisch Gewinn gemacht.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "closeness": 3
+              },
+              {
+                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Richtig: Entscheidend ist, was nach Kosten übrig bleibt."
+          },
+          {
+            "id": "q_gebuehren_nettorendite_002",
+            "level": "recognize",
+            "question": "Welches Beispiel passt am ehesten zu „Gebühren und Nettorendite“?",
+            "points": 100,
+            "correctAnswer": "20 Euro Kursgewinn minus 10 Euro Gebühren ergeben 10 Euro netto.",
+            "distractors": [
+              {
+                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "closeness": 2
+              },
+              {
+                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "closeness": 3
+              },
+              {
+                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+          },
+          {
+            "id": "q_gebuehren_nettorendite_003",
+            "level": "understand",
+            "question": "Warum ist „Gebühren und Nettorendite“ für Finanzbildung wichtig?",
+            "points": 120,
+            "correctAnswer": "Brutto- und Nettoergebnis nach Kosten unterscheiden.",
+            "distractors": [
+              {
+                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "closeness": 3
+              },
+              {
+                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "closeness": 2
+              },
+              {
+                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Lernziel ist: Brutto- und Nettoergebnis nach Kosten unterscheiden."
+          },
+          {
+            "id": "q_gebuehren_nettorendite_004",
+            "level": "apply",
+            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "points": 150,
+            "correctAnswer": "Die passenden Werte einsetzen, sauber rechnen und das Ergebnis im Kontext prüfen.",
+            "distractors": [
+              {
+                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "closeness": 3
+              },
+              {
+                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "closeness": 3
+              },
+              {
+                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+          },
+          {
+            "id": "q_gebuehren_nettorendite_005",
+            "level": "master",
+            "question": "Welche Aussage zu „Gebühren und Nettorendite“ stimmt am besten?",
+            "points": 200,
+            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "distractors": [
+              {
+                "text": "Es ersetzt jede weitere Prüfung.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert schnelle Gewinne.",
+                "closeness": 3
+              },
+              {
+                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+          }
+        ],
+        "calculationTemplates": [
+          {
+            "id": "tmpl_nettoergebnis",
+            "level": "apply",
+            "points": 150,
+            "questionTemplate": "Dein Bruttoergebnis beträgt {brutto} Euro. Die Gebühren betragen {gebuehren} Euro. Wie hoch ist das Nettoergebnis?",
+            "parameters": {
+              "brutto": {
+                "min": -200,
+                "max": 500
+              },
+              "gebuehren": {
+                "min": 1,
+                "max": 50
+              }
+            },
+            "solutionFormula": "brutto - gebuehren",
+            "distractorFormulas": [
+              "brutto + gebuehren",
+              "gebuehren - brutto",
+              "brutto"
+            ],
+            "explanationTemplate": "Nettoergebnis = Bruttoergebnis minus Gebühren.",
+            "unit": "Euro"
+          }
+        ],
+        "teacherSupport": {
+          "competenceGoal": "Brutto- und Nettoergebnis nach Kosten unterscheiden.",
+          "typicalMisconception": "Wenn der Kurs steigt, habe ich automatisch Gewinn gemacht.",
+          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Wenn der Kurs steigt, habe ich automatisch Gewinn gemacht.“ glaubt?",
+          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Gebühren und Nettorendite“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+        },
+        "parentSupport": {
+          "conversationPrompt": "Wo begegnet uns „Gebühren und Nettorendite“ im Alltag?",
+          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Gebühren und Nettorendite“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+        },
+        "reviewStatus": "editorial_review_recommended"
+      },
+      {
+        "id": "konzept_entscheidungen_dokumentieren",
+        "title": "Entscheidungen dokumentieren",
+        "type": "reflection",
+        "unlockLevel": 37,
+        "prerequisites": [
+          "konzept_langfristig",
+          "konzept_fomo",
+          "konzept_gebuehren_nettorendite"
+        ],
+        "pedagogy": {
+          "learningGoal": "Anlageentscheidungen begründen und dokumentieren.",
+          "coreIdea": "Wer seine Entscheidung aufschreibt, handelt weniger impulsiv und lernt später besser.",
+          "everydayScenario": "Vor dem Kauf notierst du Ziel, Risiko, Kosten, Zeitraum und Prüftermin.",
+          "misconception": "Wenn ich ein gutes Gefühl habe, brauche ich keinen Plan.",
+          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Entscheidungen dokumentieren' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
+          "reflectionPrompt": "Welche Fehlvorstellung zu 'Entscheidungen dokumentieren' könnte dich zu einer schlechten Entscheidung verleiten?"
+        },
+        "glossaryTerms": [
+          "Investmentnotiz",
+          "Entscheidungstagebuch",
+          "Anlageziel",
+          "Risikoprüfung",
+          "Zeithorizont",
+          "FOMO",
+          "Panikverkauf",
+          "Review"
+        ],
+        "targetGroups": [
+          "learners_10_14",
+          "young_adults",
+          "parents_teachers"
+        ],
+        "explanations": {
+          "learners_10_14": "Entscheidungen dokumentieren: Wer seine Entscheidung aufschreibt, handelt weniger impulsiv und lernt später besser. Beispiel: Vor dem Kauf notierst du Ziel, Risiko, Kosten, Zeitraum und Prüftermin. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Wenn ich ein gutes Gefühl habe, brauche ich keinen Plan.“.",
+          "young_adults": "Entscheidungen dokumentieren: Wer seine Entscheidung aufschreibt, handelt weniger impulsiv und lernt später besser. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Vor dem Kauf notierst du Ziel, Risiko, Kosten, Zeitraum und Prüftermin.",
+          "parents_teachers": "Lernziel: Anlageentscheidungen begründen und dokumentieren. Didaktischer Fokus: Wer seine Entscheidung aufschreibt, handelt weniger impulsiv und lernt später besser. Typische Fehlvorstellung: „Wenn ich ein gutes Gefühl habe, brauche ich keinen Plan.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+        },
+        "questions": [
+          {
+            "id": "q_entscheidungen_dokumentieren_001",
+            "level": "explain",
+            "question": "Was beschreibt „Entscheidungen dokumentieren“ am besten?",
+            "points": 100,
+            "correctAnswer": "Wer seine Entscheidung aufschreibt, handelt weniger impulsiv und lernt später besser.",
+            "distractors": [
+              {
+                "text": "Wenn ich ein gutes Gefühl habe, brauche ich keinen Plan.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "closeness": 3
+              },
+              {
+                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Richtig: Wer seine Entscheidung aufschreibt, handelt weniger impulsiv und lernt später besser."
+          },
+          {
+            "id": "q_entscheidungen_dokumentieren_002",
+            "level": "recognize",
+            "question": "Welches Beispiel passt am ehesten zu „Entscheidungen dokumentieren“?",
+            "points": 100,
+            "correctAnswer": "Vor dem Kauf notierst du Ziel, Risiko, Kosten, Zeitraum und Prüftermin.",
+            "distractors": [
+              {
+                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "closeness": 2
+              },
+              {
+                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "closeness": 3
+              },
+              {
+                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+          },
+          {
+            "id": "q_entscheidungen_dokumentieren_003",
+            "level": "understand",
+            "question": "Warum ist „Entscheidungen dokumentieren“ für Finanzbildung wichtig?",
+            "points": 120,
+            "correctAnswer": "Anlageentscheidungen begründen und dokumentieren.",
+            "distractors": [
+              {
+                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "closeness": 3
+              },
+              {
+                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "closeness": 2
+              },
+              {
+                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Lernziel ist: Anlageentscheidungen begründen und dokumentieren."
+          },
+          {
+            "id": "q_entscheidungen_dokumentieren_004",
+            "level": "apply",
+            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "points": 150,
+            "correctAnswer": "Innehalten, Informationen prüfen und erst dann passend zum eigenen Ziel handeln.",
+            "distractors": [
+              {
+                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "closeness": 3
+              },
+              {
+                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "closeness": 3
+              },
+              {
+                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+          },
+          {
+            "id": "q_entscheidungen_dokumentieren_005",
+            "level": "master",
+            "question": "Welche Aussage zu „Entscheidungen dokumentieren“ stimmt am besten?",
+            "points": 200,
+            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "distractors": [
+              {
+                "text": "Es ersetzt jede weitere Prüfung.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert schnelle Gewinne.",
+                "closeness": 3
+              },
+              {
+                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+          }
+        ],
+        "calculationTemplates": [],
+        "teacherSupport": {
+          "competenceGoal": "Anlageentscheidungen begründen und dokumentieren.",
+          "typicalMisconception": "Wenn ich ein gutes Gefühl habe, brauche ich keinen Plan.",
+          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Wenn ich ein gutes Gefühl habe, brauche ich keinen Plan.“ glaubt?",
+          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Entscheidungen dokumentieren“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+        },
+        "parentSupport": {
+          "conversationPrompt": "Wo begegnet uns „Entscheidungen dokumentieren“ im Alltag?",
+          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Entscheidungen dokumentieren“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+        },
+        "reviewStatus": "editorial_review_recommended"
+      }
+    ]
+  }
+}

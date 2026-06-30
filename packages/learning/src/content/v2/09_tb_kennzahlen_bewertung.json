@@ -1,0 +1,1893 @@
+{
+  "schemaVersion": "2.0.0",
+  "generatedAt": "2026-06-30",
+  "targetGroups": [
+    "learners_10_14",
+    "young_adults",
+    "parents_teachers"
+  ],
+  "blockOrder": 9,
+  "block": {
+    "id": "tb_kennzahlen_bewertung",
+    "title": "Kennzahlen und Bewertung",
+    "unlockLevel": 38,
+    "goal": "Lernende verstehen einfache Bewertungskennzahlen und deren Grenzen.",
+    "pedagogicalIdea": "Dieser Vertiefungsblock vermittelt Kennzahlen als Denkwerkzeuge, nicht als Kauf- oder Verkaufssignale.",
+    "difficulty": "advanced",
+    "modules": [
+      {
+        "id": "konzept_preis_vs_wert",
+        "title": "Preis vs. Wert",
+        "type": "reflection",
+        "unlockLevel": 38,
+        "prerequisites": [
+          "konzept_aktie",
+          "konzept_kurse",
+          "konzept_gute_firma_fallender_kurs"
+        ],
+        "pedagogy": {
+          "learningGoal": "Preis und Wert unterscheiden.",
+          "coreIdea": "Der Preis ist, was man bezahlt; der Wert ist, was man dafür bekommt.",
+          "everydayScenario": "Ein Fahrrad kostet 900 Euro; ob es diesen Preis wert ist, muss geprüft werden.",
+          "misconception": "Wenn eine Aktie teuer ist, ist das Unternehmen automatisch besser.",
+          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Preis vs. Wert' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
+          "reflectionPrompt": "Welche Fehlvorstellung zu 'Preis vs. Wert' könnte dich zu einer schlechten Entscheidung verleiten?"
+        },
+        "glossaryTerms": [
+          "Preis",
+          "Wert",
+          "Bewertung",
+          "Aktienkurs",
+          "teuer",
+          "günstig",
+          "angemessen",
+          "Erwartung"
+        ],
+        "targetGroups": [
+          "learners_10_14",
+          "young_adults",
+          "parents_teachers"
+        ],
+        "explanations": {
+          "learners_10_14": "Preis vs. Wert: Der Preis ist, was man bezahlt; der Wert ist, was man dafür bekommt. Beispiel: Ein Fahrrad kostet 900 Euro; ob es diesen Preis wert ist, muss geprüft werden. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Wenn eine Aktie teuer ist, ist das Unternehmen automatisch besser.“.",
+          "young_adults": "Preis vs. Wert: Der Preis ist, was man bezahlt; der Wert ist, was man dafür bekommt. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Ein Fahrrad kostet 900 Euro; ob es diesen Preis wert ist, muss geprüft werden.",
+          "parents_teachers": "Lernziel: Preis und Wert unterscheiden. Didaktischer Fokus: Der Preis ist, was man bezahlt; der Wert ist, was man dafür bekommt. Typische Fehlvorstellung: „Wenn eine Aktie teuer ist, ist das Unternehmen automatisch besser.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+        },
+        "questions": [
+          {
+            "id": "q_preis_vs_wert_001",
+            "level": "explain",
+            "question": "Was beschreibt „Preis vs. Wert“ am besten?",
+            "points": 100,
+            "correctAnswer": "Der Preis ist, was man bezahlt; der Wert ist, was man dafür bekommt.",
+            "distractors": [
+              {
+                "text": "Wenn eine Aktie teuer ist, ist das Unternehmen automatisch besser.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "closeness": 3
+              },
+              {
+                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Richtig: Der Preis ist, was man bezahlt; der Wert ist, was man dafür bekommt."
+          },
+          {
+            "id": "q_preis_vs_wert_002",
+            "level": "recognize",
+            "question": "Welches Beispiel passt am ehesten zu „Preis vs. Wert“?",
+            "points": 100,
+            "correctAnswer": "Ein Fahrrad kostet 900 Euro; ob es diesen Preis wert ist, muss geprüft werden.",
+            "distractors": [
+              {
+                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "closeness": 2
+              },
+              {
+                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "closeness": 3
+              },
+              {
+                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+          },
+          {
+            "id": "q_preis_vs_wert_003",
+            "level": "understand",
+            "question": "Warum ist „Preis vs. Wert“ für Finanzbildung wichtig?",
+            "points": 120,
+            "correctAnswer": "Preis und Wert unterscheiden.",
+            "distractors": [
+              {
+                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "closeness": 3
+              },
+              {
+                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "closeness": 2
+              },
+              {
+                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Lernziel ist: Preis und Wert unterscheiden."
+          },
+          {
+            "id": "q_preis_vs_wert_004",
+            "level": "apply",
+            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "points": 150,
+            "correctAnswer": "Innehalten, Informationen prüfen und erst dann passend zum eigenen Ziel handeln.",
+            "distractors": [
+              {
+                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "closeness": 3
+              },
+              {
+                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "closeness": 3
+              },
+              {
+                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+          },
+          {
+            "id": "q_preis_vs_wert_005",
+            "level": "master",
+            "question": "Welche Aussage zu „Preis vs. Wert“ stimmt am besten?",
+            "points": 200,
+            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "distractors": [
+              {
+                "text": "Es ersetzt jede weitere Prüfung.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert schnelle Gewinne.",
+                "closeness": 3
+              },
+              {
+                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+          }
+        ],
+        "calculationTemplates": [],
+        "teacherSupport": {
+          "competenceGoal": "Preis und Wert unterscheiden.",
+          "typicalMisconception": "Wenn eine Aktie teuer ist, ist das Unternehmen automatisch besser.",
+          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Wenn eine Aktie teuer ist, ist das Unternehmen automatisch besser.“ glaubt?",
+          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Preis vs. Wert“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+        },
+        "parentSupport": {
+          "conversationPrompt": "Wo begegnet uns „Preis vs. Wert“ im Alltag?",
+          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Preis vs. Wert“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+        },
+        "reviewStatus": "editorial_review_recommended"
+      },
+      {
+        "id": "konzept_gewinn_je_aktie",
+        "title": "Gewinn je Aktie",
+        "type": "calculation",
+        "unlockLevel": 38,
+        "prerequisites": [
+          "konzept_gewinn",
+          "konzept_aktie",
+          "konzept_eigentum_am_unternehmen"
+        ],
+        "pedagogy": {
+          "learningGoal": "Gewinn je Aktie als rechnerischen Gewinnanteil pro Aktie verstehen.",
+          "coreIdea": "Gewinn je Aktie = Gewinn geteilt durch Anzahl der Aktien.",
+          "everydayScenario": "1.000 Euro Gewinn und 100 Aktien ergeben 10 Euro Gewinn je Aktie.",
+          "misconception": "Wenn ein Unternehmen Gewinn macht, bekommt jeder Aktionär diesen Betrag automatisch ausgezahlt.",
+          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Gewinn je Aktie' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
+          "reflectionPrompt": "Welche Fehlvorstellung zu 'Gewinn je Aktie' könnte dich zu einer schlechten Entscheidung verleiten?"
+        },
+        "glossaryTerms": [
+          "Gewinn je Aktie",
+          "EPS",
+          "Gewinn",
+          "Aktienanzahl",
+          "Verwässerung",
+          "Dividende",
+          "Ausschüttung"
+        ],
+        "targetGroups": [
+          "learners_10_14",
+          "young_adults",
+          "parents_teachers"
+        ],
+        "explanations": {
+          "learners_10_14": "Gewinn je Aktie: Gewinn je Aktie = Gewinn geteilt durch Anzahl der Aktien. Beispiel: 1.000 Euro Gewinn und 100 Aktien ergeben 10 Euro Gewinn je Aktie. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Wenn ein Unternehmen Gewinn macht, bekommt jeder Aktionär diesen Betrag automatisch ausgezahlt.“.",
+          "young_adults": "Gewinn je Aktie: Gewinn je Aktie = Gewinn geteilt durch Anzahl der Aktien. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: 1.000 Euro Gewinn und 100 Aktien ergeben 10 Euro Gewinn je Aktie.",
+          "parents_teachers": "Lernziel: Gewinn je Aktie als rechnerischen Gewinnanteil pro Aktie verstehen. Didaktischer Fokus: Gewinn je Aktie = Gewinn geteilt durch Anzahl der Aktien. Typische Fehlvorstellung: „Wenn ein Unternehmen Gewinn macht, bekommt jeder Aktionär diesen Betrag automatisch ausgezahlt.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+        },
+        "questions": [
+          {
+            "id": "q_gewinn_je_aktie_001",
+            "level": "explain",
+            "question": "Was beschreibt „Gewinn je Aktie“ am besten?",
+            "points": 100,
+            "correctAnswer": "Gewinn je Aktie = Gewinn geteilt durch Anzahl der Aktien.",
+            "distractors": [
+              {
+                "text": "Wenn ein Unternehmen Gewinn macht, bekommt jeder Aktionär diesen Betrag automatisch ausgezahlt.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "closeness": 3
+              },
+              {
+                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Richtig: Gewinn je Aktie = Gewinn geteilt durch Anzahl der Aktien."
+          },
+          {
+            "id": "q_gewinn_je_aktie_002",
+            "level": "recognize",
+            "question": "Welches Beispiel passt am ehesten zu „Gewinn je Aktie“?",
+            "points": 100,
+            "correctAnswer": "1.000 Euro Gewinn und 100 Aktien ergeben 10 Euro Gewinn je Aktie.",
+            "distractors": [
+              {
+                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "closeness": 2
+              },
+              {
+                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "closeness": 3
+              },
+              {
+                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+          },
+          {
+            "id": "q_gewinn_je_aktie_003",
+            "level": "understand",
+            "question": "Warum ist „Gewinn je Aktie“ für Finanzbildung wichtig?",
+            "points": 120,
+            "correctAnswer": "Gewinn je Aktie als rechnerischen Gewinnanteil pro Aktie verstehen.",
+            "distractors": [
+              {
+                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "closeness": 3
+              },
+              {
+                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "closeness": 2
+              },
+              {
+                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Lernziel ist: Gewinn je Aktie als rechnerischen Gewinnanteil pro Aktie verstehen."
+          },
+          {
+            "id": "q_gewinn_je_aktie_004",
+            "level": "apply",
+            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "points": 150,
+            "correctAnswer": "Die passenden Werte einsetzen, sauber rechnen und das Ergebnis im Kontext prüfen.",
+            "distractors": [
+              {
+                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "closeness": 3
+              },
+              {
+                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "closeness": 3
+              },
+              {
+                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+          },
+          {
+            "id": "q_gewinn_je_aktie_005",
+            "level": "master",
+            "question": "Welche Aussage zu „Gewinn je Aktie“ stimmt am besten?",
+            "points": 200,
+            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "distractors": [
+              {
+                "text": "Es ersetzt jede weitere Prüfung.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert schnelle Gewinne.",
+                "closeness": 3
+              },
+              {
+                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+          }
+        ],
+        "calculationTemplates": [
+          {
+            "id": "tmpl_eps",
+            "level": "apply",
+            "points": 150,
+            "questionTemplate": "Ein Unternehmen macht {gewinn} Euro Gewinn und hat {aktien} Aktien. Wie hoch ist der Gewinn je Aktie?",
+            "parameters": {
+              "gewinn": {
+                "min": 100,
+                "max": 10000
+              },
+              "aktien": {
+                "min": 10,
+                "max": 1000
+              }
+            },
+            "solutionFormula": "gewinn / aktien",
+            "distractorFormulas": [
+              "gewinn * aktien",
+              "gewinn + aktien",
+              "aktien / gewinn"
+            ],
+            "explanationTemplate": "Gewinn je Aktie = Gewinn geteilt durch Anzahl der Aktien.",
+            "unit": "Euro"
+          }
+        ],
+        "teacherSupport": {
+          "competenceGoal": "Gewinn je Aktie als rechnerischen Gewinnanteil pro Aktie verstehen.",
+          "typicalMisconception": "Wenn ein Unternehmen Gewinn macht, bekommt jeder Aktionär diesen Betrag automatisch ausgezahlt.",
+          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Wenn ein Unternehmen Gewinn macht, bekommt jeder Aktionär diesen Betrag automatisch ausgezahlt.“ glaubt?",
+          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Gewinn je Aktie“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+        },
+        "parentSupport": {
+          "conversationPrompt": "Wo begegnet uns „Gewinn je Aktie“ im Alltag?",
+          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Gewinn je Aktie“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+        },
+        "reviewStatus": "editorial_review_recommended"
+      },
+      {
+        "id": "konzept_kgv",
+        "title": "KGV – Kurs-Gewinn-Verhältnis",
+        "type": "calculation",
+        "unlockLevel": 39,
+        "prerequisites": [
+          "konzept_preis_vs_wert",
+          "konzept_gewinn_je_aktie"
+        ],
+        "pedagogy": {
+          "learningGoal": "KGV als Verhältnis von Aktienkurs zu Gewinn je Aktie verstehen.",
+          "coreIdea": "Das KGV zeigt, wie viele Euro Anleger für 1 Euro Gewinn je Aktie bezahlen.",
+          "everydayScenario": "Eine Aktie kostet 100 Euro und verdient 5 Euro je Aktie; KGV = 20.",
+          "misconception": "Ein niedriges KGV bedeutet automatisch: gute Aktie.",
+          "transferTask": "Beschreibe ein eigenes Beispiel zu 'KGV – Kurs-Gewinn-Verhältnis' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
+          "reflectionPrompt": "Welche Fehlvorstellung zu 'KGV – Kurs-Gewinn-Verhältnis' könnte dich zu einer schlechten Entscheidung verleiten?"
+        },
+        "glossaryTerms": [
+          "KGV",
+          "Kurs-Gewinn-Verhältnis",
+          "Aktienkurs",
+          "Gewinn je Aktie",
+          "Bewertung",
+          "Wachstum",
+          "Gewinnqualität"
+        ],
+        "targetGroups": [
+          "learners_10_14",
+          "young_adults",
+          "parents_teachers"
+        ],
+        "explanations": {
+          "learners_10_14": "KGV – Kurs-Gewinn-Verhältnis: Das KGV zeigt, wie viele Euro Anleger für 1 Euro Gewinn je Aktie bezahlen. Beispiel: Eine Aktie kostet 100 Euro und verdient 5 Euro je Aktie; KGV = 20. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Ein niedriges KGV bedeutet automatisch: gute Aktie.“.",
+          "young_adults": "KGV – Kurs-Gewinn-Verhältnis: Das KGV zeigt, wie viele Euro Anleger für 1 Euro Gewinn je Aktie bezahlen. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Eine Aktie kostet 100 Euro und verdient 5 Euro je Aktie; KGV = 20.",
+          "parents_teachers": "Lernziel: KGV als Verhältnis von Aktienkurs zu Gewinn je Aktie verstehen. Didaktischer Fokus: Das KGV zeigt, wie viele Euro Anleger für 1 Euro Gewinn je Aktie bezahlen. Typische Fehlvorstellung: „Ein niedriges KGV bedeutet automatisch: gute Aktie.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+        },
+        "questions": [
+          {
+            "id": "q_kgv_001",
+            "level": "explain",
+            "question": "Was beschreibt „KGV – Kurs-Gewinn-Verhältnis“ am besten?",
+            "points": 100,
+            "correctAnswer": "Das KGV zeigt, wie viele Euro Anleger für 1 Euro Gewinn je Aktie bezahlen.",
+            "distractors": [
+              {
+                "text": "Ein niedriges KGV bedeutet automatisch: gute Aktie.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "closeness": 3
+              },
+              {
+                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Richtig: Das KGV zeigt, wie viele Euro Anleger für 1 Euro Gewinn je Aktie bezahlen."
+          },
+          {
+            "id": "q_kgv_002",
+            "level": "recognize",
+            "question": "Welches Beispiel passt am ehesten zu „KGV – Kurs-Gewinn-Verhältnis“?",
+            "points": 100,
+            "correctAnswer": "Eine Aktie kostet 100 Euro und verdient 5 Euro je Aktie; KGV = 20.",
+            "distractors": [
+              {
+                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "closeness": 2
+              },
+              {
+                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "closeness": 3
+              },
+              {
+                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+          },
+          {
+            "id": "q_kgv_003",
+            "level": "understand",
+            "question": "Warum ist „KGV – Kurs-Gewinn-Verhältnis“ für Finanzbildung wichtig?",
+            "points": 120,
+            "correctAnswer": "KGV als Verhältnis von Aktienkurs zu Gewinn je Aktie verstehen.",
+            "distractors": [
+              {
+                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "closeness": 3
+              },
+              {
+                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "closeness": 2
+              },
+              {
+                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Lernziel ist: KGV als Verhältnis von Aktienkurs zu Gewinn je Aktie verstehen."
+          },
+          {
+            "id": "q_kgv_004",
+            "level": "apply",
+            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "points": 150,
+            "correctAnswer": "Die passenden Werte einsetzen, sauber rechnen und das Ergebnis im Kontext prüfen.",
+            "distractors": [
+              {
+                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "closeness": 3
+              },
+              {
+                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "closeness": 3
+              },
+              {
+                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+          },
+          {
+            "id": "q_kgv_005",
+            "level": "master",
+            "question": "Welche Aussage zu „KGV – Kurs-Gewinn-Verhältnis“ stimmt am besten?",
+            "points": 200,
+            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "distractors": [
+              {
+                "text": "Es ersetzt jede weitere Prüfung.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert schnelle Gewinne.",
+                "closeness": 3
+              },
+              {
+                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+          }
+        ],
+        "calculationTemplates": [
+          {
+            "id": "tmpl_kgv",
+            "level": "apply",
+            "points": 150,
+            "questionTemplate": "Eine Aktie kostet {kurs} Euro. Der Gewinn je Aktie beträgt {eps} Euro. Wie hoch ist das KGV?",
+            "parameters": {
+              "kurs": {
+                "min": 10,
+                "max": 500
+              },
+              "eps": {
+                "min": 1,
+                "max": 50
+              }
+            },
+            "solutionFormula": "kurs / eps",
+            "distractorFormulas": [
+              "kurs + eps",
+              "kurs - eps",
+              "eps / kurs"
+            ],
+            "explanationTemplate": "KGV = Aktienkurs geteilt durch Gewinn je Aktie."
+          }
+        ],
+        "teacherSupport": {
+          "competenceGoal": "KGV als Verhältnis von Aktienkurs zu Gewinn je Aktie verstehen.",
+          "typicalMisconception": "Ein niedriges KGV bedeutet automatisch: gute Aktie.",
+          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Ein niedriges KGV bedeutet automatisch: gute Aktie.“ glaubt?",
+          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „KGV – Kurs-Gewinn-Verhältnis“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+        },
+        "parentSupport": {
+          "conversationPrompt": "Wo begegnet uns „KGV – Kurs-Gewinn-Verhältnis“ im Alltag?",
+          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „KGV – Kurs-Gewinn-Verhältnis“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+        },
+        "reviewStatus": "editorial_review_recommended"
+      },
+      {
+        "id": "konzept_kuv",
+        "title": "KUV – Kurs-Umsatz-Verhältnis",
+        "type": "calculation",
+        "unlockLevel": 39,
+        "prerequisites": [
+          "konzept_umsatz",
+          "konzept_preis_vs_wert",
+          "konzept_marktkapitalisierung"
+        ],
+        "pedagogy": {
+          "learningGoal": "KUV als Verhältnis von Börsenwert zu Umsatz verstehen.",
+          "coreIdea": "Das KUV zeigt, wie der Markt ein Unternehmen im Verhältnis zu seinem Umsatz bewertet.",
+          "everydayScenario": "Ein Unternehmen ist 1.000 Euro wert und macht 500 Euro Umsatz; KUV = 2.",
+          "misconception": "Wenn der Umsatz hoch ist, ist die Aktie automatisch günstig.",
+          "transferTask": "Beschreibe ein eigenes Beispiel zu 'KUV – Kurs-Umsatz-Verhältnis' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
+          "reflectionPrompt": "Welche Fehlvorstellung zu 'KUV – Kurs-Umsatz-Verhältnis' könnte dich zu einer schlechten Entscheidung verleiten?"
+        },
+        "glossaryTerms": [
+          "KUV",
+          "Kurs-Umsatz-Verhältnis",
+          "Umsatz",
+          "Marktkapitalisierung",
+          "Bewertung",
+          "Marge",
+          "Profitabilität"
+        ],
+        "targetGroups": [
+          "learners_10_14",
+          "young_adults",
+          "parents_teachers"
+        ],
+        "explanations": {
+          "learners_10_14": "KUV – Kurs-Umsatz-Verhältnis: Das KUV zeigt, wie der Markt ein Unternehmen im Verhältnis zu seinem Umsatz bewertet. Beispiel: Ein Unternehmen ist 1.000 Euro wert und macht 500 Euro Umsatz; KUV = 2. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Wenn der Umsatz hoch ist, ist die Aktie automatisch günstig.“.",
+          "young_adults": "KUV – Kurs-Umsatz-Verhältnis: Das KUV zeigt, wie der Markt ein Unternehmen im Verhältnis zu seinem Umsatz bewertet. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Ein Unternehmen ist 1.000 Euro wert und macht 500 Euro Umsatz; KUV = 2.",
+          "parents_teachers": "Lernziel: KUV als Verhältnis von Börsenwert zu Umsatz verstehen. Didaktischer Fokus: Das KUV zeigt, wie der Markt ein Unternehmen im Verhältnis zu seinem Umsatz bewertet. Typische Fehlvorstellung: „Wenn der Umsatz hoch ist, ist die Aktie automatisch günstig.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+        },
+        "questions": [
+          {
+            "id": "q_kuv_001",
+            "level": "explain",
+            "question": "Was beschreibt „KUV – Kurs-Umsatz-Verhältnis“ am besten?",
+            "points": 100,
+            "correctAnswer": "Das KUV zeigt, wie der Markt ein Unternehmen im Verhältnis zu seinem Umsatz bewertet.",
+            "distractors": [
+              {
+                "text": "Wenn der Umsatz hoch ist, ist die Aktie automatisch günstig.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "closeness": 3
+              },
+              {
+                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Richtig: Das KUV zeigt, wie der Markt ein Unternehmen im Verhältnis zu seinem Umsatz bewertet."
+          },
+          {
+            "id": "q_kuv_002",
+            "level": "recognize",
+            "question": "Welches Beispiel passt am ehesten zu „KUV – Kurs-Umsatz-Verhältnis“?",
+            "points": 100,
+            "correctAnswer": "Ein Unternehmen ist 1.000 Euro wert und macht 500 Euro Umsatz; KUV = 2.",
+            "distractors": [
+              {
+                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "closeness": 2
+              },
+              {
+                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "closeness": 3
+              },
+              {
+                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+          },
+          {
+            "id": "q_kuv_003",
+            "level": "understand",
+            "question": "Warum ist „KUV – Kurs-Umsatz-Verhältnis“ für Finanzbildung wichtig?",
+            "points": 120,
+            "correctAnswer": "KUV als Verhältnis von Börsenwert zu Umsatz verstehen.",
+            "distractors": [
+              {
+                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "closeness": 3
+              },
+              {
+                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "closeness": 2
+              },
+              {
+                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Lernziel ist: KUV als Verhältnis von Börsenwert zu Umsatz verstehen."
+          },
+          {
+            "id": "q_kuv_004",
+            "level": "apply",
+            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "points": 150,
+            "correctAnswer": "Die passenden Werte einsetzen, sauber rechnen und das Ergebnis im Kontext prüfen.",
+            "distractors": [
+              {
+                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "closeness": 3
+              },
+              {
+                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "closeness": 3
+              },
+              {
+                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+          },
+          {
+            "id": "q_kuv_005",
+            "level": "master",
+            "question": "Welche Aussage zu „KUV – Kurs-Umsatz-Verhältnis“ stimmt am besten?",
+            "points": 200,
+            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "distractors": [
+              {
+                "text": "Es ersetzt jede weitere Prüfung.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert schnelle Gewinne.",
+                "closeness": 3
+              },
+              {
+                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+          }
+        ],
+        "calculationTemplates": [
+          {
+            "id": "tmpl_kuv",
+            "level": "apply",
+            "points": 150,
+            "questionTemplate": "Ein Unternehmen hat eine Marktkapitalisierung von {mcap} Euro und einen Umsatz von {umsatz} Euro. Wie hoch ist das KUV?",
+            "parameters": {
+              "mcap": {
+                "min": 1000,
+                "max": 100000
+              },
+              "umsatz": {
+                "min": 500,
+                "max": 50000
+              }
+            },
+            "solutionFormula": "mcap / umsatz",
+            "distractorFormulas": [
+              "mcap + umsatz",
+              "umsatz / mcap",
+              "mcap - umsatz"
+            ],
+            "explanationTemplate": "KUV = Marktkapitalisierung geteilt durch Umsatz."
+          }
+        ],
+        "teacherSupport": {
+          "competenceGoal": "KUV als Verhältnis von Börsenwert zu Umsatz verstehen.",
+          "typicalMisconception": "Wenn der Umsatz hoch ist, ist die Aktie automatisch günstig.",
+          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Wenn der Umsatz hoch ist, ist die Aktie automatisch günstig.“ glaubt?",
+          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „KUV – Kurs-Umsatz-Verhältnis“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+        },
+        "parentSupport": {
+          "conversationPrompt": "Wo begegnet uns „KUV – Kurs-Umsatz-Verhältnis“ im Alltag?",
+          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „KUV – Kurs-Umsatz-Verhältnis“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+        },
+        "reviewStatus": "editorial_review_recommended"
+      },
+      {
+        "id": "konzept_dividendenrendite",
+        "title": "Dividendenrendite",
+        "type": "calculation",
+        "unlockLevel": 40,
+        "prerequisites": [
+          "konzept_dividende",
+          "konzept_preis_vs_wert"
+        ],
+        "pedagogy": {
+          "learningGoal": "Dividendenrendite als Dividende im Verhältnis zum Aktienkurs verstehen.",
+          "coreIdea": "Die Dividendenrendite zeigt die Dividende relativ zum aktuellen Kurs.",
+          "everydayScenario": "Eine Aktie kostet 100 Euro und zahlt 4 Euro Dividende; Rendite = 4 Prozent.",
+          "misconception": "Je höher die Dividendenrendite, desto besser die Aktie.",
+          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Dividendenrendite' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
+          "reflectionPrompt": "Welche Fehlvorstellung zu 'Dividendenrendite' könnte dich zu einer schlechten Entscheidung verleiten?"
+        },
+        "glossaryTerms": [
+          "Dividendenrendite",
+          "Dividende",
+          "Aktienkurs",
+          "Ausschüttung",
+          "Ausschüttungsquote",
+          "Cashflow",
+          "Nachhaltigkeit"
+        ],
+        "targetGroups": [
+          "learners_10_14",
+          "young_adults",
+          "parents_teachers"
+        ],
+        "explanations": {
+          "learners_10_14": "Dividendenrendite: Die Dividendenrendite zeigt die Dividende relativ zum aktuellen Kurs. Beispiel: Eine Aktie kostet 100 Euro und zahlt 4 Euro Dividende; Rendite = 4 Prozent. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Je höher die Dividendenrendite, desto besser die Aktie.“.",
+          "young_adults": "Dividendenrendite: Die Dividendenrendite zeigt die Dividende relativ zum aktuellen Kurs. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Eine Aktie kostet 100 Euro und zahlt 4 Euro Dividende; Rendite = 4 Prozent.",
+          "parents_teachers": "Lernziel: Dividendenrendite als Dividende im Verhältnis zum Aktienkurs verstehen. Didaktischer Fokus: Die Dividendenrendite zeigt die Dividende relativ zum aktuellen Kurs. Typische Fehlvorstellung: „Je höher die Dividendenrendite, desto besser die Aktie.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+        },
+        "questions": [
+          {
+            "id": "q_dividendenrendite_001",
+            "level": "explain",
+            "question": "Was beschreibt „Dividendenrendite“ am besten?",
+            "points": 100,
+            "correctAnswer": "Die Dividendenrendite zeigt die Dividende relativ zum aktuellen Kurs.",
+            "distractors": [
+              {
+                "text": "Je höher die Dividendenrendite, desto besser die Aktie.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "closeness": 3
+              },
+              {
+                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Richtig: Die Dividendenrendite zeigt die Dividende relativ zum aktuellen Kurs."
+          },
+          {
+            "id": "q_dividendenrendite_002",
+            "level": "recognize",
+            "question": "Welches Beispiel passt am ehesten zu „Dividendenrendite“?",
+            "points": 100,
+            "correctAnswer": "Eine Aktie kostet 100 Euro und zahlt 4 Euro Dividende; Rendite = 4 Prozent.",
+            "distractors": [
+              {
+                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "closeness": 2
+              },
+              {
+                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "closeness": 3
+              },
+              {
+                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+          },
+          {
+            "id": "q_dividendenrendite_003",
+            "level": "understand",
+            "question": "Warum ist „Dividendenrendite“ für Finanzbildung wichtig?",
+            "points": 120,
+            "correctAnswer": "Dividendenrendite als Dividende im Verhältnis zum Aktienkurs verstehen.",
+            "distractors": [
+              {
+                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "closeness": 3
+              },
+              {
+                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "closeness": 2
+              },
+              {
+                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Lernziel ist: Dividendenrendite als Dividende im Verhältnis zum Aktienkurs verstehen."
+          },
+          {
+            "id": "q_dividendenrendite_004",
+            "level": "apply",
+            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "points": 150,
+            "correctAnswer": "Die passenden Werte einsetzen, sauber rechnen und das Ergebnis im Kontext prüfen.",
+            "distractors": [
+              {
+                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "closeness": 3
+              },
+              {
+                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "closeness": 3
+              },
+              {
+                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+          },
+          {
+            "id": "q_dividendenrendite_005",
+            "level": "master",
+            "question": "Welche Aussage zu „Dividendenrendite“ stimmt am besten?",
+            "points": 200,
+            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "distractors": [
+              {
+                "text": "Es ersetzt jede weitere Prüfung.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert schnelle Gewinne.",
+                "closeness": 3
+              },
+              {
+                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+          }
+        ],
+        "calculationTemplates": [
+          {
+            "id": "tmpl_dividendenrendite",
+            "level": "apply",
+            "points": 150,
+            "questionTemplate": "Eine Aktie kostet {kurs} Euro und zahlt {div} Euro Dividende. Wie hoch ist die Dividendenrendite?",
+            "parameters": {
+              "kurs": {
+                "min": 10,
+                "max": 300
+              },
+              "div": {
+                "min": 1,
+                "max": 20
+              }
+            },
+            "solutionFormula": "div / kurs * 100",
+            "distractorFormulas": [
+              "kurs / div * 100",
+              "kurs + div",
+              "kurs - div"
+            ],
+            "explanationTemplate": "Dividendenrendite = Dividende geteilt durch Kurs mal 100.",
+            "unit": "Prozent"
+          }
+        ],
+        "teacherSupport": {
+          "competenceGoal": "Dividendenrendite als Dividende im Verhältnis zum Aktienkurs verstehen.",
+          "typicalMisconception": "Je höher die Dividendenrendite, desto besser die Aktie.",
+          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Je höher die Dividendenrendite, desto besser die Aktie.“ glaubt?",
+          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Dividendenrendite“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+        },
+        "parentSupport": {
+          "conversationPrompt": "Wo begegnet uns „Dividendenrendite“ im Alltag?",
+          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Dividendenrendite“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+        },
+        "reviewStatus": "editorial_review_recommended"
+      },
+      {
+        "id": "konzept_marge_kennzahl",
+        "title": "Marge als Kennzahl",
+        "type": "calculation",
+        "unlockLevel": 40,
+        "prerequisites": [
+          "konzept_marge",
+          "konzept_umsatz",
+          "konzept_gewinn"
+        ],
+        "pedagogy": {
+          "learningGoal": "Marge als Kennzahl für Profitabilität anwenden.",
+          "coreIdea": "Die Marge zeigt, wie viel Gewinn aus dem Umsatz entsteht.",
+          "everydayScenario": "Zwei Unternehmen machen 1.000 Euro Umsatz; eines behält 100 Euro, das andere 20 Euro.",
+          "misconception": "Mehr Umsatz bedeutet immer bessere Profitabilität.",
+          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Marge als Kennzahl' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
+          "reflectionPrompt": "Welche Fehlvorstellung zu 'Marge als Kennzahl' könnte dich zu einer schlechten Entscheidung verleiten?"
+        },
+        "glossaryTerms": [
+          "Marge",
+          "Gewinnmarge",
+          "Umsatz",
+          "Gewinn",
+          "Profitabilität",
+          "Kostenstruktur",
+          "Branche",
+          "Geschäftsmodell"
+        ],
+        "targetGroups": [
+          "learners_10_14",
+          "young_adults",
+          "parents_teachers"
+        ],
+        "explanations": {
+          "learners_10_14": "Marge als Kennzahl: Die Marge zeigt, wie viel Gewinn aus dem Umsatz entsteht. Beispiel: Zwei Unternehmen machen 1.000 Euro Umsatz; eines behält 100 Euro, das andere 20 Euro. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Mehr Umsatz bedeutet immer bessere Profitabilität.“.",
+          "young_adults": "Marge als Kennzahl: Die Marge zeigt, wie viel Gewinn aus dem Umsatz entsteht. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Zwei Unternehmen machen 1.000 Euro Umsatz; eines behält 100 Euro, das andere 20 Euro.",
+          "parents_teachers": "Lernziel: Marge als Kennzahl für Profitabilität anwenden. Didaktischer Fokus: Die Marge zeigt, wie viel Gewinn aus dem Umsatz entsteht. Typische Fehlvorstellung: „Mehr Umsatz bedeutet immer bessere Profitabilität.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+        },
+        "questions": [
+          {
+            "id": "q_marge_kennzahl_001",
+            "level": "explain",
+            "question": "Was beschreibt „Marge als Kennzahl“ am besten?",
+            "points": 100,
+            "correctAnswer": "Die Marge zeigt, wie viel Gewinn aus dem Umsatz entsteht.",
+            "distractors": [
+              {
+                "text": "Mehr Umsatz bedeutet immer bessere Profitabilität.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "closeness": 3
+              },
+              {
+                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Richtig: Die Marge zeigt, wie viel Gewinn aus dem Umsatz entsteht."
+          },
+          {
+            "id": "q_marge_kennzahl_002",
+            "level": "recognize",
+            "question": "Welches Beispiel passt am ehesten zu „Marge als Kennzahl“?",
+            "points": 100,
+            "correctAnswer": "Zwei Unternehmen machen 1.000 Euro Umsatz; eines behält 100 Euro, das andere 20 Euro.",
+            "distractors": [
+              {
+                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "closeness": 2
+              },
+              {
+                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "closeness": 3
+              },
+              {
+                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+          },
+          {
+            "id": "q_marge_kennzahl_003",
+            "level": "understand",
+            "question": "Warum ist „Marge als Kennzahl“ für Finanzbildung wichtig?",
+            "points": 120,
+            "correctAnswer": "Marge als Kennzahl für Profitabilität anwenden.",
+            "distractors": [
+              {
+                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "closeness": 3
+              },
+              {
+                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "closeness": 2
+              },
+              {
+                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Lernziel ist: Marge als Kennzahl für Profitabilität anwenden."
+          },
+          {
+            "id": "q_marge_kennzahl_004",
+            "level": "apply",
+            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "points": 150,
+            "correctAnswer": "Die passenden Werte einsetzen, sauber rechnen und das Ergebnis im Kontext prüfen.",
+            "distractors": [
+              {
+                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "closeness": 3
+              },
+              {
+                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "closeness": 3
+              },
+              {
+                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+          },
+          {
+            "id": "q_marge_kennzahl_005",
+            "level": "master",
+            "question": "Welche Aussage zu „Marge als Kennzahl“ stimmt am besten?",
+            "points": 200,
+            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "distractors": [
+              {
+                "text": "Es ersetzt jede weitere Prüfung.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert schnelle Gewinne.",
+                "closeness": 3
+              },
+              {
+                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+          }
+        ],
+        "calculationTemplates": [
+          {
+            "id": "tmpl_marge_kennzahl",
+            "level": "apply",
+            "points": 150,
+            "questionTemplate": "Ein Unternehmen hat {umsatz} Euro Umsatz und {gewinn} Euro Gewinn. Wie hoch ist die Gewinnmarge?",
+            "parameters": {
+              "umsatz": {
+                "min": 100,
+                "max": 10000
+              },
+              "gewinn": {
+                "min": 1,
+                "max": 3000
+              }
+            },
+            "solutionFormula": "gewinn / umsatz * 100",
+            "distractorFormulas": [
+              "umsatz / gewinn * 100",
+              "umsatz - gewinn",
+              "umsatz + gewinn"
+            ],
+            "explanationTemplate": "Gewinnmarge = Gewinn geteilt durch Umsatz mal 100.",
+            "unit": "Prozent"
+          }
+        ],
+        "teacherSupport": {
+          "competenceGoal": "Marge als Kennzahl für Profitabilität anwenden.",
+          "typicalMisconception": "Mehr Umsatz bedeutet immer bessere Profitabilität.",
+          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Mehr Umsatz bedeutet immer bessere Profitabilität.“ glaubt?",
+          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Marge als Kennzahl“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+        },
+        "parentSupport": {
+          "conversationPrompt": "Wo begegnet uns „Marge als Kennzahl“ im Alltag?",
+          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Marge als Kennzahl“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+        },
+        "reviewStatus": "editorial_review_recommended"
+      },
+      {
+        "id": "konzept_umsatzwachstum",
+        "title": "Umsatzwachstum",
+        "type": "calculation",
+        "unlockLevel": 41,
+        "prerequisites": [
+          "konzept_umsatz",
+          "konzept_kuv"
+        ],
+        "pedagogy": {
+          "learningGoal": "Umsatzwachstum als Umsatzveränderung über Zeit berechnen.",
+          "coreIdea": "Umsatzwachstum zeigt steigende Erlöse, aber nicht automatisch mehr Gewinn.",
+          "everydayScenario": "Der Umsatz steigt von 1.000 auf 1.200 Euro.",
+          "misconception": "Wachstum ist immer gut, egal was es kostet.",
+          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Umsatzwachstum' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
+          "reflectionPrompt": "Welche Fehlvorstellung zu 'Umsatzwachstum' könnte dich zu einer schlechten Entscheidung verleiten?"
+        },
+        "glossaryTerms": [
+          "Umsatzwachstum",
+          "Wachstum",
+          "Erlös",
+          "organisches Wachstum",
+          "Preiserhöhung",
+          "Absatzmenge",
+          "Nachhaltigkeit"
+        ],
+        "targetGroups": [
+          "learners_10_14",
+          "young_adults",
+          "parents_teachers"
+        ],
+        "explanations": {
+          "learners_10_14": "Umsatzwachstum: Umsatzwachstum zeigt steigende Erlöse, aber nicht automatisch mehr Gewinn. Beispiel: Der Umsatz steigt von 1.000 auf 1.200 Euro. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Wachstum ist immer gut, egal was es kostet.“.",
+          "young_adults": "Umsatzwachstum: Umsatzwachstum zeigt steigende Erlöse, aber nicht automatisch mehr Gewinn. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Der Umsatz steigt von 1.000 auf 1.200 Euro.",
+          "parents_teachers": "Lernziel: Umsatzwachstum als Umsatzveränderung über Zeit berechnen. Didaktischer Fokus: Umsatzwachstum zeigt steigende Erlöse, aber nicht automatisch mehr Gewinn. Typische Fehlvorstellung: „Wachstum ist immer gut, egal was es kostet.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+        },
+        "questions": [
+          {
+            "id": "q_umsatzwachstum_001",
+            "level": "explain",
+            "question": "Was beschreibt „Umsatzwachstum“ am besten?",
+            "points": 100,
+            "correctAnswer": "Umsatzwachstum zeigt steigende Erlöse, aber nicht automatisch mehr Gewinn.",
+            "distractors": [
+              {
+                "text": "Wachstum ist immer gut, egal was es kostet.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "closeness": 3
+              },
+              {
+                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Richtig: Umsatzwachstum zeigt steigende Erlöse, aber nicht automatisch mehr Gewinn."
+          },
+          {
+            "id": "q_umsatzwachstum_002",
+            "level": "recognize",
+            "question": "Welches Beispiel passt am ehesten zu „Umsatzwachstum“?",
+            "points": 100,
+            "correctAnswer": "Der Umsatz steigt von 1.000 auf 1.200 Euro.",
+            "distractors": [
+              {
+                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "closeness": 2
+              },
+              {
+                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "closeness": 3
+              },
+              {
+                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+          },
+          {
+            "id": "q_umsatzwachstum_003",
+            "level": "understand",
+            "question": "Warum ist „Umsatzwachstum“ für Finanzbildung wichtig?",
+            "points": 120,
+            "correctAnswer": "Umsatzwachstum als Umsatzveränderung über Zeit berechnen.",
+            "distractors": [
+              {
+                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "closeness": 3
+              },
+              {
+                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "closeness": 2
+              },
+              {
+                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Lernziel ist: Umsatzwachstum als Umsatzveränderung über Zeit berechnen."
+          },
+          {
+            "id": "q_umsatzwachstum_004",
+            "level": "apply",
+            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "points": 150,
+            "correctAnswer": "Die passenden Werte einsetzen, sauber rechnen und das Ergebnis im Kontext prüfen.",
+            "distractors": [
+              {
+                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "closeness": 3
+              },
+              {
+                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "closeness": 3
+              },
+              {
+                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+          },
+          {
+            "id": "q_umsatzwachstum_005",
+            "level": "master",
+            "question": "Welche Aussage zu „Umsatzwachstum“ stimmt am besten?",
+            "points": 200,
+            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "distractors": [
+              {
+                "text": "Es ersetzt jede weitere Prüfung.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert schnelle Gewinne.",
+                "closeness": 3
+              },
+              {
+                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+          }
+        ],
+        "calculationTemplates": [
+          {
+            "id": "tmpl_umsatzwachstum",
+            "level": "apply",
+            "points": 150,
+            "questionTemplate": "Der Umsatz steigt von {alt} Euro auf {neu} Euro. Wie hoch ist das Wachstum?",
+            "parameters": {
+              "alt": {
+                "min": 100,
+                "max": 10000
+              },
+              "neu": {
+                "min": 100,
+                "max": 15000
+              }
+            },
+            "solutionFormula": "(neu - alt) / alt * 100",
+            "distractorFormulas": [
+              "neu / alt * 100",
+              "neu - alt",
+              "alt / neu * 100"
+            ],
+            "explanationTemplate": "Wachstum = Veränderung geteilt durch alten Wert mal 100.",
+            "unit": "Prozent"
+          }
+        ],
+        "teacherSupport": {
+          "competenceGoal": "Umsatzwachstum als Umsatzveränderung über Zeit berechnen.",
+          "typicalMisconception": "Wachstum ist immer gut, egal was es kostet.",
+          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Wachstum ist immer gut, egal was es kostet.“ glaubt?",
+          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Umsatzwachstum“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+        },
+        "parentSupport": {
+          "conversationPrompt": "Wo begegnet uns „Umsatzwachstum“ im Alltag?",
+          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Umsatzwachstum“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+        },
+        "reviewStatus": "editorial_review_recommended"
+      },
+      {
+        "id": "konzept_gewinnwachstum",
+        "title": "Gewinnwachstum",
+        "type": "calculation",
+        "unlockLevel": 41,
+        "prerequisites": [
+          "konzept_gewinn",
+          "konzept_umsatzwachstum",
+          "konzept_kgv"
+        ],
+        "pedagogy": {
+          "learningGoal": "Gewinnwachstum und seine Bedeutung für Bewertung verstehen.",
+          "coreIdea": "Wenn Gewinne langfristig wachsen, kann ein Unternehmen wertvoller werden.",
+          "everydayScenario": "Ein Unternehmen steigert Gewinn von 100 auf 130 Euro.",
+          "misconception": "Wenn der Gewinn einmal wächst, wächst er immer weiter.",
+          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Gewinnwachstum' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
+          "reflectionPrompt": "Welche Fehlvorstellung zu 'Gewinnwachstum' könnte dich zu einer schlechten Entscheidung verleiten?"
+        },
+        "glossaryTerms": [
+          "Gewinnwachstum",
+          "Gewinn",
+          "Prognose",
+          "Erwartung",
+          "Nachhaltigkeit",
+          "Sondereffekt",
+          "Marge",
+          "Bewertung"
+        ],
+        "targetGroups": [
+          "learners_10_14",
+          "young_adults",
+          "parents_teachers"
+        ],
+        "explanations": {
+          "learners_10_14": "Gewinnwachstum: Wenn Gewinne langfristig wachsen, kann ein Unternehmen wertvoller werden. Beispiel: Ein Unternehmen steigert Gewinn von 100 auf 130 Euro. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Wenn der Gewinn einmal wächst, wächst er immer weiter.“.",
+          "young_adults": "Gewinnwachstum: Wenn Gewinne langfristig wachsen, kann ein Unternehmen wertvoller werden. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Ein Unternehmen steigert Gewinn von 100 auf 130 Euro.",
+          "parents_teachers": "Lernziel: Gewinnwachstum und seine Bedeutung für Bewertung verstehen. Didaktischer Fokus: Wenn Gewinne langfristig wachsen, kann ein Unternehmen wertvoller werden. Typische Fehlvorstellung: „Wenn der Gewinn einmal wächst, wächst er immer weiter.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+        },
+        "questions": [
+          {
+            "id": "q_gewinnwachstum_001",
+            "level": "explain",
+            "question": "Was beschreibt „Gewinnwachstum“ am besten?",
+            "points": 100,
+            "correctAnswer": "Wenn Gewinne langfristig wachsen, kann ein Unternehmen wertvoller werden.",
+            "distractors": [
+              {
+                "text": "Wenn der Gewinn einmal wächst, wächst er immer weiter.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "closeness": 3
+              },
+              {
+                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Richtig: Wenn Gewinne langfristig wachsen, kann ein Unternehmen wertvoller werden."
+          },
+          {
+            "id": "q_gewinnwachstum_002",
+            "level": "recognize",
+            "question": "Welches Beispiel passt am ehesten zu „Gewinnwachstum“?",
+            "points": 100,
+            "correctAnswer": "Ein Unternehmen steigert Gewinn von 100 auf 130 Euro.",
+            "distractors": [
+              {
+                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "closeness": 2
+              },
+              {
+                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "closeness": 3
+              },
+              {
+                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+          },
+          {
+            "id": "q_gewinnwachstum_003",
+            "level": "understand",
+            "question": "Warum ist „Gewinnwachstum“ für Finanzbildung wichtig?",
+            "points": 120,
+            "correctAnswer": "Gewinnwachstum und seine Bedeutung für Bewertung verstehen.",
+            "distractors": [
+              {
+                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "closeness": 3
+              },
+              {
+                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "closeness": 2
+              },
+              {
+                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Lernziel ist: Gewinnwachstum und seine Bedeutung für Bewertung verstehen."
+          },
+          {
+            "id": "q_gewinnwachstum_004",
+            "level": "apply",
+            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "points": 150,
+            "correctAnswer": "Die passenden Werte einsetzen, sauber rechnen und das Ergebnis im Kontext prüfen.",
+            "distractors": [
+              {
+                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "closeness": 3
+              },
+              {
+                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "closeness": 3
+              },
+              {
+                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+          },
+          {
+            "id": "q_gewinnwachstum_005",
+            "level": "master",
+            "question": "Welche Aussage zu „Gewinnwachstum“ stimmt am besten?",
+            "points": 200,
+            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "distractors": [
+              {
+                "text": "Es ersetzt jede weitere Prüfung.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert schnelle Gewinne.",
+                "closeness": 3
+              },
+              {
+                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+          }
+        ],
+        "calculationTemplates": [
+          {
+            "id": "tmpl_gewinnwachstum",
+            "level": "apply",
+            "points": 150,
+            "questionTemplate": "Der Gewinn steigt von {alt} Euro auf {neu} Euro. Wie hoch ist das Gewinnwachstum?",
+            "parameters": {
+              "alt": {
+                "min": 50,
+                "max": 10000
+              },
+              "neu": {
+                "min": 50,
+                "max": 15000
+              }
+            },
+            "solutionFormula": "(neu - alt) / alt * 100",
+            "distractorFormulas": [
+              "neu / alt * 100",
+              "neu - alt",
+              "alt / neu * 100"
+            ],
+            "explanationTemplate": "Gewinnwachstum = Veränderung geteilt durch alten Gewinn mal 100.",
+            "unit": "Prozent"
+          }
+        ],
+        "teacherSupport": {
+          "competenceGoal": "Gewinnwachstum und seine Bedeutung für Bewertung verstehen.",
+          "typicalMisconception": "Wenn der Gewinn einmal wächst, wächst er immer weiter.",
+          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Wenn der Gewinn einmal wächst, wächst er immer weiter.“ glaubt?",
+          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Gewinnwachstum“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+        },
+        "parentSupport": {
+          "conversationPrompt": "Wo begegnet uns „Gewinnwachstum“ im Alltag?",
+          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Gewinnwachstum“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+        },
+        "reviewStatus": "editorial_review_recommended"
+      },
+      {
+        "id": "konzept_schulden_bewertung",
+        "title": "Schulden bei der Bewertung",
+        "type": "calculation",
+        "unlockLevel": 42,
+        "prerequisites": [
+          "konzept_vermoegen_schulden_eigenkapital",
+          "konzept_cashflow",
+          "konzept_risiko"
+        ],
+        "pedagogy": {
+          "learningGoal": "Schulden als Bewertungs- und Risikofaktor verstehen.",
+          "coreIdea": "Schulden können Wachstum ermöglichen, aber zu hohe Schulden machen anfälliger.",
+          "everydayScenario": "Ein Café nimmt einen Kredit für Maschinen auf und muss Zinsen zahlen.",
+          "misconception": "Schulden sind immer schlecht oder Schulden sind egal.",
+          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Schulden bei der Bewertung' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
+          "reflectionPrompt": "Welche Fehlvorstellung zu 'Schulden bei der Bewertung' könnte dich zu einer schlechten Entscheidung verleiten?"
+        },
+        "glossaryTerms": [
+          "Schulden",
+          "Verschuldung",
+          "Eigenkapital",
+          "Fremdkapital",
+          "Zinsen",
+          "Cashflow",
+          "Rückzahlung",
+          "Zinsdeckung"
+        ],
+        "targetGroups": [
+          "learners_10_14",
+          "young_adults",
+          "parents_teachers"
+        ],
+        "explanations": {
+          "learners_10_14": "Schulden bei der Bewertung: Schulden können Wachstum ermöglichen, aber zu hohe Schulden machen anfälliger. Beispiel: Ein Café nimmt einen Kredit für Maschinen auf und muss Zinsen zahlen. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Schulden sind immer schlecht oder Schulden sind egal.“.",
+          "young_adults": "Schulden bei der Bewertung: Schulden können Wachstum ermöglichen, aber zu hohe Schulden machen anfälliger. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Ein Café nimmt einen Kredit für Maschinen auf und muss Zinsen zahlen.",
+          "parents_teachers": "Lernziel: Schulden als Bewertungs- und Risikofaktor verstehen. Didaktischer Fokus: Schulden können Wachstum ermöglichen, aber zu hohe Schulden machen anfälliger. Typische Fehlvorstellung: „Schulden sind immer schlecht oder Schulden sind egal.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+        },
+        "questions": [
+          {
+            "id": "q_schulden_bewertung_001",
+            "level": "explain",
+            "question": "Was beschreibt „Schulden bei der Bewertung“ am besten?",
+            "points": 100,
+            "correctAnswer": "Schulden können Wachstum ermöglichen, aber zu hohe Schulden machen anfälliger.",
+            "distractors": [
+              {
+                "text": "Schulden sind immer schlecht oder Schulden sind egal.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "closeness": 3
+              },
+              {
+                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Richtig: Schulden können Wachstum ermöglichen, aber zu hohe Schulden machen anfälliger."
+          },
+          {
+            "id": "q_schulden_bewertung_002",
+            "level": "recognize",
+            "question": "Welches Beispiel passt am ehesten zu „Schulden bei der Bewertung“?",
+            "points": 100,
+            "correctAnswer": "Ein Café nimmt einen Kredit für Maschinen auf und muss Zinsen zahlen.",
+            "distractors": [
+              {
+                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "closeness": 2
+              },
+              {
+                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "closeness": 3
+              },
+              {
+                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+          },
+          {
+            "id": "q_schulden_bewertung_003",
+            "level": "understand",
+            "question": "Warum ist „Schulden bei der Bewertung“ für Finanzbildung wichtig?",
+            "points": 120,
+            "correctAnswer": "Schulden als Bewertungs- und Risikofaktor verstehen.",
+            "distractors": [
+              {
+                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "closeness": 3
+              },
+              {
+                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "closeness": 2
+              },
+              {
+                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Lernziel ist: Schulden als Bewertungs- und Risikofaktor verstehen."
+          },
+          {
+            "id": "q_schulden_bewertung_004",
+            "level": "apply",
+            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "points": 150,
+            "correctAnswer": "Die passenden Werte einsetzen, sauber rechnen und das Ergebnis im Kontext prüfen.",
+            "distractors": [
+              {
+                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "closeness": 3
+              },
+              {
+                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "closeness": 3
+              },
+              {
+                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+          },
+          {
+            "id": "q_schulden_bewertung_005",
+            "level": "master",
+            "question": "Welche Aussage zu „Schulden bei der Bewertung“ stimmt am besten?",
+            "points": 200,
+            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "distractors": [
+              {
+                "text": "Es ersetzt jede weitere Prüfung.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert schnelle Gewinne.",
+                "closeness": 3
+              },
+              {
+                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+          }
+        ],
+        "calculationTemplates": [
+          {
+            "id": "tmpl_schuldenquote",
+            "level": "apply",
+            "points": 150,
+            "questionTemplate": "Ein Unternehmen hat {vermoegen} Euro Vermögen und {schulden} Euro Schulden. Wie hoch ist der Schuldenanteil am Vermögen?",
+            "parameters": {
+              "vermoegen": {
+                "min": 1000,
+                "max": 50000
+              },
+              "schulden": {
+                "min": 100,
+                "max": 45000
+              }
+            },
+            "solutionFormula": "schulden / vermoegen * 100",
+            "distractorFormulas": [
+              "vermoegen / schulden * 100",
+              "vermoegen - schulden",
+              "schulden + vermoegen"
+            ],
+            "explanationTemplate": "Schuldenanteil = Schulden geteilt durch Vermögen mal 100.",
+            "unit": "Prozent"
+          }
+        ],
+        "teacherSupport": {
+          "competenceGoal": "Schulden als Bewertungs- und Risikofaktor verstehen.",
+          "typicalMisconception": "Schulden sind immer schlecht oder Schulden sind egal.",
+          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Schulden sind immer schlecht oder Schulden sind egal.“ glaubt?",
+          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Schulden bei der Bewertung“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+        },
+        "parentSupport": {
+          "conversationPrompt": "Wo begegnet uns „Schulden bei der Bewertung“ im Alltag?",
+          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Schulden bei der Bewertung“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+        },
+        "reviewStatus": "editorial_review_recommended"
+      },
+      {
+        "id": "konzept_kennzahlen_grenzen",
+        "title": "Warum Kennzahlen allein nicht reichen",
+        "type": "reflection",
+        "unlockLevel": 42,
+        "prerequisites": [
+          "konzept_kgv",
+          "konzept_kuv",
+          "konzept_dividendenrendite",
+          "konzept_schulden_bewertung"
+        ],
+        "pedagogy": {
+          "learningGoal": "Grenzen von Kennzahlen und Bedeutung des Kontexts verstehen.",
+          "coreIdea": "Kennzahlen sind Werkzeuge zum Fragenstellen, keine Orakel.",
+          "everydayScenario": "Zwei Personen haben dieselbe Note, aber sehr unterschiedliche Stärken und Schwächen.",
+          "misconception": "Wenn eine Kennzahl gut aussieht, ist die Aktie automatisch gut.",
+          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Warum Kennzahlen allein nicht reichen' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
+          "reflectionPrompt": "Welche Fehlvorstellung zu 'Warum Kennzahlen allein nicht reichen' könnte dich zu einer schlechten Entscheidung verleiten?"
+        },
+        "glossaryTerms": [
+          "Kennzahl",
+          "Analyse",
+          "KGV",
+          "KUV",
+          "Dividendenrendite",
+          "Marge",
+          "Schulden",
+          "Qualität",
+          "Kontext",
+          "Fehlinterpretation"
+        ],
+        "targetGroups": [
+          "learners_10_14",
+          "young_adults",
+          "parents_teachers"
+        ],
+        "explanations": {
+          "learners_10_14": "Warum Kennzahlen allein nicht reichen: Kennzahlen sind Werkzeuge zum Fragenstellen, keine Orakel. Beispiel: Zwei Personen haben dieselbe Note, aber sehr unterschiedliche Stärken und Schwächen. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Wenn eine Kennzahl gut aussieht, ist die Aktie automatisch gut.“.",
+          "young_adults": "Warum Kennzahlen allein nicht reichen: Kennzahlen sind Werkzeuge zum Fragenstellen, keine Orakel. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Zwei Personen haben dieselbe Note, aber sehr unterschiedliche Stärken und Schwächen.",
+          "parents_teachers": "Lernziel: Grenzen von Kennzahlen und Bedeutung des Kontexts verstehen. Didaktischer Fokus: Kennzahlen sind Werkzeuge zum Fragenstellen, keine Orakel. Typische Fehlvorstellung: „Wenn eine Kennzahl gut aussieht, ist die Aktie automatisch gut.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+        },
+        "questions": [
+          {
+            "id": "q_kennzahlen_grenzen_001",
+            "level": "explain",
+            "question": "Was beschreibt „Warum Kennzahlen allein nicht reichen“ am besten?",
+            "points": 100,
+            "correctAnswer": "Kennzahlen sind Werkzeuge zum Fragenstellen, keine Orakel.",
+            "distractors": [
+              {
+                "text": "Wenn eine Kennzahl gut aussieht, ist die Aktie automatisch gut.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "closeness": 3
+              },
+              {
+                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Richtig: Kennzahlen sind Werkzeuge zum Fragenstellen, keine Orakel."
+          },
+          {
+            "id": "q_kennzahlen_grenzen_002",
+            "level": "recognize",
+            "question": "Welches Beispiel passt am ehesten zu „Warum Kennzahlen allein nicht reichen“?",
+            "points": 100,
+            "correctAnswer": "Zwei Personen haben dieselbe Note, aber sehr unterschiedliche Stärken und Schwächen.",
+            "distractors": [
+              {
+                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "closeness": 2
+              },
+              {
+                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "closeness": 3
+              },
+              {
+                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+          },
+          {
+            "id": "q_kennzahlen_grenzen_003",
+            "level": "understand",
+            "question": "Warum ist „Warum Kennzahlen allein nicht reichen“ für Finanzbildung wichtig?",
+            "points": 120,
+            "correctAnswer": "Grenzen von Kennzahlen und Bedeutung des Kontexts verstehen.",
+            "distractors": [
+              {
+                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "closeness": 3
+              },
+              {
+                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "closeness": 2
+              },
+              {
+                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Lernziel ist: Grenzen von Kennzahlen und Bedeutung des Kontexts verstehen."
+          },
+          {
+            "id": "q_kennzahlen_grenzen_004",
+            "level": "apply",
+            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "points": 150,
+            "correctAnswer": "Innehalten, Informationen prüfen und erst dann passend zum eigenen Ziel handeln.",
+            "distractors": [
+              {
+                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "closeness": 3
+              },
+              {
+                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "closeness": 3
+              },
+              {
+                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+          },
+          {
+            "id": "q_kennzahlen_grenzen_005",
+            "level": "master",
+            "question": "Welche Aussage zu „Warum Kennzahlen allein nicht reichen“ stimmt am besten?",
+            "points": 200,
+            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "distractors": [
+              {
+                "text": "Es ersetzt jede weitere Prüfung.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert schnelle Gewinne.",
+                "closeness": 3
+              },
+              {
+                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+          }
+        ],
+        "calculationTemplates": [],
+        "teacherSupport": {
+          "competenceGoal": "Grenzen von Kennzahlen und Bedeutung des Kontexts verstehen.",
+          "typicalMisconception": "Wenn eine Kennzahl gut aussieht, ist die Aktie automatisch gut.",
+          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Wenn eine Kennzahl gut aussieht, ist die Aktie automatisch gut.“ glaubt?",
+          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Warum Kennzahlen allein nicht reichen“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+        },
+        "parentSupport": {
+          "conversationPrompt": "Wo begegnet uns „Warum Kennzahlen allein nicht reichen“ im Alltag?",
+          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Warum Kennzahlen allein nicht reichen“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+        },
+        "reviewStatus": "editorial_review_recommended"
+      }
+    ]
+  }
+}
