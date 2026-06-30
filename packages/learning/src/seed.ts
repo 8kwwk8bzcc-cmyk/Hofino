@@ -68,3 +68,28 @@ export function modulById(id: string, lang: "de" | "en" = "de"): LearningModule 
   const k = konzeptById(id);
   return k ? resolveModule(fromLegacyKonzept(k, fragenFuer(k.id), vorlagenFuer(k.id)), lang) : undefined;
 }
+
+// ── v2-Content-Import (blockweise JSON unter ./content/v2/) ───────────────────
+// Format je Datei: LearningModuleSource[] (siehe content/v2/README.md). Sobald ein
+// Block geliefert ist: JSON-Datei anlegen, hier importieren und in V2_QUELLEN eintragen.
+// Frischer Lernpfad → v2 ersetzt Legacy pro Block; gemischter Stand bleibt valide.
+const V2_QUELLEN: LearningModuleSource[][] = [
+  // import tbGeld from "./content/v2/tb_geld_wert_entscheidungen.json";
+  // tbGeld as unknown as LearningModuleSource[],
+];
+
+/** Alle bereits gelieferten v2-Module (LangText, dedupliziert per id). */
+export function v2ModuleSources(): LearningModuleSource[] {
+  return mergeById(V2_QUELLEN);
+}
+
+/**
+ * Bevorzugt v2-Inhalt, fällt für noch nicht gelieferte IDs auf die Legacy-Adaption zurück.
+ * Während der blockweisen Migration die empfohlene Quelle der Wahrheit.
+ */
+export function alleModuleSourceMerged(): LearningModuleSource[] {
+  const merged = new Map<string, LearningModuleSource>();
+  for (const m of alleModuleSource()) merged.set(m.id, m);
+  for (const m of v2ModuleSources()) merged.set(m.id, m);
+  return [...merged.values()];
+}

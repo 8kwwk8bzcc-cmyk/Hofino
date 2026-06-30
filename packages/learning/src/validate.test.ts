@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { alleModuleSource, alleModule, modulById } from "./seed.js";
+import { alleModuleSource, alleModule, modulById, v2ModuleSources, alleModuleSourceMerged } from "./seed.js";
 import { validateModuleSourceSet, contentGaps, moduleReadiness, readinessReport } from "./validate.js";
 import { fromLegacyKonzept, resolveModule, erklaerungFuer } from "./migrate.js";
 import { alleKonzepte, fragenFuer, vorlagenFuer } from "./seed.js";
@@ -69,6 +69,14 @@ describe("Pädagogische Readiness (Abschnitt 19)", () => {
     const report = readinessReport(alleModuleSource());
     expect(report.length).toBeGreaterThan(0);
     expect(report[0]!.warnings.some((w) => w.startsWith("Lücke:"))).toBe(true);
+  });
+
+  it("v2-Content-Naht: bislang keine v2-Blöcke, alle gelieferten müssen valide sein", () => {
+    const v2 = v2ModuleSources();
+    expect(Array.isArray(v2)).toBe(true);
+    expect(validateModuleSourceSet(v2)).toEqual([]); // gilt auch leer, und für künftige Blöcke
+    // Ohne v2-Blöcke entspricht die gemergte Quelle der Legacy-Adaption.
+    expect(alleModuleSourceMerged().length).toBe(alleModuleSource().length);
   });
 
   it("understanding-Modul ohne alle fünf Stufen wird bemängelt", () => {
