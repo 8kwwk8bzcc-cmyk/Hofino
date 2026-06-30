@@ -1,89 +1,79 @@
 import { describe, it, expect } from "vitest";
-import { alleModuleSource, alleModule, modulById, v2ModuleSources, alleModuleSourceMerged } from "./seed.js";
+import {
+  alleModuleSource,
+  alleModule,
+  modulById,
+  alleKonzepte,
+  legacyAdaptedSources,
+  legacyAdaptedModule,
+  SEED_LEGACY,
+} from "./seed.js";
 import { validateModuleSourceSet, contentGaps, moduleReadiness, readinessReport } from "./validate.js";
 import { fromLegacyKonzept, resolveModule, erklaerungFuer } from "./migrate.js";
-import { alleKonzepte, fragenFuer, vorlagenFuer } from "./seed.js";
 import { AUDIENCES } from "./types.js";
 
-describe("v2-Migration: Legacy → LearningModule", () => {
-  it("alle adaptierten Module sind strukturell valide", () => {
-    expect(validateModuleSourceSet(alleModuleSource())).toEqual([]);
+describe("Legacy-Adapter (alte Inhalte → v2-Source)", () => {
+  it("alle adaptierten Legacy-Module sind strukturell valide", () => {
+    expect(validateModuleSourceSet(legacyAdaptedSources())).toEqual([]);
   });
 
-  it("rechnerische Konzepte werden type=calculation, sonst understanding", () => {
-    const calc = modulById("konzept_sparen"); // ist_rechnerisch: true
-    const text = modulById("konzept_geld"); // ist_rechnerisch: false
-    expect(calc?.type).toBe("calculation");
-    expect(text?.type).toBe("understanding");
-  });
-
-  it("Vorlagen landen in calculationTemplates, Fragen in questions", () => {
-    const spar = modulById("konzept_sparen");
-    expect(spar?.questions.length).toBeGreaterThan(0);
-    expect((spar?.calculationTemplates?.length ?? 0)).toBeGreaterThan(0);
-    const tmpl = spar?.calculationTemplates?.[0];
-    expect(tmpl?.solutionFormula).toBeTruthy();
-    expect(Object.keys(tmpl?.parameters ?? {}).length).toBeGreaterThan(0);
-  });
-
-  it("Stufen werden auf englische QuestionLevel gemappt", () => {
-    const geld = modulById("konzept_geld");
-    const levels = new Set(geld?.questions.map((q) => q.level));
-    expect(levels.has("explain")).toBe(true);
-  });
-
-  it("alle drei Zielgruppen sind als Erklärung vorhanden (Audience-Kollaps)", () => {
-    const m = modulById("konzept_geld")!;
-    for (const a of AUDIENCES) expect(typeof m.explanations[a]).toBe("string");
-    // learners_10_14 zieht das alte kind_11_14-Band
-    const k = alleKonzepte().find((x) => x.id === "konzept_geld")!;
-    expect(m.explanations.learners_10_14).toBe(k.erklaerungen.kind_11_14.de);
-    expect(erklaerungFuer(k, "parents_teachers")).toBe(k.erklaerungen.eltern_lehrer.de);
+  it("rechnerische Legacy-Konzepte werden type=calculation, sonst understanding", () => {
+    expect(legacyAdaptedModule("konzept_sparen")?.type).toBe("calculation"); // ist_rechnerisch
+    expect(legacyAdaptedModule("konzept_geld")?.type).toBe("understanding");
   });
 
   it("resolveModule projiziert LangText auf string", () => {
+    const k = SEED_LEGACY.konzepte[0]!;
     const src = fromLegacyKonzept(
-      alleKonzepte()[0]!,
-      fragenFuer(alleKonzepte()[0]!.id),
-      vorlagenFuer(alleKonzepte()[0]!.id)
+      k,
+      SEED_LEGACY.fragen.filter((f) => f.konzept_id === k.id),
+      SEED_LEGACY.vorlagen.filter((v) => v.konzept_id === k.id)
     );
     const resolved = resolveModule(src);
     expect(typeof resolved.title).toBe("string");
     expect(resolved.questions.every((q) => typeof q.question === "string")).toBe(true);
   });
 
-  it("contentGaps markiert die noch zu schreibenden v2-Felder", () => {
-    const gaps = contentGaps(alleModuleSource());
-    // Alle Legacy-Module haben offene Felder (pedagogy etc.) → Migrationsfortschritt sichtbar.
+  it("contentGaps markiert die fehlenden v2-Felder der Legacy-Inhalte", () => {
+    const gaps = contentGaps(legacyAdaptedSources());
     expect(gaps.length).toBeGreaterThan(0);
     expect(gaps[0]!.missing).toContain("pedagogy.learningGoal");
   });
 
-  it("alleModule liefert app-facing Module", () => {
-    expect(alleModule().length).toBe(alleKonzepte().length);
-  });
-});
-
-describe("Pädagogische Readiness (Abschnitt 19)", () => {
-  it("Legacy-Module sind noch NICHT importreif (Pädagogik-Lücken, evtl. zu wenige Fragen)", () => {
-    const report = readinessReport(alleModuleSource());
+  it("Legacy-Module sind noch NICHT importreif (Readiness-Lücken)", () => {
+    const report = readinessReport(legacyAdaptedSources());
     expect(report.length).toBeGreaterThan(0);
     expect(report[0]!.warnings.some((w) => w.startsWith("Lücke:"))).toBe(true);
   });
+});
 
-  it("v2-Content-Naht: gelieferte Blöcke sind valide und werden gemergt", () => {
-    const v2 = v2ModuleSources();
-    expect(v2.length).toBe(104);
-    expect(validateModuleSourceSet(v2)).toEqual([]);
-    // Merge = Legacy-Adaption + v2 (dedupliziert per id) → mindestens so viele wie v2.
-    expect(alleModuleSourceMerged().length).toBeGreaterThanOrEqual(104);
+describe("Curriculum v2 (live) via Seed-Accessoren", () => {
+  it("alleModuleSource ist strukturell valide und umfasst 104 Module", () => {
+    const src = alleModuleSource();
+    expect(src.length).toBe(104);
+    expect(validateModuleSourceSet(src)).toEqual([]);
   });
 
-  it("understanding-Modul ohne alle fünf Stufen wird bemängelt", () => {
+  it("Modultypen kommen aus v2 (geld=understanding, bezahlen_vergleichen=calculation)", () => {
+    expect(modulById("konzept_geld")?.type).toBe("understanding");
+    expect(modulById("konzept_bezahlen_vergleichen")?.type).toBe("calculation");
+  });
+
+  it("alle drei Zielgruppen liefern echte v2-Texte (über erklaerungFuer)", () => {
+    const m = modulById("konzept_geld")!;
+    for (const a of AUDIENCES) expect(typeof m.explanations[a]).toBe("string");
+    const k = alleKonzepte().find((x) => x.id === "konzept_geld")!;
+    expect(erklaerungFuer(k, "young_adults")).toBe(m.explanations.young_adults);
+    expect(erklaerungFuer(k, "parents_teachers")).toBe(m.explanations.parents_teachers);
+  });
+
+  it("alleModule liefert genau so viele app-facing Module wie Konzepte", () => {
+    expect(alleModule().length).toBe(alleKonzepte().length);
+    expect(alleModule().length).toBe(104);
+  });
+
+  it("understanding-Modul liefert keine Readiness-Lücken (vollständiger v2-Inhalt)", () => {
     const geld = alleModuleSource().find((m) => m.id === "konzept_geld")!;
-    const w = moduleReadiness(geld);
-    // konzept_geld ist understanding und hat nicht zwingend alle 5 Stufen
-    const hatFrageOderStufenHinweis = w.some((x) => x.includes("Fragelevel") || x.includes("≥5 Fragen"));
-    expect(typeof hatFrageOderStufenHinweis).toBe("boolean");
+    expect(moduleReadiness(geld)).toEqual([]);
   });
 });

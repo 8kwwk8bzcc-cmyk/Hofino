@@ -34,6 +34,8 @@ export interface Konzept {
   freischalt_level: number;
   erklaerungen: Record<Altersband, LangText>;
   stufen: Stufe[];
+  /** v2-Zielgruppen-Erklärungen (gesetzt, wenn das Konzept aus v2-Content stammt). */
+  explanationsV2?: Record<Audience, string>;
 }
 
 export interface Distraktor {

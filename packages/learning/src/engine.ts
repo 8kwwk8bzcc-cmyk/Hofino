@@ -1,6 +1,6 @@
 // Frage-Engine: Distraktor-Auswahl (nach Nähe), parametrische Instanziierung (mit
 // Kollisions-Validierung) und Leitner-Spaced-Repetition. Reine Funktionen, RNG injizierbar.
-import { evalFormel } from "./formel.js";
+import { evalFormel, evalFormelValue } from "./formel.js";
 import {
   DEFAULT_TUNING,
   type Frage,
@@ -92,42 +92,72 @@ function runde(wert: number, rundung: string): number {
 }
 
 /**
- * Instanziiert eine parametrische Vorlage: zieht Parameter, berechnet Lösung + Distraktoren,
- * und validiert, dass alle Antworten paarweise verschieden sind. Bei Kollision: neu ziehen.
+ * Instanziiert eine parametrische Vorlage: zieht Parameter, berechnet Lösung + Distraktoren.
+ * Numerische Vorlagen verlangen paarweise verschiedene Antworten (Neu-Ziehen bei Kollision).
+ * Kategoriale Vorlagen (z. B. „günstiger? → 'A'/'B'/'gleich'") haben einen kleinen Wertebereich;
+ * dort werden doppelte Distraktoren entfernt und die beste (distraktorreichste) Ziehung genommen.
  */
 export function instanziiereVorlage(
   vorlage: Vorlage,
   rng: () => number,
   maxVersuche = 50
 ): FrageInstanz {
+  const gewuenschteDistraktoren = vorlage.distraktor_formeln.length;
+  let beste: { vars: Record<string, number>; loesung: string; distraktoren: string[] } | null = null;
+
   for (let versuch = 0; versuch < maxVersuche; versuch++) {
     const vars: Record<string, number> = {};
     for (const [name, spec] of Object.entries(vorlage.parameter)) {
       vars[name] = randInt(spec.min, spec.max, rng);
     }
-    const loesung = runde(evalFormel(vorlage.loesung_formel, vars), vorlage.rundung);
-    const distraktoren = vorlage.distraktor_formeln.map((f) => runde(evalFormel(f, vars), vorlage.rundung));
+    const fmt = (v: number | string) =>
+      typeof v === "string"
+        ? v
+        : vorlage.einheit
+          ? `${runde(v, vorlage.rundung)} ${vorlage.einheit}`
+          : `${runde(v, vorlage.rundung)}`;
+    const loesungTxt = fmt(evalFormelValue(vorlage.loesung_formel, vars));
+    const distraktorTxt = vorlage.distraktor_formeln.map((f) => fmt(evalFormelValue(f, vars)));
 
-    // Pflicht-Validierung: Distraktoren ≠ Lösung und untereinander verschieden.
-    const alle = [loesung, ...distraktoren];
-    if (new Set(alle).size === alle.length) {
-      const fmt = (n: number) => (vorlage.einheit ? `${n} ${vorlage.einheit}` : `${n}`);
-      const optionen = shuffle(
-        [{ text: fmt(loesung), korrekt: true }, ...distraktoren.map((d) => ({ text: fmt(d), korrekt: false }))],
-        rng
-      );
-      return {
-        vorlage_id: vorlage.id,
-        konzept_id: vorlage.konzept_id,
-        stufe: vorlage.stufe,
-        frage: fuelle(vorlage.frage_vorlage.de, vars),
-        optionen,
-        erklaerung_nach_antwort: vorlage.erklaerung_nach_antwort ? fuelle(vorlage.erklaerung_nach_antwort.de, vars) : "",
-        wissenspunkte: vorlage.wissenspunkte,
-      };
+    // Eindeutige Distraktoren ≠ Lösung (Reihenfolge erhalten).
+    const eindeutig = [...new Set(distraktorTxt)].filter((d) => d !== loesungTxt);
+
+    if (eindeutig.length === gewuenschteDistraktoren) {
+      // Volle Qualität → sofort verwenden.
+      return baueInstanzAusVorlage(vorlage, vars, loesungTxt, eindeutig, rng);
+    }
+    if (!beste || eindeutig.length > beste.distraktoren.length) {
+      beste = { vars, loesung: loesungTxt, distraktoren: eindeutig };
     }
   }
+
+  // Fallback (kategoriale Vorlagen): beste Ziehung mit ≥1 eindeutigem Distraktor.
+  if (beste && beste.distraktoren.length >= 1) {
+    return baueInstanzAusVorlage(vorlage, beste.vars, beste.loesung, beste.distraktoren, rng);
+  }
   throw new Error(`Konnte für ${vorlage.id} keine kollisionsfreie Instanz erzeugen`);
+}
+
+function baueInstanzAusVorlage(
+  vorlage: Vorlage,
+  vars: Record<string, number>,
+  loesungTxt: string,
+  distraktorTxt: string[],
+  rng: () => number
+): FrageInstanz {
+  const optionen = shuffle(
+    [{ text: loesungTxt, korrekt: true }, ...distraktorTxt.map((d) => ({ text: d, korrekt: false }))],
+    rng
+  );
+  return {
+    vorlage_id: vorlage.id,
+    konzept_id: vorlage.konzept_id,
+    stufe: vorlage.stufe,
+    frage: fuelle(vorlage.frage_vorlage.de, vars),
+    optionen,
+    erklaerung_nach_antwort: vorlage.erklaerung_nach_antwort ? fuelle(vorlage.erklaerung_nach_antwort.de, vars) : "",
+    wissenspunkte: vorlage.wissenspunkte,
+  };
 }
 
 function addDays(iso: string, days: number): string {

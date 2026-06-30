@@ -36,8 +36,15 @@ export function pick(t: LangText, lang: "de" | "en" = "de"): string {
   return (lang === "en" ? t.en : t.de) ?? t.de ?? "";
 }
 
-/** Zielgruppen-Erklärung eines Legacy-Konzepts (temporäres Audience→Altersband-Mapping). */
+/**
+ * Zielgruppen-Erklärung eines Konzepts. Stammt es aus v2-Content (explanationsV2),
+ * wird der echte zielgruppenspezifische Text genutzt; sonst Fallback auf das
+ * Legacy-Altersband (Audience→Altersband-Mapping).
+ */
 export function erklaerungFuer(konzept: Konzept, audience: Audience, lang: "de" | "en" = "de"): string {
+  if (konzept.explanationsV2) {
+    return konzept.explanationsV2[audience] ?? konzept.explanationsV2.learners_10_14 ?? "";
+  }
   const band: Altersband = AUDIENCE_TO_BAND[audience];
   const txt = konzept.erklaerungen[band] ?? konzept.erklaerungen["kind_11_14"] ?? LEER;
   return pick(txt, lang);
