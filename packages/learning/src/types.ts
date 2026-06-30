@@ -284,6 +284,8 @@ export interface Question {
   correctAnswer: string;
   distractors: { text: string; closeness: Naehe }[];
   explanationAfterAnswer: string;
+  /** Wie viele Distraktoren angezeigt werden (Default aus Tuning). */
+  displayedDistractors?: number;
 }
 
 export interface CalculationTemplate {
@@ -317,6 +319,10 @@ export interface LearningModule {
   /** Herkunfts-ID aus dem alten Seed (für Fortschritts-/Content-Migration). */
   legacyId?: string;
   difficulty?: Difficulty;
+  /** Zielgruppen, für die das Modul gedacht ist (Default: alle drei). */
+  targetGroups?: Audience[];
+  /** Redaktioneller Status, z. B. "editorial_review_recommended". */
+  reviewStatus?: string;
 }
 
 // ── Speicher-/Autorenform (LangText) ────────────────────────────────────────
@@ -328,6 +334,7 @@ export interface QuestionSource {
   correctAnswer: LangText;
   distractors: { text: LangText; closeness: Naehe }[];
   explanationAfterAnswer: LangText;
+  displayedDistractors?: number;
 }
 
 export interface CalculationTemplateSource {
@@ -359,6 +366,8 @@ export interface LearningModuleSource {
   parentSupport?: ParentSupportSource;
   legacyId?: string;
   difficulty?: Difficulty;
+  targetGroups?: Audience[];
+  reviewStatus?: string;
   /** Migrations-Marker: true → aus Legacy-Inhalten erzeugt, v2-Felder sind Platzhalter. */
   _legacy?: boolean;
   /** Felder, die noch redaktionell befüllt werden müssen (von migrate.ts gesetzt). */

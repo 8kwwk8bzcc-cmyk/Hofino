@@ -6,7 +6,8 @@ import risikoEtf from "./content/risiko_etf.json";
 import depotKosten from "./content/depot_kosten.json";
 import haltungLangfrist from "./content/haltung_langfrist.json";
 import type { Frage, InhaltsSeed, Konzept, Stufe, Themenblock, Vorlage, LearningModule, LearningModuleSource } from "./types.js";
-import { fromLegacyKonzept, resolveModule } from "./migrate.js";
+import { fromLegacyKonzept, resolveModule, liftModuleToSource } from "./migrate.js";
+import { V2_MODULES } from "./content-v2.js";
 
 const QUELLEN = [
   raw,
@@ -69,18 +70,12 @@ export function modulById(id: string, lang: "de" | "en" = "de"): LearningModule 
   return k ? resolveModule(fromLegacyKonzept(k, fragenFuer(k.id), vorlagenFuer(k.id)), lang) : undefined;
 }
 
-// ── v2-Content-Import (blockweise JSON unter ./content/v2/) ───────────────────
-// Format je Datei: LearningModuleSource[] (siehe content/v2/README.md). Sobald ein
-// Block geliefert ist: JSON-Datei anlegen, hier importieren und in V2_QUELLEN eintragen.
-// Frischer Lernpfad → v2 ersetzt Legacy pro Block; gemischter Stand bleibt valide.
-const V2_QUELLEN: LearningModuleSource[][] = [
-  // import tbGeld from "./content/v2/tb_geld_wert_entscheidungen.json";
-  // tbGeld as unknown as LearningModuleSource[],
-];
+// ── v2-Content-Import (geliefertes Curriculum, ./content/v2/, via content-v2.ts) ──
+// Frischer Lernpfad → v2 ist die neue Quelle der Wahrheit; Legacy bleibt als Fallback.
 
-/** Alle bereits gelieferten v2-Module (LangText, dedupliziert per id). */
+/** Alle gelieferten v2-Module als Source-Form (LangText), für Validierung/Readiness. */
 export function v2ModuleSources(): LearningModuleSource[] {
-  return mergeById(V2_QUELLEN);
+  return V2_MODULES.map(liftModuleToSource);
 }
 
 /**

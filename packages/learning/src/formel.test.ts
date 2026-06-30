@@ -18,4 +18,18 @@ describe("evalFormel", () => {
     expect(() => evalFormel("x + 1", {})).toThrow();
     expect(() => evalFormel("2 % 3", {})).toThrow();
   });
+
+  it("unterstützt die Funktions-Whitelist (ceil/floor/round/abs/min/max/pow)", () => {
+    expect(evalFormel("ceil(ziel / betrag)", { ziel: 100, betrag: 30 })).toBe(4);
+    expect(evalFormel("floor(budget / preis)", { budget: 100, preis: 30 })).toBe(3);
+    expect(evalFormel("round(7 / 2)", {})).toBe(4);
+    expect(evalFormel("abs(kauf - verkauf)", { kauf: 50, verkauf: 20 })).toBe(30);
+    expect(evalFormel("max(a, b)", { a: 3, b: 9 })).toBe(9);
+    expect(evalFormel("min(a, b) + 1", { a: 3, b: 9 })).toBe(4);
+    expect(evalFormel("pow(betrag, 2)", { betrag: 5 })).toBe(25);
+  });
+
+  it("wirft bei unbekannter Funktion", () => {
+    expect(() => evalFormel("sqrt(4)", {})).toThrow();
+  });
 });

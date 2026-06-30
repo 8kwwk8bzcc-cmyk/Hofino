@@ -125,11 +125,9 @@ export function moduleReadiness(m: LearningModuleSource): string[] {
     if (fehlend.length) w.push(`Fragelevel fehlen: ${fehlend.join(", ")}`);
   }
 
-  // Rechnerische Module: ≥1 Vorlage (empfohlen apply + master).
-  if (m.type === "calculation") {
-    const tmpl = m.calculationTemplates ?? [];
-    if (!tmpl.length) w.push("braucht ≥1 calculationTemplate");
-    else if (!tmpl.some((t) => t.level === "master")) w.push("empfohlen: zusätzliche master-Vorlage");
+  // Rechnerische Module: ≥1 Vorlage Pflicht (§19; „besser zwei" ist nur Empfehlung).
+  if (m.type === "calculation" && !(m.calculationTemplates ?? []).length) {
+    w.push("braucht ≥1 calculationTemplate");
   }
 
   // Jede Frage: korrekte Antwort, ≥3 Distraktoren, Nachklärung.

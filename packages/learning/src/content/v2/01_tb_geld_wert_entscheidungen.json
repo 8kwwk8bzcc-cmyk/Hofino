@@ -1,0 +1,1658 @@
+{
+  "schemaVersion": "2.0.0",
+  "generatedAt": "2026-06-30",
+  "targetGroups": [
+    "learners_10_14",
+    "young_adults",
+    "parents_teachers"
+  ],
+  "blockOrder": 1,
+  "block": {
+    "id": "tb_geld_wert_entscheidungen",
+    "title": "Geld, Wert und Entscheidungen",
+    "unlockLevel": 1,
+    "goal": "Lernende verstehen Geld als Werkzeug, Preise als Vergleichshilfe und finanzielle Entscheidungen als Abwägung.",
+    "pedagogicalIdea": "Dieser Block schafft die Grundlage, bevor Börse und Investieren behandelt werden: Geld, Bedürfnisse, Wünsche, Budget, Konten und Notgroschen.",
+    "modules": [
+      {
+        "id": "konzept_geld",
+        "title": "Was ist Geld?",
+        "type": "understanding",
+        "unlockLevel": 1,
+        "prerequisites": [],
+        "pedagogy": {
+          "learningGoal": "Geld als Zahlungsmittel, Recheneinheit und Wertaufbewahrung verstehen.",
+          "coreIdea": "Geld funktioniert, weil Menschen es akzeptieren und ihm vertrauen.",
+          "everydayScenario": "Du kaufst ein Getränk und bezahlst mit Geld, statt direkt etwas zu tauschen.",
+          "misconception": "Geld ist wertvoll, weil Papier oder Metall selbst so wertvoll sind.",
+          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Was ist Geld?' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
+          "reflectionPrompt": "Welche Fehlvorstellung zu 'Was ist Geld?' könnte dich zu einer schlechten Entscheidung verleiten?"
+        },
+        "glossaryTerms": [
+          "Geld",
+          "Bargeld",
+          "Kontoguthaben",
+          "Zahlungsmittel",
+          "Preis",
+          "Wert",
+          "Vertrauen"
+        ],
+        "targetGroups": [
+          "learners_10_14",
+          "young_adults",
+          "parents_teachers"
+        ],
+        "explanations": {
+          "learners_10_14": "Was ist Geld?: Geld funktioniert, weil Menschen es akzeptieren und ihm vertrauen. Beispiel: Du kaufst ein Getränk und bezahlst mit Geld, statt direkt etwas zu tauschen. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Geld ist wertvoll, weil Papier oder Metall selbst so wertvoll sind.“.",
+          "young_adults": "Was ist Geld?: Geld funktioniert, weil Menschen es akzeptieren und ihm vertrauen. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Du kaufst ein Getränk und bezahlst mit Geld, statt direkt etwas zu tauschen.",
+          "parents_teachers": "Lernziel: Geld als Zahlungsmittel, Recheneinheit und Wertaufbewahrung verstehen. Didaktischer Fokus: Geld funktioniert, weil Menschen es akzeptieren und ihm vertrauen. Typische Fehlvorstellung: „Geld ist wertvoll, weil Papier oder Metall selbst so wertvoll sind.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+        },
+        "questions": [
+          {
+            "id": "q_geld_001",
+            "level": "explain",
+            "question": "Was beschreibt „Was ist Geld?“ am besten?",
+            "points": 100,
+            "correctAnswer": "Geld funktioniert, weil Menschen es akzeptieren und ihm vertrauen.",
+            "distractors": [
+              {
+                "text": "Geld ist wertvoll, weil Papier oder Metall selbst so wertvoll sind.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "closeness": 3
+              },
+              {
+                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Richtig: Geld funktioniert, weil Menschen es akzeptieren und ihm vertrauen."
+          },
+          {
+            "id": "q_geld_002",
+            "level": "recognize",
+            "question": "Welches Beispiel passt am ehesten zu „Was ist Geld?“?",
+            "points": 100,
+            "correctAnswer": "Du kaufst ein Getränk und bezahlst mit Geld, statt direkt etwas zu tauschen.",
+            "distractors": [
+              {
+                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "closeness": 2
+              },
+              {
+                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "closeness": 3
+              },
+              {
+                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+          },
+          {
+            "id": "q_geld_003",
+            "level": "understand",
+            "question": "Warum ist „Was ist Geld?“ für Finanzbildung wichtig?",
+            "points": 120,
+            "correctAnswer": "Geld als Zahlungsmittel, Recheneinheit und Wertaufbewahrung verstehen.",
+            "distractors": [
+              {
+                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "closeness": 3
+              },
+              {
+                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "closeness": 2
+              },
+              {
+                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Lernziel ist: Geld als Zahlungsmittel, Recheneinheit und Wertaufbewahrung verstehen."
+          },
+          {
+            "id": "q_geld_004",
+            "level": "apply",
+            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "points": 150,
+            "correctAnswer": "Den Begriff verstehen, Beispiele erkennen und ihn von ähnlichen Begriffen abgrenzen.",
+            "distractors": [
+              {
+                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "closeness": 3
+              },
+              {
+                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "closeness": 3
+              },
+              {
+                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+          },
+          {
+            "id": "q_geld_005",
+            "level": "master",
+            "question": "Welche Aussage zu „Was ist Geld?“ stimmt am besten?",
+            "points": 200,
+            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "distractors": [
+              {
+                "text": "Es ersetzt jede weitere Prüfung.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert schnelle Gewinne.",
+                "closeness": 3
+              },
+              {
+                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+          }
+        ],
+        "calculationTemplates": [],
+        "teacherSupport": {
+          "competenceGoal": "Geld als Zahlungsmittel, Recheneinheit und Wertaufbewahrung verstehen.",
+          "typicalMisconception": "Geld ist wertvoll, weil Papier oder Metall selbst so wertvoll sind.",
+          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Geld ist wertvoll, weil Papier oder Metall selbst so wertvoll sind.“ glaubt?",
+          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Was ist Geld?“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+        },
+        "parentSupport": {
+          "conversationPrompt": "Wo begegnet uns „Was ist Geld?“ im Alltag?",
+          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Was ist Geld?“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+        },
+        "reviewStatus": "editorial_review_recommended"
+      },
+      {
+        "id": "konzept_tauschen",
+        "title": "Warum tauschen Menschen?",
+        "type": "understanding",
+        "unlockLevel": 1,
+        "prerequisites": [
+          "konzept_geld"
+        ],
+        "pedagogy": {
+          "learningGoal": "Tausch als Grundlage wirtschaftlicher Zusammenarbeit verstehen.",
+          "coreIdea": "Menschen tauschen, weil nicht jeder alles selbst herstellen kann.",
+          "everydayScenario": "Eine Person hat Äpfel, eine andere Brot; Geld macht den Tausch flexibler.",
+          "misconception": "Tauschen ist altmodisch und hat mit Geld nichts mehr zu tun.",
+          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Warum tauschen Menschen?' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
+          "reflectionPrompt": "Welche Fehlvorstellung zu 'Warum tauschen Menschen?' könnte dich zu einer schlechten Entscheidung verleiten?"
+        },
+        "glossaryTerms": [
+          "Tausch",
+          "Handel",
+          "Angebot",
+          "Nachfrage",
+          "Arbeitsteilung",
+          "Geld"
+        ],
+        "targetGroups": [
+          "learners_10_14",
+          "young_adults",
+          "parents_teachers"
+        ],
+        "explanations": {
+          "learners_10_14": "Warum tauschen Menschen?: Menschen tauschen, weil nicht jeder alles selbst herstellen kann. Beispiel: Eine Person hat Äpfel, eine andere Brot; Geld macht den Tausch flexibler. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Tauschen ist altmodisch und hat mit Geld nichts mehr zu tun.“.",
+          "young_adults": "Warum tauschen Menschen?: Menschen tauschen, weil nicht jeder alles selbst herstellen kann. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Eine Person hat Äpfel, eine andere Brot; Geld macht den Tausch flexibler.",
+          "parents_teachers": "Lernziel: Tausch als Grundlage wirtschaftlicher Zusammenarbeit verstehen. Didaktischer Fokus: Menschen tauschen, weil nicht jeder alles selbst herstellen kann. Typische Fehlvorstellung: „Tauschen ist altmodisch und hat mit Geld nichts mehr zu tun.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+        },
+        "questions": [
+          {
+            "id": "q_tauschen_001",
+            "level": "explain",
+            "question": "Was beschreibt „Warum tauschen Menschen?“ am besten?",
+            "points": 100,
+            "correctAnswer": "Menschen tauschen, weil nicht jeder alles selbst herstellen kann.",
+            "distractors": [
+              {
+                "text": "Tauschen ist altmodisch und hat mit Geld nichts mehr zu tun.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "closeness": 3
+              },
+              {
+                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Richtig: Menschen tauschen, weil nicht jeder alles selbst herstellen kann."
+          },
+          {
+            "id": "q_tauschen_002",
+            "level": "recognize",
+            "question": "Welches Beispiel passt am ehesten zu „Warum tauschen Menschen?“?",
+            "points": 100,
+            "correctAnswer": "Eine Person hat Äpfel, eine andere Brot; Geld macht den Tausch flexibler.",
+            "distractors": [
+              {
+                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "closeness": 2
+              },
+              {
+                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "closeness": 3
+              },
+              {
+                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+          },
+          {
+            "id": "q_tauschen_003",
+            "level": "understand",
+            "question": "Warum ist „Warum tauschen Menschen?“ für Finanzbildung wichtig?",
+            "points": 120,
+            "correctAnswer": "Tausch als Grundlage wirtschaftlicher Zusammenarbeit verstehen.",
+            "distractors": [
+              {
+                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "closeness": 3
+              },
+              {
+                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "closeness": 2
+              },
+              {
+                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Lernziel ist: Tausch als Grundlage wirtschaftlicher Zusammenarbeit verstehen."
+          },
+          {
+            "id": "q_tauschen_004",
+            "level": "apply",
+            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "points": 150,
+            "correctAnswer": "Den Begriff verstehen, Beispiele erkennen und ihn von ähnlichen Begriffen abgrenzen.",
+            "distractors": [
+              {
+                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "closeness": 3
+              },
+              {
+                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "closeness": 3
+              },
+              {
+                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+          },
+          {
+            "id": "q_tauschen_005",
+            "level": "master",
+            "question": "Welche Aussage zu „Warum tauschen Menschen?“ stimmt am besten?",
+            "points": 200,
+            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "distractors": [
+              {
+                "text": "Es ersetzt jede weitere Prüfung.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert schnelle Gewinne.",
+                "closeness": 3
+              },
+              {
+                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+          }
+        ],
+        "calculationTemplates": [],
+        "teacherSupport": {
+          "competenceGoal": "Tausch als Grundlage wirtschaftlicher Zusammenarbeit verstehen.",
+          "typicalMisconception": "Tauschen ist altmodisch und hat mit Geld nichts mehr zu tun.",
+          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Tauschen ist altmodisch und hat mit Geld nichts mehr zu tun.“ glaubt?",
+          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Warum tauschen Menschen?“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+        },
+        "parentSupport": {
+          "conversationPrompt": "Wo begegnet uns „Warum tauschen Menschen?“ im Alltag?",
+          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Warum tauschen Menschen?“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+        },
+        "reviewStatus": "editorial_review_recommended"
+      },
+      {
+        "id": "konzept_bezahlen_vergleichen",
+        "title": "Kaufen, bezahlen, vergleichen",
+        "type": "calculation",
+        "unlockLevel": 1,
+        "prerequisites": [
+          "konzept_tauschen"
+        ],
+        "pedagogy": {
+          "learningGoal": "Preise, Menge, Qualität und Nutzen bei Kaufentscheidungen vergleichen.",
+          "coreIdea": "Nicht nur der niedrigste Preis zählt, sondern auch Menge, Qualität und Bedarf.",
+          "everydayScenario": "Ein Viererpack kostet 8 Euro, ein einzelnes Getränk 3 Euro; pro Stück ist der Vergleich entscheidend.",
+          "misconception": "Das billigste Angebot ist immer die beste Entscheidung.",
+          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Kaufen, bezahlen, vergleichen' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
+          "reflectionPrompt": "Welche Fehlvorstellung zu 'Kaufen, bezahlen, vergleichen' könnte dich zu einer schlechten Entscheidung verleiten?"
+        },
+        "glossaryTerms": [
+          "Kaufen",
+          "Bezahlen",
+          "Preis",
+          "Grundpreis",
+          "Qualität",
+          "Nutzen",
+          "Gesamtkosten"
+        ],
+        "targetGroups": [
+          "learners_10_14",
+          "young_adults",
+          "parents_teachers"
+        ],
+        "explanations": {
+          "learners_10_14": "Kaufen, bezahlen, vergleichen: Nicht nur der niedrigste Preis zählt, sondern auch Menge, Qualität und Bedarf. Beispiel: Ein Viererpack kostet 8 Euro, ein einzelnes Getränk 3 Euro; pro Stück ist der Vergleich entscheidend. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Das billigste Angebot ist immer die beste Entscheidung.“.",
+          "young_adults": "Kaufen, bezahlen, vergleichen: Nicht nur der niedrigste Preis zählt, sondern auch Menge, Qualität und Bedarf. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Ein Viererpack kostet 8 Euro, ein einzelnes Getränk 3 Euro; pro Stück ist der Vergleich entscheidend.",
+          "parents_teachers": "Lernziel: Preise, Menge, Qualität und Nutzen bei Kaufentscheidungen vergleichen. Didaktischer Fokus: Nicht nur der niedrigste Preis zählt, sondern auch Menge, Qualität und Bedarf. Typische Fehlvorstellung: „Das billigste Angebot ist immer die beste Entscheidung.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+        },
+        "questions": [
+          {
+            "id": "q_bezahlen_vergleichen_001",
+            "level": "explain",
+            "question": "Was beschreibt „Kaufen, bezahlen, vergleichen“ am besten?",
+            "points": 100,
+            "correctAnswer": "Nicht nur der niedrigste Preis zählt, sondern auch Menge, Qualität und Bedarf.",
+            "distractors": [
+              {
+                "text": "Das billigste Angebot ist immer die beste Entscheidung.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "closeness": 3
+              },
+              {
+                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Richtig: Nicht nur der niedrigste Preis zählt, sondern auch Menge, Qualität und Bedarf."
+          },
+          {
+            "id": "q_bezahlen_vergleichen_002",
+            "level": "recognize",
+            "question": "Welches Beispiel passt am ehesten zu „Kaufen, bezahlen, vergleichen“?",
+            "points": 100,
+            "correctAnswer": "Ein Viererpack kostet 8 Euro, ein einzelnes Getränk 3 Euro; pro Stück ist der Vergleich entscheidend.",
+            "distractors": [
+              {
+                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "closeness": 2
+              },
+              {
+                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "closeness": 3
+              },
+              {
+                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+          },
+          {
+            "id": "q_bezahlen_vergleichen_003",
+            "level": "understand",
+            "question": "Warum ist „Kaufen, bezahlen, vergleichen“ für Finanzbildung wichtig?",
+            "points": 120,
+            "correctAnswer": "Preise, Menge, Qualität und Nutzen bei Kaufentscheidungen vergleichen.",
+            "distractors": [
+              {
+                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "closeness": 3
+              },
+              {
+                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "closeness": 2
+              },
+              {
+                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Lernziel ist: Preise, Menge, Qualität und Nutzen bei Kaufentscheidungen vergleichen."
+          },
+          {
+            "id": "q_bezahlen_vergleichen_004",
+            "level": "apply",
+            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "points": 150,
+            "correctAnswer": "Die passenden Werte einsetzen, sauber rechnen und das Ergebnis im Kontext prüfen.",
+            "distractors": [
+              {
+                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "closeness": 3
+              },
+              {
+                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "closeness": 3
+              },
+              {
+                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+          },
+          {
+            "id": "q_bezahlen_vergleichen_005",
+            "level": "master",
+            "question": "Welche Aussage zu „Kaufen, bezahlen, vergleichen“ stimmt am besten?",
+            "points": 200,
+            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "distractors": [
+              {
+                "text": "Es ersetzt jede weitere Prüfung.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert schnelle Gewinne.",
+                "closeness": 3
+              },
+              {
+                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+          }
+        ],
+        "calculationTemplates": [
+          {
+            "id": "tmpl_bez_grundpreis",
+            "level": "apply",
+            "points": 150,
+            "questionTemplate": "Packung A enthält {mengeA} Stück und kostet {preisA} Euro. Packung B enthält {mengeB} Stück und kostet {preisB} Euro. Welche Packung ist günstiger pro Stück?",
+            "parameters": {
+              "mengeA": {
+                "min": 2,
+                "max": 10
+              },
+              "preisA": {
+                "min": 2,
+                "max": 20
+              },
+              "mengeB": {
+                "min": 2,
+                "max": 10
+              },
+              "preisB": {
+                "min": 2,
+                "max": 20
+              }
+            },
+            "solutionFormula": "preisA / mengeA < preisB / mengeB ? 'A' : 'B'",
+            "distractorFormulas": [
+              "preisA < preisB ? 'A' : 'B'",
+              "mengeA > mengeB ? 'A' : 'B'",
+              "'gleich'"
+            ],
+            "explanationTemplate": "Teile den Preis durch die Anzahl der Stücke und vergleiche den Stückpreis."
+          }
+        ],
+        "teacherSupport": {
+          "competenceGoal": "Preise, Menge, Qualität und Nutzen bei Kaufentscheidungen vergleichen.",
+          "typicalMisconception": "Das billigste Angebot ist immer die beste Entscheidung.",
+          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Das billigste Angebot ist immer die beste Entscheidung.“ glaubt?",
+          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Kaufen, bezahlen, vergleichen“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+        },
+        "parentSupport": {
+          "conversationPrompt": "Wo begegnet uns „Kaufen, bezahlen, vergleichen“ im Alltag?",
+          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Kaufen, bezahlen, vergleichen“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+        },
+        "reviewStatus": "editorial_review_recommended"
+      },
+      {
+        "id": "konzept_beduerfnisse_wuensche",
+        "title": "Bedürfnisse vs. Wünsche",
+        "type": "decision",
+        "unlockLevel": 1,
+        "prerequisites": [
+          "konzept_bezahlen_vergleichen"
+        ],
+        "pedagogy": {
+          "learningGoal": "Zwischen Bedürfnissen, Wünschen und Prioritäten unterscheiden.",
+          "coreIdea": "Bedürfnisse sind wichtig oder notwendig; Wünsche sind erlaubt, müssen aber priorisiert werden.",
+          "everydayScenario": "Du brauchst neue Sportschuhe, möchtest aber auch ein neues Spiel kaufen.",
+          "misconception": "Wünsche sind schlecht und man darf nur notwendige Dinge kaufen.",
+          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Bedürfnisse vs. Wünsche' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
+          "reflectionPrompt": "Welche Fehlvorstellung zu 'Bedürfnisse vs. Wünsche' könnte dich zu einer schlechten Entscheidung verleiten?"
+        },
+        "glossaryTerms": [
+          "Bedürfnis",
+          "Wunsch",
+          "Priorität",
+          "Entscheidung",
+          "Konsum",
+          "Sparziel"
+        ],
+        "targetGroups": [
+          "learners_10_14",
+          "young_adults",
+          "parents_teachers"
+        ],
+        "explanations": {
+          "learners_10_14": "Bedürfnisse vs. Wünsche: Bedürfnisse sind wichtig oder notwendig; Wünsche sind erlaubt, müssen aber priorisiert werden. Beispiel: Du brauchst neue Sportschuhe, möchtest aber auch ein neues Spiel kaufen. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Wünsche sind schlecht und man darf nur notwendige Dinge kaufen.“.",
+          "young_adults": "Bedürfnisse vs. Wünsche: Bedürfnisse sind wichtig oder notwendig; Wünsche sind erlaubt, müssen aber priorisiert werden. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Du brauchst neue Sportschuhe, möchtest aber auch ein neues Spiel kaufen.",
+          "parents_teachers": "Lernziel: Zwischen Bedürfnissen, Wünschen und Prioritäten unterscheiden. Didaktischer Fokus: Bedürfnisse sind wichtig oder notwendig; Wünsche sind erlaubt, müssen aber priorisiert werden. Typische Fehlvorstellung: „Wünsche sind schlecht und man darf nur notwendige Dinge kaufen.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+        },
+        "questions": [
+          {
+            "id": "q_beduerfnisse_wuensche_001",
+            "level": "explain",
+            "question": "Was beschreibt „Bedürfnisse vs. Wünsche“ am besten?",
+            "points": 100,
+            "correctAnswer": "Bedürfnisse sind wichtig oder notwendig; Wünsche sind erlaubt, müssen aber priorisiert werden.",
+            "distractors": [
+              {
+                "text": "Wünsche sind schlecht und man darf nur notwendige Dinge kaufen.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "closeness": 3
+              },
+              {
+                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Richtig: Bedürfnisse sind wichtig oder notwendig; Wünsche sind erlaubt, müssen aber priorisiert werden."
+          },
+          {
+            "id": "q_beduerfnisse_wuensche_002",
+            "level": "recognize",
+            "question": "Welches Beispiel passt am ehesten zu „Bedürfnisse vs. Wünsche“?",
+            "points": 100,
+            "correctAnswer": "Du brauchst neue Sportschuhe, möchtest aber auch ein neues Spiel kaufen.",
+            "distractors": [
+              {
+                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "closeness": 2
+              },
+              {
+                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "closeness": 3
+              },
+              {
+                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+          },
+          {
+            "id": "q_beduerfnisse_wuensche_003",
+            "level": "understand",
+            "question": "Warum ist „Bedürfnisse vs. Wünsche“ für Finanzbildung wichtig?",
+            "points": 120,
+            "correctAnswer": "Zwischen Bedürfnissen, Wünschen und Prioritäten unterscheiden.",
+            "distractors": [
+              {
+                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "closeness": 3
+              },
+              {
+                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "closeness": 2
+              },
+              {
+                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Lernziel ist: Zwischen Bedürfnissen, Wünschen und Prioritäten unterscheiden."
+          },
+          {
+            "id": "q_beduerfnisse_wuensche_004",
+            "level": "apply",
+            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "points": 150,
+            "correctAnswer": "Innehalten, Informationen prüfen und erst dann passend zum eigenen Ziel handeln.",
+            "distractors": [
+              {
+                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "closeness": 3
+              },
+              {
+                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "closeness": 3
+              },
+              {
+                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+          },
+          {
+            "id": "q_beduerfnisse_wuensche_005",
+            "level": "master",
+            "question": "Welche Aussage zu „Bedürfnisse vs. Wünsche“ stimmt am besten?",
+            "points": 200,
+            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "distractors": [
+              {
+                "text": "Es ersetzt jede weitere Prüfung.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert schnelle Gewinne.",
+                "closeness": 3
+              },
+              {
+                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+          }
+        ],
+        "calculationTemplates": [],
+        "teacherSupport": {
+          "competenceGoal": "Zwischen Bedürfnissen, Wünschen und Prioritäten unterscheiden.",
+          "typicalMisconception": "Wünsche sind schlecht und man darf nur notwendige Dinge kaufen.",
+          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Wünsche sind schlecht und man darf nur notwendige Dinge kaufen.“ glaubt?",
+          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Bedürfnisse vs. Wünsche“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+        },
+        "parentSupport": {
+          "conversationPrompt": "Wo begegnet uns „Bedürfnisse vs. Wünsche“ im Alltag?",
+          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Bedürfnisse vs. Wünsche“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+        },
+        "reviewStatus": "editorial_review_recommended"
+      },
+      {
+        "id": "konzept_sparen",
+        "title": "Sparen vs. Ausgeben",
+        "type": "calculation",
+        "unlockLevel": 1,
+        "prerequisites": [
+          "konzept_beduerfnisse_wuensche"
+        ],
+        "pedagogy": {
+          "learningGoal": "Sparen als bewusste Entscheidung für spätere Möglichkeiten verstehen.",
+          "coreIdea": "Ausgeben bedeutet Nutzen jetzt; Sparen bedeutet Möglichkeit später.",
+          "everydayScenario": "Du bekommst 20 Euro und legst 5 Euro für ein größeres Ziel zurück.",
+          "misconception": "Sparen heißt, sich nie etwas zu gönnen.",
+          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Sparen vs. Ausgeben' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
+          "reflectionPrompt": "Welche Fehlvorstellung zu 'Sparen vs. Ausgeben' könnte dich zu einer schlechten Entscheidung verleiten?"
+        },
+        "glossaryTerms": [
+          "Sparen",
+          "Ausgeben",
+          "Sparziel",
+          "Sparrate",
+          "Planung",
+          "Puffer"
+        ],
+        "targetGroups": [
+          "learners_10_14",
+          "young_adults",
+          "parents_teachers"
+        ],
+        "explanations": {
+          "learners_10_14": "Sparen vs. Ausgeben: Ausgeben bedeutet Nutzen jetzt; Sparen bedeutet Möglichkeit später. Beispiel: Du bekommst 20 Euro und legst 5 Euro für ein größeres Ziel zurück. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Sparen heißt, sich nie etwas zu gönnen.“.",
+          "young_adults": "Sparen vs. Ausgeben: Ausgeben bedeutet Nutzen jetzt; Sparen bedeutet Möglichkeit später. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Du bekommst 20 Euro und legst 5 Euro für ein größeres Ziel zurück.",
+          "parents_teachers": "Lernziel: Sparen als bewusste Entscheidung für spätere Möglichkeiten verstehen. Didaktischer Fokus: Ausgeben bedeutet Nutzen jetzt; Sparen bedeutet Möglichkeit später. Typische Fehlvorstellung: „Sparen heißt, sich nie etwas zu gönnen.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+        },
+        "questions": [
+          {
+            "id": "q_sparen_001",
+            "level": "explain",
+            "question": "Was beschreibt „Sparen vs. Ausgeben“ am besten?",
+            "points": 100,
+            "correctAnswer": "Ausgeben bedeutet Nutzen jetzt; Sparen bedeutet Möglichkeit später.",
+            "distractors": [
+              {
+                "text": "Sparen heißt, sich nie etwas zu gönnen.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "closeness": 3
+              },
+              {
+                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Richtig: Ausgeben bedeutet Nutzen jetzt; Sparen bedeutet Möglichkeit später."
+          },
+          {
+            "id": "q_sparen_002",
+            "level": "recognize",
+            "question": "Welches Beispiel passt am ehesten zu „Sparen vs. Ausgeben“?",
+            "points": 100,
+            "correctAnswer": "Du bekommst 20 Euro und legst 5 Euro für ein größeres Ziel zurück.",
+            "distractors": [
+              {
+                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "closeness": 2
+              },
+              {
+                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "closeness": 3
+              },
+              {
+                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+          },
+          {
+            "id": "q_sparen_003",
+            "level": "understand",
+            "question": "Warum ist „Sparen vs. Ausgeben“ für Finanzbildung wichtig?",
+            "points": 120,
+            "correctAnswer": "Sparen als bewusste Entscheidung für spätere Möglichkeiten verstehen.",
+            "distractors": [
+              {
+                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "closeness": 3
+              },
+              {
+                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "closeness": 2
+              },
+              {
+                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Lernziel ist: Sparen als bewusste Entscheidung für spätere Möglichkeiten verstehen."
+          },
+          {
+            "id": "q_sparen_004",
+            "level": "apply",
+            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "points": 150,
+            "correctAnswer": "Die passenden Werte einsetzen, sauber rechnen und das Ergebnis im Kontext prüfen.",
+            "distractors": [
+              {
+                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "closeness": 3
+              },
+              {
+                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "closeness": 3
+              },
+              {
+                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+          },
+          {
+            "id": "q_sparen_005",
+            "level": "master",
+            "question": "Welche Aussage zu „Sparen vs. Ausgeben“ stimmt am besten?",
+            "points": 200,
+            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "distractors": [
+              {
+                "text": "Es ersetzt jede weitere Prüfung.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert schnelle Gewinne.",
+                "closeness": 3
+              },
+              {
+                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+          }
+        ],
+        "calculationTemplates": [
+          {
+            "id": "tmpl_spar_monate",
+            "level": "apply",
+            "points": 150,
+            "questionTemplate": "Du legst jeden Monat {betrag} Euro zurück. Wie viel hast du nach {monate} Monaten gespart?",
+            "parameters": {
+              "betrag": {
+                "min": 5,
+                "max": 50
+              },
+              "monate": {
+                "min": 2,
+                "max": 12
+              }
+            },
+            "solutionFormula": "betrag * monate",
+            "distractorFormulas": [
+              "betrag + monate",
+              "betrag * monate - betrag",
+              "betrag * (monate + 1)"
+            ],
+            "explanationTemplate": "Monatsbetrag mal Anzahl der Monate.",
+            "unit": "Euro"
+          },
+          {
+            "id": "tmpl_spar_ziel",
+            "level": "master",
+            "points": 200,
+            "questionTemplate": "Du möchtest {ziel} Euro sparen und legst monatlich {betrag} Euro zurück. Nach wie vielen Monaten erreichst du das Ziel mindestens?",
+            "parameters": {
+              "ziel": {
+                "min": 50,
+                "max": 300
+              },
+              "betrag": {
+                "min": 5,
+                "max": 50
+              }
+            },
+            "solutionFormula": "ceil(ziel / betrag)",
+            "distractorFormulas": [
+              "ziel / betrag - 1",
+              "ziel - betrag",
+              "betrag / ziel"
+            ],
+            "explanationTemplate": "Teile Ziel durch Sparrate und runde auf volle Monate auf.",
+            "unit": "Monate"
+          }
+        ],
+        "teacherSupport": {
+          "competenceGoal": "Sparen als bewusste Entscheidung für spätere Möglichkeiten verstehen.",
+          "typicalMisconception": "Sparen heißt, sich nie etwas zu gönnen.",
+          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Sparen heißt, sich nie etwas zu gönnen.“ glaubt?",
+          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Sparen vs. Ausgeben“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+        },
+        "parentSupport": {
+          "conversationPrompt": "Wo begegnet uns „Sparen vs. Ausgeben“ im Alltag?",
+          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Sparen vs. Ausgeben“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+        },
+        "reviewStatus": "editorial_review_recommended"
+      },
+      {
+        "id": "konzept_budget",
+        "title": "Budget: Einnahmen und Ausgaben",
+        "type": "calculation",
+        "unlockLevel": 2,
+        "prerequisites": [
+          "konzept_sparen"
+        ],
+        "pedagogy": {
+          "learningGoal": "Einnahmen, Ausgaben und verfügbares Geld planen.",
+          "coreIdea": "Ein Budget zeigt, ob dein Geld reicht und was übrig bleibt.",
+          "everydayScenario": "Du bekommst Taschengeld und planst Snacks, Freizeit, Sparen und Restbetrag.",
+          "misconception": "Solange noch Geld auf dem Konto ist, ist alles in Ordnung.",
+          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Budget: Einnahmen und Ausgaben' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
+          "reflectionPrompt": "Welche Fehlvorstellung zu 'Budget: Einnahmen und Ausgaben' könnte dich zu einer schlechten Entscheidung verleiten?"
+        },
+        "glossaryTerms": [
+          "Budget",
+          "Einnahmen",
+          "Ausgaben",
+          "Überschuss",
+          "Fehlbetrag",
+          "feste Ausgaben",
+          "variable Ausgaben"
+        ],
+        "targetGroups": [
+          "learners_10_14",
+          "young_adults",
+          "parents_teachers"
+        ],
+        "explanations": {
+          "learners_10_14": "Budget: Einnahmen und Ausgaben: Ein Budget zeigt, ob dein Geld reicht und was übrig bleibt. Beispiel: Du bekommst Taschengeld und planst Snacks, Freizeit, Sparen und Restbetrag. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Solange noch Geld auf dem Konto ist, ist alles in Ordnung.“.",
+          "young_adults": "Budget: Einnahmen und Ausgaben: Ein Budget zeigt, ob dein Geld reicht und was übrig bleibt. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Du bekommst Taschengeld und planst Snacks, Freizeit, Sparen und Restbetrag.",
+          "parents_teachers": "Lernziel: Einnahmen, Ausgaben und verfügbares Geld planen. Didaktischer Fokus: Ein Budget zeigt, ob dein Geld reicht und was übrig bleibt. Typische Fehlvorstellung: „Solange noch Geld auf dem Konto ist, ist alles in Ordnung.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+        },
+        "questions": [
+          {
+            "id": "q_budget_001",
+            "level": "explain",
+            "question": "Was beschreibt „Budget: Einnahmen und Ausgaben“ am besten?",
+            "points": 100,
+            "correctAnswer": "Ein Budget zeigt, ob dein Geld reicht und was übrig bleibt.",
+            "distractors": [
+              {
+                "text": "Solange noch Geld auf dem Konto ist, ist alles in Ordnung.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "closeness": 3
+              },
+              {
+                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Richtig: Ein Budget zeigt, ob dein Geld reicht und was übrig bleibt."
+          },
+          {
+            "id": "q_budget_002",
+            "level": "recognize",
+            "question": "Welches Beispiel passt am ehesten zu „Budget: Einnahmen und Ausgaben“?",
+            "points": 100,
+            "correctAnswer": "Du bekommst Taschengeld und planst Snacks, Freizeit, Sparen und Restbetrag.",
+            "distractors": [
+              {
+                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "closeness": 2
+              },
+              {
+                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "closeness": 3
+              },
+              {
+                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+          },
+          {
+            "id": "q_budget_003",
+            "level": "understand",
+            "question": "Warum ist „Budget: Einnahmen und Ausgaben“ für Finanzbildung wichtig?",
+            "points": 120,
+            "correctAnswer": "Einnahmen, Ausgaben und verfügbares Geld planen.",
+            "distractors": [
+              {
+                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "closeness": 3
+              },
+              {
+                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "closeness": 2
+              },
+              {
+                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Lernziel ist: Einnahmen, Ausgaben und verfügbares Geld planen."
+          },
+          {
+            "id": "q_budget_004",
+            "level": "apply",
+            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "points": 150,
+            "correctAnswer": "Die passenden Werte einsetzen, sauber rechnen und das Ergebnis im Kontext prüfen.",
+            "distractors": [
+              {
+                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "closeness": 3
+              },
+              {
+                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "closeness": 3
+              },
+              {
+                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+          },
+          {
+            "id": "q_budget_005",
+            "level": "master",
+            "question": "Welche Aussage zu „Budget: Einnahmen und Ausgaben“ stimmt am besten?",
+            "points": 200,
+            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "distractors": [
+              {
+                "text": "Es ersetzt jede weitere Prüfung.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert schnelle Gewinne.",
+                "closeness": 3
+              },
+              {
+                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+          }
+        ],
+        "calculationTemplates": [
+          {
+            "id": "tmpl_budget_saldo",
+            "level": "apply",
+            "points": 150,
+            "questionTemplate": "Du bekommst {einnahmen} Euro und gibst {ausgaben} Euro aus. Wie viel bleibt übrig?",
+            "parameters": {
+              "einnahmen": {
+                "min": 20,
+                "max": 300
+              },
+              "ausgaben": {
+                "min": 5,
+                "max": 250
+              }
+            },
+            "solutionFormula": "einnahmen - ausgaben",
+            "distractorFormulas": [
+              "einnahmen + ausgaben",
+              "ausgaben - einnahmen",
+              "einnahmen"
+            ],
+            "explanationTemplate": "Übrig bleibt: Einnahmen minus Ausgaben.",
+            "unit": "Euro"
+          }
+        ],
+        "teacherSupport": {
+          "competenceGoal": "Einnahmen, Ausgaben und verfügbares Geld planen.",
+          "typicalMisconception": "Solange noch Geld auf dem Konto ist, ist alles in Ordnung.",
+          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Solange noch Geld auf dem Konto ist, ist alles in Ordnung.“ glaubt?",
+          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Budget: Einnahmen und Ausgaben“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+        },
+        "parentSupport": {
+          "conversationPrompt": "Wo begegnet uns „Budget: Einnahmen und Ausgaben“ im Alltag?",
+          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Budget: Einnahmen und Ausgaben“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+        },
+        "reviewStatus": "editorial_review_recommended"
+      },
+      {
+        "id": "konzept_geld_auf_konto",
+        "title": "Geld auf dem Konto",
+        "type": "calculation",
+        "unlockLevel": 2,
+        "prerequisites": [
+          "konzept_budget"
+        ],
+        "pedagogy": {
+          "learningGoal": "Kontostand, Guthaben und digitale Zahlungen verstehen.",
+          "coreIdea": "Geld auf dem Konto ist als Guthaben sichtbar und verändert sich durch Buchungen.",
+          "everydayScenario": "Eine Überweisung erhöht den Kontostand; eine Kartenzahlung senkt ihn.",
+          "misconception": "Auf meinem Konto liegt mein Geld als Scheine in einem eigenen Fach bei der Bank.",
+          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Geld auf dem Konto' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
+          "reflectionPrompt": "Welche Fehlvorstellung zu 'Geld auf dem Konto' könnte dich zu einer schlechten Entscheidung verleiten?"
+        },
+        "glossaryTerms": [
+          "Konto",
+          "Kontostand",
+          "Guthaben",
+          "Überweisung",
+          "Abbuchung",
+          "Kartenzahlung",
+          "PIN"
+        ],
+        "targetGroups": [
+          "learners_10_14",
+          "young_adults",
+          "parents_teachers"
+        ],
+        "explanations": {
+          "learners_10_14": "Geld auf dem Konto: Geld auf dem Konto ist als Guthaben sichtbar und verändert sich durch Buchungen. Beispiel: Eine Überweisung erhöht den Kontostand; eine Kartenzahlung senkt ihn. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Auf meinem Konto liegt mein Geld als Scheine in einem eigenen Fach bei der Bank.“.",
+          "young_adults": "Geld auf dem Konto: Geld auf dem Konto ist als Guthaben sichtbar und verändert sich durch Buchungen. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Eine Überweisung erhöht den Kontostand; eine Kartenzahlung senkt ihn.",
+          "parents_teachers": "Lernziel: Kontostand, Guthaben und digitale Zahlungen verstehen. Didaktischer Fokus: Geld auf dem Konto ist als Guthaben sichtbar und verändert sich durch Buchungen. Typische Fehlvorstellung: „Auf meinem Konto liegt mein Geld als Scheine in einem eigenen Fach bei der Bank.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+        },
+        "questions": [
+          {
+            "id": "q_geld_auf_konto_001",
+            "level": "explain",
+            "question": "Was beschreibt „Geld auf dem Konto“ am besten?",
+            "points": 100,
+            "correctAnswer": "Geld auf dem Konto ist als Guthaben sichtbar und verändert sich durch Buchungen.",
+            "distractors": [
+              {
+                "text": "Auf meinem Konto liegt mein Geld als Scheine in einem eigenen Fach bei der Bank.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "closeness": 3
+              },
+              {
+                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Richtig: Geld auf dem Konto ist als Guthaben sichtbar und verändert sich durch Buchungen."
+          },
+          {
+            "id": "q_geld_auf_konto_002",
+            "level": "recognize",
+            "question": "Welches Beispiel passt am ehesten zu „Geld auf dem Konto“?",
+            "points": 100,
+            "correctAnswer": "Eine Überweisung erhöht den Kontostand; eine Kartenzahlung senkt ihn.",
+            "distractors": [
+              {
+                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "closeness": 2
+              },
+              {
+                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "closeness": 3
+              },
+              {
+                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+          },
+          {
+            "id": "q_geld_auf_konto_003",
+            "level": "understand",
+            "question": "Warum ist „Geld auf dem Konto“ für Finanzbildung wichtig?",
+            "points": 120,
+            "correctAnswer": "Kontostand, Guthaben und digitale Zahlungen verstehen.",
+            "distractors": [
+              {
+                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "closeness": 3
+              },
+              {
+                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "closeness": 2
+              },
+              {
+                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Lernziel ist: Kontostand, Guthaben und digitale Zahlungen verstehen."
+          },
+          {
+            "id": "q_geld_auf_konto_004",
+            "level": "apply",
+            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "points": 150,
+            "correctAnswer": "Die passenden Werte einsetzen, sauber rechnen und das Ergebnis im Kontext prüfen.",
+            "distractors": [
+              {
+                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "closeness": 3
+              },
+              {
+                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "closeness": 3
+              },
+              {
+                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+          },
+          {
+            "id": "q_geld_auf_konto_005",
+            "level": "master",
+            "question": "Welche Aussage zu „Geld auf dem Konto“ stimmt am besten?",
+            "points": 200,
+            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "distractors": [
+              {
+                "text": "Es ersetzt jede weitere Prüfung.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert schnelle Gewinne.",
+                "closeness": 3
+              },
+              {
+                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+          }
+        ],
+        "calculationTemplates": [
+          {
+            "id": "tmpl_kontostand",
+            "level": "apply",
+            "points": 150,
+            "questionTemplate": "Dein Konto steht bei {start} Euro. Du bekommst {eingang} Euro und gibst {ausgabe} Euro aus. Wie hoch ist dein Kontostand danach?",
+            "parameters": {
+              "start": {
+                "min": 10,
+                "max": 200
+              },
+              "eingang": {
+                "min": 5,
+                "max": 100
+              },
+              "ausgabe": {
+                "min": 5,
+                "max": 100
+              }
+            },
+            "solutionFormula": "start + eingang - ausgabe",
+            "distractorFormulas": [
+              "start + eingang + ausgabe",
+              "start - eingang - ausgabe",
+              "start + eingang"
+            ],
+            "explanationTemplate": "Zahlungseingang addieren, Ausgabe abziehen.",
+            "unit": "Euro"
+          }
+        ],
+        "teacherSupport": {
+          "competenceGoal": "Kontostand, Guthaben und digitale Zahlungen verstehen.",
+          "typicalMisconception": "Auf meinem Konto liegt mein Geld als Scheine in einem eigenen Fach bei der Bank.",
+          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Auf meinem Konto liegt mein Geld als Scheine in einem eigenen Fach bei der Bank.“ glaubt?",
+          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Geld auf dem Konto“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+        },
+        "parentSupport": {
+          "conversationPrompt": "Wo begegnet uns „Geld auf dem Konto“ im Alltag?",
+          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Geld auf dem Konto“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+        },
+        "reviewStatus": "editorial_review_recommended"
+      },
+      {
+        "id": "konzept_konten",
+        "title": "Girokonto, Tagesgeld, Sparbuch",
+        "type": "understanding",
+        "unlockLevel": 2,
+        "prerequisites": [
+          "konzept_geld_auf_konto"
+        ],
+        "pedagogy": {
+          "learningGoal": "Verschiedene Kontoarten nach Zweck, Verfügbarkeit und Nutzung unterscheiden.",
+          "coreIdea": "Nicht jedes Konto ist für denselben Zweck da.",
+          "everydayScenario": "Taschengeld läuft über ein Girokonto; Rücklagen liegen eher auf Tagesgeld.",
+          "misconception": "Konto ist Konto – es gibt keinen wichtigen Unterschied.",
+          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Girokonto, Tagesgeld, Sparbuch' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
+          "reflectionPrompt": "Welche Fehlvorstellung zu 'Girokonto, Tagesgeld, Sparbuch' könnte dich zu einer schlechten Entscheidung verleiten?"
+        },
+        "glossaryTerms": [
+          "Girokonto",
+          "Tagesgeldkonto",
+          "Sparbuch",
+          "Zinsen",
+          "Zahlungsverkehr",
+          "Rücklage",
+          "Verfügbarkeit"
+        ],
+        "targetGroups": [
+          "learners_10_14",
+          "young_adults",
+          "parents_teachers"
+        ],
+        "explanations": {
+          "learners_10_14": "Girokonto, Tagesgeld, Sparbuch: Nicht jedes Konto ist für denselben Zweck da. Beispiel: Taschengeld läuft über ein Girokonto; Rücklagen liegen eher auf Tagesgeld. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Konto ist Konto – es gibt keinen wichtigen Unterschied.“.",
+          "young_adults": "Girokonto, Tagesgeld, Sparbuch: Nicht jedes Konto ist für denselben Zweck da. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Taschengeld läuft über ein Girokonto; Rücklagen liegen eher auf Tagesgeld.",
+          "parents_teachers": "Lernziel: Verschiedene Kontoarten nach Zweck, Verfügbarkeit und Nutzung unterscheiden. Didaktischer Fokus: Nicht jedes Konto ist für denselben Zweck da. Typische Fehlvorstellung: „Konto ist Konto – es gibt keinen wichtigen Unterschied.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+        },
+        "questions": [
+          {
+            "id": "q_konten_001",
+            "level": "explain",
+            "question": "Was beschreibt „Girokonto, Tagesgeld, Sparbuch“ am besten?",
+            "points": 100,
+            "correctAnswer": "Nicht jedes Konto ist für denselben Zweck da.",
+            "distractors": [
+              {
+                "text": "Konto ist Konto – es gibt keinen wichtigen Unterschied.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "closeness": 3
+              },
+              {
+                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Richtig: Nicht jedes Konto ist für denselben Zweck da."
+          },
+          {
+            "id": "q_konten_002",
+            "level": "recognize",
+            "question": "Welches Beispiel passt am ehesten zu „Girokonto, Tagesgeld, Sparbuch“?",
+            "points": 100,
+            "correctAnswer": "Taschengeld läuft über ein Girokonto; Rücklagen liegen eher auf Tagesgeld.",
+            "distractors": [
+              {
+                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "closeness": 2
+              },
+              {
+                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "closeness": 3
+              },
+              {
+                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+          },
+          {
+            "id": "q_konten_003",
+            "level": "understand",
+            "question": "Warum ist „Girokonto, Tagesgeld, Sparbuch“ für Finanzbildung wichtig?",
+            "points": 120,
+            "correctAnswer": "Verschiedene Kontoarten nach Zweck, Verfügbarkeit und Nutzung unterscheiden.",
+            "distractors": [
+              {
+                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "closeness": 3
+              },
+              {
+                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "closeness": 2
+              },
+              {
+                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Lernziel ist: Verschiedene Kontoarten nach Zweck, Verfügbarkeit und Nutzung unterscheiden."
+          },
+          {
+            "id": "q_konten_004",
+            "level": "apply",
+            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "points": 150,
+            "correctAnswer": "Den Begriff verstehen, Beispiele erkennen und ihn von ähnlichen Begriffen abgrenzen.",
+            "distractors": [
+              {
+                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "closeness": 3
+              },
+              {
+                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "closeness": 3
+              },
+              {
+                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+          },
+          {
+            "id": "q_konten_005",
+            "level": "master",
+            "question": "Welche Aussage zu „Girokonto, Tagesgeld, Sparbuch“ stimmt am besten?",
+            "points": 200,
+            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "distractors": [
+              {
+                "text": "Es ersetzt jede weitere Prüfung.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert schnelle Gewinne.",
+                "closeness": 3
+              },
+              {
+                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+          }
+        ],
+        "calculationTemplates": [],
+        "teacherSupport": {
+          "competenceGoal": "Verschiedene Kontoarten nach Zweck, Verfügbarkeit und Nutzung unterscheiden.",
+          "typicalMisconception": "Konto ist Konto – es gibt keinen wichtigen Unterschied.",
+          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Konto ist Konto – es gibt keinen wichtigen Unterschied.“ glaubt?",
+          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Girokonto, Tagesgeld, Sparbuch“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+        },
+        "parentSupport": {
+          "conversationPrompt": "Wo begegnet uns „Girokonto, Tagesgeld, Sparbuch“ im Alltag?",
+          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Girokonto, Tagesgeld, Sparbuch“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+        },
+        "reviewStatus": "editorial_review_recommended"
+      },
+      {
+        "id": "konzept_notgroschen",
+        "title": "Notgroschen",
+        "type": "calculation",
+        "unlockLevel": 2,
+        "prerequisites": [
+          "konzept_konten"
+        ],
+        "pedagogy": {
+          "learningGoal": "Einen Notgroschen als finanziellen Puffer für unerwartete Ausgaben verstehen.",
+          "coreIdea": "Ein Notgroschen schützt vor Stress und schlechten Entscheidungen.",
+          "everydayScenario": "Dein Fahrrad geht kaputt und du kannst die Reparatur aus einer Rücklage bezahlen.",
+          "misconception": "Ein Notgroschen ist Geld, das ungenutzt herumliegt.",
+          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Notgroschen' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
+          "reflectionPrompt": "Welche Fehlvorstellung zu 'Notgroschen' könnte dich zu einer schlechten Entscheidung verleiten?"
+        },
+        "glossaryTerms": [
+          "Notgroschen",
+          "Rücklage",
+          "Puffer",
+          "unerwartete Ausgabe",
+          "Liquidität",
+          "Sicherheit"
+        ],
+        "targetGroups": [
+          "learners_10_14",
+          "young_adults",
+          "parents_teachers"
+        ],
+        "explanations": {
+          "learners_10_14": "Notgroschen: Ein Notgroschen schützt vor Stress und schlechten Entscheidungen. Beispiel: Dein Fahrrad geht kaputt und du kannst die Reparatur aus einer Rücklage bezahlen. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Ein Notgroschen ist Geld, das ungenutzt herumliegt.“.",
+          "young_adults": "Notgroschen: Ein Notgroschen schützt vor Stress und schlechten Entscheidungen. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Dein Fahrrad geht kaputt und du kannst die Reparatur aus einer Rücklage bezahlen.",
+          "parents_teachers": "Lernziel: Einen Notgroschen als finanziellen Puffer für unerwartete Ausgaben verstehen. Didaktischer Fokus: Ein Notgroschen schützt vor Stress und schlechten Entscheidungen. Typische Fehlvorstellung: „Ein Notgroschen ist Geld, das ungenutzt herumliegt.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+        },
+        "questions": [
+          {
+            "id": "q_notgroschen_001",
+            "level": "explain",
+            "question": "Was beschreibt „Notgroschen“ am besten?",
+            "points": 100,
+            "correctAnswer": "Ein Notgroschen schützt vor Stress und schlechten Entscheidungen.",
+            "distractors": [
+              {
+                "text": "Ein Notgroschen ist Geld, das ungenutzt herumliegt.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "closeness": 3
+              },
+              {
+                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Richtig: Ein Notgroschen schützt vor Stress und schlechten Entscheidungen."
+          },
+          {
+            "id": "q_notgroschen_002",
+            "level": "recognize",
+            "question": "Welches Beispiel passt am ehesten zu „Notgroschen“?",
+            "points": 100,
+            "correctAnswer": "Dein Fahrrad geht kaputt und du kannst die Reparatur aus einer Rücklage bezahlen.",
+            "distractors": [
+              {
+                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "closeness": 2
+              },
+              {
+                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "closeness": 3
+              },
+              {
+                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+          },
+          {
+            "id": "q_notgroschen_003",
+            "level": "understand",
+            "question": "Warum ist „Notgroschen“ für Finanzbildung wichtig?",
+            "points": 120,
+            "correctAnswer": "Einen Notgroschen als finanziellen Puffer für unerwartete Ausgaben verstehen.",
+            "distractors": [
+              {
+                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "closeness": 3
+              },
+              {
+                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "closeness": 2
+              },
+              {
+                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Lernziel ist: Einen Notgroschen als finanziellen Puffer für unerwartete Ausgaben verstehen."
+          },
+          {
+            "id": "q_notgroschen_004",
+            "level": "apply",
+            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "points": 150,
+            "correctAnswer": "Die passenden Werte einsetzen, sauber rechnen und das Ergebnis im Kontext prüfen.",
+            "distractors": [
+              {
+                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "closeness": 3
+              },
+              {
+                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "closeness": 3
+              },
+              {
+                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+          },
+          {
+            "id": "q_notgroschen_005",
+            "level": "master",
+            "question": "Welche Aussage zu „Notgroschen“ stimmt am besten?",
+            "points": 200,
+            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "distractors": [
+              {
+                "text": "Es ersetzt jede weitere Prüfung.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert schnelle Gewinne.",
+                "closeness": 3
+              },
+              {
+                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+          }
+        ],
+        "calculationTemplates": [
+          {
+            "id": "tmpl_notgroschen_ziel",
+            "level": "apply",
+            "points": 150,
+            "questionTemplate": "Du möchtest einen Notgroschen für {monate} Monate mit je {ausgaben} Euro wichtigen Ausgaben. Wie hoch sollte er sein?",
+            "parameters": {
+              "monate": {
+                "min": 1,
+                "max": 6
+              },
+              "ausgaben": {
+                "min": 20,
+                "max": 500
+              }
+            },
+            "solutionFormula": "monate * ausgaben",
+            "distractorFormulas": [
+              "monate + ausgaben",
+              "ausgaben - monate",
+              "ausgaben / monate"
+            ],
+            "explanationTemplate": "Notgroschen-Ziel = monatliche wichtige Ausgaben mal Anzahl der Monate.",
+            "unit": "Euro"
+          }
+        ],
+        "teacherSupport": {
+          "competenceGoal": "Einen Notgroschen als finanziellen Puffer für unerwartete Ausgaben verstehen.",
+          "typicalMisconception": "Ein Notgroschen ist Geld, das ungenutzt herumliegt.",
+          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Ein Notgroschen ist Geld, das ungenutzt herumliegt.“ glaubt?",
+          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Notgroschen“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+        },
+        "parentSupport": {
+          "conversationPrompt": "Wo begegnet uns „Notgroschen“ im Alltag?",
+          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Notgroschen“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+        },
+        "reviewStatus": "editorial_review_recommended"
+      }
+    ]
+  }
+}

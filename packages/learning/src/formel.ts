@@ -1,7 +1,19 @@
-// Sicherer Auswerter für Vorlagen-Formeln (z. B. "n * preis + 5", "n * (verkauf - kauf) - 10").
-// Kein eval(): eigener Recursive-Descent-Parser für + - * / , Klammern, Variablen, ganze Zahlen.
+// Sicherer Auswerter für Vorlagen-Formeln (z. B. "n * preis + 5", "ceil(ziel / betrag)").
+// Kein eval(): eigener Recursive-Descent-Parser für + - * / , Klammern, Variablen, ganze
+// Zahlen und eine feste Whitelist mathematischer Funktionen (ceil/floor/round/abs/min/max/pow).
 
 type Tokens = string[];
+
+/** Erlaubte Funktionen (Whitelist) mit Stelligkeit; pow/min/max nehmen 2 Argumente. */
+const FUNCTIONS: Record<string, (args: number[]) => number> = {
+  ceil: (a) => Math.ceil(a[0]!),
+  floor: (a) => Math.floor(a[0]!),
+  round: (a) => Math.round(a[0]!),
+  abs: (a) => Math.abs(a[0]!),
+  min: (a) => Math.min(...a),
+  max: (a) => Math.max(...a),
+  pow: (a) => Math.pow(a[0]!, a[1]!),
+};
 
 function tokenize(expr: string): Tokens {
   const out: Tokens = [];
@@ -10,7 +22,7 @@ function tokenize(expr: string): Tokens {
     const ch = expr[i]!;
     if (ch === " ") {
       i++;
-    } else if ("+-*/()".includes(ch)) {
+    } else if ("+-*/(),".includes(ch)) {
       out.push(ch);
       i++;
     } else if (/[0-9]/.test(ch)) {
@@ -73,8 +85,23 @@ export function evalFormel(expr: string, vars: Record<string, number>): number {
       next();
       return Number(t);
     }
-    // Variable
+    // Funktion (Identifier direkt gefolgt von '(') oder Variable.
     next();
+    if (peek() === "(") {
+      const fn = FUNCTIONS[t];
+      if (!fn) throw new Error(`Unbekannte Funktion: '${t}'`);
+      next(); // '('
+      const args: number[] = [];
+      if (peek() !== ")") {
+        args.push(parseExpr());
+        while (peek() === ",") {
+          next();
+          args.push(parseExpr());
+        }
+      }
+      if (next() !== ")") throw new Error("Fehlende schließende Klammer im Funktionsaufruf");
+      return fn(args);
+    }
     if (!(t in vars)) throw new Error(`Unbekannte Variable: '${t}'`);
     return vars[t]!;
   }

@@ -71,12 +71,12 @@ describe("Pädagogische Readiness (Abschnitt 19)", () => {
     expect(report[0]!.warnings.some((w) => w.startsWith("Lücke:"))).toBe(true);
   });
 
-  it("v2-Content-Naht: bislang keine v2-Blöcke, alle gelieferten müssen valide sein", () => {
+  it("v2-Content-Naht: gelieferte Blöcke sind valide und werden gemergt", () => {
     const v2 = v2ModuleSources();
-    expect(Array.isArray(v2)).toBe(true);
-    expect(validateModuleSourceSet(v2)).toEqual([]); // gilt auch leer, und für künftige Blöcke
-    // Ohne v2-Blöcke entspricht die gemergte Quelle der Legacy-Adaption.
-    expect(alleModuleSourceMerged().length).toBe(alleModuleSource().length);
+    expect(v2.length).toBe(104);
+    expect(validateModuleSourceSet(v2)).toEqual([]);
+    // Merge = Legacy-Adaption + v2 (dedupliziert per id) → mindestens so viele wie v2.
+    expect(alleModuleSourceMerged().length).toBeGreaterThanOrEqual(104);
   });
 
   it("understanding-Modul ohne alle fünf Stufen wird bemängelt", () => {

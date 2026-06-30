@@ -1,0 +1,1450 @@
+{
+  "schemaVersion": "2.0.0",
+  "generatedAt": "2026-06-30",
+  "targetGroups": [
+    "learners_10_14",
+    "young_adults",
+    "parents_teachers"
+  ],
+  "blockOrder": 4,
+  "block": {
+    "id": "tb_aktien_eigentum",
+    "title": "Aktien und Eigentum",
+    "unlockLevel": 11,
+    "goal": "Lernende verstehen Aktien als Unternehmensanteile mit Chancen, Risiken, Rechten und möglichen Erträgen.",
+    "pedagogicalIdea": "Aktien sollen nicht als Spielchips, sondern als Beteiligung an echten Unternehmen verstanden werden.",
+    "modules": [
+      {
+        "id": "konzept_aktie",
+        "title": "Was ist eine Aktie?",
+        "type": "understanding",
+        "unlockLevel": 11,
+        "prerequisites": [
+          "konzept_unternehmen",
+          "konzept_gewinn"
+        ],
+        "pedagogy": {
+          "learningGoal": "Aktien als kleine Anteile an einem Unternehmen verstehen.",
+          "coreIdea": "Wer eine Aktie besitzt, besitzt einen kleinen Anteil an einem Unternehmen.",
+          "everydayScenario": "Ein Unternehmen wird in viele kleine Anteile aufgeteilt; eine Aktie ist ein solcher Anteil.",
+          "misconception": "Eine Aktie ist nur ein Preis, der hoch oder runter geht.",
+          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Was ist eine Aktie?' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
+          "reflectionPrompt": "Welche Fehlvorstellung zu 'Was ist eine Aktie?' könnte dich zu einer schlechten Entscheidung verleiten?"
+        },
+        "glossaryTerms": [
+          "Aktie",
+          "Anteil",
+          "Unternehmen",
+          "Aktiengesellschaft",
+          "Aktionär",
+          "Eigentum",
+          "Kurs",
+          "Risiko"
+        ],
+        "targetGroups": [
+          "learners_10_14",
+          "young_adults",
+          "parents_teachers"
+        ],
+        "explanations": {
+          "learners_10_14": "Was ist eine Aktie?: Wer eine Aktie besitzt, besitzt einen kleinen Anteil an einem Unternehmen. Beispiel: Ein Unternehmen wird in viele kleine Anteile aufgeteilt; eine Aktie ist ein solcher Anteil. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Eine Aktie ist nur ein Preis, der hoch oder runter geht.“.",
+          "young_adults": "Was ist eine Aktie?: Wer eine Aktie besitzt, besitzt einen kleinen Anteil an einem Unternehmen. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Ein Unternehmen wird in viele kleine Anteile aufgeteilt; eine Aktie ist ein solcher Anteil.",
+          "parents_teachers": "Lernziel: Aktien als kleine Anteile an einem Unternehmen verstehen. Didaktischer Fokus: Wer eine Aktie besitzt, besitzt einen kleinen Anteil an einem Unternehmen. Typische Fehlvorstellung: „Eine Aktie ist nur ein Preis, der hoch oder runter geht.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+        },
+        "questions": [
+          {
+            "id": "q_aktie_001",
+            "level": "explain",
+            "question": "Was beschreibt „Was ist eine Aktie?“ am besten?",
+            "points": 100,
+            "correctAnswer": "Wer eine Aktie besitzt, besitzt einen kleinen Anteil an einem Unternehmen.",
+            "distractors": [
+              {
+                "text": "Eine Aktie ist nur ein Preis, der hoch oder runter geht.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "closeness": 3
+              },
+              {
+                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Richtig: Wer eine Aktie besitzt, besitzt einen kleinen Anteil an einem Unternehmen."
+          },
+          {
+            "id": "q_aktie_002",
+            "level": "recognize",
+            "question": "Welches Beispiel passt am ehesten zu „Was ist eine Aktie?“?",
+            "points": 100,
+            "correctAnswer": "Ein Unternehmen wird in viele kleine Anteile aufgeteilt; eine Aktie ist ein solcher Anteil.",
+            "distractors": [
+              {
+                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "closeness": 2
+              },
+              {
+                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "closeness": 3
+              },
+              {
+                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+          },
+          {
+            "id": "q_aktie_003",
+            "level": "understand",
+            "question": "Warum ist „Was ist eine Aktie?“ für Finanzbildung wichtig?",
+            "points": 120,
+            "correctAnswer": "Aktien als kleine Anteile an einem Unternehmen verstehen.",
+            "distractors": [
+              {
+                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "closeness": 3
+              },
+              {
+                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "closeness": 2
+              },
+              {
+                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Lernziel ist: Aktien als kleine Anteile an einem Unternehmen verstehen."
+          },
+          {
+            "id": "q_aktie_004",
+            "level": "apply",
+            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "points": 150,
+            "correctAnswer": "Den Begriff verstehen, Beispiele erkennen und ihn von ähnlichen Begriffen abgrenzen.",
+            "distractors": [
+              {
+                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "closeness": 3
+              },
+              {
+                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "closeness": 3
+              },
+              {
+                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+          },
+          {
+            "id": "q_aktie_005",
+            "level": "master",
+            "question": "Welche Aussage zu „Was ist eine Aktie?“ stimmt am besten?",
+            "points": 200,
+            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "distractors": [
+              {
+                "text": "Es ersetzt jede weitere Prüfung.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert schnelle Gewinne.",
+                "closeness": 3
+              },
+              {
+                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+          }
+        ],
+        "calculationTemplates": [],
+        "teacherSupport": {
+          "competenceGoal": "Aktien als kleine Anteile an einem Unternehmen verstehen.",
+          "typicalMisconception": "Eine Aktie ist nur ein Preis, der hoch oder runter geht.",
+          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Eine Aktie ist nur ein Preis, der hoch oder runter geht.“ glaubt?",
+          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Was ist eine Aktie?“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+        },
+        "parentSupport": {
+          "conversationPrompt": "Wo begegnet uns „Was ist eine Aktie?“ im Alltag?",
+          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Was ist eine Aktie?“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+        },
+        "reviewStatus": "editorial_review_recommended"
+      },
+      {
+        "id": "konzept_eigentum_am_unternehmen",
+        "title": "Eigentum am Unternehmen",
+        "type": "calculation",
+        "unlockLevel": 11,
+        "prerequisites": [
+          "konzept_aktie"
+        ],
+        "pedagogy": {
+          "learningGoal": "Aktionärseigentum, Rechte und Einfluss nach Anteil verstehen.",
+          "coreIdea": "Eigentum an einem Unternehmen bedeutet Beteiligung, aber nicht automatische Kontrolle.",
+          "everydayScenario": "Wer wenige von sehr vielen Aktien besitzt, ist beteiligt, entscheidet aber nicht allein.",
+          "misconception": "Wenn ich eine Aktie besitze, darf ich im Unternehmen alles bestimmen.",
+          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Eigentum am Unternehmen' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
+          "reflectionPrompt": "Welche Fehlvorstellung zu 'Eigentum am Unternehmen' könnte dich zu einer schlechten Entscheidung verleiten?"
+        },
+        "glossaryTerms": [
+          "Aktionär",
+          "Eigentumsanteil",
+          "Stimmrecht",
+          "Hauptversammlung",
+          "Anteil",
+          "Stammaktie",
+          "Vorzugsaktie"
+        ],
+        "targetGroups": [
+          "learners_10_14",
+          "young_adults",
+          "parents_teachers"
+        ],
+        "explanations": {
+          "learners_10_14": "Eigentum am Unternehmen: Eigentum an einem Unternehmen bedeutet Beteiligung, aber nicht automatische Kontrolle. Beispiel: Wer wenige von sehr vielen Aktien besitzt, ist beteiligt, entscheidet aber nicht allein. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Wenn ich eine Aktie besitze, darf ich im Unternehmen alles bestimmen.“.",
+          "young_adults": "Eigentum am Unternehmen: Eigentum an einem Unternehmen bedeutet Beteiligung, aber nicht automatische Kontrolle. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Wer wenige von sehr vielen Aktien besitzt, ist beteiligt, entscheidet aber nicht allein.",
+          "parents_teachers": "Lernziel: Aktionärseigentum, Rechte und Einfluss nach Anteil verstehen. Didaktischer Fokus: Eigentum an einem Unternehmen bedeutet Beteiligung, aber nicht automatische Kontrolle. Typische Fehlvorstellung: „Wenn ich eine Aktie besitze, darf ich im Unternehmen alles bestimmen.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+        },
+        "questions": [
+          {
+            "id": "q_eigentum_am_unternehmen_001",
+            "level": "explain",
+            "question": "Was beschreibt „Eigentum am Unternehmen“ am besten?",
+            "points": 100,
+            "correctAnswer": "Eigentum an einem Unternehmen bedeutet Beteiligung, aber nicht automatische Kontrolle.",
+            "distractors": [
+              {
+                "text": "Wenn ich eine Aktie besitze, darf ich im Unternehmen alles bestimmen.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "closeness": 3
+              },
+              {
+                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Richtig: Eigentum an einem Unternehmen bedeutet Beteiligung, aber nicht automatische Kontrolle."
+          },
+          {
+            "id": "q_eigentum_am_unternehmen_002",
+            "level": "recognize",
+            "question": "Welches Beispiel passt am ehesten zu „Eigentum am Unternehmen“?",
+            "points": 100,
+            "correctAnswer": "Wer wenige von sehr vielen Aktien besitzt, ist beteiligt, entscheidet aber nicht allein.",
+            "distractors": [
+              {
+                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "closeness": 2
+              },
+              {
+                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "closeness": 3
+              },
+              {
+                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+          },
+          {
+            "id": "q_eigentum_am_unternehmen_003",
+            "level": "understand",
+            "question": "Warum ist „Eigentum am Unternehmen“ für Finanzbildung wichtig?",
+            "points": 120,
+            "correctAnswer": "Aktionärseigentum, Rechte und Einfluss nach Anteil verstehen.",
+            "distractors": [
+              {
+                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "closeness": 3
+              },
+              {
+                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "closeness": 2
+              },
+              {
+                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Lernziel ist: Aktionärseigentum, Rechte und Einfluss nach Anteil verstehen."
+          },
+          {
+            "id": "q_eigentum_am_unternehmen_004",
+            "level": "apply",
+            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "points": 150,
+            "correctAnswer": "Die passenden Werte einsetzen, sauber rechnen und das Ergebnis im Kontext prüfen.",
+            "distractors": [
+              {
+                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "closeness": 3
+              },
+              {
+                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "closeness": 3
+              },
+              {
+                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+          },
+          {
+            "id": "q_eigentum_am_unternehmen_005",
+            "level": "master",
+            "question": "Welche Aussage zu „Eigentum am Unternehmen“ stimmt am besten?",
+            "points": 200,
+            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "distractors": [
+              {
+                "text": "Es ersetzt jede weitere Prüfung.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert schnelle Gewinne.",
+                "closeness": 3
+              },
+              {
+                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+          }
+        ],
+        "calculationTemplates": [
+          {
+            "id": "tmpl_anteil",
+            "level": "apply",
+            "points": 150,
+            "questionTemplate": "Ein Unternehmen hat {gesamt} Aktien. Du besitzt {anzahl}. Wie viel Prozent besitzt du?",
+            "parameters": {
+              "gesamt": {
+                "min": 100,
+                "max": 10000
+              },
+              "anzahl": {
+                "min": 1,
+                "max": 500
+              }
+            },
+            "solutionFormula": "anzahl / gesamt * 100",
+            "distractorFormulas": [
+              "gesamt / anzahl",
+              "anzahl + gesamt",
+              "gesamt - anzahl"
+            ],
+            "explanationTemplate": "Anteil = eigene Aktien geteilt durch alle Aktien mal 100.",
+            "unit": "Prozent"
+          }
+        ],
+        "teacherSupport": {
+          "competenceGoal": "Aktionärseigentum, Rechte und Einfluss nach Anteil verstehen.",
+          "typicalMisconception": "Wenn ich eine Aktie besitze, darf ich im Unternehmen alles bestimmen.",
+          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Wenn ich eine Aktie besitze, darf ich im Unternehmen alles bestimmen.“ glaubt?",
+          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Eigentum am Unternehmen“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+        },
+        "parentSupport": {
+          "conversationPrompt": "Wo begegnet uns „Eigentum am Unternehmen“ im Alltag?",
+          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Eigentum am Unternehmen“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+        },
+        "reviewStatus": "editorial_review_recommended"
+      },
+      {
+        "id": "konzept_warum_aktien_ausgeben",
+        "title": "Warum geben Unternehmen Aktien aus?",
+        "type": "understanding",
+        "unlockLevel": 12,
+        "prerequisites": [
+          "konzept_aktie",
+          "konzept_geschaeftsmodell",
+          "konzept_vermoegen_schulden_eigenkapital"
+        ],
+        "pedagogy": {
+          "learningGoal": "Aktienausgabe als Möglichkeit zur Kapitalbeschaffung verstehen.",
+          "coreIdea": "Aktien können Unternehmen helfen, Kapital zu bekommen; dafür geben sie Eigentumsanteile ab.",
+          "everydayScenario": "Ein Unternehmen braucht Geld für Maschinen oder Wachstum und verkauft neue Anteile.",
+          "misconception": "Wenn ich eine Aktie an der Börse kaufe, bekommt das Unternehmen immer direkt mein Geld.",
+          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Warum geben Unternehmen Aktien aus?' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
+          "reflectionPrompt": "Welche Fehlvorstellung zu 'Warum geben Unternehmen Aktien aus?' könnte dich zu einer schlechten Entscheidung verleiten?"
+        },
+        "glossaryTerms": [
+          "Aktienausgabe",
+          "Kapital",
+          "Eigenkapital",
+          "Börsengang",
+          "Kapitalerhöhung",
+          "Anleger",
+          "Verwässerung"
+        ],
+        "targetGroups": [
+          "learners_10_14",
+          "young_adults",
+          "parents_teachers"
+        ],
+        "explanations": {
+          "learners_10_14": "Warum geben Unternehmen Aktien aus?: Aktien können Unternehmen helfen, Kapital zu bekommen; dafür geben sie Eigentumsanteile ab. Beispiel: Ein Unternehmen braucht Geld für Maschinen oder Wachstum und verkauft neue Anteile. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Wenn ich eine Aktie an der Börse kaufe, bekommt das Unternehmen immer direkt mein Geld.“.",
+          "young_adults": "Warum geben Unternehmen Aktien aus?: Aktien können Unternehmen helfen, Kapital zu bekommen; dafür geben sie Eigentumsanteile ab. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Ein Unternehmen braucht Geld für Maschinen oder Wachstum und verkauft neue Anteile.",
+          "parents_teachers": "Lernziel: Aktienausgabe als Möglichkeit zur Kapitalbeschaffung verstehen. Didaktischer Fokus: Aktien können Unternehmen helfen, Kapital zu bekommen; dafür geben sie Eigentumsanteile ab. Typische Fehlvorstellung: „Wenn ich eine Aktie an der Börse kaufe, bekommt das Unternehmen immer direkt mein Geld.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+        },
+        "questions": [
+          {
+            "id": "q_warum_aktien_ausgeben_001",
+            "level": "explain",
+            "question": "Was beschreibt „Warum geben Unternehmen Aktien aus?“ am besten?",
+            "points": 100,
+            "correctAnswer": "Aktien können Unternehmen helfen, Kapital zu bekommen; dafür geben sie Eigentumsanteile ab.",
+            "distractors": [
+              {
+                "text": "Wenn ich eine Aktie an der Börse kaufe, bekommt das Unternehmen immer direkt mein Geld.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "closeness": 3
+              },
+              {
+                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Richtig: Aktien können Unternehmen helfen, Kapital zu bekommen; dafür geben sie Eigentumsanteile ab."
+          },
+          {
+            "id": "q_warum_aktien_ausgeben_002",
+            "level": "recognize",
+            "question": "Welches Beispiel passt am ehesten zu „Warum geben Unternehmen Aktien aus?“?",
+            "points": 100,
+            "correctAnswer": "Ein Unternehmen braucht Geld für Maschinen oder Wachstum und verkauft neue Anteile.",
+            "distractors": [
+              {
+                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "closeness": 2
+              },
+              {
+                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "closeness": 3
+              },
+              {
+                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+          },
+          {
+            "id": "q_warum_aktien_ausgeben_003",
+            "level": "understand",
+            "question": "Warum ist „Warum geben Unternehmen Aktien aus?“ für Finanzbildung wichtig?",
+            "points": 120,
+            "correctAnswer": "Aktienausgabe als Möglichkeit zur Kapitalbeschaffung verstehen.",
+            "distractors": [
+              {
+                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "closeness": 3
+              },
+              {
+                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "closeness": 2
+              },
+              {
+                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Lernziel ist: Aktienausgabe als Möglichkeit zur Kapitalbeschaffung verstehen."
+          },
+          {
+            "id": "q_warum_aktien_ausgeben_004",
+            "level": "apply",
+            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "points": 150,
+            "correctAnswer": "Den Begriff verstehen, Beispiele erkennen und ihn von ähnlichen Begriffen abgrenzen.",
+            "distractors": [
+              {
+                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "closeness": 3
+              },
+              {
+                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "closeness": 3
+              },
+              {
+                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+          },
+          {
+            "id": "q_warum_aktien_ausgeben_005",
+            "level": "master",
+            "question": "Welche Aussage zu „Warum geben Unternehmen Aktien aus?“ stimmt am besten?",
+            "points": 200,
+            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "distractors": [
+              {
+                "text": "Es ersetzt jede weitere Prüfung.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert schnelle Gewinne.",
+                "closeness": 3
+              },
+              {
+                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+          }
+        ],
+        "calculationTemplates": [],
+        "teacherSupport": {
+          "competenceGoal": "Aktienausgabe als Möglichkeit zur Kapitalbeschaffung verstehen.",
+          "typicalMisconception": "Wenn ich eine Aktie an der Börse kaufe, bekommt das Unternehmen immer direkt mein Geld.",
+          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Wenn ich eine Aktie an der Börse kaufe, bekommt das Unternehmen immer direkt mein Geld.“ glaubt?",
+          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Warum geben Unternehmen Aktien aus?“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+        },
+        "parentSupport": {
+          "conversationPrompt": "Wo begegnet uns „Warum geben Unternehmen Aktien aus?“ im Alltag?",
+          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Warum geben Unternehmen Aktien aus?“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+        },
+        "reviewStatus": "editorial_review_recommended"
+      },
+      {
+        "id": "konzept_aktionaer_sein",
+        "title": "Was bedeutet Aktionär sein?",
+        "type": "understanding",
+        "unlockLevel": 12,
+        "prerequisites": [
+          "konzept_eigentum_am_unternehmen"
+        ],
+        "pedagogy": {
+          "learningGoal": "Aktionärsrolle von Kundenrolle unterscheiden.",
+          "coreIdea": "Aktionäre sind Miteigentümer, nicht bloß Kunden oder Fans.",
+          "everydayScenario": "Du kaufst Schuhe als Kunde; Aktie besitzen macht dich zum Miteigentümer.",
+          "misconception": "Wenn ich Produkte einer Firma kaufe, bin ich automatisch Aktionär.",
+          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Was bedeutet Aktionär sein?' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
+          "reflectionPrompt": "Welche Fehlvorstellung zu 'Was bedeutet Aktionär sein?' könnte dich zu einer schlechten Entscheidung verleiten?"
+        },
+        "glossaryTerms": [
+          "Aktionär",
+          "Kunde",
+          "Eigentümer",
+          "Beteiligung",
+          "Stimmrecht",
+          "Dividende",
+          "Kursrisiko"
+        ],
+        "targetGroups": [
+          "learners_10_14",
+          "young_adults",
+          "parents_teachers"
+        ],
+        "explanations": {
+          "learners_10_14": "Was bedeutet Aktionär sein?: Aktionäre sind Miteigentümer, nicht bloß Kunden oder Fans. Beispiel: Du kaufst Schuhe als Kunde; Aktie besitzen macht dich zum Miteigentümer. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Wenn ich Produkte einer Firma kaufe, bin ich automatisch Aktionär.“.",
+          "young_adults": "Was bedeutet Aktionär sein?: Aktionäre sind Miteigentümer, nicht bloß Kunden oder Fans. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Du kaufst Schuhe als Kunde; Aktie besitzen macht dich zum Miteigentümer.",
+          "parents_teachers": "Lernziel: Aktionärsrolle von Kundenrolle unterscheiden. Didaktischer Fokus: Aktionäre sind Miteigentümer, nicht bloß Kunden oder Fans. Typische Fehlvorstellung: „Wenn ich Produkte einer Firma kaufe, bin ich automatisch Aktionär.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+        },
+        "questions": [
+          {
+            "id": "q_aktionaer_sein_001",
+            "level": "explain",
+            "question": "Was beschreibt „Was bedeutet Aktionär sein?“ am besten?",
+            "points": 100,
+            "correctAnswer": "Aktionäre sind Miteigentümer, nicht bloß Kunden oder Fans.",
+            "distractors": [
+              {
+                "text": "Wenn ich Produkte einer Firma kaufe, bin ich automatisch Aktionär.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "closeness": 3
+              },
+              {
+                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Richtig: Aktionäre sind Miteigentümer, nicht bloß Kunden oder Fans."
+          },
+          {
+            "id": "q_aktionaer_sein_002",
+            "level": "recognize",
+            "question": "Welches Beispiel passt am ehesten zu „Was bedeutet Aktionär sein?“?",
+            "points": 100,
+            "correctAnswer": "Du kaufst Schuhe als Kunde; Aktie besitzen macht dich zum Miteigentümer.",
+            "distractors": [
+              {
+                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "closeness": 2
+              },
+              {
+                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "closeness": 3
+              },
+              {
+                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+          },
+          {
+            "id": "q_aktionaer_sein_003",
+            "level": "understand",
+            "question": "Warum ist „Was bedeutet Aktionär sein?“ für Finanzbildung wichtig?",
+            "points": 120,
+            "correctAnswer": "Aktionärsrolle von Kundenrolle unterscheiden.",
+            "distractors": [
+              {
+                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "closeness": 3
+              },
+              {
+                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "closeness": 2
+              },
+              {
+                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Lernziel ist: Aktionärsrolle von Kundenrolle unterscheiden."
+          },
+          {
+            "id": "q_aktionaer_sein_004",
+            "level": "apply",
+            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "points": 150,
+            "correctAnswer": "Den Begriff verstehen, Beispiele erkennen und ihn von ähnlichen Begriffen abgrenzen.",
+            "distractors": [
+              {
+                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "closeness": 3
+              },
+              {
+                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "closeness": 3
+              },
+              {
+                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+          },
+          {
+            "id": "q_aktionaer_sein_005",
+            "level": "master",
+            "question": "Welche Aussage zu „Was bedeutet Aktionär sein?“ stimmt am besten?",
+            "points": 200,
+            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "distractors": [
+              {
+                "text": "Es ersetzt jede weitere Prüfung.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert schnelle Gewinne.",
+                "closeness": 3
+              },
+              {
+                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+          }
+        ],
+        "calculationTemplates": [],
+        "teacherSupport": {
+          "competenceGoal": "Aktionärsrolle von Kundenrolle unterscheiden.",
+          "typicalMisconception": "Wenn ich Produkte einer Firma kaufe, bin ich automatisch Aktionär.",
+          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Wenn ich Produkte einer Firma kaufe, bin ich automatisch Aktionär.“ glaubt?",
+          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Was bedeutet Aktionär sein?“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+        },
+        "parentSupport": {
+          "conversationPrompt": "Wo begegnet uns „Was bedeutet Aktionär sein?“ im Alltag?",
+          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Was bedeutet Aktionär sein?“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+        },
+        "reviewStatus": "editorial_review_recommended"
+      },
+      {
+        "id": "konzept_chancen_risiken_aktie",
+        "title": "Chancen und Risiken einer Aktie",
+        "type": "reflection",
+        "unlockLevel": 13,
+        "prerequisites": [
+          "konzept_aktionaer_sein",
+          "konzept_unternehmen_scheitern"
+        ],
+        "pedagogy": {
+          "learningGoal": "Chancen auf Wertsteigerung und Dividenden sowie Verlustrisiken verstehen.",
+          "coreIdea": "Aktien bieten Chancen, können aber stark schwanken und Verluste verursachen.",
+          "everydayScenario": "Ein erfolgreiches Unternehmen kann steigende Kurse haben; ein schwaches Unternehmen fallende.",
+          "misconception": "Eine bekannte Aktie ist automatisch sicher.",
+          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Chancen und Risiken einer Aktie' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
+          "reflectionPrompt": "Welche Fehlvorstellung zu 'Chancen und Risiken einer Aktie' könnte dich zu einer schlechten Entscheidung verleiten?"
+        },
+        "glossaryTerms": [
+          "Chance",
+          "Risiko",
+          "Kursverlust",
+          "Totalverlust",
+          "Schwankung",
+          "Einzelrisiko",
+          "Bewertung"
+        ],
+        "targetGroups": [
+          "learners_10_14",
+          "young_adults",
+          "parents_teachers"
+        ],
+        "explanations": {
+          "learners_10_14": "Chancen und Risiken einer Aktie: Aktien bieten Chancen, können aber stark schwanken und Verluste verursachen. Beispiel: Ein erfolgreiches Unternehmen kann steigende Kurse haben; ein schwaches Unternehmen fallende. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Eine bekannte Aktie ist automatisch sicher.“.",
+          "young_adults": "Chancen und Risiken einer Aktie: Aktien bieten Chancen, können aber stark schwanken und Verluste verursachen. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Ein erfolgreiches Unternehmen kann steigende Kurse haben; ein schwaches Unternehmen fallende.",
+          "parents_teachers": "Lernziel: Chancen auf Wertsteigerung und Dividenden sowie Verlustrisiken verstehen. Didaktischer Fokus: Aktien bieten Chancen, können aber stark schwanken und Verluste verursachen. Typische Fehlvorstellung: „Eine bekannte Aktie ist automatisch sicher.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+        },
+        "questions": [
+          {
+            "id": "q_chancen_risiken_aktie_001",
+            "level": "explain",
+            "question": "Was beschreibt „Chancen und Risiken einer Aktie“ am besten?",
+            "points": 100,
+            "correctAnswer": "Aktien bieten Chancen, können aber stark schwanken und Verluste verursachen.",
+            "distractors": [
+              {
+                "text": "Eine bekannte Aktie ist automatisch sicher.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "closeness": 3
+              },
+              {
+                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Richtig: Aktien bieten Chancen, können aber stark schwanken und Verluste verursachen."
+          },
+          {
+            "id": "q_chancen_risiken_aktie_002",
+            "level": "recognize",
+            "question": "Welches Beispiel passt am ehesten zu „Chancen und Risiken einer Aktie“?",
+            "points": 100,
+            "correctAnswer": "Ein erfolgreiches Unternehmen kann steigende Kurse haben; ein schwaches Unternehmen fallende.",
+            "distractors": [
+              {
+                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "closeness": 2
+              },
+              {
+                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "closeness": 3
+              },
+              {
+                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+          },
+          {
+            "id": "q_chancen_risiken_aktie_003",
+            "level": "understand",
+            "question": "Warum ist „Chancen und Risiken einer Aktie“ für Finanzbildung wichtig?",
+            "points": 120,
+            "correctAnswer": "Chancen auf Wertsteigerung und Dividenden sowie Verlustrisiken verstehen.",
+            "distractors": [
+              {
+                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "closeness": 3
+              },
+              {
+                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "closeness": 2
+              },
+              {
+                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Lernziel ist: Chancen auf Wertsteigerung und Dividenden sowie Verlustrisiken verstehen."
+          },
+          {
+            "id": "q_chancen_risiken_aktie_004",
+            "level": "apply",
+            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "points": 150,
+            "correctAnswer": "Innehalten, Informationen prüfen und erst dann passend zum eigenen Ziel handeln.",
+            "distractors": [
+              {
+                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "closeness": 3
+              },
+              {
+                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "closeness": 3
+              },
+              {
+                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+          },
+          {
+            "id": "q_chancen_risiken_aktie_005",
+            "level": "master",
+            "question": "Welche Aussage zu „Chancen und Risiken einer Aktie“ stimmt am besten?",
+            "points": 200,
+            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "distractors": [
+              {
+                "text": "Es ersetzt jede weitere Prüfung.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert schnelle Gewinne.",
+                "closeness": 3
+              },
+              {
+                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+          }
+        ],
+        "calculationTemplates": [],
+        "teacherSupport": {
+          "competenceGoal": "Chancen auf Wertsteigerung und Dividenden sowie Verlustrisiken verstehen.",
+          "typicalMisconception": "Eine bekannte Aktie ist automatisch sicher.",
+          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Eine bekannte Aktie ist automatisch sicher.“ glaubt?",
+          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Chancen und Risiken einer Aktie“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+        },
+        "parentSupport": {
+          "conversationPrompt": "Wo begegnet uns „Chancen und Risiken einer Aktie“ im Alltag?",
+          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Chancen und Risiken einer Aktie“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+        },
+        "reviewStatus": "editorial_review_recommended"
+      },
+      {
+        "id": "konzept_dividende",
+        "title": "Was ist eine Dividende?",
+        "type": "calculation",
+        "unlockLevel": 13,
+        "prerequisites": [
+          "konzept_gewinn",
+          "konzept_aktionaer_sein"
+        ],
+        "pedagogy": {
+          "learningGoal": "Dividenden als mögliche Gewinnausschüttung an Aktionäre verstehen.",
+          "coreIdea": "Eine Dividende ist eine Gewinnbeteiligung, keine Garantie und kein Zins.",
+          "everydayScenario": "Ein Unternehmen schüttet 2 Euro pro Aktie aus; wer 5 Aktien hat, bekommt 10 Euro.",
+          "misconception": "Dividenden sind sichere Zinsen.",
+          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Was ist eine Dividende?' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
+          "reflectionPrompt": "Welche Fehlvorstellung zu 'Was ist eine Dividende?' könnte dich zu einer schlechten Entscheidung verleiten?"
+        },
+        "glossaryTerms": [
+          "Dividende",
+          "Ausschüttung",
+          "Gewinn",
+          "Aktionär",
+          "Hauptversammlung",
+          "Reinvestition",
+          "Ex-Dividende"
+        ],
+        "targetGroups": [
+          "learners_10_14",
+          "young_adults",
+          "parents_teachers"
+        ],
+        "explanations": {
+          "learners_10_14": "Was ist eine Dividende?: Eine Dividende ist eine Gewinnbeteiligung, keine Garantie und kein Zins. Beispiel: Ein Unternehmen schüttet 2 Euro pro Aktie aus; wer 5 Aktien hat, bekommt 10 Euro. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Dividenden sind sichere Zinsen.“.",
+          "young_adults": "Was ist eine Dividende?: Eine Dividende ist eine Gewinnbeteiligung, keine Garantie und kein Zins. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Ein Unternehmen schüttet 2 Euro pro Aktie aus; wer 5 Aktien hat, bekommt 10 Euro.",
+          "parents_teachers": "Lernziel: Dividenden als mögliche Gewinnausschüttung an Aktionäre verstehen. Didaktischer Fokus: Eine Dividende ist eine Gewinnbeteiligung, keine Garantie und kein Zins. Typische Fehlvorstellung: „Dividenden sind sichere Zinsen.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+        },
+        "questions": [
+          {
+            "id": "q_dividende_001",
+            "level": "explain",
+            "question": "Was beschreibt „Was ist eine Dividende?“ am besten?",
+            "points": 100,
+            "correctAnswer": "Eine Dividende ist eine Gewinnbeteiligung, keine Garantie und kein Zins.",
+            "distractors": [
+              {
+                "text": "Dividenden sind sichere Zinsen.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "closeness": 3
+              },
+              {
+                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Richtig: Eine Dividende ist eine Gewinnbeteiligung, keine Garantie und kein Zins."
+          },
+          {
+            "id": "q_dividende_002",
+            "level": "recognize",
+            "question": "Welches Beispiel passt am ehesten zu „Was ist eine Dividende?“?",
+            "points": 100,
+            "correctAnswer": "Ein Unternehmen schüttet 2 Euro pro Aktie aus; wer 5 Aktien hat, bekommt 10 Euro.",
+            "distractors": [
+              {
+                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "closeness": 2
+              },
+              {
+                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "closeness": 3
+              },
+              {
+                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+          },
+          {
+            "id": "q_dividende_003",
+            "level": "understand",
+            "question": "Warum ist „Was ist eine Dividende?“ für Finanzbildung wichtig?",
+            "points": 120,
+            "correctAnswer": "Dividenden als mögliche Gewinnausschüttung an Aktionäre verstehen.",
+            "distractors": [
+              {
+                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "closeness": 3
+              },
+              {
+                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "closeness": 2
+              },
+              {
+                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Lernziel ist: Dividenden als mögliche Gewinnausschüttung an Aktionäre verstehen."
+          },
+          {
+            "id": "q_dividende_004",
+            "level": "apply",
+            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "points": 150,
+            "correctAnswer": "Die passenden Werte einsetzen, sauber rechnen und das Ergebnis im Kontext prüfen.",
+            "distractors": [
+              {
+                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "closeness": 3
+              },
+              {
+                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "closeness": 3
+              },
+              {
+                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+          },
+          {
+            "id": "q_dividende_005",
+            "level": "master",
+            "question": "Welche Aussage zu „Was ist eine Dividende?“ stimmt am besten?",
+            "points": 200,
+            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "distractors": [
+              {
+                "text": "Es ersetzt jede weitere Prüfung.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert schnelle Gewinne.",
+                "closeness": 3
+              },
+              {
+                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+          }
+        ],
+        "calculationTemplates": [
+          {
+            "id": "tmpl_dividende",
+            "level": "apply",
+            "points": 150,
+            "questionTemplate": "Du besitzt {anzahl} Aktien. Pro Aktie gibt es {div} Euro Dividende. Wie viel bekommst du?",
+            "parameters": {
+              "anzahl": {
+                "min": 1,
+                "max": 100
+              },
+              "div": {
+                "min": 1,
+                "max": 10
+              }
+            },
+            "solutionFormula": "anzahl * div",
+            "distractorFormulas": [
+              "anzahl + div",
+              "anzahl * div - div",
+              "div"
+            ],
+            "explanationTemplate": "Gesamtdividende = Anzahl mal Dividende pro Aktie.",
+            "unit": "Euro"
+          }
+        ],
+        "teacherSupport": {
+          "competenceGoal": "Dividenden als mögliche Gewinnausschüttung an Aktionäre verstehen.",
+          "typicalMisconception": "Dividenden sind sichere Zinsen.",
+          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Dividenden sind sichere Zinsen.“ glaubt?",
+          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Was ist eine Dividende?“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+        },
+        "parentSupport": {
+          "conversationPrompt": "Wo begegnet uns „Was ist eine Dividende?“ im Alltag?",
+          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Was ist eine Dividende?“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+        },
+        "reviewStatus": "editorial_review_recommended"
+      },
+      {
+        "id": "konzept_kursgewinn",
+        "title": "Kursgewinn und Kursverlust",
+        "type": "calculation",
+        "unlockLevel": 14,
+        "prerequisites": [
+          "konzept_chancen_risiken_aktie"
+        ],
+        "pedagogy": {
+          "learningGoal": "Kursgewinn und Kursverlust aus Kauf- und Verkaufspreis verstehen.",
+          "coreIdea": "Kursgewinn entsteht, wenn man teurer verkauft als gekauft hat.",
+          "everydayScenario": "Du kaufst eine Aktie für 50 Euro und verkaufst später für 70 Euro.",
+          "misconception": "Solange der Kurs einmal gestiegen ist, habe ich den Gewinn sicher.",
+          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Kursgewinn und Kursverlust' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
+          "reflectionPrompt": "Welche Fehlvorstellung zu 'Kursgewinn und Kursverlust' könnte dich zu einer schlechten Entscheidung verleiten?"
+        },
+        "glossaryTerms": [
+          "Kurs",
+          "Kaufpreis",
+          "Verkaufspreis",
+          "Kursgewinn",
+          "Kursverlust",
+          "Buchgewinn",
+          "realisierter Gewinn"
+        ],
+        "targetGroups": [
+          "learners_10_14",
+          "young_adults",
+          "parents_teachers"
+        ],
+        "explanations": {
+          "learners_10_14": "Kursgewinn und Kursverlust: Kursgewinn entsteht, wenn man teurer verkauft als gekauft hat. Beispiel: Du kaufst eine Aktie für 50 Euro und verkaufst später für 70 Euro. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Solange der Kurs einmal gestiegen ist, habe ich den Gewinn sicher.“.",
+          "young_adults": "Kursgewinn und Kursverlust: Kursgewinn entsteht, wenn man teurer verkauft als gekauft hat. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Du kaufst eine Aktie für 50 Euro und verkaufst später für 70 Euro.",
+          "parents_teachers": "Lernziel: Kursgewinn und Kursverlust aus Kauf- und Verkaufspreis verstehen. Didaktischer Fokus: Kursgewinn entsteht, wenn man teurer verkauft als gekauft hat. Typische Fehlvorstellung: „Solange der Kurs einmal gestiegen ist, habe ich den Gewinn sicher.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+        },
+        "questions": [
+          {
+            "id": "q_kursgewinn_001",
+            "level": "explain",
+            "question": "Was beschreibt „Kursgewinn und Kursverlust“ am besten?",
+            "points": 100,
+            "correctAnswer": "Kursgewinn entsteht, wenn man teurer verkauft als gekauft hat.",
+            "distractors": [
+              {
+                "text": "Solange der Kurs einmal gestiegen ist, habe ich den Gewinn sicher.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "closeness": 3
+              },
+              {
+                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Richtig: Kursgewinn entsteht, wenn man teurer verkauft als gekauft hat."
+          },
+          {
+            "id": "q_kursgewinn_002",
+            "level": "recognize",
+            "question": "Welches Beispiel passt am ehesten zu „Kursgewinn und Kursverlust“?",
+            "points": 100,
+            "correctAnswer": "Du kaufst eine Aktie für 50 Euro und verkaufst später für 70 Euro.",
+            "distractors": [
+              {
+                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "closeness": 2
+              },
+              {
+                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "closeness": 3
+              },
+              {
+                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+          },
+          {
+            "id": "q_kursgewinn_003",
+            "level": "understand",
+            "question": "Warum ist „Kursgewinn und Kursverlust“ für Finanzbildung wichtig?",
+            "points": 120,
+            "correctAnswer": "Kursgewinn und Kursverlust aus Kauf- und Verkaufspreis verstehen.",
+            "distractors": [
+              {
+                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "closeness": 3
+              },
+              {
+                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "closeness": 2
+              },
+              {
+                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Lernziel ist: Kursgewinn und Kursverlust aus Kauf- und Verkaufspreis verstehen."
+          },
+          {
+            "id": "q_kursgewinn_004",
+            "level": "apply",
+            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "points": 150,
+            "correctAnswer": "Die passenden Werte einsetzen, sauber rechnen und das Ergebnis im Kontext prüfen.",
+            "distractors": [
+              {
+                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "closeness": 3
+              },
+              {
+                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "closeness": 3
+              },
+              {
+                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+          },
+          {
+            "id": "q_kursgewinn_005",
+            "level": "master",
+            "question": "Welche Aussage zu „Kursgewinn und Kursverlust“ stimmt am besten?",
+            "points": 200,
+            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "distractors": [
+              {
+                "text": "Es ersetzt jede weitere Prüfung.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert schnelle Gewinne.",
+                "closeness": 3
+              },
+              {
+                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+          }
+        ],
+        "calculationTemplates": [
+          {
+            "id": "tmpl_kursgewinn",
+            "level": "apply",
+            "points": 150,
+            "questionTemplate": "Du besitzt {anzahl} Aktien. Kaufpreis {kauf} Euro, Verkaufspreis {verkauf} Euro. Wie hoch ist Gewinn oder Verlust vor Kosten?",
+            "parameters": {
+              "anzahl": {
+                "min": 1,
+                "max": 100
+              },
+              "kauf": {
+                "min": 10,
+                "max": 300
+              },
+              "verkauf": {
+                "min": 5,
+                "max": 400
+              }
+            },
+            "solutionFormula": "anzahl * (verkauf - kauf)",
+            "distractorFormulas": [
+              "anzahl * (kauf - verkauf)",
+              "kauf - verkauf",
+              "anzahl + verkauf - kauf"
+            ],
+            "explanationTemplate": "Verkaufspreis minus Kaufpreis, dann mal Anzahl.",
+            "unit": "Euro"
+          }
+        ],
+        "teacherSupport": {
+          "competenceGoal": "Kursgewinn und Kursverlust aus Kauf- und Verkaufspreis verstehen.",
+          "typicalMisconception": "Solange der Kurs einmal gestiegen ist, habe ich den Gewinn sicher.",
+          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Solange der Kurs einmal gestiegen ist, habe ich den Gewinn sicher.“ glaubt?",
+          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Kursgewinn und Kursverlust“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+        },
+        "parentSupport": {
+          "conversationPrompt": "Wo begegnet uns „Kursgewinn und Kursverlust“ im Alltag?",
+          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Kursgewinn und Kursverlust“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+        },
+        "reviewStatus": "editorial_review_recommended"
+      },
+      {
+        "id": "konzept_gesamtrendite",
+        "title": "Gesamtrendite",
+        "type": "calculation",
+        "unlockLevel": 14,
+        "prerequisites": [
+          "konzept_dividende",
+          "konzept_kursgewinn"
+        ],
+        "pedagogy": {
+          "learningGoal": "Gesamtrendite als Kombination aus Kursentwicklung und Dividenden verstehen.",
+          "coreIdea": "Bei Aktien zählt nicht nur der Kurs, sondern auch Dividenden, Kosten und später Steuern.",
+          "everydayScenario": "Eine Aktie bringt 10 Euro Kursgewinn und 3 Euro Dividende.",
+          "misconception": "Bei Aktien zählt nur, ob der Kurs steigt.",
+          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Gesamtrendite' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
+          "reflectionPrompt": "Welche Fehlvorstellung zu 'Gesamtrendite' könnte dich zu einer schlechten Entscheidung verleiten?"
+        },
+        "glossaryTerms": [
+          "Gesamtrendite",
+          "Kursgewinn",
+          "Kursverlust",
+          "Dividende",
+          "Ertrag",
+          "Rendite",
+          "Nettorendite"
+        ],
+        "targetGroups": [
+          "learners_10_14",
+          "young_adults",
+          "parents_teachers"
+        ],
+        "explanations": {
+          "learners_10_14": "Gesamtrendite: Bei Aktien zählt nicht nur der Kurs, sondern auch Dividenden, Kosten und später Steuern. Beispiel: Eine Aktie bringt 10 Euro Kursgewinn und 3 Euro Dividende. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Bei Aktien zählt nur, ob der Kurs steigt.“.",
+          "young_adults": "Gesamtrendite: Bei Aktien zählt nicht nur der Kurs, sondern auch Dividenden, Kosten und später Steuern. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Eine Aktie bringt 10 Euro Kursgewinn und 3 Euro Dividende.",
+          "parents_teachers": "Lernziel: Gesamtrendite als Kombination aus Kursentwicklung und Dividenden verstehen. Didaktischer Fokus: Bei Aktien zählt nicht nur der Kurs, sondern auch Dividenden, Kosten und später Steuern. Typische Fehlvorstellung: „Bei Aktien zählt nur, ob der Kurs steigt.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+        },
+        "questions": [
+          {
+            "id": "q_gesamtrendite_001",
+            "level": "explain",
+            "question": "Was beschreibt „Gesamtrendite“ am besten?",
+            "points": 100,
+            "correctAnswer": "Bei Aktien zählt nicht nur der Kurs, sondern auch Dividenden, Kosten und später Steuern.",
+            "distractors": [
+              {
+                "text": "Bei Aktien zählt nur, ob der Kurs steigt.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "closeness": 3
+              },
+              {
+                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Richtig: Bei Aktien zählt nicht nur der Kurs, sondern auch Dividenden, Kosten und später Steuern."
+          },
+          {
+            "id": "q_gesamtrendite_002",
+            "level": "recognize",
+            "question": "Welches Beispiel passt am ehesten zu „Gesamtrendite“?",
+            "points": 100,
+            "correctAnswer": "Eine Aktie bringt 10 Euro Kursgewinn und 3 Euro Dividende.",
+            "distractors": [
+              {
+                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "closeness": 2
+              },
+              {
+                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "closeness": 3
+              },
+              {
+                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+          },
+          {
+            "id": "q_gesamtrendite_003",
+            "level": "understand",
+            "question": "Warum ist „Gesamtrendite“ für Finanzbildung wichtig?",
+            "points": 120,
+            "correctAnswer": "Gesamtrendite als Kombination aus Kursentwicklung und Dividenden verstehen.",
+            "distractors": [
+              {
+                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "closeness": 3
+              },
+              {
+                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "closeness": 2
+              },
+              {
+                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Lernziel ist: Gesamtrendite als Kombination aus Kursentwicklung und Dividenden verstehen."
+          },
+          {
+            "id": "q_gesamtrendite_004",
+            "level": "apply",
+            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "points": 150,
+            "correctAnswer": "Die passenden Werte einsetzen, sauber rechnen und das Ergebnis im Kontext prüfen.",
+            "distractors": [
+              {
+                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "closeness": 3
+              },
+              {
+                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "closeness": 3
+              },
+              {
+                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+          },
+          {
+            "id": "q_gesamtrendite_005",
+            "level": "master",
+            "question": "Welche Aussage zu „Gesamtrendite“ stimmt am besten?",
+            "points": 200,
+            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "distractors": [
+              {
+                "text": "Es ersetzt jede weitere Prüfung.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert schnelle Gewinne.",
+                "closeness": 3
+              },
+              {
+                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+          }
+        ],
+        "calculationTemplates": [
+          {
+            "id": "tmpl_gesamtrendite",
+            "level": "apply",
+            "points": 150,
+            "questionTemplate": "Du hast {kursgewinn} Euro Kursgewinn und {dividende} Euro Dividende erhalten. Wie hoch ist der Ertrag vor Kosten und Steuern?",
+            "parameters": {
+              "kursgewinn": {
+                "min": -100,
+                "max": 300
+              },
+              "dividende": {
+                "min": 0,
+                "max": 100
+              }
+            },
+            "solutionFormula": "kursgewinn + dividende",
+            "distractorFormulas": [
+              "kursgewinn - dividende",
+              "dividende - kursgewinn",
+              "kursgewinn"
+            ],
+            "explanationTemplate": "Gesamtertrag = Kursgewinn oder Kursverlust plus Dividende.",
+            "unit": "Euro"
+          }
+        ],
+        "teacherSupport": {
+          "competenceGoal": "Gesamtrendite als Kombination aus Kursentwicklung und Dividenden verstehen.",
+          "typicalMisconception": "Bei Aktien zählt nur, ob der Kurs steigt.",
+          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Bei Aktien zählt nur, ob der Kurs steigt.“ glaubt?",
+          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Gesamtrendite“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+        },
+        "parentSupport": {
+          "conversationPrompt": "Wo begegnet uns „Gesamtrendite“ im Alltag?",
+          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Gesamtrendite“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+        },
+        "reviewStatus": "editorial_review_recommended"
+      }
+    ]
+  }
+}

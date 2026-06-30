@@ -24,6 +24,8 @@ import {
   type PedagogySource,
   type Question,
   type QuestionSource,
+  type TeacherSupportSource,
+  type ParentSupportSource,
   type Vorlage,
 } from "./types.js";
 
@@ -167,6 +169,77 @@ function resolveTemplate(c: CalculationTemplateSource, lang: "de" | "en"): Calcu
     explanationTemplate: pick(c.explanationTemplate, lang),
     unit: c.unit,
     rounding: c.rounding,
+  };
+}
+
+// ── app-facing (string) → Source (LangText) ──────────────────────────────────
+// „Hebt" gelieferte v2-Inhalte (flache strings, nur de) in die Source-Form, damit die
+// vorhandenen Validatoren/Readiness-Checks (die auf LangText arbeiten) wiederverwendbar sind.
+
+const de = (s: string | undefined): LangText => ({ de: s ?? "" });
+
+export function liftModuleToSource(m: LearningModule): LearningModuleSource {
+  const explanations = {} as Record<Audience, LangText>;
+  for (const a of AUDIENCES) explanations[a] = de(m.explanations[a]);
+  const teacherSupport: TeacherSupportSource | undefined = m.teacherSupport
+    ? {
+        competenceGoal: de(m.teacherSupport.competenceGoal),
+        typicalMisconception: de(m.teacherSupport.typicalMisconception),
+        discussionPrompt: de(m.teacherSupport.discussionPrompt),
+        classroomActivity: de(m.teacherSupport.classroomActivity),
+      }
+    : undefined;
+  const parentSupport: ParentSupportSource | undefined = m.parentSupport
+    ? {
+        conversationPrompt: de(m.parentSupport.conversationPrompt),
+        everydayExercise: de(m.parentSupport.everydayExercise),
+      }
+    : undefined;
+  return {
+    id: m.id,
+    blockId: m.blockId,
+    title: de(m.title),
+    unlockLevel: m.unlockLevel,
+    prerequisites: m.prerequisites,
+    type: m.type,
+    pedagogy: {
+      learningGoal: de(m.pedagogy.learningGoal),
+      coreIdea: de(m.pedagogy.coreIdea),
+      everydayScenario: de(m.pedagogy.everydayScenario),
+      misconception: de(m.pedagogy.misconception),
+      transferTask: de(m.pedagogy.transferTask),
+      reflectionPrompt: de(m.pedagogy.reflectionPrompt),
+    },
+    explanations,
+    questions: m.questions.map((q) => ({
+      id: q.id,
+      level: q.level,
+      question: de(q.question),
+      points: q.points,
+      correctAnswer: de(q.correctAnswer),
+      distractors: q.distractors.map((d) => ({ text: de(d.text), closeness: d.closeness })),
+      explanationAfterAnswer: de(q.explanationAfterAnswer),
+      displayedDistractors: q.displayedDistractors,
+    })),
+    calculationTemplates: m.calculationTemplates?.map((c) => ({
+      id: c.id,
+      level: c.level,
+      points: c.points,
+      questionTemplate: de(c.questionTemplate),
+      parameters: c.parameters,
+      solutionFormula: c.solutionFormula,
+      distractorFormulas: c.distractorFormulas,
+      explanationTemplate: de(c.explanationTemplate),
+      unit: c.unit,
+      rounding: c.rounding,
+    })),
+    glossaryTerms: m.glossaryTerms,
+    teacherSupport,
+    parentSupport,
+    legacyId: m.legacyId,
+    difficulty: m.difficulty,
+    targetGroups: m.targetGroups,
+    reviewStatus: m.reviewStatus,
   };
 }
 
