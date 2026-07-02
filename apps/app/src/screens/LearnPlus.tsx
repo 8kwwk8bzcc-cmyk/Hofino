@@ -249,8 +249,8 @@ export function LearnPlus() {
   };
 
   const starteWiederholung = () => {
-    const rest = Math.max(0, 10 - tages.wieder);
-    const queue = faellig.map((k) => k.id).slice(0, rest);
+    // Keine Tagesbegrenzung mehr: alle heute fälligen Konzepte wiederholen.
+    const queue = faellig.map((k) => k.id);
     if (queue.length === 0) return;
     setWdhQueue(queue);
     naechsteWdh(queue, 0);
@@ -377,9 +377,8 @@ export function LearnPlus() {
         )}
         <Card>
           <Muted>{t("learn.todayLearned")}</Muted>
+          {/* Reine Anzeige der heutigen Aktivität – keine Tageslimits mehr. */}
           <Body>{t("learn.todayCounts", { neu: tages.neu, wieder: tages.wieder })}</Body>
-          {/* Neue Lektionen sind unbegrenzt; nur das Wiederholungs-Budget hat ein Tageslimit. */}
-          <ProgressBar value={tages.wieder / 10} />
         </Card>
         <Card>
           <H2>{t("learn.lessonTitle")}</H2>
@@ -404,9 +403,8 @@ export function LearnPlus() {
             <H2>{t("learn.miniTask")}</H2>
             <Body>{t("learn.dueToReview", { n: faellig.length })}</Body>
             <Button
-              title={tages.wieder >= 10 ? t("learn.reviewDone") : t("learn.reviewStart")}
+              title={t("learn.reviewStart")}
               onPress={starteWiederholung}
-              disabled={tages.wieder >= 10}
               testID="wdh-start"
             />
           </Card>
