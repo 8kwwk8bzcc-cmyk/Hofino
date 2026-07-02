@@ -9,3 +9,6 @@ web-build/
 .env.*
 !.env.example
 coverage/
+
+# lokale Cloud-Secrets (nie committen)
+supabase/.cloud-secrets.env
