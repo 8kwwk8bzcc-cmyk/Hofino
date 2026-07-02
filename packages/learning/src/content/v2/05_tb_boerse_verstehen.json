@@ -1,0 +1,2084 @@
+{
+  "schemaVersion": "2.0.0",
+  "generatedAt": "2026-06-30",
+  "targetGroups": [
+    "learners_10_14",
+    "young_adults",
+    "parents_teachers"
+  ],
+  "blockOrder": 5,
+  "block": {
+    "id": "tb_boerse_verstehen",
+    "title": "Börse verstehen",
+    "unlockLevel": 15,
+    "goal": "Lernende verstehen Börsen als organisierte Marktplätze und Kurse als Marktpreise aus Erwartungen und Handelsinteressen.",
+    "pedagogicalIdea": "Dieser Block korrigiert mechanische Börsenbilder und erklärt Preisbildung, Nachrichten, Spread, Liquidität, Index und Marktkapitalisierung.",
+    "modules": [
+      {
+        "id": "konzept_boerse",
+        "title": "Was ist eine Börse?",
+        "type": "understanding",
+        "unlockLevel": 15,
+        "prerequisites": [
+          "konzept_aktie",
+          "konzept_aktionaer_sein"
+        ],
+        "pedagogy": {
+          "learningGoal": "Börse als organisierten Handelsplatz für Wertpapiere verstehen.",
+          "coreIdea": "Die Börse bringt Käufer und Verkäufer zusammen und folgt Regeln.",
+          "everydayScenario": "Wie auf einem Marktplatz treffen Käufer und Verkäufer zusammen, nur geht es um Wertpapiere.",
+          "misconception": "Die Börse ist ein Ort, an dem man automatisch schnell reich wird.",
+          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Was ist eine Börse?' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
+          "reflectionPrompt": "Welche Fehlvorstellung zu 'Was ist eine Börse?' könnte dich zu einer schlechten Entscheidung verleiten?"
+        },
+        "glossaryTerms": [
+          "Börse",
+          "Marktplatz",
+          "Wertpapier",
+          "Aktie",
+          "Handel",
+          "Käufer",
+          "Verkäufer",
+          "Handelsplatz"
+        ],
+        "targetGroups": [
+          "learners_10_14",
+          "young_adults",
+          "parents_teachers"
+        ],
+        "explanations": {
+          "learners_10_14": "Was ist eine Börse?: Die Börse bringt Käufer und Verkäufer zusammen und folgt Regeln. Beispiel: Wie auf einem Marktplatz treffen Käufer und Verkäufer zusammen, nur geht es um Wertpapiere. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Die Börse ist ein Ort, an dem man automatisch schnell reich wird.“.",
+          "young_adults": "Was ist eine Börse?: Die Börse bringt Käufer und Verkäufer zusammen und folgt Regeln. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Wie auf einem Marktplatz treffen Käufer und Verkäufer zusammen, nur geht es um Wertpapiere.",
+          "parents_teachers": "Lernziel: Börse als organisierten Handelsplatz für Wertpapiere verstehen. Didaktischer Fokus: Die Börse bringt Käufer und Verkäufer zusammen und folgt Regeln. Typische Fehlvorstellung: „Die Börse ist ein Ort, an dem man automatisch schnell reich wird.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+        },
+        "questions": [
+          {
+            "id": "q_boerse_001",
+            "level": "explain",
+            "question": "Was beschreibt „Was ist eine Börse?“ am besten?",
+            "points": 100,
+            "correctAnswer": "Die Börse bringt Käufer und Verkäufer zusammen und folgt Regeln.",
+            "distractors": [
+              {
+                "text": "Die Börse ist ein Ort, an dem man automatisch schnell reich wird.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "closeness": 3
+              },
+              {
+                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Richtig: Die Börse bringt Käufer und Verkäufer zusammen und folgt Regeln."
+          },
+          {
+            "id": "q_boerse_002",
+            "level": "recognize",
+            "question": "Welches Beispiel passt am ehesten zu „Was ist eine Börse?“?",
+            "points": 100,
+            "correctAnswer": "Wie auf einem Marktplatz treffen Käufer und Verkäufer zusammen, nur geht es um Wertpapiere.",
+            "distractors": [
+              {
+                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "closeness": 2
+              },
+              {
+                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "closeness": 3
+              },
+              {
+                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+          },
+          {
+            "id": "q_boerse_003",
+            "level": "understand",
+            "question": "Warum ist „Was ist eine Börse?“ für Finanzbildung wichtig?",
+            "points": 120,
+            "correctAnswer": "Börse als organisierten Handelsplatz für Wertpapiere verstehen.",
+            "distractors": [
+              {
+                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "closeness": 3
+              },
+              {
+                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "closeness": 2
+              },
+              {
+                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Lernziel ist: Börse als organisierten Handelsplatz für Wertpapiere verstehen."
+          },
+          {
+            "id": "q_boerse_004",
+            "level": "apply",
+            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "points": 150,
+            "correctAnswer": "Den Begriff verstehen, Beispiele erkennen und ihn von ähnlichen Begriffen abgrenzen.",
+            "distractors": [
+              {
+                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "closeness": 3
+              },
+              {
+                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "closeness": 3
+              },
+              {
+                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+          },
+          {
+            "id": "q_boerse_005",
+            "level": "master",
+            "question": "Welche Aussage zu „Was ist eine Börse?“ stimmt am besten?",
+            "points": 200,
+            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "distractors": [
+              {
+                "text": "Es ersetzt jede weitere Prüfung.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert schnelle Gewinne.",
+                "closeness": 3
+              },
+              {
+                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+          }
+        ],
+        "calculationTemplates": [],
+        "teacherSupport": {
+          "competenceGoal": "Börse als organisierten Handelsplatz für Wertpapiere verstehen.",
+          "typicalMisconception": "Die Börse ist ein Ort, an dem man automatisch schnell reich wird.",
+          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Die Börse ist ein Ort, an dem man automatisch schnell reich wird.“ glaubt?",
+          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Was ist eine Börse?“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+        },
+        "parentSupport": {
+          "conversationPrompt": "Wo begegnet uns „Was ist eine Börse?“ im Alltag?",
+          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Was ist eine Börse?“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+        },
+        "reviewStatus": "editorial_review_recommended"
+      },
+      {
+        "id": "konzept_boerse_als_marktplatz",
+        "title": "Börse als Marktplatz",
+        "type": "understanding",
+        "unlockLevel": 15,
+        "prerequisites": [
+          "konzept_boerse"
+        ],
+        "pedagogy": {
+          "learningGoal": "Verstehen, dass Handel entsteht, wenn Kauf- und Verkaufsinteressen zusammenpassen.",
+          "coreIdea": "Ein Handel kommt zustande, wenn Kauf- und Verkaufsinteressen bei einem Preis zusammenfinden.",
+          "everydayScenario": "Ein Käufer bietet 80 Euro, ein Verkäufer will 100 Euro; ohne Einigung kein Handel.",
+          "misconception": "Der Börsenpreis wird von einer einzelnen Person festgelegt.",
+          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Börse als Marktplatz' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
+          "reflectionPrompt": "Welche Fehlvorstellung zu 'Börse als Marktplatz' könnte dich zu einer schlechten Entscheidung verleiten?"
+        },
+        "glossaryTerms": [
+          "Käufer",
+          "Verkäufer",
+          "Order",
+          "Kaufauftrag",
+          "Verkaufsauftrag",
+          "Limit",
+          "Handel",
+          "Preisvorstellung"
+        ],
+        "targetGroups": [
+          "learners_10_14",
+          "young_adults",
+          "parents_teachers"
+        ],
+        "explanations": {
+          "learners_10_14": "Börse als Marktplatz: Ein Handel kommt zustande, wenn Kauf- und Verkaufsinteressen bei einem Preis zusammenfinden. Beispiel: Ein Käufer bietet 80 Euro, ein Verkäufer will 100 Euro; ohne Einigung kein Handel. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Der Börsenpreis wird von einer einzelnen Person festgelegt.“.",
+          "young_adults": "Börse als Marktplatz: Ein Handel kommt zustande, wenn Kauf- und Verkaufsinteressen bei einem Preis zusammenfinden. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Ein Käufer bietet 80 Euro, ein Verkäufer will 100 Euro; ohne Einigung kein Handel.",
+          "parents_teachers": "Lernziel: Verstehen, dass Handel entsteht, wenn Kauf- und Verkaufsinteressen zusammenpassen. Didaktischer Fokus: Ein Handel kommt zustande, wenn Kauf- und Verkaufsinteressen bei einem Preis zusammenfinden. Typische Fehlvorstellung: „Der Börsenpreis wird von einer einzelnen Person festgelegt.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+        },
+        "questions": [
+          {
+            "id": "q_boerse_als_marktplatz_001",
+            "level": "explain",
+            "question": "Was beschreibt „Börse als Marktplatz“ am besten?",
+            "points": 100,
+            "correctAnswer": "Ein Handel kommt zustande, wenn Kauf- und Verkaufsinteressen bei einem Preis zusammenfinden.",
+            "distractors": [
+              {
+                "text": "Der Börsenpreis wird von einer einzelnen Person festgelegt.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "closeness": 3
+              },
+              {
+                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Richtig: Ein Handel kommt zustande, wenn Kauf- und Verkaufsinteressen bei einem Preis zusammenfinden."
+          },
+          {
+            "id": "q_boerse_als_marktplatz_002",
+            "level": "recognize",
+            "question": "Welches Beispiel passt am ehesten zu „Börse als Marktplatz“?",
+            "points": 100,
+            "correctAnswer": "Ein Käufer bietet 80 Euro, ein Verkäufer will 100 Euro; ohne Einigung kein Handel.",
+            "distractors": [
+              {
+                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "closeness": 2
+              },
+              {
+                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "closeness": 3
+              },
+              {
+                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+          },
+          {
+            "id": "q_boerse_als_marktplatz_003",
+            "level": "understand",
+            "question": "Warum ist „Börse als Marktplatz“ für Finanzbildung wichtig?",
+            "points": 120,
+            "correctAnswer": "Verstehen, dass Handel entsteht, wenn Kauf- und Verkaufsinteressen zusammenpassen.",
+            "distractors": [
+              {
+                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "closeness": 3
+              },
+              {
+                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "closeness": 2
+              },
+              {
+                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Lernziel ist: Verstehen, dass Handel entsteht, wenn Kauf- und Verkaufsinteressen zusammenpassen."
+          },
+          {
+            "id": "q_boerse_als_marktplatz_004",
+            "level": "apply",
+            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "points": 150,
+            "correctAnswer": "Den Begriff verstehen, Beispiele erkennen und ihn von ähnlichen Begriffen abgrenzen.",
+            "distractors": [
+              {
+                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "closeness": 3
+              },
+              {
+                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "closeness": 3
+              },
+              {
+                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+          },
+          {
+            "id": "q_boerse_als_marktplatz_005",
+            "level": "master",
+            "question": "Welche Aussage zu „Börse als Marktplatz“ stimmt am besten?",
+            "points": 200,
+            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "distractors": [
+              {
+                "text": "Es ersetzt jede weitere Prüfung.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert schnelle Gewinne.",
+                "closeness": 3
+              },
+              {
+                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+          }
+        ],
+        "calculationTemplates": [],
+        "teacherSupport": {
+          "competenceGoal": "Verstehen, dass Handel entsteht, wenn Kauf- und Verkaufsinteressen zusammenpassen.",
+          "typicalMisconception": "Der Börsenpreis wird von einer einzelnen Person festgelegt.",
+          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Der Börsenpreis wird von einer einzelnen Person festgelegt.“ glaubt?",
+          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Börse als Marktplatz“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+        },
+        "parentSupport": {
+          "conversationPrompt": "Wo begegnet uns „Börse als Marktplatz“ im Alltag?",
+          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Börse als Marktplatz“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+        },
+        "reviewStatus": "editorial_review_recommended"
+      },
+      {
+        "id": "konzept_angebot_nachfrage",
+        "title": "Angebot und Nachfrage",
+        "type": "understanding",
+        "unlockLevel": 16,
+        "prerequisites": [
+          "konzept_boerse_als_marktplatz"
+        ],
+        "pedagogy": {
+          "learningGoal": "Angebot, Nachfrage und Preisbereitschaft als Kurstreiber verstehen.",
+          "coreIdea": "Kurse bewegen sich, wenn sich Kauf- und Verkaufsbereitschaft bei bestimmten Preisen ändert.",
+          "everydayScenario": "Viele wollen ein seltenes Sammelalbum kaufen; Verkäufer verlangen höhere Preise.",
+          "misconception": "Ein Kurs steigt einfach, weil es mehr Käufer als Verkäufer gibt.",
+          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Angebot und Nachfrage' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
+          "reflectionPrompt": "Welche Fehlvorstellung zu 'Angebot und Nachfrage' könnte dich zu einer schlechten Entscheidung verleiten?"
+        },
+        "glossaryTerms": [
+          "Angebot",
+          "Nachfrage",
+          "Kaufdruck",
+          "Verkaufsdruck",
+          "Preisbereitschaft",
+          "Limit",
+          "Volumen",
+          "Knappheit"
+        ],
+        "targetGroups": [
+          "learners_10_14",
+          "young_adults",
+          "parents_teachers"
+        ],
+        "explanations": {
+          "learners_10_14": "Angebot und Nachfrage: Kurse bewegen sich, wenn sich Kauf- und Verkaufsbereitschaft bei bestimmten Preisen ändert. Beispiel: Viele wollen ein seltenes Sammelalbum kaufen; Verkäufer verlangen höhere Preise. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Ein Kurs steigt einfach, weil es mehr Käufer als Verkäufer gibt.“.",
+          "young_adults": "Angebot und Nachfrage: Kurse bewegen sich, wenn sich Kauf- und Verkaufsbereitschaft bei bestimmten Preisen ändert. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Viele wollen ein seltenes Sammelalbum kaufen; Verkäufer verlangen höhere Preise.",
+          "parents_teachers": "Lernziel: Angebot, Nachfrage und Preisbereitschaft als Kurstreiber verstehen. Didaktischer Fokus: Kurse bewegen sich, wenn sich Kauf- und Verkaufsbereitschaft bei bestimmten Preisen ändert. Typische Fehlvorstellung: „Ein Kurs steigt einfach, weil es mehr Käufer als Verkäufer gibt.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+        },
+        "questions": [
+          {
+            "id": "q_angebot_nachfrage_001",
+            "level": "explain",
+            "question": "Was beschreibt „Angebot und Nachfrage“ am besten?",
+            "points": 100,
+            "correctAnswer": "Kurse bewegen sich, wenn sich Kauf- und Verkaufsbereitschaft bei bestimmten Preisen ändert.",
+            "distractors": [
+              {
+                "text": "Ein Kurs steigt einfach, weil es mehr Käufer als Verkäufer gibt.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "closeness": 3
+              },
+              {
+                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Richtig: Kurse bewegen sich, wenn sich Kauf- und Verkaufsbereitschaft bei bestimmten Preisen ändert."
+          },
+          {
+            "id": "q_angebot_nachfrage_002",
+            "level": "recognize",
+            "question": "Welches Beispiel passt am ehesten zu „Angebot und Nachfrage“?",
+            "points": 100,
+            "correctAnswer": "Viele wollen ein seltenes Sammelalbum kaufen; Verkäufer verlangen höhere Preise.",
+            "distractors": [
+              {
+                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "closeness": 2
+              },
+              {
+                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "closeness": 3
+              },
+              {
+                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+          },
+          {
+            "id": "q_angebot_nachfrage_003",
+            "level": "understand",
+            "question": "Warum ist „Angebot und Nachfrage“ für Finanzbildung wichtig?",
+            "points": 120,
+            "correctAnswer": "Angebot, Nachfrage und Preisbereitschaft als Kurstreiber verstehen.",
+            "distractors": [
+              {
+                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "closeness": 3
+              },
+              {
+                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "closeness": 2
+              },
+              {
+                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Lernziel ist: Angebot, Nachfrage und Preisbereitschaft als Kurstreiber verstehen."
+          },
+          {
+            "id": "q_angebot_nachfrage_004",
+            "level": "apply",
+            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "points": 150,
+            "correctAnswer": "Den Begriff verstehen, Beispiele erkennen und ihn von ähnlichen Begriffen abgrenzen.",
+            "distractors": [
+              {
+                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "closeness": 3
+              },
+              {
+                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "closeness": 3
+              },
+              {
+                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+          },
+          {
+            "id": "q_angebot_nachfrage_005",
+            "level": "master",
+            "question": "Welche Aussage zu „Angebot und Nachfrage“ stimmt am besten?",
+            "points": 200,
+            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "distractors": [
+              {
+                "text": "Es ersetzt jede weitere Prüfung.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert schnelle Gewinne.",
+                "closeness": 3
+              },
+              {
+                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+          }
+        ],
+        "calculationTemplates": [],
+        "teacherSupport": {
+          "competenceGoal": "Angebot, Nachfrage und Preisbereitschaft als Kurstreiber verstehen.",
+          "typicalMisconception": "Ein Kurs steigt einfach, weil es mehr Käufer als Verkäufer gibt.",
+          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Ein Kurs steigt einfach, weil es mehr Käufer als Verkäufer gibt.“ glaubt?",
+          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Angebot und Nachfrage“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+        },
+        "parentSupport": {
+          "conversationPrompt": "Wo begegnet uns „Angebot und Nachfrage“ im Alltag?",
+          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Angebot und Nachfrage“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+        },
+        "reviewStatus": "editorial_review_recommended"
+      },
+      {
+        "id": "konzept_kurse",
+        "title": "Warum schwanken Aktienkurse?",
+        "type": "calculation",
+        "unlockLevel": 16,
+        "prerequisites": [
+          "konzept_angebot_nachfrage",
+          "konzept_chancen_risiken_aktie"
+        ],
+        "pedagogy": {
+          "learningGoal": "Kursschwankungen durch Erwartungen, Nachrichten, Angebot und Nachfrage erklären.",
+          "coreIdea": "Ein Aktienkurs ist der aktuelle Marktpreis und ändert sich mit Erwartungen.",
+          "everydayScenario": "Eine gute Gewinnmeldung kann Käufer optimistischer machen; eine schlechte Nachricht kann Verkäufe auslösen.",
+          "misconception": "Ein Aktienkurs zeigt immer genau, wie gut ein Unternehmen wirklich ist.",
+          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Warum schwanken Aktienkurse?' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
+          "reflectionPrompt": "Welche Fehlvorstellung zu 'Warum schwanken Aktienkurse?' könnte dich zu einer schlechten Entscheidung verleiten?"
+        },
+        "glossaryTerms": [
+          "Aktienkurs",
+          "Kursschwankung",
+          "Marktpreis",
+          "Erwartung",
+          "Nachricht",
+          "Stimmung",
+          "Kursanstieg",
+          "Kursrückgang"
+        ],
+        "targetGroups": [
+          "learners_10_14",
+          "young_adults",
+          "parents_teachers"
+        ],
+        "explanations": {
+          "learners_10_14": "Warum schwanken Aktienkurse?: Ein Aktienkurs ist der aktuelle Marktpreis und ändert sich mit Erwartungen. Beispiel: Eine gute Gewinnmeldung kann Käufer optimistischer machen; eine schlechte Nachricht kann Verkäufe auslösen. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Ein Aktienkurs zeigt immer genau, wie gut ein Unternehmen wirklich ist.“.",
+          "young_adults": "Warum schwanken Aktienkurse?: Ein Aktienkurs ist der aktuelle Marktpreis und ändert sich mit Erwartungen. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Eine gute Gewinnmeldung kann Käufer optimistischer machen; eine schlechte Nachricht kann Verkäufe auslösen.",
+          "parents_teachers": "Lernziel: Kursschwankungen durch Erwartungen, Nachrichten, Angebot und Nachfrage erklären. Didaktischer Fokus: Ein Aktienkurs ist der aktuelle Marktpreis und ändert sich mit Erwartungen. Typische Fehlvorstellung: „Ein Aktienkurs zeigt immer genau, wie gut ein Unternehmen wirklich ist.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+        },
+        "questions": [
+          {
+            "id": "q_kurse_001",
+            "level": "explain",
+            "question": "Was beschreibt „Warum schwanken Aktienkurse?“ am besten?",
+            "points": 100,
+            "correctAnswer": "Ein Aktienkurs ist der aktuelle Marktpreis und ändert sich mit Erwartungen.",
+            "distractors": [
+              {
+                "text": "Ein Aktienkurs zeigt immer genau, wie gut ein Unternehmen wirklich ist.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "closeness": 3
+              },
+              {
+                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Richtig: Ein Aktienkurs ist der aktuelle Marktpreis und ändert sich mit Erwartungen."
+          },
+          {
+            "id": "q_kurse_002",
+            "level": "recognize",
+            "question": "Welches Beispiel passt am ehesten zu „Warum schwanken Aktienkurse?“?",
+            "points": 100,
+            "correctAnswer": "Eine gute Gewinnmeldung kann Käufer optimistischer machen; eine schlechte Nachricht kann Verkäufe auslösen.",
+            "distractors": [
+              {
+                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "closeness": 2
+              },
+              {
+                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "closeness": 3
+              },
+              {
+                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+          },
+          {
+            "id": "q_kurse_003",
+            "level": "understand",
+            "question": "Warum ist „Warum schwanken Aktienkurse?“ für Finanzbildung wichtig?",
+            "points": 120,
+            "correctAnswer": "Kursschwankungen durch Erwartungen, Nachrichten, Angebot und Nachfrage erklären.",
+            "distractors": [
+              {
+                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "closeness": 3
+              },
+              {
+                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "closeness": 2
+              },
+              {
+                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Lernziel ist: Kursschwankungen durch Erwartungen, Nachrichten, Angebot und Nachfrage erklären."
+          },
+          {
+            "id": "q_kurse_004",
+            "level": "apply",
+            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "points": 150,
+            "correctAnswer": "Die passenden Werte einsetzen, sauber rechnen und das Ergebnis im Kontext prüfen.",
+            "distractors": [
+              {
+                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "closeness": 3
+              },
+              {
+                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "closeness": 3
+              },
+              {
+                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+          },
+          {
+            "id": "q_kurse_005",
+            "level": "master",
+            "question": "Welche Aussage zu „Warum schwanken Aktienkurse?“ stimmt am besten?",
+            "points": 200,
+            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "distractors": [
+              {
+                "text": "Es ersetzt jede weitere Prüfung.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert schnelle Gewinne.",
+                "closeness": 3
+              },
+              {
+                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+          }
+        ],
+        "calculationTemplates": [
+          {
+            "id": "tmpl_kursveraenderung",
+            "level": "apply",
+            "points": 150,
+            "questionTemplate": "Eine Aktie kostet {kurs} Euro und verändert sich um {prozent} Prozent. Wie viele Euro entspricht diese Veränderung?",
+            "parameters": {
+              "kurs": {
+                "min": 20,
+                "max": 500
+              },
+              "prozent": {
+                "min": 2,
+                "max": 30
+              }
+            },
+            "solutionFormula": "kurs * prozent / 100",
+            "distractorFormulas": [
+              "kurs + prozent",
+              "kurs * prozent",
+              "kurs / prozent"
+            ],
+            "explanationTemplate": "Prozentuale Veränderung = Kurs mal Prozent geteilt durch 100.",
+            "unit": "Euro"
+          }
+        ],
+        "teacherSupport": {
+          "competenceGoal": "Kursschwankungen durch Erwartungen, Nachrichten, Angebot und Nachfrage erklären.",
+          "typicalMisconception": "Ein Aktienkurs zeigt immer genau, wie gut ein Unternehmen wirklich ist.",
+          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Ein Aktienkurs zeigt immer genau, wie gut ein Unternehmen wirklich ist.“ glaubt?",
+          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Warum schwanken Aktienkurse?“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+        },
+        "parentSupport": {
+          "conversationPrompt": "Wo begegnet uns „Warum schwanken Aktienkurse?“ im Alltag?",
+          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Warum schwanken Aktienkurse?“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+        },
+        "reviewStatus": "editorial_review_recommended"
+      },
+      {
+        "id": "konzept_erwartungen_nachrichten",
+        "title": "Erwartungen und Nachrichten",
+        "type": "understanding",
+        "unlockLevel": 16,
+        "prerequisites": [
+          "konzept_kurse"
+        ],
+        "pedagogy": {
+          "learningGoal": "Verstehen, dass Kurse auf Erwartungen und Überraschungen reagieren.",
+          "coreIdea": "An der Börse zählt oft, ob eine Nachricht besser oder schlechter ist als erwartet.",
+          "everydayScenario": "Ein Unternehmen macht Gewinn, aber weniger als erwartet; die Aktie fällt.",
+          "misconception": "Gute Nachrichten lassen Kurse immer steigen und schlechte immer fallen.",
+          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Erwartungen und Nachrichten' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
+          "reflectionPrompt": "Welche Fehlvorstellung zu 'Erwartungen und Nachrichten' könnte dich zu einer schlechten Entscheidung verleiten?"
+        },
+        "glossaryTerms": [
+          "Erwartung",
+          "Nachricht",
+          "Prognose",
+          "Überraschung",
+          "Gewinnmeldung",
+          "Marktreaktion",
+          "eingepreist"
+        ],
+        "targetGroups": [
+          "learners_10_14",
+          "young_adults",
+          "parents_teachers"
+        ],
+        "explanations": {
+          "learners_10_14": "Erwartungen und Nachrichten: An der Börse zählt oft, ob eine Nachricht besser oder schlechter ist als erwartet. Beispiel: Ein Unternehmen macht Gewinn, aber weniger als erwartet; die Aktie fällt. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Gute Nachrichten lassen Kurse immer steigen und schlechte immer fallen.“.",
+          "young_adults": "Erwartungen und Nachrichten: An der Börse zählt oft, ob eine Nachricht besser oder schlechter ist als erwartet. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Ein Unternehmen macht Gewinn, aber weniger als erwartet; die Aktie fällt.",
+          "parents_teachers": "Lernziel: Verstehen, dass Kurse auf Erwartungen und Überraschungen reagieren. Didaktischer Fokus: An der Börse zählt oft, ob eine Nachricht besser oder schlechter ist als erwartet. Typische Fehlvorstellung: „Gute Nachrichten lassen Kurse immer steigen und schlechte immer fallen.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+        },
+        "questions": [
+          {
+            "id": "q_erwartungen_nachrichten_001",
+            "level": "explain",
+            "question": "Was beschreibt „Erwartungen und Nachrichten“ am besten?",
+            "points": 100,
+            "correctAnswer": "An der Börse zählt oft, ob eine Nachricht besser oder schlechter ist als erwartet.",
+            "distractors": [
+              {
+                "text": "Gute Nachrichten lassen Kurse immer steigen und schlechte immer fallen.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "closeness": 3
+              },
+              {
+                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Richtig: An der Börse zählt oft, ob eine Nachricht besser oder schlechter ist als erwartet."
+          },
+          {
+            "id": "q_erwartungen_nachrichten_002",
+            "level": "recognize",
+            "question": "Welches Beispiel passt am ehesten zu „Erwartungen und Nachrichten“?",
+            "points": 100,
+            "correctAnswer": "Ein Unternehmen macht Gewinn, aber weniger als erwartet; die Aktie fällt.",
+            "distractors": [
+              {
+                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "closeness": 2
+              },
+              {
+                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "closeness": 3
+              },
+              {
+                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+          },
+          {
+            "id": "q_erwartungen_nachrichten_003",
+            "level": "understand",
+            "question": "Warum ist „Erwartungen und Nachrichten“ für Finanzbildung wichtig?",
+            "points": 120,
+            "correctAnswer": "Verstehen, dass Kurse auf Erwartungen und Überraschungen reagieren.",
+            "distractors": [
+              {
+                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "closeness": 3
+              },
+              {
+                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "closeness": 2
+              },
+              {
+                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Lernziel ist: Verstehen, dass Kurse auf Erwartungen und Überraschungen reagieren."
+          },
+          {
+            "id": "q_erwartungen_nachrichten_004",
+            "level": "apply",
+            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "points": 150,
+            "correctAnswer": "Den Begriff verstehen, Beispiele erkennen und ihn von ähnlichen Begriffen abgrenzen.",
+            "distractors": [
+              {
+                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "closeness": 3
+              },
+              {
+                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "closeness": 3
+              },
+              {
+                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+          },
+          {
+            "id": "q_erwartungen_nachrichten_005",
+            "level": "master",
+            "question": "Welche Aussage zu „Erwartungen und Nachrichten“ stimmt am besten?",
+            "points": 200,
+            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "distractors": [
+              {
+                "text": "Es ersetzt jede weitere Prüfung.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert schnelle Gewinne.",
+                "closeness": 3
+              },
+              {
+                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+          }
+        ],
+        "calculationTemplates": [],
+        "teacherSupport": {
+          "competenceGoal": "Verstehen, dass Kurse auf Erwartungen und Überraschungen reagieren.",
+          "typicalMisconception": "Gute Nachrichten lassen Kurse immer steigen und schlechte immer fallen.",
+          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Gute Nachrichten lassen Kurse immer steigen und schlechte immer fallen.“ glaubt?",
+          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Erwartungen und Nachrichten“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+        },
+        "parentSupport": {
+          "conversationPrompt": "Wo begegnet uns „Erwartungen und Nachrichten“ im Alltag?",
+          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Erwartungen und Nachrichten“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+        },
+        "reviewStatus": "editorial_review_recommended"
+      },
+      {
+        "id": "konzept_gute_firma_fallender_kurs",
+        "title": "Gute Firma, fallender Kurs",
+        "type": "reflection",
+        "unlockLevel": 17,
+        "prerequisites": [
+          "konzept_erwartungen_nachrichten",
+          "konzept_wettbewerb"
+        ],
+        "pedagogy": {
+          "learningGoal": "Verstehen, dass gute Unternehmen fallende Aktienkurse haben können.",
+          "coreIdea": "Ein gutes Unternehmen ist nicht automatisch jederzeit eine gute Aktie zum aktuellen Preis.",
+          "everydayScenario": "Eine beliebte Firma wächst, aber weniger als erwartet; die Aktie fällt.",
+          "misconception": "Wenn ein Unternehmen gut ist, muss die Aktie immer steigen.",
+          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Gute Firma, fallender Kurs' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
+          "reflectionPrompt": "Welche Fehlvorstellung zu 'Gute Firma, fallender Kurs' könnte dich zu einer schlechten Entscheidung verleiten?"
+        },
+        "glossaryTerms": [
+          "Unternehmensqualität",
+          "Bewertung",
+          "Erwartung",
+          "Wachstum",
+          "Enttäuschung",
+          "Kursrückgang",
+          "Preis"
+        ],
+        "targetGroups": [
+          "learners_10_14",
+          "young_adults",
+          "parents_teachers"
+        ],
+        "explanations": {
+          "learners_10_14": "Gute Firma, fallender Kurs: Ein gutes Unternehmen ist nicht automatisch jederzeit eine gute Aktie zum aktuellen Preis. Beispiel: Eine beliebte Firma wächst, aber weniger als erwartet; die Aktie fällt. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Wenn ein Unternehmen gut ist, muss die Aktie immer steigen.“.",
+          "young_adults": "Gute Firma, fallender Kurs: Ein gutes Unternehmen ist nicht automatisch jederzeit eine gute Aktie zum aktuellen Preis. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Eine beliebte Firma wächst, aber weniger als erwartet; die Aktie fällt.",
+          "parents_teachers": "Lernziel: Verstehen, dass gute Unternehmen fallende Aktienkurse haben können. Didaktischer Fokus: Ein gutes Unternehmen ist nicht automatisch jederzeit eine gute Aktie zum aktuellen Preis. Typische Fehlvorstellung: „Wenn ein Unternehmen gut ist, muss die Aktie immer steigen.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+        },
+        "questions": [
+          {
+            "id": "q_gute_firma_fallender_kurs_001",
+            "level": "explain",
+            "question": "Was beschreibt „Gute Firma, fallender Kurs“ am besten?",
+            "points": 100,
+            "correctAnswer": "Ein gutes Unternehmen ist nicht automatisch jederzeit eine gute Aktie zum aktuellen Preis.",
+            "distractors": [
+              {
+                "text": "Wenn ein Unternehmen gut ist, muss die Aktie immer steigen.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "closeness": 3
+              },
+              {
+                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Richtig: Ein gutes Unternehmen ist nicht automatisch jederzeit eine gute Aktie zum aktuellen Preis."
+          },
+          {
+            "id": "q_gute_firma_fallender_kurs_002",
+            "level": "recognize",
+            "question": "Welches Beispiel passt am ehesten zu „Gute Firma, fallender Kurs“?",
+            "points": 100,
+            "correctAnswer": "Eine beliebte Firma wächst, aber weniger als erwartet; die Aktie fällt.",
+            "distractors": [
+              {
+                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "closeness": 2
+              },
+              {
+                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "closeness": 3
+              },
+              {
+                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+          },
+          {
+            "id": "q_gute_firma_fallender_kurs_003",
+            "level": "understand",
+            "question": "Warum ist „Gute Firma, fallender Kurs“ für Finanzbildung wichtig?",
+            "points": 120,
+            "correctAnswer": "Verstehen, dass gute Unternehmen fallende Aktienkurse haben können.",
+            "distractors": [
+              {
+                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "closeness": 3
+              },
+              {
+                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "closeness": 2
+              },
+              {
+                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Lernziel ist: Verstehen, dass gute Unternehmen fallende Aktienkurse haben können."
+          },
+          {
+            "id": "q_gute_firma_fallender_kurs_004",
+            "level": "apply",
+            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "points": 150,
+            "correctAnswer": "Innehalten, Informationen prüfen und erst dann passend zum eigenen Ziel handeln.",
+            "distractors": [
+              {
+                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "closeness": 3
+              },
+              {
+                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "closeness": 3
+              },
+              {
+                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+          },
+          {
+            "id": "q_gute_firma_fallender_kurs_005",
+            "level": "master",
+            "question": "Welche Aussage zu „Gute Firma, fallender Kurs“ stimmt am besten?",
+            "points": 200,
+            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "distractors": [
+              {
+                "text": "Es ersetzt jede weitere Prüfung.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert schnelle Gewinne.",
+                "closeness": 3
+              },
+              {
+                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+          }
+        ],
+        "calculationTemplates": [],
+        "teacherSupport": {
+          "competenceGoal": "Verstehen, dass gute Unternehmen fallende Aktienkurse haben können.",
+          "typicalMisconception": "Wenn ein Unternehmen gut ist, muss die Aktie immer steigen.",
+          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Wenn ein Unternehmen gut ist, muss die Aktie immer steigen.“ glaubt?",
+          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Gute Firma, fallender Kurs“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+        },
+        "parentSupport": {
+          "conversationPrompt": "Wo begegnet uns „Gute Firma, fallender Kurs“ im Alltag?",
+          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Gute Firma, fallender Kurs“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+        },
+        "reviewStatus": "editorial_review_recommended"
+      },
+      {
+        "id": "konzept_schlechte_firma_steigender_kurs",
+        "title": "Schwache Firma, steigender Kurs",
+        "type": "reflection",
+        "unlockLevel": 17,
+        "prerequisites": [
+          "konzept_erwartungen_nachrichten",
+          "konzept_unternehmen_scheitern"
+        ],
+        "pedagogy": {
+          "learningGoal": "Verstehen, dass auch schwache Unternehmen kurzfristig steigende Kurse haben können.",
+          "coreIdea": "Ein Kursanstieg kann Hoffnung zeigen, aber nicht automatisch Qualität.",
+          "everydayScenario": "Ein Unternehmen macht Verlust, aber weniger als befürchtet; die Aktie steigt.",
+          "misconception": "Wenn eine Aktie steigt, muss das Unternehmen gesund sein.",
+          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Schwache Firma, steigender Kurs' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
+          "reflectionPrompt": "Welche Fehlvorstellung zu 'Schwache Firma, steigender Kurs' könnte dich zu einer schlechten Entscheidung verleiten?"
+        },
+        "glossaryTerms": [
+          "Spekulation",
+          "Hoffnung",
+          "Turnaround",
+          "Verlust",
+          "Erwartung",
+          "Hype",
+          "Kursanstieg",
+          "Risiko"
+        ],
+        "targetGroups": [
+          "learners_10_14",
+          "young_adults",
+          "parents_teachers"
+        ],
+        "explanations": {
+          "learners_10_14": "Schwache Firma, steigender Kurs: Ein Kursanstieg kann Hoffnung zeigen, aber nicht automatisch Qualität. Beispiel: Ein Unternehmen macht Verlust, aber weniger als befürchtet; die Aktie steigt. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Wenn eine Aktie steigt, muss das Unternehmen gesund sein.“.",
+          "young_adults": "Schwache Firma, steigender Kurs: Ein Kursanstieg kann Hoffnung zeigen, aber nicht automatisch Qualität. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Ein Unternehmen macht Verlust, aber weniger als befürchtet; die Aktie steigt.",
+          "parents_teachers": "Lernziel: Verstehen, dass auch schwache Unternehmen kurzfristig steigende Kurse haben können. Didaktischer Fokus: Ein Kursanstieg kann Hoffnung zeigen, aber nicht automatisch Qualität. Typische Fehlvorstellung: „Wenn eine Aktie steigt, muss das Unternehmen gesund sein.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+        },
+        "questions": [
+          {
+            "id": "q_schlechte_firma_steigender_kurs_001",
+            "level": "explain",
+            "question": "Was beschreibt „Schwache Firma, steigender Kurs“ am besten?",
+            "points": 100,
+            "correctAnswer": "Ein Kursanstieg kann Hoffnung zeigen, aber nicht automatisch Qualität.",
+            "distractors": [
+              {
+                "text": "Wenn eine Aktie steigt, muss das Unternehmen gesund sein.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "closeness": 3
+              },
+              {
+                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Richtig: Ein Kursanstieg kann Hoffnung zeigen, aber nicht automatisch Qualität."
+          },
+          {
+            "id": "q_schlechte_firma_steigender_kurs_002",
+            "level": "recognize",
+            "question": "Welches Beispiel passt am ehesten zu „Schwache Firma, steigender Kurs“?",
+            "points": 100,
+            "correctAnswer": "Ein Unternehmen macht Verlust, aber weniger als befürchtet; die Aktie steigt.",
+            "distractors": [
+              {
+                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "closeness": 2
+              },
+              {
+                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "closeness": 3
+              },
+              {
+                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+          },
+          {
+            "id": "q_schlechte_firma_steigender_kurs_003",
+            "level": "understand",
+            "question": "Warum ist „Schwache Firma, steigender Kurs“ für Finanzbildung wichtig?",
+            "points": 120,
+            "correctAnswer": "Verstehen, dass auch schwache Unternehmen kurzfristig steigende Kurse haben können.",
+            "distractors": [
+              {
+                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "closeness": 3
+              },
+              {
+                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "closeness": 2
+              },
+              {
+                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Lernziel ist: Verstehen, dass auch schwache Unternehmen kurzfristig steigende Kurse haben können."
+          },
+          {
+            "id": "q_schlechte_firma_steigender_kurs_004",
+            "level": "apply",
+            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "points": 150,
+            "correctAnswer": "Innehalten, Informationen prüfen und erst dann passend zum eigenen Ziel handeln.",
+            "distractors": [
+              {
+                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "closeness": 3
+              },
+              {
+                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "closeness": 3
+              },
+              {
+                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+          },
+          {
+            "id": "q_schlechte_firma_steigender_kurs_005",
+            "level": "master",
+            "question": "Welche Aussage zu „Schwache Firma, steigender Kurs“ stimmt am besten?",
+            "points": 200,
+            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "distractors": [
+              {
+                "text": "Es ersetzt jede weitere Prüfung.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert schnelle Gewinne.",
+                "closeness": 3
+              },
+              {
+                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+          }
+        ],
+        "calculationTemplates": [],
+        "teacherSupport": {
+          "competenceGoal": "Verstehen, dass auch schwache Unternehmen kurzfristig steigende Kurse haben können.",
+          "typicalMisconception": "Wenn eine Aktie steigt, muss das Unternehmen gesund sein.",
+          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Wenn eine Aktie steigt, muss das Unternehmen gesund sein.“ glaubt?",
+          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Schwache Firma, steigender Kurs“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+        },
+        "parentSupport": {
+          "conversationPrompt": "Wo begegnet uns „Schwache Firma, steigender Kurs“ im Alltag?",
+          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Schwache Firma, steigender Kurs“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+        },
+        "reviewStatus": "editorial_review_recommended"
+      },
+      {
+        "id": "konzept_geldkurs_briefkurs",
+        "title": "Geldkurs und Briefkurs",
+        "type": "understanding",
+        "unlockLevel": 18,
+        "prerequisites": [
+          "konzept_boerse_als_marktplatz"
+        ],
+        "pedagogy": {
+          "learningGoal": "Geldkurs und Briefkurs als Käufer- und Verkäuferpreise verstehen.",
+          "coreIdea": "Der Geldkurs zeigt, was Käufer zahlen wollen; der Briefkurs zeigt, was Verkäufer verlangen.",
+          "everydayScenario": "Käufer bieten 20 Euro, Verkäufer verlangen 23 Euro.",
+          "misconception": "Es gibt immer nur einen einzigen Preis für eine Aktie.",
+          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Geldkurs und Briefkurs' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
+          "reflectionPrompt": "Welche Fehlvorstellung zu 'Geldkurs und Briefkurs' könnte dich zu einer schlechten Entscheidung verleiten?"
+        },
+        "glossaryTerms": [
+          "Geldkurs",
+          "Briefkurs",
+          "Bid",
+          "Ask",
+          "Käuferseite",
+          "Verkäuferseite",
+          "handelbarer Preis"
+        ],
+        "targetGroups": [
+          "learners_10_14",
+          "young_adults",
+          "parents_teachers"
+        ],
+        "explanations": {
+          "learners_10_14": "Geldkurs und Briefkurs: Der Geldkurs zeigt, was Käufer zahlen wollen; der Briefkurs zeigt, was Verkäufer verlangen. Beispiel: Käufer bieten 20 Euro, Verkäufer verlangen 23 Euro. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Es gibt immer nur einen einzigen Preis für eine Aktie.“.",
+          "young_adults": "Geldkurs und Briefkurs: Der Geldkurs zeigt, was Käufer zahlen wollen; der Briefkurs zeigt, was Verkäufer verlangen. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Käufer bieten 20 Euro, Verkäufer verlangen 23 Euro.",
+          "parents_teachers": "Lernziel: Geldkurs und Briefkurs als Käufer- und Verkäuferpreise verstehen. Didaktischer Fokus: Der Geldkurs zeigt, was Käufer zahlen wollen; der Briefkurs zeigt, was Verkäufer verlangen. Typische Fehlvorstellung: „Es gibt immer nur einen einzigen Preis für eine Aktie.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+        },
+        "questions": [
+          {
+            "id": "q_geldkurs_briefkurs_001",
+            "level": "explain",
+            "question": "Was beschreibt „Geldkurs und Briefkurs“ am besten?",
+            "points": 100,
+            "correctAnswer": "Der Geldkurs zeigt, was Käufer zahlen wollen; der Briefkurs zeigt, was Verkäufer verlangen.",
+            "distractors": [
+              {
+                "text": "Es gibt immer nur einen einzigen Preis für eine Aktie.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "closeness": 3
+              },
+              {
+                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Richtig: Der Geldkurs zeigt, was Käufer zahlen wollen; der Briefkurs zeigt, was Verkäufer verlangen."
+          },
+          {
+            "id": "q_geldkurs_briefkurs_002",
+            "level": "recognize",
+            "question": "Welches Beispiel passt am ehesten zu „Geldkurs und Briefkurs“?",
+            "points": 100,
+            "correctAnswer": "Käufer bieten 20 Euro, Verkäufer verlangen 23 Euro.",
+            "distractors": [
+              {
+                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "closeness": 2
+              },
+              {
+                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "closeness": 3
+              },
+              {
+                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+          },
+          {
+            "id": "q_geldkurs_briefkurs_003",
+            "level": "understand",
+            "question": "Warum ist „Geldkurs und Briefkurs“ für Finanzbildung wichtig?",
+            "points": 120,
+            "correctAnswer": "Geldkurs und Briefkurs als Käufer- und Verkäuferpreise verstehen.",
+            "distractors": [
+              {
+                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "closeness": 3
+              },
+              {
+                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "closeness": 2
+              },
+              {
+                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Lernziel ist: Geldkurs und Briefkurs als Käufer- und Verkäuferpreise verstehen."
+          },
+          {
+            "id": "q_geldkurs_briefkurs_004",
+            "level": "apply",
+            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "points": 150,
+            "correctAnswer": "Den Begriff verstehen, Beispiele erkennen und ihn von ähnlichen Begriffen abgrenzen.",
+            "distractors": [
+              {
+                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "closeness": 3
+              },
+              {
+                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "closeness": 3
+              },
+              {
+                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+          },
+          {
+            "id": "q_geldkurs_briefkurs_005",
+            "level": "master",
+            "question": "Welche Aussage zu „Geldkurs und Briefkurs“ stimmt am besten?",
+            "points": 200,
+            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "distractors": [
+              {
+                "text": "Es ersetzt jede weitere Prüfung.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert schnelle Gewinne.",
+                "closeness": 3
+              },
+              {
+                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+          }
+        ],
+        "calculationTemplates": [],
+        "teacherSupport": {
+          "competenceGoal": "Geldkurs und Briefkurs als Käufer- und Verkäuferpreise verstehen.",
+          "typicalMisconception": "Es gibt immer nur einen einzigen Preis für eine Aktie.",
+          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Es gibt immer nur einen einzigen Preis für eine Aktie.“ glaubt?",
+          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Geldkurs und Briefkurs“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+        },
+        "parentSupport": {
+          "conversationPrompt": "Wo begegnet uns „Geldkurs und Briefkurs“ im Alltag?",
+          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Geldkurs und Briefkurs“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+        },
+        "reviewStatus": "editorial_review_recommended"
+      },
+      {
+        "id": "konzept_spread",
+        "title": "Spread",
+        "type": "calculation",
+        "unlockLevel": 18,
+        "prerequisites": [
+          "konzept_geldkurs_briefkurs"
+        ],
+        "pedagogy": {
+          "learningGoal": "Spread als Unterschied zwischen Geldkurs und Briefkurs verstehen.",
+          "coreIdea": "Der Spread ist der Abstand zwischen Kauf- und Verkaufspreis.",
+          "everydayScenario": "Du kaufst sofort für 11 Euro und könntest sofort nur für 10 Euro verkaufen.",
+          "misconception": "Wenn keine sichtbare Gebühr angezeigt wird, ist der Handel automatisch kostenlos.",
+          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Spread' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
+          "reflectionPrompt": "Welche Fehlvorstellung zu 'Spread' könnte dich zu einer schlechten Entscheidung verleiten?"
+        },
+        "glossaryTerms": [
+          "Spread",
+          "Geldkurs",
+          "Briefkurs",
+          "implizite Kosten",
+          "Liquidität",
+          "Handelskosten"
+        ],
+        "targetGroups": [
+          "learners_10_14",
+          "young_adults",
+          "parents_teachers"
+        ],
+        "explanations": {
+          "learners_10_14": "Spread: Der Spread ist der Abstand zwischen Kauf- und Verkaufspreis. Beispiel: Du kaufst sofort für 11 Euro und könntest sofort nur für 10 Euro verkaufen. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Wenn keine sichtbare Gebühr angezeigt wird, ist der Handel automatisch kostenlos.“.",
+          "young_adults": "Spread: Der Spread ist der Abstand zwischen Kauf- und Verkaufspreis. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Du kaufst sofort für 11 Euro und könntest sofort nur für 10 Euro verkaufen.",
+          "parents_teachers": "Lernziel: Spread als Unterschied zwischen Geldkurs und Briefkurs verstehen. Didaktischer Fokus: Der Spread ist der Abstand zwischen Kauf- und Verkaufspreis. Typische Fehlvorstellung: „Wenn keine sichtbare Gebühr angezeigt wird, ist der Handel automatisch kostenlos.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+        },
+        "questions": [
+          {
+            "id": "q_spread_001",
+            "level": "explain",
+            "question": "Was beschreibt „Spread“ am besten?",
+            "points": 100,
+            "correctAnswer": "Der Spread ist der Abstand zwischen Kauf- und Verkaufspreis.",
+            "distractors": [
+              {
+                "text": "Wenn keine sichtbare Gebühr angezeigt wird, ist der Handel automatisch kostenlos.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "closeness": 3
+              },
+              {
+                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Richtig: Der Spread ist der Abstand zwischen Kauf- und Verkaufspreis."
+          },
+          {
+            "id": "q_spread_002",
+            "level": "recognize",
+            "question": "Welches Beispiel passt am ehesten zu „Spread“?",
+            "points": 100,
+            "correctAnswer": "Du kaufst sofort für 11 Euro und könntest sofort nur für 10 Euro verkaufen.",
+            "distractors": [
+              {
+                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "closeness": 2
+              },
+              {
+                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "closeness": 3
+              },
+              {
+                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+          },
+          {
+            "id": "q_spread_003",
+            "level": "understand",
+            "question": "Warum ist „Spread“ für Finanzbildung wichtig?",
+            "points": 120,
+            "correctAnswer": "Spread als Unterschied zwischen Geldkurs und Briefkurs verstehen.",
+            "distractors": [
+              {
+                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "closeness": 3
+              },
+              {
+                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "closeness": 2
+              },
+              {
+                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Lernziel ist: Spread als Unterschied zwischen Geldkurs und Briefkurs verstehen."
+          },
+          {
+            "id": "q_spread_004",
+            "level": "apply",
+            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "points": 150,
+            "correctAnswer": "Die passenden Werte einsetzen, sauber rechnen und das Ergebnis im Kontext prüfen.",
+            "distractors": [
+              {
+                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "closeness": 3
+              },
+              {
+                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "closeness": 3
+              },
+              {
+                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+          },
+          {
+            "id": "q_spread_005",
+            "level": "master",
+            "question": "Welche Aussage zu „Spread“ stimmt am besten?",
+            "points": 200,
+            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "distractors": [
+              {
+                "text": "Es ersetzt jede weitere Prüfung.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert schnelle Gewinne.",
+                "closeness": 3
+              },
+              {
+                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+          }
+        ],
+        "calculationTemplates": [
+          {
+            "id": "tmpl_spread",
+            "level": "apply",
+            "points": 150,
+            "questionTemplate": "Der Geldkurs beträgt {geldkurs} Euro, der Briefkurs {briefkurs} Euro. Wie hoch ist der Spread?",
+            "parameters": {
+              "geldkurs": {
+                "min": 10,
+                "max": 500
+              },
+              "briefkurs": {
+                "min": 11,
+                "max": 520
+              }
+            },
+            "solutionFormula": "briefkurs - geldkurs",
+            "distractorFormulas": [
+              "briefkurs + geldkurs",
+              "geldkurs - briefkurs",
+              "briefkurs"
+            ],
+            "explanationTemplate": "Spread = Briefkurs minus Geldkurs.",
+            "unit": "Euro"
+          }
+        ],
+        "teacherSupport": {
+          "competenceGoal": "Spread als Unterschied zwischen Geldkurs und Briefkurs verstehen.",
+          "typicalMisconception": "Wenn keine sichtbare Gebühr angezeigt wird, ist der Handel automatisch kostenlos.",
+          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Wenn keine sichtbare Gebühr angezeigt wird, ist der Handel automatisch kostenlos.“ glaubt?",
+          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Spread“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+        },
+        "parentSupport": {
+          "conversationPrompt": "Wo begegnet uns „Spread“ im Alltag?",
+          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Spread“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+        },
+        "reviewStatus": "editorial_review_recommended"
+      },
+      {
+        "id": "konzept_liquiditaet",
+        "title": "Liquidität",
+        "type": "understanding",
+        "unlockLevel": 18,
+        "prerequisites": [
+          "konzept_spread"
+        ],
+        "pedagogy": {
+          "learningGoal": "Liquidität als Leichtigkeit des Kaufens und Verkaufens verstehen.",
+          "coreIdea": "Je liquider ein Markt ist, desto leichter finden Käufer und Verkäufer zueinander.",
+          "everydayScenario": "Ein beliebtes gebrauchtes Smartphone lässt sich leichter verkaufen als ein sehr spezielles Ersatzteil.",
+          "misconception": "Man kann jede Aktie jederzeit problemlos zum Wunschpreis verkaufen.",
+          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Liquidität' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
+          "reflectionPrompt": "Welche Fehlvorstellung zu 'Liquidität' könnte dich zu einer schlechten Entscheidung verleiten?"
+        },
+        "glossaryTerms": [
+          "Liquidität",
+          "Handelsvolumen",
+          "Markttiefe",
+          "Spread",
+          "Ausführungspreis",
+          "Nebenwert",
+          "Handelbarkeit"
+        ],
+        "targetGroups": [
+          "learners_10_14",
+          "young_adults",
+          "parents_teachers"
+        ],
+        "explanations": {
+          "learners_10_14": "Liquidität: Je liquider ein Markt ist, desto leichter finden Käufer und Verkäufer zueinander. Beispiel: Ein beliebtes gebrauchtes Smartphone lässt sich leichter verkaufen als ein sehr spezielles Ersatzteil. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Man kann jede Aktie jederzeit problemlos zum Wunschpreis verkaufen.“.",
+          "young_adults": "Liquidität: Je liquider ein Markt ist, desto leichter finden Käufer und Verkäufer zueinander. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Ein beliebtes gebrauchtes Smartphone lässt sich leichter verkaufen als ein sehr spezielles Ersatzteil.",
+          "parents_teachers": "Lernziel: Liquidität als Leichtigkeit des Kaufens und Verkaufens verstehen. Didaktischer Fokus: Je liquider ein Markt ist, desto leichter finden Käufer und Verkäufer zueinander. Typische Fehlvorstellung: „Man kann jede Aktie jederzeit problemlos zum Wunschpreis verkaufen.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+        },
+        "questions": [
+          {
+            "id": "q_liquiditaet_001",
+            "level": "explain",
+            "question": "Was beschreibt „Liquidität“ am besten?",
+            "points": 100,
+            "correctAnswer": "Je liquider ein Markt ist, desto leichter finden Käufer und Verkäufer zueinander.",
+            "distractors": [
+              {
+                "text": "Man kann jede Aktie jederzeit problemlos zum Wunschpreis verkaufen.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "closeness": 3
+              },
+              {
+                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Richtig: Je liquider ein Markt ist, desto leichter finden Käufer und Verkäufer zueinander."
+          },
+          {
+            "id": "q_liquiditaet_002",
+            "level": "recognize",
+            "question": "Welches Beispiel passt am ehesten zu „Liquidität“?",
+            "points": 100,
+            "correctAnswer": "Ein beliebtes gebrauchtes Smartphone lässt sich leichter verkaufen als ein sehr spezielles Ersatzteil.",
+            "distractors": [
+              {
+                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "closeness": 2
+              },
+              {
+                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "closeness": 3
+              },
+              {
+                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+          },
+          {
+            "id": "q_liquiditaet_003",
+            "level": "understand",
+            "question": "Warum ist „Liquidität“ für Finanzbildung wichtig?",
+            "points": 120,
+            "correctAnswer": "Liquidität als Leichtigkeit des Kaufens und Verkaufens verstehen.",
+            "distractors": [
+              {
+                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "closeness": 3
+              },
+              {
+                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "closeness": 2
+              },
+              {
+                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Lernziel ist: Liquidität als Leichtigkeit des Kaufens und Verkaufens verstehen."
+          },
+          {
+            "id": "q_liquiditaet_004",
+            "level": "apply",
+            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "points": 150,
+            "correctAnswer": "Den Begriff verstehen, Beispiele erkennen und ihn von ähnlichen Begriffen abgrenzen.",
+            "distractors": [
+              {
+                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "closeness": 3
+              },
+              {
+                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "closeness": 3
+              },
+              {
+                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+          },
+          {
+            "id": "q_liquiditaet_005",
+            "level": "master",
+            "question": "Welche Aussage zu „Liquidität“ stimmt am besten?",
+            "points": 200,
+            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "distractors": [
+              {
+                "text": "Es ersetzt jede weitere Prüfung.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert schnelle Gewinne.",
+                "closeness": 3
+              },
+              {
+                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+          }
+        ],
+        "calculationTemplates": [],
+        "teacherSupport": {
+          "competenceGoal": "Liquidität als Leichtigkeit des Kaufens und Verkaufens verstehen.",
+          "typicalMisconception": "Man kann jede Aktie jederzeit problemlos zum Wunschpreis verkaufen.",
+          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Man kann jede Aktie jederzeit problemlos zum Wunschpreis verkaufen.“ glaubt?",
+          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Liquidität“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+        },
+        "parentSupport": {
+          "conversationPrompt": "Wo begegnet uns „Liquidität“ im Alltag?",
+          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Liquidität“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+        },
+        "reviewStatus": "editorial_review_recommended"
+      },
+      {
+        "id": "konzept_index",
+        "title": "Was ist ein Index?",
+        "type": "understanding",
+        "unlockLevel": 19,
+        "prerequisites": [
+          "konzept_boerse",
+          "konzept_kurse"
+        ],
+        "pedagogy": {
+          "learningGoal": "Index als Messgröße für die Entwicklung einer Gruppe von Aktien verstehen.",
+          "coreIdea": "Ein Index ist wie ein Punktestand für einen Marktausschnitt.",
+          "everydayScenario": "Ein Klassendurchschnitt fasst viele Noten zusammen; ein Index fasst viele Aktien zusammen.",
+          "misconception": "Ein Index ist eine einzelne Aktie.",
+          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Was ist ein Index?' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
+          "reflectionPrompt": "Welche Fehlvorstellung zu 'Was ist ein Index?' könnte dich zu einer schlechten Entscheidung verleiten?"
+        },
+        "glossaryTerms": [
+          "Index",
+          "Aktienindex",
+          "Marktbarometer",
+          "Gewichtung",
+          "Vergleichsmaßstab",
+          "Durchschnitt",
+          "Indexfonds"
+        ],
+        "targetGroups": [
+          "learners_10_14",
+          "young_adults",
+          "parents_teachers"
+        ],
+        "explanations": {
+          "learners_10_14": "Was ist ein Index?: Ein Index ist wie ein Punktestand für einen Marktausschnitt. Beispiel: Ein Klassendurchschnitt fasst viele Noten zusammen; ein Index fasst viele Aktien zusammen. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Ein Index ist eine einzelne Aktie.“.",
+          "young_adults": "Was ist ein Index?: Ein Index ist wie ein Punktestand für einen Marktausschnitt. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Ein Klassendurchschnitt fasst viele Noten zusammen; ein Index fasst viele Aktien zusammen.",
+          "parents_teachers": "Lernziel: Index als Messgröße für die Entwicklung einer Gruppe von Aktien verstehen. Didaktischer Fokus: Ein Index ist wie ein Punktestand für einen Marktausschnitt. Typische Fehlvorstellung: „Ein Index ist eine einzelne Aktie.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+        },
+        "questions": [
+          {
+            "id": "q_index_001",
+            "level": "explain",
+            "question": "Was beschreibt „Was ist ein Index?“ am besten?",
+            "points": 100,
+            "correctAnswer": "Ein Index ist wie ein Punktestand für einen Marktausschnitt.",
+            "distractors": [
+              {
+                "text": "Ein Index ist eine einzelne Aktie.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "closeness": 3
+              },
+              {
+                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Richtig: Ein Index ist wie ein Punktestand für einen Marktausschnitt."
+          },
+          {
+            "id": "q_index_002",
+            "level": "recognize",
+            "question": "Welches Beispiel passt am ehesten zu „Was ist ein Index?“?",
+            "points": 100,
+            "correctAnswer": "Ein Klassendurchschnitt fasst viele Noten zusammen; ein Index fasst viele Aktien zusammen.",
+            "distractors": [
+              {
+                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "closeness": 2
+              },
+              {
+                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "closeness": 3
+              },
+              {
+                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+          },
+          {
+            "id": "q_index_003",
+            "level": "understand",
+            "question": "Warum ist „Was ist ein Index?“ für Finanzbildung wichtig?",
+            "points": 120,
+            "correctAnswer": "Index als Messgröße für die Entwicklung einer Gruppe von Aktien verstehen.",
+            "distractors": [
+              {
+                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "closeness": 3
+              },
+              {
+                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "closeness": 2
+              },
+              {
+                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Lernziel ist: Index als Messgröße für die Entwicklung einer Gruppe von Aktien verstehen."
+          },
+          {
+            "id": "q_index_004",
+            "level": "apply",
+            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "points": 150,
+            "correctAnswer": "Den Begriff verstehen, Beispiele erkennen und ihn von ähnlichen Begriffen abgrenzen.",
+            "distractors": [
+              {
+                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "closeness": 3
+              },
+              {
+                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "closeness": 3
+              },
+              {
+                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+          },
+          {
+            "id": "q_index_005",
+            "level": "master",
+            "question": "Welche Aussage zu „Was ist ein Index?“ stimmt am besten?",
+            "points": 200,
+            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "distractors": [
+              {
+                "text": "Es ersetzt jede weitere Prüfung.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert schnelle Gewinne.",
+                "closeness": 3
+              },
+              {
+                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+          }
+        ],
+        "calculationTemplates": [],
+        "teacherSupport": {
+          "competenceGoal": "Index als Messgröße für die Entwicklung einer Gruppe von Aktien verstehen.",
+          "typicalMisconception": "Ein Index ist eine einzelne Aktie.",
+          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Ein Index ist eine einzelne Aktie.“ glaubt?",
+          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Was ist ein Index?“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+        },
+        "parentSupport": {
+          "conversationPrompt": "Wo begegnet uns „Was ist ein Index?“ im Alltag?",
+          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Was ist ein Index?“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+        },
+        "reviewStatus": "editorial_review_recommended"
+      },
+      {
+        "id": "konzept_marktkapitalisierung",
+        "title": "Marktkapitalisierung",
+        "type": "calculation",
+        "unlockLevel": 19,
+        "prerequisites": [
+          "konzept_aktie",
+          "konzept_index"
+        ],
+        "pedagogy": {
+          "learningGoal": "Marktkapitalisierung als Börsenwert eines Unternehmens berechnen.",
+          "coreIdea": "Marktkapitalisierung = Aktienkurs mal Anzahl der Aktien.",
+          "everydayScenario": "1.000 Aktien zu je 20 Euro ergeben 20.000 Euro Börsenwert.",
+          "misconception": "Der Aktienkurs allein zeigt, wie groß ein Unternehmen ist.",
+          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Marktkapitalisierung' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
+          "reflectionPrompt": "Welche Fehlvorstellung zu 'Marktkapitalisierung' könnte dich zu einer schlechten Entscheidung verleiten?"
+        },
+        "glossaryTerms": [
+          "Marktkapitalisierung",
+          "Börsenwert",
+          "Aktienkurs",
+          "Aktienanzahl",
+          "ausstehende Aktien",
+          "Unternehmensgröße",
+          "Indexgewichtung"
+        ],
+        "targetGroups": [
+          "learners_10_14",
+          "young_adults",
+          "parents_teachers"
+        ],
+        "explanations": {
+          "learners_10_14": "Marktkapitalisierung: Marktkapitalisierung = Aktienkurs mal Anzahl der Aktien. Beispiel: 1.000 Aktien zu je 20 Euro ergeben 20.000 Euro Börsenwert. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Der Aktienkurs allein zeigt, wie groß ein Unternehmen ist.“.",
+          "young_adults": "Marktkapitalisierung: Marktkapitalisierung = Aktienkurs mal Anzahl der Aktien. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: 1.000 Aktien zu je 20 Euro ergeben 20.000 Euro Börsenwert.",
+          "parents_teachers": "Lernziel: Marktkapitalisierung als Börsenwert eines Unternehmens berechnen. Didaktischer Fokus: Marktkapitalisierung = Aktienkurs mal Anzahl der Aktien. Typische Fehlvorstellung: „Der Aktienkurs allein zeigt, wie groß ein Unternehmen ist.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+        },
+        "questions": [
+          {
+            "id": "q_marktkapitalisierung_001",
+            "level": "explain",
+            "question": "Was beschreibt „Marktkapitalisierung“ am besten?",
+            "points": 100,
+            "correctAnswer": "Marktkapitalisierung = Aktienkurs mal Anzahl der Aktien.",
+            "distractors": [
+              {
+                "text": "Der Aktienkurs allein zeigt, wie groß ein Unternehmen ist.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "closeness": 3
+              },
+              {
+                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Richtig: Marktkapitalisierung = Aktienkurs mal Anzahl der Aktien."
+          },
+          {
+            "id": "q_marktkapitalisierung_002",
+            "level": "recognize",
+            "question": "Welches Beispiel passt am ehesten zu „Marktkapitalisierung“?",
+            "points": 100,
+            "correctAnswer": "1.000 Aktien zu je 20 Euro ergeben 20.000 Euro Börsenwert.",
+            "distractors": [
+              {
+                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "closeness": 2
+              },
+              {
+                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "closeness": 3
+              },
+              {
+                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+          },
+          {
+            "id": "q_marktkapitalisierung_003",
+            "level": "understand",
+            "question": "Warum ist „Marktkapitalisierung“ für Finanzbildung wichtig?",
+            "points": 120,
+            "correctAnswer": "Marktkapitalisierung als Börsenwert eines Unternehmens berechnen.",
+            "distractors": [
+              {
+                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "closeness": 3
+              },
+              {
+                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "closeness": 2
+              },
+              {
+                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "closeness": 1
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Das Lernziel ist: Marktkapitalisierung als Börsenwert eines Unternehmens berechnen."
+          },
+          {
+            "id": "q_marktkapitalisierung_004",
+            "level": "apply",
+            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "points": 150,
+            "correctAnswer": "Die passenden Werte einsetzen, sauber rechnen und das Ergebnis im Kontext prüfen.",
+            "distractors": [
+              {
+                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "closeness": 3
+              },
+              {
+                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "closeness": 3
+              },
+              {
+                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+          },
+          {
+            "id": "q_marktkapitalisierung_005",
+            "level": "master",
+            "question": "Welche Aussage zu „Marktkapitalisierung“ stimmt am besten?",
+            "points": 200,
+            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "distractors": [
+              {
+                "text": "Es ersetzt jede weitere Prüfung.",
+                "closeness": 3
+              },
+              {
+                "text": "Es garantiert schnelle Gewinne.",
+                "closeness": 3
+              },
+              {
+                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "closeness": 2
+              }
+            ],
+            "displayedDistractors": 3,
+            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+          }
+        ],
+        "calculationTemplates": [
+          {
+            "id": "tmpl_marktkapitalisierung",
+            "level": "apply",
+            "points": 150,
+            "questionTemplate": "Ein Unternehmen hat {anzahl} Aktien. Eine Aktie kostet {kurs} Euro. Wie hoch ist die Marktkapitalisierung?",
+            "parameters": {
+              "anzahl": {
+                "min": 100,
+                "max": 1000000
+              },
+              "kurs": {
+                "min": 1,
+                "max": 500
+              }
+            },
+            "solutionFormula": "anzahl * kurs",
+            "distractorFormulas": [
+              "anzahl + kurs",
+              "anzahl - kurs",
+              "kurs"
+            ],
+            "explanationTemplate": "Marktkapitalisierung = Anzahl der Aktien mal Kurs.",
+            "unit": "Euro"
+          }
+        ],
+        "teacherSupport": {
+          "competenceGoal": "Marktkapitalisierung als Börsenwert eines Unternehmens berechnen.",
+          "typicalMisconception": "Der Aktienkurs allein zeigt, wie groß ein Unternehmen ist.",
+          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Der Aktienkurs allein zeigt, wie groß ein Unternehmen ist.“ glaubt?",
+          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Marktkapitalisierung“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+        },
+        "parentSupport": {
+          "conversationPrompt": "Wo begegnet uns „Marktkapitalisierung“ im Alltag?",
+          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Marktkapitalisierung“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+        },
+        "reviewStatus": "editorial_review_recommended"
+      }
+    ]
+  }
+}

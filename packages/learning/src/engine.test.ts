@@ -41,8 +41,8 @@ describe("instanziiereFrage", () => {
 });
 
 describe("instanziiereVorlage – Kollisions-Validierung", () => {
-  it("erzeugt für tmpl_kos_meistern immer 4 eindeutige Optionen mit genau einer korrekten", () => {
-    const v = vorlagenFuer("konzept_kosten", "meistern")[0]!;
+  it("numerische Vorlage: immer volle, eindeutige Optionen mit genau einer korrekten", () => {
+    const v = vorlagenFuer("konzept_geld_auf_konto", "anwenden")[0]!; // start + eingang - ausgabe
     for (let seed = 0; seed < 300; seed++) {
       const inst = instanziiereVorlage(v, makeRng(seed));
       const texte = inst.optionen.map((o) => o.text);
@@ -51,8 +51,19 @@ describe("instanziiereVorlage – Kollisions-Validierung", () => {
       expect(inst.optionen).toHaveLength(1 + v.distraktor_formeln.length);
     }
   });
+  it("kategoriale Vorlage (A/B/gleich): dedupliziert auf ≥2 eindeutige Optionen", () => {
+    const v = vorlagenFuer("konzept_bezahlen_vergleichen", "anwenden")[0]!; // … ? 'A' : 'B'
+    for (let seed = 0; seed < 100; seed++) {
+      const inst = instanziiereVorlage(v, makeRng(seed));
+      const texte = inst.optionen.map((o) => o.text);
+      expect(new Set(texte).size).toBe(texte.length);
+      expect(inst.optionen.filter((o) => o.korrekt)).toHaveLength(1);
+      expect(inst.optionen.length).toBeGreaterThanOrEqual(2);
+      expect(inst.optionen.length).toBeLessThanOrEqual(1 + v.distraktor_formeln.length);
+    }
+  });
   it("füllt Platzhalter in der Frage", () => {
-    const v = vorlagenFuer("konzept_kosten", "anwenden")[0]!;
+    const v = vorlagenFuer("konzept_geld_auf_konto", "anwenden")[0]!;
     const inst = instanziiereVorlage(v, makeRng(3));
     expect(inst.frage).not.toContain("{");
   });

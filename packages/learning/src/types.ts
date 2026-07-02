@@ -34,6 +34,8 @@ export interface Konzept {
   freischalt_level: number;
   erklaerungen: Record<Altersband, LangText>;
   stufen: Stufe[];
+  /** v2-Zielgruppen-Erklärungen (gesetzt, wenn das Konzept aus v2-Content stammt). */
+  explanationsV2?: Record<Audience, string>;
 }
 
 export interface Distraktor {
@@ -186,3 +188,190 @@ export const DEFAULT_TUNING: TuningConfig = {
   leitner_intervalle_tage: [1, 3, 7, 16, 35],
   tages_cap_wiederhol_xp: 300,
 };
+
+// ═════════════════════════════════════════════════════════════════════════════
+// NEUE Bildungsarchitektur (v2) – additiv. Die Legacy-Typen oben bleiben gültig,
+// bis Inhalte blockweise auf das neue Schema migriert sind (siehe migrate.ts).
+//
+// Speicher-/Autorenform ("…Source") behält `LangText` (de/en-i18n).
+// App-facing Form (`LearningModule`/`Question`/`CalculationTemplate`) ist die in
+// der Spec geforderte flache `string`-Variante; `resolveModule()` projiziert sie.
+// ═════════════════════════════════════════════════════════════════════════════
+
+/** Drei Zielgruppen (ersetzt das alte `Altersband`). */
+export type Audience = "learners_10_14" | "young_adults" | "parents_teachers";
+export const AUDIENCES: readonly Audience[] = ["learners_10_14", "young_adults", "parents_teachers"];
+
+export type ModuleType = "understanding" | "calculation" | "decision" | "reflection";
+
+export type Difficulty = "basic" | "intermediate" | "advanced";
+
+/** Englische Stufen-Namen (1:1 zu `Stufe`). */
+export type QuestionLevel = "explain" | "recognize" | "understand" | "apply" | "master";
+
+/** Stufe (DE, Legacy/Engine) ↔ QuestionLevel (EN, neues Schema). */
+export const STUFE_TO_LEVEL: Record<Stufe, QuestionLevel> = {
+  erklaeren: "explain",
+  erkennen: "recognize",
+  verstehen: "understand",
+  anwenden: "apply",
+  meistern: "master",
+};
+export const LEVEL_TO_STUFE: Record<QuestionLevel, Stufe> = {
+  explain: "erklaeren",
+  recognize: "erkennen",
+  understand: "verstehen",
+  apply: "anwenden",
+  master: "meistern",
+};
+
+/**
+ * Zielgruppe → Legacy-Altersband (für die temporäre Auflösung bestehender Inhalte,
+ * solange keine zielgruppenspezifischen v2-Texte vorliegen). `kind_8_10` und
+ * `kind_11_14` kollabieren in `learners_10_14`; `young_adults` nutzt vorerst die
+ * sachlichere `eltern_lehrer`-Erklärung als Platzhalter.
+ */
+export const AUDIENCE_TO_BAND: Record<Audience, Altersband> = {
+  learners_10_14: "kind_11_14",
+  young_adults: "eltern_lehrer",
+  parents_teachers: "eltern_lehrer",
+};
+
+export interface Pedagogy {
+  learningGoal: string;
+  coreIdea: string;
+  everydayScenario: string;
+  misconception: string;
+  transferTask: string;
+  reflectionPrompt: string;
+}
+/** Autorenform mit i18n. */
+export interface PedagogySource {
+  learningGoal: LangText;
+  coreIdea: LangText;
+  everydayScenario: LangText;
+  misconception: LangText;
+  transferTask: LangText;
+  reflectionPrompt: LangText;
+}
+
+export interface TeacherSupport {
+  competenceGoal: string;
+  typicalMisconception: string;
+  discussionPrompt: string;
+  classroomActivity: string;
+}
+export interface TeacherSupportSource {
+  competenceGoal: LangText;
+  typicalMisconception: LangText;
+  discussionPrompt: LangText;
+  classroomActivity: LangText;
+}
+
+export interface ParentSupport {
+  conversationPrompt: string;
+  everydayExercise: string;
+}
+export interface ParentSupportSource {
+  conversationPrompt: LangText;
+  everydayExercise: LangText;
+}
+
+// ── App-facing (resolved, string) ───────────────────────────────────────────
+export interface Question {
+  id: string;
+  level: QuestionLevel;
+  question: string;
+  points: number;
+  correctAnswer: string;
+  distractors: { text: string; closeness: Naehe }[];
+  explanationAfterAnswer: string;
+  /** Wie viele Distraktoren angezeigt werden (Default aus Tuning). */
+  displayedDistractors?: number;
+}
+
+export interface CalculationTemplate {
+  id: string;
+  level: "apply" | "master";
+  points: number;
+  questionTemplate: string;
+  parameters: Record<string, { min: number; max: number }>;
+  solutionFormula: string;
+  distractorFormulas: string[];
+  explanationTemplate: string;
+  unit?: string;
+  /** Superset der Spec: erhält die Rundungssemantik der Engine (Default "integer"). */
+  rounding?: "integer";
+}
+
+export interface LearningModule {
+  id: string;
+  blockId: string;
+  title: string;
+  unlockLevel: number;
+  prerequisites: string[];
+  type: ModuleType;
+  pedagogy: Pedagogy;
+  explanations: Record<Audience, string>;
+  questions: Question[];
+  calculationTemplates?: CalculationTemplate[];
+  glossaryTerms: string[];
+  teacherSupport?: TeacherSupport;
+  parentSupport?: ParentSupport;
+  /** Herkunfts-ID aus dem alten Seed (für Fortschritts-/Content-Migration). */
+  legacyId?: string;
+  difficulty?: Difficulty;
+  /** Zielgruppen, für die das Modul gedacht ist (Default: alle drei). */
+  targetGroups?: Audience[];
+  /** Redaktioneller Status, z. B. "editorial_review_recommended". */
+  reviewStatus?: string;
+}
+
+// ── Speicher-/Autorenform (LangText) ────────────────────────────────────────
+export interface QuestionSource {
+  id: string;
+  level: QuestionLevel;
+  question: LangText;
+  points: number;
+  correctAnswer: LangText;
+  distractors: { text: LangText; closeness: Naehe }[];
+  explanationAfterAnswer: LangText;
+  displayedDistractors?: number;
+}
+
+export interface CalculationTemplateSource {
+  id: string;
+  level: "apply" | "master";
+  points: number;
+  questionTemplate: LangText;
+  parameters: Record<string, { min: number; max: number }>;
+  solutionFormula: string;
+  distractorFormulas: string[];
+  explanationTemplate: LangText;
+  unit?: string;
+  rounding?: "integer";
+}
+
+export interface LearningModuleSource {
+  id: string;
+  blockId: string;
+  title: LangText;
+  unlockLevel: number;
+  prerequisites: string[];
+  type: ModuleType;
+  pedagogy: PedagogySource;
+  explanations: Record<Audience, LangText>;
+  questions: QuestionSource[];
+  calculationTemplates?: CalculationTemplateSource[];
+  glossaryTerms: string[];
+  teacherSupport?: TeacherSupportSource;
+  parentSupport?: ParentSupportSource;
+  legacyId?: string;
+  difficulty?: Difficulty;
+  targetGroups?: Audience[];
+  reviewStatus?: string;
+  /** Migrations-Marker: true → aus Legacy-Inhalten erzeugt, v2-Felder sind Platzhalter. */
+  _legacy?: boolean;
+  /** Felder, die noch redaktionell befüllt werden müssen (von migrate.ts gesetzt). */
+  _needsContent?: string[];
+}

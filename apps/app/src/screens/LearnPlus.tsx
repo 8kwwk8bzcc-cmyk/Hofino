@@ -11,7 +11,9 @@ import {
   naechsterLeitner,
   wissenslevel,
   bewerteAuszeichnungen,
+  erklaerungFuer,
   STUFEN,
+  type Audience,
   type FrageInstanz,
   type Konzept,
   type SRZustand,
@@ -41,7 +43,7 @@ type Phase =
   | "wdh"
   | "wdh_feedback"
   | "fertig";
-const ALTERSBAND = "kind_11_14" as const; // MVP-Default; später aus dem Profil
+const AUDIENCE: Audience = "learners_10_14"; // MVP-Default; später aus dem Profil (10–14 / young_adults / parents_teachers)
 const STUFE_KEY: Record<Stufe, string> = {
   erklaeren: "learn.stufeErklaeren",
   erkennen: "learn.stufeErkennen",
@@ -376,7 +378,8 @@ export function LearnPlus() {
         <Card>
           <Muted>{t("learn.todayLearned")}</Muted>
           <Body>{t("learn.todayCounts", { neu: tages.neu, wieder: tages.wieder })}</Body>
-          <ProgressBar value={tages.neu / 10} />
+          {/* Neue Lektionen sind unbegrenzt; nur das Wiederholungs-Budget hat ein Tageslimit. */}
+          <ProgressBar value={tages.wieder / 10} />
         </Card>
         <Card>
           <H2>{t("learn.lessonTitle")}</H2>
@@ -440,7 +443,7 @@ export function LearnPlus() {
         <Button title={t("discover.back")} variant="ghost" onPress={() => setPhase("liste")} testID="lp-back" />
         <H1>{konzept.titel.de}</H1>
         <Card>
-          <Body>{konzept.erklaerungen[ALTERSBAND].de}</Body>
+          <Body>{erklaerungFuer(konzept, AUDIENCE)}</Body>
         </Card>
         <Button title={t("learn.understood")} onPress={starteStufen} testID="lp-start" />
       </ScrollView>
@@ -521,7 +524,7 @@ export function LearnPlus() {
         />
         {zeigeErklaerung && (
           <Card>
-            <Body>{konzept.erklaerungen[ALTERSBAND].de}</Body>
+            <Body>{erklaerungFuer(konzept, AUDIENCE)}</Body>
           </Card>
         )}
       </ScrollView>
