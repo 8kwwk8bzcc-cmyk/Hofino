@@ -378,7 +378,8 @@ export function LearnPlus() {
         <Card>
           <Muted>{t("learn.todayLearned")}</Muted>
           <Body>{t("learn.todayCounts", { neu: tages.neu, wieder: tages.wieder })}</Body>
-          <ProgressBar value={tages.neu / 10} />
+          {/* Neue Lektionen sind unbegrenzt; nur das Wiederholungs-Budget hat ein Tageslimit. */}
+          <ProgressBar value={tages.wieder / 10} />
         </Card>
         <Card>
           <H2>{t("learn.lessonTitle")}</H2>

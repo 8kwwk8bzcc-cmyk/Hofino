@@ -9,7 +9,7 @@ import {
   type TextStyle,
   type ViewStyle,
 } from "react-native";
-import Svg, { Path } from "react-native-svg";
+import Svg, { Circle, Path } from "react-native-svg";
 import logoSource from "../../assets/logo.png";
 import { font, fonts, radius, shadow, space, type Palette } from "../theme.js";
 import { useColors, useThemedStyles, useTheme } from "../theme/ThemeProvider.js";
@@ -235,27 +235,50 @@ export function AwardBadge({
 }) {
   const c = useColors();
   const s = useThemedStyles(makeStyles);
+  const BRONZE = "#B87333";
+  const SILBER = "#8FA1B0";
   const tier =
     rank === "gold"
       ? { ring: c.gold, tint: c.goldSoft }
       : rank === "silber"
-        ? { ring: "#8FA1B0", tint: "rgba(143,161,176,0.16)" }
+        ? { ring: SILBER, tint: "rgba(143,161,176,0.16)" }
         : rank === "bronze"
-          ? { ring: "#B87333", tint: "rgba(184,115,51,0.15)" }
+          ? { ring: BRONZE, tint: "rgba(184,115,51,0.15)" }
           : { ring: c.faint, tint: c.bg };
+  // Fortschrittsring in der Farbe der NÄCHSTEN Zielstufe (null→Bronze, Bronze→Silber, Silber/Gold→Gold).
+  const nextColor = rank === null ? BRONZE : rank === "bronze" ? SILBER : c.gold;
   const pct = Math.max(0, Math.min(1, progress));
+  // Ring-Geometrie: hüllt die 52px-Medaille eng ein.
+  const size = 60;
+  const r = 27;
+  const circ = 2 * Math.PI * r;
   return (
     <View style={s.awardRow}>
-      <View style={[s.medalDisc, { backgroundColor: tier.tint, borderColor: tier.ring }]}>
-        <IconMedal size={28} color={tier.ring} filled={!!rank} />
+      <View style={{ width: size, height: size, alignItems: "center", justifyContent: "center" }}>
+        <Svg width={size} height={size} style={{ position: "absolute" }}>
+          <Circle cx={size / 2} cy={size / 2} r={r} stroke={c.border} strokeWidth={3.5} fill="none" />
+          {pct > 0 && (
+            <Circle
+              cx={size / 2}
+              cy={size / 2}
+              r={r}
+              stroke={nextColor}
+              strokeWidth={3.5}
+              fill="none"
+              strokeLinecap="round"
+              strokeDasharray={`${circ * pct} ${circ}`}
+              transform={`rotate(-90 ${size / 2} ${size / 2})`}
+            />
+          )}
+        </Svg>
+        <View style={[s.medalDisc, { backgroundColor: tier.tint, borderColor: tier.ring }]}>
+          <IconMedal size={28} color={tier.ring} filled={!!rank} />
+        </View>
       </View>
-      <View style={{ flex: 1, gap: 7 }}>
+      <View style={{ flex: 1, gap: 6 }}>
         <View style={s.awardHead}>
           <Text style={[s.awardTitle, !rank && { color: c.muted }]}>{title}</Text>
           <Text style={[s.awardRank, { color: tier.ring }]}>{rankLabel}</Text>
-        </View>
-        <View style={s.progressTrack}>
-          <View style={[s.progressFill, { width: `${pct * 100}%`, backgroundColor: tier.ring }]} />
         </View>
         <Text style={s.caption}>{progressLabel}</Text>
       </View>
