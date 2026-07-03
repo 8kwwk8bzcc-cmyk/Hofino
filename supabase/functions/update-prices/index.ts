@@ -29,6 +29,12 @@ function isXetraOpen(d = new Date()): boolean {
 }
 
 Deno.serve(async (req) => {
+  // M1: Nur der Cron (bzw. wer das Secret kennt) darf auslösen. Ist CRON_SECRET gesetzt,
+  // muss der Header x-cron-secret passen. Ohne gesetztes Secret (lokal) bleibt es offen.
+  const CRON_SECRET = Deno.env.get("CRON_SECRET");
+  if (CRON_SECRET && req.headers.get("x-cron-secret") !== CRON_SECRET) {
+    return json({ error: "unauthorized" }, 401);
+  }
   // ?force=1 erlaubt manuelles Auslösen außerhalb der Handelszeit (lokaler Test).
   const force = new URL(req.url).searchParams.get("force") === "1";
   if (!force && !isXetraOpen()) {

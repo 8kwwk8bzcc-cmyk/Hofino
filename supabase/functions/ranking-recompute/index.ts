@@ -25,7 +25,12 @@ function ranked(entries: Entry[], kind: string) {
   });
 }
 
-Deno.serve(async () => {
+Deno.serve(async (req) => {
+  // M1: Zugriffsschutz per Shared Secret (nur wer CRON_SECRET kennt, darf neu rechnen).
+  const CRON_SECRET = Deno.env.get("CRON_SECRET");
+  if (CRON_SECRET && req.headers.get("x-cron-secret") !== CRON_SECRET) {
+    return json({ error: "unauthorized" }, 401);
+  }
   const sb = createClient(
     Deno.env.get("SUPABASE_URL")!,
     Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
