@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  ActivityIndicator,
   Image,
   Pressable,
   StyleSheet,
@@ -52,7 +53,7 @@ export function Card({
       </Pressable>
     );
   }
-  return <View style={[s.card, toneStyle, style]}>{children}</View>;
+  return <View testID={testID} style={[s.card, toneStyle, style]}>{children}</View>;
 }
 
 // ── Typografie ───────────────────────────────────────────────────────────
@@ -91,6 +92,7 @@ export function Button({
   onPress,
   variant = "primary",
   disabled,
+  loading,
   testID,
   style,
 }: {
@@ -98,33 +100,40 @@ export function Button({
   onPress: () => void;
   variant?: "primary" | "accent" | "secondary" | "ghost";
   disabled?: boolean;
+  /** Zeigt einen Spinner und sperrt den Button während einer laufenden Aktion. */
+  loading?: boolean;
   testID?: string;
   style?: ViewStyle;
 }) {
   const c = useColors();
   const s = useThemedStyles(makeStyles);
+  const isDisabled = disabled || loading;
   const textColor =
     variant === "secondary" ? c.navy : variant === "ghost" ? c.green : "#FFFFFF";
   return (
     <Pressable
       testID={testID}
       onPress={onPress}
-      disabled={disabled}
+      disabled={isDisabled}
       style={({ pressed }) => [
         s.btn,
         variant === "primary" && s.btnPrimary,
         variant === "accent" && s.btnAccent,
         variant === "secondary" && s.btnSecondary,
         variant === "ghost" && s.btnGhost,
-        disabled && s.btnDisabled,
-        pressed && !disabled && s.btnPressed,
+        isDisabled && s.btnDisabled,
+        pressed && !isDisabled && s.btnPressed,
         style,
       ]}
     >
-      <Text style={[s.btnText, { color: disabled ? "#FFFFFF" : textColor }]}>
-        {title}
-        {variant === "ghost" ? " ›" : ""}
-      </Text>
+      {loading ? (
+        <ActivityIndicator color={disabled ? "#FFFFFF" : textColor} />
+      ) : (
+        <Text style={[s.btnText, { color: isDisabled ? "#FFFFFF" : textColor }]}>
+          {title}
+          {variant === "ghost" ? " ›" : ""}
+        </Text>
+      )}
     </Pressable>
   );
 }

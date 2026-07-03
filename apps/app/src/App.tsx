@@ -30,6 +30,7 @@ import { FamilyLink } from "./screens/family/FamilyLink.js";
 import { TeacherClass } from "./screens/classroom/TeacherClass.js";
 import { TeacherBeamer } from "./screens/classroom/TeacherBeamer.js";
 import { LangToggle, ThemeToggle } from "./ui/components.js";
+import { ToastProvider } from "./ui/Toast.js";
 import {
   IconBeamer,
   IconClass,
@@ -141,7 +142,7 @@ function Main() {
         <WelcomeTutorial
           onFinish={() => {
             completeTutorial();
-            setTab("learn");
+            setTab("start");
           }}
           onSkip={completeTutorial}
         />
@@ -219,7 +220,9 @@ function Root({ fontsLoaded }: { fontsLoaded: boolean }) {
       <StatusBar barStyle={mode === "dark" ? "light-content" : "dark-content"} />
       {fontsLoaded ? (
         <StoreProvider>
-          <Gate />
+          <ToastProvider>
+            <Gate />
+          </ToastProvider>
         </StoreProvider>
       ) : (
         <View style={[styles.center, { backgroundColor: c.bg }]}>

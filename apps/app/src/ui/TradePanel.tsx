@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, Pressable } from "react-native";
 import { formatEuros, ORDER_FEE_CENTS } from "@hofino/core";
 import { useStore, type OrderOutcome } from "../store/store.js";
 import { Button, Muted } from "./components.js";
+import { useToast } from "./Toast.js";
 import { font, fonts, radius, space, type Palette } from "../theme.js";
 import { useThemedStyles } from "../theme/ThemeProvider.js";
 
@@ -27,9 +28,10 @@ export function TradePanel({
   waiveFee?: boolean;
 }) {
   const { prices, buy, sell, state, t } = useStore();
+  const toast = useToast();
   const styles = useThemedStyles(makeStyles);
   const [qtyState, setQty] = useState(1);
-  const [msg, setMsg] = useState<string | null>(null);
+  const [submitting, setSubmitting] = useState(false);
 
   const qty = fixedQuantity ?? qtyState;
   const fee = waiveFee ? 0 : ORDER_FEE_CENTS;
@@ -38,19 +40,23 @@ export function TradePanel({
   const total = mode === "buy" ? gross + fee : gross - fee;
 
   const step = (d: number) => {
-    setMsg(null);
     setQty((q) => Math.max(1, q + d));
   };
 
   const submit = async () => {
-    setMsg(null);
-    const r: OrderOutcome = mode === "buy" ? await buy(instrumentId, qty, waiveFee) : await sell(instrumentId, qty);
-    if (r.ok) {
-      setMsg(t(mode === "buy" ? "trade.bought" : "trade.sold", { qty }));
-      setQty(1);
-      onSuccess?.();
-    } else {
-      setMsg(t(REASON_KEYS[r.reason] ?? "trade.errGeneric"));
+    if (submitting) return;
+    setSubmitting(true);
+    try {
+      const r: OrderOutcome = mode === "buy" ? await buy(instrumentId, qty, waiveFee) : await sell(instrumentId, qty);
+      if (r.ok) {
+        toast.show(t(mode === "buy" ? "trade.bought" : "trade.sold", { qty }), "success");
+        setQty(1);
+        onSuccess?.();
+      } else {
+        toast.show(t(REASON_KEYS[r.reason] ?? "trade.errGeneric"), "error");
+      }
+    } finally {
+      setSubmitting(false);
     }
   };
 
@@ -104,9 +110,9 @@ export function TradePanel({
         testID={`${mode}-submit`}
         title={t(mode === "buy" ? "trade.buy" : "trade.sell")}
         onPress={submit}
+        loading={submitting}
         variant={mode === "buy" ? "primary" : "secondary"}
       />
-      {msg && <Text style={styles.msg}>{msg}</Text>}
       <Muted>{t("trade.avail", { cash: formatEuros(state.portfolio.cashCents) })}</Muted>
     </View>
   );
@@ -136,5 +142,4 @@ const makeStyles = (c: Palette) =>
     val: { fontSize: font.body, color: c.text, fontWeight: "600", fontFamily: fonts.display },
     totalLabel: { fontSize: font.body, fontWeight: "700", color: c.text, fontFamily: fonts.bodyBold },
     total: { fontSize: font.h3, fontWeight: "800", color: c.text, fontFamily: fonts.display },
-    msg: { fontSize: font.small, color: c.navy, fontWeight: "600", fontFamily: fonts.body },
   });

@@ -79,7 +79,7 @@ function baueInstanzBeliebig(konzept: Konzept, rng: () => number): FrageInstanz 
 }
 
 export function LearnPlus() {
-  const { t, state, instrumentById, fetchMyAssignments, fetchMyChallenges, fetchClassXp, fetchMyLesson, saveLesson } = useStore();
+  const { t, state, instrumentById, fetchMyAssignments, fetchMyLockedBlocks, fetchMyChallenges, fetchClassXp, fetchMyLesson, saveLesson } = useStore();
   const c = useColors();
   const styles = useThemedStyles(makeStyles);
   const konzepte = alleKonzepte();
@@ -99,6 +99,7 @@ export function LearnPlus() {
   const [letzteXp, setLetzteXp] = useState(0);
   const [lernkapital, setLernkapital] = useState(0);
   const [zugewiesen, setZugewiesen] = useState<Set<string>>(new Set());
+  const [gesperrteBloecke, setGesperrteBloecke] = useState<Set<string>>(new Set());
   const [challenges, setChallenges] = useState<ClassChallenge[]>([]);
   const [gemeisterteIds, setGemeisterteIds] = useState<Set<string>>(new Set());
   const [classXpSum, setClassXpSum] = useState(0);
@@ -157,9 +158,10 @@ export function LearnPlus() {
     setGemeisterteIds(new Set(gemeistert.map((r) => r.konzept_id as string)));
     setClassXpSum(await fetchClassXp());
     setZugewiesen(new Set(await fetchMyAssignments()));
+    setGesperrteBloecke(await fetchMyLockedBlocks());
     setChallenges(await fetchMyChallenges());
     setLesson(await fetchMyLesson());
-  }, [fetchMyAssignments, fetchMyChallenges, fetchClassXp, fetchMyLesson]);
+  }, [fetchMyAssignments, fetchMyLockedBlocks, fetchMyChallenges, fetchClassXp, fetchMyLesson]);
 
   const speichereLektion = async () => {
     setLessonMsg(null);
@@ -409,10 +411,29 @@ export function LearnPlus() {
             />
           </Card>
         )}
+        {/* Curriculum-Gating: gesperrte Blöcke pausieren nur die NEUE Erstbearbeitung.
+            Bereits begonnene Konzepte (SR-Zustand vorhanden) bleiben für Wiederholung offen. */}
         {[...konzepte]
-          .sort((a, b) => Number(zugewiesen.has(b.id)) - Number(zugewiesen.has(a.id)))
+          .sort((a, b) => {
+            const la = gesperrteBloecke.has(a.themenblock_id) && !srMap[a.id] ? 1 : 0;
+            const lb = gesperrteBloecke.has(b.themenblock_id) && !srMap[b.id] ? 1 : 0;
+            if (la !== lb) return la - lb; // gesperrte ans Ende
+            return Number(zugewiesen.has(b.id)) - Number(zugewiesen.has(a.id));
+          })
           .map((k) => {
             const sr = srMap[k.id];
+            const gesperrt = gesperrteBloecke.has(k.themenblock_id) && !sr;
+            if (gesperrt) {
+              return (
+                <Card key={k.id} testID={`konzept-${k.id}`} style={styles.lockedCard}>
+                  <View style={styles.row}>
+                    <H2 style={styles.lockedTitle}>{k.titel.de}</H2>
+                    <Pill label={t("learn.notYetAvailable")} tone="locked" />
+                  </View>
+                  <Muted>{t("learn.notYetAvailableHint")}</Muted>
+                </Card>
+              );
+            }
             return (
               <Card
                 key={k.id}
@@ -573,6 +594,8 @@ const makeStyles = (c: Palette) =>
       backgroundColor: c.surface,
     },
     pillRow: { flexDirection: "row", gap: space.xs, alignItems: "center", flexShrink: 0 },
+    lockedCard: { opacity: 0.6, backgroundColor: c.bg },
+    lockedTitle: { color: c.muted },
     option: {
       padding: space.md,
       borderRadius: radius.md,

@@ -5,10 +5,11 @@ import { COMPANY_PROFILES, ETF_PROFILES } from "@hofino/content";
 import { useStore } from "../store/store.js";
 import { Body, BodyL, Button, Card, H1, H2, InstrumentAvatar, Input, Muted, Pill, StepProgress } from "../ui/components.js";
 import { TradePanel } from "../ui/TradePanel.js";
+import { IconDepot, IconLeague, IconLearn, IconStart, IconValues, type IconProps } from "../ui/icons.js";
 import { font, fonts, radius, space, type Palette } from "../theme.js";
-import { useThemedStyles } from "../theme/ThemeProvider.js";
+import { useColors, useThemedStyles } from "../theme/ThemeProvider.js";
 
-type Step = "welcome" | "pick" | "buy" | "learn";
+type Step = "welcome" | "pick" | "buy" | "tour";
 
 // Kurze Frage/Antwort-Zeile für die Firmen-/ETF-Erklärung im Kauf-Schritt.
 function Field({ q, a }: { q: string; a: string }) {
@@ -52,8 +53,18 @@ const CATEGORIES: { key: string; labelKey: string; match: (i: Instrument) => boo
   },
 ];
 
+// Die fünf Menüs der Hauptnavigation + je eine kurze Erklärung, was man dort tut.
+const MENUS: { Icon: (p: IconProps) => React.JSX.Element; labelKey: string; descKey: string }[] = [
+  { Icon: IconStart, labelKey: "tab.start", descKey: "tutorial.menuStart" },
+  { Icon: IconLearn, labelKey: "tab.learn", descKey: "tutorial.menuLearn" },
+  { Icon: IconDepot, labelKey: "tab.depot", descKey: "tutorial.menuDepot" },
+  { Icon: IconValues, labelKey: "tab.values", descKey: "tutorial.menuValues" },
+  { Icon: IconLeague, labelKey: "tab.league", descKey: "tutorial.menuLeague" },
+];
+
 export function WelcomeTutorial({ onFinish, onSkip }: { onFinish: () => void; onSkip: () => void }) {
-  const { instruments, prices, instrumentById, t } = useStore();
+  const { instruments, prices, instrumentById, state, t } = useStore();
+  const c = useColors();
   const styles = useThemedStyles(makeStyles);
   const [step, setStep] = useState<Step>("welcome");
   const [query, setQuery] = useState("");
@@ -76,6 +87,7 @@ export function WelcomeTutorial({ onFinish, onSkip }: { onFinish: () => void; on
   }, [stocks, query, category]);
 
   const stepNum = step === "welcome" ? 1 : step === "pick" ? 2 : step === "buy" ? 3 : 4;
+  const isAdult = state.role === "adult";
   const chosenInst = chosen ? instrumentById.get(chosen) : undefined;
   const chosenCompany = chosenInst ? COMPANY_PROFILES.find((p) => p.ticker === chosenInst.ticker) : undefined;
   const chosenEtf = chosenInst ? ETF_PROFILES.find((p) => p.ticker === chosenInst.ticker) : undefined;
@@ -202,7 +214,7 @@ export function WelcomeTutorial({ onFinish, onSkip }: { onFinish: () => void; on
                 mode="buy"
                 fixedQuantity={1}
                 waiveFee
-                onSuccess={() => setStep("learn")}
+                onSuccess={() => setStep("tour")}
               />
               <Button
                 title={t("tutorial.buyAnother")}
@@ -214,11 +226,26 @@ export function WelcomeTutorial({ onFinish, onSkip }: { onFinish: () => void; on
           </>
         )}
 
-        {step === "learn" && (
+        {step === "tour" && (
           <Card>
-            <H1>{t("tutorial.learnTitle")}</H1>
-            <BodyL>{t("tutorial.learnBody")}</BodyL>
-            <Button title={t("tutorial.learnGo")} onPress={onFinish} testID="tutorial-finish" />
+            <H1>{t("tutorial.tourTitle")}</H1>
+            <BodyL>{t("tutorial.tourBody")}</BodyL>
+            <View style={styles.menuList}>
+              {MENUS.map((m) => (
+                <View key={m.descKey} style={styles.menuRow}>
+                  <View style={styles.menuIcon}>
+                    <m.Icon size={22} color={c.green} filled />
+                  </View>
+                  <View style={styles.menuText}>
+                    <Text style={styles.menuName}>
+                      {t(m.labelKey === "tab.start" && isAdult ? "tab.overview" : m.labelKey)}
+                    </Text>
+                    <Body>{t(m.descKey)}</Body>
+                  </View>
+                </View>
+              ))}
+            </View>
+            <Button title={t("tutorial.tourGo")} onPress={onFinish} testID="tutorial-finish" />
           </Card>
         )}
       </ScrollView>
@@ -234,6 +261,18 @@ const makeStyles = (c: Palette) =>
     skip: { fontSize: font.body, color: c.muted, fontFamily: fonts.body },
     profile: { gap: space.sm, marginTop: space.xs },
     fieldQ: { fontSize: font.small, fontFamily: fonts.bodySemi, color: c.muted },
+    menuList: { gap: space.md, marginTop: space.xs, marginBottom: space.sm },
+    menuRow: { flexDirection: "row", alignItems: "flex-start", gap: space.md },
+    menuIcon: {
+      width: 40,
+      height: 40,
+      borderRadius: radius.pill,
+      backgroundColor: c.mint,
+      alignItems: "center",
+      justifyContent: "center",
+    },
+    menuText: { flex: 1, gap: 2 },
+    menuName: { fontSize: font.body, fontFamily: fonts.bodySemi, color: c.text },
     chips: { flexDirection: "row", flexWrap: "wrap", gap: space.sm, marginTop: space.xs },
     chip: {
       paddingVertical: space.sm,

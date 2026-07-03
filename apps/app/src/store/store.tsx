@@ -181,10 +181,6 @@ function plotKey(userId: string) {
   return `hofino:plot:${userId}`;
 }
 
-function tutorialKey(userId: string) {
-  return `hofino:tutorial:${userId}`;
-}
-
 export type OrderOutcome = { ok: true } | { ok: false; reason: OrderError | "error" };
 export type AuthOutcome = { ok: true } | { ok: false; message: string };
 
@@ -238,6 +234,10 @@ interface StoreApi {
   assignKonzept: (classId: string, konzeptId: string) => Promise<void>;
   unassignKonzept: (classId: string, konzeptId: string) => Promise<void>;
   fetchMyAssignments: () => Promise<string[]>;
+  fetchCurriculum: (classId: string) => Promise<Record<string, "freigegeben" | "gesperrt">>;
+  setBlockRelease: (classId: string, themenblockId: string, released: boolean) => Promise<void>;
+  setBlocksRelease: (classId: string, entries: { themenblockId: string; released: boolean }[]) => Promise<void>;
+  fetchMyLockedBlocks: () => Promise<Set<string>>;
   fetchClassChallenges: (classId: string) => Promise<ClassChallenge[]>;
   createChallenge: (classId: string, metric: ChallengeMetric, target: number, title: string, ref?: string | null, endsAt?: string | null) => Promise<void>;
   deleteChallenge: (id: string) => Promise<void>;
@@ -313,7 +313,7 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
 
     const profileRes = await supabase
       .from("profiles")
-      .select("id, role, display_name")
+      .select("id, role, display_name, tutorial_done")
       .eq("auth_user_id", user.id)
       .maybeSingle();
 
@@ -361,7 +361,7 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
       role,
       displayName: (profileRes.data.display_name as string) ?? "",
       plot: globalThis.localStorage?.getItem(plotKey(user.id)) ?? "",
-      tutorialDone: globalThis.localStorage?.getItem(tutorialKey(user.id)) === "1",
+      tutorialDone: Boolean(profileRes.data.tutorial_done),
       cashCents: isPlayer ? portfolioRes.data?.cash_cents ?? 0 : 0,
       holdings: isPlayer
         ? (holdingsRes.data ?? []).map((h) => ({
@@ -457,29 +457,38 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   const completeTutorial = useCallback<StoreApi["completeTutorial"]>(() => {
-    const uid = dataRef.current.sessionUserId;
-    if (uid) {
-      try {
-        globalThis.localStorage?.setItem(tutorialKey(uid), "1");
-      } catch {
-        // localStorage nicht verfügbar (z. B. nativ) → nur In-Memory merken.
-      }
-    }
+    // Optimistisch ausblenden und serverseitig dauerhaft merken (überlebt Reload,
+    // Gerätewechsel und native Clients). RLS erlaubt das Schreiben des eigenen Profils.
     setData((d) => ({ ...d, tutorialDone: true }));
+    const profileId = dataRef.current.profileId;
+    if (profileId) {
+      // .then() erzwingt die Ausführung – der Supabase-Builder feuert sonst nicht.
+      void supabase
+        .from("profiles")
+        .update({ tutorial_done: true })
+        .eq("id", profileId)
+        .then(() => {}, () => {});
+    }
   }, []);
 
   const order = useCallback(
     async (instrumentId: string, quantity: number, side: "buy" | "sell", waiveFee = false): Promise<OrderOutcome> => {
-      const { data: res, error } = await supabase.rpc("place_order", {
-        p_instrument: instrumentId,
-        p_side: side,
-        p_qty: quantity,
-        p_waive_fee: waiveFee,
-      });
-      if (error) return { ok: false, reason: "error" };
-      if (!res?.ok) return { ok: false, reason: (res?.reason as OrderError) ?? "error" };
-      await load();
-      return { ok: true };
+      try {
+        const { data: res, error } = await supabase.rpc("place_order", {
+          p_instrument: instrumentId,
+          p_side: side,
+          p_qty: quantity,
+          p_waive_fee: waiveFee,
+        });
+        if (error) return { ok: false, reason: "error" };
+        if (!res?.ok) return { ok: false, reason: (res?.reason as OrderError) ?? "error" };
+        await load();
+        return { ok: true };
+      } catch {
+        // Netzwerk/Backend nicht erreichbar (z. B. „Failed to fetch") → als Fehler
+        // melden statt still zu scheitern, sonst wirkt der Kauf-Button wirkungslos.
+        return { ok: false, reason: "error" };
+      }
     },
     [load]
   );
@@ -655,6 +664,54 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
   const fetchMyAssignments = useCallback<StoreApi["fetchMyAssignments"]>(async () => {
     const { data } = await supabase.from("class_assignments").select("konzept_id");
     return (data ?? []).map((r) => r.konzept_id as string);
+  }, []);
+
+  // Klassen-Curriculum: Lehrkraft steuert je Themenblock (freigegeben/gesperrt).
+  // Standard = offen; nur explizit 'gesperrt' pausiert die neue Erstbearbeitung.
+  const fetchCurriculum = useCallback<StoreApi["fetchCurriculum"]>(async (classId) => {
+    const { data } = await supabase
+      .from("class_curriculum")
+      .select("themenblock_id, status")
+      .eq("class_id", classId);
+    const map: Record<string, "freigegeben" | "gesperrt"> = {};
+    for (const r of data ?? []) map[r.themenblock_id as string] = r.status as "freigegeben" | "gesperrt";
+    return map;
+  }, []);
+
+  const setBlockRelease = useCallback<StoreApi["setBlockRelease"]>(async (classId, themenblockId, released) => {
+    await supabase.from("class_curriculum").upsert(
+      {
+        class_id: classId,
+        themenblock_id: themenblockId,
+        status: released ? "freigegeben" : "gesperrt",
+        gesetzt_am: new Date().toISOString(),
+        gesetzt_von: dataRef.current.profileId,
+      },
+      { onConflict: "class_id,themenblock_id" },
+    );
+  }, []);
+
+  // Mehrere Blöcke in einem Rutsch setzen (für den Voraussetzungs-Schutz: Block +
+  // transitive Voraussetzungen/Abhängige zusammen freigeben bzw. sperren).
+  const setBlocksRelease = useCallback<StoreApi["setBlocksRelease"]>(async (classId, entries) => {
+    if (entries.length === 0) return;
+    const now = new Date().toISOString();
+    await supabase.from("class_curriculum").upsert(
+      entries.map((e) => ({
+        class_id: classId,
+        themenblock_id: e.themenblockId,
+        status: e.released ? "freigegeben" : "gesperrt",
+        gesetzt_am: now,
+        gesetzt_von: dataRef.current.profileId,
+      })),
+      { onConflict: "class_id,themenblock_id" },
+    );
+  }, []);
+
+  // Schüler-Sicht: Menge der aktuell GESPERRTEN Themenblöcke der eigenen Klasse (RLS-gefiltert).
+  const fetchMyLockedBlocks = useCallback<StoreApi["fetchMyLockedBlocks"]>(async () => {
+    const { data } = await supabase.from("class_curriculum").select("themenblock_id, status").eq("status", "gesperrt");
+    return new Set((data ?? []).map((r) => r.themenblock_id as string));
   }, []);
 
   // Klassen-Challenges: messbares Ziel (Konzepte/XP). RLS regelt Lehrer-Schreiben/Mitglied-Lesen.
@@ -919,6 +976,10 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
     assignKonzept,
     unassignKonzept,
     fetchMyAssignments,
+    fetchCurriculum,
+    setBlockRelease,
+    setBlocksRelease,
+    fetchMyLockedBlocks,
     fetchClassChallenges,
     createChallenge,
     deleteChallenge,
