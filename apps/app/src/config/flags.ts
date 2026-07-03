@@ -15,3 +15,8 @@ export const FLAGS = {
 } as const;
 
 export type FeatureFlag = keyof typeof FLAGS;
+
+// Entwickler-Login: ersetzt die normale Anmeldung durch eine Persona-Auswahl zum
+// schnellen Durchtesten aller Rollen/Szenarien. Nur aktiv, wenn EXPO_PUBLIC_DEV_LOGIN=1
+// zur Build-Zeit gesetzt ist. VOR dem echten Launch abschalten (Env-Zeile entfernen).
+export const DEV_LOGIN = process.env.EXPO_PUBLIC_DEV_LOGIN === "1";
