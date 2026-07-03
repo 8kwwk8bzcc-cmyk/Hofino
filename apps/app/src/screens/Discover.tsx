@@ -15,7 +15,7 @@ function Detail({ id, onBack }: { id: string; onBack: () => void }) {
   const styles = useThemedStyles(makeStyles);
   const [buyOpen, setBuyOpen] = useState(false);
   const [history, setHistory] = useState<HistoryPoint[]>([]);
-  const inst = instrumentById.get(id)!;
+  const inst = instrumentById.get(id);
 
   useEffect(() => {
     let alive = true;
@@ -24,6 +24,8 @@ function Detail({ id, onBack }: { id: string; onBack: () => void }) {
       alive = false;
     };
   }, [id, fetchPriceHistory]);
+  // Instrument (noch) nicht geladen → nicht abstürzen, zurück zur Liste.
+  if (!inst) return null;
   const company = COMPANY_PROFILES.find((p) => p.ticker === inst.ticker);
   const etf = ETF_PROFILES.find((p) => p.ticker === inst.ticker);
   const watched = state.watchlist.includes(id);

@@ -20,13 +20,18 @@ export function FamilyLink() {
 
   const reload = useCallback(async () => {
     if (!state.profileId) return;
-    const res = await supabase
-      .from("parent_child_links")
-      .select("child_profile_id, status")
-      .eq("parent_profile_id", state.profileId);
-    setLinks((res.data ?? []).map((r) => ({ childId: r.child_profile_id, status: r.status })));
-    const family = await fetchFamily();
-    setNames(new Map(family.map((c) => [c.profileId, c.displayName])));
+    try {
+      const res = await supabase
+        .from("parent_child_links")
+        .select("child_profile_id, status")
+        .eq("parent_profile_id", state.profileId);
+      setLinks((res.data ?? []).map((r) => ({ childId: r.child_profile_id, status: r.status })));
+      const family = await fetchFamily();
+      setNames(new Map(family.map((c) => [c.profileId, c.displayName])));
+    } catch {
+      // Backend nicht erreichbar → nicht abstürzen; leere Liste zeigen.
+      setLinks([]);
+    }
   }, [state.profileId, fetchFamily]);
 
   useEffect(() => {

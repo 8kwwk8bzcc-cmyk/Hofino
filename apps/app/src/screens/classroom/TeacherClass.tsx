@@ -222,32 +222,41 @@ export function TeacherClass() {
       }
     }
 
+    const prev = locked;
     setLocked(next);
     // Alle geänderten Blöcke (der geklickte + kaskadierte) in einem Rutsch persistieren.
     const changed = [blockId, ...cascade];
-    await setBlocksRelease(
-      cls.id,
-      changed.map((id) => ({ themenblockId: id, released: !next.has(id) })),
-    );
-    if (cascade.length > 0) {
-      toast.show(
-        t(willLock ? "class.cascadeLocked" : "class.cascadeReleased", { n: cascade.length }),
-        "info",
+    try {
+      await setBlocksRelease(
+        cls.id,
+        changed.map((id) => ({ themenblockId: id, released: !next.has(id) })),
       );
+      if (cascade.length > 0) {
+        toast.show(
+          t(willLock ? "class.cascadeLocked" : "class.cascadeReleased", { n: cascade.length }),
+          "info",
+        );
+      }
+    } catch {
+      setLocked(prev); // optimistische Änderung zurücknehmen
+      toast.show(t("class.saveError"), "error");
     }
   };
 
   const toggleAssign = async (konzeptId: string) => {
     if (!cls) return;
+    const prev = assigned;
     const next = new Set(assigned);
-    if (next.has(konzeptId)) {
-      next.delete(konzeptId);
-      setAssigned(next);
-      await unassignKonzept(cls.id, konzeptId);
-    } else {
-      next.add(konzeptId);
-      setAssigned(next);
-      await assignKonzept(cls.id, konzeptId);
+    const wasAssigned = next.has(konzeptId);
+    if (wasAssigned) next.delete(konzeptId);
+    else next.add(konzeptId);
+    setAssigned(next);
+    try {
+      if (wasAssigned) await unassignKonzept(cls.id, konzeptId);
+      else await assignKonzept(cls.id, konzeptId);
+    } catch {
+      setAssigned(prev); // optimistische Änderung zurücknehmen
+      toast.show(t("class.saveError"), "error");
     }
   };
 

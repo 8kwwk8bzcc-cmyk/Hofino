@@ -497,12 +497,16 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
     async (instrumentId) => {
       const { profileId, watchlist } = dataRef.current;
       if (!profileId) return;
-      if (watchlist.includes(instrumentId)) {
-        await supabase.from("watchlist").delete().eq("profile_id", profileId).eq("instrument_id", instrumentId);
-      } else {
-        await supabase.from("watchlist").insert({ profile_id: profileId, instrument_id: instrumentId });
+      try {
+        if (watchlist.includes(instrumentId)) {
+          await supabase.from("watchlist").delete().eq("profile_id", profileId).eq("instrument_id", instrumentId);
+        } else {
+          await supabase.from("watchlist").insert({ profile_id: profileId, instrument_id: instrumentId });
+        }
+        await load();
+      } catch {
+        // Netzwerk/Backend nicht erreichbar → nicht abstürzen; Zustand unverändert lassen.
       }
-      await load();
     },
     [load]
   );
@@ -521,8 +525,12 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
 
   const respondToLink = useCallback<StoreApi["respondToLink"]>(
     async (parentProfileId, approve) => {
-      await supabase.rpc("respond_to_parent_link", { p_parent: parentProfileId, p_approve: approve });
-      await load();
+      try {
+        await supabase.rpc("respond_to_parent_link", { p_parent: parentProfileId, p_approve: approve });
+        await load();
+      } catch {
+        // Netzwerk/Backend nicht erreichbar → nicht abstürzen.
+      }
     },
     [load]
   );
@@ -586,20 +594,28 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   const createClass = useCallback<StoreApi["createClass"]>(async (name) => {
-    const { data: res, error } = await supabase.rpc("create_class", { p_name: name });
-    if (error) return { ok: false, message: error.message };
-    if (!res?.ok) return { ok: false, message: res?.reason ?? t("store.genericError") };
-    return { ok: true, code: res.class_code as string };
+    try {
+      const { data: res, error } = await supabase.rpc("create_class", { p_name: name });
+      if (error) return { ok: false, message: error.message };
+      if (!res?.ok) return { ok: false, message: res?.reason ?? t("store.genericError") };
+      return { ok: true, code: res.class_code as string };
+    } catch {
+      return { ok: false, message: t("store.genericError") };
+    }
   }, [t]);
 
   const joinClass = useCallback<StoreApi["joinClass"]>(
     async (code) => {
-      const { data: res, error } = await supabase.rpc("join_class", { p_code: code });
-      if (error) return { ok: false, message: error.message };
-      if (!res?.ok)
-        return { ok: false, message: res?.reason === "not_found" ? t("store.codeNotFound") : t("store.genericError") };
-      await load();
-      return { ok: true };
+      try {
+        const { data: res, error } = await supabase.rpc("join_class", { p_code: code });
+        if (error) return { ok: false, message: error.message };
+        if (!res?.ok)
+          return { ok: false, message: res?.reason === "not_found" ? t("store.codeNotFound") : t("store.genericError") };
+        await load();
+        return { ok: true };
+      } catch {
+        return { ok: false, message: t("store.genericError") };
+      }
     },
     [load, t]
   );
@@ -743,21 +759,29 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   const createChallenge = useCallback<StoreApi["createChallenge"]>(async (classId, metric, target, title, ref, endsAt) => {
-    await supabase.from("challenges").insert({
-      scope: "class",
-      class_id: classId,
-      title,
-      goal_metric: metric,
-      goal_target: target,
-      goal_ref: ref ?? null,
-      starts_at: new Date().toISOString(),
-      ends_at: endsAt ?? null,
-      created_by: dataRef.current.profileId,
-    });
+    try {
+      await supabase.from("challenges").insert({
+        scope: "class",
+        class_id: classId,
+        title,
+        goal_metric: metric,
+        goal_target: target,
+        goal_ref: ref ?? null,
+        starts_at: new Date().toISOString(),
+        ends_at: endsAt ?? null,
+        created_by: dataRef.current.profileId,
+      });
+    } catch {
+      // Netzwerk/Backend nicht erreichbar → nicht abstürzen.
+    }
   }, []);
 
   const deleteChallenge = useCallback<StoreApi["deleteChallenge"]>(async (id) => {
-    await supabase.from("challenges").delete().eq("id", id);
+    try {
+      await supabase.from("challenges").delete().eq("id", id);
+    } catch {
+      // Netzwerk/Backend nicht erreichbar → nicht abstürzen.
+    }
   }, []);
 
   // Schüler: Challenges der eigenen Klasse (RLS liefert nur die eigene Klasse).
@@ -815,7 +839,11 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   const markMarketViewed = useCallback<StoreApi["markMarketViewed"]>(async () => {
-    await supabase.rpc("tagesplan_markt_gesehen");
+    try {
+      await supabase.rpc("tagesplan_markt_gesehen");
+    } catch {
+      // Netzwerk/Backend nicht erreichbar → nicht abstürzen.
+    }
   }, []);
 
   const submitDecision = useCallback<StoreApi["submitDecision"]>(async (action, quantity, reason, reasonText) => {

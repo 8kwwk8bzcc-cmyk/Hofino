@@ -31,6 +31,7 @@ import {
   type ChallengeStudentStats,
 } from "../challengeMetrics.js";
 import { AwardBadge, Body, Button, Card, H1, H2, Muted, Pill, ProgressBar } from "../ui/components.js";
+import { useToast } from "../ui/Toast.js";
 import { font, fonts, radius, space, type Palette } from "../theme.js";
 import { useColors, useThemedStyles } from "../theme/ThemeProvider.js";
 
@@ -80,6 +81,7 @@ function baueInstanzBeliebig(konzept: Konzept, rng: () => number): FrageInstanz 
 
 export function LearnPlus() {
   const { t, state, instrumentById, fetchMyAssignments, fetchMyLockedBlocks, fetchMyChallenges, fetchClassXp, fetchMyLesson, saveLesson } = useStore();
+  const toast = useToast();
   const c = useColors();
   const styles = useThemedStyles(makeStyles);
   const konzepte = alleKonzepte();
@@ -133,34 +135,50 @@ export function LearnPlus() {
     return sr?.naechste_faelligkeit && sr.naechste_faelligkeit <= heute;
   });
 
+  // Sortierung memoisieren (gesperrte ans Ende, zugewiesene nach vorn) – nicht bei jedem Render neu.
+  const sortierteKonzepte = useMemo(
+    () =>
+      [...konzepte].sort((a, b) => {
+        const la = gesperrteBloecke.has(a.themenblock_id) && !srMap[a.id] ? 1 : 0;
+        const lb = gesperrteBloecke.has(b.themenblock_id) && !srMap[b.id] ? 1 : 0;
+        if (la !== lb) return la - lb;
+        return Number(zugewiesen.has(b.id)) - Number(zugewiesen.has(a.id));
+      }),
+    [konzepte, gesperrteBloecke, srMap, zugewiesen],
+  );
+
   const ladeStatus = useCallback(async () => {
-    const sr = await supabase.from("lern_sr_zustand").select("konzept_id, leitner_box, richtig_in_folge, gemeistert, naechste_faelligkeit, letzte_antwort_korrekt");
-    const map: Record<string, SRZustand> = {};
-    for (const r of sr.data ?? [])
-      map[r.konzept_id] = {
-        konzept_id: r.konzept_id,
-        leitner_box: r.leitner_box,
-        richtig_in_folge: r.richtig_in_folge,
-        gemeistert: r.gemeistert,
-        naechste_faelligkeit: r.naechste_faelligkeit,
-        letzte_antwort_korrekt: r.letzte_antwort_korrekt,
-      };
-    setSrMap(map);
-    const st = await supabase.rpc("lern_tagesstatus");
-    if (st.data?.ok) setTages({ neu: st.data.neu_genutzt, wieder: st.data.wieder_genutzt, xp: st.data.wiederhol_xp });
-    const status = await supabase.from("lern_status").select("xp_gesamt").maybeSingle();
-    setXpGesamt(Number(status.data?.xp_gesamt ?? 0));
-    const korrekt = await supabase.from("lern_antworten").select("id", { count: "exact", head: true }).eq("korrekt", true);
-    setKorrektGesamt(korrekt.count ?? 0);
-    const fort = await supabase.from("lern_konzept_fortschritt").select("konzept_id, hoechste_abgeschlossene_stufe");
-    const gemeistert = (fort.data ?? []).filter((r) => r.hoechste_abgeschlossene_stufe === "meistern");
-    setAbgeschlossen(gemeistert.length);
-    setGemeisterteIds(new Set(gemeistert.map((r) => r.konzept_id as string)));
-    setClassXpSum(await fetchClassXp());
-    setZugewiesen(new Set(await fetchMyAssignments()));
-    setGesperrteBloecke(await fetchMyLockedBlocks());
-    setChallenges(await fetchMyChallenges());
-    setLesson(await fetchMyLesson());
+    try {
+      const sr = await supabase.from("lern_sr_zustand").select("konzept_id, leitner_box, richtig_in_folge, gemeistert, naechste_faelligkeit, letzte_antwort_korrekt");
+      const map: Record<string, SRZustand> = {};
+      for (const r of sr.data ?? [])
+        map[r.konzept_id] = {
+          konzept_id: r.konzept_id,
+          leitner_box: r.leitner_box,
+          richtig_in_folge: r.richtig_in_folge,
+          gemeistert: r.gemeistert,
+          naechste_faelligkeit: r.naechste_faelligkeit,
+          letzte_antwort_korrekt: r.letzte_antwort_korrekt,
+        };
+      setSrMap(map);
+      const st = await supabase.rpc("lern_tagesstatus");
+      if (st.data?.ok) setTages({ neu: st.data.neu_genutzt, wieder: st.data.wieder_genutzt, xp: st.data.wiederhol_xp });
+      const status = await supabase.from("lern_status").select("xp_gesamt").maybeSingle();
+      setXpGesamt(Number(status.data?.xp_gesamt ?? 0));
+      const korrekt = await supabase.from("lern_antworten").select("id", { count: "exact", head: true }).eq("korrekt", true);
+      setKorrektGesamt(korrekt.count ?? 0);
+      const fort = await supabase.from("lern_konzept_fortschritt").select("konzept_id, hoechste_abgeschlossene_stufe");
+      const gemeistert = (fort.data ?? []).filter((r) => r.hoechste_abgeschlossene_stufe === "meistern");
+      setAbgeschlossen(gemeistert.length);
+      setGemeisterteIds(new Set(gemeistert.map((r) => r.konzept_id as string)));
+      setClassXpSum(await fetchClassXp());
+      setZugewiesen(new Set(await fetchMyAssignments()));
+      setGesperrteBloecke(await fetchMyLockedBlocks());
+      setChallenges(await fetchMyChallenges());
+      setLesson(await fetchMyLesson());
+    } catch {
+      // Backend nicht erreichbar → nicht abstürzen; bereits gesetzte Defaults behalten.
+    }
   }, [fetchMyAssignments, fetchMyLockedBlocks, fetchMyChallenges, fetchClassXp, fetchMyLesson]);
 
   const speichereLektion = async () => {
@@ -186,9 +204,14 @@ export function LearnPlus() {
       }
     }
     // keine weitere Stufe → Konzept abgeschlossen: Lernkapital gewähren
-    const res = await supabase.rpc("lern_konzept_abschliessen", { p_konzept: k.id });
-    setLernkapital(typeof res.data?.lernkapital_cents === "number" ? res.data.lernkapital_cents : 0);
-    setPhase("konzept_fertig");
+    try {
+      const res = await supabase.rpc("lern_konzept_abschliessen", { p_konzept: k.id });
+      setLernkapital(typeof res.data?.lernkapital_cents === "number" ? res.data.lernkapital_cents : 0);
+      setPhase("konzept_fertig");
+    } catch {
+      toast.show(t("learn.actionError"), "error");
+      setPhase("liste");
+    }
   };
 
   const oeffneKonzept = async (k: Konzept) => {
@@ -198,7 +221,12 @@ export function LearnPlus() {
 
   const starteStufen = async () => {
     if (!konzept) return;
-    await supabase.rpc("lern_erklaerung_gesehen", { p_konzept: konzept.id });
+    try {
+      await supabase.rpc("lern_erklaerung_gesehen", { p_konzept: konzept.id });
+    } catch {
+      toast.show(t("learn.actionError"), "error");
+      return;
+    }
     naechsteStufe(konzept, 0);
   };
 
@@ -208,19 +236,26 @@ export function LearnPlus() {
     const korrekt = !!instanz.optionen[idx]?.korrekt;
     const sr = srMap[konzept.id] ?? initLeitner(konzept.id, heuteISO());
     const neu = naechsterLeitner(sr, korrekt, heuteISO());
-    const res = await supabase.rpc("lern_antwort_speichern", {
-      p_konzept: konzept.id,
-      p_stufe: instanz.stufe,
-      p_frage_id: instanz.frage_id ?? "",
-      p_vorlage_id: instanz.vorlage_id ?? "",
-      p_korrekt: korrekt,
-      p_ist_wiederholung: false,
-      p_basis_xp: instanz.wissenspunkte,
-      p_box: neu.leitner_box,
-      p_richtig_in_folge: neu.richtig_in_folge,
-      p_gemeistert: neu.gemeistert,
-      p_faellig: neu.naechste_faelligkeit,
-    });
+    let res;
+    try {
+      res = await supabase.rpc("lern_antwort_speichern", {
+        p_konzept: konzept.id,
+        p_stufe: instanz.stufe,
+        p_frage_id: instanz.frage_id ?? "",
+        p_vorlage_id: instanz.vorlage_id ?? "",
+        p_korrekt: korrekt,
+        p_ist_wiederholung: false,
+        p_basis_xp: instanz.wissenspunkte,
+        p_box: neu.leitner_box,
+        p_richtig_in_folge: neu.richtig_in_folge,
+        p_gemeistert: neu.gemeistert,
+        p_faellig: neu.naechste_faelligkeit,
+      });
+    } catch {
+      toast.show(t("learn.actionError"), "error");
+      setGewaehlt(null);
+      return;
+    }
     if (res.data && res.data.ok === false) {
       setPhase("fertig"); // Tageslimit erreicht
       return;
@@ -264,19 +299,26 @@ export function LearnPlus() {
     const korrekt = !!instanz.optionen[idx]?.korrekt;
     const sr = srMap[konzept.id] ?? initLeitner(konzept.id, heute);
     const neu = naechsterLeitner(sr, korrekt, heute);
-    const res = await supabase.rpc("lern_antwort_speichern", {
-      p_konzept: konzept.id,
-      p_stufe: instanz.stufe,
-      p_frage_id: instanz.frage_id ?? "",
-      p_vorlage_id: instanz.vorlage_id ?? "",
-      p_korrekt: korrekt,
-      p_ist_wiederholung: true,
-      p_basis_xp: instanz.wissenspunkte,
-      p_box: neu.leitner_box,
-      p_richtig_in_folge: neu.richtig_in_folge,
-      p_gemeistert: neu.gemeistert,
-      p_faellig: neu.naechste_faelligkeit,
-    });
+    let res;
+    try {
+      res = await supabase.rpc("lern_antwort_speichern", {
+        p_konzept: konzept.id,
+        p_stufe: instanz.stufe,
+        p_frage_id: instanz.frage_id ?? "",
+        p_vorlage_id: instanz.vorlage_id ?? "",
+        p_korrekt: korrekt,
+        p_ist_wiederholung: true,
+        p_basis_xp: instanz.wissenspunkte,
+        p_box: neu.leitner_box,
+        p_richtig_in_folge: neu.richtig_in_folge,
+        p_gemeistert: neu.gemeistert,
+        p_faellig: neu.naechste_faelligkeit,
+      });
+    } catch {
+      toast.show(t("learn.actionError"), "error");
+      setGewaehlt(null);
+      return;
+    }
     if (res.data && res.data.ok === false) {
       setPhase("fertig");
       return;
@@ -413,13 +455,7 @@ export function LearnPlus() {
         )}
         {/* Curriculum-Gating: gesperrte Blöcke pausieren nur die NEUE Erstbearbeitung.
             Bereits begonnene Konzepte (SR-Zustand vorhanden) bleiben für Wiederholung offen. */}
-        {[...konzepte]
-          .sort((a, b) => {
-            const la = gesperrteBloecke.has(a.themenblock_id) && !srMap[a.id] ? 1 : 0;
-            const lb = gesperrteBloecke.has(b.themenblock_id) && !srMap[b.id] ? 1 : 0;
-            if (la !== lb) return la - lb; // gesperrte ans Ende
-            return Number(zugewiesen.has(b.id)) - Number(zugewiesen.has(a.id));
-          })
+        {sortierteKonzepte
           .map((k) => {
             const sr = srMap[k.id];
             const gesperrt = gesperrteBloecke.has(k.themenblock_id) && !sr;
