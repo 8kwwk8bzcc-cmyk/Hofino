@@ -1,6 +1,7 @@
 // Edge Function (Cron): berechnet die Ranglisten serverseitig (Manipulationsschutz)
 // und aktualisiert die Tabelle `rankings`. Drei Wertungen: Performance, Gesamtkapital, Wissen.
 import { createClient } from "jsr:@supabase/supabase-js@2";
+import { requireCronSecret } from "../_shared/cron-auth.ts";
 
 const START_CAPITAL_CENTS = 500_000;
 
@@ -26,11 +27,9 @@ function ranked(entries: Entry[], kind: string) {
 }
 
 Deno.serve(async (req) => {
-  // M1: Zugriffsschutz per Shared Secret (nur wer CRON_SECRET kennt, darf neu rechnen).
-  const CRON_SECRET = Deno.env.get("CRON_SECRET");
-  if (CRON_SECRET && req.headers.get("x-cron-secret") !== CRON_SECRET) {
-    return json({ error: "unauthorized" }, 401);
-  }
+  // Härtung: Shared Secret ist PFLICHT (fail-closed) + timing-sicherer Vergleich.
+  const authError = requireCronSecret(req);
+  if (authError) return authError;
   const sb = createClient(
     Deno.env.get("SUPABASE_URL")!,
     Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!

@@ -6,6 +6,7 @@
 import { createClient } from "jsr:@supabase/supabase-js@2";
 import { floorToHourMs } from "../_shared/price-model.ts";
 import { createMarketDataSource } from "../_shared/market-source.ts";
+import { requireCronSecret } from "../_shared/cron-auth.ts";
 
 const json = (body: unknown, status = 200) =>
   new Response(JSON.stringify(body), { status, headers: { "Content-Type": "application/json" } });
@@ -29,12 +30,10 @@ function isXetraOpen(d = new Date()): boolean {
 }
 
 Deno.serve(async (req) => {
-  // M1: Nur der Cron (bzw. wer das Secret kennt) darf auslösen. Ist CRON_SECRET gesetzt,
-  // muss der Header x-cron-secret passen. Ohne gesetztes Secret (lokal) bleibt es offen.
-  const CRON_SECRET = Deno.env.get("CRON_SECRET");
-  if (CRON_SECRET && req.headers.get("x-cron-secret") !== CRON_SECRET) {
-    return json({ error: "unauthorized" }, 401);
-  }
+  // Härtung: Shared Secret ist PFLICHT (fail-closed) + timing-sicherer Vergleich.
+  // Lokal: CRON_SECRET in supabase/functions/.env setzen.
+  const authError = requireCronSecret(req);
+  if (authError) return authError;
   // ?force=1 erlaubt manuelles Auslösen außerhalb der Handelszeit (lokaler Test).
   const force = new URL(req.url).searchParams.get("force") === "1";
   if (!force && !isXetraOpen()) {
