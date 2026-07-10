@@ -11,8 +11,8 @@
     "id": "tb_schutz_betrug_finanzverhalten",
     "title": "Schutz, Betrug und Finanzverhalten",
     "unlockLevel": 43,
-    "goal": "Lernende erkennen riskante Finanzversprechen, Werbung, Betrug, Schuldenfallen und entwickeln Schutzregeln.",
-    "pedagogicalIdea": "Dieser Abschlussblock verankert Verbraucher- und Schutzkompetenz: Druck erkennen, Daten schützen, Schulden vermeiden, Regeln formulieren und Finanzentscheidungen prüfen.",
+    "goal": "Lernende erkennen riskante Finanzversprechen, getarnte Werbung, Betrugsmaschen und Schuldenfallen, schützen ihre Daten und entwickeln eigene Regeln und einen Prüfprozess für ruhige, überlegte Finanzentscheidungen.",
+    "pedagogicalIdea": "Dieser Abschlussblock verankert Verbraucher- und Schutzkompetenz nicht über Angst, sondern über Selbstwirksamkeit: Druck und Warnsignale erkennen, hinter Empfehlungen die Interessen sehen, Zugangsdaten schützen, Schulden und Kreditkosten durchschauen sowie mit eigenen Regeln und einer Checkliste Entscheidungen prüfen. Roter Faden bleibt: Hohe Rendite ohne Risiko gibt es nicht.",
     "modules": [
       {
         "id": "konzept_schnelle_gewinne",
@@ -25,11 +25,11 @@
         ],
         "pedagogy": {
           "learningGoal": "Schnelle Gewinnversprechen als Warnsignal erkennen.",
-          "coreIdea": "Je schneller und sicherer ein Gewinn versprochen wird, desto kritischer sollte man werden.",
-          "everydayScenario": "Jemand sagt: Kauf heute, morgen bist du reich.",
-          "misconception": "Wenn eine Chance nur kurz verfügbar ist, muss ich sofort handeln.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Warum schnelle Gewinne gefährlich klingen' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Warum schnelle Gewinne gefährlich klingen' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "coreIdea": "Je schneller und sicherer ein Gewinn versprochen wird, desto kritischer solltest du werden.",
+          "everydayScenario": "In einem Video heißt es: Investiere heute 20 Euro, in einer Woche sind es 200.",
+          "misconception": "Wenn andere angeblich schon schnell reich geworden sind, funktioniert es auch bei mir.",
+          "transferTask": "Sammle ein Versprechen aus einem Video oder einer Nachricht, das dir schnellen Reichtum in Aussicht stellt, und rechne einmal aus, was daraus in einem Jahr werden müsste. Erkläre, warum diese Zahl unrealistisch ist.",
+          "reflectionPrompt": "Wann hattest du zuletzt das Gefühl, sofort zugreifen zu müssen, damit dir kein schneller Gewinn entgeht? Was hat dieses Gefühl in dir ausgelöst?"
         },
         "glossaryTerms": [
           "Schneller Gewinn",
@@ -46,139 +46,139 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Warum schnelle Gewinne gefährlich klingen: Je schneller und sicherer ein Gewinn versprochen wird, desto kritischer sollte man werden. Beispiel: Jemand sagt: Kauf heute, morgen bist du reich. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Wenn eine Chance nur kurz verfügbar ist, muss ich sofort handeln.“.",
-          "young_adults": "Warum schnelle Gewinne gefährlich klingen: Je schneller und sicherer ein Gewinn versprochen wird, desto kritischer sollte man werden. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Jemand sagt: Kauf heute, morgen bist du reich.",
-          "parents_teachers": "Lernziel: Schnelle Gewinnversprechen als Warnsignal erkennen. Didaktischer Fokus: Je schneller und sicherer ein Gewinn versprochen wird, desto kritischer sollte man werden. Typische Fehlvorstellung: „Wenn eine Chance nur kurz verfügbar ist, muss ich sofort handeln.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Stell dir vor, im Spielechat schreibt jemand: „Schick mir 10 Robux, morgen kriegst du 100 zurück!“ Klingt großartig, oder? Genau das ist die Falle. Wenn dir jemand verspricht, dass aus wenig Geld ganz schnell viel wird, ist das fast immer erfunden. Echtes Geld wächst langsam, nicht über Nacht. Je größer und schneller das Versprechen, desto lauter sollte in deinem Kopf ein Warnsignal blinken. Die beste Reaktion ist keine Angst, sondern eine ruhige Frage: Wenn das so einfach wäre, warum macht es dann nicht jeder?",
+          "young_adults": "„100 Prozent in vier Wochen, aber nur heute!“ Solche Sätze findest du oft in Krypto-Gruppen oder unter Finanzvideos. Der Trick ist immer gleich: ein hoher Gewinn, wenig Zeit zum Nachdenken. Zur Einordnung: Der breite Aktienmarkt hat langfristig im Schnitt grob 6 bis 8 Prozent pro Jahr gebracht, nicht pro Woche. Wer dir das Vielfache in Tagen verspricht, verkauft dir ein Risiko, kein Wunder. Nimm dir die Zeit, die dir das Angebot nehmen will: Ein echtes gutes Angebot ist auch morgen noch da.",
+          "parents_teachers": "Schnelle Gewinnversprechen wirken über zwei Hebel: eine unrealistisch hohe Rendite und künstlichen Zeitdruck, der das Nachdenken ausschalten soll. Vermitteln Sie das nicht über Angst, sondern über Selbstwirksamkeit: Kinder und Jugendliche sollen lernen, innezuhalten und eine einfache Prüffrage zu stellen. Eine wirksame Fehlvorstellung, die Sie aufgreifen sollten, ist das Vertrauen in vermeintliche Erfolgsgeschichten anderer („bei anderen hat es doch auch geklappt“) – solche Beispiele sind oft inszeniert oder Einzelfälle, über die Verluste schweigen alle."
         },
         "questions": [
           {
             "id": "q_schnelle_gewinne_001",
             "level": "explain",
-            "question": "Was beschreibt „Warum schnelle Gewinne gefährlich klingen“ am besten?",
+            "question": "Was macht ein Versprechen wie „Investiere heute, morgen bist du reich“ so verdächtig?",
             "points": 100,
-            "correctAnswer": "Je schneller und sicherer ein Gewinn versprochen wird, desto kritischer sollte man werden.",
+            "correctAnswer": "Es verbindet einen sehr hohen Gewinn mit sehr kurzer Zeit – und genau das gibt es seriös praktisch nie.",
             "distractors": [
               {
-                "text": "Wenn eine Chance nur kurz verfügbar ist, muss ich sofort handeln.",
+                "text": "Wenn andere angeblich schon schnell reich wurden, klappt es auch bei mir.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Nichts – ein hoher Gewinn in kurzer Zeit ist bei guten Angeboten normal.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Nur der Betrag ist verdächtig, die kurze Zeit spielt keine Rolle.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Je schneller und sicherer ein Gewinn versprochen wird, desto kritischer sollte man werden."
+            "explanationAfterAnswer": "Genau: Viel Gewinn in wenig Zeit ohne Risiko ist das klassische Lockmuster – seriös wächst Geld langsam."
           },
           {
             "id": "q_schnelle_gewinne_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Warum schnelle Gewinne gefährlich klingen“?",
+            "question": "Welche Situation ist ein typisches Beispiel für ein gefährliches Schnell-reich-Versprechen?",
             "points": 100,
-            "correctAnswer": "Jemand sagt: Kauf heute, morgen bist du reich.",
+            "correctAnswer": "In einer Nachricht heißt es: Schick 10 Euro, morgen bekommst du 100 zurück – aber nur heute.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Du legst jeden Monat 20 Euro zur Seite und siehst nach einem Jahr, wie viel zusammenkam.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Eine Bank nennt dir für ein Tagesgeldkonto einen Zins von 2 Prozent pro Jahr.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Ein Freund erklärt dir geduldig, wie ein Sparplan über viele Jahre funktioniert.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Das erste Beispiel kombiniert riesigen Gewinn, kurze Zeit und Zeitdruck – die drei Zutaten der Falle."
           },
           {
             "id": "q_schnelle_gewinne_003",
             "level": "understand",
-            "question": "Warum ist „Warum schnelle Gewinne gefährlich klingen“ für Finanzbildung wichtig?",
+            "question": "Warum arbeiten solche Angebote fast immer mit Zeitdruck („nur heute“, „letzte Plätze“)?",
             "points": 120,
-            "correctAnswer": "Schnelle Gewinnversprechen als Warnsignal erkennen.",
+            "correctAnswer": "Zeitdruck soll dich am ruhigen Nachdenken und Nachprüfen hindern, bevor du zahlst.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil gute Angebote tatsächlich immer nur wenige Stunden gültig sind.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil der Anbieter dir Zeit sparen und dir einen Gefallen tun will.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil Zeitdruck gesetzlich für jedes Finanzangebot vorgeschrieben ist.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Schnelle Gewinnversprechen als Warnsignal erkennen."
+            "explanationAfterAnswer": "Zeitdruck ist ein Werkzeug: Wer keine Zeit zum Prüfen hat, entscheidet aus dem Bauch heraus – und genau das wollen Betrüger."
           },
           {
             "id": "q_schnelle_gewinne_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Jemand verspricht dir 200 Euro für heute investierte 20 Euro. Wie reagierst du am besten?",
             "points": 150,
-            "correctAnswer": "Innehalten, Informationen prüfen und erst dann passend zum eigenen Ziel handeln.",
+            "correctAnswer": "Innehalten, den Zeitdruck ignorieren und dich fragen: Wenn das so einfach wäre, warum macht es nicht jeder?",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "Sofort die 20 Euro schicken, bevor die Chance weg ist.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "Erst mal die Hälfte schicken, um das Risiko klein zu halten.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "Noch mehr investieren, damit sich der schnelle Gewinn richtig lohnt.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "Die ruhige Prüffrage entlarvt fast jedes Schnell-reich-Versprechen – wäre es echt, bräuchte es keinen Druck."
           },
           {
             "id": "q_schnelle_gewinne_005",
             "level": "master",
-            "question": "Welche Aussage zu „Warum schnelle Gewinne gefährlich klingen“ stimmt am besten?",
+            "question": "Welche Aussage über schnelle Gewinnversprechen ist am treffendsten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Nicht jede Chance ist Betrug, aber je höher und schneller der versprochene Gewinn, desto gründlicher muss man prüfen.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Sobald jemand von Gewinn spricht, handelt es sich sicher um Betrug.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Ein Versprechen mit Zeitdruck ist in Ordnung, solange der Betrag klein ist.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Schnelle Gewinne sind unbedenklich, wenn viele Leute mitmachen.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Meistern heißt abwägen: Chancen gibt es, aber Höhe plus Tempo plus Druck sind ein Warnsignal, kein Kaufsignal."
           }
         ],
         "calculationTemplates": [],
         "teacherSupport": {
           "competenceGoal": "Schnelle Gewinnversprechen als Warnsignal erkennen.",
-          "typicalMisconception": "Wenn eine Chance nur kurz verfügbar ist, muss ich sofort handeln.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Wenn eine Chance nur kurz verfügbar ist, muss ich sofort handeln.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Warum schnelle Gewinne gefährlich klingen“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "typicalMisconception": "Wenn andere angeblich schon schnell reich geworden sind, funktioniert es auch bei mir.",
+          "discussionPrompt": "Warum zeigen solche Angebote immer nur Gewinner und nie diejenigen, die alles verloren haben?",
+          "classroomActivity": "Zeigen Sie drei anonymisierte Werbebotschaften (zwei erfundene Schnell-reich-Versprechen, ein seriöser Sparplan). Die Lernenden markieren jeweils Rendite, Zeitraum und Zeitdruck und ordnen ein, welches Angebot ein Warnsignal enthält."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Warum schnelle Gewinne gefährlich klingen“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Warum schnelle Gewinne gefährlich klingen“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Ist dir in einem Spiel oder Video schon mal jemand begegnet, der dir schnellen Reichtum versprochen hat? Was hat er genau geschrieben?",
+          "everydayExercise": "Suchen Sie gemeinsam ein reales Werbeversprechen und rechnen Sie laut nach, was daraus in einem Jahr würde. Ihr Kind soll erklären, warum die Zahl unrealistisch ist."
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_garantierte_rendite",
@@ -191,11 +191,11 @@
         ],
         "pedagogy": {
           "learningGoal": "Hohe garantierte Rendite ohne Risiko kritisch prüfen.",
-          "coreIdea": "Hohe Rendite und hohe Sicherheit passen selten zusammen.",
-          "everydayScenario": "Ein Angebot verspricht 10 Prozent pro Monat garantiert ohne Risiko.",
-          "misconception": "Wenn das Wort garantiert vorkommt, ist es sicher.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Garantierte Rendite' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Garantierte Rendite' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "coreIdea": "Hohe Rendite und echte Sicherheit schließen sich fast immer aus – wer hohe Gewinne will, trägt Risiko.",
+          "everydayScenario": "Eine Plattform wirbt mit 10 Prozent Gewinn pro Monat, garantiert und angeblich ohne jedes Risiko.",
+          "misconception": "Wenn das Wort garantiert dabeisteht, ist das Geld sicher.",
+          "transferTask": "Vergleiche das Werbeversprechen von 10 Prozent pro Monat mit dem Zins eines normalen Sparkontos. Rechne aus, was aus 100 Euro in einem Jahr würde, wenn 10 Prozent pro Monat stimmten, und erkläre, warum das unmöglich ist.",
+          "reflectionPrompt": "Welche Wörter in einer Werbung geben dir ein Gefühl von Sicherheit, obwohl sie eigentlich nichts garantieren?"
         },
         "glossaryTerms": [
           "Rendite",
@@ -212,139 +212,139 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Garantierte Rendite: Hohe Rendite und hohe Sicherheit passen selten zusammen. Beispiel: Ein Angebot verspricht 10 Prozent pro Monat garantiert ohne Risiko. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Wenn das Wort garantiert vorkommt, ist es sicher.“.",
-          "young_adults": "Garantierte Rendite: Hohe Rendite und hohe Sicherheit passen selten zusammen. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Ein Angebot verspricht 10 Prozent pro Monat garantiert ohne Risiko.",
-          "parents_teachers": "Lernziel: Hohe garantierte Rendite ohne Risiko kritisch prüfen. Didaktischer Fokus: Hohe Rendite und hohe Sicherheit passen selten zusammen. Typische Fehlvorstellung: „Wenn das Wort garantiert vorkommt, ist es sicher.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Rendite ist einfach der Gewinn, den dein Geld macht. „Garantiert“ heißt: jemand verspricht dir, dass der Gewinn ganz sicher kommt. Aber pass auf: Je höher der versprochene Gewinn, desto unwahrscheinlicher ist es, dass er wirklich sicher ist. Wenn eine Werbung sagt „10 Prozent Gewinn jeden Monat, ganz ohne Risiko“, dann ist das zu schön, um wahr zu sein. Echte Anlagen können mal steigen und mal fallen – das gehört dazu. Ein Versprechen von hoher Rendite ohne jedes Risiko ist kein Geschenk, sondern ein Warnzeichen.",
+          "young_adults": "„Garantiert“ ist eines der teuersten Wörter im Marketing. Eine Garantie ist immer nur so viel wert wie derjenige, der sie gibt – frag also zuerst: Wer garantiert, und womit? Zur Einordnung: Sichere Anlagen wie Tagesgeld bringen wenige Prozent pro Jahr, breite Aktienmärkte historisch grob 6 bis 8 Prozent pro Jahr, aber schwankend und ohne Garantie. Wer dir das Mehrfache garantiert und dabei „risikofrei“ verspricht, hat entweder die Regeln des Marktes ausgehebelt oder erzählt schlicht die Unwahrheit. Fast immer ist es Zweiteres.",
+          "parents_teachers": "Der Kern ist der Zusammenhang von Rendite und Risiko: höhere erwartete Rendite geht grundsätzlich mit höherem Risiko einher, echte Garantien senken die Rendite. Machen Sie deutlich, dass „garantiert“ kein Gütesiegel, sondern ein Werbewort ist, und lassen Sie stets fragen, wer die Garantie mit welchem Vermögen absichert. Greifen Sie die verbreitete Fehlvorstellung auf, das Wort „garantiert“ bedeute juristische Sicherheit – bei unregulierten Anbietern ist es oft nur ein Lockmittel ohne Substanz."
         },
         "questions": [
           {
             "id": "q_garantierte_rendite_001",
             "level": "explain",
-            "question": "Was beschreibt „Garantierte Rendite“ am besten?",
+            "question": "Warum passen „hohe Rendite“ und „garantiert ohne Risiko“ meist nicht zusammen?",
             "points": 100,
-            "correctAnswer": "Hohe Rendite und hohe Sicherheit passen selten zusammen.",
+            "correctAnswer": "Wer eine hohe Rendite anstrebt, muss Risiko tragen – echte Sicherheit gibt es nur bei niedriger Rendite.",
             "distractors": [
               {
-                "text": "Wenn das Wort garantiert vorkommt, ist es sicher.",
+                "text": "Sobald das Wort garantiert fällt, ist das Geld tatsächlich sicher.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Hohe Rendite ohne Risiko ist völlig normal, man muss nur den richtigen Anbieter kennen.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Rendite und Risiko haben nichts miteinander zu tun.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Hohe Rendite und hohe Sicherheit passen selten zusammen."
+            "explanationAfterAnswer": "Genau: Rendite und Risiko hängen zusammen. Ein hoher garantierter Gewinn ohne Risiko widerspricht dieser Grundregel."
           },
           {
             "id": "q_garantierte_rendite_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Garantierte Rendite“?",
+            "question": "Welches Angebot solltest du besonders kritisch prüfen?",
             "points": 100,
-            "correctAnswer": "Ein Angebot verspricht 10 Prozent pro Monat garantiert ohne Risiko.",
+            "correctAnswer": "Eine Plattform verspricht 10 Prozent Gewinn pro Monat, garantiert und ohne Risiko.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Eine Bank nennt für Tagesgeld einen Zins von rund 2 Prozent pro Jahr.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Ein breiter Aktienfonds weist auf mögliche Kursschwankungen ausdrücklich hin.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Ein Sparplan zeigt dir, dass der Wert auch mal fallen kann.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "10 Prozent pro Monat wären über 200 Prozent im Jahr – garantiert und risikofrei ist das schlicht unmöglich."
           },
           {
             "id": "q_garantierte_rendite_003",
             "level": "understand",
-            "question": "Warum ist „Garantierte Rendite“ für Finanzbildung wichtig?",
+            "question": "Was ist die erste kluge Frage, wenn dir jemand eine Rendite „garantiert“?",
             "points": 120,
-            "correctAnswer": "Hohe garantierte Rendite ohne Risiko kritisch prüfen.",
+            "correctAnswer": "Wer genau gibt die Garantie – und mit welchem Vermögen steht dieser jemand dafür ein?",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Wie kann ich möglichst schnell möglichst viel einzahlen?",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Egal wer garantiert – Hauptsache das Wort garantiert steht dabei.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Ist die Werbung schön gestaltet und wirkt sie professionell?",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Hohe garantierte Rendite ohne Risiko kritisch prüfen."
+            "explanationAfterAnswer": "Eine Garantie ist nur so stark wie ihr Geber. Unbekannte oder unregulierte Anbieter können praktisch nichts wirklich garantieren."
           },
           {
             "id": "q_garantierte_rendite_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Aus 100 Euro würden bei „10 Prozent pro Monat“ nach zwölf Monaten grob 314 Euro. Was folgt daraus?",
             "points": 150,
-            "correctAnswer": "Den Begriff verstehen, Beispiele erkennen und ihn von ähnlichen Begriffen abgrenzen.",
+            "correctAnswer": "So ein Wachstum ist dauerhaft unmöglich – das Versprechen ist unrealistisch und höchstwahrscheinlich Betrug.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "Super Angebot – ich sollte so viel wie möglich einzahlen.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "Nur eine kleine Summe einzahlen, dann ist das hohe Versprechen sicher.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "Die Zahl ist egal, wichtig ist nur das Wort garantiert.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "Wenn man das Versprechen konkret durchrechnet, entlarvt es sich selbst: Solche Wachstumsraten hält keine echte Anlage durch."
           },
           {
             "id": "q_garantierte_rendite_005",
             "level": "master",
-            "question": "Welche Aussage zu „Garantierte Rendite“ stimmt am besten?",
+            "question": "Welche Aussage zu garantierten Renditen trifft am besten zu?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Kleine Garantien bei niedriger Rendite kann es geben, aber eine hohe garantierte Rendite ohne Risiko ist praktisch immer ein Warnsignal.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Jede Garantie ist wertlos, deshalb ist jedes Finanzprodukt Betrug.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Eine garantierte Rendite ist immer sicher, egal wie hoch sie ist.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Ob eine Garantie hält, hängt nur davon ab, wie hoch der Betrag ist.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Meistern heißt unterscheiden: Es gibt echte, aber niedrige Garantien – die Kombination aus hoch und risikofrei ist der Betrugsmarker."
           }
         ],
         "calculationTemplates": [],
         "teacherSupport": {
           "competenceGoal": "Hohe garantierte Rendite ohne Risiko kritisch prüfen.",
-          "typicalMisconception": "Wenn das Wort garantiert vorkommt, ist es sicher.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Wenn das Wort garantiert vorkommt, ist es sicher.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Garantierte Rendite“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "typicalMisconception": "Wenn das Wort garantiert dabeisteht, ist das Geld sicher.",
+          "discussionPrompt": "Wer könnte eine Rendite von 10 Prozent pro Monat überhaupt seriös garantieren – und woher käme dieses Geld?",
+          "classroomActivity": "Die Lernenden rechnen mit dem Taschenrechner nach, was aus 100 Euro bei 10 Prozent pro Monat nach einem Jahr würde, und vergleichen es mit einem realistischen Sparzins. Anschließend formulieren sie, warum das Werbeversprechen unmöglich ist."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Garantierte Rendite“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Garantierte Rendite“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Was bedeutet das Wort garantiert eigentlich, wenn es in einer Werbung steht – und wer steht dafür gerade?",
+          "everydayExercise": "Rechnen Sie gemeinsam ein hohes Renditeversprechen über ein Jahr hoch und vergleichen Sie es mit dem Zins Ihres Sparkontos. Ihr Kind erklärt, warum der Unterschied verdächtig ist."
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_werbung_vs_information",
@@ -357,11 +357,11 @@
         ],
         "pedagogy": {
           "learningGoal": "Werbung, Meinung und Information unterscheiden.",
-          "coreIdea": "Werbung will beeinflussen; Information soll erklären; Meinung bewertet.",
-          "everydayScenario": "Ein Lernvideo endet mit Rabattcode und Aufforderung zur Anmeldung.",
-          "misconception": "Wenn etwas informativ klingt, ist es automatisch neutral.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Werbung vs. Information' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Werbung vs. Information' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "coreIdea": "Werbung will dich zu etwas bewegen, Information will erklären, Meinung bewertet – gutes Erkennen beginnt mit der Frage nach der Absicht.",
+          "everydayScenario": "Ein Video erklärt scheinbar sachlich eine Trading-App, endet aber mit Rabattcode und Anmeldelink.",
+          "misconception": "Wenn etwas sachlich und informativ klingt, ist es automatisch neutral.",
+          "transferTask": "Suche ein Video oder einen Beitrag, der erst erklärt und dann etwas empfiehlt. Markiere die Stelle, an der aus Information Werbung wird, und benenne, was der Anbieter davon hat.",
+          "reflectionPrompt": "Woran merkst du bei einem Video zuerst, dass jemand dir nicht nur etwas erklären, sondern etwas verkaufen will?"
         },
         "glossaryTerms": [
           "Werbung",
@@ -379,139 +379,139 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Werbung vs. Information: Werbung will beeinflussen; Information soll erklären; Meinung bewertet. Beispiel: Ein Lernvideo endet mit Rabattcode und Aufforderung zur Anmeldung. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Wenn etwas informativ klingt, ist es automatisch neutral.“.",
-          "young_adults": "Werbung vs. Information: Werbung will beeinflussen; Information soll erklären; Meinung bewertet. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Ein Lernvideo endet mit Rabattcode und Aufforderung zur Anmeldung.",
-          "parents_teachers": "Lernziel: Werbung, Meinung und Information unterscheiden. Didaktischer Fokus: Werbung will beeinflussen; Information soll erklären; Meinung bewertet. Typische Fehlvorstellung: „Wenn etwas informativ klingt, ist es automatisch neutral.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Nicht alles, was schlau klingt, will dir nur helfen. Es gibt drei Sorten: Information will dir etwas erklären, eine Meinung sagt, was jemand gut oder schlecht findet, und Werbung will, dass du etwas kaufst oder machst. Das Tückische: Werbung verkleidet sich gern als Information. Ein Video erklärt cool und locker eine App – und am Ende kommt ein Rabattcode und „meld dich hier an“. Frag dich immer: Will mir jemand nur etwas erklären, oder will er, dass ich etwas tue? Wenn es einen Link, einen Code oder ein „jetzt kaufen“ gibt, ist Werbung mit im Spiel.",
+          "young_adults": "Zwischen Information und Werbung liegt heute oft nur ein Affiliate-Link. Ein Finfluencer kann dir Depots erklären und trotzdem Geld dafür bekommen, dass du dich über seinen Link anmeldest – das ist erlaubt, aber es verändert seine Absicht. Achte auf die Marker: Rabattcodes, „Werbung“- oder „Anzeige“-Kennzeichnung, „mein Anbieter“, Empfehlungslinks. Das heißt nicht, dass der Inhalt falsch ist, aber du solltest ihn wie eine Verkaufsempfehlung lesen und eine zweite, unabhängige Quelle suchen, bevor du eine Geldentscheidung triffst.",
+          "parents_teachers": "Ziel ist, die kommunikative Absicht hinter einem Inhalt zu erkennen: informieren, meinen oder bewerben. Besonders relevant ist native Werbung, die als redaktioneller Inhalt getarnt ist, sowie die gesetzliche Kennzeichnungspflicht von Werbung. Greifen Sie die Fehlvorstellung auf, ein sachlicher Ton sei ein Beleg für Neutralität – erklären Sie, dass ein professioneller, ruhiger Stil gerade das häufigste Tarnmittel guter Werbung ist. Verweisen Sie auf Kennzeichnungen wie Anzeige, Werbung oder bezahlte Kooperation."
         },
         "questions": [
           {
             "id": "q_werbung_vs_information_001",
             "level": "explain",
-            "question": "Was beschreibt „Werbung vs. Information“ am besten?",
+            "question": "Was ist der Kernunterschied zwischen Information und Werbung?",
             "points": 100,
-            "correctAnswer": "Werbung will beeinflussen; Information soll erklären; Meinung bewertet.",
+            "correctAnswer": "Information will erklären, Werbung will dich zu einer bestimmten Handlung bewegen.",
             "distractors": [
               {
-                "text": "Wenn etwas informativ klingt, ist es automatisch neutral.",
+                "text": "Wenn etwas sachlich klingt, ist es automatisch neutrale Information.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Werbung garantiert dir automatisch Gewinn und Sicherheit.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Es gibt keinen Unterschied, beides ist dasselbe.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Werbung will beeinflussen; Information soll erklären; Meinung bewertet."
+            "explanationAfterAnswer": "Genau: Es geht um die Absicht. Erklären ist Information, zum Handeln bewegen ist Werbung."
           },
           {
             "id": "q_werbung_vs_information_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Werbung vs. Information“?",
+            "question": "Welches Zeichen verrät, dass ein scheinbar sachliches Video eigentlich Werbung ist?",
             "points": 100,
-            "correctAnswer": "Ein Lernvideo endet mit Rabattcode und Aufforderung zur Anmeldung.",
+            "correctAnswer": "Am Ende gibt es einen Rabattcode und einen Anmeldelink zu genau einem Anbieter.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Das Video nennt Vor- und Nachteile mehrerer Anbieter, ohne einen Link zu setzen.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Der Sprecher weist ausdrücklich auf Risiken und mögliche Verluste hin.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Das Video erklärt einen Begriff und verlinkt eine unabhängige Verbraucherseite.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Rabattcode und Anmeldelink zu einem einzigen Anbieter sind klassische Werbe-Marker – hier soll etwas verkauft werden."
           },
           {
             "id": "q_werbung_vs_information_003",
             "level": "understand",
-            "question": "Warum ist „Werbung vs. Information“ für Finanzbildung wichtig?",
+            "question": "Warum ist ein sachlicher, ruhiger Ton allein kein Beweis für Neutralität?",
             "points": 120,
-            "correctAnswer": "Werbung, Meinung und Information unterscheiden.",
+            "correctAnswer": "Ein professioneller Ton ist ein beliebtes Tarnmittel, weil er Werbung vertrauenswürdig wirken lässt.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil sachliche Inhalte gesetzlich nie Werbung sein dürfen.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil neutrale Inhalte immer langweilig und schlecht gemacht sind.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil der Ton eines Videos für die Bewertung völlig egal ist.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Werbung, Meinung und Information unterscheiden."
+            "explanationAfterAnswer": "Gerade der ruhige Experten-Ton macht Werbung glaubwürdig – deshalb muss man auf Absicht und Kennzeichnung achten, nicht auf den Stil."
           },
           {
             "id": "q_werbung_vs_information_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Ein Finfluencer erklärt dir ein Depot und verlinkt „seinen“ Anbieter mit Code. Wie gehst du damit um?",
             "points": 150,
-            "correctAnswer": "Innehalten, Informationen prüfen und erst dann passend zum eigenen Ziel handeln.",
+            "correctAnswer": "Den Inhalt als Empfehlung mit Eigeninteresse lesen und vor einer Entscheidung eine unabhängige Quelle prüfen.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "Sofort über den Link anmelden, weil die Erklärung überzeugend war.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "Nur auf die genannte Rendite schauen und den Rest ausblenden.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "Kosten, Risiken und Alternativen ignorieren, der Fachmann wird schon recht haben.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "Ein Empfehlungslink macht den Inhalt nicht falsch, aber interessengeleitet – eine zweite unabhängige Quelle schützt dich."
           },
           {
             "id": "q_werbung_vs_information_005",
             "level": "master",
-            "question": "Welche Aussage zu „Werbung vs. Information“ stimmt am besten?",
+            "question": "Welche Aussage über Werbung und Information ist am treffendsten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Werbung kann sachlich richtige Informationen enthalten, ist aber nie neutral, weil sie ein Ziel verfolgt.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Werbung enthält immer nur Lügen, Information dagegen immer nur Wahrheit.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Sobald etwas informativ wirkt, kann es keine Werbung mehr sein.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Ob etwas Werbung ist, hängt allein davon ab, wie teuer das Produkt ist.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Meistern heißt trennen: Auch korrekte Fakten dienen in Werbung einem Verkaufsziel – das macht sie nicht wertlos, aber eben nicht neutral."
           }
         ],
         "calculationTemplates": [],
         "teacherSupport": {
           "competenceGoal": "Werbung, Meinung und Information unterscheiden.",
-          "typicalMisconception": "Wenn etwas informativ klingt, ist es automatisch neutral.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Wenn etwas informativ klingt, ist es automatisch neutral.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Werbung vs. Information“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "typicalMisconception": "Wenn etwas sachlich und informativ klingt, ist es automatisch neutral.",
+          "discussionPrompt": "Wenn ein Video sachlich richtig ist und trotzdem einen Anmeldelink enthält – ist es dann Information oder Werbung?",
+          "classroomActivity": "Die Lernenden analysieren drei kurze Clips oder Beiträge und ordnen jeden Satz einer Kategorie zu: erklärt (Information), bewertet (Meinung) oder fordert zum Handeln auf (Werbung). Danach markieren sie die Werbe-Marker wie Codes, Links oder Kennzeichnungen."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Werbung vs. Information“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Werbung vs. Information“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Wann hattest du zuletzt das Gefühl, ein Video wollte dir etwas verkaufen, obwohl es zuerst nur erklärt hat?",
+          "everydayExercise": "Schauen Sie gemeinsam ein Produktvideo und drücken Sie an der Stelle Stopp, an der aus Erklärung Werbung wird. Ihr Kind erklärt, woran es das gemerkt hat und wer davon profitiert."
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_interessenkonflikte",
@@ -523,11 +523,11 @@
         ],
         "pedagogy": {
           "learningGoal": "Interessenkonflikte bei Empfehlungen erkennen.",
-          "coreIdea": "Nicht jede Empfehlung ist unabhängig; frage, wer profitiert.",
-          "everydayScenario": "Jemand empfiehlt eine App und bekommt Geld, wenn du dich anmeldest.",
-          "misconception": "Wenn jemand nett ist, hat er keinen eigenen Vorteil.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Interessenkonflikte' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Interessenkonflikte' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "coreIdea": "Nicht jede Empfehlung ist unabhängig – frage immer, wer verdient, wenn du sie befolgst.",
+          "everydayScenario": "Ein Streamer empfiehlt begeistert eine App und bekommt Geld für jeden, der sich über seinen Link anmeldet.",
+          "misconception": "Wenn jemand sympathisch und ehrlich wirkt, hat er keinen eigenen Vorteil an seiner Empfehlung.",
+          "transferTask": "Nimm eine Empfehlung, die dir zuletzt begegnet ist (App, Anbieter, Produkt), und finde heraus, ob der Empfehlende dafür bezahlt wird. Beschreibe, wie das seine Empfehlung beeinflussen könnte.",
+          "reflectionPrompt": "Würdest du einer Empfehlung mehr oder weniger vertrauen, wenn du wüsstest, dass der Empfehlende Geld dafür bekommt? Warum?"
         },
         "glossaryTerms": [
           "Interessenkonflikt",
@@ -545,139 +545,139 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Interessenkonflikte: Nicht jede Empfehlung ist unabhängig; frage, wer profitiert. Beispiel: Jemand empfiehlt eine App und bekommt Geld, wenn du dich anmeldest. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Wenn jemand nett ist, hat er keinen eigenen Vorteil.“.",
-          "young_adults": "Interessenkonflikte: Nicht jede Empfehlung ist unabhängig; frage, wer profitiert. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Jemand empfiehlt eine App und bekommt Geld, wenn du dich anmeldest.",
-          "parents_teachers": "Lernziel: Interessenkonflikte bei Empfehlungen erkennen. Didaktischer Fokus: Nicht jede Empfehlung ist unabhängig; frage, wer profitiert. Typische Fehlvorstellung: „Wenn jemand nett ist, hat er keinen eigenen Vorteil.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Ein Interessenkonflikt bedeutet: Jemand rät dir zu etwas, verdient aber selbst daran. Stell dir vor, ein Streamer sagt „Diese App ist mega, meldet euch hier an!“ – und bekommt für jede Anmeldung Geld. Vielleicht ist die App wirklich okay. Aber der Streamer hat einen Grund, sie zu loben, egal wie gut sie ist. Deshalb ist die wichtigste Frage nicht „Ist die Person nett?“, sondern „Wer verdient, wenn ich das mache?“. Nett sein und einen eigenen Vorteil haben schließt sich nämlich nicht aus.",
+          "young_adults": "Interessenkonflikte sind in der Finanzwelt völlig normal – der Punkt ist, sie zu erkennen. Ein Berater, der auf Provision arbeitet, verdient mehr an teuren Produkten; ein Finfluencer verdient an Affiliate-Anmeldungen; eine Bank empfiehlt gern die eigenen Fonds. Nichts davon ist automatisch Betrug, aber es verschiebt die Empfehlung. Frag konkret: Wie wird diese Person bezahlt, und würde sie mir dasselbe raten, wenn sie nichts daran verdient? Unabhängige Quellen wie Verbraucherzentralen oder Stiftung Warentest haben diesen Konflikt nicht.",
+          "parents_teachers": "Ein Interessenkonflikt liegt vor, wenn der Empfehlende ein eigenes finanzielles Interesse am Rat hat, etwa durch Provisionen oder Affiliate-Vergütungen. Wichtig ist die Unterscheidung zwischen Provisionsberatung und Honorarberatung sowie das Bewusstsein, dass Interessenkonflikte offenzulegen sind. Greifen Sie die Fehlvorstellung auf, Sympathie oder ein seriöses Auftreten schlössen Eigeninteresse aus – trainieren Sie stattdessen die Leitfrage nach der Vergütungsstruktur und den Wert unabhängiger Informationsquellen."
         },
         "questions": [
           {
             "id": "q_interessenkonflikte_001",
             "level": "explain",
-            "question": "Was beschreibt „Interessenkonflikte“ am besten?",
+            "question": "Was ist ein Interessenkonflikt bei einer Empfehlung?",
             "points": 100,
-            "correctAnswer": "Nicht jede Empfehlung ist unabhängig; frage, wer profitiert.",
+            "correctAnswer": "Der Empfehlende verdient selbst mit, wenn du seiner Empfehlung folgst.",
             "distractors": [
               {
-                "text": "Wenn jemand nett ist, hat er keinen eigenen Vorteil.",
+                "text": "Wenn jemand sympathisch ist, hat er sicher keinen eigenen Vorteil.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Es bedeutet, dass eine Empfehlung automatisch Gewinn und Sicherheit garantiert.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Es hat mit Geld und Empfehlungen gar nichts zu tun.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Nicht jede Empfehlung ist unabhängig; frage, wer profitiert."
+            "explanationAfterAnswer": "Genau: Ein Interessenkonflikt entsteht, wenn jemand am eigenen Rat mitverdient – das solltest du bei der Bewertung mitdenken."
           },
           {
             "id": "q_interessenkonflikte_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Interessenkonflikte“?",
+            "question": "In welcher Situation liegt am ehesten ein Interessenkonflikt vor?",
             "points": 100,
-            "correctAnswer": "Jemand empfiehlt eine App und bekommt Geld, wenn du dich anmeldest.",
+            "correctAnswer": "Ein Streamer empfiehlt eine App und bekommt Geld für jede Anmeldung über seinen Link.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Eine Verbraucherzentrale vergleicht mehrere Anbieter, ohne von einem bezahlt zu werden.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Ein Angebot ganz ohne Kosten, Risiko oder Bedingungen wird als sicher dargestellt.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Ein Freund erzählt dir von einer App, an der er nichts verdient.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Sobald jemand pro Anmeldung Geld bekommt, hat er ein Eigeninteresse – seine Begeisterung ist dann nicht neutral."
           },
           {
             "id": "q_interessenkonflikte_003",
             "level": "understand",
-            "question": "Warum ist „Interessenkonflikte“ für Finanzbildung wichtig?",
+            "question": "Warum ist „Ist die Person nett?“ die falsche Prüffrage bei Empfehlungen?",
             "points": 120,
-            "correctAnswer": "Interessenkonflikte bei Empfehlungen erkennen.",
+            "correctAnswer": "Weil auch sympathische Menschen einen finanziellen Vorteil an ihrer Empfehlung haben können.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil nette Menschen niemals etwas empfehlen, das ihnen selbst nützt.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil Sympathie beweist, dass eine Empfehlung fachlich richtig ist.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil das Auftreten einer Person für Empfehlungen egal ist.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Interessenkonflikte bei Empfehlungen erkennen."
+            "explanationAfterAnswer": "Sympathie und Eigeninteresse schließen sich nicht aus. Die bessere Frage lautet: Wer verdient, wenn ich das mache?"
           },
           {
             "id": "q_interessenkonflikte_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Ein Berater rät dir zu einem teuren Fonds, für den er eine Provision bekommt. Wie handelst du?",
             "points": 150,
-            "correctAnswer": "Innehalten, Informationen prüfen und erst dann passend zum eigenen Ziel handeln.",
+            "correctAnswer": "Nach der Vergütung fragen und die Empfehlung mit einer unabhängigen Quelle abgleichen.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "Sofort zusagen, weil der Berater überzeugend und freundlich war.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "Nur auf die genannte Rendite schauen und die Kosten ignorieren.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "Kosten, Alternativen und die Bezahlung des Beraters außer Acht lassen.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "Die Frage nach der Bezahlung deckt den Konflikt auf. Eine unabhängige Quelle zeigt dir, ob es günstigere Alternativen gibt."
           },
           {
             "id": "q_interessenkonflikte_005",
             "level": "master",
-            "question": "Welche Aussage zu „Interessenkonflikte“ stimmt am besten?",
+            "question": "Welche Aussage über Interessenkonflikte ist am treffendsten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Ein Interessenkonflikt macht eine Empfehlung nicht automatisch falsch, aber weniger unabhängig – man muss ihn mitdenken.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Jede Empfehlung mit Eigeninteresse ist grundsätzlich Betrug.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Solange die Person offen und freundlich ist, spielt ihr Vorteil keine Rolle.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Ein Interessenkonflikt zählt nur, wenn es um sehr große Beträge geht.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Meistern heißt abwägen: Der Rat kann trotzdem gut sein, aber du bewertest ihn im Wissen um das Eigeninteresse."
           }
         ],
         "calculationTemplates": [],
         "teacherSupport": {
           "competenceGoal": "Interessenkonflikte bei Empfehlungen erkennen.",
-          "typicalMisconception": "Wenn jemand nett ist, hat er keinen eigenen Vorteil.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Wenn jemand nett ist, hat er keinen eigenen Vorteil.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Interessenkonflikte“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "typicalMisconception": "Wenn jemand sympathisch und ehrlich wirkt, hat er keinen eigenen Vorteil an seiner Empfehlung.",
+          "discussionPrompt": "Wann würdet ihr einer Empfehlung mehr trauen: von jemandem, der daran verdient, oder von jemandem, der nichts davon hat? Warum?",
+          "classroomActivity": "Die Lernenden ordnen mehrere Empfehlungskarten (Bankberater mit Provision, Verbraucherzentrale, Finfluencer mit Link, Freund ohne Vorteil) auf einer Skala von unabhängig bis stark interessengeleitet an und begründen die Reihenfolge."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Interessenkonflikte“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Interessenkonflikte“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Wenn jemand im Internet ein Produkt lobt: Wie könntest du herausfinden, ob er dafür bezahlt wird?",
+          "everydayExercise": "Prüfen Sie gemeinsam bei einer aktuellen Online-Empfehlung, ob ein Affiliate-Link oder eine Kooperation angegeben ist. Ihr Kind beschreibt, wie das die Empfehlung beeinflussen könnte."
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_phishing_kontosicherheit",
@@ -690,11 +690,11 @@
         ],
         "pedagogy": {
           "learningGoal": "Phishing erkennen und Zugangsdaten schützen.",
-          "coreIdea": "Zugangsdaten sind wie Schlüssel; man gibt sie nicht weiter.",
-          "everydayScenario": "Eine Nachricht droht mit Kontosperrung und fordert PIN oder TAN über einen Link.",
-          "misconception": "Wenn eine Nachricht wie von der Bank aussieht, ist sie echt.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Phishing und Kontosicherheit' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Phishing und Kontosicherheit' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "coreIdea": "Zugangsdaten wie Passwort, PIN oder TAN sind wie Haustürschlüssel – seriöse Stellen fragen dich nie danach.",
+          "everydayScenario": "Eine SMS warnt vor einer Kontosperrung und drängt dich, über einen Link sofort PIN und TAN einzugeben.",
+          "misconception": "Wenn eine Nachricht das Logo der Bank trägt und echt aussieht, muss sie von der Bank sein.",
+          "transferTask": "Beschreibe drei Warnzeichen, an denen du eine Phishing-Nachricht erkennst, und erkläre, was du stattdessen tust, statt auf den Link zu klicken.",
+          "reflectionPrompt": "Welches Gefühl wollen Phishing-Nachrichten in dir auslösen, damit du unüberlegt handelst – und wie kannst du dem begegnen?"
         },
         "glossaryTerms": [
           "Phishing",
@@ -712,139 +712,139 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Phishing und Kontosicherheit: Zugangsdaten sind wie Schlüssel; man gibt sie nicht weiter. Beispiel: Eine Nachricht droht mit Kontosperrung und fordert PIN oder TAN über einen Link. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Wenn eine Nachricht wie von der Bank aussieht, ist sie echt.“.",
-          "young_adults": "Phishing und Kontosicherheit: Zugangsdaten sind wie Schlüssel; man gibt sie nicht weiter. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Eine Nachricht droht mit Kontosperrung und fordert PIN oder TAN über einen Link.",
-          "parents_teachers": "Lernziel: Phishing erkennen und Zugangsdaten schützen. Didaktischer Fokus: Zugangsdaten sind wie Schlüssel; man gibt sie nicht weiter. Typische Fehlvorstellung: „Wenn eine Nachricht wie von der Bank aussieht, ist sie echt.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Phishing ist wie Angeln – nur dass Betrüger nach deinen Passwörtern angeln. Sie schicken dir eine Nachricht, die aussieht, als käme sie von einer echten Firma, und wollen, dass du auf einen Link klickst und dein Passwort eintippst. Oft machen sie dir Angst („Dein Konto wird gesperrt!“) oder locken mit „Gratis-Skins“. Merk dir eine einfache Regel: Passwörter, PINs und Codes sind wie Haustürschlüssel – die gibt man niemandem, auch nicht, wenn die Nachricht dringend wirkt. Echte Firmen fragen dich nie per Link nach deinem Passwort. Im Zweifel: nicht klicken, Erwachsene fragen.",
+          "young_adults": "Phishing zielt auf deine Zugangsdaten – Passwort, PIN, TAN, Bestätigungscodes. Die Masche arbeitet mit Dringlichkeit und Angst: Kontosperrung, angeblich verdächtige Abbuchung, „bestätige jetzt“. Der Link führt auf eine täuschend echte Fake-Seite. Drei Schutzregeln: Erstens, keine Bank und kein seriöser Dienst fordert PIN oder TAN per Link oder Telefon an. Zweitens, gib Zugangsdaten nur ein, wenn du die Seite selbst über die offizielle App oder Adresse geöffnet hast. Drittens, aktiviere die Zwei-Faktor-Authentifizierung – sie schützt dein Konto selbst dann, wenn ein Passwort abhandenkommt.",
+          "parents_teachers": "Phishing ist der Versuch, über gefälschte Nachrichten an Zugangsdaten zu gelangen, meist verstärkt durch Zeitdruck und Angst (Social Engineering). Zentrale Regeln: seriöse Institute fragen nie per Link, Mail oder Telefon nach PIN oder TAN; Links aus unerwarteten Nachrichten werden nicht angeklickt; Zugänge werden ausschließlich über selbst geöffnete offizielle Wege genutzt; Zwei-Faktor-Authentifizierung wird aktiviert. Greifen Sie die Fehlvorstellung auf, ein echtes Logo oder professionelles Layout belege Echtheit – gerade Absenderadresse und Link-Ziel sind die eigentlichen Prüfpunkte."
         },
         "questions": [
           {
             "id": "q_phishing_kontosicherheit_001",
             "level": "explain",
-            "question": "Was beschreibt „Phishing und Kontosicherheit“ am besten?",
+            "question": "Was ist das Ziel einer Phishing-Nachricht?",
             "points": 100,
-            "correctAnswer": "Zugangsdaten sind wie Schlüssel; man gibt sie nicht weiter.",
+            "correctAnswer": "Sie will dich dazu bringen, deine Zugangsdaten wie Passwort, PIN oder TAN preiszugeben.",
             "distractors": [
               {
-                "text": "Wenn eine Nachricht wie von der Bank aussieht, ist sie echt.",
+                "text": "Wenn eine Nachricht das Bank-Logo trägt, ist sie garantiert echt.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Sie garantiert dir automatisch Gewinn und ein sicheres Konto.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Sie hat mit deinem Konto und deinen Daten nichts zu tun.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Zugangsdaten sind wie Schlüssel; man gibt sie nicht weiter."
+            "explanationAfterAnswer": "Genau: Beim Phishing geht es um deine Zugangsdaten. Wer die hat, kommt an dein Konto."
           },
           {
             "id": "q_phishing_kontosicherheit_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Phishing und Kontosicherheit“?",
+            "question": "Welche Nachricht ist ein typisches Phishing-Warnzeichen?",
             "points": 100,
-            "correctAnswer": "Eine Nachricht droht mit Kontosperrung und fordert PIN oder TAN über einen Link.",
+            "correctAnswer": "Eine SMS droht mit sofortiger Kontosperrung und fordert dich auf, über einen Link PIN und TAN einzugeben.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Deine Bank-App zeigt dir nach dem Login mit deinem Fingerabdruck den Kontostand.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen wird als sicher dargestellt.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Ein Freund schickt dir den offiziellen Link zur Verbraucherzentrale.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Drohung plus Zeitdruck plus Aufforderung, PIN und TAN über einen Link einzugeben – das ist die klassische Phishing-Masche."
           },
           {
             "id": "q_phishing_kontosicherheit_003",
             "level": "understand",
-            "question": "Warum ist „Phishing und Kontosicherheit“ für Finanzbildung wichtig?",
+            "question": "Warum ist ein echtes Logo kein Beweis, dass eine Nachricht von deiner Bank stammt?",
             "points": 120,
-            "correctAnswer": "Phishing erkennen und Zugangsdaten schützen.",
+            "correctAnswer": "Logos lassen sich einfach kopieren – entscheidend sind Absenderadresse und wohin der Link wirklich führt.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil Banken grundsätzlich keine Logos in Nachrichten verwenden.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil ein Logo nur dann echt ist, wenn die Nachricht freundlich klingt.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil das Logo für die Echtheit einer Nachricht völlig egal ist.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Phishing erkennen und Zugangsdaten schützen."
+            "explanationAfterAnswer": "Ein Logo kann jeder einfügen. Prüfe stattdessen den echten Absender und das tatsächliche Link-Ziel."
           },
           {
             "id": "q_phishing_kontosicherheit_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Du bekommst eine E-Mail: „Ungewöhnliche Abbuchung – jetzt hier bestätigen.“ Was tust du?",
             "points": 150,
-            "correctAnswer": "Innehalten, Informationen prüfen und erst dann passend zum eigenen Ziel handeln.",
+            "correctAnswer": "Nicht auf den Link klicken, sondern die offizielle App oder Adresse selbst öffnen und dort nachsehen.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "Sofort auf den Link klicken und deine Daten eingeben, bevor Geld verschwindet.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "Nur die PIN eingeben, die TAN aber weglassen, dann ist es sicher.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "Die Warnung ignorieren und einfach die Bank am Telefonlink der Mail anrufen.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "Nie den Link aus der Nachricht nutzen. Öffne den offiziellen Weg selbst – nur so weißt du, ob wirklich etwas los ist."
           },
           {
             "id": "q_phishing_kontosicherheit_005",
             "level": "master",
-            "question": "Welche Aussage zu „Phishing und Kontosicherheit“ stimmt am besten?",
+            "question": "Welche Aussage zu Kontosicherheit ist am treffendsten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Zusätzlicher Schutz wie die Zwei-Faktor-Authentifizierung hilft, ersetzt aber nicht die Grundregel, PIN und TAN niemals über Links weiterzugeben.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Mit Zwei-Faktor-Authentifizierung darf man Passwort und TAN bedenkenlos überall eingeben.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Solange die Nachricht professionell aussieht, kann man seine Daten gefahrlos eingeben.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Kontosicherheit ist nur bei sehr großen Beträgen wichtig.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Meistern heißt kombinieren: Technik wie 2FA und Verhalten (keine Daten über Links) greifen zusammen – eins allein reicht nicht."
           }
         ],
         "calculationTemplates": [],
         "teacherSupport": {
           "competenceGoal": "Phishing erkennen und Zugangsdaten schützen.",
-          "typicalMisconception": "Wenn eine Nachricht wie von der Bank aussieht, ist sie echt.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Wenn eine Nachricht wie von der Bank aussieht, ist sie echt.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Phishing und Kontosicherheit“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "typicalMisconception": "Wenn eine Nachricht das Logo der Bank trägt und echt aussieht, muss sie von der Bank sein.",
+          "discussionPrompt": "Welche Gefühle wollen Phishing-Nachrichten in uns auslösen, damit wir nicht mehr in Ruhe nachdenken?",
+          "classroomActivity": "Zeigen Sie zwei echte und zwei gefälschte (anonymisierte) Nachrichten. Die Lernenden markieren Warnzeichen wie Absenderadresse, Link-Ziel, Zeitdruck und Datenabfrage und entscheiden begründet, welche Nachricht Phishing ist."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Phishing und Kontosicherheit“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Phishing und Kontosicherheit“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Was würdest du tun, wenn dir eine Nachricht mit dem Logo unserer Bank schreibt, dein Konto werde gleich gesperrt?",
+          "everydayExercise": "Richten Sie gemeinsam die Zwei-Faktor-Authentifizierung für einen wichtigen Zugang ein und besprechen Sie die Regel: PIN und TAN gibt man niemals über einen Link aus einer Nachricht ein."
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_schuldenfallen",
@@ -857,11 +857,11 @@
         ],
         "pedagogy": {
           "learningGoal": "Schuldenfallen durch Raten, Zinsen und fehlenden Überblick verstehen.",
-          "coreIdea": "Kleine Raten können groß werden, wenn sie sich summieren.",
-          "everydayScenario": "Mehrere Abos und Raten ergeben zusammen eine hohe Monatsbelastung.",
-          "misconception": "Wenn die Monatsrate klein ist, ist der Kauf unproblematisch.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Schuldenfallen' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Schuldenfallen' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "coreIdea": "Viele kleine Raten wirken einzeln harmlos, summieren sich aber zu einer Belastung, die dein Budget übersteigt.",
+          "everydayScenario": "Handy in Raten, ein Streaming-Abo, ein Gaming-Abo und ein Fitness-Vertrag ergeben zusammen mehr, als am Monatsende übrig ist.",
+          "misconception": "Wenn die einzelne Monatsrate klein ist, ist der Kauf unproblematisch.",
+          "transferTask": "Liste alle regelmäßigen Zahlungen und Raten auf, die du oder deine Familie kennt, und addiere sie zu einer Monatssumme. Vergleiche diese Summe mit dem verfügbaren Budget und beschreibe, ab wann es eng würde.",
+          "reflectionPrompt": "Warum fühlt sich eine Rate von „nur 9,99 im Monat“ so klein an, obwohl sie über zwei Jahre fast 240 Euro kostet?"
         },
         "glossaryTerms": [
           "Schuldenfalle",
@@ -879,125 +879,125 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Schuldenfallen: Kleine Raten können groß werden, wenn sie sich summieren. Beispiel: Mehrere Abos und Raten ergeben zusammen eine hohe Monatsbelastung. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Wenn die Monatsrate klein ist, ist der Kauf unproblematisch.“.",
-          "young_adults": "Schuldenfallen: Kleine Raten können groß werden, wenn sie sich summieren. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Mehrere Abos und Raten ergeben zusammen eine hohe Monatsbelastung.",
-          "parents_teachers": "Lernziel: Schuldenfallen durch Raten, Zinsen und fehlenden Überblick verstehen. Didaktischer Fokus: Kleine Raten können groß werden, wenn sie sich summieren. Typische Fehlvorstellung: „Wenn die Monatsrate klein ist, ist der Kauf unproblematisch.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Eine Schuldenfalle entsteht, wenn viele kleine Beträge zusammen groß werden. „Nur 5 Euro im Monat“ für ein Spiel klingt nach nichts. Aber wenn du drei oder vier solcher Sachen hast, sind das plötzlich 20 Euro, die jeden Monat weg sind – ob du das Spiel spielst oder nicht. Das Gemeine ist: Jede einzelne Rate wirkt winzig, aber zusammen fressen sie dein Taschengeld auf. Deshalb hilft ein einfacher Trick: Zähl alle regelmäßigen Ausgaben zusammen und schau, was am Monatsende wirklich übrig bleibt. Erst die Summe zeigt die Wahrheit, nicht die einzelne Rate.",
+          "young_adults": "Ratenkäufe und Abos sind bequem und genau deshalb gefährlich: Sie zerlegen große Kosten in scheinbar harmlose Häppchen. „0 Prozent Finanzierung“ verschweigt, dass du dich langfristig bindest; „9,99 im Monat“ verschweigt die Gesamtkosten über die Laufzeit. Die eigentliche Falle ist der fehlende Überblick, wenn sich mehrere Verpflichtungen stapeln – dazu kommen bei Zahlungsverzug Mahngebühren und teure Dispozinsen. Faustregel: Rechne bei jedem Abo die Gesamtkosten über die Laufzeit aus und addiere alle laufenden Raten zu einer einzigen Monatssumme, die dein Budget nicht sprengen darf.",
+          "parents_teachers": "Schuldenfallen entstehen selten durch eine große Ausgabe, sondern durch die Kumulation vieler kleiner Verpflichtungen bei gleichzeitigem Verlust des Überblicks, verschärft durch Zinsen und Mahngebühren. Vermitteln Sie den Blick von der Einzelrate auf die Gesamtbelastung und auf die Gesamtkosten über die Laufzeit. Greifen Sie die Fehlvorstellung auf, eine niedrige Monatsrate bedeute geringe Kosten – zentral sind Laufzeit, Summe aller Verpflichtungen und das Verhältnis zum verfügbaren Budget."
         },
         "questions": [
           {
             "id": "q_schuldenfallen_001",
             "level": "explain",
-            "question": "Was beschreibt „Schuldenfallen“ am besten?",
+            "question": "Wodurch entsteht eine Schuldenfalle typischerweise?",
             "points": 100,
-            "correctAnswer": "Kleine Raten können groß werden, wenn sie sich summieren.",
+            "correctAnswer": "Viele einzeln kleine Raten summieren sich zu einer Belastung, die man aus dem Blick verliert.",
             "distractors": [
               {
-                "text": "Wenn die Monatsrate klein ist, ist der Kauf unproblematisch.",
+                "text": "Wenn die einzelne Monatsrate klein ist, ist der Kauf unproblematisch.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Raten garantieren automatisch Gewinn und finanzielle Sicherheit.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Schulden haben mit dem eigenen Budget nichts zu tun.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Kleine Raten können groß werden, wenn sie sich summieren."
+            "explanationAfterAnswer": "Genau: Nicht die einzelne Rate ist das Problem, sondern die Summe vieler Verpflichtungen, die das Budget übersteigt."
           },
           {
             "id": "q_schuldenfallen_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Schuldenfallen“?",
+            "question": "Welches Beispiel zeigt am ehesten eine beginnende Schuldenfalle?",
             "points": 100,
-            "correctAnswer": "Mehrere Abos und Raten ergeben zusammen eine hohe Monatsbelastung.",
+            "correctAnswer": "Handy-Rate, zwei Abos und ein Vertrag ergeben zusammen mehr, als am Monatsende übrig ist.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Du sparst jeden Monat einen festen Betrag und gibst nur aus, was übrig ist.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen wird als sicher dargestellt.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Du kaufst etwas erst, wenn du das Geld dafür vollständig hast.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Wenn die Summe der Verpflichtungen größer ist als das, was übrig bleibt, beginnt die Falle zuzuschnappen."
           },
           {
             "id": "q_schuldenfallen_003",
             "level": "understand",
-            "question": "Warum ist „Schuldenfallen“ für Finanzbildung wichtig?",
+            "question": "Warum reicht es nicht, nur auf die einzelne Monatsrate zu schauen?",
             "points": 120,
-            "correctAnswer": "Schuldenfallen durch Raten, Zinsen und fehlenden Überblick verstehen.",
+            "correctAnswer": "Weil erst die Summe aller Raten und die Gesamtkosten über die Laufzeit die wahre Belastung zeigen.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil eine niedrige Rate immer bedeutet, dass der Kauf günstig ist.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil man die Laufzeit ohnehin jederzeit kostenlos beenden kann.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil die Höhe der Rate für die Kosten gar keine Rolle spielt.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Schuldenfallen durch Raten, Zinsen und fehlenden Überblick verstehen."
+            "explanationAfterAnswer": "Die Rate ist nur ein Ausschnitt. Erst Gesamtsumme und Laufzeit zeigen, was ein Kauf wirklich kostet und bindet."
           },
           {
             "id": "q_schuldenfallen_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Du hast drei laufende Raten und willst wissen, ob du sie dir leisten kannst. Was tust du zuerst?",
             "points": 150,
-            "correctAnswer": "Die passenden Werte einsetzen, sauber rechnen und das Ergebnis im Kontext prüfen.",
+            "correctAnswer": "Alle Raten zu einer Monatssumme addieren und mit dem verfügbaren Budget vergleichen.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "Sofort eine weitere Rate abschließen, wenn das Angebot spannend klingt.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "Nur auf die niedrigste Einzelrate schauen und die anderen ignorieren.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "Kosten, Laufzeit und das eigene Budget einfach außer Acht lassen.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "Erst die Gesamtsumme im Vergleich zum Budget zeigt, ob noch Luft ist – genau das rechnest du in diesem Modul."
           },
           {
             "id": "q_schuldenfallen_005",
             "level": "master",
-            "question": "Welche Aussage zu „Schuldenfallen“ stimmt am besten?",
+            "question": "Welche Aussage über Schuldenfallen ist am treffendsten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Ratenkäufe sind nicht grundsätzlich schlecht, werden aber gefährlich, wenn die Summe aller Verpflichtungen das Budget übersteigt.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Jeder Ratenkauf führt zwangsläufig in die Schuldenfalle.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Solange jede einzelne Rate klein ist, kann nichts schiefgehen.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Schuldenfallen betreffen nur Menschen mit sehr hohen Ausgaben.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Meistern heißt abwägen: Der Überblick über die Gesamtbelastung im Verhältnis zum Budget entscheidet, nicht die einzelne Rate."
           }
         ],
         "calculationTemplates": [
@@ -1005,7 +1005,7 @@
             "id": "tmpl_schuldenfallen_monatsraten",
             "level": "apply",
             "points": 150,
-            "questionTemplate": "Du hast monatliche Raten von {rate1} Euro, {rate2} Euro und {rate3} Euro. Wie hoch ist die monatliche Gesamtbelastung?",
+            "questionTemplate": "Du zahlst monatlich {rate1} Euro, {rate2} Euro und {rate3} Euro für verschiedene Raten und Abos. Wie hoch ist deine gesamte monatliche Belastung?",
             "parameters": {
               "rate1": {
                 "min": 5,
@@ -1026,21 +1026,21 @@
               "rate1 * rate2",
               "rate1 + rate2"
             ],
-            "explanationTemplate": "Alle Monatsraten addieren.",
+            "explanationTemplate": "Zähle alle monatlichen Raten zusammen: {rate1} + {rate2} + {rate3}. Erst diese Gesamtsumme zeigt die echte Belastung.",
             "unit": "Euro"
           }
         ],
         "teacherSupport": {
           "competenceGoal": "Schuldenfallen durch Raten, Zinsen und fehlenden Überblick verstehen.",
-          "typicalMisconception": "Wenn die Monatsrate klein ist, ist der Kauf unproblematisch.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Wenn die Monatsrate klein ist, ist der Kauf unproblematisch.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Schuldenfallen“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "typicalMisconception": "Wenn die einzelne Monatsrate klein ist, ist der Kauf unproblematisch.",
+          "discussionPrompt": "Warum wirkt eine Rate von 9,99 Euro im Monat so harmlos, obwohl sie über die Laufzeit hunderte Euro kostet?",
+          "classroomActivity": "Die Lernenden erhalten eine Liste erfundener Abos und Raten mit einem Beispielbudget. Sie addieren alle Monatsraten, vergleichen sie mit dem Budget und markieren, ab welcher Ausgabe die Person in die Schuldenfalle gerät."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Schuldenfallen“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Schuldenfallen“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Welche regelmäßigen Zahlungen haben wir eigentlich zusammen im Monat – und was macht das in einem Jahr aus?",
+          "everydayExercise": "Listen Sie gemeinsam alle laufenden Abos und Raten auf und addieren Sie sie zu einer Monats- und einer Jahressumme. Ihr Kind sagt, welche Zahlung sich wirklich lohnt und welche man kündigen könnte."
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_dispo_konsumkredit",
@@ -1053,11 +1053,11 @@
         ],
         "pedagogy": {
           "learningGoal": "Dispo und Konsumkredit als geliehenes Geld mit Zinskosten verstehen.",
-          "coreIdea": "Geliehenes Geld fühlt sich kurzfristig wie mehr Geld an, macht Ausgaben aber teurer.",
-          "everydayScenario": "Das Konto ist leer, aber du kannst durch Dispo ins Minus gehen.",
-          "misconception": "Wenn die Bank die Zahlung erlaubt, kann ich es mir leisten.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Dispo und Konsumkredit' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Dispo und Konsumkredit' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "coreIdea": "Geliehenes Geld fühlt sich kurzfristig wie mehr Geld an, macht Ausgaben durch Zinsen aber teurer, als sie eigentlich sind.",
+          "everydayScenario": "Das Konto ist bei null, aber die Bank lässt dich per Dispo ins Minus gehen – jeder Euro Minus kostet Zinsen.",
+          "misconception": "Wenn die Bank die Zahlung erlaubt oder mir einen Kredit gibt, kann ich es mir leisten.",
+          "transferTask": "Nimm einen Kauf, den du gern sofort machen würdest, und rechne aus, was er mit Kreditzinsen mehr kostet als beim Ansparen. Erkläre, ob dir der schnellere Besitz diesen Aufpreis wert wäre.",
+          "reflectionPrompt": "Warum fühlt sich Geld, das man von der Bank leihen kann, wie das eigene an – obwohl es teurer zurückgezahlt werden muss?"
         },
         "glossaryTerms": [
           "Dispo",
@@ -1076,125 +1076,125 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Dispo und Konsumkredit: Geliehenes Geld fühlt sich kurzfristig wie mehr Geld an, macht Ausgaben aber teurer. Beispiel: Das Konto ist leer, aber du kannst durch Dispo ins Minus gehen. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Wenn die Bank die Zahlung erlaubt, kann ich es mir leisten.“.",
-          "young_adults": "Dispo und Konsumkredit: Geliehenes Geld fühlt sich kurzfristig wie mehr Geld an, macht Ausgaben aber teurer. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Das Konto ist leer, aber du kannst durch Dispo ins Minus gehen.",
-          "parents_teachers": "Lernziel: Dispo und Konsumkredit als geliehenes Geld mit Zinskosten verstehen. Didaktischer Fokus: Geliehenes Geld fühlt sich kurzfristig wie mehr Geld an, macht Ausgaben aber teurer. Typische Fehlvorstellung: „Wenn die Bank die Zahlung erlaubt, kann ich es mir leisten.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Ein Kredit ist geliehenes Geld – und geliehenes Geld muss man teurer zurückgeben, als man es bekommen hat. Der Extrabetrag heißt Zinsen. Ein Dispo ist so ein Kredit: Wenn dein Konto leer ist, lässt dich die Bank trotzdem noch Geld ausgeben und du rutschst ins Minus. Das fühlt sich an, als hättest du mehr Geld. In Wahrheit hast du weniger, weil du bald mehr zurückzahlst. Merk dir: Nur weil du etwas kaufen kannst, heißt das nicht, dass du es dir leisten kannst. Leihen macht Dinge teurer, nicht billiger.",
+          "young_adults": "Dispo und Konsumkredit sind die teuerste Art, Geld zu haben, das dir nicht gehört. Der Dispozins gehört zu den höchsten Zinsen überhaupt und wird tageweise auf jeden Euro Minus berechnet – bequem, aber teuer, wenn man länger drinbleibt. Bei einem Konsum- oder Ratenkredit zählt nicht die Monatsrate, sondern der Effektivzins und die Gesamtkosten über die Laufzeit. Faustregel: Für kurzfristige Engpässe ist ein günstiger Ratenkredit fast immer billiger als ein Dauer-Dispo. Und die wichtigste Frage bleibt: Muss der Kauf jetzt sein, oder kann ich dafür sparen und die Zinsen komplett vermeiden?",
+          "parents_teachers": "Kredit ist zeitlich vorgezogener Konsum, der über Zinsen teurer wird; der Dispositionskredit ist besonders kostenintensiv, weil er hoch verzinst und tagesaktuell berechnet wird. Wichtig sind die Unterscheidung von Monatsrate, Effektivzins und Gesamtkosten sowie das Bewusstsein, dass genehmigte Zahlungsfähigkeit keine Leistbarkeit belegt. Greifen Sie die Fehlvorstellung auf, ein bewilligter Kredit oder Dispo bedeute, man könne sich etwas leisten – tatsächlich sagt er nur, dass die Bank am Zins verdient."
         },
         "questions": [
           {
             "id": "q_dispo_konsumkredit_001",
             "level": "explain",
-            "question": "Was beschreibt „Dispo und Konsumkredit“ am besten?",
+            "question": "Was bedeutet es, per Dispo oder Konsumkredit zu bezahlen?",
             "points": 100,
-            "correctAnswer": "Geliehenes Geld fühlt sich kurzfristig wie mehr Geld an, macht Ausgaben aber teurer.",
+            "correctAnswer": "Du gibst geliehenes Geld aus, das du später mit Zinsen teurer zurückzahlen musst.",
             "distractors": [
               {
-                "text": "Wenn die Bank die Zahlung erlaubt, kann ich es mir leisten.",
+                "text": "Wenn die Bank die Zahlung erlaubt, kannst du es dir sicher leisten.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Ein Kredit garantiert dir automatisch Gewinn und finanzielle Sicherheit.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Ein Kredit hat mit deinen späteren Kosten nichts zu tun.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Geliehenes Geld fühlt sich kurzfristig wie mehr Geld an, macht Ausgaben aber teurer."
+            "explanationAfterAnswer": "Genau: Kredit ist geliehenes Geld. Die Zinsen sind der Preis dafür, es früher zu haben."
           },
           {
             "id": "q_dispo_konsumkredit_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Dispo und Konsumkredit“?",
+            "question": "Welches Beispiel beschreibt die Nutzung eines Dispos?",
             "points": 100,
-            "correctAnswer": "Das Konto ist leer, aber du kannst durch Dispo ins Minus gehen.",
+            "correctAnswer": "Dein Konto steht auf null, aber du kaufst weiter und rutschst ins Minus.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Du wartest mit dem Kauf, bis genug Geld auf dem Konto ist.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen wird als sicher dargestellt.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Du legst monatlich einen festen Betrag auf ein Sparkonto.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Ins Minus zu gehen bedeutet, den Dispo zu nutzen – und für jeden Euro Minus fallen Zinsen an."
           },
           {
             "id": "q_dispo_konsumkredit_003",
             "level": "understand",
-            "question": "Warum ist „Dispo und Konsumkredit“ für Finanzbildung wichtig?",
+            "question": "Warum ist es riskant zu denken „Ich kann es bezahlen, also kann ich es mir leisten“?",
             "points": 120,
-            "correctAnswer": "Dispo und Konsumkredit als geliehenes Geld mit Zinskosten verstehen.",
+            "correctAnswer": "Weil die Bank dir mit Dispo oder Kredit Zahlungsfähigkeit erlaubt, obwohl das Geld dir gar nicht gehört.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil die Bank Zahlungen nur erlaubt, wenn man genug eigenes Geld hat.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil bewilligte Kredite grundsätzlich zinsfrei sind.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil die Erlaubnis der Bank für die Kosten keine Rolle spielt.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Dispo und Konsumkredit als geliehenes Geld mit Zinskosten verstehen."
+            "explanationAfterAnswer": "Bezahlen können heißt nicht leisten können. Der Dispo verschiebt die Kosten nur in die Zukunft – mit Zinsaufschlag."
           },
           {
             "id": "q_dispo_konsumkredit_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Du willst wissen, was ein Kredit dich zusätzlich kostet. Wie rechnest du?",
             "points": 150,
-            "correctAnswer": "Die passenden Werte einsetzen, sauber rechnen und das Ergebnis im Kontext prüfen.",
+            "correctAnswer": "Du ziehst vom Rückzahlungsbetrag den geliehenen Betrag ab – die Differenz sind die Zinskosten.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "Du addierst Rückzahlung und geliehenen Betrag, um die Kosten zu bekommen.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "Du schaust nur auf die niedrige Monatsrate und ignorierst den Rest.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "Du lässt Zinsen, Laufzeit und den geliehenen Betrag einfach unberücksichtigt.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "Zusatzkosten = Rückzahlung minus geliehener Betrag. Genau diese Differenz zeigt, wie teuer das Leihen wirklich war."
           },
           {
             "id": "q_dispo_konsumkredit_005",
             "level": "master",
-            "question": "Welche Aussage zu „Dispo und Konsumkredit“ stimmt am besten?",
+            "question": "Welche Aussage über Kredite ist am treffendsten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Ein Kredit kann sinnvoll sein, aber Dispo und Konsumkredit sind teuer – entscheidend sind Effektivzins und Gesamtkosten, nicht die Monatsrate.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Jeder Kredit ist Betrug und sollte niemals genutzt werden.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Solange die Monatsrate niedrig ist, spielt der Zins keine Rolle.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Kreditkosten sind nur bei sehr großen Summen von Bedeutung.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Meistern heißt differenzieren: Kredit ist ein Werkzeug, aber der Preis steckt im Effektivzins und in den Gesamtkosten."
           }
         ],
         "calculationTemplates": [
@@ -1202,7 +1202,7 @@
             "id": "tmpl_kredit_mehrkosten",
             "level": "apply",
             "points": 150,
-            "questionTemplate": "Du leihst dir {betrag} Euro und zahlst insgesamt {rueckzahlung} Euro zurück. Wie hoch sind die zusätzlichen Kosten?",
+            "questionTemplate": "Du leihst dir {betrag} Euro und zahlst am Ende insgesamt {rueckzahlung} Euro zurück. Wie viel kostet dich das Leihen zusätzlich?",
             "parameters": {
               "betrag": {
                 "min": 50,
@@ -1219,21 +1219,21 @@
               "betrag - rueckzahlung",
               "betrag"
             ],
-            "explanationTemplate": "Zusätzliche Kosten = Rückzahlung minus geliehener Betrag.",
+            "explanationTemplate": "Die Zinskosten sind der Aufschlag beim Zurückzahlen: {rueckzahlung} Euro minus {betrag} Euro geliehener Betrag.",
             "unit": "Euro"
           }
         ],
         "teacherSupport": {
           "competenceGoal": "Dispo und Konsumkredit als geliehenes Geld mit Zinskosten verstehen.",
-          "typicalMisconception": "Wenn die Bank die Zahlung erlaubt, kann ich es mir leisten.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Wenn die Bank die Zahlung erlaubt, kann ich es mir leisten.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Dispo und Konsumkredit“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "typicalMisconception": "Wenn die Bank die Zahlung erlaubt oder mir einen Kredit gibt, kann ich es mir leisten.",
+          "discussionPrompt": "Wenn die Bank dir mehr ausgeben lässt, als du hast – wem nützt das eigentlich, dir oder der Bank?",
+          "classroomActivity": "Die Lernenden vergleichen zwei Wege zum selben Kauf: sofort per Kredit mit Zinsen oder erst ansparen. Sie rechnen die Zinskosten aus und formulieren, wofür der Aufpreis auf schnelleren Besitz steht."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Dispo und Konsumkredit“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Dispo und Konsumkredit“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Was ist der Unterschied zwischen „Ich kann das bezahlen“ und „Ich kann mir das leisten“?",
+          "everydayExercise": "Rechnen Sie gemeinsam bei einem konkreten Ratenangebot aus, wie viel mehr man mit Zinsen zahlt als beim Ansparen. Ihr Kind sagt, ob ihm der schnellere Besitz diesen Aufpreis wert wäre."
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_eigene_finanzregeln",
@@ -1247,11 +1247,11 @@
         ],
         "pedagogy": {
           "learningGoal": "Eigene Finanzregeln als Schutz vor Impulsentscheidungen entwickeln.",
-          "coreIdea": "Regeln helfen, gute Entscheidungen schon vorher vorzubereiten.",
-          "everydayScenario": "Du legst fest: Käufe über 50 Euro mache ich erst nach 24 Stunden Bedenkzeit.",
-          "misconception": "Regeln nehmen mir Freiheit weg.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Eigene Finanzregeln' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Eigene Finanzregeln' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "coreIdea": "Wer sich vorher feste Regeln setzt, muss im Moment der Versuchung nicht mehr mit sich ringen – die Entscheidung ist schon getroffen.",
+          "everydayScenario": "Du legst fest: Alles über 30 Euro kaufe ich erst, wenn ich eine Nacht darüber geschlafen habe.",
+          "misconception": "Feste Regeln nehmen mir nur Freiheit und Spaß.",
+          "transferTask": "Formuliere zwei eigene Finanzregeln, die zu deinem Leben passen (zum Beispiel eine Wartezeit oder eine Sparregel). Beschreibe für jede Regel eine Situation, in der sie dich vor einer Fehlentscheidung bewahren würde.",
+          "reflectionPrompt": "In welcher Situation hast du schon einmal etwas gekauft, das du sofort bereut hast – und welche Regel hätte dich davor bewahrt?"
         },
         "glossaryTerms": [
           "Finanzregel",
@@ -1268,139 +1268,139 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Eigene Finanzregeln: Regeln helfen, gute Entscheidungen schon vorher vorzubereiten. Beispiel: Du legst fest: Käufe über 50 Euro mache ich erst nach 24 Stunden Bedenkzeit. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Regeln nehmen mir Freiheit weg.“.",
-          "young_adults": "Eigene Finanzregeln: Regeln helfen, gute Entscheidungen schon vorher vorzubereiten. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Du legst fest: Käufe über 50 Euro mache ich erst nach 24 Stunden Bedenkzeit.",
-          "parents_teachers": "Lernziel: Eigene Finanzregeln als Schutz vor Impulsentscheidungen entwickeln. Didaktischer Fokus: Regeln helfen, gute Entscheidungen schon vorher vorzubereiten. Typische Fehlvorstellung: „Regeln nehmen mir Freiheit weg.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Eine Finanzregel ist eine Entscheidung, die du triffst, bevor die Versuchung kommt. Zum Beispiel: „Bei allem über 30 Euro warte ich einen Tag, bevor ich es kaufe.“ Warum hilft das? Weil du im Laden oder im Spiel oft aus dem Bauch heraus zugreifst – und hinterher denkst „Hätte ich mal nicht.“ Deine Regel entscheidet dann schon für dich, ganz ruhig, ohne Stress. Das ist keine Bestrafung, im Gegenteil: Regeln geben dir Freiheit, weil du dich nicht jedes Mal neu quälen musst. Die besten Regeln sind einfach und passen zu dir.",
+          "young_adults": "Gute Finanzentscheidungen sind selten eine Frage des Wissens, sondern der Selbstkontrolle im richtigen Moment. Deshalb lohnt es sich, Regeln vorab festzulegen, wenn du ruhig und klar denkst – dann greifen sie automatisch, wenn FOMO oder ein Rabatt dich unter Druck setzen. Bewährte Beispiele: eine Bedenkzeit vor größeren Käufen, eine feste Sparquote per Dauerauftrag am Monatsanfang, ein Notgroschen von etwa zwei bis drei Monatsausgaben, und eine klare Grenze, welchen Betrag du überhaupt riskieren willst. Solche Regeln nehmen dir keine Freiheit – sie schützen sie, weil du nicht jede Entscheidung neu erkämpfen musst.",
+          "parents_teachers": "Eigene Finanzregeln sind ein Instrument der Selbstbindung (commitment devices), das Impuls- und Affekthandeln vorbeugt, indem Entscheidungen in einen ruhigen Moment vorverlagert werden. Wirksam sind einfache, konkrete Regeln: Bedenkzeiten, automatisiertes Sparen zuerst, eine Notgroschen-Faustregel und definierte Risikogrenzen. Greifen Sie die Fehlvorstellung auf, Regeln schränkten nur ein – betonen Sie, dass sie kognitive Last reduzieren und Handlungsfreiheit in Stresssituationen tatsächlich vergrößern."
         },
         "questions": [
           {
             "id": "q_eigene_finanzregeln_001",
             "level": "explain",
-            "question": "Was beschreibt „Eigene Finanzregeln“ am besten?",
+            "question": "Wozu dienen eigene Finanzregeln?",
             "points": 100,
-            "correctAnswer": "Regeln helfen, gute Entscheidungen schon vorher vorzubereiten.",
+            "correctAnswer": "Sie treffen eine gute Entscheidung schon im Voraus, damit man im Moment der Versuchung nicht schwach wird.",
             "distractors": [
               {
-                "text": "Regeln nehmen mir Freiheit weg.",
+                "text": "Sie nehmen einem nur Freiheit und Spaß.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Sie garantieren automatisch Gewinn und finanzielle Sicherheit.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Sie haben mit Geldentscheidungen eigentlich nichts zu tun.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Regeln helfen, gute Entscheidungen schon vorher vorzubereiten."
+            "explanationAfterAnswer": "Genau: Regeln entscheiden für dich, wenn du ruhig bist – so hältst du im Stress leichter durch."
           },
           {
             "id": "q_eigene_finanzregeln_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Eigene Finanzregeln“?",
+            "question": "Welches Beispiel ist eine sinnvolle eigene Finanzregel?",
             "points": 100,
-            "correctAnswer": "Du legst fest: Käufe über 50 Euro mache ich erst nach 24 Stunden Bedenkzeit.",
+            "correctAnswer": "Käufe über 30 Euro mache ich erst nach einer Nacht Bedenkzeit.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Ich kaufe immer sofort, wenn ein Rabatt gerade nur kurz gilt.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen nehme ich als sicher an.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Ich richte mich beim Geldausgeben immer nach dem, was Freunde gerade tun.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Eine Bedenkzeit ist eine klassische Schutzregel: Sie bremst den Impuls und macht Platz für eine ruhige Entscheidung."
           },
           {
             "id": "q_eigene_finanzregeln_003",
             "level": "understand",
-            "question": "Warum ist „Eigene Finanzregeln“ für Finanzbildung wichtig?",
+            "question": "Warum wirkt eine Regel besser als der gute Vorsatz „Ich passe im Moment schon auf“?",
             "points": 120,
-            "correctAnswer": "Eigene Finanzregeln als Schutz vor Impulsentscheidungen entwickeln.",
+            "correctAnswer": "Weil man unter Druck und bei FOMO schlecht entscheidet – eine Regel greift dann automatisch.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil gute Vorsätze im entscheidenden Moment immer zuverlässig funktionieren.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil Regeln jede Versuchung von vornherein komplett verschwinden lassen.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil es egal ist, ob man vorher plant oder spontan entscheidet.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Eigene Finanzregeln als Schutz vor Impulsentscheidungen entwickeln."
+            "explanationAfterAnswer": "Im Stress sind wir schwach. Eine vorher gesetzte Regel nimmt uns die schwierige Entscheidung im falschen Moment ab."
           },
           {
             "id": "q_eigene_finanzregeln_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Du möchtest weniger spontan Geld ausgeben. Welche Regel setzt du dir am besten?",
             "points": 150,
-            "correctAnswer": "Innehalten, Informationen prüfen und erst dann passend zum eigenen Ziel handeln.",
+            "correctAnswer": "Vor größeren Käufen eine feste Bedenkzeit einlegen und erst danach entscheiden.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "Sofort kaufen, sobald etwas spannend klingt.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "Nur auf eine einzelne Meinung oder Bewertung schauen und dann zugreifen.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "Kosten, Budget und eigenes Ziel bewusst ignorieren.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "Eine feste Bedenkzeit ist eine der wirksamsten Regeln gegen Spontankäufe – sie kostet nur Zeit, kein Geld."
           },
           {
             "id": "q_eigene_finanzregeln_005",
             "level": "master",
-            "question": "Welche Aussage zu „Eigene Finanzregeln“ stimmt am besten?",
+            "question": "Welche Aussage über eigene Finanzregeln ist am treffendsten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Regeln schränken nicht ein, sondern schaffen Freiheit, weil man nicht jede Entscheidung im Stress neu treffen muss.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Regeln machen jede Ausgabe grundsätzlich unmöglich.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Regeln sind überflüssig, sobald man einmal genug über Geld gelernt hat.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Finanzregeln lohnen sich nur bei sehr großen Beträgen.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Meistern heißt umdenken: Gute Regeln nehmen dir kognitive Last ab und geben dir dadurch mehr, nicht weniger Handlungsfreiheit."
           }
         ],
         "calculationTemplates": [],
         "teacherSupport": {
           "competenceGoal": "Eigene Finanzregeln als Schutz vor Impulsentscheidungen entwickeln.",
-          "typicalMisconception": "Regeln nehmen mir Freiheit weg.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Regeln nehmen mir Freiheit weg.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Eigene Finanzregeln“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "typicalMisconception": "Feste Regeln nehmen mir nur Freiheit und Spaß.",
+          "discussionPrompt": "Welche Regel würde euch am ehesten davor bewahren, etwas aus dem Bauch heraus zu kaufen – und warum gerade diese?",
+          "classroomActivity": "Jede Person formuliert zwei persönliche Finanzregeln (etwa eine Wartezeit und eine Sparregel) und tauscht sie in Paaren. Gemeinsam prüfen sie an einem erfundenen Versuchungsszenario, ob die Regel im Ernstfall wirklich greifen würde."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Eigene Finanzregeln“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Eigene Finanzregeln“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Welche eine Geldregel würdest du dir für dich selbst wünschen – und wovor würde sie dich schützen?",
+          "everydayExercise": "Vereinbaren Sie gemeinsam eine einfache Familienregel, etwa eine Bedenkzeit bei größeren Wünschen, und testen Sie sie beim nächsten Kaufwunsch Ihres Kindes im Alltag."
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_investieren_vs_zocken",
@@ -1414,11 +1414,11 @@
         ],
         "pedagogy": {
           "learningGoal": "Geplantes Investieren von Zocken unterscheiden.",
-          "coreIdea": "Investieren folgt einem Plan; Zocken setzt auf schnelle Gewinne mit hohem Risiko.",
-          "everydayScenario": "Eine Person investiert regelmäßig breit gestreut; eine andere kauft spontan Hype-Aktien.",
-          "misconception": "Investieren und Zocken sind dasselbe, weil beides unsicher ist.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Investieren vs. Zocken' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Investieren vs. Zocken' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "coreIdea": "Investieren folgt einem langfristigen Plan mit Streuung; Zocken setzt auf schnelle, große Gewinne bei hohem Risiko und ohne Plan.",
+          "everydayScenario": "Eine Person spart monatlich in einen breit gestreuten Sparplan; eine andere kauft spontan eine Hype-Coin, weil ein Video Reichtum verspricht.",
+          "misconception": "Investieren und Zocken sind im Grunde dasselbe, weil bei beidem der Ausgang ungewiss ist.",
+          "transferTask": "Beschreibe zwei Personen, die beide Geld anlegen: eine investiert, eine zockt. Benenne für jede den Zeithorizont, die Streuung und die Rolle des Zufalls und erkläre, woran man den Unterschied erkennt.",
+          "reflectionPrompt": "Woran würdest du bei dir selbst merken, dass du gerade zockst und nicht mehr investierst?"
         },
         "glossaryTerms": [
           "Investieren",
@@ -1437,43 +1437,43 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Investieren vs. Zocken: Investieren folgt einem Plan; Zocken setzt auf schnelle Gewinne mit hohem Risiko. Beispiel: Eine Person investiert regelmäßig breit gestreut; eine andere kauft spontan Hype-Aktien. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Investieren und Zocken sind dasselbe, weil beides unsicher ist.“.",
-          "young_adults": "Investieren vs. Zocken: Investieren folgt einem Plan; Zocken setzt auf schnelle Gewinne mit hohem Risiko. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Eine Person investiert regelmäßig breit gestreut; eine andere kauft spontan Hype-Aktien.",
-          "parents_teachers": "Lernziel: Geplantes Investieren von Zocken unterscheiden. Didaktischer Fokus: Investieren folgt einem Plan; Zocken setzt auf schnelle Gewinne mit hohem Risiko. Typische Fehlvorstellung: „Investieren und Zocken sind dasselbe, weil beides unsicher ist.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Investieren und Zocken klingen ähnlich, sind aber ziemlich verschieden. Investieren ist wie einen Baum pflanzen: Du legst regelmäßig etwas an, verteilst es auf viele Sachen und wartest geduldig, bis es wächst. Zocken ist wie beim Glücksrad alles auf ein Feld setzen und hoffen, dass es klappt. Beim Zocken zählt der schnelle Kick, das große Ding, der Zufall. Beim Investieren zählt der Plan und die Zeit. Beides kann mal steigen und mal fallen – aber beim Investieren streust du das Risiko, beim Zocken setzt du alles auf eine Karte. Der Unterschied liegt nicht im Gefühl, sondern im Plan.",
+          "young_adults": "Der Unterschied zwischen Investieren und Zocken liegt nicht darin, ob man Geld verlieren kann – das geht bei beidem –, sondern in Plan, Zeithorizont und Streuung. Investieren heißt: breit gestreut, langfristig, mit klarer Strategie und ohne die Erwartung, schnell reich zu werden. Zocken heißt: konzentriert auf einen Wert, kurzfristig, getrieben von Hype und FOMO, in der Hoffnung auf den großen Treffer. Eine Hype-Coin nach einem Video zu kaufen, weil „jetzt alle einsteigen“, ist Zocken, auch wenn es sich wie Investieren anfühlt. Frag dich ehrlich: Habe ich einen Plan – oder hoffe ich nur?",
+          "parents_teachers": "Investieren und Spekulieren unterscheiden sich in Zeithorizont, Diversifikation, Strategie und dem Verhältnis von Analyse zu Zufall, nicht in der bloßen Möglichkeit eines Verlusts. Machen Sie deutlich, dass emotionale Treiber wie Hype und FOMO das Kennzeichen des Zockens sind, während Investieren auf Streuung und Geduld beruht. Greifen Sie die Fehlvorstellung auf, beides sei gleich, weil der Ausgang ungewiss ist – der entscheidende Marker ist nicht die Unsicherheit, sondern ob Plan und Risikostreuung vorhanden sind. Kein Ratschlag zu konkreten Produkten."
         },
         "questions": [
           {
             "id": "q_investieren_vs_zocken_001",
             "level": "explain",
-            "question": "Was beschreibt „Investieren vs. Zocken“ am besten?",
+            "question": "Was unterscheidet Investieren vom Zocken?",
             "points": 100,
-            "correctAnswer": "Investieren folgt einem Plan; Zocken setzt auf schnelle Gewinne mit hohem Risiko.",
+            "correctAnswer": "Investieren folgt einem langfristigen Plan mit Streuung, Zocken setzt auf den schnellen, großen Gewinn bei hohem Risiko.",
             "distractors": [
               {
-                "text": "Investieren und Zocken sind dasselbe, weil beides unsicher ist.",
+                "text": "Investieren und Zocken sind dasselbe, weil bei beidem der Ausgang ungewiss ist.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Investieren garantiert automatisch Gewinn und Sicherheit.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Beides hat mit Geldentscheidungen nichts zu tun.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Investieren folgt einem Plan; Zocken setzt auf schnelle Gewinne mit hohem Risiko."
+            "explanationAfterAnswer": "Genau: Der Unterschied liegt in Plan, Streuung und Zeit – nicht darin, ob man verlieren kann."
           },
           {
             "id": "q_investieren_vs_zocken_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Investieren vs. Zocken“?",
+            "question": "Welches Verhalten ist am ehesten Zocken?",
             "points": 100,
-            "correctAnswer": "Eine Person investiert regelmäßig breit gestreut; eine andere kauft spontan Hype-Aktien.",
+            "correctAnswer": "Spontan eine Hype-Coin kaufen, weil ein Video schnellen Reichtum verspricht.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Monatlich einen festen Betrag breit gestreut anlegen und geduldig warten.",
                 "closeness": 2
               },
               {
@@ -1481,95 +1481,95 @@
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Sich vor einer Anlage über Streuung und Zeithorizont informieren.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Spontan, konzentriert auf einen Wert, getrieben von einem Hype-Versprechen – das sind die Merkmale des Zockens."
           },
           {
             "id": "q_investieren_vs_zocken_003",
             "level": "understand",
-            "question": "Warum ist „Investieren vs. Zocken“ für Finanzbildung wichtig?",
+            "question": "Warum ist „bei beidem kann man verlieren“ kein guter Grund, Investieren und Zocken gleichzusetzen?",
             "points": 120,
-            "correctAnswer": "Geplantes Investieren von Zocken unterscheiden.",
+            "correctAnswer": "Weil der Unterschied nicht in der Verlustmöglichkeit liegt, sondern in Plan, Streuung und Zeithorizont.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil man beim Investieren im Gegensatz zum Zocken nie Geld verlieren kann.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil Zocken immer verboten und Investieren immer vorgeschrieben ist.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil es beim Anlegen egal ist, ob man einen Plan hat.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Geplantes Investieren von Zocken unterscheiden."
+            "explanationAfterAnswer": "Verlieren kann man bei beidem. Entscheidend ist, ob Streuung und Plan das Risiko steuern oder der Zufall regiert."
           },
           {
             "id": "q_investieren_vs_zocken_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Ein Freund will „schnell reich“ mit einer einzigen Hype-Aktie werden. Was rätst du ihm?",
             "points": 150,
-            "correctAnswer": "Innehalten, Informationen prüfen und erst dann passend zum eigenen Ziel handeln.",
+            "correctAnswer": "Innehalten, das Risiko der Einzelwette prüfen und lieber mit Plan und Streuung langfristig vorgehen.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "Sofort mitmachen, weil die Aktie gerade überall gehypt wird.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "Nur auf die versprochene Rendite schauen und das Risiko ausblenden.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "Zeithorizont, Streuung und eigenes Ziel einfach ignorieren.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "Aus dem Hype auszusteigen und auf Plan und Streuung zu setzen, verwandelt Zocken zurück in Investieren."
           },
           {
             "id": "q_investieren_vs_zocken_005",
             "level": "master",
-            "question": "Welche Aussage zu „Investieren vs. Zocken“ stimmt am besten?",
+            "question": "Welche Aussage über Investieren und Zocken ist am treffendsten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Beides kann Verluste bringen, aber Investieren steuert das Risiko über Plan und Streuung, während Zocken auf den Zufall hofft.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Investieren ist risikolos, nur Zocken kann zu Verlusten führen.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Solange man Gewinn machen will, ist Zocken einfach die schnellere Art zu investieren.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Der Unterschied zählt nur, wenn es um sehr große Beträge geht.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Meistern heißt unterscheiden: Nicht die Verlustmöglichkeit trennt beides, sondern ob du das Risiko planvoll steuerst oder auf Glück setzt."
           }
         ],
         "calculationTemplates": [],
         "teacherSupport": {
           "competenceGoal": "Geplantes Investieren von Zocken unterscheiden.",
-          "typicalMisconception": "Investieren und Zocken sind dasselbe, weil beides unsicher ist.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Investieren und Zocken sind dasselbe, weil beides unsicher ist.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Investieren vs. Zocken“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "typicalMisconception": "Investieren und Zocken sind im Grunde dasselbe, weil bei beidem der Ausgang ungewiss ist.",
+          "discussionPrompt": "Wenn beim Investieren und beim Zocken Geld verloren gehen kann – was macht dann trotzdem den entscheidenden Unterschied?",
+          "classroomActivity": "Die Lernenden sortieren mehrere Verhaltenskarten (breiter Sparplan, Einzel-Hype-Kauf, langfristiges Halten, Kauf wegen FOMO) den Kategorien Investieren oder Zocken zu und begründen jede Zuordnung anhand von Plan, Streuung und Zeithorizont."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Investieren vs. Zocken“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Investieren vs. Zocken“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Wann ist Geldanlegen wie einen Baum pflanzen und wann eher wie am Glücksrad drehen?",
+          "everydayExercise": "Vergleichen Sie gemeinsam zwei Beispiele: einen breit gestreuten Sparplan und einen spontanen Hype-Kauf. Ihr Kind benennt für beide Zeithorizont, Streuung und die Rolle des Zufalls."
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_finanzentscheidung_pruefen",
@@ -1583,11 +1583,11 @@
         ],
         "pedagogy": {
           "learningGoal": "Einen strukturierten Prüfprozess für Finanzentscheidungen anwenden.",
-          "coreIdea": "Gute Finanzentscheidungen entstehen durch Prüfung statt Druck, Gefühl oder einzelne Zahlen.",
-          "everydayScenario": "Vor Investition, Vertrag oder Ratenkauf prüfst du Ziel, Kosten, Risiken, Alternativen und Sicherheit.",
-          "misconception": "Wenn ich genug gelernt habe, brauche ich keine Checkliste.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Finanzentscheidung prüfen' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Finanzentscheidung prüfen' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "coreIdea": "Gute Finanzentscheidungen entstehen durch eine ruhige Prüfung von Ziel, Kosten, Risiken, Alternativen und Sicherheit – nicht durch Druck, Bauchgefühl oder eine einzelne Zahl.",
+          "everydayScenario": "Vor einem Ratenkauf, einem Vertrag oder einer Anlage gehst du eine kurze Checkliste durch, statt spontan zuzusagen.",
+          "misconception": "Wenn ich genug über Geld gelernt habe, brauche ich keine Checkliste mehr.",
+          "transferTask": "Erstelle deine persönliche Fünf-Punkte-Checkliste für Finanzentscheidungen und wende sie auf einen echten oder erdachten Kauf an. Halte fest, an welchem Punkt du gezögert hast und warum.",
+          "reflectionPrompt": "Welchen Punkt einer Prüf-Checkliste überspringst du im Alltag am ehesten – und was könnte dich das kosten?"
         },
         "glossaryTerms": [
           "Finanzentscheidung",
@@ -1606,139 +1606,139 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Finanzentscheidung prüfen: Gute Finanzentscheidungen entstehen durch Prüfung statt Druck, Gefühl oder einzelne Zahlen. Beispiel: Vor Investition, Vertrag oder Ratenkauf prüfst du Ziel, Kosten, Risiken, Alternativen und Sicherheit. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Wenn ich genug gelernt habe, brauche ich keine Checkliste.“.",
-          "young_adults": "Finanzentscheidung prüfen: Gute Finanzentscheidungen entstehen durch Prüfung statt Druck, Gefühl oder einzelne Zahlen. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Vor Investition, Vertrag oder Ratenkauf prüfst du Ziel, Kosten, Risiken, Alternativen und Sicherheit.",
-          "parents_teachers": "Lernziel: Einen strukturierten Prüfprozess für Finanzentscheidungen anwenden. Didaktischer Fokus: Gute Finanzentscheidungen entstehen durch Prüfung statt Druck, Gefühl oder einzelne Zahlen. Typische Fehlvorstellung: „Wenn ich genug gelernt habe, brauche ich keine Checkliste.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Bevor du eine größere Geldsache machst, lohnt sich eine kleine Checkliste – so wie du vor einer Radtour Bremsen und Reifen prüfst. Frag dich: Was will ich eigentlich erreichen? Was kostet es wirklich, mit allem drum und dran? Was kann schiefgehen? Gibt es eine bessere oder günstigere Alternative? Und: Ist das Ganze überhaupt seriös? Wenn du bei einer dieser Fragen ins Stocken gerätst, ist das ein Zeichen, noch nicht zuzuschlagen. Das Beste daran: Diese fünf Fragen schützen dich vor Druck und Werbetricks, weil sie dich zum Nachdenken zwingen, bevor du entscheidest.",
+          "young_adults": "Je wichtiger eine Finanzentscheidung, desto weniger solltest du sie dem Bauchgefühl überlassen. Ein einfacher Prüfprozess in fünf Schritten hilft: Ziel (Wozu brauche ich das?), Kosten (Was kostet es wirklich, inklusive Gebühren und Zinsen über die Laufzeit?), Risiken (Was kann schiefgehen, und kann ich das tragen?), Alternativen (Gibt es günstigere oder passendere Optionen?) und Seriosität (Wer steckt dahinter, gibt es Warnsignale wie Zeitdruck oder unrealistische Versprechen?). Halte die Antworten kurz schriftlich fest – das entlarvt Lücken, an denen ein spontanes Ja gescheitert wäre. Im Zweifel eine unabhängige Vertrauensperson oder Quelle einbeziehen.",
+          "parents_teachers": "Ziel ist ein reproduzierbarer Entscheidungsprozess, der Affekt- und Druckentscheidungen durch systematische Prüfung ersetzt: Ziel, Kosten, Risiken, Alternativen, Seriosität. Betonen Sie das schriftliche Festhalten der Antworten, das Denkfehler und Lücken sichtbar macht, sowie den Wert unabhängiger Zweitmeinungen. Greifen Sie die Fehlvorstellung auf, wachsendes Wissen mache eine Checkliste überflüssig – gerade Erfahrene unterschätzen Routinefehler und Selbstüberschätzung; die Struktur schützt unabhängig vom Wissensstand."
         },
         "questions": [
           {
             "id": "q_finanzentscheidung_pruefen_001",
             "level": "explain",
-            "question": "Was beschreibt „Finanzentscheidung prüfen“ am besten?",
+            "question": "Wie entsteht laut diesem Modul eine gute Finanzentscheidung?",
             "points": 100,
-            "correctAnswer": "Gute Finanzentscheidungen entstehen durch Prüfung statt Druck, Gefühl oder einzelne Zahlen.",
+            "correctAnswer": "Durch eine ruhige Prüfung von Ziel, Kosten, Risiken, Alternativen und Seriosität.",
             "distractors": [
               {
-                "text": "Wenn ich genug gelernt habe, brauche ich keine Checkliste.",
+                "text": "Wenn ich genug gelernt habe, brauche ich keine Checkliste mehr.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Sie garantiert automatisch Gewinn und Sicherheit.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Sie hat mit Geldentscheidungen eigentlich nichts zu tun.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Gute Finanzentscheidungen entstehen durch Prüfung statt Druck, Gefühl oder einzelne Zahlen."
+            "explanationAfterAnswer": "Genau: Struktur schlägt Bauchgefühl. Die fünf Prüfpunkte machen aus einer spontanen eine überlegte Entscheidung."
           },
           {
             "id": "q_finanzentscheidung_pruefen_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Finanzentscheidung prüfen“?",
+            "question": "Welches Vorgehen entspricht einer geprüften Finanzentscheidung?",
             "points": 100,
-            "correctAnswer": "Vor Investition, Vertrag oder Ratenkauf prüfst du Ziel, Kosten, Risiken, Alternativen und Sicherheit.",
+            "correctAnswer": "Vor Vertrag oder Kauf Ziel, Kosten, Risiken, Alternativen und Seriosität kurz durchgehen.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Wegen eines Countdowns im Angebot sofort und ohne Prüfung zusagen.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen einfach als sicher annehmen.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Sich allein danach richten, was Freunde gerade gekauft haben.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Die fünf Fragen vor der Zusage durchzugehen ist der Kern des Prüfprozesses – ruhig statt unter Druck."
           },
           {
             "id": "q_finanzentscheidung_pruefen_003",
             "level": "understand",
-            "question": "Warum ist „Finanzentscheidung prüfen“ für Finanzbildung wichtig?",
+            "question": "Warum lohnt es sich, die Antworten der Checkliste kurz aufzuschreiben?",
             "points": 120,
-            "correctAnswer": "Einen strukturierten Prüfprozess für Finanzentscheidungen anwenden.",
+            "correctAnswer": "Weil das Aufschreiben Lücken und Denkfehler sichtbar macht, die man im Kopf leicht überspringt.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil eine Entscheidung nur mit Unterschrift rechtlich gültig wird.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil man dadurch die Prüfung insgesamt überspringen kann.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil es für die Qualität der Entscheidung keine Rolle spielt.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Einen strukturierten Prüfprozess für Finanzentscheidungen anwenden."
+            "explanationAfterAnswer": "Was im Kopf plausibel klingt, entpuppt sich schriftlich oft als Lücke. Notieren macht Schwachstellen sichtbar."
           },
           {
             "id": "q_finanzentscheidung_pruefen_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Ein Angebot setzt dich mit einem Countdown unter Druck. Wie wendest du deinen Prüfprozess an?",
             "points": 150,
-            "correctAnswer": "Innehalten, Informationen prüfen und erst dann passend zum eigenen Ziel handeln.",
+            "correctAnswer": "Den Zeitdruck bewusst ignorieren, die fünf Prüfpunkte durchgehen und erst danach entscheiden.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "Sofort zusagen, weil der Countdown gleich abläuft.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "Nur auf die beworbene Rendite schauen und den Rest überspringen.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "Kosten, Risiken und Alternativen wegen der Eile weglassen.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "Ein echtes gutes Angebot übersteht die Prüfung. Der Countdown ist ein Warnsignal, kein Grund zur Eile."
           },
           {
             "id": "q_finanzentscheidung_pruefen_005",
             "level": "master",
-            "question": "Welche Aussage zu „Finanzentscheidung prüfen“ stimmt am besten?",
+            "question": "Welche Aussage über das Prüfen von Finanzentscheidungen ist am treffendsten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Eine Checkliste ersetzt kein Wissen, aber sie schützt auch Erfahrene vor Routinefehlern und Druckentscheidungen.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Wer genug gelernt hat, braucht keine Prüfstruktur mehr.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Eine Checkliste garantiert, dass jede Entscheidung Gewinn bringt.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Ein Prüfprozess lohnt sich nur bei sehr großen Beträgen.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Meistern heißt erkennen: Gerade Erfahrene unterschätzen Routinefehler – die Struktur schützt unabhängig vom Wissensstand."
           }
         ],
         "calculationTemplates": [],
         "teacherSupport": {
           "competenceGoal": "Einen strukturierten Prüfprozess für Finanzentscheidungen anwenden.",
-          "typicalMisconception": "Wenn ich genug gelernt habe, brauche ich keine Checkliste.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Wenn ich genug gelernt habe, brauche ich keine Checkliste.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Finanzentscheidung prüfen“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "typicalMisconception": "Wenn ich genug über Geld gelernt habe, brauche ich keine Checkliste mehr.",
+          "discussionPrompt": "Warum machen manchmal gerade erfahrene Menschen teure Fehler, obwohl sie es eigentlich besser wissen?",
+          "classroomActivity": "Die Klasse entwickelt gemeinsam eine Fünf-Punkte-Checkliste (Ziel, Kosten, Risiken, Alternativen, Seriosität) und wendet sie auf zwei erdachte Angebote an – ein seriöses und ein zweifelhaftes –, um zu zeigen, an welchem Punkt das schlechte Angebot durchfällt."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Finanzentscheidung prüfen“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Finanzentscheidung prüfen“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Welche fünf Fragen würdest du dir stellen, bevor du etwas Teures kaufst oder einen Vertrag unterschreibst?",
+          "everydayExercise": "Erstellen Sie gemeinsam eine kleine Prüf-Checkliste und heften Sie sie sichtbar auf. Wenden Sie sie beim nächsten größeren Kaufwunsch Ihres Kindes gemeinsam Schritt für Schritt an."
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       }
     ]
   }

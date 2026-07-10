@@ -11,8 +11,8 @@
     "id": "tb_sparen_zinsen_inflation",
     "title": "Sparen, Zinsen, Inflation und Kaufkraft",
     "unlockLevel": 3,
-    "goal": "Lernende verstehen, dass Geld über Zeit wachsen oder Kaufkraft verlieren kann.",
-    "pedagogicalIdea": "Dieser Block verbindet Sparen mit Zinsen, Zinseszins, Inflation, Kaufkraft und realem Wert.",
+    "goal": "Lernende verstehen, wie Zinsen und Zinseszins Geld über Zeit wachsen lassen und wie Inflation die Kaufkraft schleichend mindert, sodass sie den realen Wert ihres Geldes einschätzen können.",
+    "pedagogicalIdea": "Der Block verbindet Sparen, Zinsen und Zinseszins mit Inflation, Kaufkraft und der Unterscheidung von nominal und real. So wird deutlich, dass es nicht auf die reine Zahl ankommt, sondern darauf, was das Geld langfristig wert bleibt.",
     "modules": [
       {
         "id": "konzept_zinsen",
@@ -24,12 +24,12 @@
           "konzept_notgroschen"
         ],
         "pedagogy": {
-          "learningGoal": "Zinsen als Preis oder Belohnung für die zeitweise Nutzung von Geld verstehen.",
-          "coreIdea": "Zinsen sind Geld für Zeit: Man kann sie bekommen oder zahlen.",
-          "everydayScenario": "Du legst Geld auf ein verzinstes Konto und bekommst nach einiger Zeit etwas dazu.",
-          "misconception": "Zinsen sind immer ein Geschenk.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Was sind Zinsen?' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Was sind Zinsen?' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "learningGoal": "Zinsen als Preis für die zeitweise Nutzung von Geld verstehen: Wer Geld verleiht, bekommt Zinsen; wer Geld leiht, zahlt sie.",
+          "coreIdea": "Zinsen sind eine Art Miete für Geld: eine kleine Menge Geld, die man für eine bestimmte Zeit dazubekommt oder zusätzlich zahlt.",
+          "everydayScenario": "Du legst dein Taschengeld auf ein Sparkonto. Nach einem Jahr sind dort ein paar Euro mehr, ohne dass du etwas getan hast: das sind die Zinsen der Bank.",
+          "misconception": "Zinsen bekommt man einfach geschenkt, ohne dass jemand dafür etwas gibt.",
+          "transferTask": "Stell dir vor, du leihst deinem Bruder 20 Euro und er gibt dir nach zwei Monaten 22 Euro zurück. Erkläre, welcher Teil davon Zinsen sind und warum er dir mehr zurückgibt, als er bekommen hat.",
+          "reflectionPrompt": "Wenn du glaubst, Zinsen seien immer ein Geschenk: Wie könnte dich das bei einem Ratenkauf oder einem Kredit später Geld kosten?"
         },
         "glossaryTerms": [
           "Zinsen",
@@ -46,139 +46,139 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Was sind Zinsen?: Zinsen sind Geld für Zeit: Man kann sie bekommen oder zahlen. Beispiel: Du legst Geld auf ein verzinstes Konto und bekommst nach einiger Zeit etwas dazu. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Zinsen sind immer ein Geschenk.“.",
-          "young_adults": "Was sind Zinsen?: Zinsen sind Geld für Zeit: Man kann sie bekommen oder zahlen. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Du legst Geld auf ein verzinstes Konto und bekommst nach einiger Zeit etwas dazu.",
-          "parents_teachers": "Lernziel: Zinsen als Preis oder Belohnung für die zeitweise Nutzung von Geld verstehen. Didaktischer Fokus: Zinsen sind Geld für Zeit: Man kann sie bekommen oder zahlen. Typische Fehlvorstellung: „Zinsen sind immer ein Geschenk.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Zinsen sind so etwas wie eine Miete für Geld. Wenn du dein Taschengeld auf ein Sparkonto legst, darf die Bank damit eine Weile arbeiten. Als Dankeschön legt sie dir am Ende ein bisschen Geld obendrauf: die Zinsen. Es geht aber auch andersherum. Wenn du dir Geld leihst, musst du später etwas mehr zurückzahlen, als du bekommen hast. Zinsen kann man also bekommen oder zahlen. Wie viel es ist, hängt davon ab, wie viel Geld es ist und wie lange.",
+          "young_adults": "Zinsen sind der Preis dafür, Geld eine bestimmte Zeit lang zu nutzen. Legst du Geld an, bekommst du Guthabenzinsen: Die Bank zahlt dir etwas dafür, dass sie mit deinem Geld arbeiten darf. Leihst du dir Geld, etwa für einen Ratenkauf oder einen Kredit, zahlst du Kreditzinsen: Das kostet dich extra. Die gleiche Idee wirkt in beide Richtungen und Kreditzinsen sind fast immer deutlich höher als Guthabenzinsen. Deshalb lohnt es sich, bei jedem Ratenangebot auf den Zinssatz und die Gesamtkosten zu schauen, nicht nur auf die monatliche Rate.",
+          "parents_teachers": "Zinsen sind der Preis für die zeitweise Überlassung von Geld. Beim Sparen erhalten die Lernenden Guthabenzinsen, bei Krediten zahlen sie Kreditzinsen. Wichtig ist, beide Richtungen von Anfang an zusammen zu denken. Eine verbreitete Fehlvorstellung ist, Zinsen seien ein reines Geschenk der Bank. Greifen Sie das auf, indem Sie deutlich machen, dass die Bank mit dem eingelegten Geld selbst wirtschaftet und dass umgekehrt Kreditzinsen echte Kosten sind. Ein Vergleich von typischen Spar- und Kreditzinssätzen macht das Gefälle anschaulich."
         },
         "questions": [
           {
             "id": "q_zinsen_001",
             "level": "explain",
-            "question": "Was beschreibt „Was sind Zinsen?“ am besten?",
+            "question": "Was sind Zinsen?",
             "points": 100,
-            "correctAnswer": "Zinsen sind Geld für Zeit: Man kann sie bekommen oder zahlen.",
+            "correctAnswer": "Geld, das man für die zeitweise Nutzung von Geld bekommt oder zahlt.",
             "distractors": [
               {
-                "text": "Zinsen sind immer ein Geschenk.",
+                "text": "Ein Geschenk der Bank, für das niemand etwas geben muss.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Immer nur Kosten, die man beim Geldleihen zahlen muss.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Der Name für das Bargeld, das im Sparschwein liegt.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Zinsen sind Geld für Zeit: Man kann sie bekommen oder zahlen."
+            "explanationAfterAnswer": "Genau: Zinsen sind der Preis für Geld über Zeit. Man kann sie beim Sparen bekommen oder beim Leihen zahlen."
           },
           {
             "id": "q_zinsen_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Was sind Zinsen?“?",
+            "question": "In welchem Beispiel fallen Zinsen an?",
             "points": 100,
-            "correctAnswer": "Du legst Geld auf ein verzinstes Konto und bekommst nach einiger Zeit etwas dazu.",
+            "correctAnswer": "Du legst 100 Euro aufs Sparkonto und hast nach einem Jahr etwas mehr als 100 Euro.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Du tauschst mit einer Freundin zwei Sammelkarten gegen eine.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Du zahlst 100 Euro auf dein Konto ein und hebst am nächsten Tag genau 100 Euro wieder ab.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Du bekommst dein Taschengeld jede Woche in gleicher Höhe.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Beim Sparkonto arbeitet die Bank mit deinem Geld und zahlt dir dafür Zinsen. Deshalb ist am Ende etwas mehr da."
           },
           {
             "id": "q_zinsen_003",
             "level": "understand",
-            "question": "Warum ist „Was sind Zinsen?“ für Finanzbildung wichtig?",
+            "question": "Warum zahlt dir eine Bank überhaupt Zinsen für dein Erspartes?",
             "points": 120,
-            "correctAnswer": "Zinsen als Preis oder Belohnung für die zeitweise Nutzung von Geld verstehen.",
+            "correctAnswer": "Weil sie mit deinem eingelegten Geld arbeiten darf und dich dafür belohnt.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil dein Geld auf dem Konto von allein mehr wird.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil Sparen gesetzlich vorgeschrieben ist und belohnt werden muss.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil die Bank keinen Platz für so viel Bargeld hat.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Zinsen als Preis oder Belohnung für die zeitweise Nutzung von Geld verstehen."
+            "explanationAfterAnswer": "Die Bank verleiht das eingelegte Geld weiter und verdient daran. Einen Teil gibt sie dir als Zinsen zurück, geschenkt ist es nicht."
           },
           {
             "id": "q_zinsen_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Ein Onlineshop bietet dir eine Konsole für 300 Euro sofort oder in 12 Raten mit insgesamt 342 Euro an. Was bedeuten die 42 Euro Unterschied?",
             "points": 150,
-            "correctAnswer": "Den Begriff verstehen, Beispiele erkennen und ihn von ähnlichen Begriffen abgrenzen.",
+            "correctAnswer": "Das sind Kreditzinsen: die Kosten dafür, dass du erst später zahlst.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "Das sind Guthabenzinsen, die der Shop dir gutschreibt.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "Das ist ein Rabatt, den du bekommst, weil du in Raten zahlst.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "Das ist eine einmalige Bearbeitungsgebühr, die nichts mit Zinsen zu tun hat.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "Ratenkäufe sind ein Kredit. Die 42 Euro sind Zinsen, die du zahlst, weil du das Geld erst über die Zeit aufbringst."
           },
           {
             "id": "q_zinsen_005",
             "level": "master",
-            "question": "Welche Aussage zu „Was sind Zinsen?“ stimmt am besten?",
+            "question": "Welche Aussage über Zinsen ist am treffendsten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Zinsen wirken in beide Richtungen; beim Leihen sind sie meist deutlich höher als beim Sparen.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Zinsen beim Sparen und beim Leihen sind normalerweise gleich hoch.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Zinsen entstehen nur beim Sparen, nie beim Leihen.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Zinsen sind immer so niedrig, dass man sie ignorieren kann.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Kreditzinsen liegen fast immer klar über Guthabenzinsen. Genau deshalb lohnt Sparen langsam und schnell aufgenommene Schulden werden schnell teuer."
           }
         ],
         "calculationTemplates": [],
         "teacherSupport": {
-          "competenceGoal": "Zinsen als Preis oder Belohnung für die zeitweise Nutzung von Geld verstehen.",
-          "typicalMisconception": "Zinsen sind immer ein Geschenk.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Zinsen sind immer ein Geschenk.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Was sind Zinsen?“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "competenceGoal": "Zinsen als Preis für die zeitweise Nutzung von Geld verstehen und Guthaben- von Kreditzinsen unterscheiden.",
+          "typicalMisconception": "Zinsen bekommt man geschenkt, ohne dass jemand dafür etwas gibt.",
+          "discussionPrompt": "Wenn Zinsen ein reines Geschenk wären: Warum sind dann die Zinsen bei einem Ratenkauf so viel höher als die auf dem Sparkonto?",
+          "classroomActivity": "Sammeln Sie an der Tafel aktuelle Spar- und Kreditzinssätze (z. B. Tagesgeld gegen Dispo oder Ratenkredit). Die Lernenden ordnen jeweils zu, wer zahlt und wer bekommt, und schätzen an einem Beispielbetrag, wie stark das Gefälle wirkt."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Was sind Zinsen?“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Was sind Zinsen?“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Zeigen Sie Ihrem Kind einmal den Kontoauszug oder ein Ratenangebot und fragen Sie: Bekommen wir hier Zinsen oder zahlen wir welche?",
+          "everydayExercise": "Legen Sie gemeinsam einen kleinen Betrag für ein festes Sparziel zurück und schauen Sie in einigen Monaten nach, ob und wie viel Zinsen dazugekommen sind. Vergleichen Sie das mit den Zinsen eines fiktiven Ratenkaufs."
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_zinsen_bekommen_zahlen",
@@ -189,12 +189,12 @@
           "konzept_zinsen"
         ],
         "pedagogy": {
-          "learningGoal": "Guthabenzinsen und Kreditzinsen unterscheiden.",
-          "coreIdea": "Für Sparer können Zinsen Ertrag sein; für Kreditnehmer sind sie Kosten.",
-          "everydayScenario": "Mia spart 200 Euro und bekommt Zinsen; Ben leiht 200 Euro und zahlt mehr zurück.",
-          "misconception": "Zinsen bedeuten immer, dass ich Geld bekomme.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Zinsen bekommen und Zinsen zahlen' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Zinsen bekommen und Zinsen zahlen' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "learningGoal": "Guthabenzinsen als Ertrag beim Sparen und Kreditzinsen als Kosten beim Leihen unterscheiden und erkennen, dass Kreditzinsen meist höher sind.",
+          "coreIdea": "Sparst du, bekommst du Zinsen dazu. Leihst du dir Geld, zahlst du Zinsen drauf, und das ist fast immer teurer, als Sparen bringt.",
+          "everydayScenario": "Mia legt 200 Euro aufs Sparkonto und bekommt nach einem Jahr ein paar Euro Zinsen dazu. Ben leiht sich 200 Euro und muss am Ende mehr als 200 Euro zurückzahlen.",
+          "misconception": "Zinsen bedeuten immer, dass ich Geld dazubekomme.",
+          "transferTask": "Beschreibe eine Situation, in der du Zinsen bekommst, und eine, in der du Zinsen zahlst. Erkläre bei beiden, ob es sich für dich lohnt.",
+          "reflectionPrompt": "Warum kann es teuer werden, wenn man sich Geld leiht, um damit gleichzeitig zu sparen?"
         },
         "glossaryTerms": [
           "Guthabenzinsen",
@@ -210,139 +210,139 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Zinsen bekommen und Zinsen zahlen: Für Sparer können Zinsen Ertrag sein; für Kreditnehmer sind sie Kosten. Beispiel: Mia spart 200 Euro und bekommt Zinsen; Ben leiht 200 Euro und zahlt mehr zurück. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Zinsen bedeuten immer, dass ich Geld bekomme.“.",
-          "young_adults": "Zinsen bekommen und Zinsen zahlen: Für Sparer können Zinsen Ertrag sein; für Kreditnehmer sind sie Kosten. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Mia spart 200 Euro und bekommt Zinsen; Ben leiht 200 Euro und zahlt mehr zurück.",
-          "parents_teachers": "Lernziel: Guthabenzinsen und Kreditzinsen unterscheiden. Didaktischer Fokus: Für Sparer können Zinsen Ertrag sein; für Kreditnehmer sind sie Kosten. Typische Fehlvorstellung: „Zinsen bedeuten immer, dass ich Geld bekomme.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Zinsen gibt es in zwei Richtungen. Wenn du sparst, bekommst du Zinsen dazu: Das nennt man Guthabenzinsen. Wenn du dir Geld leihst, musst du Zinsen zahlen: Das sind Kreditzinsen. Stell dir Mia und Ben vor. Mia spart 200 Euro und bekommt am Ende ein paar Euro mehr. Ben leiht sich 200 Euro und zahlt am Ende mehr als 200 Euro zurück. Wichtig: Leihen kostet fast immer mehr, als Sparen einbringt. Deshalb lohnt es sich, lieber erst zu sparen, als sich Geld zu leihen.",
+          "young_adults": "Ob Zinsen gut oder schlecht für dich sind, hängt von der Richtung ab. Beim Sparen bekommst du Guthabenzinsen, sie sind dein Ertrag. Beim Leihen zahlst du Kreditzinsen, sie sind deine Kosten. Der Haken: Kreditzinsen liegen fast immer deutlich über Guthabenzinsen. Wer 200 Euro spart, bekommt vielleicht ein paar Euro; wer 200 Euro als Ratenkredit oder über den Dispo aufnimmt, zahlt schnell zweistellige Prozentsätze. Achte deshalb bei Ratenangeboten nicht nur auf die Rate, sondern auf die Gesamtkosten: Betrag plus alle Zinsen.",
+          "parents_teachers": "Das Modul trennt die beiden Rollen: Als Sparer erzielt man Zinsen als Ertrag, als Kreditnehmer trägt man sie als Kosten. Entscheidend ist das reale Gefälle: Kreditzinsen, besonders bei Dispo oder Konsumkrediten, übersteigen Guthabenzinsen meist um ein Vielfaches. Die Fehlvorstellung, Zinsen bedeuteten stets einen Gewinn, führt zu unterschätzten Kreditkosten. Arbeiten Sie mit der Gesamtkostenbetrachtung: Nicht die monatliche Rate, sondern die Summe aus Kreditbetrag und allen Zinsen zeigt den wahren Preis eines Ratenkaufs."
         },
         "questions": [
           {
             "id": "q_zinsen_bekommen_zahlen_001",
             "level": "explain",
-            "question": "Was beschreibt „Zinsen bekommen und Zinsen zahlen“ am besten?",
+            "question": "Was ist der Unterschied zwischen Guthabenzinsen und Kreditzinsen?",
             "points": 100,
-            "correctAnswer": "Für Sparer können Zinsen Ertrag sein; für Kreditnehmer sind sie Kosten.",
+            "correctAnswer": "Guthabenzinsen bekommt man beim Sparen, Kreditzinsen zahlt man beim Leihen.",
             "distractors": [
               {
-                "text": "Zinsen bedeuten immer, dass ich Geld bekomme.",
+                "text": "Beide bekommt man, egal ob man spart oder sich Geld leiht.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Guthabenzinsen zahlt man, Kreditzinsen bekommt man.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Es gibt keinen Unterschied, das sind nur zwei Wörter für dasselbe.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Für Sparer können Zinsen Ertrag sein; für Kreditnehmer sind sie Kosten."
+            "explanationAfterAnswer": "Richtig: Sparen bringt Guthabenzinsen als Ertrag, Leihen kostet Kreditzinsen."
           },
           {
             "id": "q_zinsen_bekommen_zahlen_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Zinsen bekommen und Zinsen zahlen“?",
+            "question": "In welchem Fall zahlt jemand Zinsen, statt welche zu bekommen?",
             "points": 100,
-            "correctAnswer": "Mia spart 200 Euro und bekommt Zinsen; Ben leiht 200 Euro und zahlt mehr zurück.",
+            "correctAnswer": "Ben leiht sich 200 Euro und zahlt am Ende mehr als 200 Euro zurück.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Lena bekommt ihr Taschengeld wie immer pünktlich am Monatsanfang.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Mia legt 200 Euro aufs Sparkonto und hat nach einem Jahr etwas mehr.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Paul kauft eine Konsole für 200 Euro und zahlt an der Kasse genau 200 Euro.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Wer sich Geld leiht, zahlt Kreditzinsen und gibt am Ende mehr zurück, als er bekommen hat."
           },
           {
             "id": "q_zinsen_bekommen_zahlen_003",
             "level": "understand",
-            "question": "Warum ist „Zinsen bekommen und Zinsen zahlen“ für Finanzbildung wichtig?",
+            "question": "Warum ist es meist ungünstig, sich Geld zu leihen, um damit gleichzeitig zu sparen?",
             "points": 120,
-            "correctAnswer": "Guthabenzinsen und Kreditzinsen unterscheiden.",
+            "correctAnswer": "Weil die Kreditzinsen, die man zahlt, in der Regel höher sind als die Guthabenzinsen, die man bekommt.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil die Zinsen beim Sparen und beim Leihen gleich hoch sind und sich nichts ändert.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil man dann gar keine Zinsen mehr bekommt.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil Sparen und Leihen sich gegenseitig verbieten.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Guthabenzinsen und Kreditzinsen unterscheiden."
+            "explanationAfterAnswer": "Man zahlt mehr Zinsen, als man bekommt, und macht dadurch unterm Strich Verlust. Erst sparen, dann kaufen ist meist günstiger."
           },
           {
             "id": "q_zinsen_bekommen_zahlen_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Du willst dir ein Fahrrad für 400 Euro kaufen. Angebot A: 6 Monate sparen und bar zahlen. Angebot B: sofort auf Raten für insgesamt 448 Euro. Was ist die klügere Entscheidung, wenn du auf das Rad noch etwas warten kannst?",
             "points": 150,
-            "correctAnswer": "Innehalten, Informationen prüfen und erst dann passend zum eigenen Ziel handeln.",
+            "correctAnswer": "Sparen und bar zahlen, weil du dann die 48 Euro Zinsen sparst.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "Auf Raten kaufen, weil die monatliche Rate klein ist.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "Auf Raten kaufen, weil man dabei sogar Guthabenzinsen bekommt.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "Beides ist völlig gleich, weil am Ende dasselbe Rad dasteht.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "Wenn du warten kannst, sparst du dir die 48 Euro Kreditzinsen. Die kleine Rate verdeckt oft, wie viel der Kauf insgesamt teurer wird."
           },
           {
             "id": "q_zinsen_bekommen_zahlen_005",
             "level": "master",
-            "question": "Welche Aussage zu „Zinsen bekommen und Zinsen zahlen“ stimmt am besten?",
+            "question": "Worauf sollte man bei einem Ratenangebot am ehesten achten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Auf die Gesamtkosten aus Kaufpreis und allen Zinsen, nicht nur auf die Höhe der Monatsrate.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Nur auf die Höhe der monatlichen Rate, denn die zeigt den Preis.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Auf die Anzahl der Raten, denn mehr Raten heißt immer günstiger.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Nur auf den Barpreis, denn die Zinsen fallen ohnehin kaum ins Gewicht.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Eine kleine Rate kann trotzdem viel kosten. Erst die Summe aus Preis und Zinsen zeigt, wie teuer der Ratenkauf wirklich ist."
           }
         ],
         "calculationTemplates": [],
         "teacherSupport": {
-          "competenceGoal": "Guthabenzinsen und Kreditzinsen unterscheiden.",
-          "typicalMisconception": "Zinsen bedeuten immer, dass ich Geld bekomme.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Zinsen bedeuten immer, dass ich Geld bekomme.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Zinsen bekommen und Zinsen zahlen“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "competenceGoal": "Guthaben- und Kreditzinsen als Ertrag bzw. Kosten unterscheiden und Ratenangebote über die Gesamtkosten beurteilen.",
+          "typicalMisconception": "Zinsen bedeuten immer, dass ich Geld dazubekomme.",
+          "discussionPrompt": "Wann sind Zinsen ein Vorteil für mich und wann ein Nachteil? Woran erkenne ich, auf welcher Seite ich gerade stehe?",
+          "classroomActivity": "Teilen Sie die Klasse in Sparer und Kreditnehmer. Beide Gruppen rechnen an einem gleich hohen Betrag durch, wer am Jahresende wie viel mehr oder weniger hat. Anschließend Vergleich der Ergebnisse und Diskussion, warum das Gefälle entsteht."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Zinsen bekommen und Zinsen zahlen“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Zinsen bekommen und Zinsen zahlen“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Sprechen Sie über einen echten Ratenkauf aus dem Alltag und rechnen Sie gemeinsam aus, wie viel teurer die Ratenvariante gegenüber dem Barkauf ist.",
+          "everydayExercise": "Wenn Ihr Kind sich etwas Größeres wünscht, planen Sie zusammen zwei Wege: einige Wochen sparen oder sofort leihen. Notieren Sie beide Endpreise und besprechen Sie, welcher Weg sich lohnt."
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_zinsen_berechnen",
@@ -353,12 +353,12 @@
           "konzept_zinsen_bekommen_zahlen"
         ],
         "pedagogy": {
-          "learningGoal": "Einfache Zinsen mit Betrag, Zinssatz und Zeit berechnen.",
-          "coreIdea": "Zinsen hängen von Geldbetrag, Zinssatz und Laufzeit ab.",
-          "everydayScenario": "100 Euro zu 3 Prozent bringen in einem Jahr 3 Euro Zinsen.",
-          "misconception": "3 Prozent Zinsen bedeutet immer 3 Euro, egal wie viel Geld man hat.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Einfache Zinsen berechnen' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Einfache Zinsen berechnen' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "learningGoal": "Einfache Zinsen aus Betrag, Zinssatz und Laufzeit berechnen und verstehen, dass alle drei Größen das Ergebnis beeinflussen.",
+          "coreIdea": "Der Zinssatz ist ein Prozentanteil vom angelegten Betrag. Je mehr Geld und je länger die Laufzeit, desto mehr Zinsen.",
+          "everydayScenario": "100 Euro zu 3 Prozent bringen in einem Jahr 3 Euro Zinsen. 200 Euro zu 3 Prozent bringen im selben Jahr schon 6 Euro.",
+          "misconception": "3 Prozent Zinsen bedeuten immer 3 Euro, egal wie viel Geld man anlegt.",
+          "transferTask": "Rechne aus, wie viele Zinsen du bekommst, wenn du 150 Euro ein Jahr lang zu 2 Prozent anlegst. Erkläre dann, was sich ändert, wenn du stattdessen 300 Euro anlegst.",
+          "reflectionPrompt": "Warum sagt der Zinssatz allein noch nicht, wie viel Geld du am Ende dazubekommst?"
         },
         "glossaryTerms": [
           "Zinssatz",
@@ -375,125 +375,125 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Einfache Zinsen berechnen: Zinsen hängen von Geldbetrag, Zinssatz und Laufzeit ab. Beispiel: 100 Euro zu 3 Prozent bringen in einem Jahr 3 Euro Zinsen. Wichtig ist die Abgrenzung zur Fehlvorstellung: „3 Prozent Zinsen bedeutet immer 3 Euro, egal wie viel Geld man hat.“.",
-          "young_adults": "Einfache Zinsen berechnen: Zinsen hängen von Geldbetrag, Zinssatz und Laufzeit ab. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: 100 Euro zu 3 Prozent bringen in einem Jahr 3 Euro Zinsen.",
-          "parents_teachers": "Lernziel: Einfache Zinsen mit Betrag, Zinssatz und Zeit berechnen. Didaktischer Fokus: Zinsen hängen von Geldbetrag, Zinssatz und Laufzeit ab. Typische Fehlvorstellung: „3 Prozent Zinsen bedeutet immer 3 Euro, egal wie viel Geld man hat.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Der Zinssatz sagt dir nicht, wie viele Euro du bekommst, sondern welchen Anteil. 3 Prozent heißt: von 100 Euro bekommst du 3 Euro. Aber von 200 Euro sind 3 Prozent schon 6 Euro. Du rechnest die Zinsen so aus: Betrag mal Zinssatz, geteilt durch 100. Wichtig ist auch die Zeit: Je länger dein Geld liegt, desto mehr Zinsen sammeln sich an. Deshalb hängen die Zinsen immer von drei Dingen ab: wie viel Geld, welcher Zinssatz und wie lange.",
+          "young_adults": "Einfache Zinsen berechnest du mit der Formel: Zinsen gleich Betrag mal Zinssatz geteilt durch 100, pro Jahr. Bei 500 Euro und 2 Prozent sind das 10 Euro im Jahr. Der Zinssatz ist ein Prozentanteil, kein fester Eurobetrag. Genau das wird oft verwechselt: 3 Prozent bringen bei 100 Euro 3 Euro, bei 1000 Euro aber 30 Euro. Bei den einfachen Zinsen bleibt der Ausgangsbetrag jedes Jahr gleich; über mehrere Jahre summieren sich die Zinsen linear. Diese Grundrechnung hilft dir, Sparangebote und Kreditkosten realistisch einzuschätzen.",
+          "parents_teachers": "Die einfachen Zinsen ergeben sich als Betrag mal Zinssatz geteilt durch 100 pro Jahr; über mehrere Jahre summieren sie sich linear, da stets der gleiche Grundbetrag verzinst wird. Die zentrale Fehlvorstellung ist die Verwechslung von Prozentsatz und Eurobetrag. Machen Sie deutlich, dass Prozent immer einen Anteil vom Grundbetrag meint. Rechnen Sie denselben Zinssatz an unterschiedlichen Beträgen durch, damit die Lernenden erkennen, dass gleicher Zinssatz nicht gleicher Ertrag bedeutet."
         },
         "questions": [
           {
             "id": "q_zinsen_berechnen_001",
             "level": "explain",
-            "question": "Was beschreibt „Einfache Zinsen berechnen“ am besten?",
+            "question": "Wie berechnet man die einfachen Zinsen für ein Jahr?",
             "points": 100,
-            "correctAnswer": "Zinsen hängen von Geldbetrag, Zinssatz und Laufzeit ab.",
+            "correctAnswer": "Betrag mal Zinssatz, geteilt durch 100.",
             "distractors": [
               {
-                "text": "3 Prozent Zinsen bedeutet immer 3 Euro, egal wie viel Geld man hat.",
+                "text": "Der Zinssatz ist immer gleich der Zinssumme in Euro.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Betrag mal Zinssatz, ohne durch 100 zu teilen.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Betrag geteilt durch die Anzahl der Monate.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Zinsen hängen von Geldbetrag, Zinssatz und Laufzeit ab."
+            "explanationAfterAnswer": "Richtig: Zinsen gleich Betrag mal Zinssatz geteilt durch 100. So kommst du vom Prozentsatz auf den Eurobetrag."
           },
           {
             "id": "q_zinsen_berechnen_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Einfache Zinsen berechnen“?",
+            "question": "Wie viele Zinsen bringen 100 Euro in einem Jahr bei 3 Prozent?",
             "points": 100,
-            "correctAnswer": "100 Euro zu 3 Prozent bringen in einem Jahr 3 Euro Zinsen.",
+            "correctAnswer": "3 Euro.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "30 Euro.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "103 Euro.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "0,30 Euro.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "100 mal 3 geteilt durch 100 sind 3 Euro. Der Betrag von 103 Euro wäre das Guthaben inklusive Zinsen, nicht die Zinsen selbst."
           },
           {
             "id": "q_zinsen_berechnen_003",
             "level": "understand",
-            "question": "Warum ist „Einfache Zinsen berechnen“ für Finanzbildung wichtig?",
+            "question": "Warum sagt der Zinssatz allein noch nicht, wie viele Euro Zinsen du bekommst?",
             "points": 120,
-            "correctAnswer": "Einfache Zinsen mit Betrag, Zinssatz und Zeit berechnen.",
+            "correctAnswer": "Weil der Zinssatz ein Prozentanteil ist und der Eurobetrag zusätzlich vom angelegten Betrag abhängt.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil 3 Prozent immer genau 3 Euro bedeuten.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil der Zinssatz jeden Tag zufällig neu festgelegt wird.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil Zinsen nichts mit dem angelegten Betrag zu tun haben.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Einfache Zinsen mit Betrag, Zinssatz und Zeit berechnen."
+            "explanationAfterAnswer": "Der gleiche Zinssatz bringt bei mehr Geld mehr Euro. Prozent bedeutet immer Anteil vom Betrag."
           },
           {
             "id": "q_zinsen_berechnen_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Du legst 250 Euro ein Jahr lang zu 4 Prozent an. Wie viele Euro Zinsen bekommst du?",
             "points": 150,
-            "correctAnswer": "Die passenden Werte einsetzen, sauber rechnen und das Ergebnis im Kontext prüfen.",
+            "correctAnswer": "10 Euro.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "4 Euro.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "254 Euro.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "40 Euro.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "250 mal 4 geteilt durch 100 sind 10 Euro. Der Betrag von 254 Euro wäre das Gesamtguthaben, nicht die Zinsen."
           },
           {
             "id": "q_zinsen_berechnen_005",
             "level": "master",
-            "question": "Welche Aussage zu „Einfache Zinsen berechnen“ stimmt am besten?",
+            "question": "Anna legt 200 Euro zu 2 Prozent an, Ben 100 Euro zu 4 Prozent, jeweils ein Jahr. Wer bekommt mehr Zinsen?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Beide bekommen gleich viel, nämlich 4 Euro.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Ben, weil sein Zinssatz höher ist.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Anna, weil sie mehr Geld angelegt hat.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Das lässt sich ohne die Laufzeit in Monaten gar nicht sagen.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "200 mal 2 und 100 mal 4 ergeben beide 400, geteilt durch 100 sind das je 4 Euro. Betrag und Zinssatz zusammen entscheiden, nicht einer allein."
           }
         ],
         "calculationTemplates": [
@@ -501,7 +501,7 @@
             "id": "tmpl_zins_einfach",
             "level": "apply",
             "points": 150,
-            "questionTemplate": "Du legst {betrag} Euro für ein Jahr zu {zins} Prozent Zinsen an. Wie viele Euro Zinsen bekommst du?",
+            "questionTemplate": "Du legst {betrag} Euro für ein Jahr zu {zins} Prozent an. Wie viele Euro Zinsen bekommst du?",
             "parameters": {
               "betrag": {
                 "min": 50,
@@ -518,21 +518,21 @@
               "betrag * zins",
               "betrag / zins"
             ],
-            "explanationTemplate": "Zinsen = Betrag mal Zinssatz geteilt durch 100.",
+            "explanationTemplate": "Zinsen gleich Betrag mal Zinssatz geteilt durch 100: {betrag} mal {zins} geteilt durch 100.",
             "unit": "Euro"
           }
         ],
         "teacherSupport": {
-          "competenceGoal": "Einfache Zinsen mit Betrag, Zinssatz und Zeit berechnen.",
-          "typicalMisconception": "3 Prozent Zinsen bedeutet immer 3 Euro, egal wie viel Geld man hat.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „3 Prozent Zinsen bedeutet immer 3 Euro, egal wie viel Geld man hat.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Einfache Zinsen berechnen“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "competenceGoal": "Einfache Zinsen aus Betrag, Zinssatz und Laufzeit berechnen und Prozentsatz von Eurobetrag unterscheiden.",
+          "typicalMisconception": "3 Prozent Zinsen bedeuten immer 3 Euro, unabhängig vom angelegten Betrag.",
+          "discussionPrompt": "Wenn zwei Personen denselben Zinssatz bekommen, können sie dann trotzdem unterschiedlich viele Euro Zinsen erhalten? Woran liegt das?",
+          "classroomActivity": "Die Lernenden rechnen denselben Zinssatz (z. B. 3 Prozent) für 50, 100 und 500 Euro durch und tragen die Ergebnisse in eine Tabelle ein. Anschließend formulieren sie in eigenen Worten, warum gleicher Zinssatz nicht gleicher Ertrag heißt."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Einfache Zinsen berechnen“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Einfache Zinsen berechnen“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Fragen Sie Ihr Kind: Wenn wir 100 Euro und 300 Euro zum gleichen Zinssatz anlegen, bei welchem Betrag kommt mehr heraus und warum?",
+          "everydayExercise": "Rechnen Sie gemeinsam für ein reales Sparziel aus, wie viele Zinsen ein Jahr bei einem angenommenen Zinssatz bringt. Verändern Sie dann einmal den Betrag und einmal den Zinssatz und schauen Sie, was sich stärker auswirkt."
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_zinseszins",
@@ -543,12 +543,12 @@
           "konzept_zinsen_berechnen"
         ],
         "pedagogy": {
-          "learningGoal": "Zinseszins als Effekt wiederangelegter Zinsen verstehen.",
-          "coreIdea": "Beim Zinseszins bringen auch frühere Zinsen wieder Zinsen.",
-          "everydayScenario": "Du lässt Zinsen liegen, sodass im nächsten Jahr ein größerer Betrag verzinst wird.",
-          "misconception": "Zinsen wachsen immer nur gleichmäßig und nie schneller.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Zinseszins: Warum Zeit wichtig ist' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Zinseszins: Warum Zeit wichtig ist' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "learningGoal": "Den Zinseszinseffekt verstehen: Wenn Zinsen liegen bleiben, verzinsen sie sich mit und das Wachstum wird über die Jahre immer schneller.",
+          "coreIdea": "Beim Zinseszins bekommst du Zinsen auf deine Zinsen. Deshalb wächst dein Geld mit der Zeit nicht gleichmäßig, sondern beschleunigt.",
+          "everydayScenario": "Du lässt die Zinsen jedes Jahr auf dem Konto liegen. Im nächsten Jahr wird ein größerer Betrag verzinst, sodass die Zinsen von Jahr zu Jahr etwas größer werden.",
+          "misconception": "Zinsen wachsen jedes Jahr um denselben Eurobetrag, das Ergebnis ist also nur eine einfache Multiplikation der Jahre.",
+          "transferTask": "Rechne für 100 Euro zu 5 Prozent zwei Jahre einzeln nach: Wie viel ist nach einem Jahr da, wie viel nach zwei? Erkläre, warum die Zinsen im zweiten Jahr höher sind als im ersten.",
+          "reflectionPrompt": "Warum ist es beim Zinseszins ein so großer Vorteil, früh anzufangen und das Geld lange liegen zu lassen?"
         },
         "glossaryTerms": [
           "Zinseszins",
@@ -565,125 +565,125 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Zinseszins: Warum Zeit wichtig ist: Beim Zinseszins bringen auch frühere Zinsen wieder Zinsen. Beispiel: Du lässt Zinsen liegen, sodass im nächsten Jahr ein größerer Betrag verzinst wird. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Zinsen wachsen immer nur gleichmäßig und nie schneller.“.",
-          "young_adults": "Zinseszins: Warum Zeit wichtig ist: Beim Zinseszins bringen auch frühere Zinsen wieder Zinsen. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Du lässt Zinsen liegen, sodass im nächsten Jahr ein größerer Betrag verzinst wird.",
-          "parents_teachers": "Lernziel: Zinseszins als Effekt wiederangelegter Zinsen verstehen. Didaktischer Fokus: Beim Zinseszins bringen auch frühere Zinsen wieder Zinsen. Typische Fehlvorstellung: „Zinsen wachsen immer nur gleichmäßig und nie schneller.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Stell dir vor, du legst 100 Euro zu 5 Prozent an. Nach einem Jahr hast du 105 Euro. Wenn du die 5 Euro Zinsen liegen lässt, bekommst du im nächsten Jahr Zinsen auf 105 Euro, also etwas mehr als 5 Euro. Das nennt man Zinseszins: Deine Zinsen bekommen selbst wieder Zinsen. So wächst dein Geld jedes Jahr ein bisschen schneller. Der Trick ist die Zeit. Je länger du dein Geld liegen lässt, desto stärker wirkt dieser Schneeballeffekt. Deshalb lohnt es sich, früh anzufangen.",
+          "young_adults": "Zinseszins bedeutet: Erträge werden wieder angelegt und verzinsen sich mit. Aus 100 Euro zu 5 Prozent werden nach einem Jahr 105 Euro, im zweiten Jahr wird schon dieser höhere Betrag verzinst. Über kurze Zeiträume ist der Unterschied klein, über viele Jahre wird er groß, weil das Wachstum exponentiell verläuft. Eine praktische Faustregel ist die 72er-Regel: Teilst du 72 durch den Zinssatz, bekommst du grob die Zahl der Jahre, bis sich dein Geld verdoppelt. Bei 6 Prozent sind das etwa 12 Jahre. Wichtig: Das ist eine Näherung, keine Garantie, und höhere Zinsen bedeuten in der Realität meist auch mehr Risiko.",
+          "parents_teachers": "Der Zinseszins entsteht durch die Wiederanlage der Erträge: Verzinst wird jeweils der um die Vorjahreszinsen gewachsene Betrag, wodurch das Kapital exponentiell statt linear wächst. Die häufige Fehlvorstellung ist die lineare Fortschreibung. Machen Sie den Unterschied greifbar, indem Sie einfache und zinseszinsbasierte Rechnung über mehrere Jahre gegenüberstellen. Als Faustregel eignet sich die 72er-Regel (72 geteilt durch den Zinssatz ergibt näherungsweise die Verdopplungszeit); weisen Sie darauf hin, dass es sich um eine Näherung handelt und dass in der Praxis höhere Renditen mit höherem Risiko einhergehen."
         },
         "questions": [
           {
             "id": "q_zinseszins_001",
             "level": "explain",
-            "question": "Was beschreibt „Zinseszins: Warum Zeit wichtig ist“ am besten?",
+            "question": "Was bedeutet Zinseszins?",
             "points": 100,
-            "correctAnswer": "Beim Zinseszins bringen auch frühere Zinsen wieder Zinsen.",
+            "correctAnswer": "Dass auch die bereits erhaltenen Zinsen wieder verzinst werden.",
             "distractors": [
               {
-                "text": "Zinsen wachsen immer nur gleichmäßig und nie schneller.",
+                "text": "Dass die Zinsen jedes Jahr um denselben Eurobetrag steigen.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Dass die Zinsen jedes Jahr um genau denselben Prozentsatz des Anfangsbetrags steigen.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Dass Zinsen nur einmal am Ende der Laufzeit gezahlt werden.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Beim Zinseszins bringen auch frühere Zinsen wieder Zinsen."
+            "explanationAfterAnswer": "Genau: Beim Zinseszins verzinsen sich auch die früheren Zinsen wieder. So wächst das Geld immer schneller."
           },
           {
             "id": "q_zinseszins_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Zinseszins: Warum Zeit wichtig ist“?",
+            "question": "Welche Situation zeigt den Zinseszinseffekt?",
             "points": 100,
-            "correctAnswer": "Du lässt Zinsen liegen, sodass im nächsten Jahr ein größerer Betrag verzinst wird.",
+            "correctAnswer": "Du lässt deine Zinsen auf dem Konto liegen, sodass im nächsten Jahr ein größerer Betrag verzinst wird.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Du legst jedes Jahr denselben Betrag neu unter dein Kopfkissen.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Du hebst deine Zinsen jedes Jahr ab und gibst sie sofort aus.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Du bekommst deine Zinsen einmalig als festen Eurobetrag.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Nur wenn die Zinsen liegen bleiben und mitverzinst werden, entsteht der Zinseszinseffekt."
           },
           {
             "id": "q_zinseszins_003",
             "level": "understand",
-            "question": "Warum ist „Zinseszins: Warum Zeit wichtig ist“ für Finanzbildung wichtig?",
+            "question": "Warum sind bei 100 Euro zu 5 Prozent die Zinsen im zweiten Jahr höher als im ersten?",
             "points": 120,
-            "correctAnswer": "Zinseszins als Effekt wiederangelegter Zinsen verstehen.",
+            "correctAnswer": "Weil im zweiten Jahr schon 105 Euro verzinst werden statt der ursprünglichen 100 Euro.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil die Bank den Zinssatz im zweiten Jahr automatisch erhöht.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil im zweiten Jahr immer der doppelte Zinssatz gilt.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil im zweiten Jahr weniger Steuern anfallen.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Zinseszins als Effekt wiederangelegter Zinsen verstehen."
+            "explanationAfterAnswer": "Der Zinssatz bleibt gleich, aber er wirkt auf einen größeren Betrag. Deshalb steigen die Zinsen von Jahr zu Jahr."
           },
           {
             "id": "q_zinseszins_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Nach der 72er-Regel: Wie lange dauert es ungefähr, bis sich Geld bei 6 Prozent Zinsen pro Jahr verdoppelt?",
             "points": 150,
-            "correctAnswer": "Die passenden Werte einsetzen, sauber rechnen und das Ergebnis im Kontext prüfen.",
+            "correctAnswer": "Ungefähr 12 Jahre.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "Ungefähr 6 Jahre.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "Ungefähr 2 Jahre.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "Ungefähr 72 Jahre.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "72 geteilt durch 6 ergibt 12. Die 72er-Regel ist eine Faustregel für die grobe Verdopplungszeit, keine genaue Garantie."
           },
           {
             "id": "q_zinseszins_005",
             "level": "master",
-            "question": "Welche Aussage zu „Zinseszins: Warum Zeit wichtig ist“ stimmt am besten?",
+            "question": "Zwei Personen legen den gleichen Betrag zum gleichen Zinssatz an, eine für 5 Jahre, die andere für 30 Jahre. Was gilt für den Zinseszins?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Bei 30 Jahren fällt der Zinseszins viel stärker ins Gewicht, weil das Wachstum sich über die Zeit beschleunigt.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Der Zinseszins ist bei beiden gleich stark, nur die Endsumme unterscheidet sich.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Über 30 Jahre wächst das Geld genau sechsmal so stark wie über 5 Jahre.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Die Laufzeit spielt für den Zinseszins keine Rolle.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Zinseszins wirkt exponentiell: Je länger die Zeit, desto überproportional größer der Effekt. Früh anfangen zahlt sich besonders aus."
           }
         ],
         "calculationTemplates": [
@@ -691,7 +691,7 @@
             "id": "tmpl_zinseszins",
             "level": "master",
             "points": 200,
-            "questionTemplate": "Du legst {betrag} Euro zu {zins} Prozent für {jahre} Jahre an. Wie viel hast du mit Zinseszins gerundet?",
+            "questionTemplate": "Du legst {betrag} Euro zu {zins} Prozent für {jahre} Jahre an und lässt die Zinsen liegen. Wie viel hast du mit Zinseszins ungefähr, gerundet?",
             "parameters": {
               "betrag": {
                 "min": 100,
@@ -712,21 +712,21 @@
               "betrag + zins * jahre",
               "betrag * zins"
             ],
-            "explanationTemplate": "Jedes Jahr wird der neue Betrag verzinst.",
+            "explanationTemplate": "Jedes der {jahre} Jahre wird der bereits gewachsene Betrag erneut mit {zins} Prozent verzinst, ausgehend von {betrag} Euro.",
             "unit": "Euro"
           }
         ],
         "teacherSupport": {
-          "competenceGoal": "Zinseszins als Effekt wiederangelegter Zinsen verstehen.",
-          "typicalMisconception": "Zinsen wachsen immer nur gleichmäßig und nie schneller.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Zinsen wachsen immer nur gleichmäßig und nie schneller.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Zinseszins: Warum Zeit wichtig ist“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "competenceGoal": "Den Zinseszinseffekt als exponentielles Wachstum verstehen und die 72er-Regel als Faustregel anwenden.",
+          "typicalMisconception": "Zinsen wachsen linear, also jedes Jahr um denselben Eurobetrag.",
+          "discussionPrompt": "Warum ist es beim Zinseszins so entscheidend, früh anzufangen, statt später einen größeren Betrag anzulegen?",
+          "classroomActivity": "Die Lernenden führen eine Tabelle über zehn Jahre: einmal mit einfacher Verzinsung, einmal mit Zinseszins, bei gleichem Betrag und Zinssatz. Sie markieren, ab welchem Jahr der Unterschied deutlich sichtbar wird, und überprüfen die 72er-Regel an einem Beispiel."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Zinseszins: Warum Zeit wichtig ist“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Zinseszins: Warum Zeit wichtig ist“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Fragen Sie Ihr Kind: Wäre es besser, mit 15 Jahren wenig anzulegen und liegen zu lassen oder mit 40 viel? Nutzen Sie die 72er-Regel als anschauliches Hilfsmittel.",
+          "everydayExercise": "Malen Sie gemeinsam einen einfachen Verlauf über mehrere Jahre auf und tragen Sie ein, wie der Betrag mit Zinseszins wächst. So wird der Schneeballeffekt sichtbar."
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_inflation",
@@ -737,12 +737,12 @@
           "konzept_zinsen"
         ],
         "pedagogy": {
-          "learningGoal": "Inflation als allgemeinen Preisanstieg und sinkende Kaufkraft verstehen.",
-          "coreIdea": "Bei Inflation verschwindet Geld nicht, aber man kann sich dafür weniger kaufen.",
-          "everydayScenario": "Ein Brötchen kostet früher 50 Cent und später 70 Cent.",
-          "misconception": "Inflation bedeutet, dass jedes einzelne Produkt immer teurer wird.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Was ist Inflation?' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Was ist Inflation?' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "learningGoal": "Inflation als allgemeinen, durchschnittlichen Anstieg des Preisniveaus verstehen, der die Kaufkraft des Geldes sinken lässt.",
+          "coreIdea": "Bei Inflation verschwindet dein Geld nicht, aber du kannst dir mit demselben Betrag nach und nach weniger kaufen, weil die Preise im Schnitt steigen.",
+          "everydayScenario": "Ein Brötchen kostet vor einigen Jahren 50 Cent und heute 70 Cent. Auch viele andere Dinge sind teurer geworden, im Durchschnitt eben etwas jedes Jahr.",
+          "misconception": "Inflation bedeutet, dass jedes einzelne Produkt gleichzeitig und gleich stark teurer wird.",
+          "transferTask": "Suche zwei Dinge aus deinem Alltag, die in den letzten Jahren teurer geworden sind, und eines, dessen Preis gefallen ist. Erkläre, warum Inflation trotzdem ein Anstieg im Durchschnitt ist.",
+          "reflectionPrompt": "Wenn dein Sparbetrag gleich bleibt, die Preise aber jedes Jahr steigen: Was passiert dann heimlich mit dem, was du dir dafür kaufen kannst?"
         },
         "glossaryTerms": [
           "Inflation",
@@ -758,125 +758,125 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Was ist Inflation?: Bei Inflation verschwindet Geld nicht, aber man kann sich dafür weniger kaufen. Beispiel: Ein Brötchen kostet früher 50 Cent und später 70 Cent. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Inflation bedeutet, dass jedes einzelne Produkt immer teurer wird.“.",
-          "young_adults": "Was ist Inflation?: Bei Inflation verschwindet Geld nicht, aber man kann sich dafür weniger kaufen. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Ein Brötchen kostet früher 50 Cent und später 70 Cent.",
-          "parents_teachers": "Lernziel: Inflation als allgemeinen Preisanstieg und sinkende Kaufkraft verstehen. Didaktischer Fokus: Bei Inflation verschwindet Geld nicht, aber man kann sich dafür weniger kaufen. Typische Fehlvorstellung: „Inflation bedeutet, dass jedes einzelne Produkt immer teurer wird.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Inflation heißt, dass die Preise im Durchschnitt langsam steigen. Ein Brötchen, das früher 50 Cent gekostet hat, kostet heute vielleicht 70 Cent. Das passiert nicht bei jedem Ding gleichzeitig und gleich stark: Manches wird viel teurer, manches nur wenig, manches sogar billiger. Wichtig ist der Durchschnitt über viele Waren. Dein Geld verschwindet dabei nicht, aber du bekommst dafür mit der Zeit weniger. 10 Euro sind in ein paar Jahren zwar noch 10 Euro, reichen aber für weniger Süßigkeiten als heute.",
+          "young_adults": "Inflation ist der allgemeine Anstieg des Preisniveaus, gemessen an einem Warenkorb typischer Ausgaben. Nicht jedes Produkt verteuert sich gleich; entscheidend ist der Durchschnitt. Steigt das Preisniveau um 2 Prozent, kannst du dir für denselben Betrag rund 2 Prozent weniger leisten: Deine Kaufkraft sinkt. Die Europäische Zentralbank strebt für den Euroraum mittelfristig eine Inflation von etwa 2 Prozent an, weil moderate, stabile Preissteigerung als gesund gilt, sehr hohe oder fallende Preise dagegen als problematisch. Für dich heißt das: Geld, das nur herumliegt, verliert schleichend an Wert.",
+          "parents_teachers": "Inflation bezeichnet den durchschnittlichen Anstieg des Preisniveaus, ermittelt über einen repräsentativen Warenkorb. Die zentrale Fehlvorstellung ist die Annahme, alle Preise stiegen gleichzeitig und gleich stark. Betonen Sie den Durchschnittscharakter und den Unterschied zwischen einzelnen Preisen und dem Preisniveau. Ordnen Sie die Größenordnung ein: Die EZB verfolgt mittelfristig ein Inflationsziel von etwa 2 Prozent. Verdeutlichen Sie, dass Inflation die Kaufkraft schleichend mindert, auch wenn der nominale Betrag unverändert bleibt."
         },
         "questions": [
           {
             "id": "q_inflation_001",
             "level": "explain",
-            "question": "Was beschreibt „Was ist Inflation?“ am besten?",
+            "question": "Was bedeutet Inflation?",
             "points": 100,
-            "correctAnswer": "Bei Inflation verschwindet Geld nicht, aber man kann sich dafür weniger kaufen.",
+            "correctAnswer": "Die Preise steigen im Durchschnitt, sodass man sich für denselben Betrag weniger kaufen kann.",
             "distractors": [
               {
-                "text": "Inflation bedeutet, dass jedes einzelne Produkt immer teurer wird.",
+                "text": "Jedes einzelne Produkt wird gleichzeitig und gleich stark teurer.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Das Geld auf dem Konto verschwindet nach und nach von selbst.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Alle Preise fallen und alles wird billiger.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Bei Inflation verschwindet Geld nicht, aber man kann sich dafür weniger kaufen."
+            "explanationAfterAnswer": "Richtig: Inflation ist der durchschnittliche Preisanstieg. Dein Geld bleibt, aber die Kaufkraft sinkt."
           },
           {
             "id": "q_inflation_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Was ist Inflation?“?",
+            "question": "Welches Beispiel zeigt Inflation?",
             "points": 100,
-            "correctAnswer": "Ein Brötchen kostet früher 50 Cent und später 70 Cent.",
+            "correctAnswer": "Ein Brötchen kostet vor einigen Jahren 50 Cent und heute 70 Cent, und auch vieles andere ist teurer geworden.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Ein Handy ist im Sommerschlussverkauf für eine Woche reduziert.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Ein einzelner Laden verlangt mehr als der Laden nebenan.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Der Preis für Benzin steigt eine Woche lang und fällt danach wieder.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Inflation zeigt sich am allgemeinen Anstieg über viele Waren und über längere Zeit, nicht an einem einzelnen Angebot."
           },
           {
             "id": "q_inflation_003",
             "level": "understand",
-            "question": "Warum ist „Was ist Inflation?“ für Finanzbildung wichtig?",
+            "question": "Warum spricht man bei Inflation vom Durchschnitt vieler Preise und nicht von einem einzelnen Produkt?",
             "points": 120,
-            "correctAnswer": "Inflation als allgemeinen Preisanstieg und sinkende Kaufkraft verstehen.",
+            "correctAnswer": "Weil manche Dinge stärker, manche schwächer und einige sogar günstiger werden; gemessen wird die Veränderung über einen ganzen Warenkorb.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil immer alle Produkte exakt gleich viel teurer werden.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil nur Lebensmittel für die Inflation zählen.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil die Preise in Wahrheit gar nicht steigen.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Inflation als allgemeinen Preisanstieg und sinkende Kaufkraft verstehen."
+            "explanationAfterAnswer": "Ein Warenkorb bildet den typischen Konsum ab. So misst man das allgemeine Preisniveau statt einzelner Ausreißer."
           },
           {
             "id": "q_inflation_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Ein Produkt kostet 50 Euro und wird um 4 Prozent teurer. Wie hoch ist der neue Preis?",
             "points": 150,
-            "correctAnswer": "Die passenden Werte einsetzen, sauber rechnen und das Ergebnis im Kontext prüfen.",
+            "correctAnswer": "52 Euro.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "48 Euro.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "2 Euro.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "54 Euro.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "4 Prozent von 50 Euro sind 2 Euro; addiert ergibt das 52 Euro. Die 2 Euro allein wären nur der Aufschlag, nicht der neue Preis."
           },
           {
             "id": "q_inflation_005",
             "level": "master",
-            "question": "Welche Aussage zu „Was ist Inflation?“ stimmt am besten?",
+            "question": "Welche Aussage über die Höhe der Inflation trifft am ehesten zu?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Die EZB strebt für den Euroraum mittelfristig etwa 2 Prozent Inflation an; moderate, stabile Preissteigerung gilt als gesünder als sehr hohe oder fallende Preise.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Je höher die Inflation, desto besser für alle Menschen.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Am besten ist es, wenn die Preise gar nicht mehr steigen und dauerhaft fallen.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Die Inflation ist jedes Jahr gesetzlich auf genau 2 Prozent festgelegt.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Rund 2 Prozent ist ein Ziel, kein Gesetz. Sehr hohe Inflation entwertet Ersparnisse, dauerhaft fallende Preise bremsen die Wirtschaft."
           }
         ],
         "calculationTemplates": [
@@ -901,21 +901,21 @@
               "preis - preis * prozent / 100",
               "preis + prozent"
             ],
-            "explanationTemplate": "Preissteigerung berechnen und zum alten Preis addieren.",
+            "explanationTemplate": "Erst den Aufschlag berechnen ({prozent} Prozent von {preis} Euro) und dann zum alten Preis addieren.",
             "unit": "Euro"
           }
         ],
         "teacherSupport": {
-          "competenceGoal": "Inflation als allgemeinen Preisanstieg und sinkende Kaufkraft verstehen.",
-          "typicalMisconception": "Inflation bedeutet, dass jedes einzelne Produkt immer teurer wird.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Inflation bedeutet, dass jedes einzelne Produkt immer teurer wird.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Was ist Inflation?“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "competenceGoal": "Inflation als durchschnittlichen Anstieg des Preisniveaus verstehen und die Größenordnung des EZB-Ziels einordnen.",
+          "typicalMisconception": "Inflation bedeutet, dass jedes einzelne Produkt gleichzeitig und gleich stark teurer wird.",
+          "discussionPrompt": "Wenn ein Fernseher billiger wird, das Preisniveau insgesamt aber steigt: Wie passt das zusammen?",
+          "classroomActivity": "Die Lernenden stellen einen kleinen eigenen Warenkorb zusammen (z. B. fünf Dinge, die sie oft kaufen) und recherchieren oder schätzen Preise von früher und heute. Sie berechnen den durchschnittlichen Anstieg und vergleichen ihn mit dem EZB-Ziel von rund 2 Prozent."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Was ist Inflation?“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Was ist Inflation?“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Erzählen Sie Ihrem Kind, was bestimmte Dinge früher gekostet haben, und fragen Sie, was heute dafür zu zahlen ist. Woran merkt man die Inflation im Alltag?",
+          "everydayExercise": "Wählen Sie beim nächsten Einkauf gemeinsam einige Produkte aus und schätzen Sie, ob deren Preis in den letzten Jahren gestiegen ist. Sprechen Sie darüber, warum nicht alles gleich stark teurer wird."
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_kaufkraft",
@@ -926,12 +926,12 @@
           "konzept_inflation"
         ],
         "pedagogy": {
-          "learningGoal": "Kaufkraft als Menge an Waren und Leistungen verstehen, die man mit Geld kaufen kann.",
-          "coreIdea": "Der gleiche Geldbetrag kann je nach Preisen unterschiedlich viel kaufen.",
-          "everydayScenario": "20 Euro reichen für zwei Kinotickets zu 10 Euro, aber nur für eins zu 20 Euro.",
-          "misconception": "20 Euro sind immer gleich viel wert.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Kaufkraft verstehen' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Kaufkraft verstehen' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "learningGoal": "Kaufkraft als die Menge an Waren und Leistungen verstehen, die man mit einem bestimmten Geldbetrag tatsächlich kaufen kann.",
+          "coreIdea": "Nicht die Zahl auf dem Geldschein zählt, sondern was man dafür bekommt. Steigen die Preise, sinkt die Kaufkraft desselben Betrags.",
+          "everydayScenario": "Mit 20 Euro bekommst du zwei Kinotickets zu je 10 Euro. Kostet ein Ticket später 20 Euro, reicht derselbe Betrag nur noch für eins.",
+          "misconception": "20 Euro sind immer gleich viel wert, egal wann und was man kaufen will.",
+          "transferTask": "Überlege, wie viele Kugeln Eis du heute für 5 Euro bekommst und wie viele es wären, wenn eine Kugel doppelt so viel kostet. Erkläre, was mit deiner Kaufkraft passiert ist, obwohl du immer noch 5 Euro hast.",
+          "reflectionPrompt": "Warum ist die Frage wie viel kann ich mir dafür kaufen oft wichtiger als die Frage wie viele Euro habe ich?"
         },
         "glossaryTerms": [
           "Kaufkraft",
@@ -947,125 +947,125 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Kaufkraft verstehen: Der gleiche Geldbetrag kann je nach Preisen unterschiedlich viel kaufen. Beispiel: 20 Euro reichen für zwei Kinotickets zu 10 Euro, aber nur für eins zu 20 Euro. Wichtig ist die Abgrenzung zur Fehlvorstellung: „20 Euro sind immer gleich viel wert.“.",
-          "young_adults": "Kaufkraft verstehen: Der gleiche Geldbetrag kann je nach Preisen unterschiedlich viel kaufen. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: 20 Euro reichen für zwei Kinotickets zu 10 Euro, aber nur für eins zu 20 Euro.",
-          "parents_teachers": "Lernziel: Kaufkraft als Menge an Waren und Leistungen verstehen, die man mit Geld kaufen kann. Didaktischer Fokus: Der gleiche Geldbetrag kann je nach Preisen unterschiedlich viel kaufen. Typische Fehlvorstellung: „20 Euro sind immer gleich viel wert.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Kaufkraft heißt: Wie viel bekommst du wirklich für dein Geld? Mit 20 Euro kannst du zwei Kinotickets kaufen, wenn eins 10 Euro kostet. Wird ein Ticket teurer, sagen wir 20 Euro, reichen deine 20 Euro nur noch für eins. Dein Geldschein ist gleich geblieben, aber du bekommst weniger dafür. Genau das nennt man Kaufkraft. Wenn die Preise steigen, sinkt deine Kaufkraft, auch wenn du weiterhin dieselbe Zahl auf dem Schein hast. Deshalb ist wichtig, nicht nur zu schauen, wie viele Euro du hast, sondern was du dafür bekommst.",
+          "young_adults": "Kaufkraft beschreibt den realen Wert deines Geldes: die Menge an Gütern und Leistungen, die du dir dafür leisten kannst. Sie hängt vom Verhältnis zwischen deinem Budget und den Preisen ab. Bleibt dein Einkommen gleich, steigen aber die Preise, sinkt deine Kaufkraft, obwohl die Zahl auf deinem Konto unverändert ist. Genau deshalb ist Inflation für Sparer relevant: Ein Betrag, der jahrelang unverzinst liegt, kauft später weniger als heute. Bei Gehalts- oder Zinsvergleichen lohnt es sich daher, immer die Kaufkraft mitzudenken, nicht nur den nominalen Betrag.",
+          "parents_teachers": "Kaufkraft bezeichnet den realen Gegenwert eines Geldbetrags, also die Menge an Gütern und Leistungen, die damit erworben werden kann. Sie ergibt sich aus dem Verhältnis von Budget zu Preisen. Die Fehlvorstellung, ein fester Betrag habe stets denselben Wert, blendet die Preisentwicklung aus. Verknüpfen Sie das Thema mit dem Inflationsmodul: Steigende Preise senken bei gleichem Betrag die Kaufkraft. Anschauliche Preis-Mengen-Vergleiche (gleicher Betrag, unterschiedliche Preise) machen den Unterschied zwischen nominalem Betrag und realem Wert deutlich."
         },
         "questions": [
           {
             "id": "q_kaufkraft_001",
             "level": "explain",
-            "question": "Was beschreibt „Kaufkraft verstehen“ am besten?",
+            "question": "Was bedeutet Kaufkraft?",
             "points": 100,
-            "correctAnswer": "Der gleiche Geldbetrag kann je nach Preisen unterschiedlich viel kaufen.",
+            "correctAnswer": "Wie viel Ware und Leistung man sich mit einem bestimmten Geldbetrag leisten kann.",
             "distractors": [
               {
-                "text": "20 Euro sind immer gleich viel wert.",
+                "text": "Wie viele Geldscheine man im Geldbeutel hat.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Wie hoch die Zahl ist, die auf dem Geldschein aufgedruckt ist.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Wie stark eine Bank ist.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Der gleiche Geldbetrag kann je nach Preisen unterschiedlich viel kaufen."
+            "explanationAfterAnswer": "Richtig: Kaufkraft ist der reale Gegenwert, also was du für dein Geld bekommst, nicht die reine Anzahl der Scheine."
           },
           {
             "id": "q_kaufkraft_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Kaufkraft verstehen“?",
+            "question": "In welchem Beispiel sinkt die Kaufkraft von 20 Euro?",
             "points": 100,
-            "correctAnswer": "20 Euro reichen für zwei Kinotickets zu 10 Euro, aber nur für eins zu 20 Euro.",
+            "correctAnswer": "Ein Kinoticket kostet erst 10 Euro, später 20 Euro, sodass 20 Euro nur noch für ein Ticket reichen.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Du verlierst deinen 20-Euro-Schein.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Du wechselst deinen 20-Euro-Schein in zwei Zehner.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Du legst deine 20 Euro in eine andere Geldbörse.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Der Betrag bleibt gleich, aber wegen des höheren Preises bekommst du weniger dafür: Genau das ist ein Kaufkraftverlust."
           },
           {
             "id": "q_kaufkraft_003",
             "level": "understand",
-            "question": "Warum ist „Kaufkraft verstehen“ für Finanzbildung wichtig?",
+            "question": "Warum kann derselbe Geldbetrag zu verschiedenen Zeiten unterschiedlich viel wert sein?",
             "points": 120,
-            "correctAnswer": "Kaufkraft als Menge an Waren und Leistungen verstehen, die man mit Geld kaufen kann.",
+            "correctAnswer": "Weil sich die Preise ändern und damit die Menge, die man für den Betrag kaufen kann.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil sich die Zahl auf dem Geldschein mit der Zeit verändert.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil altes Geld weniger gültig ist als neues.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil Geld an manchen Tagen einfach mehr wert ist.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Kaufkraft als Menge an Waren und Leistungen verstehen, die man mit Geld kaufen kann."
+            "explanationAfterAnswer": "Der nominale Betrag bleibt, aber die Preise entscheiden, wie viel du dafür bekommst. Deshalb schwankt die Kaufkraft."
           },
           {
             "id": "q_kaufkraft_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Du hast 30 Euro und ein Comic-Heft kostet 4 Euro. Wie viele Hefte kannst du kaufen?",
             "points": 150,
-            "correctAnswer": "Die passenden Werte einsetzen, sauber rechnen und das Ergebnis im Kontext prüfen.",
+            "correctAnswer": "7 Hefte.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "8 Hefte.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "6 Hefte.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "34 Hefte.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "30 geteilt durch 4 ergibt 7,5. Da du nur ganze Hefte kaufen kannst, sind es 7 und 2 Euro bleiben übrig."
           },
           {
             "id": "q_kaufkraft_005",
             "level": "master",
-            "question": "Welche Aussage zu „Kaufkraft verstehen“ stimmt am besten?",
+            "question": "Dein Sparbetrag von 100 Euro bleibt ein Jahr unverändert liegen, die Preise steigen im Schnitt um 3 Prozent. Was gilt für deine Kaufkraft?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Du hast weiterhin 100 Euro, kannst dir dafür aber etwas weniger kaufen als vorher.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Deine Kaufkraft bleibt gleich, weil du ja immer noch 100 Euro hast.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Deine 100 Euro sind nach einem Jahr nur noch 97 Euro auf dem Konto.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Deine Kaufkraft steigt, weil das Geld ein Jahr gelegen hat.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Der Betrag bleibt nominal gleich, aber die gestiegenen Preise senken den realen Wert. Ohne Verzinsung verliert liegendes Geld schleichend Kaufkraft."
           }
         ],
         "calculationTemplates": [
@@ -1090,21 +1090,21 @@
               "budget - preis",
               "budget * preis"
             ],
-            "explanationTemplate": "Budget durch Stückpreis teilen und abrunden.",
+            "explanationTemplate": "Teile dein Budget von {budget} Euro durch den Stückpreis von {preis} Euro und runde auf ganze Stücke ab.",
             "unit": "Stück"
           }
         ],
         "teacherSupport": {
-          "competenceGoal": "Kaufkraft als Menge an Waren und Leistungen verstehen, die man mit Geld kaufen kann.",
-          "typicalMisconception": "20 Euro sind immer gleich viel wert.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „20 Euro sind immer gleich viel wert.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Kaufkraft verstehen“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "competenceGoal": "Kaufkraft als realen Gegenwert eines Geldbetrags verstehen und vom nominalen Betrag unterscheiden.",
+          "typicalMisconception": "Ein fester Geldbetrag ist immer gleich viel wert.",
+          "discussionPrompt": "Was ist mehr wert: 50 Euro heute oder 50 Euro in zehn Jahren? Wovon hängt eure Antwort ab?",
+          "classroomActivity": "Die Lernenden bekommen ein festes Budget und eine Preisliste, einmal mit heutigen und einmal mit erhöhten Preisen. Sie berechnen jeweils, wie viel sie sich leisten können, und beschreiben, wie sich ihre Kaufkraft verändert hat, obwohl der Betrag gleich blieb."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Kaufkraft verstehen“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Kaufkraft verstehen“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Fragen Sie Ihr Kind beim Einkauf: Wenn dieses Produkt teurer wird, was bedeutet das für unser Budget, obwohl wir gleich viel Geld dabei haben?",
+          "everydayExercise": "Geben Sie Ihrem Kind einen festen Betrag für einen kleinen Einkauf und lassen Sie es vorher überschlagen, wie viele Dinge damit möglich sind. Wiederholen Sie das mit teureren Produkten, um den Kaufkraftunterschied erlebbar zu machen."
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_nominal_real",
@@ -1115,12 +1115,12 @@
           "konzept_kaufkraft"
         ],
         "pedagogy": {
-          "learningGoal": "Nominale Geldbeträge und reale Kaufkraft unterscheiden.",
-          "coreIdea": "Nominal ist die Zahl; real ist, was man dafür kaufen kann.",
-          "everydayScenario": "Du bekommst 2 Prozent mehr Geld, aber die Preise steigen um 5 Prozent.",
+          "learningGoal": "Nominale Geldbeträge und Zinssätze von der realen, um die Inflation bereinigten Kaufkraft unterscheiden.",
+          "coreIdea": "Nominal ist die reine Zahl. Real ist, was nach Abzug der Inflation übrig bleibt, also was du dir wirklich mehr leisten kannst.",
+          "everydayScenario": "Du bekommst 2 Prozent mehr Geld, aber die Preise steigen um 5 Prozent. Nominal hast du mehr, real kannst du dir weniger leisten.",
           "misconception": "Mehr Euro bedeutet automatisch, dass ich reicher bin.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Nominal und real' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Nominal und real' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "transferTask": "Dein Sparkonto bringt 1 Prozent Zinsen, die Inflation liegt bei 3 Prozent. Erkläre, warum dein Geld nominal wächst, real aber an Wert verliert.",
+          "reflectionPrompt": "Warum kann eine Gehaltserhöhung von 2 Prozent sich trotzdem wie weniger Geld anfühlen?"
         },
         "glossaryTerms": [
           "Nominal",
@@ -1136,125 +1136,125 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Nominal und real: Nominal ist die Zahl; real ist, was man dafür kaufen kann. Beispiel: Du bekommst 2 Prozent mehr Geld, aber die Preise steigen um 5 Prozent. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Mehr Euro bedeutet automatisch, dass ich reicher bin.“.",
-          "young_adults": "Nominal und real: Nominal ist die Zahl; real ist, was man dafür kaufen kann. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Du bekommst 2 Prozent mehr Geld, aber die Preise steigen um 5 Prozent.",
-          "parents_teachers": "Lernziel: Nominale Geldbeträge und reale Kaufkraft unterscheiden. Didaktischer Fokus: Nominal ist die Zahl; real ist, was man dafür kaufen kann. Typische Fehlvorstellung: „Mehr Euro bedeutet automatisch, dass ich reicher bin.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Nominal ist einfach die Zahl auf dem Geld oder auf dem Konto. Real bedeutet: Was kannst du dir davon wirklich kaufen? Stell dir vor, du bekommst 2 Prozent mehr Taschengeld. Das klingt gut. Aber wenn gleichzeitig alles um 5 Prozent teurer wird, kannst du dir am Ende sogar weniger leisten als vorher. Nominal hast du also mehr Geld, real aber weniger Kaufkraft. Deshalb reicht es nicht, nur auf die Zahl zu schauen. Wichtig ist immer, was du dir dafür kaufen kannst.",
+          "young_adults": "Nominal bezeichnet den reinen Geldbetrag oder Zinssatz, real den um die Inflation bereinigten Wert. Ein Beispiel: Dein Sparkonto bringt 1 Prozent Zinsen (nominal), die Inflation liegt bei 3 Prozent. Grob gerechnet ist dein Realzins dann etwa minus 2 Prozent: Dein Geld wächst zwar auf dem Papier, verliert aber an Kaufkraft. Dasselbe gilt für Gehälter: Eine nominale Erhöhung von 2 Prozent bei 4 Prozent Inflation ist real ein Rückgang. Die Faustregel Realzins gleich Nominalzins minus Inflationsrate hilft dir, Sparzinsen und Lohnentwicklung realistisch einzuordnen.",
+          "parents_teachers": "Die Unterscheidung von nominal und real trennt den reinen Geldbetrag beziehungsweise Zinssatz von der inflationsbereinigten Kaufkraft. Als Faustregel gilt: Realzins gleich Nominalzins minus Inflationsrate. Die Fehlvorstellung, ein höherer Nominalbetrag bedeute automatisch mehr Wohlstand, ignoriert die Preisentwicklung. Rechnen Sie Beispiele durch, in denen nominale Zuwächse durch höhere Inflation real zu Verlusten werden. Betonen Sie, dass es sich um eine vereinfachte Näherung handelt, die für den Einstieg jedoch tragfähig ist."
         },
         "questions": [
           {
             "id": "q_nominal_real_001",
             "level": "explain",
-            "question": "Was beschreibt „Nominal und real“ am besten?",
+            "question": "Was ist der Unterschied zwischen nominal und real?",
             "points": 100,
-            "correctAnswer": "Nominal ist die Zahl; real ist, was man dafür kaufen kann.",
+            "correctAnswer": "Nominal ist die reine Zahl; real ist, was man sich nach Abzug der Inflation dafür kaufen kann.",
             "distractors": [
               {
-                "text": "Mehr Euro bedeutet automatisch, dass ich reicher bin.",
+                "text": "Nominal und real bedeuten dasselbe, nur mit anderen Wörtern.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Real ist die Zahl auf dem Schein, nominal ist die Kaufkraft.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Nominal gilt nur für Euro, real nur für ausländische Münzen.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Nominal ist die Zahl; real ist, was man dafür kaufen kann."
+            "explanationAfterAnswer": "Richtig: Nominal ist der reine Betrag, real der um die Inflation bereinigte Wert."
           },
           {
             "id": "q_nominal_real_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Nominal und real“?",
+            "question": "In welchem Fall steigt der Betrag nominal, aber real hast du weniger?",
             "points": 100,
             "correctAnswer": "Du bekommst 2 Prozent mehr Geld, aber die Preise steigen um 5 Prozent.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Dein Geld und die Preise bleiben beide unverändert.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Du bekommst 5 Prozent mehr Geld, und die Preise bleiben gleich.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Du bekommst 5 Prozent mehr Geld, während die Preise nur um 2 Prozent steigen.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Wenn die Preise stärker steigen als dein Geld, sinkt die reale Kaufkraft, obwohl die Zahl größer wird."
           },
           {
             "id": "q_nominal_real_003",
             "level": "understand",
-            "question": "Warum ist „Nominal und real“ für Finanzbildung wichtig?",
+            "question": "Warum genügt es nicht, nur auf den nominalen Betrag zu schauen?",
             "points": 120,
-            "correctAnswer": "Nominale Geldbeträge und reale Kaufkraft unterscheiden.",
+            "correctAnswer": "Weil erst der Vergleich mit der Inflation zeigt, ob man sich wirklich mehr leisten kann.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil ein höherer Betrag immer automatisch mehr Wohlstand bedeutet.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil nominale Beträge oft falsch aufgeschrieben werden.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil nominale Beträge nur für Banken wichtig sind.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Nominale Geldbeträge und reale Kaufkraft unterscheiden."
+            "explanationAfterAnswer": "Erst nach Abzug der Inflation sieht man den realen Zuwachs. Die nackte Zahl allein kann täuschen."
           },
           {
             "id": "q_nominal_real_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Dein Geld wächst um 3 Prozent, die Preise steigen um 5 Prozent. Wie verändert sich deine Kaufkraft grob?",
             "points": 150,
-            "correctAnswer": "Die passenden Werte einsetzen, sauber rechnen und das Ergebnis im Kontext prüfen.",
+            "correctAnswer": "Sie sinkt um etwa 2 Prozentpunkte.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "Sie steigt um etwa 3 Prozentpunkte.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "Sie bleibt völlig unverändert.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "Sie steigt um etwa 8 Prozentpunkte.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "Nominale Veränderung minus Inflation: 3 minus 5 ergibt etwa minus 2. Deine Kaufkraft sinkt real."
           },
           {
             "id": "q_nominal_real_005",
             "level": "master",
-            "question": "Welche Aussage zu „Nominal und real“ stimmt am besten?",
+            "question": "Dein Sparkonto bringt 1 Prozent Zinsen, die Inflation liegt bei 3 Prozent. Was gilt für den Realzins?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Der Realzins ist negativ, etwa minus 2 Prozent; dein Geld wächst nominal, verliert aber real an Kaufkraft.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Der Realzins beträgt 4 Prozent, weil man Zins und Inflation addiert.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Der Realzins ist 1 Prozent, die Inflation spielt dafür keine Rolle.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Ein negativer Realzins ist unmöglich, weil Zinsen immer positiv sind.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Realzins gleich Nominalzins minus Inflation: 1 minus 3 ergibt etwa minus 2 Prozent. Trotz Zinsen sinkt die Kaufkraft."
           }
         ],
         "calculationTemplates": [
@@ -1279,21 +1279,21 @@
               "inflation - plus",
               "plus * inflation"
             ],
-            "explanationTemplate": "Vereinfacht: nominale Veränderung minus Inflation.",
+            "explanationTemplate": "Vereinfacht: nominale Veränderung minus Inflation, also {plus} minus {inflation} Prozentpunkte.",
             "unit": "Prozentpunkte"
           }
         ],
         "teacherSupport": {
-          "competenceGoal": "Nominale Geldbeträge und reale Kaufkraft unterscheiden.",
-          "typicalMisconception": "Mehr Euro bedeutet automatisch, dass ich reicher bin.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Mehr Euro bedeutet automatisch, dass ich reicher bin.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Nominal und real“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "competenceGoal": "Nominale und reale Werte unterscheiden und den Realzins als Nominalzins minus Inflation abschätzen.",
+          "typicalMisconception": "Ein höherer nominaler Betrag bedeutet automatisch mehr Wohlstand.",
+          "discussionPrompt": "Eine Gehaltserhöhung von 2 Prozent bei 4 Prozent Inflation: Ist das ein Plus oder ein Minus? Begründet eure Antwort.",
+          "classroomActivity": "Die Lernenden erhalten mehrere Wertepaare aus nominaler Veränderung und Inflationsrate und ordnen jeweils zu, ob real ein Gewinn oder Verlust entsteht. Anschließend formulieren sie die Faustregel Realzins gleich Nominalzins minus Inflation in eigenen Worten."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Nominal und real“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Nominal und real“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Sprechen Sie über eine Gehalts- oder Taschengelderhöhung und fragen Sie: Reicht das aus, um die gestiegenen Preise auszugleichen, oder bleibt real weniger?",
+          "everydayExercise": "Vergleichen Sie gemeinsam einen Sparzinssatz mit der aktuellen Inflationsrate und rechnen Sie überschlägig aus, ob das Ersparte real wächst oder an Kaufkraft verliert."
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_sparen_reicht_nicht",
@@ -1305,12 +1305,12 @@
           "konzept_zinseszins"
         ],
         "pedagogy": {
-          "learningGoal": "Verstehen, warum Sparen wichtig ist, langfristig aber Kaufkraft mitgedacht werden muss.",
-          "coreIdea": "Sparen schafft Sicherheit; langfristig muss Geld seine Kaufkraft möglichst erhalten.",
-          "everydayScenario": "Ein Ziel kostet heute 200 Euro und in einigen Jahren vielleicht 240 Euro.",
-          "misconception": "Geld aufbewahren reicht immer, um später genauso viel kaufen zu können.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Warum Sparen allein nicht immer reicht' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Warum Sparen allein nicht immer reicht' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "learningGoal": "Verstehen, dass Sparen für Sicherheit und kurzfristige Ziele unverzichtbar ist, ein niedrig verzinstes Sparbuch aber langfristig nicht automatisch vor Kaufkraftverlust schützt.",
+          "coreIdea": "Sparen schafft Sicherheit und ist die Basis. Doch wenn die Zinsen unter der Inflation liegen, verliert liegendes Geld über viele Jahre real an Wert.",
+          "everydayScenario": "Ein Ziel kostet heute 200 Euro und in einigen Jahren durch Inflation vielleicht 240 Euro. Wer nur 200 Euro zurücklegt und kaum Zinsen bekommt, dem fehlt am Ende Geld.",
+          "misconception": "Geld auf dem Sparbuch aufzubewahren reicht immer, um sich später genauso viel kaufen zu können.",
+          "transferTask": "Du legst 200 Euro für ein Ziel zurück, das in fünf Jahren durch Inflation 240 Euro kosten wird. Erkläre, warum reines Aufbewahren hier nicht ausreicht und welche zwei Dinge helfen könnten.",
+          "reflectionPrompt": "Wann ist Sparen genau richtig und wann sollte man zusätzlich überlegen, wie das Geld seine Kaufkraft erhalten kann?"
         },
         "glossaryTerms": [
           "Sparen",
@@ -1327,139 +1327,139 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Warum Sparen allein nicht immer reicht: Sparen schafft Sicherheit; langfristig muss Geld seine Kaufkraft möglichst erhalten. Beispiel: Ein Ziel kostet heute 200 Euro und in einigen Jahren vielleicht 240 Euro. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Geld aufbewahren reicht immer, um später genauso viel kaufen zu können.“.",
-          "young_adults": "Warum Sparen allein nicht immer reicht: Sparen schafft Sicherheit; langfristig muss Geld seine Kaufkraft möglichst erhalten. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Ein Ziel kostet heute 200 Euro und in einigen Jahren vielleicht 240 Euro.",
-          "parents_teachers": "Lernziel: Verstehen, warum Sparen wichtig ist, langfristig aber Kaufkraft mitgedacht werden muss. Didaktischer Fokus: Sparen schafft Sicherheit; langfristig muss Geld seine Kaufkraft möglichst erhalten. Typische Fehlvorstellung: „Geld aufbewahren reicht immer, um später genauso viel kaufen zu können.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Sparen ist super und wichtig. Für einen Notgroschen und für Dinge, die du bald kaufen willst, ist ein sicheres Sparkonto genau richtig. Aber es gibt einen Haken bei sehr langer Zeit. Wenn dein Geld fast keine Zinsen bringt und die Preise trotzdem steigen, reicht dein Erspartes am Ende für weniger. Ein Ziel, das heute 200 Euro kostet, kostet in ein paar Jahren vielleicht 240 Euro. Wenn du nur 200 Euro liegen lässt, fehlt dir dann etwas. Sparen bleibt die Basis, aber bei langfristigen Zielen lohnt es sich zu überlegen, wie dein Geld seine Kaufkraft behalten kann.",
+          "young_adults": "Sparen ist die Grundlage jeder Finanzplanung: Ein Notgroschen und Geld für kurzfristige Ziele gehören auf ein sicheres, jederzeit verfügbares Konto. Für sehr lange Zeiträume reicht das aber oft nicht, denn ein Sparbuch schützt nicht automatisch vor Inflation. Liegt der Zinssatz unter der Inflationsrate, ist der Realzins negativ und die Kaufkraft sinkt Jahr für Jahr. Deshalb trennt man in der Praxis: kurzfristig und sicher sparen, langfristig über breit gestreute Anlagen die Chance nutzen, die Inflation auszugleichen. Wichtig: Höhere Renditechancen bedeuten immer auch höheres Risiko, es gibt keine sichere Extra-Rendite.",
+          "parents_teachers": "Das Modul würdigt die Bedeutung des Sparens für Liquidität, Sicherheit und kurzfristige Ziele und zeigt zugleich dessen Grenze auf: Ein niedrig verzinstes Sparbuch schützt nicht automatisch vor Inflation. Bei negativem Realzins schwindet die Kaufkraft langfristig. Die Fehlvorstellung, bloßes Aufbewahren erhalte den Wert, sollte differenziert korrigiert werden, ohne Sparen abzuwerten. Vermitteln Sie die übliche Aufteilung nach Zeithorizont (kurzfristig sicher, langfristig breit gestreut) und weisen Sie zugleich auf den untrennbaren Zusammenhang von Renditechance und Risiko hin. Konkrete Produktempfehlungen bleiben außen vor."
         },
         "questions": [
           {
             "id": "q_sparen_reicht_nicht_001",
             "level": "explain",
-            "question": "Was beschreibt „Warum Sparen allein nicht immer reicht“ am besten?",
+            "question": "Warum reicht Sparen allein langfristig nicht immer aus?",
             "points": 100,
-            "correctAnswer": "Sparen schafft Sicherheit; langfristig muss Geld seine Kaufkraft möglichst erhalten.",
+            "correctAnswer": "Weil ein niedrig verzinstes Sparguthaben durch die Inflation über viele Jahre an Kaufkraft verlieren kann.",
             "distractors": [
               {
-                "text": "Geld aufbewahren reicht immer, um später genauso viel kaufen zu können.",
+                "text": "Weil das Geld auf dem Sparbuch mit der Zeit von selbst verschwindet.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Weil ein niedriger Sparzins den Kaufkraftverlust immer vollständig ausgleicht.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Weil man gespartes Geld nie wieder abheben darf.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Sparen schafft Sicherheit; langfristig muss Geld seine Kaufkraft möglichst erhalten."
+            "explanationAfterAnswer": "Richtig: Sparen bleibt wichtig, aber bei Zinsen unter der Inflation sinkt die Kaufkraft langfristig."
           },
           {
             "id": "q_sparen_reicht_nicht_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Warum Sparen allein nicht immer reicht“?",
+            "question": "Welches Beispiel zeigt, warum reines Aufbewahren langfristig ein Problem sein kann?",
             "points": 100,
-            "correctAnswer": "Ein Ziel kostet heute 200 Euro und in einigen Jahren vielleicht 240 Euro.",
+            "correctAnswer": "Ein Ziel kostet heute 200 Euro und in einigen Jahren durch Inflation etwa 240 Euro.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Du legst dein Geld sicher zurück und gibst es am nächsten Tag wieder aus.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Du sparst für einen Notgroschen, den du jederzeit brauchen könntest.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Du sparst für ein Handy, das du schon in zwei Wochen kaufen willst.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Wenn das Ziel durch steigende Preise teurer wird, reicht der gleiche zurückgelegte Betrag später nicht mehr aus."
           },
           {
             "id": "q_sparen_reicht_nicht_003",
             "level": "understand",
-            "question": "Warum ist „Warum Sparen allein nicht immer reicht“ für Finanzbildung wichtig?",
+            "question": "Warum stimmt es nicht, dass ein Sparbuch automatisch vor Inflation schützt?",
             "points": 120,
-            "correctAnswer": "Verstehen, warum Sparen wichtig ist, langfristig aber Kaufkraft mitgedacht werden muss.",
+            "correctAnswer": "Weil der Sparzins niedriger sein kann als die Inflation, sodass der reale Wert des Guthabens trotz Zinsen sinkt.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil ein Sparbuch immer besser vor Inflation schützt als jede andere Anlage.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil Sparbücher grundsätzlich keine Zinsen zahlen.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil das Geld auf dem Sparbuch nicht sicher aufbewahrt ist.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Verstehen, warum Sparen wichtig ist, langfristig aber Kaufkraft mitgedacht werden muss."
+            "explanationAfterAnswer": "Entscheidend ist der Realzins: Liegt der Sparzins unter der Inflation, verliert das Guthaben real an Kaufkraft."
           },
           {
             "id": "q_sparen_reicht_nicht_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Du legst Geld zurück, das du erst in vielen Jahren brauchst. Was ist eine sinnvolle Überlegung?",
             "points": 150,
-            "correctAnswer": "Innehalten, Informationen prüfen und erst dann passend zum eigenen Ziel handeln.",
+            "correctAnswer": "Sparen für Sicherheit nutzen und für den langen Zeithorizont zusätzlich prüfen, wie das Geld seine Kaufkraft möglichst erhalten kann.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "Das ganze Geld sofort ausgeben, bevor es an Wert verliert.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "Alles ohne weiteres Nachdenken in die Anlage mit der höchsten beworbenen Rendite stecken.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "Gar nichts sparen, weil sich Sparen ohnehin nie lohnt.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "Sinnvoll ist der ruhige Mittelweg: Sicherheit durch Sparen und bei langem Horizont die Kaufkraft im Blick behalten, ohne blind der höchsten Renditeversprechung zu folgen."
           },
           {
             "id": "q_sparen_reicht_nicht_005",
             "level": "master",
-            "question": "Welche Aussage zu „Warum Sparen allein nicht immer reicht“ stimmt am besten?",
+            "question": "Welche Aussage bringt das Verhältnis von Sparen, Kaufkraft und Rendite am besten auf den Punkt?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Sparen ist die sichere Basis für kurzfristige Ziele; langfristig kann eine breit gestreute Anlage die Inflation ausgleichen, allerdings nur bei entsprechend höherem Risiko.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Anlegen ist immer besser als Sparen, weil es garantiert mehr bringt.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Sparen und Anlegen sind gleichwertig, das Risiko spielt dabei keine Rolle.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Für alle Ziele ist ein Sparbuch die beste Lösung.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Es gibt keine sichere Extra-Rendite: Höhere Chancen bedeuten mehr Risiko. Sparen sichert das Kurzfristige, langfristig hilft breite Streuung gegen den Kaufkraftverlust."
           }
         ],
         "calculationTemplates": [],
         "teacherSupport": {
-          "competenceGoal": "Verstehen, warum Sparen wichtig ist, langfristig aber Kaufkraft mitgedacht werden muss.",
-          "typicalMisconception": "Geld aufbewahren reicht immer, um später genauso viel kaufen zu können.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Geld aufbewahren reicht immer, um später genauso viel kaufen zu können.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Warum Sparen allein nicht immer reicht“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "competenceGoal": "Den Wert des Sparens und dessen langfristige Grenze durch Inflation verstehen und Ziele nach Zeithorizont einordnen.",
+          "typicalMisconception": "Geld auf dem Sparbuch aufzubewahren reicht immer, um sich später genauso viel kaufen zu können.",
+          "discussionPrompt": "Für welche Ziele ist ein sicheres Sparkonto ideal und bei welchen sollte man zusätzlich an die Kaufkraft über viele Jahre denken?",
+          "classroomActivity": "Die Lernenden ordnen verschiedene Sparziele (neues Handy, Notgroschen, Geld für in zwanzig Jahren) nach Zeithorizont und diskutieren, wo ein sicheres Konto genügt und wo die Inflation zum Thema wird. Die Aufteilung wird ohne konkrete Produktempfehlung begründet."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Warum Sparen allein nicht immer reicht“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Warum Sparen allein nicht immer reicht“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Besprechen Sie ein weit entferntes Ziel Ihres Kindes und fragen Sie: Reicht es, den heutigen Preis zurückzulegen, oder wird das Ziel bis dahin teurer sein?",
+          "everydayExercise": "Ordnen Sie gemeinsam mehrere Wünsche Ihres Kindes danach, ob sie bald oder erst in vielen Jahren anstehen. Sprechen Sie darüber, warum kurzfristige Ziele auf ein sicheres Konto gehören und warum bei sehr langfristigen Zielen die Kaufkraft mitgedacht werden sollte."
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       }
     ]
   }

@@ -11,8 +11,8 @@
     "id": "tb_risiko_streuung_verhalten",
     "title": "Risiko, Streuung und Verhalten",
     "unlockLevel": 20,
-    "goal": "Lernende verstehen Risiko, Streuung und emotionale Entscheidungsfallen.",
-    "pedagogicalIdea": "Dieser Block verbindet Risikowissen mit Verhalten: Schwankung, Verlust, Einzelrisiko, Marktrisiko, Diversifikation, Gier, Panik, FOMO, Tipps, Finfluencer und Betrug.",
+    "goal": "Lernende verstehen, was Risiko wirklich bedeutet, wie Streuung Risiken senkt und wo ihre Grenzen liegen, und sie erkennen emotionale Fallen und Betrugsmuster.",
+    "pedagogicalIdea": "Der Block führt von den Grundbegriffen Risiko, Schwankung und Chance über Einzel- und Marktrisiko sowie Diversifikation und ihre Grenzen hin zur Anlegerpsychologie (Gier, Panik, FOMO) und zum kritischen Umgang mit Tipps, Finfluencern und Betrug. Leitgedanke: Schwankung ist kein dauerhafter Verlust, Streuung reduziert Risiko ohne es zu beseitigen, und ruhige, geprüfte Entscheidungen schlagen impulsives Handeln.",
     "modules": [
       {
         "id": "konzept_risiko",
@@ -25,11 +25,11 @@
         ],
         "pedagogy": {
           "learningGoal": "Risiko als Unsicherheit und Möglichkeit von Verlusten verstehen.",
-          "coreIdea": "Risiko bedeutet: Es kann anders kommen als erwartet.",
-          "everydayScenario": "Du kaufst eine Aktie; sie kann steigen, aber auch fallen.",
-          "misconception": "Risiko bedeutet nur, dass etwas gefährlich und deshalb immer schlecht ist.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Was bedeutet Risiko?' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Was bedeutet Risiko?' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "coreIdea": "Risiko heißt: Das Ergebnis ist offen, es kann besser oder schlechter kommen als erwartet.",
+          "everydayScenario": "Du legst dein Taschengeld in eine Aktie an; sie kann steigen, aber auch fallen.",
+          "misconception": "Risiko heißt automatisch Gefahr und ist deshalb immer schlecht und zu vermeiden.",
+          "transferTask": "Nenne eine Sache, die du in den nächsten Wochen kaufen oder tun willst, bei der das Ergebnis unsicher ist. Erkläre, was gut ausgehen kann und was schiefgehen kann.",
+          "reflectionPrompt": "Wann hast du Risiko schon einmal mit Gefahr verwechselt und deshalb eine Chance liegen lassen?"
         },
         "glossaryTerms": [
           "Risiko",
@@ -46,139 +46,139 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Was bedeutet Risiko?: Risiko bedeutet: Es kann anders kommen als erwartet. Beispiel: Du kaufst eine Aktie; sie kann steigen, aber auch fallen. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Risiko bedeutet nur, dass etwas gefährlich und deshalb immer schlecht ist.“.",
-          "young_adults": "Was bedeutet Risiko?: Risiko bedeutet: Es kann anders kommen als erwartet. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Du kaufst eine Aktie; sie kann steigen, aber auch fallen.",
-          "parents_teachers": "Lernziel: Risiko als Unsicherheit und Möglichkeit von Verlusten verstehen. Didaktischer Fokus: Risiko bedeutet: Es kann anders kommen als erwartet. Typische Fehlvorstellung: „Risiko bedeutet nur, dass etwas gefährlich und deshalb immer schlecht ist.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Risiko bedeutet: Man weiß vorher nicht sicher, wie etwas ausgeht. Es kann besser laufen als gedacht, aber auch schlechter. Stell dir vor, du sparst für ein neues Skateboard und legst 20 Euro in eine Aktie an. Vielleicht sind es bald 24 Euro, vielleicht aber nur 16 Euro. Risiko ist also nicht dasselbe wie Gefahr: Es heißt einfach, dass das Ergebnis offen ist. Genau deshalb gehören zu jeder Chance auch mögliche Rückschläge.",
+          "young_adults": "Risiko bedeutet, dass ein Ergebnis unsicher ist und auch ein Verlust möglich ist. Beim Investieren zeigt sich das ständig: Eine Aktie kann in einem Jahr um 15 Prozent steigen oder um 15 Prozent fallen. Wichtig ist, wie viel Schwankung du aushalten kannst (Risikotragfähigkeit) und wie lange du das Geld nicht brauchst (Anlagehorizont). Geld, das du in drei Monaten für die Kaution brauchst, gehört nicht in eine schwankende Anlage. Risiko ist nicht per se schlecht, sondern der Preis für die Chance auf mehr Rendite.",
+          "parents_teachers": "Fachlich meint Risiko die Unsicherheit über künftige Ergebnisse, einschließlich der Möglichkeit von Verlusten, nicht bloß Gefahr. Verbinden Sie den Begriff mit Risikotragfähigkeit und Anlagehorizont, damit Risiko als steuerbare Größe erscheint. Greifen Sie die verbreitete Fehlvorstellung auf, Risiko sei immer schlecht: Lassen Sie die Lernenden je ein Beispiel für ein sinnvoll eingegangenes und ein unnötiges Risiko formulieren."
         },
         "questions": [
           {
             "id": "q_risiko_001",
             "level": "explain",
-            "question": "Was beschreibt „Was bedeutet Risiko?“ am besten?",
+            "question": "Was bedeutet „Risiko“ bei einer Geldanlage?",
             "points": 100,
-            "correctAnswer": "Risiko bedeutet: Es kann anders kommen als erwartet.",
+            "correctAnswer": "Das Ergebnis ist unsicher: Es kann besser, aber auch schlechter kommen als erwartet.",
             "distractors": [
               {
-                "text": "Risiko bedeutet nur, dass etwas gefährlich und deshalb immer schlecht ist.",
+                "text": "Risiko heißt Gefahr und ist deshalb immer schlecht.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Risiko bedeutet, dass Gewinn und Sicherheit garantiert sind.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Risiko hat mit Geldentscheidungen nichts zu tun.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Risiko bedeutet: Es kann anders kommen als erwartet."
+            "explanationAfterAnswer": "Genau: Risiko heißt offenes Ergebnis. Deshalb gehören Chance und möglicher Verlust immer zusammen."
           },
           {
             "id": "q_risiko_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Was bedeutet Risiko?“?",
+            "question": "In welcher Situation steckt echtes Risiko im Sinne von Unsicherheit?",
             "points": 100,
-            "correctAnswer": "Du kaufst eine Aktie; sie kann steigen, aber auch fallen.",
+            "correctAnswer": "Du kaufst eine Aktie für 20 Euro; in einem Monat kann sie 24 oder 16 Euro wert sein.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Du legst Geld auf ein Konto, das genau den vereinbarten festen Zins zahlt.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Du kaufst eine Aktie, von der jemand versprochen hat, dass sie garantiert nur steigt.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Du rechnest aus, wie viel 20 Euro plus 4 Euro ergeben.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Bei der Aktie ist das Ergebnis offen. Genau diese Unsicherheit ist Risiko."
           },
           {
             "id": "q_risiko_003",
             "level": "understand",
-            "question": "Warum ist „Was bedeutet Risiko?“ für Finanzbildung wichtig?",
+            "question": "Warum ist es wichtig, Risiko nicht einfach mit „Gefahr“ gleichzusetzen?",
             "points": 120,
-            "correctAnswer": "Risiko als Unsicherheit und Möglichkeit von Verlusten verstehen.",
+            "correctAnswer": "Weil Risiko nur bedeutet, dass das Ergebnis offen ist, und man dann gezielt entscheiden kann, wie viel man aushalten will.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil man mit dem richtigen Wissen jedes Risiko vollständig ausschalten kann.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil man nach dem Verstehen keine Kosten mehr prüfen muss.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil Risiko nur ein Fachwort ohne praktischen Nutzen ist.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Risiko als Unsicherheit und Möglichkeit von Verlusten verstehen."
+            "explanationAfterAnswer": "Wer Risiko als offenes Ergebnis begreift, kann Chancen nutzen und trotzdem überlegt bleiben."
           },
           {
             "id": "q_risiko_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Du hast 100 Euro, die du in einem Monat für ein Konzertticket brauchst. Wie gehst du mit dem Risiko um?",
             "points": 150,
-            "correctAnswer": "Den Begriff verstehen, Beispiele erkennen und ihn von ähnlichen Begriffen abgrenzen.",
+            "correctAnswer": "Du lässt das Geld sicher liegen, weil du es fest brauchst und keine Schwankung aushalten kannst.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "Du steckst es in eine Aktie, weil höhere Chance immer die bessere Wahl ist.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "Du verteilst es blind auf mehrere Aktien, dann kann nichts passieren.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "Du ignorierst, wann du das Geld brauchst, das spielt keine Rolle.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "Kurzfristig fest verplantes Geld gehört nicht in eine schwankende Anlage. Der Zeitpunkt entscheidet mit."
           },
           {
             "id": "q_risiko_005",
             "level": "master",
-            "question": "Welche Aussage zu „Was bedeutet Risiko?“ stimmt am besten?",
+            "question": "Welche Aussage über Risiko ist am treffendsten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Risiko ist der Preis für die Chance auf Rendite und muss zu Ziel, Zeitraum und eigener Belastbarkeit passen.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Wer genug lernt, kann investieren und dabei jedes Risiko vermeiden.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Mehr Risiko führt zuverlässig zu mehr Gewinn.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Risiko wirkt bei allen Menschen gleich, egal wie alt sie sind oder was sie vorhaben.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Risiko lässt sich nicht wegzaubern, aber passend zur eigenen Lage steuern. Das ist der Kern guter Entscheidungen."
           }
         ],
         "calculationTemplates": [],
         "teacherSupport": {
           "competenceGoal": "Risiko als Unsicherheit und Möglichkeit von Verlusten verstehen.",
-          "typicalMisconception": "Risiko bedeutet nur, dass etwas gefährlich und deshalb immer schlecht ist.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Risiko bedeutet nur, dass etwas gefährlich und deshalb immer schlecht ist.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Was bedeutet Risiko?“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "typicalMisconception": "Risiko heißt automatisch Gefahr und ist deshalb immer schlecht.",
+          "discussionPrompt": "Warum kann es genauso riskant sein, gar nichts zu tun, wie etwas zu wagen? Denkt an Geld, das nur herumliegt.",
+          "classroomActivity": "Die Klasse sortiert zehn Alltagssituationen (Fahrrad ohne Helm, Sparbuch, Einzelaktie, Losverkauf …) auf einer Skala von „sicher“ bis „sehr unsicher“ und begründet die Reihenfolge."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Was bedeutet Risiko?“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Was bedeutet Risiko?“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Fragen Sie am Esstisch: Bei welcher Entscheidung dieser Woche wusstest du vorher nicht, wie sie ausgeht?",
+          "everydayExercise": "Überlegen Sie gemeinsam bei einem geplanten Kauf: Was ist sicher, was ist unsicher, und wie schlimm wäre es, wenn es schiefgeht?"
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_schwankung_vs_verlust",
@@ -191,11 +191,11 @@
         ],
         "pedagogy": {
           "learningGoal": "Vorübergehende Schwankungen und realisierte Verluste unterscheiden.",
-          "coreIdea": "Nicht jeder Kursrückgang ist automatisch ein endgültiger Verlust.",
-          "everydayScenario": "Eine Aktie fällt von 100 auf 90 Euro; verkauft man nicht, ist es zunächst ein Buchverlust.",
+          "coreIdea": "Ein gefallener Kurs ist erst dann ein echter Verlust, wenn man verkauft.",
+          "everydayScenario": "Deine Aktie fällt von 100 auf 90 Euro; solange du hältst, ist das nur ein Buchverlust auf dem Papier.",
           "misconception": "Wenn mein Depot rot ist, habe ich den Verlust schon endgültig gemacht.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Schwankung vs. Verlust' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Schwankung vs. Verlust' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "transferTask": "Rechne aus: Du hast 5 Aktien zu je 100 Euro gekauft. Der Kurs fällt auf 90 Euro. Wie hoch ist der Buchverlust, und wann würde er zum echten Verlust?",
+          "reflectionPrompt": "Was würde dich in einer Verlustphase eher zum Verkaufen bringen: die Zahl im Depot oder ein sachlicher Grund? Woran erkennst du den Unterschied?"
         },
         "glossaryTerms": [
           "Schwankung",
@@ -212,139 +212,139 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Schwankung vs. Verlust: Nicht jeder Kursrückgang ist automatisch ein endgültiger Verlust. Beispiel: Eine Aktie fällt von 100 auf 90 Euro; verkauft man nicht, ist es zunächst ein Buchverlust. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Wenn mein Depot rot ist, habe ich den Verlust schon endgültig gemacht.“.",
-          "young_adults": "Schwankung vs. Verlust: Nicht jeder Kursrückgang ist automatisch ein endgültiger Verlust. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Eine Aktie fällt von 100 auf 90 Euro; verkauft man nicht, ist es zunächst ein Buchverlust.",
-          "parents_teachers": "Lernziel: Vorübergehende Schwankungen und realisierte Verluste unterscheiden. Didaktischer Fokus: Nicht jeder Kursrückgang ist automatisch ein endgültiger Verlust. Typische Fehlvorstellung: „Wenn mein Depot rot ist, habe ich den Verlust schon endgültig gemacht.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Ein fallender Kurs sieht erst mal schlimm aus, ist aber noch kein echter Verlust. Stell dir vor, deine Aktie war 100 Euro wert und steht jetzt bei 90 Euro. Solange du sie behältst, hast du nur einen sogenannten Buchverlust, also einen Verlust auf dem Papier. Erst wenn du für 90 Euro verkaufst, machst du den Verlust wirklich. Steigt der Kurs später wieder auf 105 Euro, hättest du beim Verkauf sogar Gewinn. Kurse gehen ständig hoch und runter, das nennt man Schwankung.",
+          "young_adults": "Man muss Schwankung und Verlust klar trennen. Fällt eine Position von 100 auf 90 Euro, ist das ein Buchverlust von 10 Prozent, der nur auf dem Papier existiert. Zum realisierten Verlust wird er erst mit dem Verkauf. Breite Aktienmärkte schwanken historisch im Jahr oft zweistellig und erholen sich über längere Zeiträume meist wieder, auch wenn es keine Garantie dafür gibt. Entscheidend ist deine Investmentthese: Verkaufst du, weil sich die Sache sachlich verschlechtert hat, oder nur, weil die Zahl gerade rot ist? Nur beim Totalverlust, etwa einer Pleite, ist der Wert dauerhaft weg.",
+          "parents_teachers": "Zentral ist die Unterscheidung zwischen Buchverlust (unrealisiert) und realisiertem Verlust nach Verkauf. Volatilität ist ein normales Merkmal von Aktienmärkten und kein Signal für einen dauerhaften Schaden. Machen Sie deutlich, dass ein Verkauf aus Angst einen Buchverlust in einen echten verwandelt; sinnvoll ist ein Verkauf nur bei einer geänderten sachlichen Einschätzung. Grenzen Sie den Totalverlust als Sonderfall ab, damit „rotes Depot“ nicht mit „Geld weg“ verwechselt wird."
         },
         "questions": [
           {
             "id": "q_schwankung_vs_verlust_001",
             "level": "explain",
-            "question": "Was beschreibt „Schwankung vs. Verlust“ am besten?",
+            "question": "Was ist der Unterschied zwischen einem Buchverlust und einem realisierten Verlust?",
             "points": 100,
-            "correctAnswer": "Nicht jeder Kursrückgang ist automatisch ein endgültiger Verlust.",
+            "correctAnswer": "Ein Buchverlust besteht nur auf dem Papier; erst der Verkauf macht ihn zum realisierten Verlust.",
             "distractors": [
               {
-                "text": "Wenn mein Depot rot ist, habe ich den Verlust schon endgültig gemacht.",
+                "text": "Sobald das Depot rot ist, ist der Verlust bereits endgültig gemacht.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Ein Buchverlust bedeutet, dass Gewinn und Sicherheit garantiert sind.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Beides hat mit Geldentscheidungen nichts zu tun.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Nicht jeder Kursrückgang ist automatisch ein endgültiger Verlust."
+            "explanationAfterAnswer": "Richtig: Solange du hältst, ist der Verlust nur auf dem Papier. Erst der Verkauf macht ihn echt."
           },
           {
             "id": "q_schwankung_vs_verlust_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Schwankung vs. Verlust“?",
+            "question": "Welche Situation zeigt einen Buchverlust und noch keinen echten Verlust?",
             "points": 100,
-            "correctAnswer": "Eine Aktie fällt von 100 auf 90 Euro; verkauft man nicht, ist es zunächst ein Buchverlust.",
+            "correctAnswer": "Deine Aktie ist von 100 auf 90 Euro gefallen, du hältst sie aber weiter.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Das Unternehmen geht pleite und die Aktie ist dauerhaft nichts mehr wert.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Du verkaufst deine Aktie für 90 Euro, nachdem sie von 100 Euro gefallen ist.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Du kaufst eine Aktie zusätzlich nach, während der Kurs gerade steigt.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Nur beim Halten bleibt es ein Buchverlust. Verkauf oder Pleite machen den Verlust dagegen echt."
           },
           {
             "id": "q_schwankung_vs_verlust_003",
             "level": "understand",
-            "question": "Warum ist „Schwankung vs. Verlust“ für Finanzbildung wichtig?",
+            "question": "Warum kann ein Panikverkauf in einer Kursdelle teuer werden?",
             "points": 120,
-            "correctAnswer": "Vorübergehende Schwankungen und realisierte Verluste unterscheiden.",
+            "correctAnswer": "Weil er einen Buchverlust in einen echten Verlust verwandelt und die spätere Erholung nicht mehr mitgenommen wird.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil Kurse nach einem Verkauf grundsätzlich nie wieder steigen.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil man nach einem Verkauf keine Kosten mehr prüfen muss.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil Schwankung nur ein Fachwort ohne praktischen Nutzen ist.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Vorübergehende Schwankungen und realisierte Verluste unterscheiden."
+            "explanationAfterAnswer": "Wer im Tief verkauft, macht den Verlust echt und ist bei der Erholung nicht mehr dabei."
           },
           {
             "id": "q_schwankung_vs_verlust_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Du hast 5 Aktien zu je 100 Euro gekauft. Der Kurs steht jetzt bei 90 Euro. Wie hoch ist dein aktueller Buchverlust?",
             "points": 150,
-            "correctAnswer": "Die passenden Werte einsetzen, sauber rechnen und das Ergebnis im Kontext prüfen.",
+            "correctAnswer": "50 Euro Buchverlust, denn 5 mal 10 Euro Kursrückgang; er wird erst beim Verkauf echt.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "500 Euro Verlust, weil der ganze Einsatz weg ist.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "10 Euro Verlust, weil der Kurs um 10 Euro gefallen ist.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "Gar kein Verlust, weil sich Kurse nie dauerhaft verändern.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "5 Stück mal 10 Euro Rückgang sind 50 Euro auf dem Papier, solange du nicht verkaufst."
           },
           {
             "id": "q_schwankung_vs_verlust_005",
             "level": "master",
-            "question": "Welche Aussage zu „Schwankung vs. Verlust“ stimmt am besten?",
+            "question": "Wann ist ein Verkauf nach einem Kursrückgang sachlich begründet?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Wenn sich die Gründe für das Investment geändert haben, nicht allein weil die Zahl gerade rot ist.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Immer sofort, sobald das Depot ins Minus rutscht.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Nie, weil Verkaufen bei Verlust grundsätzlich verboten ist.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Nur an geraden Wochentagen, unabhängig von den Gründen.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Entscheidend ist die Sachlage, nicht die Farbe im Depot. Angst ist kein guter Verkaufsgrund."
           }
         ],
         "calculationTemplates": [],
         "teacherSupport": {
           "competenceGoal": "Vorübergehende Schwankungen und realisierte Verluste unterscheiden.",
           "typicalMisconception": "Wenn mein Depot rot ist, habe ich den Verlust schon endgültig gemacht.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Wenn mein Depot rot ist, habe ich den Verlust schon endgültig gemacht.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Schwankung vs. Verlust“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "discussionPrompt": "Diskutieren Sie: Warum fühlt sich ein Minus im Depot oft schlimmer an, als es rechnerisch ist, solange nicht verkauft wird?",
+          "classroomActivity": "Zeigen Sie einen fiktiven Kursverlauf, der fällt und wieder steigt. Die Lernenden markieren, wo ein Verkauf einen echten Verlust erzeugt hätte und wo Halten sich ausgezahlt hätte."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Schwankung vs. Verlust“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Schwankung vs. Verlust“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Sprechen Sie darüber: Was ist der Unterschied zwischen „Meine Sammelkarte ist gerade weniger wert“ und „Ich habe sie billig verkauft“?",
+          "everydayExercise": "Beobachten Sie mit Ihrem Kind einen Wert (Aktie oder Sammelobjekt) über zwei Wochen und notieren Sie, wie oft der Preis schwankt, ohne dass ein echter Verlust entsteht."
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_chance_risiko",
@@ -356,11 +356,11 @@
         ],
         "pedagogy": {
           "learningGoal": "Zusammenhang zwischen Renditechance und Risiko verstehen.",
-          "coreIdea": "Es gibt selten hohe Chancen ohne Risiko.",
-          "everydayScenario": "Tagesgeld schwankt kaum; eine Einzelaktie kann stark steigen oder fallen.",
-          "misconception": "Mehr Gewinnchance bedeutet, dass eine Anlage besser und sicherer ist.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Chance und Risiko' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Chance und Risiko' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "coreIdea": "Wer eine höhere Chance auf Rendite will, muss meist auch mehr Schwankung aushalten.",
+          "everydayScenario": "Tagesgeld schwankt kaum, bringt aber wenig; eine Einzelaktie kann stark steigen oder stark fallen.",
+          "misconception": "Mehr Gewinnchance bedeutet, dass eine Anlage besser und gleichzeitig sicherer ist.",
+          "transferTask": "Ordne drei Anlagen (Sparbuch, breit gestreuter Fonds, einzelne Modeaktie) danach, wie viel Chance und wie viel Schwankung sie haben, und begründe deine Reihenfolge.",
+          "reflectionPrompt": "Wann hast du dich schon einmal von einer hohen Gewinnchance blenden lassen und das Risiko übersehen?"
         },
         "glossaryTerms": [
           "Chance",
@@ -377,66 +377,66 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Chance und Risiko: Es gibt selten hohe Chancen ohne Risiko. Beispiel: Tagesgeld schwankt kaum; eine Einzelaktie kann stark steigen oder fallen. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Mehr Gewinnchance bedeutet, dass eine Anlage besser und sicherer ist.“.",
-          "young_adults": "Chance und Risiko: Es gibt selten hohe Chancen ohne Risiko. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Tagesgeld schwankt kaum; eine Einzelaktie kann stark steigen oder fallen.",
-          "parents_teachers": "Lernziel: Zusammenhang zwischen Renditechance und Risiko verstehen. Didaktischer Fokus: Es gibt selten hohe Chancen ohne Risiko. Typische Fehlvorstellung: „Mehr Gewinnchance bedeutet, dass eine Anlage besser und sicherer ist.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Chance und Risiko hängen fast immer zusammen. Wenn irgendwo eine große Gewinnchance lockt, ist meist auch das Risiko größer, dass es schiefgeht. Denk an Geld auf einem Sparkonto: Es schwankt kaum, wächst aber nur langsam. Eine einzelne Aktie kann dagegen viel gewinnen, aber auch viel verlieren. Deshalb ist eine hohe Chance nicht automatisch die bessere Wahl. Wer dir „viel Gewinn ohne Risiko“ verspricht, sagt fast nie die ganze Wahrheit.",
+          "young_adults": "Chance und Risiko sind zwei Seiten derselben Medaille. Sichere Anlagen wie Tagesgeld schwanken kaum, liefern dafür nur eine kleine, oft von der Inflation aufgezehrte Rendite. Wer eine höhere erwartete Rendite anstrebt, muss stärkere Schwankungen und mögliche Verluste akzeptieren. Ein Warnsignal ist jedes Angebot, das hohe Rendite und volle Sicherheit gleichzeitig verspricht, denn eine echte Garantie gibt es dafür nicht. Dein Risikoprofil, also wie viel Schwankung du seelisch und finanziell tragen kannst, sollte die Auswahl steuern, nicht die höchste Renditezahl.",
+          "parents_teachers": "Vermitteln Sie den Rendite-Risiko-Zusammenhang: Eine höhere erwartete Rendite ist regelmäßig mit höherem Risiko verbunden, nicht mit mehr Sicherheit. Betonen Sie, dass es keine seriöse Kombination aus hoher Rendite und Vollkasko-Sicherheit gibt. Als Fehlvorstellung greifen Sie „mehr Chance gleich besser und sicherer“ auf und leiten zum Begriff des individuellen Risikoprofils über, das Anlageentscheidungen leiten sollte."
         },
         "questions": [
           {
             "id": "q_chance_risiko_001",
             "level": "explain",
-            "question": "Was beschreibt „Chance und Risiko“ am besten?",
+            "question": "Wie hängen Chance und Risiko bei einer Geldanlage meist zusammen?",
             "points": 100,
-            "correctAnswer": "Es gibt selten hohe Chancen ohne Risiko.",
+            "correctAnswer": "Höhere Chance auf Rendite geht in der Regel mit höherem Risiko einher.",
             "distractors": [
               {
-                "text": "Mehr Gewinnchance bedeutet, dass eine Anlage besser und sicherer ist.",
+                "text": "Mehr Gewinnchance bedeutet automatisch mehr Sicherheit.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Hohe Chance garantiert Gewinn ohne jedes Risiko.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Chance und Risiko haben nichts miteinander zu tun.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Es gibt selten hohe Chancen ohne Risiko."
+            "explanationAfterAnswer": "Genau: Wer mehr Rendite anstrebt, muss meist mehr Schwankung aushalten."
           },
           {
             "id": "q_chance_risiko_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Chance und Risiko“?",
+            "question": "Welches Beispiel zeigt den Zusammenhang von Chance und Risiko am besten?",
             "points": 100,
-            "correctAnswer": "Tagesgeld schwankt kaum; eine Einzelaktie kann stark steigen oder fallen.",
+            "correctAnswer": "Tagesgeld schwankt kaum und bringt wenig, eine Einzelaktie kann stark steigen oder fallen.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Ein Sparkonto und eine Einzelaktie bringen beide gleich viel bei gleichem Risiko.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Eine Anlage mit hoher Rendite hat immer das kleinste Risiko.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Ein Sparbuch bringt viel Rendite und schwankt trotzdem gar nicht.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Wenig Schwankung bedeutet wenig Chance, viel Chance bedeutet mehr Schwankung. Das zeigt der Vergleich."
           },
           {
             "id": "q_chance_risiko_003",
             "level": "understand",
-            "question": "Warum ist „Chance und Risiko“ für Finanzbildung wichtig?",
+            "question": "Warum ist ein Angebot mit „hoher Rendite und voller Sicherheit“ verdächtig?",
             "points": 120,
-            "correctAnswer": "Zusammenhang zwischen Renditechance und Risiko verstehen.",
+            "correctAnswer": "Weil hohe Rendite und volle Sicherheit sich in der Realität ausschließen und so etwas nicht seriös garantiert werden kann.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil solche Angebote in Wahrheit die sicherste Anlage überhaupt sind.",
                 "closeness": 3
               },
               {
@@ -444,72 +444,72 @@
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil Rendite nur ein Fachwort ohne praktischen Nutzen ist.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Zusammenhang zwischen Renditechance und Risiko verstehen."
+            "explanationAfterAnswer": "Ohne Risiko keine hohe Rendite. Wer beides verspricht, verschweigt etwas."
           },
           {
             "id": "q_chance_risiko_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Du willst in 15 Jahren mehr aus deinem Geld machen und kannst zwischenzeitliche Schwankungen aushalten. Was passt zu dieser Lage?",
             "points": 150,
-            "correctAnswer": "Den Begriff verstehen, Beispiele erkennen und ihn von ähnlichen Begriffen abgrenzen.",
+            "correctAnswer": "Eine breiter gestreute Anlage mit mehr Chance, deren Schwankung du über den langen Zeitraum aushalten kannst.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "Alles auf eine einzelne Trendaktie setzen, weil die höchste Chance immer gewinnt.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "Das Geld auf dem Konto lassen, weil hohe Chance immer sicherer ist.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "Nur auf die höchste Renditezahl schauen und dein Risikoprofil ignorieren.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "Langer Zeitraum und Belastbarkeit erlauben mehr Chance, aber breit gestreut statt alles auf eine Karte."
           },
           {
             "id": "q_chance_risiko_005",
             "level": "master",
-            "question": "Welche Aussage zu „Chance und Risiko“ stimmt am besten?",
+            "question": "Welche Aussage zum Verhältnis von Chance und Risiko ist am treffendsten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Die höchste Renditechance ist nicht automatisch die beste Wahl; sie muss zum eigenen Risikoprofil und Ziel passen.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Man sollte immer die Anlage mit der höchsten Renditezahl nehmen.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Mehr Chance bedeutet zuverlässig weniger Risiko.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Das Verhältnis gilt für alle Menschen gleich, unabhängig von Ziel und Situation.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Chance abwägen heißt: zur eigenen Lage passend wählen, nicht blind der größten Zahl folgen."
           }
         ],
         "calculationTemplates": [],
         "teacherSupport": {
           "competenceGoal": "Zusammenhang zwischen Renditechance und Risiko verstehen.",
           "typicalMisconception": "Mehr Gewinnchance bedeutet, dass eine Anlage besser und sicherer ist.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Mehr Gewinnchance bedeutet, dass eine Anlage besser und sicherer ist.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Chance und Risiko“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "discussionPrompt": "Diskutieren Sie ein Werbeversprechen wie „20 Prozent Rendite, garantiert sicher“. Woran erkennt man, dass hier etwas nicht stimmen kann?",
+          "classroomActivity": "Die Lernenden ordnen Karten mit verschiedenen Anlagen entlang zweier Achsen (Chance und Schwankung) an und diskutieren, warum sichere Felder oben rechts leer bleiben."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Chance und Risiko“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Chance und Risiko“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Fragen Sie: Wenn jemand dir doppeltes Taschengeld ohne jedes Risiko verspricht, was würdest du zurückfragen?",
+          "everydayExercise": "Vergleichen Sie gemeinsam ein Sparangebot der Bank mit einer bekannten Aktie und benennen Sie jeweils Chance und mögliche Rückschläge."
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_einzelrisiko",
@@ -522,11 +522,11 @@
         ],
         "pedagogy": {
           "learningGoal": "Unternehmensspezifische Risiken einzelner Aktien verstehen.",
-          "coreIdea": "Wer alles auf ein einzelnes Unternehmen setzt, hängt stark von diesem Unternehmen ab.",
-          "everydayScenario": "Ein wichtiges Produkt floppt und die Aktie dieses Unternehmens fällt stark.",
-          "misconception": "Wenn ein Unternehmen bekannt ist, ist das Einzelrisiko egal.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Einzelrisiko' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Einzelrisiko' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "coreIdea": "Wer alles auf ein einziges Unternehmen setzt, macht sein Geld vom Schicksal dieser einen Firma abhängig.",
+          "everydayScenario": "Ein wichtiges Produkt eines Unternehmens floppt, und dessen Aktie fällt kräftig.",
+          "misconception": "Wenn ein Unternehmen groß und bekannt ist, kann bei seiner Aktie kaum etwas schiefgehen.",
+          "transferTask": "Nenne ein bekanntes Unternehmen und überlege dir drei Ereignisse, die nur diese eine Firma treffen und ihre Aktie fallen lassen könnten.",
+          "reflectionPrompt": "Warum fühlt sich eine bekannte Aktie sicherer an, als sie es tatsächlich ist?"
         },
         "glossaryTerms": [
           "Einzelrisiko",
@@ -542,139 +542,139 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Einzelrisiko: Wer alles auf ein einzelnes Unternehmen setzt, hängt stark von diesem Unternehmen ab. Beispiel: Ein wichtiges Produkt floppt und die Aktie dieses Unternehmens fällt stark. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Wenn ein Unternehmen bekannt ist, ist das Einzelrisiko egal.“.",
-          "young_adults": "Einzelrisiko: Wer alles auf ein einzelnes Unternehmen setzt, hängt stark von diesem Unternehmen ab. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Ein wichtiges Produkt floppt und die Aktie dieses Unternehmens fällt stark.",
-          "parents_teachers": "Lernziel: Unternehmensspezifische Risiken einzelner Aktien verstehen. Didaktischer Fokus: Wer alles auf ein einzelnes Unternehmen setzt, hängt stark von diesem Unternehmen ab. Typische Fehlvorstellung: „Wenn ein Unternehmen bekannt ist, ist das Einzelrisiko egal.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Einzelrisiko heißt: Du hängst mit deinem Geld von einer einzigen Firma ab. Stell dir vor, du kaufst nur Aktien von einer Spielefirma. Wenn deren neues Spiel ein Flop wird oder ein Skandal passiert, fällt genau diese Aktie stark, und dein ganzes Geld leidet mit. Dabei hilft es wenig, dass die Firma bekannt ist, denn auch große Namen können schlechte Jahre haben. Je mehr du auf ein einziges Unternehmen setzt, desto größer ist dieses Einzelrisiko.",
+          "young_adults": "Einzelrisiko, auch Konzentrationsrisiko genannt, ist das Risiko, das nur ein bestimmtes Unternehmen betrifft: ein gescheitertes Produkt, Managementfehler, ein Rechtsstreit oder ein Bilanzskandal. Anders als das Marktrisiko lässt es sich durch Streuung stark reduzieren, denn ein Rückschlag bei einer Firma wird durch viele andere Positionen abgefedert. Bekanntheit schützt nicht: Auch etablierte Konzerne haben schon massiv an Wert verloren. Wer einen großen Teil des Depots in eine einzige Aktie legt, geht ein vermeidbar hohes Risiko ein.",
+          "parents_teachers": "Erläutern Sie das Einzel- oder Konzentrationsrisiko als firmenspezifisches Risiko (Produkt, Management, Recht, Bilanz), das im Gegensatz zum Marktrisiko durch Diversifikation reduzierbar ist. Wichtig ist die Korrektur der Fehlvorstellung, Bekanntheit oder Größe eines Unternehmens biete Schutz. Nutzen Sie historische Beispiele stark gefallener Einzelwerte neutral als Lernanlass, ohne konkrete Kaufurteile abzugeben."
         },
         "questions": [
           {
             "id": "q_einzelrisiko_001",
             "level": "explain",
-            "question": "Was beschreibt „Einzelrisiko“ am besten?",
+            "question": "Was bedeutet Einzelrisiko?",
             "points": 100,
-            "correctAnswer": "Wer alles auf ein einzelnes Unternehmen setzt, hängt stark von diesem Unternehmen ab.",
+            "correctAnswer": "Das Risiko, das entsteht, wenn man sein Geld von einem einzigen Unternehmen abhängig macht.",
             "distractors": [
               {
-                "text": "Wenn ein Unternehmen bekannt ist, ist das Einzelrisiko egal.",
+                "text": "Bei bekannten Unternehmen ist das Einzelrisiko egal.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Einzelrisiko bedeutet, dass Gewinn und Sicherheit garantiert sind.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Einzelrisiko hat mit Geldentscheidungen nichts zu tun.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Wer alles auf ein einzelnes Unternehmen setzt, hängt stark von diesem Unternehmen ab."
+            "explanationAfterAnswer": "Richtig: Wer alles auf eine Firma setzt, hängt voll von deren Schicksal ab."
           },
           {
             "id": "q_einzelrisiko_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Einzelrisiko“?",
+            "question": "Welche Situation ist ein typisches Einzelrisiko?",
             "points": 100,
-            "correctAnswer": "Ein wichtiges Produkt floppt und die Aktie dieses Unternehmens fällt stark.",
+            "correctAnswer": "Das neue Hauptprodukt eines Unternehmens floppt und dessen Aktie fällt stark.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Du kaufst versehentlich zum falschen Zeitpunkt, alle Firmen sind aber unbetroffen.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Eine weltweite Wirtschaftskrise lässt fast alle Aktien gleichzeitig fallen.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Der ganze Aktienmarkt steigt, weil die Zinsen für alle sinken.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Ein Flop trifft genau diese eine Firma. Das ist Einzelrisiko, nicht Marktrisiko."
           },
           {
             "id": "q_einzelrisiko_003",
             "level": "understand",
-            "question": "Warum ist „Einzelrisiko“ für Finanzbildung wichtig?",
+            "question": "Warum schützt die Bekanntheit eines Unternehmens nicht vor dem Einzelrisiko?",
             "points": 120,
-            "correctAnswer": "Unternehmensspezifische Risiken einzelner Aktien verstehen.",
+            "correctAnswer": "Weil auch große, bekannte Firmen durch eigene Fehler oder Skandale stark an Wert verlieren können.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil bekannte Firmen per Gesetz nicht fallen dürfen.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil man bei bekannten Firmen keine Kosten mehr prüfen muss.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil Einzelrisiko nur ein Fachwort ohne praktischen Nutzen ist.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Unternehmensspezifische Risiken einzelner Aktien verstehen."
+            "explanationAfterAnswer": "Ein großer Name ist kein Schutzschild. Auch bekannte Aktien hatten schon tiefe Einbrüche."
           },
           {
             "id": "q_einzelrisiko_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Du hast 500 Euro und möchtest das Einzelrisiko senken. Was ist die bessere Entscheidung?",
             "points": 150,
-            "correctAnswer": "Innehalten, Informationen prüfen und erst dann passend zum eigenen Ziel handeln.",
+            "correctAnswer": "Das Geld auf mehrere Unternehmen aus verschiedenen Branchen verteilen statt alles in eine Aktie zu legen.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "Alles in die bekannteste Aktie stecken, weil Bekanntheit vor Verlust schützt.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "Alles in eine einzige Trendaktie legen, weil die höchste Chance immer gewinnt.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "Kosten und Ziel ignorieren und einfach schnell handeln.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "Verteilen auf mehrere Firmen fängt den Rückschlag einer einzelnen ab. Das senkt das Einzelrisiko."
           },
           {
             "id": "q_einzelrisiko_005",
             "level": "master",
-            "question": "Welche Aussage zu „Einzelrisiko“ stimmt am besten?",
+            "question": "Welche Aussage zum Einzelrisiko ist am treffendsten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Einzelrisiko lässt sich durch Streuung deutlich verringern und hängt nicht von der Bekanntheit der Firma ab.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Einzelrisiko verschwindet, sobald man eine große, bekannte Aktie kauft.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Einzelrisiko lässt sich gar nicht beeinflussen und trifft immer alle gleich.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Einzelrisiko wirkt bei jedem Depot gleich, unabhängig von der Aufteilung.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Streuung ist der Hebel gegen Einzelrisiko. Bekanntheit ist es nicht."
           }
         ],
         "calculationTemplates": [],
         "teacherSupport": {
           "competenceGoal": "Unternehmensspezifische Risiken einzelner Aktien verstehen.",
           "typicalMisconception": "Wenn ein Unternehmen bekannt ist, ist das Einzelrisiko egal.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Wenn ein Unternehmen bekannt ist, ist das Einzelrisiko egal.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Einzelrisiko“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "discussionPrompt": "Warum ist es riskant, alles Ersparte in die Aktie der eigenen Lieblingsmarke zu stecken, auch wenn man das Produkt gut findet?",
+          "classroomActivity": "In Gruppen wählen die Lernenden eine Branche und sammeln je drei firmenspezifische Ereignisse, die eine einzelne Aktie treffen könnten, und präsentieren sie."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Einzelrisiko“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Einzelrisiko“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Fragen Sie: Was könnte passieren, wenn deine ganze Sammlung nur aus Karten eines einzigen Spiels bestünde und dieses Spiel plötzlich niemand mehr mag?",
+          "everydayExercise": "Überlegen Sie gemeinsam, warum ein Marktstand mit nur einer einzigen Ware anfälliger ist als einer mit vielen verschiedenen Waren."
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_marktrisiko",
@@ -687,11 +687,11 @@
         ],
         "pedagogy": {
           "learningGoal": "Risiken verstehen, die ganze Märkte gleichzeitig betreffen.",
-          "coreIdea": "Auch breite Streuung schützt nicht davor, dass der gesamte Markt zeitweise fällt.",
-          "everydayScenario": "In einer Wirtschaftskrise fallen viele Aktien gleichzeitig.",
-          "misconception": "Wenn ich viele Aktien habe, kann mein Depot nie fallen.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Marktrisiko' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Marktrisiko' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "coreIdea": "Manche Rückschläge treffen fast alle Aktien zugleich, dagegen hilft auch breite Streuung nicht.",
+          "everydayScenario": "In einer Wirtschaftskrise fallen sehr viele Aktien gleichzeitig, egal aus welcher Branche.",
+          "misconception": "Wenn ich viele verschiedene Aktien habe, kann mein Depot nie insgesamt fallen.",
+          "transferTask": "Überlege dir zwei Ereignisse, die nicht nur eine Firma, sondern fast alle Unternehmen gleichzeitig treffen würden.",
+          "reflectionPrompt": "Warum ist es beruhigend zu wissen, dass Marktrückgänge zwar alle treffen, sich breite Märkte historisch aber über lange Zeit meist wieder erholt haben?"
         },
         "glossaryTerms": [
           "Marktrisiko",
@@ -708,139 +708,139 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Marktrisiko: Auch breite Streuung schützt nicht davor, dass der gesamte Markt zeitweise fällt. Beispiel: In einer Wirtschaftskrise fallen viele Aktien gleichzeitig. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Wenn ich viele Aktien habe, kann mein Depot nie fallen.“.",
-          "young_adults": "Marktrisiko: Auch breite Streuung schützt nicht davor, dass der gesamte Markt zeitweise fällt. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: In einer Wirtschaftskrise fallen viele Aktien gleichzeitig.",
-          "parents_teachers": "Lernziel: Risiken verstehen, die ganze Märkte gleichzeitig betreffen. Didaktischer Fokus: Auch breite Streuung schützt nicht davor, dass der gesamte Markt zeitweise fällt. Typische Fehlvorstellung: „Wenn ich viele Aktien habe, kann mein Depot nie fallen.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Marktrisiko ist das Risiko, das fast alle Aktien gleichzeitig trifft. Bei einer großen Krise, zum Beispiel wenn die Wirtschaft schwächelt, fallen viele Kurse auf einmal, egal ob Spielefirma, Autobauer oder Getränkehersteller. Dagegen hilft es nicht, einfach viele verschiedene Aktien zu haben, denn sie gehen zusammen nach unten. Die gute Nachricht: In der Vergangenheit haben sich breite Märkte nach solchen Tiefs über lange Zeit meist wieder erholt. Eine Garantie dafür gibt es aber nicht.",
+          "young_adults": "Das Marktrisiko, auch systematisches Risiko genannt, betrifft den gesamten Markt: Rezessionen, stark steigende Zinsen, Kriege oder große Konjunktureinbrüche ziehen viele Kurse gleichzeitig nach unten. Anders als das Einzelrisiko lässt es sich durch Diversifikation nicht wegstreuen, weil die Positionen gemeinsam fallen. Genau deshalb gehört in schwankende Anlagen nur Geld, das du länger nicht brauchst. Historisch haben sich breit gestreute Aktienmärkte nach Krisen über Zeiträume von vielen Jahren meist erholt, was aber keine Garantie für die Zukunft ist.",
+          "parents_teachers": "Grenzen Sie das Marktrisiko (systematisches Risiko) klar vom Einzelrisiko ab: Es betrifft breite Märkte gleichzeitig und ist durch Diversifikation nicht eliminierbar. Ordnen Sie Auslöser wie Konjunktur, Zinsen und Krisen ein. Korrigieren Sie die Fehlvorstellung, viele Titel bedeuteten Verlustschutz. Betonen Sie zugleich die langfristige Perspektive: Breite Märkte haben sich historisch nach Rückschlägen meist erholt, ohne dies als Garantie darzustellen."
         },
         "questions": [
           {
             "id": "q_marktrisiko_001",
             "level": "explain",
-            "question": "Was beschreibt „Marktrisiko“ am besten?",
+            "question": "Was ist Marktrisiko?",
             "points": 100,
-            "correctAnswer": "Auch breite Streuung schützt nicht davor, dass der gesamte Markt zeitweise fällt.",
+            "correctAnswer": "Das Risiko, dass fast alle Aktien gleichzeitig fallen, zum Beispiel in einer Krise.",
             "distractors": [
               {
-                "text": "Wenn ich viele Aktien habe, kann mein Depot nie fallen.",
+                "text": "Mit vielen verschiedenen Aktien kann das Depot nie insgesamt fallen.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Marktrisiko bedeutet, dass Gewinn und Sicherheit garantiert sind.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Marktrisiko hat mit Geldentscheidungen nichts zu tun.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Auch breite Streuung schützt nicht davor, dass der gesamte Markt zeitweise fällt."
+            "explanationAfterAnswer": "Richtig: Marktrisiko trifft breite Märkte gleichzeitig, daher hilft Streuung dagegen nicht."
           },
           {
             "id": "q_marktrisiko_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Marktrisiko“?",
+            "question": "Welche Situation zeigt Marktrisiko und nicht bloß Einzelrisiko?",
             "points": 100,
-            "correctAnswer": "In einer Wirtschaftskrise fallen viele Aktien gleichzeitig.",
+            "correctAnswer": "In einer Wirtschaftskrise fallen viele Aktien aus ganz verschiedenen Branchen gleichzeitig.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Ein einzelnes Unternehmen bekommt einen neuen Chef und nur dessen Aktie schwankt.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Das Hauptprodukt einer einzelnen Firma floppt und nur deren Aktie fällt.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Nur eine einzige Aktie fällt, während alle anderen Branchen ruhig bleiben.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Wenn viele Branchen gleichzeitig fallen, ist es Marktrisiko. Ein einzelner Flop wäre Einzelrisiko."
           },
           {
             "id": "q_marktrisiko_003",
             "level": "understand",
-            "question": "Warum ist „Marktrisiko“ für Finanzbildung wichtig?",
+            "question": "Warum kann Diversifikation das Marktrisiko nicht beseitigen?",
             "points": 120,
-            "correctAnswer": "Risiken verstehen, die ganze Märkte gleichzeitig betreffen.",
+            "correctAnswer": "Weil ein Marktrückgang alle Positionen gleichzeitig nach unten zieht, egal wie viele verschiedene Aktien man hat.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil Diversifikation nur bei Fonds erlaubt ist, aber nicht bei Aktien.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil man bei einem großen Depot keine Kosten mehr prüfen muss.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil Marktrisiko nur ein Fachwort ohne praktischen Nutzen ist.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Risiken verstehen, die ganze Märkte gleichzeitig betreffen."
+            "explanationAfterAnswer": "Streuung hilft gegen Einzelrisiko, nicht gegen den gemeinsamen Rückgang des ganzen Marktes."
           },
           {
             "id": "q_marktrisiko_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Der ganze Markt ist gerade um 20 Prozent gefallen und dein breit gestreutes Depot ist im Minus. Du brauchst das Geld erst in vielen Jahren. Was ist sinnvoll?",
             "points": 150,
-            "correctAnswer": "Den Begriff verstehen, Beispiele erkennen und ihn von ähnlichen Begriffen abgrenzen.",
+            "correctAnswer": "Ruhig bleiben und am Plan festhalten, da breite Märkte sich historisch über lange Zeiträume meist erholt haben.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "Sofort alles verkaufen, weil ein Marktrückgang bedeutet, dass das Geld weg ist.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "Noch schnell alles auf eine einzige Aktie umschichten, um den Verlust aufzuholen.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "Den langen Anlagehorizont ignorieren, weil er in Krisen keine Rolle spielt.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "Bei langem Horizont ist Ruhe meist die klügere Antwort auf Marktrisiko als hektisches Verkaufen."
           },
           {
             "id": "q_marktrisiko_005",
             "level": "master",
-            "question": "Welche Aussage zu „Marktrisiko“ stimmt am besten?",
+            "question": "Welche Aussage zum Marktrisiko ist am treffendsten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Marktrisiko bleibt trotz breiter Streuung bestehen, lässt sich aber durch einen langen Anlagehorizont besser aushalten.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Marktrisiko verschwindet, sobald man genügend verschiedene Aktien besitzt.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Marktrisiko bedeutet, dass Verluste nach Krisen immer garantiert dauerhaft bleiben.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Marktrisiko wirkt bei jedem gleich, unabhängig davon, wie lange er investiert bleibt.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Man kann Marktrisiko nicht wegstreuen, aber mit Zeit und Ruhe besser tragen."
           }
         ],
         "calculationTemplates": [],
         "teacherSupport": {
           "competenceGoal": "Risiken verstehen, die ganze Märkte gleichzeitig betreffen.",
           "typicalMisconception": "Wenn ich viele Aktien habe, kann mein Depot nie fallen.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Wenn ich viele Aktien habe, kann mein Depot nie fallen.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Marktrisiko“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "discussionPrompt": "Warum reicht es nicht, einfach viele verschiedene Aktien zu kaufen, um sich gegen eine große Wirtschaftskrise zu schützen?",
+          "classroomActivity": "Die Lernenden recherchieren einen historischen Markteinbruch und die anschließende Erholung und stellen den Verlauf auf einem einfachen Zeitstrahl dar."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Marktrisiko“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Marktrisiko“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Sprechen Sie darüber: Was passiert mit fast allen Geschäften einer Stadt gleichzeitig, wenn die ganze Wirtschaft schwächelt, und was mit nur einem Laden, der schlecht wirtschaftet?",
+          "everydayExercise": "Erklären Sie an einem Wetterbild: Ein einzelner Regenschauer trifft nur einen Ort (Einzelrisiko), ein Sturm zieht über die ganze Region (Marktrisiko)."
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_diversifikation",
@@ -853,11 +853,11 @@
         ],
         "pedagogy": {
           "learningGoal": "Diversifikation als breite Risikoverteilung verstehen.",
-          "coreIdea": "Nicht alles auf eine Karte setzen.",
-          "everydayScenario": "Du verteilst Geld auf viele Unternehmen aus verschiedenen Branchen und Ländern.",
-          "misconception": "Diversifikation bedeutet einfach, viele verschiedene Aktien zufällig zu kaufen.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Diversifikation' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Diversifikation' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "coreIdea": "Sein Geld bewusst auf verschiedene Unternehmen, Branchen und Länder verteilen, statt alles auf eine Karte zu setzen.",
+          "everydayScenario": "Du verteilst dein Geld auf viele Unternehmen aus verschiedenen Branchen und Ländern, statt nur eine Aktie zu kaufen.",
+          "misconception": "Diversifikation heißt einfach, möglichst viele beliebige Aktien zufällig zu kaufen.",
+          "transferTask": "Plane ein Mini-Depot mit 300 Euro: Auf welche drei bis vier unterschiedlichen Bereiche würdest du das Geld verteilen und warum?",
+          "reflectionPrompt": "Woran erkennst du, ob ein Depot wirklich breit gestreut ist und nicht nur viele ähnliche Werte enthält?"
         },
         "glossaryTerms": [
           "Diversifikation",
@@ -875,125 +875,125 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Diversifikation: Nicht alles auf eine Karte setzen. Beispiel: Du verteilst Geld auf viele Unternehmen aus verschiedenen Branchen und Ländern. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Diversifikation bedeutet einfach, viele verschiedene Aktien zufällig zu kaufen.“.",
-          "young_adults": "Diversifikation: Nicht alles auf eine Karte setzen. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Du verteilst Geld auf viele Unternehmen aus verschiedenen Branchen und Ländern.",
-          "parents_teachers": "Lernziel: Diversifikation als breite Risikoverteilung verstehen. Didaktischer Fokus: Nicht alles auf eine Karte setzen. Typische Fehlvorstellung: „Diversifikation bedeutet einfach, viele verschiedene Aktien zufällig zu kaufen.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Diversifikation ist ein langes Wort für eine einfache Idee: nicht alles auf eine Karte setzen. Statt dein ganzes Geld in eine einzige Aktie zu stecken, verteilst du es auf viele verschiedene Unternehmen, am besten aus unterschiedlichen Branchen und Ländern. Wenn dann eine Firma einen schlechten Tag hat, tragen die anderen dein Depot weiter. Wichtig ist echte Verteilung: Zehn Aktien von zehn Spielefirmen wären kaum gestreut, weil sie oft zusammen fallen. Diversifikation heißt also überlegt verteilen, nicht wahllos einkaufen.",
+          "young_adults": "Diversifikation bedeutet, Kapital bewusst über viele Titel, Branchen, Regionen und Anlageklassen zu verteilen, um das Einzelrisiko zu senken. Der Kern: Rückschläge einzelner Positionen werden von anderen abgefedert, sodass das Gesamtdepot ruhiger läuft. Entscheidend ist nicht die reine Anzahl, sondern wie unterschiedlich die Werte auf Ereignisse reagieren. Zwanzig Tech-Aktien sind schlechter gestreut als eine Mischung über mehrere Branchen und Länder. Wichtig bleibt: Diversifikation reduziert das Einzelrisiko deutlich, beseitigt aber das Marktrisiko nicht.",
+          "parents_teachers": "Diversifikation ist die bewusste Streuung über Titel, Branchen, Regionen und Anlageklassen zur Reduktion des Einzelrisikos. Betonen Sie Qualität statt bloßer Quantität: Ausschlaggebend ist die Unterschiedlichkeit der Werte, nicht ihre Zahl. Korrigieren Sie die Fehlvorstellung des wahllosen Vielkaufs. Verweisen Sie darauf, dass Diversifikation das Marktrisiko nicht eliminiert, und bereiten Sie so den Übergang zu den Grenzen der Streuung vor."
         },
         "questions": [
           {
             "id": "q_diversifikation_001",
             "level": "explain",
-            "question": "Was beschreibt „Diversifikation“ am besten?",
+            "question": "Was bedeutet Diversifikation?",
             "points": 100,
-            "correctAnswer": "Nicht alles auf eine Karte setzen.",
+            "correctAnswer": "Sein Geld bewusst auf verschiedene Unternehmen, Branchen und Länder verteilen, statt alles auf eine Karte zu setzen.",
             "distractors": [
               {
-                "text": "Diversifikation bedeutet einfach, viele verschiedene Aktien zufällig zu kaufen.",
+                "text": "Einfach möglichst viele beliebige Aktien zufällig kaufen.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Diversifikation bedeutet, dass Gewinn und Sicherheit garantiert sind.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Diversifikation hat mit Geldentscheidungen nichts zu tun.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Nicht alles auf eine Karte setzen."
+            "explanationAfterAnswer": "Richtig: Diversifikation heißt überlegt verteilen, damit ein einzelner Rückschlag nicht das ganze Depot trifft."
           },
           {
             "id": "q_diversifikation_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Diversifikation“?",
+            "question": "Welches Depot ist am besten diversifiziert?",
             "points": 100,
-            "correctAnswer": "Du verteilst Geld auf viele Unternehmen aus verschiedenen Branchen und Ländern.",
+            "correctAnswer": "Aktien aus mehreren Branchen und Ländern gemischt.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Das gesamte Geld in einer einzigen bekannten Aktie.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Zehn Aktien, die alle aus derselben Spielebranche kommen.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Fünf Anteile derselben Aktie an fünf verschiedenen Tagen gekauft.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Echte Streuung braucht unterschiedliche Branchen und Länder, nicht nur viele ähnliche Werte."
           },
           {
             "id": "q_diversifikation_003",
             "level": "understand",
-            "question": "Warum ist „Diversifikation“ für Finanzbildung wichtig?",
+            "question": "Warum senkt Verteilung auf viele unterschiedliche Werte das Risiko?",
             "points": 120,
-            "correctAnswer": "Diversifikation als breite Risikoverteilung verstehen.",
+            "correctAnswer": "Weil ein Rückschlag einer einzelnen Firma von den anderen Positionen abgefedert wird.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil viele Aktien zusammen niemals gleichzeitig fallen können.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil man mit einem großen Depot keine Kosten mehr prüfen muss.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil Diversifikation nur ein Fachwort ohne praktischen Nutzen ist.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Diversifikation als breite Risikoverteilung verstehen."
+            "explanationAfterAnswer": "Streuung dämpft das Einzelrisiko, weil nicht alle Werte gleichzeitig vom selben Ereignis getroffen werden."
           },
           {
             "id": "q_diversifikation_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Du hast 400 Euro und willst breit streuen. Welche Aufteilung passt am besten?",
             "points": 150,
-            "correctAnswer": "Die passenden Werte einsetzen, sauber rechnen und das Ergebnis im Kontext prüfen.",
+            "correctAnswer": "Auf mehrere Unternehmen aus verschiedenen Branchen und Ländern verteilen.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "Alle 400 Euro in eine einzige Trendaktie, weil die höchste Chance immer gewinnt.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "400 Euro auf vier Aktien derselben Branche, das reicht als Streuung.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "Ohne auf Branche oder Land zu achten schnell irgendetwas kaufen.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "Über Branchen und Länder verteilen bringt echte Streuung, nicht bloß viele ähnliche Werte."
           },
           {
             "id": "q_diversifikation_005",
             "level": "master",
-            "question": "Welche Aussage zu „Diversifikation“ stimmt am besten?",
+            "question": "Welche Aussage zur Diversifikation ist am treffendsten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Gute Diversifikation senkt das Einzelrisiko durch unterschiedliche Werte, beseitigt das Marktrisiko aber nicht.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Je mehr Aktien, desto sicherer, ganz gleich wie ähnlich sie sind.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Wer breit streut, kann überhaupt kein Geld mehr verlieren.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Diversifikation wirkt bei jedem Depot gleich, egal wie es aufgebaut ist.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Entscheidend ist die Unterschiedlichkeit der Werte. Und das Marktrisiko bleibt trotz Streuung bestehen."
           }
         ],
         "calculationTemplates": [
@@ -1001,7 +1001,7 @@
             "id": "tmpl_diversifikation_verteilen",
             "level": "apply",
             "points": 150,
-            "questionTemplate": "Du verteilst {summe} Euro gleichmäßig auf {anzahl} Anlagen. Wie viel steckt in jeder Anlage?",
+            "questionTemplate": "Du verteilst {summe} Euro gleichmäßig auf {anzahl} verschiedene Anlagen. Wie viel steckt in jeder einzelnen Anlage?",
             "parameters": {
               "summe": {
                 "min": 100,
@@ -1018,21 +1018,21 @@
               "summe - anzahl",
               "summe + anzahl"
             ],
-            "explanationTemplate": "Gleichmäßig verteilen bedeutet: Summe durch Anzahl teilen.",
+            "explanationTemplate": "Gleichmäßig verteilen heißt: die Gesamtsumme durch die Anzahl der Anlagen teilen.",
             "unit": "Euro"
           }
         ],
         "teacherSupport": {
           "competenceGoal": "Diversifikation als breite Risikoverteilung verstehen.",
           "typicalMisconception": "Diversifikation bedeutet einfach, viele verschiedene Aktien zufällig zu kaufen.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Diversifikation bedeutet einfach, viele verschiedene Aktien zufällig zu kaufen.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Diversifikation“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "discussionPrompt": "Warum ist ein Depot aus zwanzig Tech-Aktien schlechter gestreut als eines aus fünf Aktien verschiedener Branchen?",
+          "classroomActivity": "Die Lernenden bauen mit Spielgeld ein Mini-Depot und ordnen jede Position einer Branche und Region zu, um Klumpen sichtbar zu machen."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Diversifikation“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Diversifikation“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Fragen Sie: Warum packt man beim Picknick nicht alle Getränke in eine einzige Tasche, die kaputtgehen könnte?",
+          "everydayExercise": "Vergleichen Sie zu Hause einen Obstkorb mit nur einer Sorte und einen gemischten Korb und übertragen Sie das Bild auf Geldanlage."
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_streuung_grenzen",
@@ -1045,11 +1045,11 @@
         ],
         "pedagogy": {
           "learningGoal": "Grenzen der Diversifikation verstehen.",
-          "coreIdea": "Streuung ist ein Sicherheitsgurt, kein Zauberschild.",
-          "everydayScenario": "Eine einzelne Firma fällt; dein breites Depot ist weniger betroffen, aber ein Marktrückgang trifft viele.",
-          "misconception": "Wenn ich breit gestreut bin, kann ich kein Geld verlieren.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Was Streuung kann und was nicht' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Was Streuung kann und was nicht' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "coreIdea": "Streuung dämpft das Einzelrisiko, ist aber kein Schutz gegen einen fallenden Gesamtmarkt.",
+          "everydayScenario": "Fällt eine einzelne Firma, merkt dein breites Depot kaum etwas; fällt der ganze Markt, trifft es dich trotzdem.",
+          "misconception": "Wenn ich breit gestreut bin, kann ich überhaupt kein Geld mehr verlieren.",
+          "transferTask": "Nenne je ein Risiko, gegen das Streuung gut hilft, und eines, gegen das sie kaum hilft, und erkläre den Unterschied.",
+          "reflectionPrompt": "Warum kann zu viel Vertrauen in Streuung dazu führen, dass man Risiken unterschätzt?"
         },
         "glossaryTerms": [
           "Streuung",
@@ -1066,139 +1066,139 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Was Streuung kann und was nicht: Streuung ist ein Sicherheitsgurt, kein Zauberschild. Beispiel: Eine einzelne Firma fällt; dein breites Depot ist weniger betroffen, aber ein Marktrückgang trifft viele. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Wenn ich breit gestreut bin, kann ich kein Geld verlieren.“.",
-          "young_adults": "Was Streuung kann und was nicht: Streuung ist ein Sicherheitsgurt, kein Zauberschild. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Eine einzelne Firma fällt; dein breites Depot ist weniger betroffen, aber ein Marktrückgang trifft viele.",
-          "parents_teachers": "Lernziel: Grenzen der Diversifikation verstehen. Didaktischer Fokus: Streuung ist ein Sicherheitsgurt, kein Zauberschild. Typische Fehlvorstellung: „Wenn ich breit gestreut bin, kann ich kein Geld verlieren.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Streuung ist wie ein Sicherheitsgurt, kein Zauberschild. Wenn eine einzelne Firma in deinem breiten Depot einen schlechten Tag hat, tragen die anderen Werte dich weiter, das ist der Sicherheitsgurt. Aber wenn der ganze Markt fällt, zum Beispiel in einer Krise, dann rutschen viele Werte gleichzeitig nach unten, und auch ein breit gestreutes Depot fällt mit. Streuung schützt dich also vor dem Pech mit einer einzelnen Firma, nicht vor schlechten Zeiten für alle. Wer das verwechselt, fühlt sich sicherer, als er ist.",
+          "young_adults": "Diversifikation reduziert das Einzelrisiko wirksam, hat aber klare Grenzen: Das Marktrisiko lässt sich nicht wegstreuen, weil in Krisen die Korrelation vieler Werte steigt und sie gemeinsam fallen. Ein breit gestreutes Depot verliert in einem Crash ebenfalls, nur meist weniger extrem als eine Einzelwette. Gefährlich ist die falsche Sicherheit, breite Streuung mache verlustfrei; sie führt dazu, dass man das Marktrisiko und den nötigen Anlagehorizont unterschätzt. Streuung ist ein starkes Werkzeug gegen firmenspezifische Rückschläge, aber kein Ersatz für Zeit und einen kühlen Kopf.",
+          "parents_teachers": "Arbeiten Sie die Grenzen der Diversifikation heraus: Sie mindert das Einzelrisiko, nicht das systematische Marktrisiko, dessen Wirkung in Krisen durch steigende Korrelationen sogar zunimmt. Thematisieren Sie die falsche Sicherheit, breite Streuung schließe Verluste aus, da sie zu unangemessener Risikobereitschaft verleitet. Verknüpfen Sie die Grenzen mit dem Anlagehorizont als zweitem Sicherheitsfaktor neben der Streuung."
         },
         "questions": [
           {
             "id": "q_streuung_grenzen_001",
             "level": "explain",
-            "question": "Was beschreibt „Was Streuung kann und was nicht“ am besten?",
+            "question": "Was kann Streuung leisten und was nicht?",
             "points": 100,
-            "correctAnswer": "Streuung ist ein Sicherheitsgurt, kein Zauberschild.",
+            "correctAnswer": "Sie dämpft das Einzelrisiko, schützt aber nicht vor einem fallenden Gesamtmarkt.",
             "distractors": [
               {
-                "text": "Wenn ich breit gestreut bin, kann ich kein Geld verlieren.",
+                "text": "Wer breit gestreut ist, kann überhaupt kein Geld mehr verlieren.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Streuung bedeutet, dass Gewinn und Sicherheit garantiert sind.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Streuung hat mit Geldentscheidungen nichts zu tun.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Streuung ist ein Sicherheitsgurt, kein Zauberschild."
+            "explanationAfterAnswer": "Richtig: Streuung ist ein Sicherheitsgurt gegen Einzelpech, aber kein Schutzschild gegen Marktrisiko."
           },
           {
             "id": "q_streuung_grenzen_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Was Streuung kann und was nicht“?",
+            "question": "Welche Situation zeigt eine Grenze der Streuung?",
             "points": 100,
-            "correctAnswer": "Eine einzelne Firma fällt; dein breites Depot ist weniger betroffen, aber ein Marktrückgang trifft viele.",
+            "correctAnswer": "Eine einzelne Firma fällt und dein breites Depot merkt es kaum, doch bei einem Marktrückgang fällt es mit.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Streuung sorgt dafür, dass Kurse überhaupt nicht mehr schwanken.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Ein breit gestreutes Depot kann durch nichts mehr an Wert verlieren.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Nur eine einzelne Firma fällt und deshalb bricht das ganze breite Depot ein.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Gegen den Rückschlag einer einzelnen Firma hilft Streuung, gegen einen Marktrückgang kaum."
           },
           {
             "id": "q_streuung_grenzen_003",
             "level": "understand",
-            "question": "Warum ist „Was Streuung kann und was nicht“ für Finanzbildung wichtig?",
+            "question": "Warum ist der Glaube, breite Streuung schließe Verluste aus, gefährlich?",
             "points": 120,
-            "correctAnswer": "Grenzen der Diversifikation verstehen.",
+            "correctAnswer": "Weil er eine falsche Sicherheit erzeugt und dazu verleitet, das Marktrisiko und den nötigen Anlagehorizont zu unterschätzen.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil breite Streuung in Wahrheit gar keine Vorteile hat.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil man bei einem breiten Depot keine Kosten mehr prüfen muss.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil Streuung nur ein Fachwort ohne praktischen Nutzen ist.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Grenzen der Diversifikation verstehen."
+            "explanationAfterAnswer": "Falsche Sicherheit verführt zu zu viel Risiko. Streuung hilft, ist aber kein Freibrief."
           },
           {
             "id": "q_streuung_grenzen_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Dein breit gestreutes Depot ist in einem Marktrückgang um 15 Prozent gefallen. Was ist die passende Reaktion?",
             "points": 150,
-            "correctAnswer": "Innehalten, Informationen prüfen und erst dann passend zum eigenen Ziel handeln.",
+            "correctAnswer": "Akzeptieren, dass Streuung Marktrisiko nicht ausschließt, und bei langem Horizont am Plan festhalten.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "Empört sein, weil breite Streuung Verluste eigentlich unmöglich machen sollte.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "Alles verkaufen, weil Streuung offenbar gar nichts bringt.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "Den Anlagehorizont ignorieren und rein nach dem aktuellen Minus entscheiden.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "Ein Marktrückgang trifft auch breite Depots. Zeit und Plan sind hier wichtiger als Panik."
           },
           {
             "id": "q_streuung_grenzen_005",
             "level": "master",
-            "question": "Welche Aussage zu „Was Streuung kann und was nicht“ stimmt am besten?",
+            "question": "Welche Aussage über die Grenzen der Streuung ist am treffendsten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Streuung reduziert das Einzelrisiko stark, das Marktrisiko bleibt und wird am besten durch Zeit aufgefangen.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Ausreichend breite Streuung macht ein Depot vollständig verlustsicher.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Weil Streuung Grenzen hat, sollte man lieber gar nicht streuen.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Die Grenzen der Streuung gelten für jeden gleich, egal wie lange er investiert.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Streuung und langer Horizont ergänzen sich: das eine gegen Einzelrisiko, das andere gegen Marktrisiko."
           }
         ],
         "calculationTemplates": [],
         "teacherSupport": {
           "competenceGoal": "Grenzen der Diversifikation verstehen.",
           "typicalMisconception": "Wenn ich breit gestreut bin, kann ich kein Geld verlieren.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Wenn ich breit gestreut bin, kann ich kein Geld verlieren.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Was Streuung kann und was nicht“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "discussionPrompt": "Wogegen hilft ein Sicherheitsgurt und wogegen nicht? Übertragen Sie das Bild auf Streuung und Marktrisiko.",
+          "classroomActivity": "Die Lernenden erstellen eine Zwei-Spalten-Liste: „Das kann Streuung“ und „Das kann Streuung nicht“, und ordnen Beispielrisiken zu."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Was Streuung kann und was nicht“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Was Streuung kann und was nicht“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Fragen Sie: Ein Regenschirm hilft gegen Regen, aber gegen einen Orkan? Was bedeutet das übertragen auf breite Geldanlage?",
+          "everydayExercise": "Besprechen Sie eine Nachricht über einen Börsencrash und überlegen Sie gemeinsam, warum diesmal auch breit gestreute Anleger betroffen waren."
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_gier",
@@ -1211,11 +1211,11 @@
         ],
         "pedagogy": {
           "learningGoal": "Gier als emotionale Entscheidungsfalle erkennen.",
-          "coreIdea": "Gier entsteht, wenn die Aussicht auf schnellen Gewinn wichtiger wird als Risiko.",
-          "everydayScenario": "Eine Aktie steigt stark und du willst sofort kaufen, weil alle davon reden.",
-          "misconception": "Wenn etwas schnell steigt, muss ich sofort mitmachen.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Gier' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Gier' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "coreIdea": "Gier setzt ein, wenn die Aussicht auf schnellen Gewinn wichtiger wird als das Risiko.",
+          "everydayScenario": "Eine Aktie ist stark gestiegen und du willst sofort einsteigen, weil alle davon reden.",
+          "misconception": "Wenn etwas gerade schnell steigt, muss ich sofort mitmachen, sonst verpasse ich sicheren Gewinn.",
+          "transferTask": "Beschreibe eine Situation, in der du (bei Geld, Games oder Sammelkarten) fast etwas Unüberlegtes gekauft hättest, weil du schnellen Gewinn gewittert hast. Was hat dich getrieben?",
+          "reflectionPrompt": "Welche eine Frage könntest du dir stellen, bevor du bei einem heißen Trend zuschlägst, um Gier zu bremsen?"
         },
         "glossaryTerms": [
           "Gier",
@@ -1232,139 +1232,139 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Gier: Gier entsteht, wenn die Aussicht auf schnellen Gewinn wichtiger wird als Risiko. Beispiel: Eine Aktie steigt stark und du willst sofort kaufen, weil alle davon reden. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Wenn etwas schnell steigt, muss ich sofort mitmachen.“.",
-          "young_adults": "Gier: Gier entsteht, wenn die Aussicht auf schnellen Gewinn wichtiger wird als Risiko. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Eine Aktie steigt stark und du willst sofort kaufen, weil alle davon reden.",
-          "parents_teachers": "Lernziel: Gier als emotionale Entscheidungsfalle erkennen. Didaktischer Fokus: Gier entsteht, wenn die Aussicht auf schnellen Gewinn wichtiger wird als Risiko. Typische Fehlvorstellung: „Wenn etwas schnell steigt, muss ich sofort mitmachen.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Gier ist das Gefühl, unbedingt schnell viel gewinnen zu wollen, und zwar so stark, dass man das Risiko ausblendet. Stell dir vor, eine Aktie ist in einer Woche stark gestiegen und alle in der Klasse reden davon. Plötzlich willst du auch rein, damit du nichts verpasst, obwohl du die Firma gar nicht kennst. Genau da schlägt Gier zu: Der Gewinn blendet, das Risiko wird kleingeredet. Wer gerade stark gestiegen ist, kann auch schnell wieder fallen. Ein kurzer Stopp und ein Plan helfen, nicht aus Gier zu handeln.",
+          "young_adults": "Gier ist eine emotionale Falle: Die Aussicht auf schnellen Gewinn verdrängt die nüchterne Risikoabwägung. Typisch ist der Einstieg in einen Hype, nachdem der Kurs schon stark gelaufen ist, angetrieben durch Herdentrieb und den Impuls, dabei sein zu müssen. Dabei steigt oft gerade das Bewertungsrisiko, weil viel Optimismus bereits eingepreist ist. Ein Gegenmittel ist eine vorher festgelegte Risikogrenze und ein Plan, an den du dich auch dann hältst, wenn die Stimmung euphorisch ist. Nicht jeder verpasste Trend ist ein Verlust, aber jeder überstürzte Kauf kann einer werden.",
+          "parents_teachers": "Gier bezeichnet das Überwiegen der Gewinnaussicht gegenüber der Risikoabwägung, häufig verstärkt durch Herdentrieb und Hype. Machen Sie deutlich, dass ein bereits stark gestiegener Kurs ein erhöhtes Bewertungsrisiko tragen kann. Vermitteln Sie als Schutz vorab definierte Regeln und einen Plan. Greifen Sie die Fehlvorstellung auf, ein schneller Anstieg sei ein zwingendes Kaufsignal, und üben Sie das bewusste Innehalten vor Impulskäufen."
         },
         "questions": [
           {
             "id": "q_gier_001",
             "level": "explain",
-            "question": "Was beschreibt „Gier“ am besten?",
+            "question": "Was beschreibt Gier bei Geldentscheidungen?",
             "points": 100,
-            "correctAnswer": "Gier entsteht, wenn die Aussicht auf schnellen Gewinn wichtiger wird als Risiko.",
+            "correctAnswer": "Die Aussicht auf schnellen Gewinn wird so stark, dass das Risiko ausgeblendet wird.",
             "distractors": [
               {
-                "text": "Wenn etwas schnell steigt, muss ich sofort mitmachen.",
+                "text": "Wenn etwas schnell steigt, muss man sofort mitmachen.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Gier bedeutet, dass Gewinn und Sicherheit garantiert sind.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Gier hat mit Geldentscheidungen nichts zu tun.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Gier entsteht, wenn die Aussicht auf schnellen Gewinn wichtiger wird als Risiko."
+            "explanationAfterAnswer": "Richtig: Bei Gier verdrängt der Gewinnwunsch die nüchterne Risikoabwägung."
           },
           {
             "id": "q_gier_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Gier“?",
+            "question": "Welche Situation ist ein typisches Beispiel für Gier?",
             "points": 100,
-            "correctAnswer": "Eine Aktie steigt stark und du willst sofort kaufen, weil alle davon reden.",
+            "correctAnswer": "Eine Aktie ist stark gestiegen und du willst sofort kaufen, weil alle davon reden.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Du prüfst ein Angebot in Ruhe und lehnst es nach Abwägung ab.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Du verkaufst aus Angst sofort alles, als der Markt fällt.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Du wartest bewusst einen Tag ab, bevor du bei einem Trend zuschlägst.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Der Drang, beim Hype schnell dabei zu sein, ist das Kennzeichen von Gier."
           },
           {
             "id": "q_gier_003",
             "level": "understand",
-            "question": "Warum ist „Gier“ für Finanzbildung wichtig?",
+            "question": "Warum ist gerade ein schon stark gestiegener Kurs oft besonders riskant?",
             "points": 120,
-            "correctAnswer": "Gier als emotionale Entscheidungsfalle erkennen.",
+            "correctAnswer": "Weil viel Optimismus bereits eingepreist ist und ein Rückschlag dann besonders schmerzhaft sein kann.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil ein gestiegener Kurs bedeutet, dass er nur noch weiter steigen kann.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil man nach einem Anstieg keine Kosten mehr prüfen muss.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil Gier nur ein Fachwort ohne praktischen Nutzen ist.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Gier als emotionale Entscheidungsfalle erkennen."
+            "explanationAfterAnswer": "Nach einem starken Lauf ist oft viel Hoffnung im Preis, was das Bewertungsrisiko erhöht."
           },
           {
             "id": "q_gier_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Ein Trend ist gerade riesig und du spürst starken Drang, sofort einzusteigen. Was hilft gegen Gier?",
             "points": 150,
-            "correctAnswer": "Innehalten, Informationen prüfen und erst dann passend zum eigenen Ziel handeln.",
+            "correctAnswer": "Kurz innehalten, dich an deine vorher festgelegte Risikogrenze und deinen Plan erinnern und erst dann entscheiden.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "Sofort alles kaufen, damit du den sicheren Gewinn nicht verpasst.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "Nur auf die euphorischen Meinungen der anderen schauen und mitmachen.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "Risiko und Ziel ignorieren, weil bei einem Hype ohnehin alles gutgeht.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "Ein Stopp plus vorab festgelegter Plan bremst den Impuls und macht die Entscheidung ruhiger."
           },
           {
             "id": "q_gier_005",
             "level": "master",
-            "question": "Welche Aussage zu „Gier“ stimmt am besten?",
+            "question": "Welche Aussage über Gier ist am treffendsten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Gier verleitet dazu, Risiken auszublenden; ein vorab festgelegter Plan schützt besser als jedes Bauchgefühl im Hype.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Wer bei jedem heißen Trend mitmacht, gewinnt langfristig am meisten.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Gier ist immer gut, weil sie zu schnellen Entscheidungen führt.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Gier wirkt bei allen gleich, unabhängig von Plan und Situation.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Nicht das Gefühl im Moment, sondern ein ruhiger Plan trägt gute Entscheidungen."
           }
         ],
         "calculationTemplates": [],
         "teacherSupport": {
           "competenceGoal": "Gier als emotionale Entscheidungsfalle erkennen.",
           "typicalMisconception": "Wenn etwas schnell steigt, muss ich sofort mitmachen.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Wenn etwas schnell steigt, muss ich sofort mitmachen.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Gier“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "discussionPrompt": "Warum reden bei einem Hype oft nur die von ihren Gewinnen, die früh dabei waren, und wie verzerrt das unser Bild?",
+          "classroomActivity": "Die Lernenden entwerfen in Kleingruppen eine kurze Checkliste mit drei Fragen, die man sich vor einem Kauf im Hype stellen sollte, und stellen sie vor."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Gier“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Gier“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Fragen Sie: Gab es einen Trend in deiner Klasse, bei dem am Ende viele enttäuscht waren, obwohl anfangs alle begeistert mitgemacht haben?",
+          "everydayExercise": "Vereinbaren Sie eine Bedenkzeit von einem Tag vor größeren Wunschkäufen und werten Sie danach aus, ob der Wunsch geblieben ist."
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_panik",
@@ -1377,11 +1377,11 @@
         ],
         "pedagogy": {
           "learningGoal": "Panikreaktionen auf Verluste erkennen und kontrollieren.",
-          "coreIdea": "Panik kann dazu führen, dass man im schlechtesten Moment verkauft.",
+          "coreIdea": "Panik verleitet dazu, ausgerechnet im Tief zu verkaufen und den Buchverlust echt zu machen.",
           "everydayScenario": "Der Markt fällt stark und du willst ohne Prüfung sofort alles verkaufen.",
-          "misconception": "Wenn Kurse fallen, muss ich sofort verkaufen, um sicher zu sein.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Panik' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Panik' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "misconception": "Wenn die Kurse fallen, muss ich sofort verkaufen, um mein Geld zu retten.",
+          "transferTask": "Beschreibe, wie sich dein Körper und deine Gedanken anfühlen würden, wenn dein Depot an einem Tag stark fällt, und überlege, was du in diesem Moment NICHT sofort tun solltest.",
+          "reflectionPrompt": "Was hilft dir persönlich, in einem Schreckmoment nicht die erstbeste Entscheidung zu treffen?"
         },
         "glossaryTerms": [
           "Panik",
@@ -1398,139 +1398,139 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Panik: Panik kann dazu führen, dass man im schlechtesten Moment verkauft. Beispiel: Der Markt fällt stark und du willst ohne Prüfung sofort alles verkaufen. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Wenn Kurse fallen, muss ich sofort verkaufen, um sicher zu sein.“.",
-          "young_adults": "Panik: Panik kann dazu führen, dass man im schlechtesten Moment verkauft. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Der Markt fällt stark und du willst ohne Prüfung sofort alles verkaufen.",
-          "parents_teachers": "Lernziel: Panikreaktionen auf Verluste erkennen und kontrollieren. Didaktischer Fokus: Panik kann dazu führen, dass man im schlechtesten Moment verkauft. Typische Fehlvorstellung: „Wenn Kurse fallen, muss ich sofort verkaufen, um sicher zu sein.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Panik ist das Gefühl, sofort etwas tun zu müssen, weil es sich gefährlich anfühlt. Beim Geld passiert das, wenn die Kurse plötzlich stark fallen: Man will alles schnell verkaufen, damit nicht noch mehr wegkommt. Das Problem: Genau dann verkauft man oft zum tiefsten Preis und macht den Verlust erst richtig echt. Solange du nicht verkaufst, ist es nur ein Buchverlust auf dem Papier. Deshalb ist der beste erste Schritt bei Panik: einmal tief durchatmen und nichts überstürzen.",
+          "young_adults": "Panik ist eine starke Verlustangst, die zu Panikverkäufen im Tief führt und so einen Buchverlust in einen realisierten verwandelt. Weil die Erholung dann verpasst wird, ist der überstürzte Verkauf oft teurer als das Aushalten. Zwei Dinge helfen: ein vorher gefasster Anlageplan, der festlegt, wie du in Rückgängen handelst, und ein Notgroschen, damit du in Krisen nicht gezwungen bist, ausgerechnet im Tief zu verkaufen. Manche nutzen Rückgänge sogar für ein planmäßiges Rebalancing. Entscheidend ist, dass Gefühle nicht die Regie übernehmen.",
+          "parents_teachers": "Panik beschreibt affektgesteuertes Verkaufen unter Verlustangst, das Buchverluste realisiert und die Erholung ausschließt. Betonen Sie präventive Maßnahmen: einen schriftlichen Anlageplan und einen Notgroschen, der Zwangsverkäufe im Tief vermeidet. Erwähnen Sie Rebalancing als regelbasierte Alternative zu emotionalem Handeln. Üben Sie mit den Lernenden, im Schreckmoment zunächst innezuhalten, statt sofort zu reagieren."
         },
         "questions": [
           {
             "id": "q_panik_001",
             "level": "explain",
-            "question": "Was beschreibt „Panik“ am besten?",
+            "question": "Was passiert typischerweise bei Panik an der Börse?",
             "points": 100,
-            "correctAnswer": "Panik kann dazu führen, dass man im schlechtesten Moment verkauft.",
+            "correctAnswer": "Man verkauft aus Angst ausgerechnet im Tief und macht den Buchverlust dadurch echt.",
             "distractors": [
               {
-                "text": "Wenn Kurse fallen, muss ich sofort verkaufen, um sicher zu sein.",
+                "text": "Wenn Kurse fallen, muss man sofort verkaufen, um sicher zu sein.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Panik bedeutet, dass Gewinn und Sicherheit garantiert sind.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Panik hat mit Geldentscheidungen nichts zu tun.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Panik kann dazu führen, dass man im schlechtesten Moment verkauft."
+            "explanationAfterAnswer": "Richtig: Der Panikverkauf im Tief verwandelt einen Buchverlust in einen echten Verlust."
           },
           {
             "id": "q_panik_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Panik“?",
+            "question": "Welche Situation ist ein typischer Panikverkauf?",
             "points": 100,
-            "correctAnswer": "Der Markt fällt stark und du willst ohne Prüfung sofort alles verkaufen.",
+            "correctAnswer": "Der Markt fällt stark und du wirfst ohne Prüfung sofort alles auf einmal raus.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Du hältst ruhig und prüfst erst, ob sich sachlich etwas geändert hat.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Eine Aktie steigt stark und du kaufst schnell, um dabei zu sein.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Du verkaufst in aller Ruhe, weil sich die Firma sachlich verschlechtert hat.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Sofort und ungeprüft alles verkaufen im Fall ist genau der Panikverkauf."
           },
           {
             "id": "q_panik_003",
             "level": "understand",
-            "question": "Warum ist „Panik“ für Finanzbildung wichtig?",
+            "question": "Warum ist ein Panikverkauf im Tief meist teurer als ruhig zu bleiben?",
             "points": 120,
-            "correctAnswer": "Panikreaktionen auf Verluste erkennen und kontrollieren.",
+            "correctAnswer": "Weil man zum niedrigsten Preis verkauft und die anschließende Erholung nicht mehr mitnimmt.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil Kurse nach einem Verkauf grundsätzlich sofort weiter fallen.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil man nach einem Verkauf keine Kosten mehr prüfen muss.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil Panik nur ein Fachwort ohne praktischen Nutzen ist.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Panikreaktionen auf Verluste erkennen und kontrollieren."
+            "explanationAfterAnswer": "Wer im Tief aussteigt, verkauft billig und ist bei der Erholung nicht mehr dabei."
           },
           {
             "id": "q_panik_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Dein Depot ist heute stark gefallen und dein Herz rast. Was ist der beste erste Schritt?",
             "points": 150,
-            "correctAnswer": "Innehalten, Informationen prüfen und erst dann passend zum eigenen Ziel handeln.",
+            "correctAnswer": "Innehalten, nichts überstürzen und erst prüfen, ob sich sachlich etwas geändert hat.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "Sofort alles verkaufen, damit nicht noch mehr Geld verloren geht.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "Aus Trotz sofort nachkaufen, ohne den Grund des Falls zu kennen.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "Deinen Anlageplan und deinen Notgroschen ignorieren und rein nach Gefühl handeln.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "Erst durchatmen und prüfen, dann entscheiden. Panik ist ein schlechter Ratgeber."
           },
           {
             "id": "q_panik_005",
             "level": "master",
-            "question": "Welche Aussage zu „Panik“ stimmt am besten?",
+            "question": "Welche Aussage über Panik ist am treffendsten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Ein vorher gefasster Anlageplan und ein Notgroschen schützen besser vor Panikverkäufen als jede Reaktion im Moment.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Bei fallenden Kursen ist sofortiges Verkaufen immer die sicherste Wahl.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Panik sorgt dafür, dass man immer im besten Moment aussteigt.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Panik wirkt bei jedem gleich, egal ob es einen Plan gibt oder nicht.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Vorbereitung schlägt Reaktion: Plan und Notgroschen halten dich in Krisen handlungsfähig."
           }
         ],
         "calculationTemplates": [],
         "teacherSupport": {
           "competenceGoal": "Panikreaktionen auf Verluste erkennen und kontrollieren.",
           "typicalMisconception": "Wenn Kurse fallen, muss ich sofort verkaufen, um sicher zu sein.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Wenn Kurse fallen, muss ich sofort verkaufen, um sicher zu sein.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Panik“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "discussionPrompt": "Warum treffen Menschen unter Angst oft schlechtere Entscheidungen, und wie lässt sich der erste Impuls bewusst verzögern?",
+          "classroomActivity": "Die Lernenden schreiben in Ruhe einen kurzen „Krisenplan“ für ihr Musterdepot: Was tue ich, wenn der Markt um 20 Prozent fällt? Anschließend Austausch im Plenum."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Panik“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Panik“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Fragen Sie: Was hilft dir, ruhig zu bleiben, wenn etwas plötzlich schiefzugehen scheint, zum Beispiel im Sport oder bei einer Prüfung?",
+          "everydayExercise": "Vereinbaren Sie die Familienregel, bei erschreckenden Finanznachrichten erst zu schlafen und am nächsten Tag zu entscheiden, und sprechen Sie über die Wirkung."
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_fomo",
@@ -1543,11 +1543,11 @@
         ],
         "pedagogy": {
           "learningGoal": "FOMO als Angst vor verpassten Chancen erkennen.",
-          "coreIdea": "FOMO fragt: Was, wenn alle gewinnen außer mir?",
-          "everydayScenario": "Alle posten Gewinne und du willst kaufen, obwohl du das Produkt nicht verstehst.",
-          "misconception": "Wenn viele mitmachen, muss es eine gute Entscheidung sein.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'FOMO – Angst, etwas zu verpassen' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'FOMO – Angst, etwas zu verpassen' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "coreIdea": "FOMO ist die Angst, dass alle gewinnen außer dir, und drängt zu übereilten Entscheidungen.",
+          "everydayScenario": "In den sozialen Medien posten alle ihre Gewinne, und du willst kaufen, obwohl du das Produkt nicht verstehst.",
+          "misconception": "Wenn ganz viele mitmachen, muss es eine gute und richtige Entscheidung sein.",
+          "transferTask": "Denke an einen Moment, in dem du etwas nur gekauft oder mitgemacht hast, weil alle anderen es taten. Wie ist es ausgegangen, und was würdest du heute anders machen?",
+          "reflectionPrompt": "Warum zeigen Menschen online viel öfter ihre Gewinne als ihre Verluste, und wie verzerrt das dein Bild?"
         },
         "glossaryTerms": [
           "FOMO",
@@ -1565,139 +1565,139 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "FOMO – Angst, etwas zu verpassen: FOMO fragt: Was, wenn alle gewinnen außer mir? Beispiel: Alle posten Gewinne und du willst kaufen, obwohl du das Produkt nicht verstehst. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Wenn viele mitmachen, muss es eine gute Entscheidung sein.“.",
-          "young_adults": "FOMO – Angst, etwas zu verpassen: FOMO fragt: Was, wenn alle gewinnen außer mir? Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Alle posten Gewinne und du willst kaufen, obwohl du das Produkt nicht verstehst.",
-          "parents_teachers": "Lernziel: FOMO als Angst vor verpassten Chancen erkennen. Didaktischer Fokus: FOMO fragt: Was, wenn alle gewinnen außer mir? Typische Fehlvorstellung: „Wenn viele mitmachen, muss es eine gute Entscheidung sein.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "FOMO ist die englische Abkürzung für die Angst, etwas zu verpassen. Beim Geld heißt das: In Videos und Chats zeigen alle ihre Gewinne, und du bekommst das Gefühl, dringend auch mitmachen zu müssen, sonst bist du der Einzige, der leer ausgeht. Das ist ein Trick unseres Kopfes, denn online sieht man fast nur die Gewinner, nie die vielen, die verloren haben. Nur weil viele etwas tun, ist es nicht automatisch klug. Ein kurzer Moment Bedenkzeit hilft, nicht aus reiner FOMO zu handeln.",
+          "young_adults": "FOMO, die Fear of Missing Out, ist die Angst, eine Chance zu verpassen, die alle anderen angeblich nutzen. In sozialen Medien wird sie durch Gruppendruck und den ständigen Strom von Gewinnpostings verstärkt, während Verluste kaum gezeigt werden. Diese verzerrte Wahrnehmung treibt zu impulsiven Käufen in bereits gelaufene Trends. Ein wirksames Gegenmittel ist eine feste Wartefrist vor jeder ungeplanten Order und ein Anlageplan, der definiert, worin und wie du investierst. Eine verpasste Chance ist kein realer Verlust, ein überstürzter Kauf kann aber einer werden.",
+          "parents_teachers": "FOMO bezeichnet die durch Gruppendruck und Social Media verstärkte Angst, Chancen zu verpassen, die zu impulsivem Herdenverhalten führt. Thematisieren Sie den Survivorship-Bias: Online dominieren Gewinnmeldungen, Verluste bleiben unsichtbar. Vermitteln Sie als Schutz eine bewusste Wartefrist und einen Anlageplan. Korrigieren Sie die Fehlvorstellung, hohe Beteiligung sei ein Qualitätsbeweis, und trennen Sie verpasste Chance klar vom realen Verlust."
         },
         "questions": [
           {
             "id": "q_fomo_001",
             "level": "explain",
-            "question": "Was beschreibt „FOMO – Angst, etwas zu verpassen“ am besten?",
+            "question": "Was bedeutet FOMO bei Geldentscheidungen?",
             "points": 100,
-            "correctAnswer": "FOMO fragt: Was, wenn alle gewinnen außer mir?",
+            "correctAnswer": "Die Angst, eine Chance zu verpassen, die scheinbar alle anderen gerade nutzen.",
             "distractors": [
               {
-                "text": "Wenn viele mitmachen, muss es eine gute Entscheidung sein.",
+                "text": "Wenn viele mitmachen, ist es sicher eine gute Entscheidung.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "FOMO bedeutet, dass Gewinn und Sicherheit garantiert sind.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "FOMO hat mit Geldentscheidungen nichts zu tun.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: FOMO fragt: Was, wenn alle gewinnen außer mir?"
+            "explanationAfterAnswer": "Richtig: FOMO ist die Angst, als Einziger eine Chance zu verpassen, und drängt zu Eile."
           },
           {
             "id": "q_fomo_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „FOMO – Angst, etwas zu verpassen“?",
+            "question": "Welche Situation zeigt FOMO am besten?",
             "points": 100,
-            "correctAnswer": "Alle posten Gewinne und du willst kaufen, obwohl du das Produkt nicht verstehst.",
+            "correctAnswer": "Alle posten ihre Gewinne und du willst kaufen, obwohl du das Produkt gar nicht verstehst.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Du liest dich in Ruhe ein und entscheidest dich am Ende bewusst dagegen.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Du verkaufst aus Angst sofort alles, als der Markt fällt.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Du hältst deine feste Wartefrist ein, obwohl alle im Feed schon gekauft haben.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Kaufen, nur weil alle es tun und man nichts verpassen will, ist FOMO in Reinform."
           },
           {
             "id": "q_fomo_003",
             "level": "understand",
-            "question": "Warum ist „FOMO – Angst, etwas zu verpassen“ für Finanzbildung wichtig?",
+            "question": "Warum ist der Eindruck „alle gewinnen“ in sozialen Medien oft täuschend?",
             "points": 120,
-            "correctAnswer": "FOMO als Angst vor verpassten Chancen erkennen.",
+            "correctAnswer": "Weil Menschen online vor allem Gewinne zeigen und die vielen Verluste kaum sichtbar sind.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil in sozialen Medien nur geprüfte, unabhängige Fachleute posten.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil man bei einem Trend keine Kosten mehr prüfen muss.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil FOMO nur ein Fachwort ohne praktischen Nutzen ist.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: FOMO als Angst vor verpassten Chancen erkennen."
+            "explanationAfterAnswer": "Online sieht man die Gewinner, nicht die vielen Verlierer. Das verzerrt das Bild stark."
           },
           {
             "id": "q_fomo_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Ein Trend explodiert und du spürst starke FOMO. Was ist die klügere Handlung?",
             "points": 150,
-            "correctAnswer": "Innehalten, Informationen prüfen und erst dann passend zum eigenen Ziel handeln.",
+            "correctAnswer": "Eine feste Wartefrist einhalten, dich informieren und erst dann nach deinem Plan entscheiden.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "Sofort kaufen, damit du als Einziger nicht leer ausgehst.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "Einfach das nachmachen, was die meisten in deinem Feed tun.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "Deinen Anlageplan ignorieren, weil bei einem großen Trend alles gutgeht.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "Wartefrist plus Plan nehmen der FOMO die Macht über deine Entscheidung."
           },
           {
             "id": "q_fomo_005",
             "level": "master",
-            "question": "Welche Aussage zu „FOMO – Angst, etwas zu verpassen“ stimmt am besten?",
+            "question": "Welche Aussage über FOMO ist am treffendsten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Eine verpasste Chance ist kein realer Verlust; wer FOMO widersteht und seinem Plan folgt, entscheidet meist besser.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Man sollte bei jedem großen Trend mitmachen, um nichts zu verpassen.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Hohe Beteiligung vieler Leute ist ein sicherer Beweis für Qualität.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "FOMO wirkt bei allen gleich, unabhängig von Plan und Situation.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Nicht jeder verpasste Zug ist ein Verlust. Ruhe und Plan schlagen den Herdentrieb."
           }
         ],
         "calculationTemplates": [],
         "teacherSupport": {
           "competenceGoal": "FOMO als Angst vor verpassten Chancen erkennen.",
           "typicalMisconception": "Wenn viele mitmachen, muss es eine gute Entscheidung sein.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Wenn viele mitmachen, muss es eine gute Entscheidung sein.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „FOMO – Angst, etwas zu verpassen“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "discussionPrompt": "Warum sehen wir online fast nur Gewinner-Geschichten, und was würde sich ändern, wenn auch alle Verluste gepostet würden?",
+          "classroomActivity": "Die Lernenden analysieren anonymisierte Beispiel-Posts von „Finanz-Gewinnen“ und markieren, welche Informationen fehlen, um die Chance seriös einzuschätzen."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „FOMO – Angst, etwas zu verpassen“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „FOMO – Angst, etwas zu verpassen“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Fragen Sie: Hast du schon einmal etwas gekauft, nur weil es alle hatten, und wie zufrieden warst du hinterher damit?",
+          "everydayExercise": "Führen Sie eine gemeinsame „Eine-Nacht-drüber-schlafen“-Regel für Käufe ein, die durch Trends oder Werbung ausgelöst werden, und besprechen Sie die Erfahrungen."
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_heisse_tipps",
@@ -1710,11 +1710,11 @@
         ],
         "pedagogy": {
           "learningGoal": "Heiße Tipps kritisch prüfen.",
-          "coreIdea": "Ein Tipp ersetzt keine eigene Prüfung.",
-          "everydayScenario": "Jemand sagt: Kauf diese Aktie schnell, morgen steigt sie sicher.",
-          "misconception": "Wenn jemand selbstbewusst klingt, stimmt der Tipp wahrscheinlich.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Heiße Tipps' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Heiße Tipps' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "coreIdea": "Ein Tipp ersetzt keine eigene Prüfung, egal wie überzeugt der Absender klingt.",
+          "everydayScenario": "Jemand sagt: Kauf diese Aktie schnell, morgen steigt sie ganz sicher.",
+          "misconception": "Wenn jemand selbstbewusst und überzeugt klingt, stimmt sein Tipp wahrscheinlich.",
+          "transferTask": "Formuliere drei kritische Rückfragen, die du jedem stellen würdest, der dir einen sicheren, schnellen Gewinn-Tipp gibt.",
+          "reflectionPrompt": "Warum könnte jemand ein eigenes Interesse daran haben, dir einen bestimmten heißen Tipp zu geben?"
         },
         "glossaryTerms": [
           "Heißer Tipp",
@@ -1732,139 +1732,139 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Heiße Tipps: Ein Tipp ersetzt keine eigene Prüfung. Beispiel: Jemand sagt: Kauf diese Aktie schnell, morgen steigt sie sicher. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Wenn jemand selbstbewusst klingt, stimmt der Tipp wahrscheinlich.“.",
-          "young_adults": "Heiße Tipps: Ein Tipp ersetzt keine eigene Prüfung. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Jemand sagt: Kauf diese Aktie schnell, morgen steigt sie sicher.",
-          "parents_teachers": "Lernziel: Heiße Tipps kritisch prüfen. Didaktischer Fokus: Ein Tipp ersetzt keine eigene Prüfung. Typische Fehlvorstellung: „Wenn jemand selbstbewusst klingt, stimmt der Tipp wahrscheinlich.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Ein heißer Tipp klingt oft so: Kauf das schnell, morgen geht es steil nach oben. Das Problem ist, dass ein Tipp keine eigene Prüfung ersetzt. Nur weil jemand sehr überzeugt klingt, heißt das nicht, dass er recht hat, denn niemand kann die Zukunft sicher kennen. Frag dich immer: Woher weiß die Person das, und warum sagt sie es ausgerechnet mir? Oft steckt hinter einem Tipp ein eigenes Interesse oder einfach nur Angeberei. Ein guter erster Schritt ist, nicht sofort zu handeln, sondern selbst nachzudenken.",
+          "young_adults": "Heiße Tipps sind vermeintliche Geheimtipps für schnellen Gewinn, häufig verbunden mit Zeitdruck und dem Versprechen von Geheimwissen. Selbstsicheres Auftreten ist kein Beleg für Qualität, denn seriöse Aussagen über die Zukunft von Kursen sind grundsätzlich unsicher. Prüfe die Quelle und mögliche Interessenkonflikte: Verdient der Tippgeber mit, verkauft er selbst, oder will er den Kurs durch viele Käufer treiben? Echte Information nennt Risiken; ein reiner Tipp verschweigt sie meist. Grundregel: kein Kauf allein auf Zuruf, sondern erst nach eigener Prüfung passend zu deinem Ziel.",
+          "parents_teachers": "Heiße Tipps kombinieren Zeitdruck, Geheimwissen-Anmutung und selbstsicheres Auftreten. Vermitteln Sie, dass Überzeugungskraft kein Wahrheitskriterium ist und Prognosen grundsätzlich unsicher sind. Schulen Sie die Prüfung von Quelle und Interessenkonflikt sowie die Frage nach den verschwiegenen Risiken. Korrigieren Sie die Fehlvorstellung, Selbstbewusstsein signalisiere Richtigkeit, und etablieren Sie die Regel, nicht auf bloßen Zuruf zu handeln."
         },
         "questions": [
           {
             "id": "q_heisse_tipps_001",
             "level": "explain",
-            "question": "Was beschreibt „Heiße Tipps“ am besten?",
+            "question": "Was ist bei einem heißen Aktientipp zu beachten?",
             "points": 100,
-            "correctAnswer": "Ein Tipp ersetzt keine eigene Prüfung.",
+            "correctAnswer": "Ein Tipp ersetzt keine eigene Prüfung, egal wie überzeugt der Absender klingt.",
             "distractors": [
               {
                 "text": "Wenn jemand selbstbewusst klingt, stimmt der Tipp wahrscheinlich.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Ein heißer Tipp bedeutet, dass Gewinn und Sicherheit garantiert sind.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Heiße Tipps haben mit Geldentscheidungen nichts zu tun.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Ein Tipp ersetzt keine eigene Prüfung."
+            "explanationAfterAnswer": "Richtig: Überzeugung ersetzt keine Prüfung. Niemand kennt Kurse sicher im Voraus."
           },
           {
             "id": "q_heisse_tipps_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Heiße Tipps“?",
+            "question": "Welche Aussage ist ein typischer heißer Tipp mit Warnsignal?",
             "points": 100,
-            "correctAnswer": "Jemand sagt: Kauf diese Aktie schnell, morgen steigt sie sicher.",
+            "correctAnswer": "Kauf diese Aktie schnell, morgen steigt sie ganz sicher.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Ich weiß nicht, wie sich der Kurs entwickelt, das kann niemand sicher sagen.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Ein Fachmann rät dir ruhig zu einer Anlage und nennt dabei offen die Risiken.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Diese Anlage kann steigen oder fallen, prüf sie in Ruhe und für dich.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "„Schnell“ plus „ganz sicher“ ist die typische Kombination aus Druck und Garantieversprechen."
           },
           {
             "id": "q_heisse_tipps_003",
             "level": "understand",
-            "question": "Warum ist „Heiße Tipps“ für Finanzbildung wichtig?",
+            "question": "Warum ist ein selbstsicheres Auftreten kein Beweis für einen guten Tipp?",
             "points": 120,
-            "correctAnswer": "Heiße Tipps kritisch prüfen.",
+            "correctAnswer": "Weil niemand die Kursentwicklung sicher kennt und Überzeugung nichts über die Richtigkeit aussagt.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil selbstsichere Menschen bei Geld grundsätzlich immer recht haben.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil man bei einem klaren Tipp keine Kosten mehr prüfen muss.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil heiße Tipps nur ein Fachwort ohne praktischen Nutzen sind.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Heiße Tipps kritisch prüfen."
+            "explanationAfterAnswer": "Sicheres Auftreten und richtige Aussage sind zwei verschiedene Dinge, gerade bei unsicherer Zukunft."
           },
           {
             "id": "q_heisse_tipps_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Ein Bekannter drängt dich, sofort eine Aktie zu kaufen, sonst sei die Chance weg. Was tust du?",
             "points": 150,
-            "correctAnswer": "Innehalten, Informationen prüfen und erst dann passend zum eigenen Ziel handeln.",
+            "correctAnswer": "Innehalten, nach Quelle und Interesse fragen und selbst prüfen, statt auf Zuruf zu handeln.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "Sofort kaufen, weil er so überzeugt klingt und Zeitdruck macht.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "Ohne Rückfrage mitmachen, weil ein Geheimtipp selten ist.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "Risiko und Ziel ignorieren, weil ein Tipp von Bekannten immer passt.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "Zeitdruck ist ein Warnsignal. Erst Quelle und Interesse prüfen, dann selbst entscheiden."
           },
           {
             "id": "q_heisse_tipps_005",
             "level": "master",
-            "question": "Welche Aussage zu „Heiße Tipps“ stimmt am besten?",
+            "question": "Welche Aussage über heiße Tipps ist am treffendsten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Zeitdruck, Geheimwissen und Sicherheitsversprechen sind Warnsignale; entschieden wird erst nach eigener Prüfung.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Ein Geheimtipp mit Zeitdruck ist meist besonders zuverlässig.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Wer schnell auf jeden Tipp reagiert, gewinnt langfristig am meisten.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Heiße Tipps gelten für alle gleich, unabhängig von Quelle und Interesse.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Druck und Geheimniston sind Alarmzeichen. Die eigene Prüfung bleibt unverzichtbar."
           }
         ],
         "calculationTemplates": [],
         "teacherSupport": {
           "competenceGoal": "Heiße Tipps kritisch prüfen.",
           "typicalMisconception": "Wenn jemand selbstbewusst klingt, stimmt der Tipp wahrscheinlich.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Wenn jemand selbstbewusst klingt, stimmt der Tipp wahrscheinlich.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Heiße Tipps“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "discussionPrompt": "Welches Interesse könnte jemand haben, viele Menschen zum schnellen Kauf derselben Aktie zu bewegen?",
+          "classroomActivity": "In Rollenspielen gibt eine Person einen heißen Tipp, die anderen entlarven mit gezielten Rückfragen die Warnsignale und protokollieren sie."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Heiße Tipps“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Heiße Tipps“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Fragen Sie: Wenn dir jemand einen sicheren Gewinn verspricht, warum behält er den Tipp dann nicht einfach für sich selbst?",
+          "everydayExercise": "Sammeln Sie gemeinsam Werbe- oder Nachrichten-Sprüche, die schnellen Gewinn versprechen, und markieren Sie jeweils das Warnsignal."
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_finfluencer",
@@ -1876,11 +1876,11 @@
         ],
         "pedagogy": {
           "learningGoal": "Finanzcontent online kritisch einordnen.",
-          "coreIdea": "Nicht jeder Finanzcontent ist unabhängig, vollständig oder passend.",
-          "everydayScenario": "Ein Influencer zeigt Gewinne und verlinkt direkt zu einer Plattform.",
-          "misconception": "Viele Follower bedeuten, dass Finanzinhalte zuverlässig sind.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Finfluencer kritisch prüfen' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Finfluencer kritisch prüfen' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "coreIdea": "Nicht jeder Finanzcontent ist unabhängig, vollständig oder zu deiner Situation passend.",
+          "everydayScenario": "Ein Influencer zeigt seine Gewinne und verlinkt direkt zu einer Plattform, über die er mitverdient.",
+          "misconception": "Viele Follower und Likes bedeuten, dass die Finanzinhalte zuverlässig und geprüft sind.",
+          "transferTask": "Suche dir (gedanklich) ein Finanzvideo aus und prüfe: Wird Werbung gekennzeichnet, werden Risiken genannt, und verdient die Person am gezeigten Produkt mit?",
+          "reflectionPrompt": "Woran könntest du erkennen, ob ein Finfluencer dich informieren oder dir etwas verkaufen will?"
         },
         "glossaryTerms": [
           "Finfluencer",
@@ -1898,139 +1898,139 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Finfluencer kritisch prüfen: Nicht jeder Finanzcontent ist unabhängig, vollständig oder passend. Beispiel: Ein Influencer zeigt Gewinne und verlinkt direkt zu einer Plattform. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Viele Follower bedeuten, dass Finanzinhalte zuverlässig sind.“.",
-          "young_adults": "Finfluencer kritisch prüfen: Nicht jeder Finanzcontent ist unabhängig, vollständig oder passend. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Ein Influencer zeigt Gewinne und verlinkt direkt zu einer Plattform.",
-          "parents_teachers": "Lernziel: Finanzcontent online kritisch einordnen. Didaktischer Fokus: Nicht jeder Finanzcontent ist unabhängig, vollständig oder passend. Typische Fehlvorstellung: „Viele Follower bedeuten, dass Finanzinhalte zuverlässig sind.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Finfluencer sind Leute, die online über Geld und Aktien reden. Manche erklären richtig gut, andere wollen vor allem etwas verkaufen. Wenn jemand seine Gewinne zeigt und gleich einen Link setzt, über den du dich anmelden sollst, verdient er oft mit, wenn du klickst. Viele Follower bedeuten nicht, dass die Tipps geprüft oder unabhängig sind. Achte darauf, ob Werbung gekennzeichnet ist, ob auch Risiken genannt werden und ob die Person am Produkt mitverdient. Gute Inhalte erklären, schlechte drängen dich zum schnellen Klick.",
+          "young_adults": "Finfluencer erstellen Finanzcontent auf Social Media, dessen Qualität stark schwankt. Ein zentrales Prüfkriterium ist der Interessenkonflikt: Affiliate-Links, bezahlte Kooperationen oder eigene Produkte können die Aussagen färben. Reichweite ist kein Gütesiegel, denn viele Follower entstehen durch Unterhaltung, nicht durch Sorgfalt. Achte auf Transparenz (klare Werbekennzeichnung), auf Risikoaufklärung statt reiner Gewinnpräsentation und auf nachvollziehbare Quellen. Content, der nur Gewinne zeigt, Risiken verschweigt und zum schnellen Handeln drängt, ist ein Warnsignal, gerade wenn er nicht zu deiner persönlichen Situation passt.",
+          "parents_teachers": "Finfluencer-Content variiert stark in Qualität und Unabhängigkeit. Vermitteln Sie die Prüfung von Interessenkonflikten (Affiliate-Links, Kooperationen, eigene Produkte), die Bedeutung transparenter Werbekennzeichnung und vollständiger Risikoaufklärung. Betonen Sie, dass Reichweite kein Qualitätsnachweis ist. Korrigieren Sie die Fehlvorstellung, Followerzahlen belegten Verlässlichkeit, und fördern Sie Medienkompetenz als Kern des kritischen Umgangs mit Online-Finanzinhalten."
         },
         "questions": [
           {
             "id": "q_finfluencer_001",
             "level": "explain",
-            "question": "Was beschreibt „Finfluencer kritisch prüfen“ am besten?",
+            "question": "Was sollte man bei Finanzinhalten von Finfluencern beachten?",
             "points": 100,
-            "correctAnswer": "Nicht jeder Finanzcontent ist unabhängig, vollständig oder passend.",
+            "correctAnswer": "Nicht jeder Finanzcontent ist unabhängig, vollständig oder zur eigenen Situation passend.",
             "distractors": [
               {
-                "text": "Viele Follower bedeuten, dass Finanzinhalte zuverlässig sind.",
+                "text": "Viele Follower bedeuten, dass die Finanzinhalte zuverlässig sind.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Finfluencer-Content bedeutet, dass Gewinn und Sicherheit garantiert sind.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Finfluencer haben mit Geldentscheidungen nichts zu tun.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Nicht jeder Finanzcontent ist unabhängig, vollständig oder passend."
+            "explanationAfterAnswer": "Richtig: Reichweite ist kein Gütesiegel. Prüfe Unabhängigkeit, Vollständigkeit und Passung."
           },
           {
             "id": "q_finfluencer_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Finfluencer kritisch prüfen“?",
+            "question": "Welche Situation ist ein Warnsignal bei einem Finfluencer?",
             "points": 100,
-            "correctAnswer": "Ein Influencer zeigt Gewinne und verlinkt direkt zu einer Plattform.",
+            "correctAnswer": "Er zeigt nur Gewinne und verlinkt direkt zu einer Plattform, über die er mitverdient.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Er verweist auf nachvollziehbare Quellen und rät zur eigenen Prüfung.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Er hat sehr viele Follower und erklärt deshalb alles besonders zuverlässig.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Er nennt offen die Risiken und kennzeichnet Werbung deutlich.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Nur Gewinne plus Verdienst-Link ist ein klassischer Interessenkonflikt und ein Warnsignal."
           },
           {
             "id": "q_finfluencer_003",
             "level": "understand",
-            "question": "Warum ist „Finfluencer kritisch prüfen“ für Finanzbildung wichtig?",
+            "question": "Warum sind viele Follower kein Beweis für verlässliche Finanztipps?",
             "points": 120,
-            "correctAnswer": "Finanzcontent online kritisch einordnen.",
+            "correctAnswer": "Weil Reichweite oft durch Unterhaltung entsteht und nichts über Unabhängigkeit oder Sorgfalt aussagt.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil eine Plattform Konten mit vielen Followern vorher fachlich prüft.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil man bei bekannten Konten keine Kosten mehr prüfen muss.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil Finfluencer nur ein Fachwort ohne praktischen Nutzen sind.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Finanzcontent online kritisch einordnen."
+            "explanationAfterAnswer": "Viele Follower heißt vor allem viel Aufmerksamkeit, nicht viel Sorgfalt oder Unabhängigkeit."
           },
           {
             "id": "q_finfluencer_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Ein Finfluencer empfiehlt begeistert ein Produkt mit einem Anmelde-Link. Wie gehst du vor?",
             "points": 150,
-            "correctAnswer": "Innehalten, Informationen prüfen und erst dann passend zum eigenen Ziel handeln.",
+            "correctAnswer": "Prüfen, ob Werbung gekennzeichnet ist, ob Risiken genannt werden und ob er mitverdient, bevor du irgendetwas tust.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "Sofort über den Link anmelden, weil er so überzeugt wirkt.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "Zusagen, weil viele Follower ein Zeichen für Sicherheit sind.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "Ohne Bezug zu deiner eigenen Situation einfach mitmachen.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "Erst Transparenz, Risiken und Interessenkonflikt prüfen, dann entscheiden, ob es zu dir passt."
           },
           {
             "id": "q_finfluencer_005",
             "level": "master",
-            "question": "Welche Aussage zu „Finfluencer kritisch prüfen“ stimmt am besten?",
+            "question": "Welche Aussage über Finfluencer ist am treffendsten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Qualität zeigt sich an Transparenz, Risikoaufklärung und Unabhängigkeit, nicht an der Followerzahl.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Je mehr Follower ein Finfluencer hat, desto verlässlicher sind seine Tipps.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Wer einem großen Finfluencer folgt, braucht selbst nichts mehr zu prüfen.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Finfluencer-Content passt für alle gleich, egal welche Ziele sie haben.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Auf Transparenz und Risiken achten, nicht auf Reichweite. Und immer selbst prüfen."
           }
         ],
         "calculationTemplates": [],
         "teacherSupport": {
           "competenceGoal": "Finanzcontent online kritisch einordnen.",
           "typicalMisconception": "Viele Follower bedeuten, dass Finanzinhalte zuverlässig sind.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Viele Follower bedeuten, dass Finanzinhalte zuverlässig sind.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Finfluencer kritisch prüfen“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "discussionPrompt": "Woran erkennt man den Unterschied zwischen einem Finfluencer, der erklären will, und einem, der verkaufen will?",
+          "classroomActivity": "Die Lernenden entwickeln eine Prüf-Checkliste für Finanzvideos (Werbekennzeichnung, Risiken, Quellen, Interessenkonflikt) und wenden sie auf ein Beispiel an."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Finfluencer kritisch prüfen“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Finfluencer kritisch prüfen“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Fragen Sie: Welchen Finanz- oder Geld-Kanälen folgst du, und woran würdest du merken, wenn dort etwas beworben wird?",
+          "everydayExercise": "Schauen Sie gemeinsam ein kurzes Finanzvideo an und suchen Sie zusammen nach Werbekennzeichnung, genannten Risiken und einem möglichen Interessenkonflikt."
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_betrug_erkennen",
@@ -2043,11 +2043,11 @@
         ],
         "pedagogy": {
           "learningGoal": "Warnsignale für Finanzbetrug erkennen.",
-          "coreIdea": "Betrug arbeitet oft mit Druck, Versprechen, Angst und Vertrauen.",
-          "everydayScenario": "Eine Nachricht verspricht aus 100 Euro in einer Woche garantiert 500 Euro zu machen.",
-          "misconception": "Betrug erkennt man immer sofort.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Betrug erkennen' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Betrug erkennen' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "coreIdea": "Betrug arbeitet oft mit unrealistischen Versprechen, Zeitdruck und dem Ruf nach Geheimhaltung.",
+          "everydayScenario": "Eine Nachricht verspricht, aus 100 Euro in einer Woche garantiert 500 Euro zu machen.",
+          "misconception": "Betrug erkennt man immer sofort, mir würde so etwas nie passieren.",
+          "transferTask": "Schreibe die drei Warnsignale auf, die zusammen fast immer auf Betrug hindeuten, und erkläre bei jedem kurz, warum es misstrauisch machen sollte.",
+          "reflectionPrompt": "Warum fallen auch kluge und vorsichtige Menschen manchmal auf Betrug herein?"
         },
         "glossaryTerms": [
           "Betrug",
@@ -2065,139 +2065,139 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Betrug erkennen: Betrug arbeitet oft mit Druck, Versprechen, Angst und Vertrauen. Beispiel: Eine Nachricht verspricht aus 100 Euro in einer Woche garantiert 500 Euro zu machen. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Betrug erkennt man immer sofort.“.",
-          "young_adults": "Betrug erkennen: Betrug arbeitet oft mit Druck, Versprechen, Angst und Vertrauen. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Eine Nachricht verspricht aus 100 Euro in einer Woche garantiert 500 Euro zu machen.",
-          "parents_teachers": "Lernziel: Warnsignale für Finanzbetrug erkennen. Didaktischer Fokus: Betrug arbeitet oft mit Druck, Versprechen, Angst und Vertrauen. Typische Fehlvorstellung: „Betrug erkennt man immer sofort.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Betrug beim Geld erkennt man an bestimmten Mustern. Sehr oft wird ein Gewinn versprochen, der viel zu schön klingt, zum Beispiel aus 100 Euro in einer Woche garantiert 500 Euro. Dazu kommt Zeitdruck („nur heute!“) und die Bitte, niemandem davon zu erzählen. Genau diese drei Dinge zusammen sind ein Alarmsignal. Wichtig: Gib niemals deine Passwörter, PIN oder Zugangsdaten weiter, egal wie echt eine Nachricht aussieht. Und glaub nicht, dass dir Betrug nicht passieren kann, denn die Tricks sind oft sehr geschickt gemacht. Im Zweifel: nichts tun und eine erwachsene Vertrauensperson fragen.",
+          "young_adults": "Finanzbetrug folgt wiederkehrenden Mustern. Die stärkste Warnsignal-Trias ist: unrealistisch hohe, garantierte Rendite plus Zeitdruck plus Exklusivität oder Geheimhaltung. Häufig kommt Phishing dazu, also der Versuch, an deine Zugangsdaten, Passwörter oder PIN zu kommen; diese gibst du grundsätzlich nie heraus. Ein gefährlicher Denkfehler ist, Betrug immer sofort zu durchschauen, denn seriöse Aufmachung und Social Engineering machen viele Scams überzeugend. Prüfe Absender und Angebot in Ruhe über offizielle Kanäle, lass dich nicht drängen, und hol dir bei Unsicherheit eine zweite Meinung. Hohe Rendite ohne Risiko gibt es nicht.",
+          "parents_teachers": "Finanzbetrug lässt sich an Mustern erkennen: garantierte, unrealistisch hohe Renditen, Zeitdruck und Exklusivität bzw. Geheimhaltung, oft flankiert von Phishing. Vermitteln Sie die absolute Regel, Zugangsdaten und PIN niemals weiterzugeben. Korrigieren Sie die riskante Fehlvorstellung, Betrug sei immer leicht erkennbar; Social Engineering nutzt Vertrauen, Angst und Zeitdruck gezielt aus. Fördern Sie eine ruhige Prüfroutine über offizielle Kanäle und das Einholen einer zweiten Meinung. Verzichten Sie auf konkrete Nachbau-Anleitungen und reale Skandalnamen."
         },
         "questions": [
           {
             "id": "q_betrug_erkennen_001",
             "level": "explain",
-            "question": "Was beschreibt „Betrug erkennen“ am besten?",
+            "question": "Mit welchen Mitteln arbeitet Finanzbetrug häufig?",
             "points": 100,
-            "correctAnswer": "Betrug arbeitet oft mit Druck, Versprechen, Angst und Vertrauen.",
+            "correctAnswer": "Mit unrealistischen Versprechen, Zeitdruck und dem Ruf nach Geheimhaltung.",
             "distractors": [
               {
-                "text": "Betrug erkennt man immer sofort.",
+                "text": "Betrug erkennt man immer sofort, deshalb muss man nicht aufpassen.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Betrug bedeutet, dass Gewinn und Sicherheit garantiert sind.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Betrug hat mit Geldentscheidungen nichts zu tun.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Betrug arbeitet oft mit Druck, Versprechen, Angst und Vertrauen."
+            "explanationAfterAnswer": "Richtig: Unrealistische Rendite, Zeitdruck und Geheimhaltung sind die klassische Warnsignal-Trias."
           },
           {
             "id": "q_betrug_erkennen_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Betrug erkennen“?",
+            "question": "Welche Nachricht ist ein typisches Betrugssignal?",
             "points": 100,
-            "correctAnswer": "Eine Nachricht verspricht aus 100 Euro in einer Woche garantiert 500 Euro zu machen.",
+            "correctAnswer": "Aus 100 Euro machen wir dir in einer Woche garantiert 500 Euro, aber nur heute.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Ein Angebot nennt offen alle Risiken und drängt dich zu nichts.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Ein bekanntes Unternehmen verspricht eine hohe Rendite, die garantiert sicher sei.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Diese Anlage kann steigen oder fallen, entscheide in Ruhe und für dich.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Garantierte hohe Rendite plus „nur heute“ vereint gleich mehrere Warnsignale."
           },
           {
             "id": "q_betrug_erkennen_003",
             "level": "understand",
-            "question": "Warum ist „Betrug erkennen“ für Finanzbildung wichtig?",
+            "question": "Warum ist der Gedanke „mir passiert so etwas nie“ gefährlich?",
             "points": 120,
-            "correctAnswer": "Warnsignale für Finanzbetrug erkennen.",
+            "correctAnswer": "Weil Betrug oft seriös aufgemacht ist und gezielt Vertrauen, Angst und Zeitdruck ausnutzt.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil Betrüger nur schlecht gemachte, offensichtliche Nachrichten verschicken.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil man nach einem Verdacht keine Kosten mehr prüfen muss.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil Betrug nur ein Fachwort ohne praktischen Nutzen ist.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Warnsignale für Finanzbetrug erkennen."
+            "explanationAfterAnswer": "Wer sich für unangreifbar hält, prüft weniger. Gute Betrugsmaschen wirken oft täuschend echt."
           },
           {
             "id": "q_betrug_erkennen_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Eine Nachricht verspricht schnellen sicheren Gewinn und bittet um deine Zugangsdaten. Was tust du?",
             "points": 150,
-            "correctAnswer": "Innehalten, Informationen prüfen und erst dann passend zum eigenen Ziel handeln.",
+            "correctAnswer": "Keine Daten herausgeben, nicht unter Druck handeln und im Zweifel eine Vertrauensperson oder den offiziellen Anbieter fragen.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "Schnell die Zugangsdaten schicken, damit du den Gewinn nicht verpasst.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "Sofort Geld überweisen, weil das Angebot nur heute gilt.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "Die genannten Risiken ignorieren, weil ein hoher Gewinn winkt.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "Zugangsdaten bleiben immer geheim. Zeitdruck ist ein Warnsignal, keine Handlungsaufforderung."
           },
           {
             "id": "q_betrug_erkennen_005",
             "level": "master",
-            "question": "Welche Aussage zu „Betrug erkennen“ stimmt am besten?",
+            "question": "Welche Aussage über Finanzbetrug ist am treffendsten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Hohe Rendite ohne Risiko gibt es nicht; die Kombination aus Renditeversprechen, Zeitdruck und Geheimhaltung ist das stärkste Warnsignal.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Ein garantierter hoher Gewinn ist ein Zeichen für ein besonders seriöses Angebot.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Wer aufmerksam ist, durchschaut jeden Betrug garantiert sofort.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Betrugsmaschen wirken bei allen gleich, unabhängig von Situation und Gefühl.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Merksatz: Hohe Rendite ohne Risiko gibt es nicht. Prüfe ruhig statt schnell zu handeln."
           }
         ],
         "calculationTemplates": [],
         "teacherSupport": {
           "competenceGoal": "Warnsignale für Finanzbetrug erkennen.",
           "typicalMisconception": "Betrug erkennt man immer sofort.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Betrug erkennt man immer sofort.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Betrug erkennen“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "discussionPrompt": "Warum nutzen Betrüger gezielt Zeitdruck und Geheimhaltung, und was bewirkt beides in unserem Kopf?",
+          "classroomActivity": "Die Lernenden gestalten ein Warnplakat mit der Trias „unrealistische Rendite, Zeitdruck, Geheimhaltung“ und je einem selbst formulierten Beispiel, ohne echte Namen."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Betrug erkennen“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Betrug erkennen“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Vereinbaren Sie: Bei jeder Nachricht, die schnellen sicheren Gewinn verspricht oder nach Passwörtern fragt, sprichst du zuerst mit mir. Warum ist das eine gute Regel?",
+          "everydayExercise": "Gehen Sie gemeinsam eine verdächtige Beispielnachricht durch und markieren Sie Renditeversprechen, Zeitdruck und die Frage nach Zugangsdaten."
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       }
     ]
   }

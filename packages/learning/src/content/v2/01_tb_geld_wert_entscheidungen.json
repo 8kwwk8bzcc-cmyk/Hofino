@@ -11,8 +11,8 @@
     "id": "tb_geld_wert_entscheidungen",
     "title": "Geld, Wert und Entscheidungen",
     "unlockLevel": 1,
-    "goal": "Lernende verstehen Geld als Werkzeug, Preise als Vergleichshilfe und finanzielle Entscheidungen als Abwägung.",
-    "pedagogicalIdea": "Dieser Block schafft die Grundlage, bevor Börse und Investieren behandelt werden: Geld, Bedürfnisse, Wünsche, Budget, Konten und Notgroschen.",
+    "goal": "Lernende begreifen Geld als Werkzeug, das auf Vertrauen beruht, vergleichen Preise fair, unterscheiden Bedürfnisse von Wünschen und planen mit Budget, Konten und einem Notgroschen bewusst mit ihrem Geld.",
+    "pedagogicalIdea": "Dieser Block legt das Fundament vor Börse und Investieren: Von der Frage, was Geld überhaupt ist, führt er über Tausch, Vergleichen und Prioritäten zu Sparen, Budget, Konten und Rücklagen. So entsteht die ruhige, verständige Grundhaltung, auf der spätere Investment-Themen aufbauen.",
     "modules": [
       {
         "id": "konzept_geld",
@@ -22,11 +22,11 @@
         "prerequisites": [],
         "pedagogy": {
           "learningGoal": "Geld als Zahlungsmittel, Recheneinheit und Wertaufbewahrung verstehen.",
-          "coreIdea": "Geld funktioniert, weil Menschen es akzeptieren und ihm vertrauen.",
-          "everydayScenario": "Du kaufst ein Getränk und bezahlst mit Geld, statt direkt etwas zu tauschen.",
-          "misconception": "Geld ist wertvoll, weil Papier oder Metall selbst so wertvoll sind.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Was ist Geld?' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Was ist Geld?' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "coreIdea": "Geld ist ein Werkzeug: Es funktioniert, weil alle darauf vertrauen, dass man es weitergeben und später wieder eintauschen kann.",
+          "everydayScenario": "Am Kiosk zahlst du 2 Euro für eine Limo, statt dem Verkäufer dafür deine Sammelkarten anzubieten.",
+          "misconception": "Ein Geldschein ist wertvoll, weil das Papier selbst so viel wert ist.",
+          "transferTask": "Stell dir vor, in deiner Klasse würde plötzlich niemand mehr Euro annehmen. Womit würdest du am Kiosk bezahlen und warum wäre das umständlicher?",
+          "reflectionPrompt": "Warum vertraust du darauf, dass die 5 Euro in deinem Portemonnaie morgen noch etwas wert sind?"
         },
         "glossaryTerms": [
           "Geld",
@@ -43,139 +43,139 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Was ist Geld?: Geld funktioniert, weil Menschen es akzeptieren und ihm vertrauen. Beispiel: Du kaufst ein Getränk und bezahlst mit Geld, statt direkt etwas zu tauschen. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Geld ist wertvoll, weil Papier oder Metall selbst so wertvoll sind.“.",
-          "young_adults": "Was ist Geld?: Geld funktioniert, weil Menschen es akzeptieren und ihm vertrauen. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Du kaufst ein Getränk und bezahlst mit Geld, statt direkt etwas zu tauschen.",
-          "parents_teachers": "Lernziel: Geld als Zahlungsmittel, Recheneinheit und Wertaufbewahrung verstehen. Didaktischer Fokus: Geld funktioniert, weil Menschen es akzeptieren und ihm vertrauen. Typische Fehlvorstellung: „Geld ist wertvoll, weil Papier oder Metall selbst so wertvoll sind.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Geld ist eigentlich nur ein cleveres Werkzeug zum Tauschen. Ein 5-Euro-Schein ist bedrucktes Papier, sonst nichts. Er ist trotzdem etwas wert, weil alle darauf vertrauen, dass man ihn überall abgeben und dafür etwas bekommen kann. Am Kiosk zahlst du 2 Euro für eine Limo, statt dem Verkäufer deine Sammelkarten anzubieten, die er vielleicht gar nicht will. Geld hat drei Aufgaben: Man kann damit bezahlen, man kann damit Preise vergleichen, und man kann es aufheben und später ausgeben. Genau deshalb ist es so praktisch.",
+          "young_adults": "Geld ist kein Selbstzweck, sondern ein Werkzeug mit drei Funktionen: Zahlungsmittel (du bezahlst Miete oder Handyvertrag), Recheneinheit (du vergleichst Preise in Euro) und Wertaufbewahrung (du kannst es sparen und später nutzen). Sein Wert steckt nicht im Papier oder in den Zahlen auf dem Konto, sondern im Vertrauen, dass andere es dir wieder abnehmen. Genau dieses Vertrauen ist es auch, das eine Währung stützt: Fällt es weg, wird Geld wertlos, egal wie hübsch die Scheine gedruckt sind. Für dich heißt das: Geld ist nur so viel wert wie das, was du dafür bekommst.",
+          "parents_teachers": "Ziel ist, Geld als soziale Übereinkunft zu begreifen, die auf Vertrauen beruht, und seine drei Funktionen zu benennen: Zahlungsmittel, Recheneinheit und Wertaufbewahrung. Die häufigste Fehlvorstellung ist, der Wert stecke im Material (Papier, Metall) statt in der gemeinsamen Akzeptanz. Greifen Sie das auf, indem Sie fragen lassen, warum ein zerrissener Schein bei der Bank ersetzt wird, ein Spielgeldschein aber nirgends gilt. So wird sichtbar, dass nicht das Objekt, sondern das Vertrauen den Wert trägt."
         },
         "questions": [
           {
             "id": "q_geld_001",
             "level": "explain",
-            "question": "Was beschreibt „Was ist Geld?“ am besten?",
+            "question": "Welche drei Aufgaben hat Geld?",
             "points": 100,
-            "correctAnswer": "Geld funktioniert, weil Menschen es akzeptieren und ihm vertrauen.",
+            "correctAnswer": "Bezahlen, Preise vergleichen und Wert aufbewahren.",
             "distractors": [
               {
-                "text": "Geld ist wertvoll, weil Papier oder Metall selbst so wertvoll sind.",
+                "text": "Bezahlen, aber es verliert beim Aufheben sofort jeden Wert.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Nur bezahlen, sonst hat Geld keine weitere Aufgabe.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Sammeln, ausstellen und verschenken.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Geld funktioniert, weil Menschen es akzeptieren und ihm vertrauen."
+            "explanationAfterAnswer": "Genau: Geld ist Zahlungsmittel, Recheneinheit und Wertaufbewahrung zugleich."
           },
           {
             "id": "q_geld_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Was ist Geld?“?",
+            "question": "In welcher Situation wird Geld als Zahlungsmittel genutzt?",
             "points": 100,
-            "correctAnswer": "Du kaufst ein Getränk und bezahlst mit Geld, statt direkt etwas zu tauschen.",
+            "correctAnswer": "Du gibst am Kiosk 2 Euro und bekommst dafür eine Limo.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Du tauschst zwei Sammelkarten gegen eine seltene Karte.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Du schreibst dir auf, wie viel dein Handy gekostet hat.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Du leihst deinem Freund dein Fahrrad für einen Nachmittag.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Beim Bezahlen wechselt Geld gegen eine Ware oder Leistung den Besitzer."
           },
           {
             "id": "q_geld_003",
             "level": "understand",
-            "question": "Warum ist „Was ist Geld?“ für Finanzbildung wichtig?",
+            "question": "Warum ist ein 10-Euro-Schein überhaupt etwas wert?",
             "points": 120,
-            "correctAnswer": "Geld als Zahlungsmittel, Recheneinheit und Wertaufbewahrung verstehen.",
+            "correctAnswer": "Weil alle darauf vertrauen, dass man ihn weitergeben und wieder eintauschen kann.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil das Papier und die Farbe so teuer in der Herstellung sind.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil auf dem Schein eine große Zahl aufgedruckt ist.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil ein 10-Euro-Schein größer ist als ein 5-Euro-Schein.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Geld als Zahlungsmittel, Recheneinheit und Wertaufbewahrung verstehen."
+            "explanationAfterAnswer": "Der Wert steckt nicht im Papier, sondern im gemeinsamen Vertrauen aller, die es annehmen."
           },
           {
             "id": "q_geld_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Ein Onlineshop akzeptiert plötzlich nur noch eine unbekannte Fantasie-Währung, die sonst niemand annimmt. Warum ist das für dich ein Problem?",
             "points": 150,
-            "correctAnswer": "Den Begriff verstehen, Beispiele erkennen und ihn von ähnlichen Begriffen abgrenzen.",
+            "correctAnswer": "Ich könnte die Währung nirgendwo sonst ausgeben, ihr fehlt also das Vertrauen und die Akzeptanz.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "Gar kein Problem, denn jede Währung ist automatisch gleich viel wert.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "Kein Problem, denn wenn eine Zahl draufsteht, kann man überall damit zahlen.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "Ein Problem, weil man Geld grundsätzlich nie online ausgeben darf.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "Geld nützt nur, wenn viele es akzeptieren. Ohne Akzeptanz ist es kaum mehr als bedrucktes Papier."
           },
           {
             "id": "q_geld_005",
             "level": "master",
-            "question": "Welche Aussage zu „Was ist Geld?“ stimmt am besten?",
+            "question": "Welche Aussage über Geld ist am genauesten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Geld ist ein Werkzeug, dessen Wert auf Vertrauen beruht und der davon abhängt, was man dafür bekommt.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Wer viel Geld besitzt, hat automatisch auch viel echten Wert in der Hand.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Geld hat einen festen, unveränderlichen Wert, egal was man dafür kaufen kann.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Geld ist nur dann etwas wert, wenn es aus Metall besteht.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Entscheidend ist die Kaufkraft: Was man für sein Geld bekommt, macht den eigentlichen Wert aus."
           }
         ],
         "calculationTemplates": [],
         "teacherSupport": {
           "competenceGoal": "Geld als Zahlungsmittel, Recheneinheit und Wertaufbewahrung verstehen.",
-          "typicalMisconception": "Geld ist wertvoll, weil Papier oder Metall selbst so wertvoll sind.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Geld ist wertvoll, weil Papier oder Metall selbst so wertvoll sind.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Was ist Geld?“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "typicalMisconception": "Ein Geldschein ist wertvoll, weil das Papier selbst so viel wert ist.",
+          "discussionPrompt": "Was würde in unserer Stadt passieren, wenn von heute auf morgen niemand mehr Euro annehmen würde?",
+          "classroomActivity": "Führen Sie eine kurze Tauschrunde durch: Jede Gruppe bekommt einen Gegenstand und soll etwas Bestimmtes eintauschen, ohne Geld. Danach dieselbe Aufgabe mit Spielgeld. Die Klasse notiert, was mit Geld schneller ging und warum."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Was ist Geld?“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Was ist Geld?“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Fragt euch beim nächsten Einkauf: Warum nimmt die Kassiererin unser Geld eigentlich an, und was würde ohne dieses Vertrauen passieren?",
+          "everydayExercise": "Legen Sie einen echten Schein und einen Spielgeldschein nebeneinander. Ihr Kind erklärt, warum nur einer davon an der Kasse gilt, obwohl beide aus Papier sind."
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_tauschen",
@@ -186,12 +186,12 @@
           "konzept_geld"
         ],
         "pedagogy": {
-          "learningGoal": "Tausch als Grundlage wirtschaftlicher Zusammenarbeit verstehen.",
-          "coreIdea": "Menschen tauschen, weil nicht jeder alles selbst herstellen kann.",
-          "everydayScenario": "Eine Person hat Äpfel, eine andere Brot; Geld macht den Tausch flexibler.",
-          "misconception": "Tauschen ist altmodisch und hat mit Geld nichts mehr zu tun.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Warum tauschen Menschen?' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Warum tauschen Menschen?' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "learningGoal": "Tausch und Arbeitsteilung als Grundlage wirtschaftlicher Zusammenarbeit verstehen.",
+          "coreIdea": "Menschen tauschen, weil niemand alles selbst herstellen kann. Geld macht den Tausch einfacher, weil man nicht mehr genau den passenden Tauschpartner finden muss.",
+          "everydayScenario": "Du kannst gut zeichnen, deine Freundin gut programmieren. Statt beides mühsam allein zu lernen, hilft jeder dem anderen.",
+          "misconception": "Tauschen ist von früher und hat mit unserem heutigen Geld nichts mehr zu tun.",
+          "transferTask": "Überlege, was du gut kannst (zeichnen, erklären, Fahrrad reparieren). Wie könntest du das gegen etwas eintauschen, das jemand anderes besser kann?",
+          "reflectionPrompt": "Warum ist es mit Geld leichter zu tauschen als direkt Ware gegen Ware?"
         },
         "glossaryTerms": [
           "Tausch",
@@ -207,139 +207,139 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Warum tauschen Menschen?: Menschen tauschen, weil nicht jeder alles selbst herstellen kann. Beispiel: Eine Person hat Äpfel, eine andere Brot; Geld macht den Tausch flexibler. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Tauschen ist altmodisch und hat mit Geld nichts mehr zu tun.“.",
-          "young_adults": "Warum tauschen Menschen?: Menschen tauschen, weil nicht jeder alles selbst herstellen kann. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Eine Person hat Äpfel, eine andere Brot; Geld macht den Tausch flexibler.",
-          "parents_teachers": "Lernziel: Tausch als Grundlage wirtschaftlicher Zusammenarbeit verstehen. Didaktischer Fokus: Menschen tauschen, weil nicht jeder alles selbst herstellen kann. Typische Fehlvorstellung: „Tauschen ist altmodisch und hat mit Geld nichts mehr zu tun.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Niemand kann alles selbst: Brot backen, Handys bauen, Schuhe nähen. Deshalb tauschen Menschen. Früher tauschte man direkt Ware gegen Ware, zum Beispiel Äpfel gegen Brot. Das Problem: Der Bäcker muss gerade Äpfel wollen, sonst klappt der Tausch nicht. Genau hier hilft Geld. Du verkaufst deine Äpfel gegen Geld und kaufst damit Brot, wann und wo du willst. Wenn jeder das macht, was er am besten kann, und den Rest eintauscht, haben am Ende alle mehr. Das nennt man Arbeitsteilung.",
+          "young_adults": "Tausch ist der Kern jeder Wirtschaft: Weil niemand alles selbst produzieren kann, spezialisiert sich jeder auf das, was er am besten oder günstigsten kann, und tauscht den Rest ein. Das nennt man Arbeitsteilung. Der reine Warentausch scheitert aber an der doppelten Übereinstimmung der Wünsche: Beide Seiten müssen gleichzeitig genau das wollen, was die andere anbietet. Geld löst dieses Problem, weil es jederzeit von allen angenommen wird. Auch dein erster Job ist ein Tausch: Du gibst deine Zeit und Fähigkeiten und bekommst dafür Lohn, den du frei einsetzen kannst.",
+          "parents_teachers": "Ziel ist zu verstehen, dass Tausch und Arbeitsteilung Wohlstand ermöglichen und Geld den Tausch entscheidend erleichtert. Fachlich zentral ist das Problem der doppelten Übereinstimmung der Wünsche beim Naturaltausch, das Geld als allgemein akzeptiertes Zahlungsmittel überwindet. Eine verbreitete Fehlvorstellung ist, Tausch sei ein historisches Relikt. Machen Sie deutlich, dass jeder Einkauf und jede Lohnzahlung ein Tausch ist, nur eben mit Geld als Zwischenschritt."
         },
         "questions": [
           {
             "id": "q_tauschen_001",
             "level": "explain",
-            "question": "Was beschreibt „Warum tauschen Menschen?“ am besten?",
+            "question": "Warum tauschen Menschen überhaupt?",
             "points": 100,
-            "correctAnswer": "Menschen tauschen, weil nicht jeder alles selbst herstellen kann.",
+            "correctAnswer": "Weil niemand alles selbst herstellen kann und jeder das anbietet, was er am besten kann.",
             "distractors": [
               {
-                "text": "Tauschen ist altmodisch und hat mit Geld nichts mehr zu tun.",
+                "text": "Weil Tauschen von früher ist und heute keine Rolle mehr spielt.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Weil man durch Tauschen automatisch reicher wird als alle anderen.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Weil Tauschen ein Hobby ist, das nichts mit Wirtschaft zu tun hat.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Menschen tauschen, weil nicht jeder alles selbst herstellen kann."
+            "explanationAfterAnswer": "Genau: Durch Tausch und Arbeitsteilung profitieren alle, weil jeder sich auf sein Können konzentrieren kann."
           },
           {
             "id": "q_tauschen_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Warum tauschen Menschen?“?",
+            "question": "Welches Beispiel zeigt einen Tausch mit Arbeitsteilung?",
             "points": 100,
-            "correctAnswer": "Eine Person hat Äpfel, eine andere Brot; Geld macht den Tausch flexibler.",
+            "correctAnswer": "Du hilfst einer Freundin bei Mathe, dafür repariert sie dein Fahrrad.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Du legst 5 Euro von deinem Taschengeld für später zurück.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Du hilfst deiner Freundin bei Mathe und erwartest nichts zurück.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Du bewahrst dein Geld sicher in einer Spardose auf.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Jeder bringt ein, was er am besten kann. Genau das ist Arbeitsteilung durch Tausch."
           },
           {
             "id": "q_tauschen_003",
             "level": "understand",
-            "question": "Warum ist „Warum tauschen Menschen?“ für Finanzbildung wichtig?",
+            "question": "Warum ist Tauschen mit Geld einfacher als Ware direkt gegen Ware?",
             "points": 120,
-            "correctAnswer": "Tausch als Grundlage wirtschaftlicher Zusammenarbeit verstehen.",
+            "correctAnswer": "Weil man mit Geld nicht darauf angewiesen ist, dass die andere Person genau das will, was man selbst anbietet.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil Geld den Tausch komplett überflüssig macht.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil Waren immer schlechter sind als Geld.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil Geld leichter ist und weniger wiegt als Waren.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Tausch als Grundlage wirtschaftlicher Zusammenarbeit verstehen."
+            "explanationAfterAnswer": "Beim reinen Warentausch müssen beide gleichzeitig genau das Passende wollen. Geld umgeht dieses Problem."
           },
           {
             "id": "q_tauschen_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Ein Fischer hat Fisch, braucht aber Brot. Der Bäcker will jedoch keinen Fisch. Wie löst Geld dieses Problem?",
             "points": 150,
-            "correctAnswer": "Den Begriff verstehen, Beispiele erkennen und ihn von ähnlichen Begriffen abgrenzen.",
+            "correctAnswer": "Der Fischer verkauft den Fisch an jemand anderen gegen Geld und kauft davon beim Bäcker Brot.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "Geld hilft hier nicht, der Fischer muss weiter direkt Fisch gegen Brot tauschen.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "Der Fischer verzichtet auf Brot, weil ein Tausch ohne passenden Partner unmöglich sei.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "Der Fischer wartet einfach, bis der Bäcker doch noch Lust auf Fisch bekommt.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "Geld ist der Zwischenschritt: Erst verkaufen, dann kaufen. So muss kein direkter Tauschpartner passen."
           },
           {
             "id": "q_tauschen_005",
             "level": "master",
-            "question": "Welche Aussage zu „Warum tauschen Menschen?“ stimmt am besten?",
+            "question": "Welche Aussage über Tausch und Arbeitsteilung ist am genauesten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Wenn jeder das tut, was er am besten kann, und den Rest eintauscht, haben am Ende alle mehr als in reiner Selbstversorgung.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Arbeitsteilung lohnt sich nur für den, der am meisten Geld hat.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Am besten stellt jeder alles selbst her, dann muss niemand tauschen.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Tausch bringt immer nur einer Seite einen Vorteil, nie beiden.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Ein freiwilliger Tausch bringt in der Regel beiden Seiten einen Vorteil, sonst käme er nicht zustande."
           }
         ],
         "calculationTemplates": [],
         "teacherSupport": {
-          "competenceGoal": "Tausch als Grundlage wirtschaftlicher Zusammenarbeit verstehen.",
-          "typicalMisconception": "Tauschen ist altmodisch und hat mit Geld nichts mehr zu tun.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Tauschen ist altmodisch und hat mit Geld nichts mehr zu tun.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Warum tauschen Menschen?“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "competenceGoal": "Tausch und Arbeitsteilung als Grundlage wirtschaftlicher Zusammenarbeit verstehen.",
+          "typicalMisconception": "Tauschen ist von früher und hat mit unserem heutigen Geld nichts mehr zu tun.",
+          "discussionPrompt": "Welche Dinge, die ihr heute benutzt habt, hättet ihr selbst herstellen können, und welche nicht?",
+          "classroomActivity": "Spielen Sie einen Naturaltausch: Jede Gruppe hat nur ein Gut und einen Bedarf, der nicht zum direkten Nachbarn passt. Die Klasse erlebt, wie schwer der Tausch ist, und diskutiert, wie Geld ihn lösen würde."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Warum tauschen Menschen?“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Warum tauschen Menschen?“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Sprecht darüber, welche Aufgaben ihr zu Hause aufteilt und warum das besser klappt, als wenn jeder alles allein machen müsste.",
+          "everydayExercise": "Überlegen Sie gemeinsam, was Ihr Kind gut kann und gegen welche Hilfe eines Freundes es das eintauschen könnte, ohne Geld zu verwenden."
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_bezahlen_vergleichen",
@@ -350,12 +350,12 @@
           "konzept_tauschen"
         ],
         "pedagogy": {
-          "learningGoal": "Preise, Menge, Qualität und Nutzen bei Kaufentscheidungen vergleichen.",
-          "coreIdea": "Nicht nur der niedrigste Preis zählt, sondern auch Menge, Qualität und Bedarf.",
-          "everydayScenario": "Ein Viererpack kostet 8 Euro, ein einzelnes Getränk 3 Euro; pro Stück ist der Vergleich entscheidend.",
+          "learningGoal": "Preise über den Grundpreis vergleichen und Menge, Qualität und eigenen Bedarf mitdenken.",
+          "coreIdea": "Der niedrigste Gesamtpreis ist nicht automatisch das beste Angebot. Entscheidend sind der Preis pro Stück oder pro Menge und ob man die Menge überhaupt braucht.",
+          "everydayScenario": "Ein Sechserpack Wasser kostet 3 Euro, eine Einzelflasche 0,80 Euro. Pro Flasche ist das Pack günstiger, aber nur, wenn du wirklich sechs brauchst.",
           "misconception": "Das billigste Angebot ist immer die beste Entscheidung.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Kaufen, bezahlen, vergleichen' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Kaufen, bezahlen, vergleichen' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "transferTask": "Vergleiche beim nächsten Einkauf zwei Packungsgrößen desselben Produkts. Rechne den Preis pro Stück oder pro 100 Gramm aus und finde heraus, welche wirklich günstiger ist.",
+          "reflectionPrompt": "Wann kann es klüger sein, die teurere Packung zu kaufen, obwohl sie pro Stück günstiger ist?"
         },
         "glossaryTerms": [
           "Kaufen",
@@ -372,125 +372,125 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Kaufen, bezahlen, vergleichen: Nicht nur der niedrigste Preis zählt, sondern auch Menge, Qualität und Bedarf. Beispiel: Ein Viererpack kostet 8 Euro, ein einzelnes Getränk 3 Euro; pro Stück ist der Vergleich entscheidend. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Das billigste Angebot ist immer die beste Entscheidung.“.",
-          "young_adults": "Kaufen, bezahlen, vergleichen: Nicht nur der niedrigste Preis zählt, sondern auch Menge, Qualität und Bedarf. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Ein Viererpack kostet 8 Euro, ein einzelnes Getränk 3 Euro; pro Stück ist der Vergleich entscheidend.",
-          "parents_teachers": "Lernziel: Preise, Menge, Qualität und Nutzen bei Kaufentscheidungen vergleichen. Didaktischer Fokus: Nicht nur der niedrigste Preis zählt, sondern auch Menge, Qualität und Bedarf. Typische Fehlvorstellung: „Das billigste Angebot ist immer die beste Entscheidung.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Beim Einkaufen lohnt sich ein zweiter Blick. Ein Sechserpack Wasser kostet 3 Euro, eine Einzelflasche 0,80 Euro. Rechnest du das Pack auf eine Flasche herunter, sind das nur 50 Cent, also günstiger. Diesen Preis pro Stück nennt man Grundpreis, und er steht meist klein am Regal. Aber Vorsicht: Günstig pro Stück nützt nur, wenn du die Menge wirklich brauchst. Sechs Flaschen zu kaufen, obwohl du eine willst, spart kein Geld. Achte also auf drei Dinge: Preis pro Stück, Qualität und deinen echten Bedarf.",
+          "young_adults": "Preise vergleicht man fair über den Grundpreis, also den Preis pro Stück, pro Liter oder pro 100 Gramm. Er steht am Regal klein unter dem Preis und macht unterschiedliche Packungsgrößen erst vergleichbar. Faustregel: Die große Packung ist oft, aber nicht immer günstiger pro Einheit, deshalb lohnt der Blick auf den Grundpreis statt auf den auffälligen Aktionspreis. Denke aber die Gesamtkosten und deinen Bedarf mit: Eine XXL-Packung, die verdirbt oder die du nie aufbrauchst, ist trotz niedrigem Grundpreis teuer. Auch Qualität und Folgekosten gehören in den Vergleich.",
+          "parents_teachers": "Ziel ist die Kompetenz, Angebote über den Grundpreis zu vergleichen und dabei Menge, Qualität und tatsächlichen Bedarf einzubeziehen. Die verbreitete Fehlvorstellung, das billigste Angebot sei immer das beste, lässt sich am Grundpreis und an Beispielen widerlegen, in denen die Großpackung wegen Verderb oder Nichtnutzung teurer wird. Lassen Sie Lernende den Grundpreis selbst ausrechnen und begründen, wann sich die größere Packung lohnt und wann nicht."
         },
         "questions": [
           {
             "id": "q_bezahlen_vergleichen_001",
             "level": "explain",
-            "question": "Was beschreibt „Kaufen, bezahlen, vergleichen“ am besten?",
+            "question": "Was gibt der Grundpreis an?",
             "points": 100,
-            "correctAnswer": "Nicht nur der niedrigste Preis zählt, sondern auch Menge, Qualität und Bedarf.",
+            "correctAnswer": "Den Preis pro Einheit, also zum Beispiel pro Stück, pro Liter oder pro 100 Gramm.",
             "distractors": [
               {
-                "text": "Das billigste Angebot ist immer die beste Entscheidung.",
+                "text": "Den Preis, den das Produkt ursprünglich einmal gekostet hat.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Den niedrigsten Preis, den es im ganzen Laden gibt.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Die Summe aller Produkte im Einkaufswagen.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Nicht nur der niedrigste Preis zählt, sondern auch Menge, Qualität und Bedarf."
+            "explanationAfterAnswer": "Der Grundpreis rechnet auf eine Einheit herunter und macht verschiedene Packungsgrößen vergleichbar."
           },
           {
             "id": "q_bezahlen_vergleichen_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Kaufen, bezahlen, vergleichen“?",
+            "question": "In welchem Beispiel wird richtig über den Grundpreis verglichen?",
             "points": 100,
-            "correctAnswer": "Ein Viererpack kostet 8 Euro, ein einzelnes Getränk 3 Euro; pro Stück ist der Vergleich entscheidend.",
+            "correctAnswer": "Du rechnest ein Sechserpack für 3 Euro auf 0,50 Euro pro Flasche herunter und vergleichst das mit der Einzelflasche für 0,80 Euro.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Du nimmst einfach die Packung mit der größten Zahl auf dem Etikett.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Du kaufst immer die günstigste Packung, egal wie viel drin ist.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Du nimmst die größere Packung, weil größer immer günstiger pro Stück ist.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Nur der Preis pro Einheit macht Angebote fair vergleichbar."
           },
           {
             "id": "q_bezahlen_vergleichen_003",
             "level": "understand",
-            "question": "Warum ist „Kaufen, bezahlen, vergleichen“ für Finanzbildung wichtig?",
+            "question": "Warum reicht es nicht, immer nur auf den Gesamtpreis zu schauen?",
             "points": 120,
-            "correctAnswer": "Preise, Menge, Qualität und Nutzen bei Kaufentscheidungen vergleichen.",
+            "correctAnswer": "Weil eine Packung mit höherem Gesamtpreis pro Stück günstiger sein kann und der Bedarf trotzdem zählt.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil teure Produkte grundsätzlich besser sind als günstige.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil der Gesamtpreis immer falsch ausgezeichnet ist.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil man den Gesamtpreis an der Kasse ohnehin nicht sieht.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Preise, Menge, Qualität und Nutzen bei Kaufentscheidungen vergleichen."
+            "explanationAfterAnswer": "Erst Grundpreis und eigener Bedarf zusammen zeigen, welches Angebot wirklich das beste ist."
           },
           {
             "id": "q_bezahlen_vergleichen_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Packung A: 4 Riegel für 2 Euro. Packung B: 10 Riegel für 4 Euro. Welche ist pro Riegel günstiger?",
             "points": 150,
-            "correctAnswer": "Die passenden Werte einsetzen, sauber rechnen und das Ergebnis im Kontext prüfen.",
+            "correctAnswer": "Packung B, denn sie kostet 0,40 Euro pro Riegel gegenüber 0,50 Euro bei Packung A.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "Packung A, weil sie insgesamt weniger kostet.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "Packung A, weil weniger Riegel bedeuten, dass jeder einzelne günstiger ist.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "Beide sind gleich teuer pro Riegel.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "2 Euro geteilt durch 4 sind 0,50 Euro, 4 Euro geteilt durch 10 sind 0,40 Euro. B ist pro Stück günstiger."
           },
           {
             "id": "q_bezahlen_vergleichen_005",
             "level": "master",
-            "question": "Welche Aussage zu „Kaufen, bezahlen, vergleichen“ stimmt am besten?",
+            "question": "Wann ist die pro Stück günstigere Großpackung trotzdem nicht die beste Wahl?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Wenn du die große Menge nicht brauchst oder ein Teil davon verdirbt, denn dann zahlst du für Ungenutztes.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Nie, die günstigere Großpackung ist immer die beste Wahl.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Nur wenn die Einzelpackung zufällig einen niedrigeren Gesamtpreis hat.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Immer dann, wenn der Grundpreis nicht am Regal steht.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Ein niedriger Grundpreis nützt nur, wenn du die Menge wirklich verbrauchst. Sonst sind die echten Kosten höher."
           }
         ],
         "calculationTemplates": [
@@ -498,7 +498,7 @@
             "id": "tmpl_bez_grundpreis",
             "level": "apply",
             "points": 150,
-            "questionTemplate": "Packung A enthält {mengeA} Stück und kostet {preisA} Euro. Packung B enthält {mengeB} Stück und kostet {preisB} Euro. Welche Packung ist günstiger pro Stück?",
+            "questionTemplate": "Packung A enthält {mengeA} Stück und kostet {preisA} Euro. Packung B enthält {mengeB} Stück und kostet {preisB} Euro. Welche Packung ist pro Stück günstiger?",
             "parameters": {
               "mengeA": {
                 "min": 2,
@@ -523,20 +523,20 @@
               "mengeA > mengeB ? 'A' : 'B'",
               "'gleich'"
             ],
-            "explanationTemplate": "Teile den Preis durch die Anzahl der Stücke und vergleiche den Stückpreis."
+            "explanationTemplate": "Rechne für jede Packung den Preis pro Stück aus (Preis geteilt durch Menge) und vergleiche diese beiden Grundpreise."
           }
         ],
         "teacherSupport": {
-          "competenceGoal": "Preise, Menge, Qualität und Nutzen bei Kaufentscheidungen vergleichen.",
+          "competenceGoal": "Preise über den Grundpreis vergleichen und Menge, Qualität und eigenen Bedarf mitdenken.",
           "typicalMisconception": "Das billigste Angebot ist immer die beste Entscheidung.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Das billigste Angebot ist immer die beste Entscheidung.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Kaufen, bezahlen, vergleichen“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "discussionPrompt": "Wann habt ihr schon einmal eine große Packung gekauft, die am Ende teurer war, weil ein Teil weggeworfen wurde?",
+          "classroomActivity": "Bringen Sie Fotos von Regalpreisschildern mit oder erfinden Sie welche. Die Lernenden berechnen die Grundpreise, ordnen die Angebote und begründen, welches sie wählen würden und warum."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Kaufen, bezahlen, vergleichen“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Kaufen, bezahlen, vergleichen“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Sucht im Supermarkt gemeinsam den kleinen Grundpreis am Regal und lasst euer Kind entscheiden, welche Packung pro Stück günstiger ist.",
+          "everydayExercise": "Vergleichen Sie zu Hause zwei Packungsgrößen eines Lieblingsprodukts. Ihr Kind rechnet den Preis pro Einheit aus und sagt, ob sich die größere Packung wirklich lohnt."
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_beduerfnisse_wuensche",
@@ -547,12 +547,12 @@
           "konzept_bezahlen_vergleichen"
         ],
         "pedagogy": {
-          "learningGoal": "Zwischen Bedürfnissen, Wünschen und Prioritäten unterscheiden.",
-          "coreIdea": "Bedürfnisse sind wichtig oder notwendig; Wünsche sind erlaubt, müssen aber priorisiert werden.",
-          "everydayScenario": "Du brauchst neue Sportschuhe, möchtest aber auch ein neues Spiel kaufen.",
-          "misconception": "Wünsche sind schlecht und man darf nur notwendige Dinge kaufen.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Bedürfnisse vs. Wünsche' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Bedürfnisse vs. Wünsche' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "learningGoal": "Zwischen Bedürfnissen und Wünschen unterscheiden und Ausgaben nach Prioritäten ordnen.",
+          "coreIdea": "Bedürfnisse sind Dinge, die man wirklich braucht; Wünsche sind schön, aber nicht notwendig. Wünsche sind erlaubt, sie kommen nur nach den Bedürfnissen dran.",
+          "everydayScenario": "Deine Sportschuhe sind kaputt und du brauchst neue. Gleichzeitig möchtest du ein neues Spiel. Das Geld reicht nur für eines.",
+          "misconception": "Wünsche sind schlecht und man darf sich nur das Nötigste kaufen.",
+          "transferTask": "Schreibe drei Dinge auf, die du dir gerade wünschst. Markiere bei jedem, ob es ein Bedürfnis oder ein Wunsch ist, und bringe sie in eine Reihenfolge.",
+          "reflectionPrompt": "Woran merkst du, ob etwas ein echtes Bedürfnis ist oder nur ein spontaner Wunsch, den du morgen vergessen hast?"
         },
         "glossaryTerms": [
           "Bedürfnis",
@@ -568,139 +568,139 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Bedürfnisse vs. Wünsche: Bedürfnisse sind wichtig oder notwendig; Wünsche sind erlaubt, müssen aber priorisiert werden. Beispiel: Du brauchst neue Sportschuhe, möchtest aber auch ein neues Spiel kaufen. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Wünsche sind schlecht und man darf nur notwendige Dinge kaufen.“.",
-          "young_adults": "Bedürfnisse vs. Wünsche: Bedürfnisse sind wichtig oder notwendig; Wünsche sind erlaubt, müssen aber priorisiert werden. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Du brauchst neue Sportschuhe, möchtest aber auch ein neues Spiel kaufen.",
-          "parents_teachers": "Lernziel: Zwischen Bedürfnissen, Wünschen und Prioritäten unterscheiden. Didaktischer Fokus: Bedürfnisse sind wichtig oder notwendig; Wünsche sind erlaubt, müssen aber priorisiert werden. Typische Fehlvorstellung: „Wünsche sind schlecht und man darf nur notwendige Dinge kaufen.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Nicht alles, was du kaufen möchtest, brauchst du auch wirklich. Ein Bedürfnis ist etwas, das du echt benötigst, zum Beispiel neue Schuhe, wenn die alten kaputt sind. Ein Wunsch ist etwas Schönes, das aber nicht nötig ist, zum Beispiel ein neues Spiel. Wünsche sind völlig okay. Der Trick ist die Reihenfolge: Erst kommt, was du brauchst, dann, was du dir wünschst. Wenn dein Geld nur für eines reicht, hilft eine kurze Pause. Frage dich: Will ich das in einer Woche noch? Oft schmilzt ein spontaner Wunsch dann von selbst.",
+          "young_adults": "Bedürfnisse decken das Notwendige ab (Wohnen, Essen, Handyvertrag fürs Nötigste), Wünsche sind alles darüber hinaus (das teurere Modell, der Restaurantbesuch, das Abo). Der Sinn der Unterscheidung ist nicht Verzicht, sondern Reihenfolge: Erst die Bedürfnisse absichern, dann bewusst entscheiden, welche Wünsche ins Budget passen. Eine praktische Faustregel gegen Spontankäufe ist die 24-Stunden- oder 30-Tage-Regel: Bei größeren Wünschen einen Tag oder einen Monat warten. Was dann noch wichtig ist, ist ein echter Wunsch, vieles andere erledigt sich von selbst.",
+          "parents_teachers": "Ziel ist, Bedürfnisse von Wünschen zu unterscheiden und Ausgaben priorisieren zu können, ohne Konsum zu verteufeln. Die Fehlvorstellung, Wünsche seien grundsätzlich schlecht, führt zu Schuldgefühlen statt zu guten Entscheidungen. Betonen Sie deshalb die Reihenfolge statt des Verbots. Eine wirksame didaktische Brücke ist die Wartezeit-Regel bei Spontankäufen, mit der Lernende den Unterschied zwischen einem kurzfristigen Impuls und einem dauerhaften Bedürfnis am eigenen Verhalten erleben."
         },
         "questions": [
           {
             "id": "q_beduerfnisse_wuensche_001",
             "level": "explain",
-            "question": "Was beschreibt „Bedürfnisse vs. Wünsche“ am besten?",
+            "question": "Was ist der Unterschied zwischen einem Bedürfnis und einem Wunsch?",
             "points": 100,
-            "correctAnswer": "Bedürfnisse sind wichtig oder notwendig; Wünsche sind erlaubt, müssen aber priorisiert werden.",
+            "correctAnswer": "Ein Bedürfnis brauchst du wirklich, ein Wunsch ist schön, aber nicht notwendig.",
             "distractors": [
               {
-                "text": "Wünsche sind schlecht und man darf nur notwendige Dinge kaufen.",
+                "text": "Es gibt keinen Unterschied, beides ist genau dasselbe.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Ein Wunsch ist immer teurer als ein Bedürfnis.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Ein Bedürfnis kann man tauschen, einen Wunsch nicht.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Bedürfnisse sind wichtig oder notwendig; Wünsche sind erlaubt, müssen aber priorisiert werden."
+            "explanationAfterAnswer": "Genau: Bedürfnisse sind notwendig, Wünsche sind erlaubt, kommen aber nach den Bedürfnissen."
           },
           {
             "id": "q_beduerfnisse_wuensche_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Bedürfnisse vs. Wünsche“?",
+            "question": "Welches davon ist am ehesten ein Bedürfnis?",
             "points": 100,
-            "correctAnswer": "Du brauchst neue Sportschuhe, möchtest aber auch ein neues Spiel kaufen.",
+            "correctAnswer": "Neue Schuhe, weil deine alten kaputt sind und drücken.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Ein teures Sammel-Trikot deines Lieblingsclubs.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Ein zweites Paar Sneaker in einer anderen Farbe, obwohl deine passen.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Die neueste Spielkonsole, obwohl deine alte noch funktioniert.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Funktionierende Schuhe sind ein echter Bedarf. Ein zweites Paar oder ein neueres Modell ist ein Wunsch."
           },
           {
             "id": "q_beduerfnisse_wuensche_003",
             "level": "understand",
-            "question": "Warum ist „Bedürfnisse vs. Wünsche“ für Finanzbildung wichtig?",
+            "question": "Warum ist es sinnvoll, Bedürfnisse und Wünsche zu unterscheiden?",
             "points": 120,
-            "correctAnswer": "Zwischen Bedürfnissen, Wünschen und Prioritäten unterscheiden.",
+            "correctAnswer": "Weil du dann zuerst das Notwendige absicherst und bewusst entscheidest, welche Wünsche noch ins Budget passen.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil man Wünsche danach für immer verbieten muss.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil Bedürfnisse dann nichts mehr kosten.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil Bedürfnisse und Wünsche jeden Tag die Farbe wechseln.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Zwischen Bedürfnissen, Wünschen und Prioritäten unterscheiden."
+            "explanationAfterAnswer": "Es geht nicht um Verzicht, sondern um die richtige Reihenfolge: erst das Nötige, dann bewusst die Wünsche."
           },
           {
             "id": "q_beduerfnisse_wuensche_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Du hast 40 Euro. Deine Sportschuhe sind kaputt (35 Euro) und du möchtest ein Spiel (25 Euro). Was ist die klügste Entscheidung?",
             "points": 150,
-            "correctAnswer": "Innehalten, Informationen prüfen und erst dann passend zum eigenen Ziel handeln.",
+            "correctAnswer": "Zuerst die Schuhe kaufen, weil du sie brauchst, und für das Spiel weitersparen.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "Zuerst das Spiel kaufen, weil es mehr Spaß macht.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "Beides sofort kaufen und den Rest später klären.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "Gar nichts kaufen, weil Ausgeben immer falsch ist.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "Das Bedürfnis geht vor. Für 40 Euro kannst du nicht beides, also erst die Schuhe, dann fürs Spiel sparen."
           },
           {
             "id": "q_beduerfnisse_wuensche_005",
             "level": "master",
-            "question": "Welche Aussage zu „Bedürfnisse vs. Wünsche“ stimmt am besten?",
+            "question": "Welche Aussage über Bedürfnisse und Wünsche ist am genauesten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Wünsche sind erlaubt und wichtig für die Lebensfreude, sollten aber nach den Bedürfnissen kommen und ins Budget passen.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Wer klug mit Geld umgeht, unterdrückt jeden Wunsch dauerhaft.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Man sollte Wünschen sofort nachgeben, sonst verpasst man sie.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Ob etwas Wunsch oder Bedürfnis ist, hängt nur vom Preis ab.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Gute Entscheidungen verzichten nicht auf alle Wünsche, sie ordnen sie nur klug den Bedürfnissen unter."
           }
         ],
         "calculationTemplates": [],
         "teacherSupport": {
-          "competenceGoal": "Zwischen Bedürfnissen, Wünschen und Prioritäten unterscheiden.",
-          "typicalMisconception": "Wünsche sind schlecht und man darf nur notwendige Dinge kaufen.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Wünsche sind schlecht und man darf nur notwendige Dinge kaufen.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Bedürfnisse vs. Wünsche“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "competenceGoal": "Zwischen Bedürfnissen und Wünschen unterscheiden und Ausgaben nach Prioritäten ordnen.",
+          "typicalMisconception": "Wünsche sind schlecht und man darf sich nur das Nötigste kaufen.",
+          "discussionPrompt": "Gibt es Dinge, die für die eine Person ein Bedürfnis und für die andere nur ein Wunsch sind? Woran liegt das?",
+          "classroomActivity": "Geben Sie eine Liste mit Alltagsgegenständen aus. Die Lernenden sortieren sie in Bedürfnis und Wunsch und diskutieren die strittigen Fälle, bei denen die Einordnung von der Lebenssituation abhängt."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Bedürfnisse vs. Wünsche“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Bedürfnisse vs. Wünsche“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Wenn euer Kind sich etwas wünscht, fragt gemeinsam: Brauchst du das, oder möchtest du es? Und was davon ist gerade wichtiger?",
+          "everydayExercise": "Vereinbaren Sie für größere Wünsche eine Wartezeit von einer Woche. Danach entscheidet Ihr Kind neu und merkt selbst, welche Wünsche geblieben und welche verschwunden sind."
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_sparen",
@@ -711,12 +711,12 @@
           "konzept_beduerfnisse_wuensche"
         ],
         "pedagogy": {
-          "learningGoal": "Sparen als bewusste Entscheidung für spätere Möglichkeiten verstehen.",
-          "coreIdea": "Ausgeben bedeutet Nutzen jetzt; Sparen bedeutet Möglichkeit später.",
-          "everydayScenario": "Du bekommst 20 Euro und legst 5 Euro für ein größeres Ziel zurück.",
-          "misconception": "Sparen heißt, sich nie etwas zu gönnen.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Sparen vs. Ausgeben' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Sparen vs. Ausgeben' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "learningGoal": "Sparen als bewusste Entscheidung für spätere Möglichkeiten verstehen und eine Sparrate planen.",
+          "coreIdea": "Ausgeben bringt Nutzen sofort, Sparen bringt Möglichkeiten später. Wer regelmäßig einen kleinen Teil zurücklegt, kann sich größere Ziele leisten.",
+          "everydayScenario": "Du bekommst 20 Euro Taschengeld und legst jeden Monat 5 Euro zurück, um dir in einem halben Jahr ein Skateboard zu kaufen.",
+          "misconception": "Sparen heißt, sich nie etwas gönnen zu dürfen.",
+          "transferTask": "Nenne ein Ziel, das mehr kostet als dein monatliches Taschengeld. Rechne aus, wie viel du monatlich zurücklegen musst, um es in einem halben Jahr zu erreichen.",
+          "reflectionPrompt": "Was fällt dir leichter: einen festen Betrag gleich beiseitezulegen oder erst am Monatsende zu sparen, was übrig ist?"
         },
         "glossaryTerms": [
           "Sparen",
@@ -732,125 +732,125 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Sparen vs. Ausgeben: Ausgeben bedeutet Nutzen jetzt; Sparen bedeutet Möglichkeit später. Beispiel: Du bekommst 20 Euro und legst 5 Euro für ein größeres Ziel zurück. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Sparen heißt, sich nie etwas zu gönnen.“.",
-          "young_adults": "Sparen vs. Ausgeben: Ausgeben bedeutet Nutzen jetzt; Sparen bedeutet Möglichkeit später. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Du bekommst 20 Euro und legst 5 Euro für ein größeres Ziel zurück.",
-          "parents_teachers": "Lernziel: Sparen als bewusste Entscheidung für spätere Möglichkeiten verstehen. Didaktischer Fokus: Ausgeben bedeutet Nutzen jetzt; Sparen bedeutet Möglichkeit später. Typische Fehlvorstellung: „Sparen heißt, sich nie etwas zu gönnen.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Sparen heißt nicht, sich nie etwas zu gönnen. Es heißt nur: Ich gebe nicht alles sofort aus, damit ich mir später etwas Größeres leisten kann. Ein Beispiel: Du bekommst 20 Euro und legst jeden Monat 5 Euro zurück. Nach sechs Monaten hast du 30 Euro und kannst dir das Skateboard kaufen. Den Betrag, den du regelmäßig zurücklegst, nennt man Sparrate. Ein guter Trick ist, gleich am Anfang zu sparen und nicht erst, wenn am Ende zufällig etwas übrig bleibt. Denn dann bleibt oft nichts übrig.",
+          "young_adults": "Sparen bedeutet, heutigen Konsum aufzuschieben, um später größere oder wichtigere Ausgaben stemmen zu können. Der wirksamste Hebel ist, sich zuerst selbst zu bezahlen: Leg die Sparrate direkt bei Geldeingang beiseite, statt am Monatsende zu hoffen, dass etwas übrig bleibt. Schon ein fester kleiner Betrag pro Monat summiert sich, weil Sparen vor allem eine Frage der Regelmäßigkeit ist, nicht der Höhe. Wichtig: Sparen ist kein Selbstzweck. Es dient einem Ziel, sei es ein Notgroschen, eine Anschaffung oder später der Vermögensaufbau. Ohne Ziel fällt Durchhalten schwer.",
+          "parents_teachers": "Ziel ist, Sparen als zielgerichtete Konsumverschiebung zu verstehen und eine passende Sparrate berechnen zu können. Die Fehlvorstellung, Sparen bedeute dauerhaften Verzicht, blockiert die Motivation. Rahmen Sie Sparen deshalb positiv als Weg zu selbst gewählten Zielen. Didaktisch bewährt hat sich das Prinzip zuerst sich selbst bezahlen sowie das Rechnen mit konkreten Sparzielen, damit Lernende den Zusammenhang von Sparrate, Zeit und Zielbetrag selbst herstellen."
         },
         "questions": [
           {
             "id": "q_sparen_001",
             "level": "explain",
-            "question": "Was beschreibt „Sparen vs. Ausgeben“ am besten?",
+            "question": "Was bedeutet Sparen?",
             "points": 100,
-            "correctAnswer": "Ausgeben bedeutet Nutzen jetzt; Sparen bedeutet Möglichkeit später.",
+            "correctAnswer": "Einen Teil des Geldes nicht sofort ausgeben, um sich später etwas leisten zu können.",
             "distractors": [
               {
-                "text": "Sparen heißt, sich nie etwas zu gönnen.",
+                "text": "Sich niemals etwas gönnen und auf alles verzichten.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Geld sofort ausgeben und darauf hoffen, dass es sich von allein vermehrt.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Das ganze Geld so schnell wie möglich ausgeben.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Ausgeben bedeutet Nutzen jetzt; Sparen bedeutet Möglichkeit später."
+            "explanationAfterAnswer": "Genau: Sparen verschiebt Konsum, damit später größere oder wichtigere Dinge möglich werden."
           },
           {
             "id": "q_sparen_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Sparen vs. Ausgeben“?",
+            "question": "Welches Beispiel zeigt gutes Sparen mit einer festen Sparrate?",
             "points": 100,
-            "correctAnswer": "Du bekommst 20 Euro und legst 5 Euro für ein größeres Ziel zurück.",
+            "correctAnswer": "Du legst jeden Monat 5 Euro beiseite, um in einem halben Jahr ein Skateboard zu kaufen.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Du leihst dir Geld für das Skateboard von einem Freund.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Du gibst dein ganzes Taschengeld sofort aus und sparst nur, was zufällig übrig bleibt.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Du wünschst dir ein Skateboard, tust aber nichts dafür.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Ein fester Betrag pro Monat für ein klares Ziel ist genau das, was eine Sparrate ausmacht."
           },
           {
             "id": "q_sparen_003",
             "level": "understand",
-            "question": "Warum ist „Sparen vs. Ausgeben“ für Finanzbildung wichtig?",
+            "question": "Warum lohnt es sich, gleich am Anfang zu sparen statt erst am Ende?",
             "points": 120,
-            "correctAnswer": "Sparen als bewusste Entscheidung für spätere Möglichkeiten verstehen.",
+            "correctAnswer": "Weil am Ende oft nichts übrig bleibt, wenn man den Sparbetrag nicht vorher beiseitelegt.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil man am Monatsende gar kein Geld mehr ausgeben darf.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil frühes Geld mehr wert ist als spätes Geld desselben Betrags.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil Sparen nur am Monatsanfang überhaupt erlaubt ist.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Sparen als bewusste Entscheidung für spätere Möglichkeiten verstehen."
+            "explanationAfterAnswer": "Zuerst sich selbst bezahlen heißt: erst die Sparrate beiseite, dann den Rest ausgeben."
           },
           {
             "id": "q_sparen_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Du legst jeden Monat 8 Euro zurück. Wie viel hast du nach 5 Monaten gespart?",
             "points": 150,
-            "correctAnswer": "Die passenden Werte einsetzen, sauber rechnen und das Ergebnis im Kontext prüfen.",
+            "correctAnswer": "40 Euro, denn 8 Euro mal 5 Monate ergeben 40 Euro.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "13 Euro, denn 8 plus 5 ergibt 13.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "48 Euro, denn man rechnet 8 Euro mal 6 Monate.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "32 Euro, denn im ersten Monat spart man noch nicht.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "Gespartes Geld = Sparrate mal Anzahl der Monate, hier 8 Euro mal 5 gleich 40 Euro."
           },
           {
             "id": "q_sparen_005",
             "level": "master",
-            "question": "Welche Aussage zu „Sparen vs. Ausgeben“ stimmt am besten?",
+            "question": "Welche Aussage über Sparen ist am genauesten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Sparen ist am wirksamsten, wenn es regelmäßig geschieht und einem klaren Ziel dient, nicht wenn man möglichst viel verzichtet.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Sparen lohnt sich nur, wenn man sehr große Beträge auf einmal zurücklegt.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Wer richtig spart, gibt am besten für gar nichts mehr Geld aus.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Sparen bringt nur etwas, wenn man kein festes Ziel hat.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Regelmäßigkeit und ein Ziel schlagen Höhe und Verzicht. Kleine feste Beträge summieren sich zuverlässig."
           }
         ],
         "calculationTemplates": [
@@ -875,14 +875,14 @@
               "betrag * monate - betrag",
               "betrag * (monate + 1)"
             ],
-            "explanationTemplate": "Monatsbetrag mal Anzahl der Monate.",
+            "explanationTemplate": "Multipliziere deine monatliche Sparrate mit der Anzahl der Monate.",
             "unit": "Euro"
           },
           {
             "id": "tmpl_spar_ziel",
             "level": "master",
             "points": 200,
-            "questionTemplate": "Du möchtest {ziel} Euro sparen und legst monatlich {betrag} Euro zurück. Nach wie vielen Monaten erreichst du das Ziel mindestens?",
+            "questionTemplate": "Du möchtest {ziel} Euro sparen und legst monatlich {betrag} Euro zurück. Nach wie vielen Monaten erreichst du dein Ziel mindestens?",
             "parameters": {
               "ziel": {
                 "min": 50,
@@ -899,21 +899,21 @@
               "ziel - betrag",
               "betrag / ziel"
             ],
-            "explanationTemplate": "Teile Ziel durch Sparrate und runde auf volle Monate auf.",
+            "explanationTemplate": "Teile den Zielbetrag durch die monatliche Sparrate und runde auf volle Monate auf.",
             "unit": "Monate"
           }
         ],
         "teacherSupport": {
-          "competenceGoal": "Sparen als bewusste Entscheidung für spätere Möglichkeiten verstehen.",
-          "typicalMisconception": "Sparen heißt, sich nie etwas zu gönnen.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Sparen heißt, sich nie etwas zu gönnen.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Sparen vs. Ausgeben“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "competenceGoal": "Sparen als bewusste Entscheidung für spätere Möglichkeiten verstehen und eine Sparrate planen.",
+          "typicalMisconception": "Sparen heißt, sich nie etwas gönnen zu dürfen.",
+          "discussionPrompt": "Für welches Ziel würdet ihr euch das Sparen zutrauen, und was würde euch dabei am schwersten fallen?",
+          "classroomActivity": "Jede Lernende wählt ein realistisches Sparziel und eine monatliche Sparrate und berechnet, wie lange es dauert. Die Ergebnisse werden verglichen: Wie verändert eine höhere Sparrate die Dauer?"
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Sparen vs. Ausgeben“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Sparen vs. Ausgeben“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Sprecht über ein größeres Ziel eures Kindes und rechnet gemeinsam aus, wie viel es pro Woche oder Monat zurücklegen müsste.",
+          "everydayExercise": "Richten Sie zwei Spardosen oder Umschläge ein, einen fürs Ausgeben und einen fürs Ziel. Ihr Kind legt bei jedem Taschengeld zuerst die Sparrate in den Zielumschlag."
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_budget",
@@ -924,12 +924,12 @@
           "konzept_sparen"
         ],
         "pedagogy": {
-          "learningGoal": "Einnahmen, Ausgaben und verfügbares Geld planen.",
-          "coreIdea": "Ein Budget zeigt, ob dein Geld reicht und was übrig bleibt.",
-          "everydayScenario": "Du bekommst Taschengeld und planst Snacks, Freizeit, Sparen und Restbetrag.",
-          "misconception": "Solange noch Geld auf dem Konto ist, ist alles in Ordnung.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Budget: Einnahmen und Ausgaben' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Budget: Einnahmen und Ausgaben' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "learningGoal": "Einnahmen, Ausgaben und den Überschuss planen und ein einfaches Budget aufstellen.",
+          "coreIdea": "Ein Budget ist ein Plan, der zeigt, wie viel Geld reinkommt, wie viel rausgeht und was übrig bleibt. So sieht man vorher, ob das Geld reicht.",
+          "everydayScenario": "Du bekommst 30 Euro Taschengeld und planst: 10 Euro Snacks, 10 Euro Freizeit, 5 Euro sparen. 5 Euro bleiben als Puffer.",
+          "misconception": "Solange noch Geld auf dem Konto ist, kann ich bedenkenlos ausgeben.",
+          "transferTask": "Erstelle für einen Monat ein kleines Budget: Schreibe deine Einnahmen auf, dann deine geplanten Ausgaben, und rechne aus, was übrig bleibt.",
+          "reflectionPrompt": "Warum kann es riskant sein, nur auf den Kontostand zu schauen, statt die geplanten Ausgaben des Monats zu kennen?"
         },
         "glossaryTerms": [
           "Budget",
@@ -946,125 +946,125 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Budget: Einnahmen und Ausgaben: Ein Budget zeigt, ob dein Geld reicht und was übrig bleibt. Beispiel: Du bekommst Taschengeld und planst Snacks, Freizeit, Sparen und Restbetrag. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Solange noch Geld auf dem Konto ist, ist alles in Ordnung.“.",
-          "young_adults": "Budget: Einnahmen und Ausgaben: Ein Budget zeigt, ob dein Geld reicht und was übrig bleibt. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Du bekommst Taschengeld und planst Snacks, Freizeit, Sparen und Restbetrag.",
-          "parents_teachers": "Lernziel: Einnahmen, Ausgaben und verfügbares Geld planen. Didaktischer Fokus: Ein Budget zeigt, ob dein Geld reicht und was übrig bleibt. Typische Fehlvorstellung: „Solange noch Geld auf dem Konto ist, ist alles in Ordnung.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Ein Budget ist ein einfacher Plan für dein Geld. Du schreibst auf, wie viel reinkommt (deine Einnahmen) und wie viel du ausgeben willst (deine Ausgaben). Der Rest ist dein Überschuss. Ein Beispiel: Du bekommst 30 Euro. Davon planst du 10 Euro für Snacks, 10 Euro für Freizeit und 5 Euro fürs Sparen. Dann bleiben 5 Euro als Puffer für Unerwartetes. Der große Vorteil: Du siehst schon vorher, ob dein Geld reicht, statt dich am Monatsende zu wundern, dass nichts mehr da ist.",
+          "young_adults": "Ein Budget ist die einfache Gleichung Einnahmen minus Ausgaben gleich Überschuss oder Fehlbetrag. Der praktische Trick ist, zwischen festen Ausgaben (Miete, Handyvertrag, Abos, die jeden Monat gleich anfallen) und variablen Ausgaben (Essen, Freizeit, Kleidung) zu trennen, denn nur die variablen kann man kurzfristig steuern. Eine bekannte Orientierung ist die 50-30-20-Faustregel: grob die Hälfte für Notwendiges, ein Teil für Wünsche, ein Teil fürs Sparen. Entscheidend ist nicht die perfekte Aufteilung, sondern dass du überhaupt planst, statt nur auf den Kontostand zu schauen.",
+          "parents_teachers": "Ziel ist, ein einfaches Budget aus Einnahmen und Ausgaben aufzustellen und Überschuss beziehungsweise Fehlbetrag zu berechnen. Zentral ist die Unterscheidung von festen und variablen Ausgaben, weil nur Letztere kurzfristig steuerbar sind. Die Fehlvorstellung, ein positiver Kontostand bedeute automatisch finanzielle Sicherheit, ignoriert bereits eingeplante oder wiederkehrende Ausgaben. Lassen Sie Lernende deshalb ein Monatsbudget im Voraus erstellen und mit dem tatsächlichen Verlauf vergleichen."
         },
         "questions": [
           {
             "id": "q_budget_001",
             "level": "explain",
-            "question": "Was beschreibt „Budget: Einnahmen und Ausgaben“ am besten?",
+            "question": "Was ist ein Budget?",
             "points": 100,
-            "correctAnswer": "Ein Budget zeigt, ob dein Geld reicht und was übrig bleibt.",
+            "correctAnswer": "Ein Plan, der Einnahmen und Ausgaben gegenüberstellt und zeigt, was übrig bleibt.",
             "distractors": [
               {
-                "text": "Solange noch Geld auf dem Konto ist, ist alles in Ordnung.",
+                "text": "Der Betrag, der gerade zufällig auf dem Konto liegt.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Eine feste Regel, die verbietet, überhaupt Geld auszugeben.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Ein Konto, das nur Banken für sehr reiche Leute anbieten.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Ein Budget zeigt, ob dein Geld reicht und was übrig bleibt."
+            "explanationAfterAnswer": "Genau: Ein Budget stellt Einnahmen und Ausgaben gegenüber und macht den Überschuss sichtbar."
           },
           {
             "id": "q_budget_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Budget: Einnahmen und Ausgaben“?",
+            "question": "Welches Beispiel zeigt echtes Budgetieren?",
             "points": 100,
-            "correctAnswer": "Du bekommst Taschengeld und planst Snacks, Freizeit, Sparen und Restbetrag.",
+            "correctAnswer": "Du teilst dein Taschengeld vorher auf Snacks, Freizeit und Sparen auf.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Du merkst dir ungefähr, was ein Spiel gekostet hat.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Du prüfst nur, ob überhaupt noch Geld auf dem Konto ist, und teilst nichts ein.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Du gibst aus, worauf du gerade Lust hast, und schaust nicht nach.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Budgetieren heißt, Ausgaben im Voraus einzuteilen, nicht erst hinterher zu zählen."
           },
           {
             "id": "q_budget_003",
             "level": "understand",
-            "question": "Warum ist „Budget: Einnahmen und Ausgaben“ für Finanzbildung wichtig?",
+            "question": "Warum reicht ein Blick auf den Kontostand nicht aus, um zu wissen, ob das Geld reicht?",
             "points": 120,
-            "correctAnswer": "Einnahmen, Ausgaben und verfügbares Geld planen.",
+            "correctAnswer": "Weil bereits geplante oder feste Ausgaben noch anstehen können, die der Kontostand nicht zeigt.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil ein positiver Kontostand immer bedeutet, dass genug Geld da ist.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil der Kontostand grundsätzlich immer falsch angezeigt wird.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil man den Kontostand nur einmal im Jahr sehen darf.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Einnahmen, Ausgaben und verfügbares Geld planen."
+            "explanationAfterAnswer": "Der Kontostand ist eine Momentaufnahme. Erst mit den kommenden Ausgaben weißt du, ob es wirklich reicht."
           },
           {
             "id": "q_budget_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Du bekommst 30 Euro und planst Ausgaben von 22 Euro. Wie hoch ist dein Überschuss?",
             "points": 150,
-            "correctAnswer": "Die passenden Werte einsetzen, sauber rechnen und das Ergebnis im Kontext prüfen.",
+            "correctAnswer": "8 Euro, denn 30 Euro minus 22 Euro ergeben 8 Euro.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "52 Euro, denn man addiert Einnahmen und Ausgaben.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "22 Euro, denn der Überschuss entspricht den Ausgaben.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "0 Euro, denn ein Budget hat nie einen Überschuss.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "Überschuss = Einnahmen minus Ausgaben, hier 30 Euro minus 22 Euro gleich 8 Euro."
           },
           {
             "id": "q_budget_005",
             "level": "master",
-            "question": "Welche Aussage zu „Budget: Einnahmen und Ausgaben“ stimmt am besten?",
+            "question": "Welche Aussage über ein gutes Budget ist am genauesten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Ein Budget plant Ausgaben im Voraus und trennt feste von variablen Ausgaben, weil man nur die variablen kurzfristig steuern kann.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Ein Budget ist erst dann sinnvoll, wenn das Konto leer ist.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Ein Budget muss jeden Monat exakt gleich aussehen, sonst ist es falsch.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Ein Budget besteht nur aus den Einnahmen, Ausgaben spielen keine Rolle.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Die Trennung von festen und variablen Ausgaben zeigt dir, wo du bei Bedarf wirklich etwas ändern kannst."
           }
         ],
         "calculationTemplates": [
@@ -1089,21 +1089,21 @@
               "ausgaben - einnahmen",
               "einnahmen"
             ],
-            "explanationTemplate": "Übrig bleibt: Einnahmen minus Ausgaben.",
+            "explanationTemplate": "Ziehe die Ausgaben von den Einnahmen ab. Was übrig bleibt, ist dein Überschuss.",
             "unit": "Euro"
           }
         ],
         "teacherSupport": {
-          "competenceGoal": "Einnahmen, Ausgaben und verfügbares Geld planen.",
-          "typicalMisconception": "Solange noch Geld auf dem Konto ist, ist alles in Ordnung.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Solange noch Geld auf dem Konto ist, ist alles in Ordnung.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Budget: Einnahmen und Ausgaben“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "competenceGoal": "Einnahmen, Ausgaben und den Überschuss planen und ein einfaches Budget aufstellen.",
+          "typicalMisconception": "Solange noch Geld auf dem Konto ist, kann ich bedenkenlos ausgeben.",
+          "discussionPrompt": "Welche Ausgaben in eurem Monat sind fest und welche könntet ihr kurzfristig ändern, wenn das Geld knapp wird?",
+          "classroomActivity": "Die Lernenden erstellen ein Monatsbudget mit fiktiven Einnahmen, sortieren die Ausgaben in fest und variabel und berechnen den Überschuss. Anschließend simulieren Sie eine unerwartete Ausgabe und lassen das Budget anpassen."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Budget: Einnahmen und Ausgaben“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Budget: Einnahmen und Ausgaben“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Plant gemeinsam das Taschengeld eures Kindes für einen Monat: Was kommt rein, was soll rausgehen, was bleibt übrig?",
+          "everydayExercise": "Führen Sie mit Ihrem Kind eine Woche lang eine kleine Ausgabenliste. Am Ende vergleicht ihr Plan und Wirklichkeit und überlegt, wo es Abweichungen gab."
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_geld_auf_konto",
@@ -1114,12 +1114,12 @@
           "konzept_budget"
         ],
         "pedagogy": {
-          "learningGoal": "Kontostand, Guthaben und digitale Zahlungen verstehen.",
-          "coreIdea": "Geld auf dem Konto ist als Guthaben sichtbar und verändert sich durch Buchungen.",
-          "everydayScenario": "Eine Überweisung erhöht den Kontostand; eine Kartenzahlung senkt ihn.",
+          "learningGoal": "Kontostand, Guthaben und digitale Zahlungen verstehen und Buchungen nachvollziehen.",
+          "coreIdea": "Geld auf dem Konto ist kein Stapel Scheine in einem Fach, sondern ein Guthaben. Es ist eine Zahl, die sich mit jeder Buchung verändert: Eingänge erhöhen sie, Zahlungen senken sie.",
+          "everydayScenario": "Deine Eltern überweisen dir Taschengeld, dein Kontostand steigt. Du bezahlst online ein Spiel mit Karte, er sinkt.",
           "misconception": "Auf meinem Konto liegt mein Geld als Scheine in einem eigenen Fach bei der Bank.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Geld auf dem Konto' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Geld auf dem Konto' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "transferTask": "Nenne zwei Vorgänge, die deinen Kontostand erhöhen, und zwei, die ihn senken. Erkläre bei jedem kurz, warum.",
+          "reflectionPrompt": "Warum ist es wichtig, deine PIN und dein Passwort geheim zu halten, obwohl auf dem Konto kein Bargeld liegt?"
         },
         "glossaryTerms": [
           "Konto",
@@ -1136,125 +1136,125 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Geld auf dem Konto: Geld auf dem Konto ist als Guthaben sichtbar und verändert sich durch Buchungen. Beispiel: Eine Überweisung erhöht den Kontostand; eine Kartenzahlung senkt ihn. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Auf meinem Konto liegt mein Geld als Scheine in einem eigenen Fach bei der Bank.“.",
-          "young_adults": "Geld auf dem Konto: Geld auf dem Konto ist als Guthaben sichtbar und verändert sich durch Buchungen. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Eine Überweisung erhöht den Kontostand; eine Kartenzahlung senkt ihn.",
-          "parents_teachers": "Lernziel: Kontostand, Guthaben und digitale Zahlungen verstehen. Didaktischer Fokus: Geld auf dem Konto ist als Guthaben sichtbar und verändert sich durch Buchungen. Typische Fehlvorstellung: „Auf meinem Konto liegt mein Geld als Scheine in einem eigenen Fach bei der Bank.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Geld auf dem Konto sind keine echten Scheine, die in einem Fach mit deinem Namen liegen. Es ist ein Guthaben, also eine Zahl, die zeigt, wie viel dir gehört. Diese Zahl heißt Kontostand und verändert sich mit jeder Buchung. Bekommst du Taschengeld überwiesen, steigt sie. Bezahlst du online mit Karte, sinkt sie. Weil dein Geld nur als Zahl gespeichert ist, musst du deine PIN und deine Passwörter geheim halten. Wer sie kennt, könnte über dein Guthaben verfügen, ganz ohne dein Portemonnaie zu öffnen.",
+          "young_adults": "Ein Kontoguthaben ist eine Forderung gegenüber der Bank, kein physisches Geld in einem Tresorfach. Der Kontostand ist eine Zahl, die sich durch Buchungen verändert: Gutschriften wie Lohn oder Überweisungen erhöhen ihn, Lastschriften, Daueraufträge und Kartenzahlungen senken ihn. Wichtig für den Alltag: Ein sichtbares Guthaben heißt nicht, dass das ganze Geld frei verfügbar ist, denn Miete, Abos oder eine geplante Lastschrift können schon eingeplant sein. Weil alles digital läuft, sind Zugangsdaten, PIN und Freigaben dein eigentlicher Schlüssel und gehören konsequent geschützt.",
+          "parents_teachers": "Ziel ist zu verstehen, dass Kontoguthaben ein digitaler Anspruch gegenüber der Bank ist und der Kontostand sich ausschließlich über Buchungen verändert. Die kindliche Fehlvorstellung vom eigenen Geldfach lässt sich gut über den Vergleich mit einem laufenden Punktestand aufbrechen. Nutzen Sie das Thema zugleich, um Sicherheitskompetenz anzubahnen: Da kein Bargeld, sondern Zugangsdaten das Guthaben schützen, sind PIN, Passwort und Zahlungsfreigaben zentrale Schutzmechanismen."
         },
         "questions": [
           {
             "id": "q_geld_auf_konto_001",
             "level": "explain",
-            "question": "Was beschreibt „Geld auf dem Konto“ am besten?",
+            "question": "Was ist der Kontostand?",
             "points": 100,
-            "correctAnswer": "Geld auf dem Konto ist als Guthaben sichtbar und verändert sich durch Buchungen.",
+            "correctAnswer": "Eine Zahl, die dein aktuelles Guthaben anzeigt und sich mit jeder Buchung ändert.",
             "distractors": [
               {
-                "text": "Auf meinem Konto liegt mein Geld als Scheine in einem eigenen Fach bei der Bank.",
+                "text": "Ein Fach bei der Bank, in dem deine Scheine mit Namen liegen.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Der Betrag, den du im Monat höchstens ausgeben darfst.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Die Gebühr, die die Bank pro Zahlung verlangt.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Geld auf dem Konto ist als Guthaben sichtbar und verändert sich durch Buchungen."
+            "explanationAfterAnswer": "Genau: Der Kontostand ist ein Guthaben als Zahl, das jede Buchung verändert."
           },
           {
             "id": "q_geld_auf_konto_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Geld auf dem Konto“?",
+            "question": "Welcher Vorgang senkt deinen Kontostand?",
             "points": 100,
-            "correctAnswer": "Eine Überweisung erhöht den Kontostand; eine Kartenzahlung senkt ihn.",
+            "correctAnswer": "Du bezahlst online ein Spiel mit deiner Karte.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Jemand überweist dir Geld zurück, das du ausgelegt hast.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Deine Eltern überweisen dir dein Taschengeld.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Du schaust dir deinen Kontostand in der App an.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Eine Kartenzahlung ist eine Ausgabe, sie verringert dein Guthaben. Eingänge erhöhen es."
           },
           {
             "id": "q_geld_auf_konto_003",
             "level": "understand",
-            "question": "Warum ist „Geld auf dem Konto“ für Finanzbildung wichtig?",
+            "question": "Warum liegt dein Geld auf dem Konto nicht als Scheine in einem Fach?",
             "points": 120,
-            "correctAnswer": "Kontostand, Guthaben und digitale Zahlungen verstehen.",
+            "correctAnswer": "Weil ein Kontoguthaben nur ein digitaler Anspruch gegenüber der Bank ist, keine physischen Scheine.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil es dein Geld gar nicht wirklich gibt.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil die Bank das Geld heimlich für sich behält.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil Geld auf dem Konto aus einem anderen Material besteht.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Kontostand, Guthaben und digitale Zahlungen verstehen."
+            "explanationAfterAnswer": "Dein Guthaben ist ein Anspruch, den du jederzeit als Bargeld abheben oder digital nutzen kannst."
           },
           {
             "id": "q_geld_auf_konto_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Dein Konto steht bei 50 Euro. Du bekommst 20 Euro überwiesen und zahlst danach 15 Euro. Wie hoch ist dein Kontostand?",
             "points": 150,
-            "correctAnswer": "Die passenden Werte einsetzen, sauber rechnen und das Ergebnis im Kontext prüfen.",
+            "correctAnswer": "55 Euro, denn 50 plus 20 minus 15 ergeben 55.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "85 Euro, denn man addiert alle drei Beträge.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "35 Euro, denn Eingänge werden abgezogen.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "15 Euro, denn nur die letzte Zahlung zählt.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "Eingänge addieren, Ausgaben abziehen: 50 plus 20 minus 15 gleich 55 Euro."
           },
           {
             "id": "q_geld_auf_konto_005",
             "level": "master",
-            "question": "Welche Aussage zu „Geld auf dem Konto“ stimmt am besten?",
+            "question": "Welche Aussage über Geld auf dem Konto ist am genauesten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Ein sichtbares Guthaben heißt nicht automatisch, dass alles frei verfügbar ist, denn feste Buchungen können schon eingeplant sein.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Solange der Kontostand positiv ist, kann man das ganze Guthaben bedenkenlos ausgeben.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Der Kontostand ändert sich nur, wenn man Bargeld abhebt.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Zugangsdaten muss man nicht schützen, weil kein echtes Geld auf dem Konto liegt.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Feste Ausgaben wie Abos können bereits verplant sein. Und weil alles digital läuft, schützen Zugangsdaten dein Guthaben."
           }
         ],
         "calculationTemplates": [
@@ -1283,21 +1283,21 @@
               "start - eingang - ausgabe",
               "start + eingang"
             ],
-            "explanationTemplate": "Zahlungseingang addieren, Ausgabe abziehen.",
+            "explanationTemplate": "Addiere den Zahlungseingang zum Startwert und ziehe die Ausgabe wieder ab.",
             "unit": "Euro"
           }
         ],
         "teacherSupport": {
-          "competenceGoal": "Kontostand, Guthaben und digitale Zahlungen verstehen.",
+          "competenceGoal": "Kontostand, Guthaben und digitale Zahlungen verstehen und Buchungen nachvollziehen.",
           "typicalMisconception": "Auf meinem Konto liegt mein Geld als Scheine in einem eigenen Fach bei der Bank.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Auf meinem Konto liegt mein Geld als Scheine in einem eigenen Fach bei der Bank.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Geld auf dem Konto“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "discussionPrompt": "Wenn auf dem Konto kein Bargeld liegt, was schützt dann eigentlich euer Guthaben vor Fremdzugriff?",
+          "classroomActivity": "Erstellen Sie einen fiktiven Kontoauszug mit mehreren Ein- und Ausgängen. Die Lernenden berechnen nach jeder Buchung den neuen Kontostand und markieren, welche Vorgänge Gutschriften und welche Belastungen sind."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Geld auf dem Konto“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Geld auf dem Konto“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Zeigt eurem Kind an einem echten (oder nachgestellten) Kontoauszug, wie eine Überweisung und eine Kartenzahlung den Stand verändern.",
+          "everydayExercise": "Besprechen Sie die Regeln zum Umgang mit PIN und Passwort und lassen Sie Ihr Kind erklären, warum diese Daten wichtiger sind als das Portemonnaie."
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_konten",
@@ -1308,12 +1308,12 @@
           "konzept_geld_auf_konto"
         ],
         "pedagogy": {
-          "learningGoal": "Verschiedene Kontoarten nach Zweck, Verfügbarkeit und Nutzung unterscheiden.",
-          "coreIdea": "Nicht jedes Konto ist für denselben Zweck da.",
-          "everydayScenario": "Taschengeld läuft über ein Girokonto; Rücklagen liegen eher auf Tagesgeld.",
-          "misconception": "Konto ist Konto – es gibt keinen wichtigen Unterschied.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Girokonto, Tagesgeld, Sparbuch' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Girokonto, Tagesgeld, Sparbuch' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "learningGoal": "Girokonto, Tagesgeldkonto und Sparbuch nach Zweck, Verfügbarkeit und Verzinsung unterscheiden.",
+          "coreIdea": "Verschiedene Kontoarten haben verschiedene Aufgaben. Das Girokonto ist fürs tägliche Zahlen, Tagesgeld für flexibel verfügbare Rücklagen, das Sparbuch ist eher altmodisch und wenig verzinst.",
+          "everydayScenario": "Dein Taschengeld und deine Kartenzahlungen laufen übers Girokonto. Dein Notgroschen liegt besser auf einem Tagesgeldkonto, wo er verfügbar bleibt und etwas Zinsen bringt.",
+          "misconception": "Konto ist Konto, es gibt keinen wichtigen Unterschied zwischen den Arten.",
+          "transferTask": "Ordne zu: Wo würdest du dein tägliches Geld halten und wo deinen Notgroschen? Begründe mit Verfügbarkeit und Zweck.",
+          "reflectionPrompt": "Warum lohnt es sich, nicht das ganze Geld auf dem Girokonto liegen zu lassen?"
         },
         "glossaryTerms": [
           "Girokonto",
@@ -1330,139 +1330,139 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Girokonto, Tagesgeld, Sparbuch: Nicht jedes Konto ist für denselben Zweck da. Beispiel: Taschengeld läuft über ein Girokonto; Rücklagen liegen eher auf Tagesgeld. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Konto ist Konto – es gibt keinen wichtigen Unterschied.“.",
-          "young_adults": "Girokonto, Tagesgeld, Sparbuch: Nicht jedes Konto ist für denselben Zweck da. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Taschengeld läuft über ein Girokonto; Rücklagen liegen eher auf Tagesgeld.",
-          "parents_teachers": "Lernziel: Verschiedene Kontoarten nach Zweck, Verfügbarkeit und Nutzung unterscheiden. Didaktischer Fokus: Nicht jedes Konto ist für denselben Zweck da. Typische Fehlvorstellung: „Konto ist Konto – es gibt keinen wichtigen Unterschied.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Nicht jedes Konto ist für dasselbe da. Das Girokonto ist dein Alltagskonto: Hier kommt dein Taschengeld an und von hier zahlst du mit Karte. Zinsen gibt es darauf so gut wie keine. Das Tagesgeldkonto ist für Rücklagen gedacht, zum Beispiel deinen Notgroschen. Du kommst jederzeit dran und bekommst meist etwas mehr Zinsen als aufs Girokonto. Das Sparbuch ist die altmodische Variante, es bringt heute kaum Zinsen. Die Idee dahinter: Alltagsgeld und Rücklagen trennt man, damit man den Puffer nicht aus Versehen mit ausgibt.",
+          "young_adults": "Die drei klassischen Kontoarten unterscheiden sich in Zweck, Verfügbarkeit und Verzinsung. Das Girokonto ist das Drehkreuz für den Zahlungsverkehr (Gehalt, Miete, Karte), praktisch unverzinst und deshalb kein Ort zum Sparen. Das Tagesgeldkonto dient flexiblen Rücklagen wie dem Notgroschen: täglich verfügbar und variabel verzinst, wobei der Zinssatz sich jederzeit ändern kann. Das Sparbuch ist historisch und heute meist unattraktiv verzinst. Wichtig: Auch Tagesgeldzinsen sind kein sicherer Gewinn gegen Inflation, sie können unter der Teuerung liegen. Guthaben in der EU ist bis 100.000 Euro pro Bank und Kunde gesetzlich abgesichert.",
+          "parents_teachers": "Ziel ist, Girokonto, Tagesgeld und Sparbuch nach Zweck, Verfügbarkeit und Verzinsung zu unterscheiden. Die Fehlvorstellung, alle Konten seien gleichwertig, verhindert eine sinnvolle Trennung von Zahlungsverkehr und Rücklagen. Betonen Sie, dass das Girokonto dem Zahlen dient und praktisch unverzinst ist, während Tagesgeld flexible Rücklagen aufnimmt. Ordnen Sie ein, dass variable Zinsen sich ändern und die Inflation nicht zwingend ausgleichen, und erwähnen Sie die gesetzliche Einlagensicherung als Sicherheitsanker."
         },
         "questions": [
           {
             "id": "q_konten_001",
             "level": "explain",
-            "question": "Was beschreibt „Girokonto, Tagesgeld, Sparbuch“ am besten?",
+            "question": "Wofür ist ein Girokonto vor allem da?",
             "points": 100,
-            "correctAnswer": "Nicht jedes Konto ist für denselben Zweck da.",
+            "correctAnswer": "Für den täglichen Zahlungsverkehr, also Geldeingänge und Kartenzahlungen.",
             "distractors": [
               {
-                "text": "Konto ist Konto – es gibt keinen wichtigen Unterschied.",
+                "text": "Für möglichst hohe Zinsen auf lange gesparte Beträge.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Für Geld, an das man absichtlich lange nicht mehr herankommt.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Ausschließlich für den Kauf von Aktien und ETFs.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Nicht jedes Konto ist für denselben Zweck da."
+            "explanationAfterAnswer": "Genau: Das Girokonto ist das Alltagskonto für Zahlungen und ist praktisch unverzinst."
           },
           {
             "id": "q_konten_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Girokonto, Tagesgeld, Sparbuch“?",
+            "question": "Wo passt ein Notgroschen am besten hin?",
             "points": 100,
-            "correctAnswer": "Taschengeld läuft über ein Girokonto; Rücklagen liegen eher auf Tagesgeld.",
+            "correctAnswer": "Auf ein Tagesgeldkonto, weil das Geld dort verfügbar bleibt und etwas Zinsen bringt.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Am besten gar nirgends, denn Rücklagen sind unnötig.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "In Aktien, damit es möglichst schnell wächst.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "In eine langfristig fest gebundene Anlage ohne Zugriff.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Ein Notgroschen muss jederzeit greifbar sein. Tagesgeld verbindet Verfügbarkeit mit etwas Zins."
           },
           {
             "id": "q_konten_003",
             "level": "understand",
-            "question": "Warum ist „Girokonto, Tagesgeld, Sparbuch“ für Finanzbildung wichtig?",
+            "question": "Warum trennt man Alltagsgeld und Rücklagen auf verschiedene Konten?",
             "points": 120,
-            "correctAnswer": "Verschiedene Kontoarten nach Zweck, Verfügbarkeit und Nutzung unterscheiden.",
+            "correctAnswer": "Damit man den Puffer nicht versehentlich im Alltag mit ausgibt und ihn getrennt im Blick behält.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil Tagesgeldkonten Käufe verbieten und deshalb sicherer sind.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil man mit einem einzigen Konto gar nicht bezahlen dürfte.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil das Girokonto sonst automatisch gesperrt würde.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Verschiedene Kontoarten nach Zweck, Verfügbarkeit und Nutzung unterscheiden."
+            "explanationAfterAnswer": "Getrennte Konten schaffen Ordnung: Alltagsgeld bleibt beweglich, der Puffer bleibt liegen."
           },
           {
             "id": "q_konten_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Du hast 300 Euro angesparte Rücklage und brauchst ein Konto für tägliche Zahlungen. Wie teilst du sinnvoll auf?",
             "points": 150,
-            "correctAnswer": "Den Begriff verstehen, Beispiele erkennen und ihn von ähnlichen Begriffen abgrenzen.",
+            "correctAnswer": "Die Rücklage aufs Tagesgeldkonto, das Alltagsgeld fürs Zahlen aufs Girokonto.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "Alles aufs Girokonto, weil Zinsen und Zweck egal sind.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "Alles aufs Sparbuch, weil das die höchsten Zinsen bringt.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "Alles in bar unters Kopfkissen, weil Konten unsicher sind.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "Zahlungsverkehr aufs Girokonto, Rücklage aufs verfügbare, leicht verzinste Tagesgeld. So passt jedes Geld zu seinem Zweck."
           },
           {
             "id": "q_konten_005",
             "level": "master",
-            "question": "Welche Aussage zu „Girokonto, Tagesgeld, Sparbuch“ stimmt am besten?",
+            "question": "Welche Aussage über Konten und Zinsen ist am genauesten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Auch Tagesgeldzinsen sind kein sicherer Gewinn, denn sie können sich ändern und unter der Inflation liegen.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Wer sein Geld aufs Sparbuch legt, ist automatisch vor Wertverlust geschützt.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Tagesgeld bringt immer mehr, als die Preise steigen, also ist es risikolos gewinnbringend.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Zinsen auf dem Girokonto machen es zum besten Sparkonto.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Variable Zinsen schwanken und können unter der Teuerung bleiben. Sicherheit gibt es, garantierten realen Gewinn nicht."
           }
         ],
         "calculationTemplates": [],
         "teacherSupport": {
-          "competenceGoal": "Verschiedene Kontoarten nach Zweck, Verfügbarkeit und Nutzung unterscheiden.",
-          "typicalMisconception": "Konto ist Konto – es gibt keinen wichtigen Unterschied.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Konto ist Konto – es gibt keinen wichtigen Unterschied.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Girokonto, Tagesgeld, Sparbuch“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "competenceGoal": "Girokonto, Tagesgeldkonto und Sparbuch nach Zweck, Verfügbarkeit und Verzinsung unterscheiden.",
+          "typicalMisconception": "Konto ist Konto, es gibt keinen wichtigen Unterschied zwischen den Arten.",
+          "discussionPrompt": "Wenn Tagesgeld mehr Zinsen bringt als das Girokonto, warum wickelt man den Zahlungsverkehr trotzdem übers Girokonto ab?",
+          "classroomActivity": "Die Lernenden ordnen in einer Tabelle mehreren Geldbeträgen (Taschengeld, Notgroschen, langfristiges Sparziel) je eine Kontoart zu und begründen ihre Wahl anhand von Zweck, Verfügbarkeit und Zins."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Girokonto, Tagesgeld, Sparbuch“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Girokonto, Tagesgeld, Sparbuch“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Sprecht darüber, welche Konten es in eurer Familie gibt und welches wofür genutzt wird.",
+          "everydayExercise": "Überlegen Sie mit Ihrem Kind, wohin sein nächster größerer Sparbetrag am besten passt, und begründen Sie die Wahl über Verfügbarkeit und Verzinsung."
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_notgroschen",
@@ -1473,12 +1473,12 @@
           "konzept_konten"
         ],
         "pedagogy": {
-          "learningGoal": "Einen Notgroschen als finanziellen Puffer für unerwartete Ausgaben verstehen.",
-          "coreIdea": "Ein Notgroschen schützt vor Stress und schlechten Entscheidungen.",
-          "everydayScenario": "Dein Fahrrad geht kaputt und du kannst die Reparatur aus einer Rücklage bezahlen.",
-          "misconception": "Ein Notgroschen ist Geld, das ungenutzt herumliegt.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Notgroschen' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Notgroschen' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "learningGoal": "Den Notgroschen als verfügbaren Puffer für unerwartete Ausgaben verstehen und seine Höhe abschätzen.",
+          "coreIdea": "Ein Notgroschen ist eine Rücklage für Unerwartetes. Er liegt nicht sinnlos herum, sondern hat die Aufgabe, in Notfällen sofort bereitzustehen, damit man sich kein Geld leihen muss.",
+          "everydayScenario": "Dein Fahrrad hat einen Platten und die Reparatur kostet 25 Euro. Weil du eine Rücklage hast, zahlst du sie einfach, ohne dir Geld zu borgen.",
+          "misconception": "Ein Notgroschen ist totes Geld, das nur ungenutzt herumliegt.",
+          "transferTask": "Überlege, welche unerwartete Ausgabe dich in den nächsten Monaten treffen könnte, und schätze, wie hoch dein persönlicher Notgroschen dafür sein sollte.",
+          "reflectionPrompt": "Warum ist es beruhigender, eine Rücklage zu haben, obwohl das Geld dann nicht für Wünsche zur Verfügung steht?"
         },
         "glossaryTerms": [
           "Notgroschen",
@@ -1494,125 +1494,125 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Notgroschen: Ein Notgroschen schützt vor Stress und schlechten Entscheidungen. Beispiel: Dein Fahrrad geht kaputt und du kannst die Reparatur aus einer Rücklage bezahlen. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Ein Notgroschen ist Geld, das ungenutzt herumliegt.“.",
-          "young_adults": "Notgroschen: Ein Notgroschen schützt vor Stress und schlechten Entscheidungen. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Dein Fahrrad geht kaputt und du kannst die Reparatur aus einer Rücklage bezahlen.",
-          "parents_teachers": "Lernziel: Einen Notgroschen als finanziellen Puffer für unerwartete Ausgaben verstehen. Didaktischer Fokus: Ein Notgroschen schützt vor Stress und schlechten Entscheidungen. Typische Fehlvorstellung: „Ein Notgroschen ist Geld, das ungenutzt herumliegt.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Ein Notgroschen ist Geld, das du für Unerwartetes zurücklegst. Beispiel: Dein Fahrrad hat einen Platten und die Reparatur kostet 25 Euro. Wenn du eine kleine Rücklage hast, zahlst du das einfach, ohne dir bei jemandem Geld zu leihen. Viele denken, so ein Notgroschen liege nutzlos herum. Das stimmt nicht: Seine Aufgabe ist genau das Bereitliegen, damit du in einem Notfall ruhig bleiben kannst. Wichtig ist, dass du schnell drankommst, zum Beispiel auf einem Tagesgeldkonto. Für dich reicht oft schon eine überschaubare Summe, die ein, zwei kaputte Sachen abdeckt.",
+          "young_adults": "Der Notgroschen ist die Basis jeder Finanzplanung: eine verfügbare Rücklage für Unerwartetes wie eine kaputte Waschmaschine, eine Autoreparatur oder einen Einkommensausfall. Er ist nicht totes Geld, sondern eine Versicherung gegen teure Notlösungen wie Dispo oder Ratenkredite. Als Faustregel gelten für Erwachsene etwa zwei bis drei Monatsausgaben, bei unsicherem Einkommen mehr. Für dich mit ersten eigenen Ausgaben ist eine kleinere, an deine Situation angepasste Summe sinnvoll. Wichtig ist die Verfügbarkeit: Der Notgroschen gehört auf ein Tagesgeldkonto, nicht in schwankende Anlagen wie Aktien, weil er im Ernstfall sofort und ohne Verlustrisiko bereitstehen muss.",
+          "parents_teachers": "Ziel ist, den Notgroschen als verfügbaren Liquiditätspuffer zu verstehen und seine Höhe grob abschätzen zu können. Die Fehlvorstellung vom nutzlos herumliegenden Geld übersieht seine Funktion als Absicherung gegen teure Kredite in Notlagen. Vermitteln Sie die erwachsene Faustregel von zwei bis drei Monatsausgaben und passen Sie sie für Jugendliche kindgerecht auf eine kleine, konkrete Summe an. Betonen Sie die Verfügbarkeit: Der Notgroschen gehört auf ein leicht zugängliches Konto, nicht in schwankende Wertpapiere."
         },
         "questions": [
           {
             "id": "q_notgroschen_001",
             "level": "explain",
-            "question": "Was beschreibt „Notgroschen“ am besten?",
+            "question": "Was ist ein Notgroschen?",
             "points": 100,
-            "correctAnswer": "Ein Notgroschen schützt vor Stress und schlechten Entscheidungen.",
+            "correctAnswer": "Eine Rücklage für unerwartete Ausgaben, die schnell verfügbar sein muss.",
             "distractors": [
               {
-                "text": "Ein Notgroschen ist Geld, das ungenutzt herumliegt.",
+                "text": "Geld, das nutzlos herumliegt und keinen Zweck erfüllt.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Ein Betrag, den man möglichst schnell in Aktien anlegt.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Ein besonderer Geldschein, den nur Banken ausgeben.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Ein Notgroschen schützt vor Stress und schlechten Entscheidungen."
+            "explanationAfterAnswer": "Genau: Der Notgroschen ist eine verfügbare Rücklage, die für den Ernstfall bereitliegt."
           },
           {
             "id": "q_notgroschen_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Notgroschen“?",
+            "question": "In welcher Situation hilft ein Notgroschen?",
             "points": 100,
-            "correctAnswer": "Dein Fahrrad geht kaputt und du kannst die Reparatur aus einer Rücklage bezahlen.",
+            "correctAnswer": "Dein Fahrrad ist kaputt und du zahlst die Reparatur aus deiner Rücklage.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Du planst schon lange einen teureren Wunsch und sparst dafür.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Du siehst ein Spiel im Angebot und willst es spontan kaufen.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Du möchtest dein Geld möglichst schnell vermehren.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Der Notgroschen ist für unerwartete Notfälle da, nicht für geplante Wünsche oder Schnäppchen."
           },
           {
             "id": "q_notgroschen_003",
             "level": "understand",
-            "question": "Warum ist „Notgroschen“ für Finanzbildung wichtig?",
+            "question": "Warum ist ein Notgroschen kein nutzloses Geld?",
             "points": 120,
-            "correctAnswer": "Einen Notgroschen als finanziellen Puffer für unerwartete Ausgaben verstehen.",
+            "correctAnswer": "Weil seine Aufgabe das Bereitliegen ist und er teure Notlösungen wie geliehenes Geld erspart.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil man ihn sowieso jeden Monat komplett ausgibt.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil er heimlich Zinsen bringt, die alles andere schlagen.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil Rücklagen grundsätzlich verboten sind.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Einen Notgroschen als finanziellen Puffer für unerwartete Ausgaben verstehen."
+            "explanationAfterAnswer": "Der Wert des Notgroschens liegt in der Sicherheit: Er verhindert, dass ein Notfall dich in Schulden treibt."
           },
           {
             "id": "q_notgroschen_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Deine wichtigen monatlichen Ausgaben betragen 40 Euro. Du möchtest einen Notgroschen für 3 Monate. Wie hoch sollte er sein?",
             "points": 150,
-            "correctAnswer": "Die passenden Werte einsetzen, sauber rechnen und das Ergebnis im Kontext prüfen.",
+            "correctAnswer": "120 Euro, denn 40 Euro mal 3 Monate ergeben 120 Euro.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "43 Euro, denn man addiert 40 und 3.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "13 Euro, denn man teilt 40 durch 3.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "40 Euro, denn ein Monat reicht immer aus.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "Notgroschen-Ziel = monatliche wichtige Ausgaben mal Anzahl der Monate, hier 40 mal 3 gleich 120 Euro."
           },
           {
             "id": "q_notgroschen_005",
             "level": "master",
-            "question": "Welche Aussage zu „Notgroschen“ stimmt am besten?",
+            "question": "Welche Aussage über den Notgroschen ist am genauesten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Er sollte verfügbar auf einem Tagesgeldkonto liegen, nicht in schwankenden Aktien, weil er im Ernstfall sofort und ohne Verlustrisiko bereitstehen muss.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Man legt ihn am besten in Aktien an, damit er möglichst stark wächst.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Je größer der Notgroschen, desto besser, deshalb sollte man alles Geld dort horten.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Ein Notgroschen ist nur für sehr reiche Menschen sinnvoll.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Verfügbarkeit schlägt Rendite: Der Notgroschen muss im Notfall sofort da sein, deshalb kein Kursrisiko."
           }
         ],
         "calculationTemplates": [
@@ -1637,21 +1637,21 @@
               "ausgaben - monate",
               "ausgaben / monate"
             ],
-            "explanationTemplate": "Notgroschen-Ziel = monatliche wichtige Ausgaben mal Anzahl der Monate.",
+            "explanationTemplate": "Multipliziere deine monatlichen wichtigen Ausgaben mit der Anzahl der Monate, die der Notgroschen abdecken soll.",
             "unit": "Euro"
           }
         ],
         "teacherSupport": {
-          "competenceGoal": "Einen Notgroschen als finanziellen Puffer für unerwartete Ausgaben verstehen.",
-          "typicalMisconception": "Ein Notgroschen ist Geld, das ungenutzt herumliegt.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Ein Notgroschen ist Geld, das ungenutzt herumliegt.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Notgroschen“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "competenceGoal": "Den Notgroschen als verfügbaren Puffer für unerwartete Ausgaben verstehen und seine Höhe abschätzen.",
+          "typicalMisconception": "Ein Notgroschen ist totes Geld, das nur ungenutzt herumliegt.",
+          "discussionPrompt": "Was würde bei einer plötzlichen teuren Reparatur passieren, wenn niemand eine Rücklage hätte?",
+          "classroomActivity": "Die Lernenden schätzen ihre wichtigen monatlichen Ausgaben, wählen eine Zahl an Monaten und berechnen ihren persönlichen Notgroschen. Anschließend diskutieren Sie, warum das Geld verfügbar bleiben muss und nicht in Aktien gehört."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Notgroschen“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Notgroschen“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Erzählt von einer unerwarteten Ausgabe, die euch schon einmal getroffen hat, und überlegt, wie eine Rücklage geholfen hätte.",
+          "everydayExercise": "Legen Sie mit Ihrem Kind einen kleinen, konkreten Notgroschen fest (etwa für einen kaputten Gegenstand) und einen festen Ort dafür, an den es schnell herankommt."
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       }
     ]
   }

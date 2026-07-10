@@ -11,8 +11,8 @@
     "id": "tb_unternehmen_verstehen",
     "title": "Unternehmen verstehen",
     "unlockLevel": 6,
-    "goal": "Lernende verstehen Unternehmen als Systeme aus Kundennutzen, Umsatz, Kosten, Gewinn, Cashflow und Risiko.",
-    "pedagogicalIdea": "Vor Aktien muss verstanden werden, wie Unternehmen Wert schaffen, Geld verdienen und scheitern können.",
+    "goal": "Lernende verstehen, wie Unternehmen Wert schaffen und Geld verdienen: vom Kundennutzen über Umsatz, Kosten, Gewinn, Marge und Cashflow bis zu Vermögen, Schulden, Wettbewerb und den Gründen, warum Unternehmen scheitern können.",
+    "pedagogicalIdea": "Bevor man Aktien beurteilt, muss man begreifen, dass hinter jedem Anteil ein reales Geschäft steht, das Nutzen stiften, Kosten decken und im Wettbewerb bestehen muss – und das dabei auch scheitern kann. Die Kern-Fehlvorstellung „viel Umsatz = viel Gewinn“ wird durchgehend aufgelöst.",
     "modules": [
       {
         "id": "konzept_unternehmen",
@@ -28,8 +28,8 @@
           "coreIdea": "Ein Unternehmen bietet etwas an, das Kunden brauchen oder möchten, und erhält dafür Geld.",
           "everydayScenario": "Eine Bäckerei verkauft Brot und bezahlt aus den Einnahmen Zutaten, Miete und Löhne.",
           "misconception": "Ein Unternehmen ist einfach ein großes Gebäude mit vielen Mitarbeitenden.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Was ist ein Unternehmen?' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Was ist ein Unternehmen?' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "transferTask": "Suche dir ein Geschäft in deiner Nähe aus, das du kennst. Schreibe auf, was es anbietet, wer dafür zahlt und mindestens zwei Dinge, die es selbst bezahlen muss (zum Beispiel Ware oder Miete).",
+          "reflectionPrompt": "Ein Laden hat viele Kunden und ein schönes Gebäude. Warum reicht das noch nicht, um zu wissen, ob es dem Unternehmen gut geht?"
         },
         "glossaryTerms": [
           "Unternehmen",
@@ -47,139 +47,139 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Was ist ein Unternehmen?: Ein Unternehmen bietet etwas an, das Kunden brauchen oder möchten, und erhält dafür Geld. Beispiel: Eine Bäckerei verkauft Brot und bezahlt aus den Einnahmen Zutaten, Miete und Löhne. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Ein Unternehmen ist einfach ein großes Gebäude mit vielen Mitarbeitenden.“.",
-          "young_adults": "Was ist ein Unternehmen?: Ein Unternehmen bietet etwas an, das Kunden brauchen oder möchten, und erhält dafür Geld. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Eine Bäckerei verkauft Brot und bezahlt aus den Einnahmen Zutaten, Miete und Löhne.",
-          "parents_teachers": "Lernziel: Unternehmen als Organisationen verstehen, die Produkte oder Dienstleistungen anbieten. Didaktischer Fokus: Ein Unternehmen bietet etwas an, das Kunden brauchen oder möchten, und erhält dafür Geld. Typische Fehlvorstellung: „Ein Unternehmen ist einfach ein großes Gebäude mit vielen Mitarbeitenden.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Ein Unternehmen ist eine Gruppe von Menschen, die zusammen etwas herstellt oder anbietet, das andere brauchen oder gerne haben. Stell dir den Kiosk an deiner Schule vor: Er verkauft Brötchen und Getränke und bekommt dafür dein Geld. Aber dieses Geld gehört nicht komplett dem Kiosk – er muss davon die Ware einkaufen, den Strom für den Kühlschrank zahlen und die Leute, die dort arbeiten. Ein Unternehmen ist also nicht einfach ein Gebäude, sondern die Idee, wie man mit einem Angebot Geld verdient. Wichtig ist nicht, wie groß der Laden ist, sondern ob genug Leute das kaufen wollen.",
+          "young_adults": "Ein Unternehmen ist eine Organisation, die Produkte oder Dienstleistungen anbietet und dafür Geld einnimmt. Entscheidend ist nicht die Größe oder das Firmengebäude, sondern das Angebot: Löst es ein Problem, das genug Menschen bezahlen wollen? Aus den Einnahmen muss ein Unternehmen zuerst seine eigenen Kosten decken – Material, Miete, Löhne, Steuern. Erst was übrig bleibt, ist Gewinn. Wenn du später eine Aktie kaufst, kaufst du einen kleinen Anteil an genau so einem Unternehmen – nicht an einem Gebäude, sondern an dessen Fähigkeit, dauerhaft Wert zu schaffen.",
+          "parents_teachers": "Ziel ist, ein Unternehmen als Organisation zu begreifen, die durch ein Angebot Kundennutzen schafft und dafür Einnahmen erzielt, aus denen zuerst die eigenen Kosten gedeckt werden. Die verbreitete Fehlvorstellung „Unternehmen = großes Gebäude mit vielen Mitarbeitenden“ verwechselt Sichtbarkeit mit wirtschaftlicher Substanz. Greifen Sie das auf, indem Sie ein kleines Ein-Personen-Unternehmen (Nachhilfe, Foodtruck) einem leerstehenden Bürokomplex gegenüberstellen und fragen: Welches verdient Geld? So wird der Unterschied zwischen Fassade und Geschäftsidee erlebbar."
         },
         "questions": [
           {
             "id": "q_unternehmen_001",
             "level": "explain",
-            "question": "Was beschreibt „Was ist ein Unternehmen?“ am besten?",
+            "question": "Was macht eine Organisation zu einem Unternehmen?",
             "points": 100,
-            "correctAnswer": "Ein Unternehmen bietet etwas an, das Kunden brauchen oder möchten, und erhält dafür Geld.",
+            "correctAnswer": "Sie bietet ein Produkt oder eine Dienstleistung an und nimmt dafür Geld ein.",
             "distractors": [
               {
-                "text": "Ein Unternehmen ist einfach ein großes Gebäude mit vielen Mitarbeitenden.",
+                "text": "Sie besitzt ein großes Gebäude mit vielen Mitarbeitenden.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Sie hat einen bekannten Namen und viel Werbung.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Sie gehört immer dem Staat.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Ein Unternehmen bietet etwas an, das Kunden brauchen oder möchten, und erhält dafür Geld."
+            "explanationAfterAnswer": "Genau: Ein Unternehmen entsteht durch ein Angebot, für das Menschen zahlen – nicht durch seine Größe oder sein Gebäude."
           },
           {
             "id": "q_unternehmen_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Was ist ein Unternehmen?“?",
+            "question": "Welches Beispiel zeigt am besten, wie ein Unternehmen funktioniert?",
             "points": 100,
-            "correctAnswer": "Eine Bäckerei verkauft Brot und bezahlt aus den Einnahmen Zutaten, Miete und Löhne.",
+            "correctAnswer": "Eine Bäckerei verkauft Brot und bezahlt davon Zutaten, Miete und Löhne.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Eine Familie kocht abends für sich selbst zu Hause.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Ein Freund leiht dir sein Fahrrad, ohne etwas dafür zu verlangen.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Du sparst dein Taschengeld in einer Spardose.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Die Bäckerei nimmt Geld für ein Angebot ein und zahlt davon ihre Kosten – das ist der Kreislauf jedes Unternehmens."
           },
           {
             "id": "q_unternehmen_003",
             "level": "understand",
-            "question": "Warum ist „Was ist ein Unternehmen?“ für Finanzbildung wichtig?",
+            "question": "Warum sagt allein die Größe eines Firmengebäudes wenig darüber aus, ob ein Unternehmen erfolgreich ist?",
             "points": 120,
-            "correctAnswer": "Unternehmen als Organisationen verstehen, die Produkte oder Dienstleistungen anbieten.",
+            "correctAnswer": "Weil es darauf ankommt, ob genug Menschen das Angebot kaufen und ob nach den Kosten etwas übrig bleibt.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil große Gebäude immer teuer und damit ein Zeichen von Erfolg sind.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil erfolgreiche Unternehmen nie ein eigenes Gebäude haben.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil die Größe des Gebäudes gesetzlich vorgeschrieben ist.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Unternehmen als Organisationen verstehen, die Produkte oder Dienstleistungen anbieten."
+            "explanationAfterAnswer": "Erfolg zeigt sich am Angebot und am Ergebnis nach Kosten – ein teures Gebäude kann sogar eine Last sein."
           },
           {
             "id": "q_unternehmen_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Ein Foodtruck verkauft an einem Tag Burger für 400 Euro. Zutaten, Sprit und Standgebühr kosten 250 Euro. Was solltest du wissen, bevor du sagst, der Foodtruck sei ein tolles Geschäft?",
             "points": 150,
-            "correctAnswer": "Den Begriff verstehen, Beispiele erkennen und ihn von ähnlichen Begriffen abgrenzen.",
+            "correctAnswer": "Dass nur 150 Euro übrig bleiben und dass das nicht jeden Tag so sein muss.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "Dass der Foodtruck 400 Euro verdient hat und das reines Einkommen ist.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "Dass ein Foodtruck ohne festes Gebäude gar kein echtes Unternehmen ist.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "Dass die Kosten egal sind, solange überhaupt Umsatz da ist.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "Von 400 Euro Einnahmen bleiben nach 250 Euro Kosten nur 150 Euro – und Einnahmen schwanken von Tag zu Tag."
           },
           {
             "id": "q_unternehmen_005",
             "level": "master",
-            "question": "Welche Aussage zu „Was ist ein Unternehmen?“ stimmt am besten?",
+            "question": "Welche Aussage über Unternehmen ist am treffendsten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Ein Unternehmen ist eine Organisation, die aus einem Angebot dauerhaft mehr einnehmen will, als es ausgibt.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Ein Unternehmen ist erfolgreich, sobald es viele Menschen beschäftigt.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Ein Unternehmen ist vor allem an seiner Bekanntheit erkennbar.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Ein Unternehmen unterscheidet sich nicht von einem privaten Haushalt.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Kern eines Unternehmens ist die Absicht, aus einem Angebot dauerhaft Überschüsse zu erwirtschaften – Mitarbeiterzahl und Bekanntheit sind nur Begleiterscheinungen."
           }
         ],
         "calculationTemplates": [],
         "teacherSupport": {
-          "competenceGoal": "Unternehmen als Organisationen verstehen, die Produkte oder Dienstleistungen anbieten.",
+          "competenceGoal": "Unternehmen als Organisationen verstehen, die durch ein Angebot Kundennutzen schaffen und daraus ihre Kosten decken.",
           "typicalMisconception": "Ein Unternehmen ist einfach ein großes Gebäude mit vielen Mitarbeitenden.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Ein Unternehmen ist einfach ein großes Gebäude mit vielen Mitarbeitenden.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Was ist ein Unternehmen?“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "discussionPrompt": "Ist ein Nachhilfe-Schüler, der Geld fürs Erklären nimmt, schon ein Unternehmen? Wo ist die Grenze zwischen einem Gefallen und einem Geschäft?",
+          "classroomActivity": "Die Klasse gründet in Kleingruppen ein Fantasie-Unternehmen (Angebot, Kunden, drei Kostenpositionen) und stellt es in 60 Sekunden vor. Die anderen prüfen: Wer zahlt, und wofür geht das Geld wieder weg?"
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Was ist ein Unternehmen?“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Was ist ein Unternehmen?“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Zeigen Sie beim nächsten Einkauf auf einen Laden und fragen Sie Ihr Kind: Was verdient dieser Laden an uns – und was muss er wohl selbst davon bezahlen?",
+          "everydayExercise": "Rechnen Sie gemeinsam an einem Verkaufsstand (Eisdiele, Bäcker) grob durch, was ein Produkt kostet und was davon Kosten sein könnten. So wird sichtbar, dass Einnahmen nicht gleich Gewinn sind."
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_problem_loesen",
@@ -194,8 +194,8 @@
           "coreIdea": "Ein Unternehmen ist stärker, wenn Menschen sein Angebot wirklich brauchen oder gerne nutzen.",
           "everydayScenario": "Ein Fahrradladen hilft Menschen, mobil zu bleiben oder ein kaputtes Fahrrad zu reparieren.",
           "misconception": "Ein Unternehmen ist erfolgreich, wenn es einfach nur viel Werbung macht.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Welches Problem löst ein Unternehmen?' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Welches Problem löst ein Unternehmen?' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "transferTask": "Denke an eine App oder ein Produkt, das du oft nutzt. Schreibe in einem Satz auf, welches Problem es für dich löst – und ob du auch ohne es klarkämst.",
+          "reflectionPrompt": "Warum kann ein Produkt mit viel Werbung trotzdem scheitern, wenn es kein echtes Problem der Kunden löst?"
         },
         "glossaryTerms": [
           "Problem",
@@ -211,139 +211,139 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Welches Problem löst ein Unternehmen?: Ein Unternehmen ist stärker, wenn Menschen sein Angebot wirklich brauchen oder gerne nutzen. Beispiel: Ein Fahrradladen hilft Menschen, mobil zu bleiben oder ein kaputtes Fahrrad zu reparieren. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Ein Unternehmen ist erfolgreich, wenn es einfach nur viel Werbung macht.“.",
-          "young_adults": "Welches Problem löst ein Unternehmen?: Ein Unternehmen ist stärker, wenn Menschen sein Angebot wirklich brauchen oder gerne nutzen. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Ein Fahrradladen hilft Menschen, mobil zu bleiben oder ein kaputtes Fahrrad zu reparieren.",
-          "parents_teachers": "Lernziel: Kundennutzen und Problem-Lösung als Kern von Unternehmen verstehen. Didaktischer Fokus: Ein Unternehmen ist stärker, wenn Menschen sein Angebot wirklich brauchen oder gerne nutzen. Typische Fehlvorstellung: „Ein Unternehmen ist erfolgreich, wenn es einfach nur viel Werbung macht.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Jedes gute Unternehmen beantwortet die Frage: Welches Problem löse ich für meine Kunden? Ein Fahrradladen löst zum Beispiel das Problem, dass dein platter Reifen dich nicht mehr zur Schule bringt. Wenn ein Angebot ein echtes Problem löst oder richtig Spaß macht, kommen die Kunden von allein wieder. Werbung kann Leute neugierig machen, aber wenn das Produkt schlecht ist, kaufen die Kunden es kein zweites Mal. Frag dich bei Dingen, die du kaufst: Brauche ich das wirklich, oder gefällt mir nur die Werbung? Diese Frage schützt dich vor Fehlkäufen.",
+          "young_adults": "Der Ausgangspunkt jedes tragfähigen Geschäfts ist ein Kundenproblem, für dessen Lösung Menschen freiwillig zahlen. Ein Fahrradladen verkauft nicht „Fahrräder“, sondern Mobilität und die schnelle Reparatur. Werbung kann Aufmerksamkeit erzeugen, ersetzt aber keinen echten Nutzen: Ein Produkt, das kein Problem löst, verliert seine Kunden, sobald der erste Reiz weg ist. Das ist auch für dich als Anleger relevant – ein Unternehmen mit klarem, dauerhaftem Kundennutzen steht meist stabiler da als eines, das vor allem durch Marketing auffällt.",
+          "parents_teachers": "Kern der Einheit ist der Kundennutzen: Ein Unternehmen ist umso robuster, je klarer es ein echtes Problem seiner Zielgruppe löst. Die Fehlvorstellung „viel Werbung = Erfolg“ verwechselt Aufmerksamkeit mit Nutzen. Machen Sie den Unterschied greifbar, indem Sie ein stark beworbenes Produkt, das floppte, einem unauffälligen Produkt gegenüberstellen, das jeder täglich nutzt. Leitfrage: Wofür würden Kunden auch ohne Werbung wiederkommen?"
         },
         "questions": [
           {
             "id": "q_problem_loesen_001",
             "level": "explain",
-            "question": "Was beschreibt „Welches Problem löst ein Unternehmen?“ am besten?",
+            "question": "Was ist der wichtigste Grund, warum Kunden bei einem Unternehmen kaufen?",
             "points": 100,
-            "correctAnswer": "Ein Unternehmen ist stärker, wenn Menschen sein Angebot wirklich brauchen oder gerne nutzen.",
+            "correctAnswer": "Weil das Angebot ein Problem löst oder einen echten Nutzen bietet.",
             "distractors": [
               {
-                "text": "Ein Unternehmen ist erfolgreich, wenn es einfach nur viel Werbung macht.",
+                "text": "Weil das Unternehmen besonders viel Werbung macht.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Weil das Unternehmen schon lange existiert.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Weil das Unternehmen ein großes Firmengebäude hat.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Ein Unternehmen ist stärker, wenn Menschen sein Angebot wirklich brauchen oder gerne nutzen."
+            "explanationAfterAnswer": "Richtig: Dauerhaft kaufen Kunden vor allem dann, wenn ein Angebot ihnen wirklich hilft."
           },
           {
             "id": "q_problem_loesen_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Welches Problem löst ein Unternehmen?“?",
+            "question": "Welches Beispiel zeigt am besten, dass ein Unternehmen ein echtes Problem löst?",
             "points": 100,
-            "correctAnswer": "Ein Fahrradladen hilft Menschen, mobil zu bleiben oder ein kaputtes Fahrrad zu reparieren.",
+            "correctAnswer": "Ein Fahrradladen repariert schnell einen platten Reifen, damit jemand wieder mobil ist.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Eine Firma hat einen sehr bekannten Namen, aber unzufriedene Kunden.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Ein Laden hängt bunte Plakate auf, verkauft aber kaum etwas.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Ein Geschäft ist innen besonders schön eingerichtet.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Der Fahrradladen löst ein konkretes Problem – deshalb kommen die Kunden auch ohne Plakate wieder."
           },
           {
             "id": "q_problem_loesen_003",
             "level": "understand",
-            "question": "Warum ist „Welches Problem löst ein Unternehmen?“ für Finanzbildung wichtig?",
+            "question": "Warum kann viel Werbung ein schwaches Produkt nicht dauerhaft retten?",
             "points": 120,
-            "correctAnswer": "Kundennutzen und Problem-Lösung als Kern von Unternehmen verstehen.",
+            "correctAnswer": "Weil Kunden ein Produkt, das ihnen keinen Nutzen bringt, nach dem ersten Mal nicht wieder kaufen.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil gute Werbung automatisch aus jedem Produkt ein gutes macht.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil Werbung nur bei großen Unternehmen wirkt.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil Werbung immer verboten ist, wenn ein Produkt schlecht ist.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Kundennutzen und Problem-Lösung als Kern von Unternehmen verstehen."
+            "explanationAfterAnswer": "Werbung bringt Leute einmal zum Ausprobieren – wiederkommen tun sie nur bei echtem Nutzen."
           },
           {
             "id": "q_problem_loesen_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Zwei neue Getränke starten gleichzeitig. Getränk A hat riesige Werbung, schmeckt aber vielen nicht. Getränk B hat kaum Werbung, wird aber ständig weiterempfohlen. Welches steht langfristig wahrscheinlich stärker da?",
             "points": 150,
-            "correctAnswer": "Innehalten, Informationen prüfen und erst dann passend zum eigenen Ziel handeln.",
+            "correctAnswer": "Getränk B, weil zufriedene Kunden es freiwillig weiterempfehlen und wieder kaufen.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "Getränk A, weil Werbung immer den Ausschlag gibt.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "Beide gleich, weil nur der Preis über Erfolg entscheidet.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "Getränk A, weil das mit dem besseren Geschmack keine Rolle spielt.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "Weiterempfehlungen zufriedener Kunden sind ein starkes Zeichen für echten Nutzen – das trägt länger als teure Werbung."
           },
           {
             "id": "q_problem_loesen_005",
             "level": "master",
-            "question": "Welche Aussage zu „Welches Problem löst ein Unternehmen?“ stimmt am besten?",
+            "question": "Welche Aussage über Kundennutzen und Werbung ist am treffendsten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Werbung kann Aufmerksamkeit schaffen, aber dauerhaften Erfolg trägt nur ein echter Kundennutzen.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Werbung ist überflüssig, ein gutes Produkt verkauft sich immer von selbst.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Nur das Produkt mit dem größten Werbebudget setzt sich durch.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Kundennutzen und Werbung haben nichts miteinander zu tun.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Beides wirkt zusammen – aber ohne echten Nutzen verpufft selbst die beste Werbung."
           }
         ],
         "calculationTemplates": [],
         "teacherSupport": {
-          "competenceGoal": "Kundennutzen und Problem-Lösung als Kern von Unternehmen verstehen.",
+          "competenceGoal": "Kundennutzen und Problemlösung als tragenden Kern eines Unternehmens erkennen und von reiner Werbewirkung unterscheiden.",
           "typicalMisconception": "Ein Unternehmen ist erfolgreich, wenn es einfach nur viel Werbung macht.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Ein Unternehmen ist erfolgreich, wenn es einfach nur viel Werbung macht.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Welches Problem löst ein Unternehmen?“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "discussionPrompt": "Nennt ein Produkt, das ihr wegen Werbung gekauft und dann nie wieder angerührt habt. Was hat gefehlt?",
+          "classroomActivity": "Jede Gruppe erfindet ein Produkt und formuliert das Problem, das es löst, in einem Satz („Dieses Produkt hilft ... damit ...“). Die Klasse stimmt ab, welche Nutzenversprechen sie überzeugen – und warum."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Welches Problem löst ein Unternehmen?“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Welches Problem löst ein Unternehmen?“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Fragen Sie bei einem Wunsch Ihres Kindes: Welches Problem würde dieses Produkt für dich lösen – oder gefällt dir vor allem die Werbung dazu?",
+          "everydayExercise": "Schauen Sie gemeinsam eine Werbung an und überlegen Sie: Was verspricht sie, und hält das Produkt das im Alltag wirklich? So wird Werbekritik ganz nebenbei geübt."
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_produkt_dienstleistung_kunde",
@@ -358,8 +358,8 @@
           "coreIdea": "Unternehmen können Dinge verkaufen, Leistungen erbringen oder beides kombinieren.",
           "everydayScenario": "Ein Buchladen verkauft Bücher; ein Friseur erbringt eine Dienstleistung.",
           "misconception": "Nur Dinge, die man anfassen kann, sind echte Produkte von Unternehmen.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Produkt, Dienstleistung und Kunde' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Produkt, Dienstleistung und Kunde' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "transferTask": "Wähle eine kostenlose App, die du nutzt. Überlege: Wer ist der Nutzer, und wer zahlt in Wirklichkeit dafür, dass die App gratis ist?",
+          "reflectionPrompt": "Bei einer Gratis-App bist du oft nicht der zahlende Kunde. Was bedeutet das für dich und deine Daten?"
         },
         "glossaryTerms": [
           "Produkt",
@@ -377,139 +377,139 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Produkt, Dienstleistung und Kunde: Unternehmen können Dinge verkaufen, Leistungen erbringen oder beides kombinieren. Beispiel: Ein Buchladen verkauft Bücher; ein Friseur erbringt eine Dienstleistung. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Nur Dinge, die man anfassen kann, sind echte Produkte von Unternehmen.“.",
-          "young_adults": "Produkt, Dienstleistung und Kunde: Unternehmen können Dinge verkaufen, Leistungen erbringen oder beides kombinieren. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Ein Buchladen verkauft Bücher; ein Friseur erbringt eine Dienstleistung.",
-          "parents_teachers": "Lernziel: Produkt, Dienstleistung, Nutzer, Kunde und Zahler unterscheiden. Didaktischer Fokus: Unternehmen können Dinge verkaufen, Leistungen erbringen oder beides kombinieren. Typische Fehlvorstellung: „Nur Dinge, die man anfassen kann, sind echte Produkte von Unternehmen.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Unternehmen verkaufen nicht immer Dinge zum Anfassen. Ein Produkt ist etwas Gegenständliches wie ein Buch oder ein Fahrrad. Eine Dienstleistung ist eine Arbeit, die jemand für dich erledigt – zum Beispiel dir die Haare schneiden oder deinen Computer reparieren. Auch etwas Digitales wie ein Spiel oder eine App ist ein Angebot, für das man zahlen kann. Wichtig ist noch: Nutzer und Zahler sind nicht immer dieselbe Person. Bei einer Gratis-App bist du der Nutzer, aber Werbekunden zahlen dafür – und dann bist du eher das Angebot als der Kunde.",
+          "young_adults": "Unternehmen bieten Produkte (physisch oder digital), Dienstleistungen oder Mischformen an. Entscheidend fürs Verständnis eines Geschäfts ist, drei Rollen zu trennen: Nutzer (wer benutzt es), Kunde (wer die Entscheidung trifft) und Zahler (wer bezahlt). Bei kostenlosen Diensten fallen diese Rollen auseinander – du nutzt die Plattform, aber Werbetreibende zahlen, weil du und deine Aufmerksamkeit das eigentliche Produkt sind. Wer das durchschaut, versteht Abo-, Freemium- und Werbemodelle und trifft bewusstere Entscheidungen, wo er seine Daten und sein Geld lässt.",
+          "parents_teachers": "Die Einheit unterscheidet Produkt und Dienstleistung sowie die Rollen Nutzer, Kunde und Zahler. Die Fehlvorstellung „nur Anfassbares ist ein echtes Produkt“ blendet Dienstleistungen und digitale Güter aus. Besonders lehrreich ist das Auseinanderfallen von Nutzer und Zahler bei Gratis-Diensten. Arbeiten Sie mit der Frage „Wenn das Produkt kostenlos ist, was ist dann die Ware?“, um Medien- und Finanzkompetenz zu verbinden."
         },
         "questions": [
           {
             "id": "q_produkt_dienstleistung_kunde_001",
             "level": "explain",
-            "question": "Was beschreibt „Produkt, Dienstleistung und Kunde“ am besten?",
+            "question": "Was ist der Unterschied zwischen einem Produkt und einer Dienstleistung?",
             "points": 100,
-            "correctAnswer": "Unternehmen können Dinge verkaufen, Leistungen erbringen oder beides kombinieren.",
+            "correctAnswer": "Ein Produkt ist eine Sache, eine Dienstleistung ist eine Arbeit, die jemand für dich erledigt.",
             "distractors": [
               {
-                "text": "Nur Dinge, die man anfassen kann, sind echte Produkte von Unternehmen.",
+                "text": "Nur Produkte zählen, Dienstleistungen sind keine echten Angebote.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Ein Produkt kostet Geld, eine Dienstleistung ist immer kostenlos.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Es gibt keinen Unterschied, beide Wörter meinen dasselbe.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Unternehmen können Dinge verkaufen, Leistungen erbringen oder beides kombinieren."
+            "explanationAfterAnswer": "Genau: Ein Produkt ist eine Sache, eine Dienstleistung eine erbrachte Leistung – beides kann Geld kosten."
           },
           {
             "id": "q_produkt_dienstleistung_kunde_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Produkt, Dienstleistung und Kunde“?",
+            "question": "Welches Angebot ist eine Dienstleistung und kein Produkt?",
             "points": 100,
-            "correctAnswer": "Ein Buchladen verkauft Bücher; ein Friseur erbringt eine Dienstleistung.",
+            "correctAnswer": "Ein Friseur schneidet dir die Haare.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Ein Kiosk verkauft dir ein Getränk.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Ein Buchladen verkauft dir ein Buch.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Ein Laden verkauft dir ein Fahrrad.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Der Haarschnitt ist eine Leistung, die für dich erbracht wird – du nimmst kein Ding mit nach Hause."
           },
           {
             "id": "q_produkt_dienstleistung_kunde_003",
             "level": "understand",
-            "question": "Warum ist „Produkt, Dienstleistung und Kunde“ für Finanzbildung wichtig?",
+            "question": "Warum sind bei einer kostenlosen App Nutzer und Zahler oft nicht dieselbe Person?",
             "points": 120,
-            "correctAnswer": "Produkt, Dienstleistung, Nutzer, Kunde und Zahler unterscheiden.",
+            "correctAnswer": "Weil die App durch Werbung finanziert wird und die Werbekunden für die Aufmerksamkeit der Nutzer zahlen.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil kostenlose Apps gar kein Geld einnehmen.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil die Entwickler die App aus reiner Freundlichkeit anbieten.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil der Staat alle kostenlosen Apps bezahlt.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Produkt, Dienstleistung, Nutzer, Kunde und Zahler unterscheiden."
+            "explanationAfterAnswer": "Bei Gratis-Diensten sind meist Werbetreibende die Zahler – die Aufmerksamkeit der Nutzer ist das eigentliche Produkt."
           },
           {
             "id": "q_produkt_dienstleistung_kunde_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Ein Streaming-Dienst kostet 10 Euro im Monat und zeigt keine Werbung. Wer ist hier der zahlende Kunde?",
             "points": 150,
-            "correctAnswer": "Den Begriff verstehen, Beispiele erkennen und ihn von ähnlichen Begriffen abgrenzen.",
+            "correctAnswer": "Die Nutzerin selbst, weil sie mit ihrem Abo direkt für den Dienst bezahlt.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "Werbekunden, weil bei jedem Dienst immer die Werbung zahlt.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "Niemand, weil digitale Angebote kein echtes Geld kosten.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "Der Staat, weil er Streaming subventioniert.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "Beim Bezahl-Abo ohne Werbung ist die Nutzerin auch der Zahler – deshalb ist sie hier die echte Kundin."
           },
           {
             "id": "q_produkt_dienstleistung_kunde_005",
             "level": "master",
-            "question": "Welche Aussage zu „Produkt, Dienstleistung und Kunde“ stimmt am besten?",
+            "question": "Welche Aussage über Produkte, Dienstleistungen und Zahler ist am treffendsten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Angebote können Sachen, Leistungen oder digitale Güter sein, und Nutzer, Kunde und Zahler sind nicht immer dieselbe Person.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Nur anfassbare Dinge sind echte Angebote von Unternehmen.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Der Nutzer eines Angebots ist immer auch derjenige, der dafür zahlt.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Digitale Angebote lassen sich nie zu Geld machen.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Wer Angebotsarten und die Rollen Nutzer/Kunde/Zahler trennt, versteht Geschäftsmodelle deutlich klarer."
           }
         ],
         "calculationTemplates": [],
         "teacherSupport": {
-          "competenceGoal": "Produkt, Dienstleistung, Nutzer, Kunde und Zahler unterscheiden.",
+          "competenceGoal": "Produkte, Dienstleistungen und digitale Güter unterscheiden und die Rollen Nutzer, Kunde und Zahler trennen.",
           "typicalMisconception": "Nur Dinge, die man anfassen kann, sind echte Produkte von Unternehmen.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Nur Dinge, die man anfassen kann, sind echte Produkte von Unternehmen.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Produkt, Dienstleistung und Kunde“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "discussionPrompt": "Wenn eine App kostenlos ist – was verkauft das Unternehmen dann, und an wen?",
+          "classroomActivity": "Die Klasse sortiert Beispielkarten (Haarschnitt, Buch, Gratis-Spiel, Streaming-Abo, Handyvertrag) in Produkt / Dienstleistung / digital und markiert je Nutzer und Zahler. Streitfälle werden gemeinsam diskutiert."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Produkt, Dienstleistung und Kunde“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Produkt, Dienstleistung und Kunde“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Fragen Sie bei einer kostenlosen App Ihres Kindes: Wenn du nichts zahlst – wie verdient die App dann wohl ihr Geld?",
+          "everydayExercise": "Gehen Sie einen Beleg durch und markieren Sie gemeinsam, was ein Produkt und was eine Dienstleistung war (z. B. Reparatur, Lieferung, Ware)."
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_geschaeftsmodell",
@@ -524,8 +524,8 @@
           "coreIdea": "Ein Geschäftsmodell zeigt, wie ein Unternehmen Nutzen schafft und Geld verdient.",
           "everydayScenario": "Ein Fitnessstudio verdient Geld durch monatliche Mitgliedsbeiträge.",
           "misconception": "Ein Geschäftsmodell bedeutet nur: Das Unternehmen verkauft irgendetwas.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Geschäftsmodell – Wer zahlt wofür?' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Geschäftsmodell – Wer zahlt wofür?' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "transferTask": "Nimm ein Unternehmen, das du kennst, und beantworte drei Fragen: Was bietet es an? Wer zahlt? Wie oft fließt das Geld (einmalig, monatlich, pro Nutzung)?",
+          "reflectionPrompt": "Warum ist ein Abo-Modell mit monatlichen Zahlungen für ein Unternehmen oft planbarer als viele einzelne Verkäufe?"
         },
         "glossaryTerms": [
           "Geschäftsmodell",
@@ -543,139 +543,139 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Geschäftsmodell – Wer zahlt wofür?: Ein Geschäftsmodell zeigt, wie ein Unternehmen Nutzen schafft und Geld verdient. Beispiel: Ein Fitnessstudio verdient Geld durch monatliche Mitgliedsbeiträge. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Ein Geschäftsmodell bedeutet nur: Das Unternehmen verkauft irgendetwas.“.",
-          "young_adults": "Geschäftsmodell – Wer zahlt wofür?: Ein Geschäftsmodell zeigt, wie ein Unternehmen Nutzen schafft und Geld verdient. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Ein Fitnessstudio verdient Geld durch monatliche Mitgliedsbeiträge.",
-          "parents_teachers": "Lernziel: Geschäftsmodelle als Logik von Nutzen, Kunden, Preis und Kosten verstehen. Didaktischer Fokus: Ein Geschäftsmodell zeigt, wie ein Unternehmen Nutzen schafft und Geld verdient. Typische Fehlvorstellung: „Ein Geschäftsmodell bedeutet nur: Das Unternehmen verkauft irgendetwas.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Ein Geschäftsmodell ist der Plan, wie ein Unternehmen mit seinem Angebot Geld verdient. Es beantwortet: Wer sind die Kunden, was bekommen sie und wie oft zahlen sie? Ein Fitnessstudio zum Beispiel verkauft dir nicht einen einzelnen Besuch, sondern eine Mitgliedschaft, für die du jeden Monat zahlst. Ein Spiel kann dagegen gratis sein und nur mit kleinen Extras Geld verdienen. Es gibt viele solcher Modelle: einmal kaufen, monatlich abonnieren, kostenlos plus Werbung. Wenn du das Modell verstehst, erkennst du, wie ein Unternehmen wirklich an sein Geld kommt.",
+          "young_adults": "Ein Geschäftsmodell beschreibt die Logik, mit der ein Unternehmen Wert schafft und in Einnahmen verwandelt: Wer ist die Zielgruppe, welches Nutzenversprechen gibt es, wie wird abgerechnet und welche Kosten fallen an? Typische Muster sind Einmalverkauf, Abo, Freemium (gratis Basis, bezahlte Extras), Werbung und Provision. Abo-Modelle liefern planbare, wiederkehrende Umsätze; Werbemodelle brauchen sehr viele Nutzer. Wer das Modell durchschaut, kann besser einschätzen, wie stabil und wie profitabel ein Unternehmen verdient – nützlich, bevor man es später als Anlage beurteilt.",
+          "parents_teachers": "Ziel ist, ein Geschäftsmodell als Zusammenspiel von Zielgruppe, Nutzenversprechen, Erlösform und Kostenstruktur zu verstehen – nicht bloß als „verkauft etwas“. Die Fehlvorstellung reduziert das Modell auf den bloßen Verkaufsakt und übersieht, wer wofür wie oft zahlt. Kontrastieren Sie Einmalverkauf, Abo, Freemium und Werbung und lassen Sie die Lernenden Vor- und Nachteile für die Planbarkeit der Einnahmen abwägen."
         },
         "questions": [
           {
             "id": "q_geschaeftsmodell_001",
             "level": "explain",
-            "question": "Was beschreibt „Geschäftsmodell – Wer zahlt wofür?“ am besten?",
+            "question": "Was beschreibt ein Geschäftsmodell?",
             "points": 100,
-            "correctAnswer": "Ein Geschäftsmodell zeigt, wie ein Unternehmen Nutzen schafft und Geld verdient.",
+            "correctAnswer": "Den Plan, wie ein Unternehmen Nutzen schafft und damit Geld verdient.",
             "distractors": [
               {
-                "text": "Ein Geschäftsmodell bedeutet nur: Das Unternehmen verkauft irgendetwas.",
+                "text": "Nur die Tatsache, dass ein Unternehmen irgendetwas verkauft.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Die Anzahl der Werbeplakate in der Stadt.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Die Größe des Firmengebäudes.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Ein Geschäftsmodell zeigt, wie ein Unternehmen Nutzen schafft und Geld verdient."
+            "explanationAfterAnswer": "Richtig: Das Geschäftsmodell erklärt, wer wofür zahlt und wie das Unternehmen dabei verdient."
           },
           {
             "id": "q_geschaeftsmodell_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Geschäftsmodell – Wer zahlt wofür?“?",
+            "question": "Welches Beispiel beschreibt ein Abo-Geschäftsmodell?",
             "points": 100,
-            "correctAnswer": "Ein Fitnessstudio verdient Geld durch monatliche Mitgliedsbeiträge.",
+            "correctAnswer": "Ein Fitnessstudio nimmt jeden Monat einen festen Mitgliedsbeitrag.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Ein Flohmarktstand verkauft gebrauchte Sachen für einen Tag.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Ein Kiosk verkauft dir einmalig ein Getränk.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Ein Freund schenkt dir sein altes Handy.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Beim Abo zahlst du regelmäßig – hier jeden Monat – und bekommst dafür fortlaufend Zugang."
           },
           {
             "id": "q_geschaeftsmodell_003",
             "level": "understand",
-            "question": "Warum ist „Geschäftsmodell – Wer zahlt wofür?“ für Finanzbildung wichtig?",
+            "question": "Warum liefert ein Abo-Modell einem Unternehmen oft planbarere Einnahmen als lauter einzelne Verkäufe?",
             "points": 120,
-            "correctAnswer": "Geschäftsmodelle als Logik von Nutzen, Kunden, Preis und Kosten verstehen.",
+            "correctAnswer": "Weil viele Kunden regelmäßig zahlen und das Unternehmen so ungefähr weiß, was jeden Monat hereinkommt.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil Abo-Kunden immer mehr zahlen als andere Kunden.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil man bei Abos keine Kosten mehr hat.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil Abos gesetzlich abgesichert sind.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Geschäftsmodelle als Logik von Nutzen, Kunden, Preis und Kosten verstehen."
+            "explanationAfterAnswer": "Wiederkehrende Zahlungen machen die Einnahmen vorhersehbarer – das erleichtert die Planung."
           },
           {
             "id": "q_geschaeftsmodell_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Ein neues Spiel ist gratis, verkauft aber Extra-Inhalte. Was muss dieses Geschäftsmodell brauchen, um zu funktionieren?",
             "points": 150,
-            "correctAnswer": "Innehalten, Informationen prüfen und erst dann passend zum eigenen Ziel handeln.",
+            "correctAnswer": "Sehr viele Nutzer, von denen zumindest ein Teil freiwillig für Extras zahlt.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "Möglichst wenige Nutzer, damit die Server günstig bleiben.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "Dass niemand Geld ausgibt, damit alle zufrieden sind.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "Ein großes Firmengebäude, sonst geht es nicht.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "Freemium lebt von Reichweite: Nur wenn viele mitspielen, reichen die zahlenden Nutzer, um alle Kosten zu decken."
           },
           {
             "id": "q_geschaeftsmodell_005",
             "level": "master",
-            "question": "Welche Aussage zu „Geschäftsmodell – Wer zahlt wofür?“ stimmt am besten?",
+            "question": "Welche Aussage über Geschäftsmodelle ist am treffendsten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Verschiedene Modelle wie Einmalverkauf, Abo, Freemium oder Werbung bestimmen, wer wofür wie oft zahlt und wie planbar die Einnahmen sind.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Alle Geschäftsmodelle sind gleich, weil am Ende immer verkauft wird.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Nur das Abo-Modell ist ein echtes Geschäftsmodell.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Das Geschäftsmodell sagt nichts über die Einnahmen aus.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Das gewählte Modell prägt, wie und wie verlässlich ein Unternehmen verdient – deshalb lohnt der genaue Blick darauf."
           }
         ],
         "calculationTemplates": [],
         "teacherSupport": {
-          "competenceGoal": "Geschäftsmodelle als Logik von Nutzen, Kunden, Preis und Kosten verstehen.",
+          "competenceGoal": "Geschäftsmodelle als Zusammenspiel von Zielgruppe, Nutzenversprechen, Erlösform und Kosten verstehen und vergleichen.",
           "typicalMisconception": "Ein Geschäftsmodell bedeutet nur: Das Unternehmen verkauft irgendetwas.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Ein Geschäftsmodell bedeutet nur: Das Unternehmen verkauft irgendetwas.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Geschäftsmodell – Wer zahlt wofür?“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "discussionPrompt": "Warum ist es für ein Unternehmen ein Unterschied, ob Kunden einmal 120 Euro zahlen oder zwölf Monate lang je 10 Euro?",
+          "classroomActivity": "Kleingruppen ziehen je eine Erlösform (Einmalverkauf, Abo, Freemium, Werbung) und entwickeln dazu ein passendes Fantasie-Unternehmen. Anschließend Vergleich: Welches Modell hat die planbarsten Einnahmen, welches das größte Risiko?"
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Geschäftsmodell – Wer zahlt wofür?“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Geschäftsmodell – Wer zahlt wofür?“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Gehen Sie gemeinsam Ihre Abos durch (Streaming, Musik, Spiele) und fragen Sie: Für welches zahlen wir monatlich, obwohl wir es kaum nutzen?",
+          "everydayExercise": "Wählen Sie ein Lieblingsprodukt Ihres Kindes und überlegen Sie zusammen, wie das Unternehmen damit Geld verdient – einmalig, im Abo oder über Werbung?"
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_umsatz",
@@ -690,8 +690,8 @@
           "coreIdea": "Umsatz ist nicht Gewinn; Umsatz zeigt nur, wie viel durch Verkäufe hereinkommt.",
           "everydayScenario": "Ein Kiosk verkauft 20 Getränke für je 3 Euro und macht 60 Euro Umsatz.",
           "misconception": "Hoher Umsatz bedeutet automatisch hoher Gewinn.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Was ist Umsatz?' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Was ist Umsatz?' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "transferTask": "Stell dir einen Waffelstand auf dem Schulfest vor. Du verkaufst 40 Waffeln zu je 2 Euro. Rechne den Umsatz aus und überlege, warum das noch nicht dein Verdienst ist.",
+          "reflectionPrompt": "Zwei Läden haben beide 1000 Euro Umsatz. Warum kann trotzdem einer Gewinn und der andere Verlust machen?"
         },
         "glossaryTerms": [
           "Umsatz",
@@ -709,125 +709,125 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Was ist Umsatz?: Umsatz ist nicht Gewinn; Umsatz zeigt nur, wie viel durch Verkäufe hereinkommt. Beispiel: Ein Kiosk verkauft 20 Getränke für je 3 Euro und macht 60 Euro Umsatz. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Hoher Umsatz bedeutet automatisch hoher Gewinn.“.",
-          "young_adults": "Was ist Umsatz?: Umsatz ist nicht Gewinn; Umsatz zeigt nur, wie viel durch Verkäufe hereinkommt. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Ein Kiosk verkauft 20 Getränke für je 3 Euro und macht 60 Euro Umsatz.",
-          "parents_teachers": "Lernziel: Umsatz als eingenommenes Geld aus Verkäufen vor Kosten verstehen. Didaktischer Fokus: Umsatz ist nicht Gewinn; Umsatz zeigt nur, wie viel durch Verkäufe hereinkommt. Typische Fehlvorstellung: „Hoher Umsatz bedeutet automatisch hoher Gewinn.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Umsatz ist das gesamte Geld, das durch Verkäufe hereinkommt – bevor irgendwelche Kosten abgezogen werden. Du rechnest ihn einfach aus: verkaufte Menge mal Preis. Wenn dein Waffelstand 40 Waffeln zu je 2 Euro verkauft, ist der Umsatz 80 Euro. Achtung: Das ist noch nicht dein Verdienst! Von den 80 Euro musst du erst Mehl, Eier und den Gasbrenner bezahlen. Umsatz sagt also nur, wie viel Geld hereinkommt – nicht, wie viel am Ende übrig bleibt. Deshalb ist „viel Umsatz“ noch lange kein „viel Gewinn“.",
+          "young_adults": "Umsatz (auch Erlös) ist die Summe aller Verkaufserlöse in einem Zeitraum, berechnet als Menge mal Preis, vor Abzug jeglicher Kosten. Er ist eine Bruttogröße und sagt für sich genommen nichts über die Profitabilität aus. Ein Unternehmen kann sehr viel Umsatz machen und trotzdem Verlust schreiben, wenn die Kosten höher sind. Genau das ist die häufigste Fehlvorstellung. Merke: Umsatz zeigt die Größe des Geschäfts, Gewinn zeigt, ob es sich lohnt – und das sind zwei verschiedene Dinge.",
+          "parents_teachers": "Umsatz ist als Menge mal Preis definiert und stellt eine Bruttogröße vor Kosten dar. Die zentrale Fehlvorstellung „hoher Umsatz = hoher Gewinn“ ist erfahrungsgemäß hartnäckig. Machen Sie sie sichtbar, indem Sie zwei Betriebe mit identischem Umsatz, aber unterschiedlicher Kostenstruktur vergleichen. Betonen Sie sprachlich sauber: Umsatz misst die Größe des Geschäfts, nicht seinen Erfolg."
         },
         "questions": [
           {
             "id": "q_umsatz_001",
             "level": "explain",
-            "question": "Was beschreibt „Was ist Umsatz?“ am besten?",
+            "question": "Was ist der Umsatz eines Unternehmens?",
             "points": 100,
-            "correctAnswer": "Umsatz ist nicht Gewinn; Umsatz zeigt nur, wie viel durch Verkäufe hereinkommt.",
+            "correctAnswer": "Das gesamte Geld aus Verkäufen, bevor Kosten abgezogen werden.",
             "distractors": [
               {
-                "text": "Hoher Umsatz bedeutet automatisch hoher Gewinn.",
+                "text": "Das Geld, das nach Abzug aller Kosten übrig bleibt.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Nur der Gewinn eines einzelnen verkauften Produkts.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Das Geld auf dem privaten Konto der Inhaberin.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Umsatz ist nicht Gewinn; Umsatz zeigt nur, wie viel durch Verkäufe hereinkommt."
+            "explanationAfterAnswer": "Richtig: Umsatz ist das Geld aus Verkäufen vor Kosten – nicht das, was am Ende übrig bleibt."
           },
           {
             "id": "q_umsatz_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Was ist Umsatz?“?",
+            "question": "Welche Rechnung beschreibt den Umsatz richtig?",
             "points": 100,
-            "correctAnswer": "Ein Kiosk verkauft 20 Getränke für je 3 Euro und macht 60 Euro Umsatz.",
+            "correctAnswer": "Ein Kiosk verkauft 20 Getränke zu je 3 Euro und macht 60 Euro Umsatz.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Ein Kiosk hat 60 Euro in der Kasse und das ist sein Gewinn.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Ein Kiosk verkauft 20 Getränke und macht deshalb 20 Euro Umsatz.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Ein Kiosk zahlt 60 Euro Miete und macht deshalb 60 Euro Umsatz.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Umsatz = Menge mal Preis: 20 Getränke mal 3 Euro ergibt 60 Euro."
           },
           {
             "id": "q_umsatz_003",
             "level": "understand",
-            "question": "Warum ist „Was ist Umsatz?“ für Finanzbildung wichtig?",
+            "question": "Warum ist hoher Umsatz nicht automatisch hoher Gewinn?",
             "points": 120,
-            "correctAnswer": "Umsatz als eingenommenes Geld aus Verkäufen vor Kosten verstehen.",
+            "correctAnswer": "Weil vom Umsatz noch alle Kosten bezahlt werden müssen und erst der Rest Gewinn ist.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil Umsatz und Gewinn genau dasselbe sind.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil Gewinn immer größer ist als der Umsatz.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil hoher Umsatz immer bedeutet, dass ein Fehler passiert ist.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Umsatz als eingenommenes Geld aus Verkäufen vor Kosten verstehen."
+            "explanationAfterAnswer": "Erst wenn man vom Umsatz die Kosten abzieht, sieht man, ob und wie viel Gewinn übrig bleibt."
           },
           {
             "id": "q_umsatz_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Ein Waffelstand verkauft 50 Waffeln zu je 2 Euro. Die Zutaten haben insgesamt 40 Euro gekostet. Was stimmt?",
             "points": 150,
-            "correctAnswer": "Die passenden Werte einsetzen, sauber rechnen und das Ergebnis im Kontext prüfen.",
+            "correctAnswer": "Der Umsatz ist 100 Euro, aber nach 40 Euro Kosten bleiben nur 60 Euro übrig.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "Der Umsatz und der Gewinn sind beide 100 Euro.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "Der Umsatz ist 60 Euro, weil man die Kosten gleich abzieht.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "Der Umsatz ist 40 Euro, so viel wie die Zutaten kosten.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "50 mal 2 Euro = 100 Euro Umsatz; erst danach werden die 40 Euro Kosten abgezogen und es bleiben 60 Euro."
           },
           {
             "id": "q_umsatz_005",
             "level": "master",
-            "question": "Welche Aussage zu „Was ist Umsatz?“ stimmt am besten?",
+            "question": "Welche Aussage über Umsatz ist am treffendsten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Umsatz zeigt die Größe des Geschäfts, sagt aber allein nichts darüber aus, ob es sich lohnt.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Umsatz ist immer ein sicheres Zeichen für ein erfolgreiches Unternehmen.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Umsatz und Gewinn bedeuten dasselbe und lassen sich austauschen.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Umsatz ist für die Beurteilung eines Unternehmens völlig bedeutungslos.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Umsatz misst die Dimension, Gewinn den Erfolg – erst beide zusammen ergeben ein Bild."
           }
         ],
         "calculationTemplates": [
@@ -852,21 +852,21 @@
               "menge * preis - preis",
               "menge * (preis + 1)"
             ],
-            "explanationTemplate": "Umsatz = Menge mal Preis.",
+            "explanationTemplate": "Der Umsatz ist die verkaufte Menge mal den Preis pro Stück.",
             "unit": "Euro"
           }
         ],
         "teacherSupport": {
-          "competenceGoal": "Umsatz als eingenommenes Geld aus Verkäufen vor Kosten verstehen.",
+          "competenceGoal": "Umsatz als Menge mal Preis und als Bruttogröße vor Kosten sicher berechnen und vom Gewinn unterscheiden.",
           "typicalMisconception": "Hoher Umsatz bedeutet automatisch hoher Gewinn.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Hoher Umsatz bedeutet automatisch hoher Gewinn.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Was ist Umsatz?“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "discussionPrompt": "Zwei Klassen-Cafés machen am Schulfest gleich viel Umsatz. Woran könnte es liegen, dass eines am Ende mehr in der Kasse hat?",
+          "classroomActivity": "Die Klasse plant einen fiktiven Verkaufsstand: Sie legt Menge und Preis fest, berechnet den Umsatz und trägt anschließend geschätzte Kosten ab. So wird der Sprung von Umsatz zu Gewinn direkt erlebbar."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Was ist Umsatz?“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Was ist Umsatz?“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Fragen Sie: Wenn ein Laden am Tag 1000 Euro einnimmt – wie viel davon gehört wohl wirklich dem Inhaber?",
+          "everydayExercise": "Rechnen Sie beim nächsten Marktbesuch bei einem Stand grob den Tagesumsatz und mögliche Kosten aus. Ihr Kind erkennt so den Unterschied zwischen Einnahmen und Verdienst."
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_unternehmenskosten",
@@ -877,12 +877,12 @@
           "konzept_umsatz"
         ],
         "pedagogy": {
-          "learningGoal": "Kosten als Ausgaben für Herstellung, Verkauf und Organisation verstehen.",
-          "coreIdea": "Ein Unternehmen verdient nicht den ganzen Umsatz; Kosten müssen bezahlt werden.",
-          "everydayScenario": "Eine Bäckerei zahlt für Mehl, Strom, Miete, Backöfen und Löhne.",
+          "learningGoal": "Kosten als Ausgaben für Herstellung, Verkauf und Organisation verstehen und fixe von variablen Kosten unterscheiden.",
+          "coreIdea": "Ein Unternehmen verdient nicht den ganzen Umsatz; Kosten müssen bezahlt werden, und einige fallen auch ohne Verkauf an.",
+          "everydayScenario": "Eine Bäckerei zahlt Miete auch an einem Tag ohne Kunden, aber Mehl nur, wenn sie backt.",
           "misconception": "Wenn ein Unternehmen 100 Euro einnimmt, gehören ihm die ganzen 100 Euro als Gewinn.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Welche Kosten hat ein Unternehmen?' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Welche Kosten hat ein Unternehmen?' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "transferTask": "Denke an einen Limonadenstand. Nenne eine feste Kostenart, die du auch ohne Verkauf hast (z. B. die geliehene Kühlbox), und eine, die nur beim Verkauf steigt (z. B. Zitronen und Becher).",
+          "reflectionPrompt": "Warum ist es für ein Unternehmen an einem umsatzschwachen Tag besonders gefährlich, hohe Fixkosten zu haben?"
         },
         "glossaryTerms": [
           "Kosten",
@@ -899,125 +899,125 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Welche Kosten hat ein Unternehmen?: Ein Unternehmen verdient nicht den ganzen Umsatz; Kosten müssen bezahlt werden. Beispiel: Eine Bäckerei zahlt für Mehl, Strom, Miete, Backöfen und Löhne. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Wenn ein Unternehmen 100 Euro einnimmt, gehören ihm die ganzen 100 Euro als Gewinn.“.",
-          "young_adults": "Welche Kosten hat ein Unternehmen?: Ein Unternehmen verdient nicht den ganzen Umsatz; Kosten müssen bezahlt werden. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Eine Bäckerei zahlt für Mehl, Strom, Miete, Backöfen und Löhne.",
-          "parents_teachers": "Lernziel: Kosten als Ausgaben für Herstellung, Verkauf und Organisation verstehen. Didaktischer Fokus: Ein Unternehmen verdient nicht den ganzen Umsatz; Kosten müssen bezahlt werden. Typische Fehlvorstellung: „Wenn ein Unternehmen 100 Euro einnimmt, gehören ihm die ganzen 100 Euro als Gewinn.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Vom Umsatz kann ein Unternehmen nicht alles behalten – es muss viele Kosten bezahlen. Dabei gibt es zwei Sorten. Feste Kosten fallen immer an, egal wie viel verkauft wird: Die Bäckerei zahlt Miete auch an einem regnerischen Tag ohne Kunden. Veränderliche Kosten hängen davon ab, wie viel produziert wird: Für mehr Brote braucht man mehr Mehl. Stell dir einen Limonadenstand vor – die geliehene Kühlbox kostet immer gleich, die Zitronen nur, wenn du wirklich Limo mixt. Wer seine Kosten kennt, weiß, ab wann sich das Verkaufen überhaupt lohnt.",
+          "young_adults": "Kosten sind alle Ausgaben für Herstellung, Verkauf und Organisation. Man unterscheidet fixe Kosten, die unabhängig von der verkauften Menge anfallen (Miete, Grundgehälter, Versicherungen), und variable Kosten, die mit der Produktion steigen (Material, Verpackung, Versand). Diese Unterscheidung ist entscheidend: Hohe Fixkosten bedeuten, dass ein Unternehmen an schwachen Tagen schnell in die Verlustzone rutscht, weil die Kosten weiterlaufen, auch wenn kaum Umsatz hereinkommt. Wer die Kostenstruktur kennt, kann Preise, Menge und Risiko eines Geschäfts viel besser einschätzen.",
+          "parents_teachers": "Ziel ist das Verständnis, dass Kosten den Umsatz mindern und dass fixe (mengenunabhängige) von variablen (mengenabhängigen) Kosten zu trennen sind. Die Fehlvorstellung „Einnahme = Gewinn“ übersieht die Kostenseite komplett. Nutzen Sie ein einfaches Beispiel (Limonadenstand: Kühlbox fix, Zutaten variabel), um beide Kostenarten zu illustrieren, und leiten Sie daraus das Risiko hoher Fixkosten an umsatzschwachen Tagen ab."
         },
         "questions": [
           {
             "id": "q_unternehmenskosten_001",
             "level": "explain",
-            "question": "Was beschreibt „Welche Kosten hat ein Unternehmen?“ am besten?",
+            "question": "Was sind Kosten eines Unternehmens?",
             "points": 100,
-            "correctAnswer": "Ein Unternehmen verdient nicht den ganzen Umsatz; Kosten müssen bezahlt werden.",
+            "correctAnswer": "Alle Ausgaben für Herstellung, Verkauf und Organisation, die vom Umsatz bezahlt werden müssen.",
             "distractors": [
               {
-                "text": "Wenn ein Unternehmen 100 Euro einnimmt, gehören ihm die ganzen 100 Euro als Gewinn.",
+                "text": "Das Geld, das dem Unternehmen als Gewinn übrig bleibt.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Nur die Steuern, die das Unternehmen zahlt.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Nur der Preis, den die Kunden bezahlen.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Ein Unternehmen verdient nicht den ganzen Umsatz; Kosten müssen bezahlt werden."
+            "explanationAfterAnswer": "Richtig: Kosten sind alle Ausgaben, die vor dem Gewinn vom Umsatz abgezogen werden müssen."
           },
           {
             "id": "q_unternehmenskosten_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Welche Kosten hat ein Unternehmen?“?",
+            "question": "Welches Beispiel beschreibt eine feste Kostenart?",
             "points": 100,
-            "correctAnswer": "Eine Bäckerei zahlt für Mehl, Strom, Miete, Backöfen und Löhne.",
+            "correctAnswer": "Eine Bäckerei zahlt jeden Monat Miete, auch an Tagen ohne Kunden.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Eine Bäckerei kauft nur dann Verpackung, wenn sie etwas verkauft.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Eine Bäckerei kauft mehr Mehl, wenn sie mehr Brote backt.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Eine Bäckerei zahlt mehr für Zutaten, weil sie größere Mengen herstellt.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Die Miete fällt unabhängig von der verkauften Menge an – das macht sie zu einer festen Kostenart."
           },
           {
             "id": "q_unternehmenskosten_003",
             "level": "understand",
-            "question": "Warum ist „Welche Kosten hat ein Unternehmen?“ für Finanzbildung wichtig?",
+            "question": "Warum sind hohe Fixkosten an einem umsatzschwachen Tag besonders riskant?",
             "points": 120,
-            "correctAnswer": "Kosten als Ausgaben für Herstellung, Verkauf und Organisation verstehen.",
+            "correctAnswer": "Weil sie weiterlaufen, auch wenn kaum Geld hereinkommt, und so schnell ein Verlust entsteht.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil Fixkosten an schwachen Tagen automatisch verschwinden.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil Fixkosten nur bei viel Verkauf gezahlt werden müssen.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil Fixkosten für die Kunden sichtbar sind.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Kosten als Ausgaben für Herstellung, Verkauf und Organisation verstehen."
+            "explanationAfterAnswer": "Fixkosten sind unerbittlich: Sie fallen auch an, wenn niemand kauft – deshalb belasten sie schwache Tage besonders."
           },
           {
             "id": "q_unternehmenskosten_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Ein Foodtruck zahlt 200 Euro Standgebühr am Tag (fest) und 3 Euro Zutaten pro Burger (veränderlich). Was passiert, wenn er nur wenige Burger verkauft?",
             "points": 150,
-            "correctAnswer": "Die passenden Werte einsetzen, sauber rechnen und das Ergebnis im Kontext prüfen.",
+            "correctAnswer": "Die 200 Euro fallen trotzdem an, deshalb kann er bei wenigen Verkäufen leicht Verlust machen.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "Die Standgebühr sinkt automatisch, weil er wenig verkauft.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "Er hat gar keine Kosten, solange er wenig verkauft.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "Die Zutatenkosten bleiben gleich hoch, egal wie viele Burger er macht.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "Die feste Standgebühr läuft weiter, während die Einnahmen einbrechen – so entsteht schnell ein Minus."
           },
           {
             "id": "q_unternehmenskosten_005",
             "level": "master",
-            "question": "Welche Aussage zu „Welche Kosten hat ein Unternehmen?“ stimmt am besten?",
+            "question": "Welche Aussage über Kosten ist am treffendsten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Kosten mindern den Umsatz, und fixe Kosten laufen auch ohne Verkauf weiter, während variable mit der Menge steigen.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Alle Kosten steigen und fallen gleichmäßig mit der verkauften Menge.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Kosten spielen keine Rolle, solange überhaupt Umsatz da ist.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Feste Kosten fallen nur an, wenn viel verkauft wird.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Die Trennung in fixe und variable Kosten erklärt, warum manche Geschäfte an schwachen Tagen besonders anfällig sind."
           }
         ],
         "calculationTemplates": [
@@ -1042,21 +1042,21 @@
               "material * miete",
               "miete"
             ],
-            "explanationTemplate": "Kostenpositionen addieren.",
+            "explanationTemplate": "Die Gesamtkosten sind die Summe aller Kostenarten, hier Material plus Miete.",
             "unit": "Euro"
           }
         ],
         "teacherSupport": {
-          "competenceGoal": "Kosten als Ausgaben für Herstellung, Verkauf und Organisation verstehen.",
+          "competenceGoal": "Kosten als Ausgaben verstehen, fixe und variable Kosten unterscheiden und ihr Zusammenspiel mit dem Umsatz erklären.",
           "typicalMisconception": "Wenn ein Unternehmen 100 Euro einnimmt, gehören ihm die ganzen 100 Euro als Gewinn.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Wenn ein Unternehmen 100 Euro einnimmt, gehören ihm die ganzen 100 Euro als Gewinn.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Welche Kosten hat ein Unternehmen?“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "discussionPrompt": "Warum kann ein Laden mit hoher Miete an einem verregneten Tag Verlust machen, obwohl er nichts falsch gemacht hat?",
+          "classroomActivity": "Die Klasse listet für ein Fantasie-Geschäft alle Kosten auf und sortiert sie in „fällt immer an“ (fix) und „steigt mit dem Verkauf“ (variabel). Dann diskutiert sie, welche Kostenart bei schwachem Umsatz gefährlicher ist."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Welche Kosten hat ein Unternehmen?“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Welche Kosten hat ein Unternehmen?“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Fragen Sie beim Bäcker oder Café: Welche Kosten muss dieser Laden wohl auch dann zahlen, wenn gerade kein Kunde da ist?",
+          "everydayExercise": "Planen Sie mit Ihrem Kind einen kleinen Verkaufsstand und trennen Sie gemeinsam feste Kosten (z. B. Standgebühr) von veränderlichen (Zutaten). So wird die Kostenstruktur greifbar."
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_gewinn",
@@ -1069,11 +1069,11 @@
         ],
         "pedagogy": {
           "learningGoal": "Gewinn und Verlust aus Umsatz minus Kosten berechnen.",
-          "coreIdea": "Gewinn = Umsatz minus Kosten; bei negativem Ergebnis entsteht Verlust.",
-          "everydayScenario": "Ein Laden nimmt 500 Euro ein und hat 420 Euro Kosten; 80 Euro bleiben übrig.",
+          "coreIdea": "Gewinn = Umsatz minus Kosten; ist das Ergebnis negativ, entsteht ein Verlust.",
+          "everydayScenario": "Ein Laden nimmt 500 Euro ein und hat 420 Euro Kosten; 80 Euro bleiben als Gewinn übrig.",
           "misconception": "Gewinn bedeutet dasselbe wie Umsatz.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Gewinn und Verlust' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Gewinn und Verlust' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "transferTask": "Du verkaufst am Flohmarkt für 60 Euro alte Sachen, hast aber 15 Euro Standgebühr gezahlt. Rechne deinen Gewinn aus und überlege, ab welcher Standgebühr sich der Verkauf nicht mehr gelohnt hätte.",
+          "reflectionPrompt": "Warum ist ein Verlust nicht immer ein Zeichen für ein schlechtes Unternehmen, besonders am Anfang?"
         },
         "glossaryTerms": [
           "Gewinn",
@@ -1090,125 +1090,125 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Gewinn und Verlust: Gewinn = Umsatz minus Kosten; bei negativem Ergebnis entsteht Verlust. Beispiel: Ein Laden nimmt 500 Euro ein und hat 420 Euro Kosten; 80 Euro bleiben übrig. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Gewinn bedeutet dasselbe wie Umsatz.“.",
-          "young_adults": "Gewinn und Verlust: Gewinn = Umsatz minus Kosten; bei negativem Ergebnis entsteht Verlust. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Ein Laden nimmt 500 Euro ein und hat 420 Euro Kosten; 80 Euro bleiben übrig.",
-          "parents_teachers": "Lernziel: Gewinn und Verlust aus Umsatz minus Kosten berechnen. Didaktischer Fokus: Gewinn = Umsatz minus Kosten; bei negativem Ergebnis entsteht Verlust. Typische Fehlvorstellung: „Gewinn bedeutet dasselbe wie Umsatz.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Gewinn ist das, was am Ende wirklich übrig bleibt: Du ziehst vom Umsatz alle Kosten ab. Die Formel ist einfach: Gewinn = Umsatz minus Kosten. Wenn dein Flohmarktstand 60 Euro einnimmt und dich 15 Euro Standgebühr gekostet hat, ist dein Gewinn 45 Euro. Sind die Kosten aber höher als die Einnahmen, kommt eine Zahl unter null heraus – das nennt man Verlust. Verlust heißt: Du hast draufgezahlt. Deshalb ist Gewinn etwas ganz anderes als Umsatz. Umsatz ist alles, was hereinkommt; Gewinn ist nur der Teil, der übrig bleibt.",
+          "young_adults": "Gewinn ergibt sich aus Umsatz minus Kosten. Ist das Ergebnis positiv, spricht man von Gewinn; ist es negativ, von Verlust. Anders als der Umsatz misst der Gewinn den tatsächlichen wirtschaftlichen Erfolg. Wichtig: Ein Verlust ist nicht automatisch ein Scheitern – junge Unternehmen investieren oft zuerst und schreiben bewusst über eine Zeit rote Zahlen, bevor sie profitabel werden. Umgekehrt kann dauerhafter Verlust ohne Aussicht auf Besserung ein ernstes Warnsignal sein. Wer Gewinn und Umsatz sauber trennt, beurteilt ein Geschäft realistischer.",
+          "parents_teachers": "Kern ist die Beziehung Gewinn = Umsatz − Kosten und das Verständnis, dass ein negatives Ergebnis einen Verlust darstellt. Die Fehlvorstellung „Gewinn = Umsatz“ ist eng mit dem vorigen Modul verknüpft. Ergänzen Sie eine differenzierte Einordnung: Verluste können in einer Aufbauphase normal sein, dauerhafte Verluste hingegen kritisch. So vermeiden Sie ein zu simples „Verlust = schlecht“."
         },
         "questions": [
           {
             "id": "q_gewinn_001",
             "level": "explain",
-            "question": "Was beschreibt „Gewinn und Verlust“ am besten?",
+            "question": "Wie berechnet man den Gewinn eines Unternehmens?",
             "points": 100,
-            "correctAnswer": "Gewinn = Umsatz minus Kosten; bei negativem Ergebnis entsteht Verlust.",
+            "correctAnswer": "Man zieht vom Umsatz alle Kosten ab.",
             "distractors": [
               {
-                "text": "Gewinn bedeutet dasselbe wie Umsatz.",
+                "text": "Man addiert Umsatz und Kosten zusammen.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Der Gewinn ist genau derselbe Betrag wie der Umsatz.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Man multipliziert den Umsatz mit den Kosten.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Gewinn = Umsatz minus Kosten; bei negativem Ergebnis entsteht Verlust."
+            "explanationAfterAnswer": "Richtig: Gewinn = Umsatz minus Kosten. Ist das Ergebnis unter null, ist es ein Verlust."
           },
           {
             "id": "q_gewinn_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Gewinn und Verlust“?",
+            "question": "Welches Beispiel zeigt einen Verlust?",
             "points": 100,
-            "correctAnswer": "Ein Laden nimmt 500 Euro ein und hat 420 Euro Kosten; 80 Euro bleiben übrig.",
+            "correctAnswer": "Ein Stand nimmt 300 Euro ein, hat aber 350 Euro Kosten.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Ein Stand nimmt 300 Euro ein und hat 100 Euro Kosten.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Ein Stand nimmt 500 Euro ein und hat 420 Euro Kosten.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Ein Stand nimmt 300 Euro ein und hat keine Kosten.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Bei 300 Euro Einnahmen und 350 Euro Kosten fehlen 50 Euro – das ist ein Verlust."
           },
           {
             "id": "q_gewinn_003",
             "level": "understand",
-            "question": "Warum ist „Gewinn und Verlust“ für Finanzbildung wichtig?",
+            "question": "Warum ist ein Verlust am Anfang eines Unternehmens nicht immer ein schlechtes Zeichen?",
             "points": 120,
-            "correctAnswer": "Gewinn und Verlust aus Umsatz minus Kosten berechnen.",
+            "correctAnswer": "Weil junge Unternehmen oft erst viel investieren müssen, bevor genug Umsatz hereinkommt.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil ein Verlust in Wirklichkeit dasselbe ist wie ein Gewinn.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil Verluste immer bedeuten, dass ein Unternehmen scheitern wird.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil der Staat jeden Verlust einfach ausgleicht.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Gewinn und Verlust aus Umsatz minus Kosten berechnen."
+            "explanationAfterAnswer": "Anfangsinvestitionen können zunächst Verluste erzeugen; entscheidend ist, ob später Gewinne folgen."
           },
           {
             "id": "q_gewinn_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Ein Café hat 900 Euro Umsatz und 950 Euro Kosten. Wie sieht das Ergebnis aus?",
             "points": 150,
-            "correctAnswer": "Die passenden Werte einsetzen, sauber rechnen und das Ergebnis im Kontext prüfen.",
+            "correctAnswer": "Ein Verlust von 50 Euro, weil die Kosten höher als der Umsatz sind.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "Ein Gewinn von 50 Euro, weil man den kleineren vom größeren Wert abzieht.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "Weder Gewinn noch Verlust, weil die Zahlen fast gleich sind.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "Ein Gewinn von 1850 Euro, weil man Umsatz und Kosten addiert.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "900 minus 950 ergibt −50 Euro: Die Kosten übersteigen den Umsatz, also ein Verlust von 50 Euro."
           },
           {
             "id": "q_gewinn_005",
             "level": "master",
-            "question": "Welche Aussage zu „Gewinn und Verlust“ stimmt am besten?",
+            "question": "Welche Aussage über Gewinn und Verlust ist am treffendsten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Gewinn ist Umsatz minus Kosten; ein einzelner Verlust ist nicht immer schlimm, dauerhafte Verluste sind aber ein Warnsignal.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Solange der Umsatz hoch ist, ist der Gewinn nebensächlich.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Jeder Verlust bedeutet, dass ein Unternehmen sofort schließen muss.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Gewinn und Umsatz meinen dasselbe und sind austauschbar.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Gewinn misst den echten Erfolg; die Bewertung von Verlusten hängt davon ab, ob sie vorübergehend oder dauerhaft sind."
           }
         ],
         "calculationTemplates": [
@@ -1233,21 +1233,21 @@
               "kosten - umsatz",
               "umsatz"
             ],
-            "explanationTemplate": "Gewinn oder Verlust = Umsatz minus Kosten.",
+            "explanationTemplate": "Gewinn oder Verlust ergibt sich aus Umsatz minus Kosten; ein negatives Ergebnis ist ein Verlust.",
             "unit": "Euro"
           }
         ],
         "teacherSupport": {
-          "competenceGoal": "Gewinn und Verlust aus Umsatz minus Kosten berechnen.",
+          "competenceGoal": "Gewinn und Verlust als Umsatz minus Kosten berechnen und Verluste differenziert einordnen.",
           "typicalMisconception": "Gewinn bedeutet dasselbe wie Umsatz.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Gewinn bedeutet dasselbe wie Umsatz.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Gewinn und Verlust“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "discussionPrompt": "Kann ein Unternehmen mit sehr hohem Umsatz trotzdem Verlust machen? Und wann wäre ein Verlust für euch ein echtes Warnsignal?",
+          "classroomActivity": "Die Klasse bearbeitet mehrere Kärtchen mit Umsatz- und Kostenzahlen, berechnet jeweils Gewinn oder Verlust und ordnet die Fälle danach, welcher Betrieb am gesündesten wirtschaftet."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Gewinn und Verlust“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Gewinn und Verlust“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Fragen Sie: Wenn jemand ein neues Geschäft eröffnet und im ersten Jahr Verlust macht – ist das schon ein schlechtes Zeichen? Warum (nicht)?",
+          "everydayExercise": "Rechnen Sie nach einem Flohmarkt oder Kuchenverkauf gemeinsam nach: Einnahmen minus Kosten. Ihr Kind sieht direkt, was Gewinn oder Verlust bedeutet."
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_marge",
@@ -1259,11 +1259,11 @@
         ],
         "pedagogy": {
           "learningGoal": "Marge als Anteil des Umsatzes verstehen, der als Ergebnis übrig bleibt.",
-          "coreIdea": "Die Marge zeigt, wie viel von jedem Euro Umsatz übrig bleibt.",
-          "everydayScenario": "Zwei Läden machen 100 Euro Umsatz; einer behält 20 Euro, der andere 5 Euro.",
-          "misconception": "Mehr Umsatz bedeutet automatisch bessere Marge.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Marge – Wie viel bleibt von jedem Euro?' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Marge – Wie viel bleibt von jedem Euro?' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "coreIdea": "Die Marge zeigt in Prozent, wie viel von jedem Euro Umsatz als Gewinn übrig bleibt.",
+          "everydayScenario": "Zwei Läden machen je 100 Euro Umsatz; einer behält 20 Euro (20 Prozent), der andere 5 Euro (5 Prozent).",
+          "misconception": "Mehr Umsatz bedeutet automatisch eine bessere Marge.",
+          "transferTask": "Ein Bäcker verkauft ein Brot für 4 Euro und verdient daran 1 Euro. Rechne die Marge in Prozent aus und überlege, ob dir 25 Prozent viel oder wenig erscheinen.",
+          "reflectionPrompt": "Warum kann ein kleiner Laden mit hoher Marge am Ende mehr verdienen als ein großer mit riesigem Umsatz, aber winziger Marge?"
         },
         "glossaryTerms": [
           "Marge",
@@ -1280,125 +1280,125 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Marge – Wie viel bleibt von jedem Euro?: Die Marge zeigt, wie viel von jedem Euro Umsatz übrig bleibt. Beispiel: Zwei Läden machen 100 Euro Umsatz; einer behält 20 Euro, der andere 5 Euro. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Mehr Umsatz bedeutet automatisch bessere Marge.“.",
-          "young_adults": "Marge – Wie viel bleibt von jedem Euro?: Die Marge zeigt, wie viel von jedem Euro Umsatz übrig bleibt. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Zwei Läden machen 100 Euro Umsatz; einer behält 20 Euro, der andere 5 Euro.",
-          "parents_teachers": "Lernziel: Marge als Anteil des Umsatzes verstehen, der als Ergebnis übrig bleibt. Didaktischer Fokus: Die Marge zeigt, wie viel von jedem Euro Umsatz übrig bleibt. Typische Fehlvorstellung: „Mehr Umsatz bedeutet automatisch bessere Marge.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Die Marge sagt dir, wie viel von jedem verdienten Euro am Ende übrig bleibt – und zwar in Prozent. Stell dir zwei Kioske vor: Beide machen 100 Euro Umsatz. Beim ersten bleiben nach den Kosten 20 Euro übrig, beim zweiten nur 5 Euro. Der erste hat eine Marge von 20 Prozent, der zweite von 5 Prozent. Man rechnet: Gewinn geteilt durch Umsatz mal 100. Eine hohe Marge heißt: Von jedem Euro bleibt viel hängen. Deshalb ist ein Laden mit hoher Marge oft stärker als einer, der zwar viel verkauft, aber an jedem Stück fast nichts verdient.",
+          "young_adults": "Die (Gewinn-)Marge setzt den Gewinn ins Verhältnis zum Umsatz und wird in Prozent angegeben: Gewinn geteilt durch Umsatz mal 100. Sie zeigt, wie profitabel ein Unternehmen pro Euro Umsatz arbeitet. Zwei Firmen mit gleichem Umsatz können völlig unterschiedliche Margen haben – je nach Kostenstruktur und Preissetzung. Mehr Umsatz verbessert die Marge nicht automatisch; entscheidend ist das Verhältnis von Gewinn zu Umsatz. Branchen unterscheiden sich stark: Software hat oft hohe Margen, der Lebensmittelhandel typischerweise sehr niedrige. Die Marge ist deshalb eine der wichtigsten Kennzahlen, um Geschäfte zu vergleichen.",
+          "parents_teachers": "Die Marge (Gewinn/Umsatz × 100) misst die Profitabilität je Umsatzeuro und ist als Prozentgröße vom absoluten Gewinn zu trennen. Die Fehlvorstellung „mehr Umsatz = bessere Marge“ verwechselt Größe mit Effizienz. Verdeutlichen Sie das über zwei Betriebe mit gleichem Umsatz, aber unterschiedlicher Kostenlast, und weisen Sie auf typische Branchenunterschiede hin, ohne einzelne Unternehmen zu bewerten."
         },
         "questions": [
           {
             "id": "q_marge_001",
             "level": "explain",
-            "question": "Was beschreibt „Marge – Wie viel bleibt von jedem Euro?“ am besten?",
+            "question": "Was gibt die Gewinnmarge an?",
             "points": 100,
-            "correctAnswer": "Die Marge zeigt, wie viel von jedem Euro Umsatz übrig bleibt.",
+            "correctAnswer": "Wie viel Prozent des Umsatzes am Ende als Gewinn übrig bleiben.",
             "distractors": [
               {
-                "text": "Mehr Umsatz bedeutet automatisch bessere Marge.",
+                "text": "Wie hoch der gesamte Umsatz in Euro ist.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Wie viele Produkte insgesamt verkauft wurden.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Wie groß das Firmengebäude ist.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Die Marge zeigt, wie viel von jedem Euro Umsatz übrig bleibt."
+            "explanationAfterAnswer": "Richtig: Die Marge zeigt als Prozentwert, wie viel von jedem Umsatzeuro als Gewinn bleibt."
           },
           {
             "id": "q_marge_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Marge – Wie viel bleibt von jedem Euro?“?",
+            "question": "Welcher Laden hat die höhere Marge?",
             "points": 100,
-            "correctAnswer": "Zwei Läden machen 100 Euro Umsatz; einer behält 20 Euro, der andere 5 Euro.",
+            "correctAnswer": "Ein Laden mit 100 Euro Umsatz, der 20 Euro Gewinn behält.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Ein Laden mit 1000 Euro Umsatz, dessen Marge man ohne Gewinn kennt.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Ein Laden mit 100 Euro Umsatz, der 5 Euro Gewinn behält.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Ein Laden mit dem größten Schaufenster.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "20 von 100 Euro sind 20 Prozent Marge, deutlich mehr als 5 von 100 Euro (5 Prozent)."
           },
           {
             "id": "q_marge_003",
             "level": "understand",
-            "question": "Warum ist „Marge – Wie viel bleibt von jedem Euro?“ für Finanzbildung wichtig?",
+            "question": "Warum verbessert mehr Umsatz die Marge nicht automatisch?",
             "points": 120,
-            "correctAnswer": "Marge als Anteil des Umsatzes verstehen, der als Ergebnis übrig bleibt.",
+            "correctAnswer": "Weil die Marge das Verhältnis von Gewinn zu Umsatz ist und mit dem Umsatz oft auch die Kosten steigen.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil mehr Umsatz die Marge immer verdoppelt.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil die Marge nichts mit dem Gewinn zu tun hat.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil die Marge nur von der Zahl der Mitarbeiter abhängt.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Marge als Anteil des Umsatzes verstehen, der als Ergebnis übrig bleibt."
+            "explanationAfterAnswer": "Steigt der Umsatz und steigen die Kosten mit, kann das Verhältnis Gewinn zu Umsatz gleich bleiben oder sogar sinken."
           },
           {
             "id": "q_marge_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Ein Bäcker verkauft ein Brot für 4 Euro und verdient daran 1 Euro. Wie hoch ist die Marge?",
             "points": 150,
-            "correctAnswer": "Die passenden Werte einsetzen, sauber rechnen und das Ergebnis im Kontext prüfen.",
+            "correctAnswer": "25 Prozent, weil 1 Euro geteilt durch 4 Euro mal 100 gerechnet wird.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "1 Prozent, weil 1 Euro Gewinn übrig bleibt.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "400 Prozent, weil man 4 Euro durch 1 Euro teilt.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "5 Prozent, weil man 4 und 1 zusammenzählt.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "1 geteilt durch 4 sind 0,25, also 25 Prozent Marge – von jedem Euro Umsatz bleiben 25 Cent."
           },
           {
             "id": "q_marge_005",
             "level": "master",
-            "question": "Welche Aussage zu „Marge – Wie viel bleibt von jedem Euro?“ stimmt am besten?",
+            "question": "Welche Aussage über die Marge ist am treffendsten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Die Marge misst die Profitabilität je Umsatzeuro; ein kleiner Betrieb mit hoher Marge kann effizienter arbeiten als ein großer mit winziger Marge.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Die Marge steigt immer automatisch mit dem Umsatz.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Nur der absolute Umsatz zählt, die Marge ist unwichtig.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Alle Branchen haben ungefähr dieselbe Marge.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Die Marge zeigt Effizienz, nicht Größe – deshalb ist sie eine der aussagekräftigsten Kennzahlen im Vergleich."
           }
         ],
         "calculationTemplates": [
@@ -1423,21 +1423,21 @@
               "umsatz - gewinn",
               "umsatz + gewinn"
             ],
-            "explanationTemplate": "Marge = Gewinn geteilt durch Umsatz mal 100.",
+            "explanationTemplate": "Die Marge ist der Gewinn geteilt durch den Umsatz, mal 100, und wird in Prozent angegeben.",
             "unit": "Prozent"
           }
         ],
         "teacherSupport": {
-          "competenceGoal": "Marge als Anteil des Umsatzes verstehen, der als Ergebnis übrig bleibt.",
-          "typicalMisconception": "Mehr Umsatz bedeutet automatisch bessere Marge.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Mehr Umsatz bedeutet automatisch bessere Marge.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Marge – Wie viel bleibt von jedem Euro?“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "competenceGoal": "Die Gewinnmarge als Gewinn/Umsatz × 100 berechnen und als Maß für Profitabilität von absoluten Größen unterscheiden.",
+          "typicalMisconception": "Mehr Umsatz bedeutet automatisch eine bessere Marge.",
+          "discussionPrompt": "Würdet ihr lieber einen Laden mit riesigem Umsatz und 2 Prozent Marge oder einen kleinen mit 30 Prozent Marge führen? Warum?",
+          "classroomActivity": "Die Klasse erhält mehrere Betriebe mit Umsatz und Gewinn, berechnet die Margen und erstellt eine Rangliste der Profitabilität. Anschließend Diskussion, warum die Reihenfolge nach Marge anders aussieht als nach Umsatz."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Marge – Wie viel bleibt von jedem Euro?“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Marge – Wie viel bleibt von jedem Euro?“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Fragen Sie: Von 4 Euro für ein Brot – wie viel bleibt dem Bäcker wohl übrig, wenn er Mehl, Strom und Lohn bezahlt hat?",
+          "everydayExercise": "Schätzen Sie bei einem Alltagsprodukt gemeinsam Preis und mögliche Kosten und überlegen Sie, wie hoch die Marge ungefähr sein könnte."
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_cashflow",
@@ -1450,11 +1450,11 @@
         ],
         "pedagogy": {
           "learningGoal": "Cashflow als tatsächliche Einzahlungen und Auszahlungen verstehen.",
-          "coreIdea": "Cashflow zeigt, ob mehr Geld ins Unternehmen hinein- oder herausfließt.",
-          "everydayScenario": "Ein Unternehmen verkauft auf Rechnung, bekommt das Geld aber erst später.",
+          "coreIdea": "Cashflow zeigt, ob in einem Zeitraum wirklich mehr Geld ins Unternehmen hinein- als herausfließt.",
+          "everydayScenario": "Ein Unternehmen verkauft auf Rechnung, bekommt das Geld aber erst zwei Monate später.",
           "misconception": "Wenn ein Unternehmen Gewinn macht, hat es automatisch genug Geld auf dem Konto.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Cashflow – Geldfluss verstehen' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Cashflow – Geldfluss verstehen' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "transferTask": "Stell dir vor, du hast diesen Monat 30 Euro Taschengeld bekommen, aber ein Freund schuldet dir noch 20 Euro, die er erst nächsten Monat zahlt. Wie viel Geld kannst du heute wirklich ausgeben?",
+          "reflectionPrompt": "Warum kann ein Unternehmen mit vollen Auftragsbüchern trotzdem in Not geraten, wenn Kunden zu spät zahlen?"
         },
         "glossaryTerms": [
           "Cashflow",
@@ -1471,125 +1471,125 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Cashflow – Geldfluss verstehen: Cashflow zeigt, ob mehr Geld ins Unternehmen hinein- oder herausfließt. Beispiel: Ein Unternehmen verkauft auf Rechnung, bekommt das Geld aber erst später. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Wenn ein Unternehmen Gewinn macht, hat es automatisch genug Geld auf dem Konto.“.",
-          "young_adults": "Cashflow – Geldfluss verstehen: Cashflow zeigt, ob mehr Geld ins Unternehmen hinein- oder herausfließt. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Ein Unternehmen verkauft auf Rechnung, bekommt das Geld aber erst später.",
-          "parents_teachers": "Lernziel: Cashflow als tatsächliche Einzahlungen und Auszahlungen verstehen. Didaktischer Fokus: Cashflow zeigt, ob mehr Geld ins Unternehmen hinein- oder herausfließt. Typische Fehlvorstellung: „Wenn ein Unternehmen Gewinn macht, hat es automatisch genug Geld auf dem Konto.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Cashflow bedeutet Geldfluss: Es geht darum, wie viel Geld wirklich aufs Konto kommt und wie viel wieder abfließt. Das Wichtige ist der Unterschied zum Gewinn. Stell dir vor, du hast einem Freund für 20 Euro etwas verkauft, aber er zahlt erst nächsten Monat. Auf dem Papier bist du 20 Euro reicher – aber jetzt gerade hast du das Geld noch nicht in der Hand. Genauso geht es Unternehmen: Sie können Gewinn machen und trotzdem kein Geld auf dem Konto haben, weil Kunden erst später zahlen. Deshalb muss ein Unternehmen immer aufpassen, dass genug Geld da ist, um Rechnungen sofort zu bezahlen.",
+          "young_adults": "Cashflow ist die Differenz aus tatsächlichen Einzahlungen und Auszahlungen in einem Zeitraum – also der reale Geldstrom, nicht der buchhalterische Gewinn. Der entscheidende Punkt: Gewinn und Liquidität sind nicht dasselbe. Ein Unternehmen kann profitabel sein und trotzdem zahlungsunfähig werden, wenn es auf Rechnung verkauft und die Kunden spät zahlen, während eigene Kosten wie Löhne und Miete sofort fällig sind. Fehlende Liquidität ist einer der häufigsten Gründe, warum sogar Firmen mit vollen Auftragsbüchern scheitern. Für dich privat gilt dasselbe: Es zählt, was heute wirklich auf dem Konto ist, nicht was theoretisch noch kommt.",
+          "parents_teachers": "Cashflow bezeichnet den realen Saldo aus Ein- und Auszahlungen und ist strikt vom Gewinn (einer periodisierten Größe) zu unterscheiden. Die Fehlvorstellung „Gewinn = Geld auf dem Konto“ verkennt das Timing von Zahlungsströmen. Nutzen Sie das Beispiel des Verkaufs auf Rechnung, um zu zeigen, dass Zahlungsfähigkeit (Liquidität) über das kurzfristige Überleben entscheidet – ein häufiger, aber oft übersehener Insolvenzgrund."
         },
         "questions": [
           {
             "id": "q_cashflow_001",
             "level": "explain",
-            "question": "Was beschreibt „Cashflow – Geldfluss verstehen“ am besten?",
+            "question": "Was beschreibt der Cashflow?",
             "points": 100,
-            "correctAnswer": "Cashflow zeigt, ob mehr Geld ins Unternehmen hinein- oder herausfließt.",
+            "correctAnswer": "Wie viel Geld tatsächlich hereinkommt und wie viel wieder abfließt.",
             "distractors": [
               {
-                "text": "Wenn ein Unternehmen Gewinn macht, hat es automatisch genug Geld auf dem Konto.",
+                "text": "Wie viel Gewinn auf dem Papier entsteht, egal wann das Geld fließt.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Wie viele Produkte insgesamt verkauft wurden.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Wie groß das Lager eines Unternehmens ist.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Cashflow zeigt, ob mehr Geld ins Unternehmen hinein- oder herausfließt."
+            "explanationAfterAnswer": "Richtig: Cashflow ist der echte Geldfluss – was rein- und was rausgeht."
           },
           {
             "id": "q_cashflow_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Cashflow – Geldfluss verstehen“?",
+            "question": "Welches Beispiel zeigt ein typisches Cashflow-Problem?",
             "points": 100,
-            "correctAnswer": "Ein Unternehmen verkauft auf Rechnung, bekommt das Geld aber erst später.",
+            "correctAnswer": "Ein Unternehmen hat verkauft, bekommt das Geld aber erst in zwei Monaten, muss aber jetzt Löhne zahlen.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Ein Unternehmen hat gerade sehr viele zufriedene Kunden.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Ein Unternehmen bekommt sein Geld sofort bei jedem Verkauf bar auf die Hand.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Ein Unternehmen hat ein schönes neues Firmenschild.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Wenn Geld später kommt, die eigenen Rechnungen aber jetzt fällig sind, entsteht ein Liquiditätsengpass."
           },
           {
             "id": "q_cashflow_003",
             "level": "understand",
-            "question": "Warum ist „Cashflow – Geldfluss verstehen“ für Finanzbildung wichtig?",
+            "question": "Warum kann ein Unternehmen Gewinn machen und trotzdem zu wenig Geld auf dem Konto haben?",
             "points": 120,
-            "correctAnswer": "Cashflow als tatsächliche Einzahlungen und Auszahlungen verstehen.",
+            "correctAnswer": "Weil der Gewinn schon zählt, sobald verkauft wurde, das Geld aber erst später wirklich eingeht.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil Gewinn und Cashflow immer genau gleich hoch sind.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil Gewinn niemals auf ein Konto gezahlt wird.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil ein Unternehmen mit Gewinn keine Kosten mehr hat.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Cashflow als tatsächliche Einzahlungen und Auszahlungen verstehen."
+            "explanationAfterAnswer": "Gewinn und Geldeingang haben ein unterschiedliches Timing – deshalb kann trotz Gewinn das Konto knapp sein."
           },
           {
             "id": "q_cashflow_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Ein Betrieb bekommt diesen Monat 3000 Euro auf das Konto und zahlt 3500 Euro aus. Was bedeutet das für seinen Cashflow?",
             "points": 150,
-            "correctAnswer": "Die passenden Werte einsetzen, sauber rechnen und das Ergebnis im Kontext prüfen.",
+            "correctAnswer": "Der Cashflow ist negativ: Es fließen 500 Euro mehr ab, als hereinkommen.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "Der Cashflow ist positiv, weil das Unternehmen ja Geld einnimmt.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "Der Cashflow spielt keine Rolle, solange es Umsatz gibt.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "Der Cashflow beträgt 6500 Euro, weil man beide Beträge addiert.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "3000 minus 3500 ergibt −500 Euro: Es geht mehr Geld raus als rein, der Cashflow ist negativ."
           },
           {
             "id": "q_cashflow_005",
             "level": "master",
-            "question": "Welche Aussage zu „Cashflow – Geldfluss verstehen“ stimmt am besten?",
+            "question": "Welche Aussage über Cashflow und Gewinn ist am treffendsten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Gewinn zeigt den rechnerischen Erfolg, Cashflow das tatsächlich verfügbare Geld; ohne genug Liquidität kann selbst ein profitables Unternehmen scheitern.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Gewinn und Cashflow sind dasselbe und lassen sich beliebig austauschen.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Solange Gewinn da ist, spielt der Cashflow keine Rolle.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Cashflow zählt nur für sehr große Unternehmen.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Liquidität sichert das kurzfristige Überleben – deshalb ist der Cashflow neben dem Gewinn so wichtig."
           }
         ],
         "calculationTemplates": [
@@ -1614,21 +1614,21 @@
               "auszahlungen - einzahlungen",
               "einzahlungen"
             ],
-            "explanationTemplate": "Cashflow = Einzahlungen minus Auszahlungen.",
+            "explanationTemplate": "Der einfache Cashflow ist die Differenz aus Einzahlungen und Auszahlungen; ist er negativ, fließt mehr Geld ab als herein.",
             "unit": "Euro"
           }
         ],
         "teacherSupport": {
-          "competenceGoal": "Cashflow als tatsächliche Einzahlungen und Auszahlungen verstehen.",
+          "competenceGoal": "Cashflow als realen Saldo aus Ein- und Auszahlungen berechnen und Liquidität vom Gewinn unterscheiden.",
           "typicalMisconception": "Wenn ein Unternehmen Gewinn macht, hat es automatisch genug Geld auf dem Konto.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Wenn ein Unternehmen Gewinn macht, hat es automatisch genug Geld auf dem Konto.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Cashflow – Geldfluss verstehen“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "discussionPrompt": "Wie kann eine Firma mit vollen Auftragsbüchern trotzdem pleitegehen? Welche Rolle spielt das Zahlungsziel der Kunden?",
+          "classroomActivity": "Die Klasse spielt einen Monatsverlauf durch: Ein- und Auszahlungen werden zu verschiedenen Zeitpunkten eingetragen. Sichtbar wird, dass das Konto zwischendurch ins Minus rutschen kann, obwohl am Monatsende ein Plus steht."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Cashflow – Geldfluss verstehen“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Cashflow – Geldfluss verstehen“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Fragen Sie: Wenn dir jemand 20 Euro schuldet, sie aber erst nächste Woche zahlt – kannst du das Geld heute schon ausgeben?",
+          "everydayExercise": "Gehen Sie einen Monat mit Ihrem Kind durch: Wann kommt Geld herein, wann müssen Dinge bezahlt werden? So wird der Unterschied zwischen ‚haben‘ und ‚bekommen‘ deutlich."
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_vermoegen_schulden_eigenkapital",
@@ -1640,11 +1640,11 @@
         ],
         "pedagogy": {
           "learningGoal": "Vermögen, Schulden und Eigenkapital vereinfacht unterscheiden.",
-          "coreIdea": "Eigenkapital ist vereinfacht Vermögen minus Schulden.",
-          "everydayScenario": "Ein Café besitzt Maschinen und Geld, hat aber auch einen Kredit.",
+          "coreIdea": "Eigenkapital ist vereinfacht das, was übrig bleibt, wenn man vom Vermögen die Schulden abzieht.",
+          "everydayScenario": "Ein Café besitzt Maschinen und Geld für 30.000 Euro, hat aber einen Kredit von 10.000 Euro.",
           "misconception": "Schulden bedeuten immer, dass ein Unternehmen schlecht ist.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Vermögen, Schulden und Eigenkapital' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Vermögen, Schulden und Eigenkapital' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "transferTask": "Stell dir vor, dein Fahrrad ist 300 Euro wert, aber du hast dir dafür noch 100 Euro von deinen Eltern geliehen. Wie viel davon gehört wirklich dir?",
+          "reflectionPrompt": "Warum können Schulden für ein Unternehmen sogar sinnvoll sein, solange es sie zurückzahlen kann?"
         },
         "glossaryTerms": [
           "Vermögen",
@@ -1661,125 +1661,125 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Vermögen, Schulden und Eigenkapital: Eigenkapital ist vereinfacht Vermögen minus Schulden. Beispiel: Ein Café besitzt Maschinen und Geld, hat aber auch einen Kredit. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Schulden bedeuten immer, dass ein Unternehmen schlecht ist.“.",
-          "young_adults": "Vermögen, Schulden und Eigenkapital: Eigenkapital ist vereinfacht Vermögen minus Schulden. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Ein Café besitzt Maschinen und Geld, hat aber auch einen Kredit.",
-          "parents_teachers": "Lernziel: Vermögen, Schulden und Eigenkapital vereinfacht unterscheiden. Didaktischer Fokus: Eigenkapital ist vereinfacht Vermögen minus Schulden. Typische Fehlvorstellung: „Schulden bedeuten immer, dass ein Unternehmen schlecht ist.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Ein Unternehmen besitzt Dinge, die Geld wert sind: Maschinen, Waren, Geld auf dem Konto. Das nennt man Vermögen. Oft hat es aber auch Schulden, weil es sich zum Beispiel Geld für eine Maschine geliehen hat. Was am Ende wirklich dem Unternehmen selbst gehört, nennt man Eigenkapital: Vermögen minus Schulden. Ein Beispiel: Dein Fahrrad ist 300 Euro wert, aber du hast dir 100 Euro dafür geliehen. Dann gehören dir eigentlich nur 200 Euro davon. Wichtig: Schulden sind nicht automatisch schlecht. Sie werden erst zum Problem, wenn ein Unternehmen sie nicht zurückzahlen kann.",
+          "young_adults": "Das Vermögen umfasst alles, was ein Unternehmen besitzt (Maschinen, Vorräte, Kontoguthaben). Schulden (Fremdkapital) sind Verpflichtungen gegenüber anderen, etwa Kredite. Das Eigenkapital ist vereinfacht die Differenz: Vermögen minus Schulden – also der Anteil, der wirklich den Eigentümern gehört. Dieses Grundgerüst ist der Kern jeder Bilanz. Entscheidend ist die richtige Einordnung von Schulden: Sie sind kein Makel an sich. Ein Kredit, mit dem ein Unternehmen sinnvoll investiert und den es sicher bedienen kann, kann Wachstum ermöglichen. Gefährlich wird es erst, wenn die Schulden im Verhältnis zum Vermögen und zum Cashflow zu groß werden.",
+          "parents_teachers": "Ziel ist die vereinfachte Bilanzgleichung: Eigenkapital = Vermögen − Schulden. Die Fehlvorstellung „Schulden = schlecht“ ist verbreitet und pädagogisch heikel, weil sie eine differenzierte Sicht auf Fremdkapital verstellt. Ordnen Sie Schulden als neutrales Finanzierungsinstrument ein, dessen Bewertung von Verwendungszweck und Tragfähigkeit abhängt. Das persönliche Beispiel (geliehenes Geld fürs Fahrrad) überträgt das Prinzip anschaulich auf die Lebenswelt."
         },
         "questions": [
           {
             "id": "q_vermoegen_schulden_eigenkapital_001",
             "level": "explain",
-            "question": "Was beschreibt „Vermögen, Schulden und Eigenkapital“ am besten?",
+            "question": "Wie berechnet man vereinfacht das Eigenkapital eines Unternehmens?",
             "points": 100,
-            "correctAnswer": "Eigenkapital ist vereinfacht Vermögen minus Schulden.",
+            "correctAnswer": "Man zieht vom Vermögen die Schulden ab.",
             "distractors": [
               {
-                "text": "Schulden bedeuten immer, dass ein Unternehmen schlecht ist.",
+                "text": "Man addiert Vermögen und Schulden zusammen.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Man nimmt nur die Schulden.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Man nimmt nur den Umsatz des letzten Jahres.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Eigenkapital ist vereinfacht Vermögen minus Schulden."
+            "explanationAfterAnswer": "Richtig: Eigenkapital = Vermögen minus Schulden – das ist der Anteil, der wirklich dem Unternehmen gehört."
           },
           {
             "id": "q_vermoegen_schulden_eigenkapital_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Vermögen, Schulden und Eigenkapital“?",
+            "question": "Welches Beispiel zeigt Vermögen und Schulden zusammen?",
             "points": 100,
-            "correctAnswer": "Ein Café besitzt Maschinen und Geld, hat aber auch einen Kredit.",
+            "correctAnswer": "Ein Café besitzt Maschinen und Geld, hat aber auch einen Kredit laufen.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Ein Café bekommt gute Bewertungen im Internet.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Ein Café hat viele nette Stammkunden.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Ein Café hat eine schöne Speisekarte gestaltet.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Maschinen und Geld sind Vermögen, der Kredit ist eine Schuld – zusammen ergeben sie das Bild für das Eigenkapital."
           },
           {
             "id": "q_vermoegen_schulden_eigenkapital_003",
             "level": "understand",
-            "question": "Warum ist „Vermögen, Schulden und Eigenkapital“ für Finanzbildung wichtig?",
+            "question": "Warum sind Schulden nicht automatisch ein Zeichen für ein schlechtes Unternehmen?",
             "points": 120,
-            "correctAnswer": "Vermögen, Schulden und Eigenkapital vereinfacht unterscheiden.",
+            "correctAnswer": "Weil Schulden sinnvolle Investitionen ermöglichen können, solange das Unternehmen sie sicher zurückzahlt.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil Schulden in Wirklichkeit dasselbe wie Vermögen sind.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil Schulden niemals zurückgezahlt werden müssen.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil nur schlechte Unternehmen ganz ohne Schulden auskommen.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Vermögen, Schulden und Eigenkapital vereinfacht unterscheiden."
+            "explanationAfterAnswer": "Ein tragbarer Kredit kann Wachstum finanzieren; gefährlich wird er erst, wenn er nicht mehr bedient werden kann."
           },
           {
             "id": "q_vermoegen_schulden_eigenkapital_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Ein Unternehmen besitzt Vermögen für 8000 Euro und hat 3000 Euro Schulden. Wie hoch ist das Eigenkapital?",
             "points": 150,
-            "correctAnswer": "Die passenden Werte einsetzen, sauber rechnen und das Ergebnis im Kontext prüfen.",
+            "correctAnswer": "5000 Euro, weil man 8000 Euro minus 3000 Euro rechnet.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "11.000 Euro, weil man Vermögen und Schulden addiert.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "3000 Euro, weil nur die Schulden zählen.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "8000 Euro, weil die Schulden keine Rolle spielen.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "8000 minus 3000 ergibt 5000 Euro Eigenkapital – nur dieser Teil gehört wirklich dem Unternehmen."
           },
           {
             "id": "q_vermoegen_schulden_eigenkapital_005",
             "level": "master",
-            "question": "Welche Aussage zu „Vermögen, Schulden und Eigenkapital“ stimmt am besten?",
+            "question": "Welche Aussage über Vermögen, Schulden und Eigenkapital ist am treffendsten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Eigenkapital ist Vermögen minus Schulden; Schulden sind neutral und werden erst gefährlich, wenn sie nicht mehr tragbar sind.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Jedes Unternehmen mit Schulden ist automatisch schlecht aufgestellt.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Eigenkapital ist die Summe aus Vermögen und Schulden.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Schulden haben mit dem Eigenkapital nichts zu tun.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Entscheidend ist nicht, ob es Schulden gibt, sondern ob das Unternehmen sie im Verhältnis zu Vermögen und Cashflow tragen kann."
           }
         ],
         "calculationTemplates": [
@@ -1804,21 +1804,21 @@
               "schulden - vermoegen",
               "vermoegen"
             ],
-            "explanationTemplate": "Eigenkapital = Vermögen minus Schulden.",
+            "explanationTemplate": "Das Eigenkapital ergibt sich vereinfacht als Vermögen minus Schulden.",
             "unit": "Euro"
           }
         ],
         "teacherSupport": {
-          "competenceGoal": "Vermögen, Schulden und Eigenkapital vereinfacht unterscheiden.",
+          "competenceGoal": "Die vereinfachte Bilanzgleichung Eigenkapital = Vermögen − Schulden anwenden und Schulden differenziert einordnen.",
           "typicalMisconception": "Schulden bedeuten immer, dass ein Unternehmen schlecht ist.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Schulden bedeuten immer, dass ein Unternehmen schlecht ist.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Vermögen, Schulden und Eigenkapital“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "discussionPrompt": "Wann ist ein Kredit für ein Unternehmen eine gute Idee – und wann wird er zur Gefahr?",
+          "classroomActivity": "Die Klasse bearbeitet mehrere Betriebe mit Vermögen und Schulden, berechnet jeweils das Eigenkapital und diskutiert, bei welchem die Schuldenlast im Verhältnis noch tragbar wirkt."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Vermögen, Schulden und Eigenkapital“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Vermögen, Schulden und Eigenkapital“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Fragen Sie: Wenn dein Fahrrad 300 Euro wert ist, du es aber auf Pump gekauft hast – gehört es dann schon ganz dir?",
+          "everydayExercise": "Überlegen Sie gemeinsam an einem großen Anschaffungsbeispiel (Auto, Wohnung), was Vermögen und was Schulden wären – und wie viel davon wirklich Eigenkapital ist."
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_wettbewerb",
@@ -1831,11 +1831,11 @@
         ],
         "pedagogy": {
           "learningGoal": "Wettbewerb und Wettbewerbsvorteile verstehen.",
-          "coreIdea": "Wettbewerb bedeutet: Kunden haben Alternativen.",
-          "everydayScenario": "Drei Pizzerien konkurrieren über Geschmack, Preis, Lieferzeit und Bekanntheit.",
+          "coreIdea": "Wettbewerb bedeutet: Kunden haben Alternativen, und Unternehmen müssen einen Grund liefern, gerade bei ihnen zu kaufen.",
+          "everydayScenario": "Drei Pizzerien in einer Straße konkurrieren über Geschmack, Preis, Lieferzeit und Bekanntheit.",
           "misconception": "Ein bekanntes Unternehmen ist automatisch dauerhaft stark.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Wettbewerb und starke Unternehmen' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Wettbewerb und starke Unternehmen' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "transferTask": "Nenne zwei Anbieter, zwischen denen du dich zuletzt entschieden hast (z. B. zwei Läden oder zwei Apps). Was hat den Ausschlag gegeben – Preis, Qualität, Gewohnheit oder etwas anderes?",
+          "reflectionPrompt": "Warum kann selbst ein sehr bekanntes Unternehmen Kunden verlieren, wenn ein Konkurrent etwas deutlich besser macht?"
         },
         "glossaryTerms": [
           "Wettbewerb",
@@ -1853,139 +1853,139 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Wettbewerb und starke Unternehmen: Wettbewerb bedeutet: Kunden haben Alternativen. Beispiel: Drei Pizzerien konkurrieren über Geschmack, Preis, Lieferzeit und Bekanntheit. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Ein bekanntes Unternehmen ist automatisch dauerhaft stark.“.",
-          "young_adults": "Wettbewerb und starke Unternehmen: Wettbewerb bedeutet: Kunden haben Alternativen. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Drei Pizzerien konkurrieren über Geschmack, Preis, Lieferzeit und Bekanntheit.",
-          "parents_teachers": "Lernziel: Wettbewerb und Wettbewerbsvorteile verstehen. Didaktischer Fokus: Wettbewerb bedeutet: Kunden haben Alternativen. Typische Fehlvorstellung: „Ein bekanntes Unternehmen ist automatisch dauerhaft stark.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Wettbewerb heißt: Kunden können wählen. In einer Straße mit drei Pizzerien überlegt jeder, wo er bestellt – bei der günstigsten, der leckersten oder der schnellsten. Deshalb muss jedes Unternehmen einen Grund liefern, warum man gerade zu ihm kommt. Diesen Grund nennt man Wettbewerbsvorteil: besserer Geschmack, freundlicherer Service, ein Name, dem man vertraut. Aber Vorsicht: Nur weil ein Laden gerade bekannt und beliebt ist, bleibt das nicht für immer so. Wenn ein Konkurrent etwas besser macht, wandern Kunden ab. Stark bleibt nur, wer sich immer wieder anstrengt.",
+          "young_adults": "Wettbewerb bedeutet, dass Kunden Alternativen haben. Unternehmen setzen sich durch, wenn sie einen Wettbewerbsvorteil besitzen – etwas, das Konkurrenten nicht leicht kopieren können: eine starke Marke, überlegene Qualität, niedrigere Kosten, hohe Wechselkosten oder ein Netzwerkeffekt. Solche Vorteile stützen oft auch die Marge, weil man nicht nur über den Preis kämpfen muss. Entscheidend ist: Kein Vorteil hält von allein ewig. Bekanntheit von heute ist keine Garantie für morgen; Märkte verändern sich, und neue Anbieter greifen etablierte Firmen an. Wer Unternehmen einschätzt, fragt deshalb: Wie dauerhaft ist der Vorsprung?",
+          "parents_teachers": "Ziel ist das Verständnis von Wettbewerb (Kunden haben Alternativen) und Wettbewerbsvorteilen (schwer kopierbare Stärken). Die Fehlvorstellung „bekannt = dauerhaft stark“ verwechselt aktuellen Status mit nachhaltiger Position. Arbeiten Sie mit Beispielen einst dominanter, dann verdrängter Anbieter – neutral und ohne Wertung einzelner Firmen – um die zeitliche Dimension deutlich zu machen. Leitfrage: Woran erkennt man, ob ein Vorsprung von Dauer ist?"
         },
         "questions": [
           {
             "id": "q_wettbewerb_001",
             "level": "explain",
-            "question": "Was beschreibt „Wettbewerb und starke Unternehmen“ am besten?",
+            "question": "Was bedeutet Wettbewerb für ein Unternehmen?",
             "points": 100,
-            "correctAnswer": "Wettbewerb bedeutet: Kunden haben Alternativen.",
+            "correctAnswer": "Dass Kunden Alternativen haben und das Unternehmen einen Grund liefern muss, gerade bei ihm zu kaufen.",
             "distractors": [
               {
-                "text": "Ein bekanntes Unternehmen ist automatisch dauerhaft stark.",
+                "text": "Dass ein bekanntes Unternehmen für immer die Nummer eins bleibt.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Dass es keine anderen Anbieter für dasselbe Angebot gibt.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Dass der Preis überhaupt keine Rolle mehr spielt.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Wettbewerb bedeutet: Kunden haben Alternativen."
+            "explanationAfterAnswer": "Richtig: Wettbewerb heißt, Kunden können wählen – Unternehmen müssen sich diesen Zuspruch verdienen."
           },
           {
             "id": "q_wettbewerb_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Wettbewerb und starke Unternehmen“?",
+            "question": "Welches Beispiel beschreibt Wettbewerb am besten?",
             "points": 100,
-            "correctAnswer": "Drei Pizzerien konkurrieren über Geschmack, Preis, Lieferzeit und Bekanntheit.",
+            "correctAnswer": "Drei Pizzerien in einer Straße locken Kunden mit Geschmack, Preis und Lieferzeit.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Ein Verein sammelt Spenden für einen guten Zweck.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Ein einziger Bäcker versorgt ein ganzes Dorf ohne jede Konkurrenz.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Eine Familie kocht abends gemeinsam zu Hause.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Bei den drei Pizzerien haben Kunden echte Alternativen – genau das ist Wettbewerb."
           },
           {
             "id": "q_wettbewerb_003",
             "level": "understand",
-            "question": "Warum ist „Wettbewerb und starke Unternehmen“ für Finanzbildung wichtig?",
+            "question": "Warum kann selbst ein sehr bekanntes Unternehmen Kunden verlieren?",
             "points": 120,
-            "correctAnswer": "Wettbewerb und Wettbewerbsvorteile verstehen.",
+            "correctAnswer": "Weil Kunden abwandern, sobald ein Konkurrent etwas spürbar besser oder günstiger macht.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil Bekanntheit einen dauerhaften Vorsprung garantiert.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil Konkurrenz für große Firmen gar nicht existiert.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil bekannte Unternehmen ihre Kunden gesetzlich behalten dürfen.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Wettbewerb und Wettbewerbsvorteile verstehen."
+            "explanationAfterAnswer": "Ein Vorsprung muss immer wieder verteidigt werden – sonst gewinnt der bessere Konkurrent."
           },
           {
             "id": "q_wettbewerb_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Zwei Handyläden liegen nebeneinander. Laden A ist bekannter, Laden B bietet dasselbe günstiger und mit schnellerem Service. Was ist eine kluge Einschätzung?",
             "points": 150,
-            "correctAnswer": "Innehalten, Informationen prüfen und erst dann passend zum eigenen Ziel handeln.",
+            "correctAnswer": "Laden A muss sich anstrengen, denn Bekanntheit allein hält Kunden nicht, wenn B einen echten Vorteil bietet.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "Laden A gewinnt sicher, weil bekannte Läden immer vorne bleiben.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "Der Preisunterschied ist egal, es zählt nur der Name.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "Laden B kann keine Kunden gewinnen, weil er neuer ist.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "Ein besserer Preis und schnellerer Service sind echte Wettbewerbsvorteile, gegen die Bekanntheit allein nicht ausreicht."
           },
           {
             "id": "q_wettbewerb_005",
             "level": "master",
-            "question": "Welche Aussage zu „Wettbewerb und starke Unternehmen“ stimmt am besten?",
+            "question": "Welche Aussage über Wettbewerb und starke Unternehmen ist am treffendsten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Dauerhaft stark bleibt, wer einen schwer kopierbaren Vorteil hat und ihn ständig verteidigt – Bekanntheit allein genügt nicht.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Wer heute bekannt ist, bleibt automatisch für immer Marktführer.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Im Wettbewerb entscheidet ausschließlich der niedrigste Preis.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Wettbewerbsvorteile spielen für den Erfolg keine Rolle.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Nachhaltige Stärke kommt aus einem verteidigbaren Vorteil, nicht aus dem Status von gestern."
           }
         ],
         "calculationTemplates": [],
         "teacherSupport": {
-          "competenceGoal": "Wettbewerb und Wettbewerbsvorteile verstehen.",
+          "competenceGoal": "Wettbewerb als Wahlfreiheit der Kunden verstehen und dauerhafte Wettbewerbsvorteile von reiner Bekanntheit unterscheiden.",
           "typicalMisconception": "Ein bekanntes Unternehmen ist automatisch dauerhaft stark.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Ein bekanntes Unternehmen ist automatisch dauerhaft stark.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Wettbewerb und starke Unternehmen“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "discussionPrompt": "Kennt ihr eine Marke oder App, die früher überall war und heute kaum noch genutzt wird? Was ist passiert?",
+          "classroomActivity": "Die Klasse sammelt für zwei konkurrierende Angebote je drei mögliche Wettbewerbsvorteile und bewertet, welche davon leicht zu kopieren und welche wirklich dauerhaft sind."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Wettbewerb und starke Unternehmen“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Wettbewerb und starke Unternehmen“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Fragen Sie vor einem Kauf: Warum ausgerechnet dieser Anbieter und nicht ein anderer? Was macht er besser?",
+          "everydayExercise": "Vergleichen Sie mit Ihrem Kind zwei ähnliche Produkte im Regal und benennen Sie, womit jedes um Kunden wirbt (Preis, Qualität, Marke)."
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_unternehmen_scheitern",
@@ -1999,11 +1999,11 @@
         ],
         "pedagogy": {
           "learningGoal": "Gründe für Unternehmensrisiken und Scheitern verstehen.",
-          "coreIdea": "Unternehmen scheitern oft durch Nachfrageprobleme, Kosten, Cashflow, Schulden oder Konkurrenz.",
-          "everydayScenario": "Ein Laden verkauft zu wenig, um Miete, Personal und Kredite zu bezahlen.",
+          "coreIdea": "Unternehmen scheitern oft durch fehlende Nachfrage, zu hohe Kosten, Geldmangel, zu große Schulden oder starke Konkurrenz.",
+          "everydayScenario": "Ein Laden verkauft zu wenig, um Miete, Personal und Kredite zu bezahlen, und muss schließen.",
           "misconception": "Wenn ein Unternehmen bekannt ist, kann es nicht scheitern.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Warum Unternehmen scheitern können' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Warum Unternehmen scheitern können' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "transferTask": "Denke an ein Geschäft in deiner Nähe, das schließen musste. Überlege, welcher Grund es gewesen sein könnte: zu wenig Kunden, zu hohe Kosten oder starke Konkurrenz?",
+          "reflectionPrompt": "Warum ist es für dich als späteren Anleger wichtig zu wissen, dass auch große, bekannte Unternehmen scheitern können?"
         },
         "glossaryTerms": [
           "Scheitern",
@@ -2020,139 +2020,139 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Warum Unternehmen scheitern können: Unternehmen scheitern oft durch Nachfrageprobleme, Kosten, Cashflow, Schulden oder Konkurrenz. Beispiel: Ein Laden verkauft zu wenig, um Miete, Personal und Kredite zu bezahlen. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Wenn ein Unternehmen bekannt ist, kann es nicht scheitern.“.",
-          "young_adults": "Warum Unternehmen scheitern können: Unternehmen scheitern oft durch Nachfrageprobleme, Kosten, Cashflow, Schulden oder Konkurrenz. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Ein Laden verkauft zu wenig, um Miete, Personal und Kredite zu bezahlen.",
-          "parents_teachers": "Lernziel: Gründe für Unternehmensrisiken und Scheitern verstehen. Didaktischer Fokus: Unternehmen scheitern oft durch Nachfrageprobleme, Kosten, Cashflow, Schulden oder Konkurrenz. Typische Fehlvorstellung: „Wenn ein Unternehmen bekannt ist, kann es nicht scheitern.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Auch Unternehmen können scheitern – und zwar aus ganz unterschiedlichen Gründen. Vielleicht wollen zu wenige Leute das Angebot kaufen. Vielleicht sind die Kosten für Miete und Material höher als die Einnahmen. Vielleicht kommt das Geld von den Kunden zu spät, während die eigenen Rechnungen sofort bezahlt werden müssen. Oder ein Konkurrent macht es einfach besser. Wichtig ist: Auch ein bekanntes, großes Unternehmen kann in Schwierigkeiten geraten. Bekanntheit ist kein Schutzschild. Das zu wissen ist wichtig, wenn du später einmal Geld anlegst – denn dann verstehst du, warum man nie alles auf ein einziges Unternehmen setzen sollte.",
+          "young_adults": "Unternehmen scheitern selten aus einem einzigen Grund. Häufige Ursachen sind: wegbrechende Nachfrage, eine Kostenstruktur mit zu hohen Fixkosten, Liquiditätsengpässe (Geld fehlt kurzfristig, obwohl vielleicht Gewinn ausgewiesen wird), eine zu hohe Schuldenlast oder überlegene Konkurrenz. Diese Faktoren greifen die Bausteine aus diesem Block direkt an: Kundennutzen, Kosten, Cashflow, Schulden, Wettbewerb. Entscheidend ist die Einsicht, dass auch große und bekannte Unternehmen betroffen sein können – Bekanntheit ist keine Versicherung. Für dich als Anleger folgt daraus ein Kernprinzip: Weil jedes einzelne Unternehmen scheitern kann, streut man später sein Geld über viele Werte, statt alles auf eine Karte zu setzen.",
+          "parents_teachers": "Ziel ist ein realistisches Bild von Geschäftsrisiken: Nachfrage-, Kosten-, Liquiditäts-, Verschuldungs- und Wettbewerbsprobleme führen – oft im Zusammenspiel – zum Scheitern. Die Fehlvorstellung „bekannt = unangreifbar“ ist gefährlich, weil sie später zu Klumpenrisiken bei der Geldanlage verleiten kann. Verbinden Sie die Ursachen ausdrücklich mit den vorherigen Modulen und leiten Sie das Diversifikationsprinzip an, ohne konkrete Firmen zu bewerten oder Produkte zu empfehlen."
         },
         "questions": [
           {
             "id": "q_unternehmen_scheitern_001",
             "level": "explain",
-            "question": "Was beschreibt „Warum Unternehmen scheitern können“ am besten?",
+            "question": "Was ist ein häufiger Grund, warum Unternehmen scheitern?",
             "points": 100,
-            "correctAnswer": "Unternehmen scheitern oft durch Nachfrageprobleme, Kosten, Cashflow, Schulden oder Konkurrenz.",
+            "correctAnswer": "Es kommt zu wenig Nachfrage, Geld oder Gewinn herein, um die Kosten und Schulden zu decken.",
             "distractors": [
               {
-                "text": "Wenn ein Unternehmen bekannt ist, kann es nicht scheitern.",
+                "text": "Weil bekannte Unternehmen grundsätzlich nie scheitern können.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Weil es zu viele zufriedene Kunden hat.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Weil es ein neues Firmenschild aufhängt.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Unternehmen scheitern oft durch Nachfrageprobleme, Kosten, Cashflow, Schulden oder Konkurrenz."
+            "explanationAfterAnswer": "Richtig: Wenn Einnahmen dauerhaft nicht reichen, um Kosten und Schulden zu tragen, gerät ein Unternehmen in Gefahr."
           },
           {
             "id": "q_unternehmen_scheitern_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Warum Unternehmen scheitern können“?",
+            "question": "Welches Beispiel zeigt ein Unternehmen in echter Gefahr?",
             "points": 100,
             "correctAnswer": "Ein Laden verkauft zu wenig, um Miete, Personal und Kredite zu bezahlen.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Ein Laden bekommt eine gute Bewertung im Internet.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Ein Laden hat mehr Kunden als erwartet und muss nachbestellen.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Ein Laden stellt eine zusätzliche Aushilfe für den Ansturm ein.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Zu wenig Umsatz bei laufenden Kosten und Krediten ist ein typisches Warnzeichen fürs Scheitern."
           },
           {
             "id": "q_unternehmen_scheitern_003",
             "level": "understand",
-            "question": "Warum ist „Warum Unternehmen scheitern können“ für Finanzbildung wichtig?",
+            "question": "Warum schützt Bekanntheit ein Unternehmen nicht vor dem Scheitern?",
             "points": 120,
-            "correctAnswer": "Gründe für Unternehmensrisiken und Scheitern verstehen.",
+            "correctAnswer": "Weil auch bekannte Firmen an Nachfrage, Kosten, Cashflow, Schulden oder Konkurrenz scheitern können.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil Bekanntheit alle wirtschaftlichen Probleme automatisch löst.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil bekannte Firmen keine Kosten mehr haben.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil bekannte Firmen vom Staat vor jeder Pleite bewahrt werden.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Gründe für Unternehmensrisiken und Scheitern verstehen."
+            "explanationAfterAnswer": "Bekanntheit ändert nichts an den Grundrechnungen aus Umsatz, Kosten, Geldfluss und Wettbewerb."
           },
           {
             "id": "q_unternehmen_scheitern_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Du überlegst, dein ganzes Geld später in ein einziges, sehr bekanntes Unternehmen zu stecken. Was ist daran riskant?",
             "points": 150,
-            "correctAnswer": "Innehalten, Informationen prüfen und erst dann passend zum eigenen Ziel handeln.",
+            "correctAnswer": "Auch dieses Unternehmen kann scheitern, und dann wäre dein gesamtes Geld betroffen.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "Nichts, denn ein bekanntes Unternehmen kann nicht scheitern.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "Nur, dass bekannte Unternehmen langweilig sind.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "Nur, dass du dann keine Werbung mehr sehen würdest.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "Weil jedes einzelne Unternehmen scheitern kann, ist es klüger, sein Geld später über viele Werte zu streuen."
           },
           {
             "id": "q_unternehmen_scheitern_005",
             "level": "master",
-            "question": "Welche Aussage zu „Warum Unternehmen scheitern können“ stimmt am besten?",
+            "question": "Welche Aussage über das Scheitern von Unternehmen ist am treffendsten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Jedes Unternehmen trägt ein Risiko aus Nachfrage, Kosten, Cashflow, Schulden und Wettbewerb – auch bekannte; deshalb streut man später sein Geld.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Nur kleine, unbekannte Unternehmen können scheitern.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Wer in bekannte Unternehmen investiert, kann kein Geld verlieren.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Das Scheitern von Unternehmen hat mit Geldanlage nichts zu tun.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Aus dem allgemeinen Geschäftsrisiko folgt das wichtigste Anlegerprinzip: nicht alles auf ein einziges Unternehmen setzen."
           }
         ],
         "calculationTemplates": [],
         "teacherSupport": {
-          "competenceGoal": "Gründe für Unternehmensrisiken und Scheitern verstehen.",
+          "competenceGoal": "Ursachen für Unternehmensrisiken und Scheitern benennen und daraus das Prinzip der Streuung ableiten.",
           "typicalMisconception": "Wenn ein Unternehmen bekannt ist, kann es nicht scheitern.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Wenn ein Unternehmen bekannt ist, kann es nicht scheitern.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Warum Unternehmen scheitern können“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "discussionPrompt": "Welche bekannten Geschäfte in eurer Umgebung sind in den letzten Jahren verschwunden – und woran könnte es gelegen haben?",
+          "classroomActivity": "Die Klasse ordnet Fallbeschreibungen (kein Absatz, zu hohe Fixkosten, verspätete Zahlungen, zu viele Schulden, starke Konkurrenz) den passenden Scheiternsursachen zu und leitet ab, warum man Anlagen streut."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Warum Unternehmen scheitern können“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Warum Unternehmen scheitern können“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Fragen Sie: Warum könnte es riskant sein, sein ganzes Erspartes in eine einzige Firma zu stecken – selbst wenn sie sehr bekannt ist?",
+          "everydayExercise": "Sprechen Sie über ein Geschäft, das geschlossen hat, und sammeln Sie gemeinsam mögliche Gründe. So wird greifbar, dass wirtschaftlicher Erfolg nie garantiert ist."
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       }
     ]
   }

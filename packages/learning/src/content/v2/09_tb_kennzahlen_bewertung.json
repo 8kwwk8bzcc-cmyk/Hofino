@@ -11,8 +11,8 @@
     "id": "tb_kennzahlen_bewertung",
     "title": "Kennzahlen und Bewertung",
     "unlockLevel": 38,
-    "goal": "Lernende verstehen einfache Bewertungskennzahlen und deren Grenzen.",
-    "pedagogicalIdea": "Dieser Vertiefungsblock vermittelt Kennzahlen als Denkwerkzeuge, nicht als Kauf- oder Verkaufssignale.",
+    "goal": "Lernende verstehen die wichtigsten Bewertungskennzahlen — vom Gewinn je Aktie über KGV und Dividendenrendite bis zur Verschuldung — und kennen deren Grenzen.",
+    "pedagogicalIdea": "Dieser Vertiefungsblock vermittelt Kennzahlen als Denkwerkzeuge: Sie helfen, Unternehmen einzuordnen und die richtigen Fragen zu stellen — sie sind niemals Kauf- oder Verkaufssignale.",
     "difficulty": "advanced",
     "modules": [
       {
@@ -26,12 +26,12 @@
           "konzept_gute_firma_fallender_kurs"
         ],
         "pedagogy": {
-          "learningGoal": "Preis und Wert unterscheiden.",
-          "coreIdea": "Der Preis ist, was man bezahlt; der Wert ist, was man dafür bekommt.",
-          "everydayScenario": "Ein Fahrrad kostet 900 Euro; ob es diesen Preis wert ist, muss geprüft werden.",
-          "misconception": "Wenn eine Aktie teuer ist, ist das Unternehmen automatisch besser.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Preis vs. Wert' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Preis vs. Wert' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "learningGoal": "Preis und Wert unterscheiden und diese Unterscheidung auf Aktienkurse übertragen.",
+          "coreIdea": "Der Preis ist, was man bezahlt; der Wert ist, was man dafür bekommt — beides kann auseinanderlaufen.",
+          "everydayScenario": "Ein Fahrrad kostet 900 Euro — ob es das wert ist, zeigt erst der Blick auf Qualität, Zustand und Nutzen, nicht das Preisschild.",
+          "misconception": "Eine Aktie mit hohem Kurs gehört automatisch zu einem besseren oder wertvolleren Unternehmen als eine Aktie mit niedrigem Kurs.",
+          "transferTask": "Vergleiche zwei Produkte mit gleichem Preis (z. B. zwei Rucksäcke für 60 Euro): Welches bietet mehr Wert und woran machst du das fest? Übertrage das dann auf zwei Aktien mit gleichem Kurs.",
+          "reflectionPrompt": "Aktie A kostet 800 Euro, Aktie B kostet 8 Euro. Warum sagt dir dieser Unterschied allein noch nichts darüber, welches Unternehmen wertvoller oder besser ist?"
         },
         "glossaryTerms": [
           "Preis",
@@ -49,139 +49,139 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Preis vs. Wert: Der Preis ist, was man bezahlt; der Wert ist, was man dafür bekommt. Beispiel: Ein Fahrrad kostet 900 Euro; ob es diesen Preis wert ist, muss geprüft werden. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Wenn eine Aktie teuer ist, ist das Unternehmen automatisch besser.“.",
-          "young_adults": "Preis vs. Wert: Der Preis ist, was man bezahlt; der Wert ist, was man dafür bekommt. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Ein Fahrrad kostet 900 Euro; ob es diesen Preis wert ist, muss geprüft werden.",
-          "parents_teachers": "Lernziel: Preis und Wert unterscheiden. Didaktischer Fokus: Der Preis ist, was man bezahlt; der Wert ist, was man dafür bekommt. Typische Fehlvorstellung: „Wenn eine Aktie teuer ist, ist das Unternehmen automatisch besser.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Stell dir zwei Fahrräder vor: Eines kostet 900 Euro, das andere 300 Euro. Ist das teure automatisch das bessere? Nicht unbedingt — der Preis ist nur das, was auf dem Schild steht. Der Wert ist das, was du wirklich dafür bekommst: Qualität, Haltbarkeit und wie gut es zu dir passt. Bei Aktien ist es genauso: Der Kurs ist das Preisschild, der Wert steckt im Unternehmen dahinter. Eine Aktie für 800 Euro kann zu einem schwächeren Unternehmen gehören als eine für 8 Euro. Kluge Anleger fragen deshalb immer: Was bekomme ich eigentlich für diesen Preis?",
+          "young_adults": "Der Preis einer Aktie ist ihr Kurs — er entsteht laufend neu aus Angebot und Nachfrage. Der Wert ist etwas anderes: das Geschäft dahinter, also Gewinne, Wachstumschancen und Risiken des Unternehmens. Ein Kurs von 500 Euro sagt allein nichts aus, denn er hängt auch davon ab, in wie viele Aktien ein Unternehmen aufgeteilt ist. Deshalb vergleicht man nie nackte Kurse, sondern setzt den Preis ins Verhältnis — zum Beispiel zum Gewinn je Aktie. Preis und Wert können zeitweise deutlich auseinanderlaufen: In Hype-Phasen zahlen Anleger zu viel, in Panikphasen zu wenig. Genau aus diesem Unterschied entstehen die Kennzahlen, die du in diesem Block kennenlernst.",
+          "parents_teachers": "Die Unterscheidung von Preis und Wert ist das Fundament jeder Bewertungslehre: Der Kurs ist ein Marktpreis aus Angebot und Nachfrage, der Wert eine Einschätzung der wirtschaftlichen Substanz und Zukunftsaussichten eines Unternehmens. Ein hoher Aktienkurs signalisiert keine Qualität — er hängt unter anderem von der Anzahl ausgegebener Aktien ab; vergleichbar wird ein Unternehmen erst über die Marktkapitalisierung (Kurs × Aktienanzahl) und relative Kennzahlen. Wichtig ist zudem: Preis und Wert können längere Zeit voneinander abweichen, und den „wahren Wert“ kennt niemand exakt — Bewertung bleibt begründetes Einschätzen, kein Ausrechnen. Didaktischer Hinweis: Lassen Sie Lernende zuerst Alltagsprodukte mit gleichem Preis, aber unterschiedlichem Nutzen vergleichen — der Transfer auf Aktienkurse gelingt danach deutlich leichter."
         },
         "questions": [
           {
             "id": "q_preis_vs_wert_001",
             "level": "explain",
-            "question": "Was beschreibt „Preis vs. Wert“ am besten?",
+            "question": "Was ist der Unterschied zwischen Preis und Wert einer Aktie?",
             "points": 100,
-            "correctAnswer": "Der Preis ist, was man bezahlt; der Wert ist, was man dafür bekommt.",
+            "correctAnswer": "Der Preis ist der Kurs, den man an der Börse bezahlt; der Wert beschreibt, was das Unternehmen dahinter wirtschaftlich wirklich bietet.",
             "distractors": [
               {
-                "text": "Wenn eine Aktie teuer ist, ist das Unternehmen automatisch besser.",
+                "text": "Preis und Wert sind dasselbe — der Kurs zeigt jederzeit exakt, was ein Unternehmen wert ist.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Eine Aktie mit hohem Kurs gehört immer zu einem besseren Unternehmen als eine mit niedrigem Kurs.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Der Wert einer Aktie ist die Ordergebühr, die man beim Kauf bezahlt.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Der Preis ist, was man bezahlt; der Wert ist, was man dafür bekommt."
+            "explanationAfterAnswer": "Der Kurs ist nur das Preisschild — was du dafür bekommst, steckt im Unternehmen. Beides kann zeitweise deutlich auseinanderlaufen."
           },
           {
             "id": "q_preis_vs_wert_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Preis vs. Wert“?",
+            "question": "In welcher Situation wird der Unterschied zwischen Preis und Wert am deutlichsten?",
             "points": 100,
-            "correctAnswer": "Ein Fahrrad kostet 900 Euro; ob es diesen Preis wert ist, muss geprüft werden.",
+            "correctAnswer": "Ein Fahrrad kostet 900 Euro — erst der Blick auf Qualität, Zustand und Nutzen zeigt, ob es diesen Preis wert ist.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Jemand kauft immer das billigste Fahrrad, weil der niedrigste Preis automatisch die beste Wahl ist.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Jemand hält das teuerste Fahrrad im Laden für das beste, ohne es überhaupt anzuschauen.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Jemand vergleicht die Farben zweier Fahrräder, um herauszufinden, welches wertvoller ist.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Das Preisschild allein beantwortet die Wertfrage nie — geprüft wird, was man für den Preis tatsächlich bekommt."
           },
           {
             "id": "q_preis_vs_wert_003",
             "level": "understand",
-            "question": "Warum ist „Preis vs. Wert“ für Finanzbildung wichtig?",
+            "question": "Warum ist es beim Investieren wichtig, Preis und Wert zu unterscheiden?",
             "points": 120,
-            "correctAnswer": "Preis und Wert unterscheiden.",
+            "correctAnswer": "Weil der Kurs allein nicht verrät, ob man für sein Geld ein starkes oder ein schwaches Unternehmen bekommt.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil man mit dieser Unterscheidung sicher erkennt, welche Aktie garantiert steigen wird.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil man den Wert eines Unternehmens direkt am heutigen Kurs ablesen kann.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil Preis und Wert nur bei Sammlerstücken eine Rolle spielen, nicht bei Aktien.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Preis und Wert unterscheiden."
+            "explanationAfterAnswer": "Wer nur auf den Kurs schaut, kauft blind. Erst der Vergleich von Preis und Unternehmenssubstanz macht eine Einschätzung möglich — eine Garantie gibt es trotzdem nie."
           },
           {
             "id": "q_preis_vs_wert_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Aktie A kostet 400 Euro, Aktie B kostet 40 Euro. Was kannst du allein daraus schließen?",
             "points": 150,
-            "correctAnswer": "Innehalten, Informationen prüfen und erst dann passend zum eigenen Ziel handeln.",
+            "correctAnswer": "Noch nichts — erst weitere Informationen wie Gewinn und Aktienanzahl zeigen, was hinter den beiden Kursen steckt.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "Aktie B ist die günstigere Gelegenheit, weil sie zehnmal weniger kostet.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "Aktie A gehört zum wertvolleren Unternehmen, weil ihr Kurs höher ist.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "Beide Unternehmen sind ungefähr gleich viel wert, weil beide an der Börse gehandelt werden.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "Der Kurs hängt auch davon ab, in wie viele Aktien eine Firma aufgeteilt ist. Ohne Zusatzinformationen ist ein Kursvergleich wertlos."
           },
           {
             "id": "q_preis_vs_wert_005",
             "level": "master",
-            "question": "Welche Aussage zu „Preis vs. Wert“ stimmt am besten?",
+            "question": "Welche Aussage über Preis und Wert ist am genauesten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Der Kurs entsteht aus Angebot und Nachfrage und kann zeitweise über oder unter dem liegen, was ein Unternehmen wirtschaftlich wert ist.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Wer Preis und Wert unterscheidet, kann den fairen Wert einer Aktie exakt ausrechnen.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Preis und Wert sind auf Dauer immer identisch, deshalb lohnt sich die getrennte Betrachtung nicht.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Der Wert eines Unternehmens ändert sich nie — nur der Preis schwankt.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Den „wahren Wert“ kennt niemand exakt — Bewertung ist begründetes Einschätzen. Kurse pendeln um diesen Wert, treffen ihn aber nicht jederzeit."
           }
         ],
         "calculationTemplates": [],
         "teacherSupport": {
-          "competenceGoal": "Preis und Wert unterscheiden.",
-          "typicalMisconception": "Wenn eine Aktie teuer ist, ist das Unternehmen automatisch besser.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Wenn eine Aktie teuer ist, ist das Unternehmen automatisch besser.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Preis vs. Wert“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "competenceGoal": "Preis und Wert unterscheiden und die Unterscheidung auf Aktienkurse übertragen können.",
+          "typicalMisconception": "Eine Aktie mit hohem Kurs gehört automatisch zu einem besseren Unternehmen als eine mit niedrigem Kurs.",
+          "discussionPrompt": "Aktie A kostet 800 Euro, Aktie B kostet 8 Euro. Sammeln Sie an der Tafel: Welche Informationen bräuchten wir wirklich, um die beiden Unternehmen zu vergleichen?",
+          "classroomActivity": "Preisschild-Experiment: Zwei ähnliche Produkte (z. B. zwei Trinkflaschen) mit vertauschten Fantasiepreisen auslegen. Die Lernenden begründen in Kleingruppen, welches Produkt den Preis eher wert ist — und übertragen ihre Kriterienliste anschließend auf Aktien."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Preis vs. Wert“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Preis vs. Wert“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Wann haben wir zuletzt etwas gekauft, das seinen Preis nicht wert war — und woran haben wir das gemerkt?",
+          "everydayExercise": "Beim nächsten Einkauf gemeinsam zwei Produkte mit gleichem Preis vergleichen: Welches bietet mehr fürs Geld? Danach überlegen: Wie würde man dieselbe Frage bei einer Aktie stellen?"
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_gewinn_je_aktie",
@@ -194,12 +194,12 @@
           "konzept_eigentum_am_unternehmen"
         ],
         "pedagogy": {
-          "learningGoal": "Gewinn je Aktie als rechnerischen Gewinnanteil pro Aktie verstehen.",
-          "coreIdea": "Gewinn je Aktie = Gewinn geteilt durch Anzahl der Aktien.",
-          "everydayScenario": "1.000 Euro Gewinn und 100 Aktien ergeben 10 Euro Gewinn je Aktie.",
-          "misconception": "Wenn ein Unternehmen Gewinn macht, bekommt jeder Aktionär diesen Betrag automatisch ausgezahlt.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Gewinn je Aktie' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Gewinn je Aktie' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "learningGoal": "Gewinn je Aktie als rechnerischen Gewinnanteil pro Aktie verstehen und berechnen.",
+          "coreIdea": "Gewinn je Aktie = Gewinn geteilt durch Anzahl der Aktien — eine Rechengröße, kein Auszahlungsanspruch.",
+          "everydayScenario": "1.000 Euro Gewinn und 100 Aktien ergeben 10 Euro Gewinn je Aktie — ausgezahlt wird davon nur, was das Unternehmen als Dividende beschließt.",
+          "misconception": "Wenn ein Unternehmen Gewinn macht, wird der Gewinn je Aktie automatisch an jeden Aktionär ausgezahlt.",
+          "transferTask": "Rechne selbst: Ein Unternehmen macht 5.000 Euro Gewinn und hat 500 Aktien. Bestimme den Gewinn je Aktie und erkläre in zwei Sätzen, warum dieser Betrag nicht automatisch auf dem Konto der Aktionäre landet.",
+          "reflectionPrompt": "Ein Unternehmen verdoppelt seinen Gewinn, gibt aber gleichzeitig doppelt so viele Aktien aus. Was passiert mit dem Gewinn je Aktie — und warum ist das für Aktionäre wichtig?"
         },
         "glossaryTerms": [
           "Gewinn je Aktie",
@@ -216,125 +216,125 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Gewinn je Aktie: Gewinn je Aktie = Gewinn geteilt durch Anzahl der Aktien. Beispiel: 1.000 Euro Gewinn und 100 Aktien ergeben 10 Euro Gewinn je Aktie. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Wenn ein Unternehmen Gewinn macht, bekommt jeder Aktionär diesen Betrag automatisch ausgezahlt.“.",
-          "young_adults": "Gewinn je Aktie: Gewinn je Aktie = Gewinn geteilt durch Anzahl der Aktien. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: 1.000 Euro Gewinn und 100 Aktien ergeben 10 Euro Gewinn je Aktie.",
-          "parents_teachers": "Lernziel: Gewinn je Aktie als rechnerischen Gewinnanteil pro Aktie verstehen. Didaktischer Fokus: Gewinn je Aktie = Gewinn geteilt durch Anzahl der Aktien. Typische Fehlvorstellung: „Wenn ein Unternehmen Gewinn macht, bekommt jeder Aktionär diesen Betrag automatisch ausgezahlt.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Ein Unternehmen gehört vielen Menschen gemeinsam — jede Aktie ist ein kleines Stück davon. Der Gewinn je Aktie zeigt, wie viel vom Jahresgewinn rechnerisch auf ein einzelnes Stück entfällt. Die Rechnung ist einfach: Gewinn geteilt durch die Anzahl aller Aktien. Macht eine Firma 1.000 Euro Gewinn und hat 100 Aktien, sind das 10 Euro je Aktie. Aber Achtung: Dieses Geld landet nicht automatisch auf deinem Konto! Das Unternehmen entscheidet, ob es einen Teil als Dividende auszahlt oder damit zum Beispiel neue Maschinen kauft. Der Gewinn je Aktie ist also eine Rechenhilfe — wie Tore pro Spiel beim Fußball, nicht wie Taschengeld.",
+          "young_adults": "Der Gewinn je Aktie (englisch EPS, Earnings per Share) ist der Jahresgewinn geteilt durch die Anzahl der Aktien. In Worten gerechnet: 1.000 Euro Gewinn bei 100 Aktien ergeben 10 Euro je Aktie. Wichtig: Das ist eine Rechengröße, kein Auszahlungsanspruch — das Unternehmen kann den Gewinn einbehalten, investieren oder teilweise als Dividende ausschütten. Der Gewinn je Aktie macht Unternehmen unterschiedlicher Größe vergleichbar und ist die Basis für das KGV im nächsten Modul. Behalte außerdem die Aktienanzahl im Blick: Gibt ein Unternehmen neue Aktien aus, verteilt sich derselbe Gewinn auf mehr Anteile — der Gewinn je Aktie sinkt. Das nennt man Verwässerung.",
+          "parents_teachers": "Der Gewinn je Aktie (EPS) normiert den Jahresüberschuss auf eine einzelne Aktie: Gewinn geteilt durch die Anzahl ausstehender Aktien. Er ist die Grundlage des KGV und macht Ertragskraft über Unternehmensgrößen hinweg vergleichbar. Zwei Punkte verdienen besondere Aufmerksamkeit: Erstens ist der EPS kein Auszahlungsanspruch — über Ausschüttung oder Einbehaltung entscheidet das Unternehmen. Zweitens verändert die Aktienanzahl den Wert: Kapitalerhöhungen verwässern den EPS, Aktienrückkäufe erhöhen ihn, ohne dass der Gesamtgewinn wachsen muss. Didaktischer Hinweis: Die häufigste Fehlvorstellung ist die automatische Auszahlung des Gewinns — eine Pizza-Analogie (Gewinn als ganze Pizza, Aktien als Stücke, Auszahlung als separate Entscheidung) räumt sie zuverlässig aus."
         },
         "questions": [
           {
             "id": "q_gewinn_je_aktie_001",
             "level": "explain",
-            "question": "Was beschreibt „Gewinn je Aktie“ am besten?",
+            "question": "Wie wird der Gewinn je Aktie berechnet?",
             "points": 100,
-            "correctAnswer": "Gewinn je Aktie = Gewinn geteilt durch Anzahl der Aktien.",
+            "correctAnswer": "Man teilt den Gewinn des Unternehmens durch die Anzahl aller Aktien.",
             "distractors": [
               {
-                "text": "Wenn ein Unternehmen Gewinn macht, bekommt jeder Aktionär diesen Betrag automatisch ausgezahlt.",
+                "text": "Der Gewinn je Aktie ist der Betrag, den jeder Aktionär automatisch pro Aktie ausgezahlt bekommt.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Der Gewinn je Aktie ist der Kurs, den man an der Börse für eine Aktie bezahlt.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Der Gewinn je Aktie zählt, wie viele Aktien ein Unternehmen pro Jahr verkauft.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Gewinn je Aktie = Gewinn geteilt durch Anzahl der Aktien."
+            "explanationAfterAnswer": "Gewinn geteilt durch Aktienanzahl — mehr steckt nicht dahinter. Ausgezahlt wird dieser Betrag aber nicht automatisch."
           },
           {
             "id": "q_gewinn_je_aktie_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Gewinn je Aktie“?",
+            "question": "Welches Beispiel zeigt den Gewinn je Aktie richtig?",
             "points": 100,
-            "correctAnswer": "1.000 Euro Gewinn und 100 Aktien ergeben 10 Euro Gewinn je Aktie.",
+            "correctAnswer": "Ein Unternehmen macht 1.000 Euro Gewinn und hat 100 Aktien — der Gewinn je Aktie beträgt 10 Euro.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Ein Unternehmen macht 1.000 Euro Gewinn und hat 100 Aktien — der Gewinn je Aktie beträgt 100 Euro.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Ein Unternehmen macht 1.000 Euro Gewinn und hat 100 Aktien — jeder Aktionär bekommt 10 Euro pro Aktie überwiesen.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Ein Unternehmen macht 1.000 Euro Gewinn und hat 100 Aktien — der Gewinn je Aktie beträgt 0,10 Euro.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "1.000 geteilt durch 100 ergibt 10 Euro je Aktie. Ob und wie viel davon als Dividende fließt, ist eine eigene Entscheidung des Unternehmens."
           },
           {
             "id": "q_gewinn_je_aktie_003",
             "level": "understand",
-            "question": "Warum ist „Gewinn je Aktie“ für Finanzbildung wichtig?",
+            "question": "Warum schaut man auf den Gewinn je Aktie statt nur auf den Gesamtgewinn?",
             "points": 120,
-            "correctAnswer": "Gewinn je Aktie als rechnerischen Gewinnanteil pro Aktie verstehen.",
+            "correctAnswer": "Weil der Gesamtgewinn erst im Verhältnis zur Aktienanzahl zeigt, wie viel Gewinn auf einen einzelnen Anteil entfällt.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil ein hoher Gewinn je Aktie garantiert, dass der Kurs der Aktie steigt.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil der Gewinn je Aktie vorschreibt, wie viel Dividende ein Unternehmen zahlen muss.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil der Gewinn je Aktie festlegt, wie viele Aktien man höchstens kaufen darf.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Gewinn je Aktie als rechnerischen Gewinnanteil pro Aktie verstehen."
+            "explanationAfterAnswer": "Ein Milliardengewinn kann auf wenige oder auf sehr viele Aktien verteilt sein. Erst pro Aktie gerechnet werden Unternehmen vergleichbar."
           },
           {
             "id": "q_gewinn_je_aktie_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Ein Unternehmen macht 1.200 Euro Gewinn und hat 400 Aktien. Wie hoch ist der Gewinn je Aktie?",
             "points": 150,
-            "correctAnswer": "Die passenden Werte einsetzen, sauber rechnen und das Ergebnis im Kontext prüfen.",
+            "correctAnswer": "3 Euro, denn 1.200 Euro geteilt durch 400 Aktien ergibt 3 Euro je Aktie.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "3 Euro, die jedem Aktionär pro Aktie automatisch überwiesen werden.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "1.200 Euro, denn der volle Gewinn steht jedem einzelnen Aktionär zu.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "0,33 Euro, denn man teilt die Aktienanzahl durch den Gewinn.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "1.200 ÷ 400 = 3 Euro je Aktie. Das ist eine Rechengröße — ob davon etwas ausgeschüttet wird, entscheidet das Unternehmen."
           },
           {
             "id": "q_gewinn_je_aktie_005",
             "level": "master",
-            "question": "Welche Aussage zu „Gewinn je Aktie“ stimmt am besten?",
+            "question": "Welche Aussage zum Gewinn je Aktie ist am genauesten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Er zeigt den rechnerischen Gewinnanteil pro Aktie — wie viel davon ausgeschüttet oder investiert wird, entscheidet das Unternehmen.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Steigt der Gewinn je Aktie, hat sich das Geschäft des Unternehmens in jedem Fall verbessert.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Der Gewinn je Aktie wird am Jahresende automatisch auf die Konten der Aktionäre überwiesen.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Ein Unternehmen mit mehr Aktien hat automatisch auch einen höheren Gewinn je Aktie.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Der Gewinn je Aktie kann auch steigen, wenn ein Unternehmen eigene Aktien zurückkauft — ganz ohne besseres Geschäft. Deshalb immer fragen, woher die Veränderung kommt."
           }
         ],
         "calculationTemplates": [
@@ -342,7 +342,7 @@
             "id": "tmpl_eps",
             "level": "apply",
             "points": 150,
-            "questionTemplate": "Ein Unternehmen macht {gewinn} Euro Gewinn und hat {aktien} Aktien. Wie hoch ist der Gewinn je Aktie?",
+            "questionTemplate": "Ein Unternehmen erzielt {gewinn} Euro Gewinn und hat {aktien} Aktien ausgegeben. Wie hoch ist der Gewinn je Aktie?",
             "parameters": {
               "gewinn": {
                 "min": 100,
@@ -359,21 +359,21 @@
               "gewinn + aktien",
               "aktien / gewinn"
             ],
-            "explanationTemplate": "Gewinn je Aktie = Gewinn geteilt durch Anzahl der Aktien.",
+            "explanationTemplate": "Gewinn je Aktie = Gewinn geteilt durch Aktienanzahl. Der Betrag ist eine Rechengröße — ausgezahlt wird er nicht automatisch.",
             "unit": "Euro"
           }
         ],
         "teacherSupport": {
-          "competenceGoal": "Gewinn je Aktie als rechnerischen Gewinnanteil pro Aktie verstehen.",
-          "typicalMisconception": "Wenn ein Unternehmen Gewinn macht, bekommt jeder Aktionär diesen Betrag automatisch ausgezahlt.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Wenn ein Unternehmen Gewinn macht, bekommt jeder Aktionär diesen Betrag automatisch ausgezahlt.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Gewinn je Aktie“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "competenceGoal": "Gewinn je Aktie berechnen und als Rechengröße (nicht als Auszahlungsanspruch) einordnen können.",
+          "typicalMisconception": "Wenn ein Unternehmen Gewinn macht, wird der Gewinn je Aktie automatisch an jeden Aktionär ausgezahlt.",
+          "discussionPrompt": "Ein Unternehmen macht 10 Euro Gewinn je Aktie, zahlt aber nur 2 Euro Dividende. Ist das unfair gegenüber den Aktionären — oder kann das sogar in ihrem Interesse sein?",
+          "classroomActivity": "Pizza-Übung: Eine gezeichnete Pizza (Jahresgewinn) wird in so viele Stücke geteilt, wie es Aktien gibt. Danach entscheidet die Klasse als „Vorstand“, wie viele Stücke ausgeschüttet und wie viele investiert werden — und begründet die Wahl."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Gewinn je Aktie“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Gewinn je Aktie“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Wenn unser Haushalt am Monatsende 100 Euro übrig hat — geben wir alles aus, oder legen wir etwas für später zurück? Unternehmen stehen mit ihrem Gewinn vor derselben Frage.",
+          "everydayExercise": "Zusammen ein Mini-Beispiel rechnen: Der Limonadenstand macht 30 Euro Gewinn, drei Familienmitglieder halten je einen Anteil. Wie viel Gewinn entfällt auf jeden Anteil — und was könnte man auszahlen oder in neue Zutaten stecken?"
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_kgv",
@@ -385,12 +385,12 @@
           "konzept_gewinn_je_aktie"
         ],
         "pedagogy": {
-          "learningGoal": "KGV als Verhältnis von Aktienkurs zu Gewinn je Aktie verstehen.",
-          "coreIdea": "Das KGV zeigt, wie viele Euro Anleger für 1 Euro Gewinn je Aktie bezahlen.",
-          "everydayScenario": "Eine Aktie kostet 100 Euro und verdient 5 Euro je Aktie; KGV = 20.",
-          "misconception": "Ein niedriges KGV bedeutet automatisch: gute Aktie.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'KGV – Kurs-Gewinn-Verhältnis' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'KGV – Kurs-Gewinn-Verhältnis' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "learningGoal": "KGV als Verhältnis von Aktienkurs zu Gewinn je Aktie verstehen, berechnen und vorsichtig interpretieren.",
+          "coreIdea": "Das KGV zeigt, wie viele Euro Anleger für einen Euro Jahresgewinn je Aktie bezahlen — es ist eine Frage-Maschine, kein Kaufsignal.",
+          "everydayScenario": "Eine Aktie kostet 100 Euro und verdient 5 Euro je Aktie: KGV = 20 — Anleger zahlen 20 Euro für jeden Euro Gewinn.",
+          "misconception": "Ein niedriges KGV bedeutet automatisch, dass eine Aktie günstig ist und man sie kaufen sollte.",
+          "transferTask": "Berechne das KGV für zwei fiktive Firmen: Firma A (Kurs 80 Euro, Gewinn je Aktie 4 Euro) und Firma B (Kurs 30 Euro, Gewinn je Aktie 1 Euro). Erkläre, warum die optisch billigere Aktie das höhere KGV hat.",
+          "reflectionPrompt": "Eine Aktie hat ein KGV von 6, eine andere ein KGV von 25. Welche Gründe könnte der Markt haben, für die zweite so viel mehr je Euro Gewinn zu bezahlen — und welche Gründe für das niedrige KGV der ersten?"
         },
         "glossaryTerms": [
           "KGV",
@@ -407,125 +407,125 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "KGV – Kurs-Gewinn-Verhältnis: Das KGV zeigt, wie viele Euro Anleger für 1 Euro Gewinn je Aktie bezahlen. Beispiel: Eine Aktie kostet 100 Euro und verdient 5 Euro je Aktie; KGV = 20. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Ein niedriges KGV bedeutet automatisch: gute Aktie.“.",
-          "young_adults": "KGV – Kurs-Gewinn-Verhältnis: Das KGV zeigt, wie viele Euro Anleger für 1 Euro Gewinn je Aktie bezahlen. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Eine Aktie kostet 100 Euro und verdient 5 Euro je Aktie; KGV = 20.",
-          "parents_teachers": "Lernziel: KGV als Verhältnis von Aktienkurs zu Gewinn je Aktie verstehen. Didaktischer Fokus: Das KGV zeigt, wie viele Euro Anleger für 1 Euro Gewinn je Aktie bezahlen. Typische Fehlvorstellung: „Ein niedriges KGV bedeutet automatisch: gute Aktie.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Beim Fußballer schaust du auf Tore pro Spiel — bei Aktien gibt es das KGV, das Kurs-Gewinn-Verhältnis. Es verrät, wie viele Euro du für einen Euro Jahresgewinn bezahlst. Die Rechnung: Kurs geteilt durch Gewinn je Aktie. Kostet eine Aktie 100 Euro und verdient das Unternehmen 5 Euro je Aktie, ist das KGV 20 — du zahlst also 20 Euro für jeden Euro Gewinn. Ein hohes KGV heißt oft: Die Anleger erwarten, dass die Gewinne stark wachsen. Ein niedriges KGV heißt nicht automatisch „Schnäppchen“ — vielleicht trauen die Anleger dem Unternehmen einfach wenig zu. Das KGV ist ein Werkzeug zum Nachdenken, kein Kaufknopf.",
+          "young_adults": "Das Kurs-Gewinn-Verhältnis (KGV) berechnest du, indem du den Aktienkurs durch den Gewinn je Aktie teilst. Beispiel: 100 Euro Kurs geteilt durch 5 Euro Gewinn je Aktie ergibt ein KGV von 20 — Anleger zahlen 20 Euro für jeden Euro Jahresgewinn. Grob gelesen: Bliebe der Gewinn konstant, würde es rechnerisch 20 Jahre dauern, bis das Unternehmen seinen Kaufpreis „verdient“ hätte. Wachstumsunternehmen haben oft hohe KGVs, weil der Markt steigende Gewinne einpreist; ein niedriges KGV kann günstige Bewertung oder erwartete Probleme bedeuten. Zwei Grenzen musst du kennen: Bei Verlustfirmen gibt es kein sinnvolles KGV, und Vergleiche funktionieren nur innerhalb ähnlicher Branchen. Das KGV liefert dir also eine gute Frage — nie eine fertige Antwort.",
+          "parents_teachers": "Das KGV (Kurs je Aktie geteilt durch Gewinn je Aktie) ist die bekannteste Bewertungskennzahl: Es gibt an, mit dem Wievielfachen des Jahresgewinns der Markt ein Unternehmen bepreist. Zur Interpretation: Hohe KGVs spiegeln häufig hohe Wachstumserwartungen, niedrige KGVs entweder eine günstige Bewertung oder erwartete Gewinnrückgänge — das KGV allein trennt beides nicht. Wesentliche Grenzen sind die starke Branchenabhängigkeit (Software vs. Automobil), die Verzerrung durch Einmaleffekte im Gewinn sowie die fehlende Aussagekraft bei Verlustunternehmen, für die kein sinnvolles KGV existiert. Didaktischer Hinweis: Thematisieren Sie explizit die Fehlvorstellung „niedriges KGV = kaufen“ — etwa anhand zweier fiktiver Firmen mit gleichem KGV, aber völlig unterschiedlichen Zukunftsaussichten. In Hofino dienen Kennzahlen dem Verstehen, nie als Kaufsignal."
         },
         "questions": [
           {
             "id": "q_kgv_001",
             "level": "explain",
-            "question": "Was beschreibt „KGV – Kurs-Gewinn-Verhältnis“ am besten?",
+            "question": "Was sagt das Kurs-Gewinn-Verhältnis (KGV) aus?",
             "points": 100,
-            "correctAnswer": "Das KGV zeigt, wie viele Euro Anleger für 1 Euro Gewinn je Aktie bezahlen.",
+            "correctAnswer": "Es zeigt, wie viele Euro Anleger für einen Euro Jahresgewinn je Aktie bezahlen.",
             "distractors": [
               {
-                "text": "Ein niedriges KGV bedeutet automatisch: gute Aktie.",
+                "text": "Ein niedriges KGV zeigt, dass eine Aktie günstig ist und gekauft werden sollte.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Das KGV gibt an, wie viel Prozent Rendite eine Aktie pro Jahr sicher abwirft.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Das KGV zählt, wie oft eine Aktie pro Tag an der Börse gehandelt wird.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Das KGV zeigt, wie viele Euro Anleger für 1 Euro Gewinn je Aktie bezahlen."
+            "explanationAfterAnswer": "KGV = Kurs geteilt durch Gewinn je Aktie. Es ordnet den Preis ein — ein Kauf- oder Verkaufssignal ist es nicht."
           },
           {
             "id": "q_kgv_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „KGV – Kurs-Gewinn-Verhältnis“?",
+            "question": "Welches Beispiel zeigt ein richtig berechnetes KGV?",
             "points": 100,
-            "correctAnswer": "Eine Aktie kostet 100 Euro und verdient 5 Euro je Aktie; KGV = 20.",
+            "correctAnswer": "Eine Aktie kostet 100 Euro, der Gewinn je Aktie beträgt 5 Euro — das KGV ist 20.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Eine Aktie kostet 100 Euro, der Gewinn je Aktie beträgt 5 Euro — das KGV ist 500.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Eine Aktie kostet 100 Euro, der Gewinn je Aktie beträgt 5 Euro — das KGV ist 5 Prozent.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Eine Aktie kostet 100 Euro, der Gewinn je Aktie beträgt 5 Euro — das KGV ist 95.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "100 ÷ 5 = 20. Das KGV ist eine reine Verhältniszahl ohne Einheit — kein Prozentwert und keine Differenz."
           },
           {
             "id": "q_kgv_003",
             "level": "understand",
-            "question": "Warum ist „KGV – Kurs-Gewinn-Verhältnis“ für Finanzbildung wichtig?",
+            "question": "Warum kann ein hohes KGV trotzdem gerechtfertigt sein?",
             "points": 120,
-            "correctAnswer": "KGV als Verhältnis von Aktienkurs zu Gewinn je Aktie verstehen.",
+            "correctAnswer": "Weil Anleger bei stark wachsenden Gewinnen bereit sind, heute mehr für jeden Euro Gewinn zu bezahlen.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Ein hohes KGV ist nie gerechtfertigt — solche Aktien sind grundsätzlich überteuert.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil ein hohes KGV bedeutet, dass das Unternehmen besonders viele Aktien ausgegeben hat.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil das KGV von der Börsenaufsicht festgelegt wird und nicht hinterfragt werden darf.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: KGV als Verhältnis von Aktienkurs zu Gewinn je Aktie verstehen."
+            "explanationAfterAnswer": "Im KGV stecken Erwartungen: Wer künftig deutlich höhere Gewinne erwartet, akzeptiert heute einen höheren Preis je Euro Gewinn. Ob die Erwartung aufgeht, ist offen."
           },
           {
             "id": "q_kgv_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Aktie A: Kurs 60 Euro, Gewinn je Aktie 3 Euro. Aktie B: Kurs 20 Euro, Gewinn je Aktie 0,50 Euro. Welche Aussage stimmt?",
             "points": 150,
-            "correctAnswer": "Die passenden Werte einsetzen, sauber rechnen und das Ergebnis im Kontext prüfen.",
+            "correctAnswer": "Aktie A hat mit 20 das niedrigere KGV — obwohl ihr Kurs dreimal so hoch ist wie der von Aktie B (KGV 40).",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "Aktie B ist günstiger bewertet, weil ihr Kurs mit 20 Euro viel niedriger ist.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "Aktie A sollte man kaufen, denn ein KGV von 20 ist ein verlässliches Kaufsignal.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "Beide Aktien haben dasselbe KGV, weil Kurs und Gewinn im gleichen Verhältnis stehen.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "A: 60 ÷ 3 = 20. B: 20 ÷ 0,50 = 40. Der niedrigere Kurs macht Aktie B nicht günstiger — pro Euro Gewinn ist sie sogar doppelt so teuer."
           },
           {
             "id": "q_kgv_005",
             "level": "master",
-            "question": "Welche Aussage zu „KGV – Kurs-Gewinn-Verhältnis“ stimmt am besten?",
+            "question": "Welche Aussage zum KGV ist am genauesten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Ein niedriges KGV kann auf günstige Bewertung hindeuten — oder darauf, dass der Markt sinkende Gewinne erwartet; das KGV liefert Fragen, keine Kaufsignale.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Wer konsequent nur Aktien mit dem niedrigsten KGV kauft, erzielt sicher die beste Rendite.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Ein hohes KGV bedeutet immer, dass eine Aktie kurz vor dem Kurssturz steht.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Das KGV lässt sich genauso gut für Unternehmen berechnen, die Verluste machen.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Das KGV ordnet Preis und Gewinn ein, ersetzt aber nie den Blick auf Branche, Wachstum und Gewinnqualität. Bei Verlustfirmen gibt es gar kein aussagekräftiges KGV."
           }
         ],
         "calculationTemplates": [
@@ -533,7 +533,7 @@
             "id": "tmpl_kgv",
             "level": "apply",
             "points": 150,
-            "questionTemplate": "Eine Aktie kostet {kurs} Euro. Der Gewinn je Aktie beträgt {eps} Euro. Wie hoch ist das KGV?",
+            "questionTemplate": "Eine Aktie kostet {kurs} Euro, der Gewinn je Aktie liegt bei {eps} Euro. Wie hoch ist das KGV?",
             "parameters": {
               "kurs": {
                 "min": 10,
@@ -550,20 +550,20 @@
               "kurs - eps",
               "eps / kurs"
             ],
-            "explanationTemplate": "KGV = Aktienkurs geteilt durch Gewinn je Aktie."
+            "explanationTemplate": "KGV = Kurs geteilt durch Gewinn je Aktie. Es zeigt, wie viele Euro der Markt für einen Euro Jahresgewinn bezahlt."
           }
         ],
         "teacherSupport": {
-          "competenceGoal": "KGV als Verhältnis von Aktienkurs zu Gewinn je Aktie verstehen.",
-          "typicalMisconception": "Ein niedriges KGV bedeutet automatisch: gute Aktie.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Ein niedriges KGV bedeutet automatisch: gute Aktie.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „KGV – Kurs-Gewinn-Verhältnis“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "competenceGoal": "Das KGV berechnen, interpretieren und seine Grenzen (Branchenabhängigkeit, Verlustfirmen, Erwartungen) benennen können.",
+          "typicalMisconception": "Ein niedriges KGV bedeutet automatisch, dass eine Aktie günstig ist und gekauft werden sollte.",
+          "discussionPrompt": "Zwei fiktive Firmen haben beide ein KGV von 12: ein wachsender Software-Anbieter und ein Hersteller, dessen Produkt kaum noch gekauft wird. Ist die Zahl bei beiden gleich viel wert?",
+          "classroomActivity": "KGV-Duell: Kleingruppen erhalten Karten mit Kurs und Gewinn je Aktie fiktiver Firmen, berechnen das KGV und sortieren die Firmen. Anschließend deckt die Lehrkraft Zusatzinfos (Wachstum, Probleme) auf — die Gruppen diskutieren, wo die reine Zahl in die Irre geführt hätte."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „KGV – Kurs-Gewinn-Verhältnis“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „KGV – Kurs-Gewinn-Verhältnis“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Beim Obsthändler zahlen wir mehr für Früchte, von denen wir uns mehr versprechen. Wo zahlen Anleger an der Börse „mehr je Euro Gewinn“ — und warum könnte das gerechtfertigt sein?",
+          "everydayExercise": "Gemeinsam das KGV zweier fiktiver Firmen ausrechnen (z. B. Kurs 50 Euro / Gewinn 5 Euro und Kurs 20 Euro / Gewinn 1 Euro) und besprechen, warum die „billigere“ Aktie pro Euro Gewinn teurer sein kann."
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_kuv",
@@ -576,12 +576,12 @@
           "konzept_marktkapitalisierung"
         ],
         "pedagogy": {
-          "learningGoal": "KUV als Verhältnis von Börsenwert zu Umsatz verstehen.",
-          "coreIdea": "Das KUV zeigt, wie der Markt ein Unternehmen im Verhältnis zu seinem Umsatz bewertet.",
-          "everydayScenario": "Ein Unternehmen ist 1.000 Euro wert und macht 500 Euro Umsatz; KUV = 2.",
-          "misconception": "Wenn der Umsatz hoch ist, ist die Aktie automatisch günstig.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'KUV – Kurs-Umsatz-Verhältnis' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'KUV – Kurs-Umsatz-Verhältnis' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "learningGoal": "KUV als Verhältnis von Marktkapitalisierung zu Umsatz verstehen und seine Grenzen kennen.",
+          "coreIdea": "Das KUV zeigt, mit dem Wievielfachen des Jahresumsatzes der Markt ein Unternehmen bewertet — sagt aber nichts über den Gewinn.",
+          "everydayScenario": "Ein Unternehmen ist an der Börse 1.000 Euro wert und macht 500 Euro Umsatz: KUV = 2.",
+          "misconception": "Ein Unternehmen mit hohem Umsatz oder niedrigem KUV ist an der Börse automatisch günstig.",
+          "transferTask": "Erfinde zwei Firmen mit gleichem Umsatz, aber sehr unterschiedlicher Gewinnmarge (z. B. Supermarkt vs. App-Anbieter). Erkläre, warum ein gleiches KUV bei beiden etwas völlig anderes bedeuten kann.",
+          "reflectionPrompt": "Warum kann es sinnvoll sein, ein junges Unternehmen ohne Gewinn über das KUV zu betrachten — und welche wichtige Information fehlt dir dabei trotzdem?"
         },
         "glossaryTerms": [
           "KUV",
@@ -598,125 +598,125 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "KUV – Kurs-Umsatz-Verhältnis: Das KUV zeigt, wie der Markt ein Unternehmen im Verhältnis zu seinem Umsatz bewertet. Beispiel: Ein Unternehmen ist 1.000 Euro wert und macht 500 Euro Umsatz; KUV = 2. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Wenn der Umsatz hoch ist, ist die Aktie automatisch günstig.“.",
-          "young_adults": "KUV – Kurs-Umsatz-Verhältnis: Das KUV zeigt, wie der Markt ein Unternehmen im Verhältnis zu seinem Umsatz bewertet. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Ein Unternehmen ist 1.000 Euro wert und macht 500 Euro Umsatz; KUV = 2.",
-          "parents_teachers": "Lernziel: KUV als Verhältnis von Börsenwert zu Umsatz verstehen. Didaktischer Fokus: Das KUV zeigt, wie der Markt ein Unternehmen im Verhältnis zu seinem Umsatz bewertet. Typische Fehlvorstellung: „Wenn der Umsatz hoch ist, ist die Aktie automatisch günstig.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Manche Unternehmen machen noch gar keinen Gewinn — zum Beispiel junge Firmen, die erst kräftig investieren. Dann hilft das KGV nicht weiter. Das KUV, das Kurs-Umsatz-Verhältnis, vergleicht stattdessen den Börsenwert mit dem Umsatz, also allen Einnahmen aus Verkäufen. Ist eine Firma an der Börse 1.000 Euro wert und macht 500 Euro Umsatz, ist das KUV 2. Aber Vorsicht: Umsatz ist nicht Gewinn! Ein Laden kann viel verkaufen und trotzdem kaum etwas übrig behalten. Deshalb sagt ein niedriges KUV allein noch nicht, ob eine Aktie wirklich günstig ist.",
+          "young_adults": "Für das Kurs-Umsatz-Verhältnis (KUV) teilst du die Marktkapitalisierung — also Kurs mal Aktienanzahl — durch den Jahresumsatz. Beispiel: 1.000 Euro Börsenwert geteilt durch 500 Euro Umsatz ergibt ein KUV von 2; der Markt bewertet das Unternehmen mit dem Doppelten seines Umsatzes. Die Stärke des KUV: Es funktioniert auch bei Unternehmen, die noch Verluste schreiben und deshalb kein sinnvolles KGV haben. Die Schwäche: Umsatz sagt nichts über Profitabilität. Ein Supermarkt mit zwei Prozent Marge und ein Softwareanbieter mit dreißig Prozent Marge können denselben Umsatz haben, verdienen daraus aber völlig unterschiedlich viel. KUV-Vergleiche ergeben deshalb nur innerhalb einer Branche Sinn — und immer zusammen mit einem Blick auf die Marge.",
+          "parents_teachers": "Das KUV setzt die Marktkapitalisierung (Kurs × Aktienanzahl) ins Verhältnis zum Jahresumsatz. Es wird vor allem dort genutzt, wo das KGV versagt: bei jungen oder zyklischen Unternehmen ohne stabile Gewinne. Die zentrale Grenze ist die fehlende Aussage zur Profitabilität — ein Euro Umsatz ist je nach Marge sehr unterschiedlich viel wert, weshalb KUV-Vergleiche über Branchengrenzen hinweg systematisch in die Irre führen. Ein niedriges KUV ist entsprechend kein Günstigkeitsbeweis, sondern ein Rechercheanlass. Didaktischer Hinweis: Lassen Sie Lernende die Umsatz-Gewinn-Verwechslung aktiv aufdecken, etwa anhand zweier fiktiver Firmen mit gleichem Umsatz, aber stark unterschiedlicher Marge — so verankern sich KUV und Marge als zusammengehöriges Paar."
         },
         "questions": [
           {
             "id": "q_kuv_001",
             "level": "explain",
-            "question": "Was beschreibt „KUV – Kurs-Umsatz-Verhältnis“ am besten?",
+            "question": "Was sagt das Kurs-Umsatz-Verhältnis (KUV) aus?",
             "points": 100,
-            "correctAnswer": "Das KUV zeigt, wie der Markt ein Unternehmen im Verhältnis zu seinem Umsatz bewertet.",
+            "correctAnswer": "Es setzt den Börsenwert eines Unternehmens ins Verhältnis zu seinem Jahresumsatz.",
             "distractors": [
               {
-                "text": "Wenn der Umsatz hoch ist, ist die Aktie automatisch günstig.",
+                "text": "Ein Unternehmen mit hohem Umsatz ist an der Börse automatisch günstig zu haben.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Das KUV zeigt, wie viel Gewinn ein Unternehmen aus seinem Umsatz herausholt.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Das KUV misst, wie viele Kunden ein Unternehmen pro Jahr bedient.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Das KUV zeigt, wie der Markt ein Unternehmen im Verhältnis zu seinem Umsatz bewertet."
+            "explanationAfterAnswer": "KUV = Marktkapitalisierung geteilt durch Umsatz. Über den Gewinn sagt es nichts — das ist die Aufgabe der Marge."
           },
           {
             "id": "q_kuv_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „KUV – Kurs-Umsatz-Verhältnis“?",
+            "question": "Welches Beispiel zeigt ein richtig berechnetes KUV?",
             "points": 100,
-            "correctAnswer": "Ein Unternehmen ist 1.000 Euro wert und macht 500 Euro Umsatz; KUV = 2.",
+            "correctAnswer": "Ein Unternehmen ist an der Börse 1.000 Euro wert und macht 500 Euro Umsatz — das KUV ist 2.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Ein Unternehmen ist an der Börse 1.000 Euro wert und macht 500 Euro Umsatz — das KUV ist 0,5.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Ein Unternehmen macht 500 Euro Umsatz — es hat also 500 Euro Gewinn erwirtschaftet.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Ein Unternehmen ist an der Börse 1.000 Euro wert und macht 500 Euro Umsatz — das KUV ist 500.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "1.000 ÷ 500 = 2: Der Markt bewertet die Firma mit dem Doppelten ihres Umsatzes. Umsatz und Gewinn sind dabei zwei völlig verschiedene Dinge."
           },
           {
             "id": "q_kuv_003",
             "level": "understand",
-            "question": "Warum ist „KUV – Kurs-Umsatz-Verhältnis“ für Finanzbildung wichtig?",
+            "question": "Warum nutzt man das KUV zusätzlich zum KGV?",
             "points": 120,
-            "correctAnswer": "KUV als Verhältnis von Börsenwert zu Umsatz verstehen.",
+            "correctAnswer": "Weil es auch bei Unternehmen funktioniert, die noch keinen Gewinn machen — dort lässt sich kein sinnvolles KGV berechnen.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil das KUV im Gegensatz zum KGV zuverlässig anzeigt, welche Aktie man kaufen sollte.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil das KUV den Gewinn eines Unternehmens genauer misst als das KGV.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil Unternehmen gesetzlich verpflichtet sind, nur ihr KUV zu veröffentlichen.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: KUV als Verhältnis von Börsenwert zu Umsatz verstehen."
+            "explanationAfterAnswer": "Umsatz gibt es fast immer, Gewinn nicht — deshalb springt das KUV dort ein, wo das KGV versagt. Ein Kaufsignal liefert aber keine der beiden Kennzahlen."
           },
           {
             "id": "q_kuv_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Ein Unternehmen hat eine Marktkapitalisierung von 8.000 Euro und macht 4.000 Euro Umsatz. Wie hoch ist das KUV und was bedeutet es?",
             "points": 150,
-            "correctAnswer": "Die passenden Werte einsetzen, sauber rechnen und das Ergebnis im Kontext prüfen.",
+            "correctAnswer": "Das KUV ist 2 — der Markt bewertet das Unternehmen mit dem Doppelten seines Jahresumsatzes.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "Das KUV ist 2 — damit ist die Aktie nachweislich günstig und ein klarer Kauf.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "Das KUV ist 0,5 — das Unternehmen macht also halb so viel Gewinn wie Umsatz.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "Das KUV ist 4.000 — so viele Euro bleiben übrig, wenn man den Umsatz vom Börsenwert abzieht.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "8.000 ÷ 4.000 = 2. Die Zahl ordnet die Bewertung ein — ob sie angemessen ist, hängt von Branche, Marge und Aussichten ab."
           },
           {
             "id": "q_kuv_005",
             "level": "master",
-            "question": "Welche Aussage zu „KUV – Kurs-Umsatz-Verhältnis“ stimmt am besten?",
+            "question": "Welche Aussage zum KUV ist am genauesten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Ein niedriges KUV sagt allein wenig: Ein Händler mit winziger Marge macht aus einem Euro Umsatz viel weniger Gewinn als ein Softwareanbieter — Branche und Marge gehören immer dazu.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Je niedriger das KUV, desto besser die Aktie — unabhängig von Branche und Geschäftsmodell.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Ein hoher Umsatz garantiert, dass ein Unternehmen früher oder später auch hohe Gewinne erzielt.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Im KUV ist bereits berücksichtigt, wie hoch die Schulden eines Unternehmens sind.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Das KUV blendet Profitabilität und Verschuldung komplett aus. Es taugt als Vergleichswerkzeug innerhalb einer Branche — nie als alleinige Entscheidungsgrundlage."
           }
         ],
         "calculationTemplates": [
@@ -724,7 +724,7 @@
             "id": "tmpl_kuv",
             "level": "apply",
             "points": 150,
-            "questionTemplate": "Ein Unternehmen hat eine Marktkapitalisierung von {mcap} Euro und einen Umsatz von {umsatz} Euro. Wie hoch ist das KUV?",
+            "questionTemplate": "Ein Unternehmen hat eine Marktkapitalisierung von {mcap} Euro und erzielt {umsatz} Euro Umsatz. Wie hoch ist das KUV?",
             "parameters": {
               "mcap": {
                 "min": 1000,
@@ -741,20 +741,20 @@
               "umsatz / mcap",
               "mcap - umsatz"
             ],
-            "explanationTemplate": "KUV = Marktkapitalisierung geteilt durch Umsatz."
+            "explanationTemplate": "KUV = Marktkapitalisierung geteilt durch Umsatz. Es zeigt, mit dem Wievielfachen des Jahresumsatzes der Markt das Unternehmen bewertet."
           }
         ],
         "teacherSupport": {
-          "competenceGoal": "KUV als Verhältnis von Börsenwert zu Umsatz verstehen.",
-          "typicalMisconception": "Wenn der Umsatz hoch ist, ist die Aktie automatisch günstig.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Wenn der Umsatz hoch ist, ist die Aktie automatisch günstig.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „KUV – Kurs-Umsatz-Verhältnis“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "competenceGoal": "Das KUV berechnen, seinen Einsatzbereich (Verlustfirmen) erklären und die Umsatz-Gewinn-Verwechslung vermeiden können.",
+          "typicalMisconception": "Ein Unternehmen mit hohem Umsatz oder niedrigem KUV ist an der Börse automatisch günstig.",
+          "discussionPrompt": "Ein Supermarkt und ein App-Anbieter haben dasselbe KUV von 1. Warum kann dieselbe Zahl trotzdem zwei völlig verschiedene Geschichten erzählen?",
+          "classroomActivity": "Zwei-Firmen-Vergleich: Die Klasse erhält Umsatz, Gewinn und Börsenwert zweier fiktiver Firmen mit gleichem Umsatz, aber unterschiedlicher Marge. Gruppen berechnen KUV und Marge und präsentieren, warum das KUV allein in die Irre geführt hätte."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „KUV – Kurs-Umsatz-Verhältnis“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „KUV – Kurs-Umsatz-Verhältnis“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Der Bäcker nebenan hat viele Kunden — verdient er deshalb automatisch gut? Was müsste man noch wissen?",
+          "everydayExercise": "Gemeinsam ein Gedankenspiel rechnen: Ein Kiosk nimmt 1.000 Euro ein, behält aber nach allen Kosten nur 30 Euro. Besprechen, warum „viel verkaufen“ und „viel verdienen“ nicht dasselbe ist — genau daran scheitert das KUV allein."
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_dividendenrendite",
@@ -766,12 +766,12 @@
           "konzept_preis_vs_wert"
         ],
         "pedagogy": {
-          "learningGoal": "Dividendenrendite als Dividende im Verhältnis zum Aktienkurs verstehen.",
-          "coreIdea": "Die Dividendenrendite zeigt die Dividende relativ zum aktuellen Kurs.",
-          "everydayScenario": "Eine Aktie kostet 100 Euro und zahlt 4 Euro Dividende; Rendite = 4 Prozent.",
-          "misconception": "Je höher die Dividendenrendite, desto besser die Aktie.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Dividendenrendite' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Dividendenrendite' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "learningGoal": "Dividendenrendite als Dividende im Verhältnis zum Aktienkurs berechnen und kritisch einordnen.",
+          "coreIdea": "Dividendenrendite = Dividende geteilt durch Kurs mal 100 — sie ist eine Momentaufnahme und keine garantierte Verzinsung.",
+          "everydayScenario": "Eine Aktie kostet 100 Euro und zahlt 4 Euro Dividende: Dividendenrendite = 4 Prozent — fällt der Kurs auf 50 Euro, verdoppelt sich die Rendite rechnerisch, ohne dass die Firma mehr zahlt.",
+          "misconception": "Eine hohe Dividendenrendite bedeutet sicheres Einkommen — je höher, desto besser die Aktie.",
+          "transferTask": "Rechne durch: Eine Aktie zahlt 4 Euro Dividende bei einem Kurs von 100 Euro. Der Kurs fällt auf 50 Euro, die Dividende bleibt gleich. Berechne beide Dividendenrenditen und erkläre, warum die höhere Zahl kein besseres Investment anzeigt.",
+          "reflectionPrompt": "Eine Aktie bietet plötzlich 9 Prozent Dividendenrendite, der Marktdurchschnitt liegt bei 3 Prozent. Welche zwei sehr unterschiedlichen Erklärungen könnte es dafür geben — und wie würdest du das prüfen?"
         },
         "glossaryTerms": [
           "Dividendenrendite",
@@ -788,125 +788,125 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Dividendenrendite: Die Dividendenrendite zeigt die Dividende relativ zum aktuellen Kurs. Beispiel: Eine Aktie kostet 100 Euro und zahlt 4 Euro Dividende; Rendite = 4 Prozent. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Je höher die Dividendenrendite, desto besser die Aktie.“.",
-          "young_adults": "Dividendenrendite: Die Dividendenrendite zeigt die Dividende relativ zum aktuellen Kurs. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Eine Aktie kostet 100 Euro und zahlt 4 Euro Dividende; Rendite = 4 Prozent.",
-          "parents_teachers": "Lernziel: Dividendenrendite als Dividende im Verhältnis zum Aktienkurs verstehen. Didaktischer Fokus: Die Dividendenrendite zeigt die Dividende relativ zum aktuellen Kurs. Typische Fehlvorstellung: „Je höher die Dividendenrendite, desto besser die Aktie.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Manche Unternehmen teilen einen Teil ihres Gewinns mit den Aktionären — diese Auszahlung heißt Dividende. Die Dividendenrendite setzt die Dividende ins Verhältnis zum Kurs: Dividende geteilt durch Kurs mal 100. Kostet eine Aktie 100 Euro und zahlt 4 Euro Dividende, sind das 4 Prozent. Das klingt wie Zinsen, ist aber nicht garantiert: Läuft es schlecht, kann das Unternehmen die Dividende kürzen oder ganz streichen. Und ein besonders hoher Wert ist manchmal sogar ein Warnzeichen — nämlich dann, wenn der Kurs gefallen ist, weil die Firma Probleme hat. Mehr Dividendenrendite bedeutet also nicht automatisch bessere Aktie.",
+          "young_adults": "Die Dividendenrendite berechnest du als Dividende geteilt durch den aktuellen Kurs, mal 100. Beispiel: 4 Euro Dividende bei 100 Euro Kurs ergeben 4 Prozent. Der Wert ändert sich mit jedem Kurs: Fällt die Aktie auf 50 Euro, springt die Rendite rechnerisch auf 8 Prozent — ohne dass das Unternehmen einen Cent mehr zahlt. Genau deshalb kann eine auffällig hohe Dividendenrendite ein Warnsignal sein: Oft ist der Kurs aus gutem Grund gefallen, und die nächste Dividende wackelt. Prüfe daher, ob die Ausschüttung dauerhaft aus dem Gewinn bezahlt werden kann, statt nur auf die Prozentzahl zu schauen. Dividenden sind ein Baustein der Gesamtrendite — kein sicherer Zins.",
+          "parents_teachers": "Die Dividendenrendite (Dividende je Aktie geteilt durch Kurs, mal 100) ist eine Momentaufnahme: Sie steigt mechanisch, wenn der Kurs fällt. Eine ungewöhnlich hohe Rendite ist daher häufig kein Qualitätsmerkmal, sondern ein Warnsignal für eingepreiste Probleme oder eine bevorstehende Dividendenkürzung (Stichwort „Dividendenfalle“). Zur Einordnung gehören Ausschüttungsquote, Gewinnentwicklung und Cashflow: Nachhaltig ist eine Dividende nur, wenn sie dauerhaft verdient wird. Beachten Sie auch den Zielkonflikt: Nicht ausgeschüttete Gewinne können reinvestiert werden — Unternehmen ohne Dividende sind nicht per se schlechter. Didaktischer Hinweis: Rechnen Sie mit Lernenden denselben Dividendenbetrag bei fallendem Kurs durch. Der Aha-Moment, dass die „Rendite“ steigt, während es der Firma schlechter geht, entkräftet die Fehlvorstellung vom sicheren Einkommen nachhaltig."
         },
         "questions": [
           {
             "id": "q_dividendenrendite_001",
             "level": "explain",
-            "question": "Was beschreibt „Dividendenrendite“ am besten?",
+            "question": "Was gibt die Dividendenrendite an?",
             "points": 100,
-            "correctAnswer": "Die Dividendenrendite zeigt die Dividende relativ zum aktuellen Kurs.",
+            "correctAnswer": "Sie setzt die Dividende ins Verhältnis zum aktuellen Kurs: Dividende geteilt durch Kurs mal 100.",
             "distractors": [
               {
-                "text": "Je höher die Dividendenrendite, desto besser die Aktie.",
+                "text": "Je höher die Dividendenrendite, desto besser und sicherer ist die Aktie.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Die Dividendenrendite ist ein fester Zins, den das Unternehmen jedes Jahr garantiert auszahlt.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Die Dividendenrendite misst, wie stark der Kurs im letzten Jahr gestiegen ist.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Die Dividendenrendite zeigt die Dividende relativ zum aktuellen Kurs."
+            "explanationAfterAnswer": "Die Dividendenrendite ist eine Verhältniszahl aus Dividende und Kurs — sie ändert sich mit jedem Kurs und ist nie garantiert."
           },
           {
             "id": "q_dividendenrendite_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Dividendenrendite“?",
+            "question": "Welches Beispiel zeigt eine richtig berechnete Dividendenrendite?",
             "points": 100,
-            "correctAnswer": "Eine Aktie kostet 100 Euro und zahlt 4 Euro Dividende; Rendite = 4 Prozent.",
+            "correctAnswer": "Eine Aktie kostet 100 Euro und zahlt 4 Euro Dividende — die Dividendenrendite beträgt 4 Prozent.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Eine Aktie kostet 100 Euro und zahlt 4 Euro Dividende — die Dividendenrendite beträgt 25 Prozent.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Eine Aktie kostet 100 Euro und zahlt 4 Euro Dividende — damit sind 4 Prozent Gewinn pro Jahr sicher.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Eine Aktie kostet 100 Euro und zahlt 4 Euro Dividende — die Dividendenrendite beträgt 96 Prozent.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "4 ÷ 100 × 100 = 4 Prozent. Sicher ist daran nichts: Kurs und Dividende können sich jederzeit ändern."
           },
           {
             "id": "q_dividendenrendite_003",
             "level": "understand",
-            "question": "Warum ist „Dividendenrendite“ für Finanzbildung wichtig?",
+            "question": "Warum kann eine sehr hohe Dividendenrendite ein Warnsignal sein?",
             "points": 120,
-            "correctAnswer": "Dividendenrendite als Dividende im Verhältnis zum Aktienkurs verstehen.",
+            "correctAnswer": "Weil sie oft dadurch entsteht, dass der Kurs stark gefallen ist — und dann häufig eine Kürzung der Dividende droht.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Sie ist nie ein Warnsignal — mehr Dividende ist für Anleger immer besser.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil eine hohe Dividendenrendite automatisch bedeutet, dass das Unternehmen gar keinen Gewinn mehr macht.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil man Dividenden nur erhält, wenn man die Aktie täglich handelt.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Dividendenrendite als Dividende im Verhältnis zum Aktienkurs verstehen."
+            "explanationAfterAnswer": "Fällt der Kurs, steigt die Rendite rein rechnerisch. Hinter einer auffällig hohen Zahl stecken deshalb oft Probleme statt Stärke — genau hinschauen lohnt sich."
           },
           {
             "id": "q_dividendenrendite_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Eine Aktie kostet 50 Euro und zahlt 2 Euro Dividende im Jahr. Wie hoch ist die Dividendenrendite?",
             "points": 150,
-            "correctAnswer": "Die passenden Werte einsetzen, sauber rechnen und das Ergebnis im Kontext prüfen.",
+            "correctAnswer": "4 Prozent, denn 2 Euro geteilt durch 50 Euro mal 100 ergibt 4.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "4 Prozent, die dir jedes Jahr sicher sind, egal wie es dem Unternehmen geht.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "4 Prozent — damit ist diese Aktie automatisch besser als jede Aktie ohne Dividende.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "25 Prozent, denn man teilt den Kurs durch die Dividende.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "2 ÷ 50 × 100 = 4 Prozent. Die Zahl beschreibt den Moment — sie ist weder garantiert noch ein Qualitätsurteil über die Aktie."
           },
           {
             "id": "q_dividendenrendite_005",
             "level": "master",
-            "question": "Welche Aussage zu „Dividendenrendite“ stimmt am besten?",
+            "question": "Welche Aussage zur Dividendenrendite ist am genauesten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Fällt der Kurs stark, steigt die Dividendenrendite rein rechnerisch — eine hohe Zahl kann Stärke oder Probleme bedeuten und braucht immer den Blick auf das Unternehmen.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Eine Dividendenrendite von 8 Prozent ist immer ein Zeichen für ein besonders gesundes Unternehmen.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Dividenden sind sicheres Einkommen, das ein Unternehmen nicht kürzen oder streichen darf.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Unternehmen, die keine Dividende zahlen, sind grundsätzlich die schlechteren Investments.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Die Dividendenrendite ist eine Momentaufnahme aus zwei beweglichen Größen. Nachhaltig ist eine Dividende nur, wenn sie dauerhaft aus dem Gewinn bezahlt werden kann."
           }
         ],
         "calculationTemplates": [
@@ -914,7 +914,7 @@
             "id": "tmpl_dividendenrendite",
             "level": "apply",
             "points": 150,
-            "questionTemplate": "Eine Aktie kostet {kurs} Euro und zahlt {div} Euro Dividende. Wie hoch ist die Dividendenrendite?",
+            "questionTemplate": "Eine Aktie kostet {kurs} Euro und zahlt {div} Euro Dividende pro Jahr. Wie hoch ist die Dividendenrendite?",
             "parameters": {
               "kurs": {
                 "min": 10,
@@ -931,21 +931,21 @@
               "kurs + div",
               "kurs - div"
             ],
-            "explanationTemplate": "Dividendenrendite = Dividende geteilt durch Kurs mal 100.",
+            "explanationTemplate": "Dividendenrendite = Dividende geteilt durch Kurs mal 100. Sie hängt vom aktuellen Kurs ab und ist nicht garantiert.",
             "unit": "Prozent"
           }
         ],
         "teacherSupport": {
-          "competenceGoal": "Dividendenrendite als Dividende im Verhältnis zum Aktienkurs verstehen.",
-          "typicalMisconception": "Je höher die Dividendenrendite, desto besser die Aktie.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Je höher die Dividendenrendite, desto besser die Aktie.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Dividendenrendite“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "competenceGoal": "Die Dividendenrendite berechnen und erklären können, warum eine hohe Rendite auch ein Warnsignal sein kann.",
+          "typicalMisconception": "Eine hohe Dividendenrendite bedeutet sicheres Einkommen — je höher, desto besser die Aktie.",
+          "discussionPrompt": "Firma A zahlt seit Jahren stabil 3 Prozent Dividendenrendite, Firma B bietet nach einem Kurssturz plötzlich 10 Prozent. Für welche Zahl würdet ihr eher die Hand ins Feuer legen — und warum?",
+          "classroomActivity": "Dividendenfallen-Rechnung: Alle berechnen die Rendite derselben 4-Euro-Dividende bei Kursen von 100, 80 und 50 Euro. Anschließend diskutiert die Klasse, warum die höchste Rendite ausgerechnet zur schlechtesten Kursentwicklung gehört."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Dividendenrendite“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Dividendenrendite“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Wenn ein Angebot deutlich mehr verspricht als alle anderen — werden wir dann eher neugierig oder eher misstrauisch? Und warum gilt das auch für Dividenden?",
+          "everydayExercise": "Gemeinsam ein Beispiel rechnen: 4 Euro Dividende bei 100 Euro Kurs, dann bei 50 Euro Kurs. Besprechen, warum die zweite, höhere Prozentzahl kein Grund zur Freude sein muss."
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_marge_kennzahl",
@@ -958,12 +958,12 @@
           "konzept_gewinn"
         ],
         "pedagogy": {
-          "learningGoal": "Marge als Kennzahl für Profitabilität anwenden.",
-          "coreIdea": "Die Marge zeigt, wie viel Gewinn aus dem Umsatz entsteht.",
-          "everydayScenario": "Zwei Unternehmen machen 1.000 Euro Umsatz; eines behält 100 Euro, das andere 20 Euro.",
-          "misconception": "Mehr Umsatz bedeutet immer bessere Profitabilität.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Marge als Kennzahl' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Marge als Kennzahl' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "learningGoal": "Die Gewinnmarge als Kennzahl für Profitabilität berechnen und im Branchenkontext einordnen.",
+          "coreIdea": "Die Marge zeigt, wie viel Prozent vom Umsatz als Gewinn übrig bleiben — Umsatz allein sagt nichts über Profitabilität.",
+          "everydayScenario": "Zwei Läden nehmen je 1.000 Euro ein: Einer behält 100 Euro Gewinn (10 Prozent Marge), der andere nur 20 Euro (2 Prozent Marge).",
+          "misconception": "Wer mehr Umsatz macht, ist automatisch das profitablere Unternehmen.",
+          "transferTask": "Erfinde zwei Geschäfte mit gleichem Umsatz, aber unterschiedlichen Kosten (z. B. Eisdiele und Handyladen). Berechne beide Margen und erkläre, warum das Geschäft mit weniger Umsatz am Ende sogar mehr verdienen könnte.",
+          "reflectionPrompt": "Ein Unternehmen steigert seinen Umsatz stark, aber seine Marge sinkt von 10 auf 4 Prozent. Was könnte dahinterstecken — und ist das Wachstum dann noch ein gutes Zeichen?"
         },
         "glossaryTerms": [
           "Marge",
@@ -981,125 +981,125 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Marge als Kennzahl: Die Marge zeigt, wie viel Gewinn aus dem Umsatz entsteht. Beispiel: Zwei Unternehmen machen 1.000 Euro Umsatz; eines behält 100 Euro, das andere 20 Euro. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Mehr Umsatz bedeutet immer bessere Profitabilität.“.",
-          "young_adults": "Marge als Kennzahl: Die Marge zeigt, wie viel Gewinn aus dem Umsatz entsteht. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Zwei Unternehmen machen 1.000 Euro Umsatz; eines behält 100 Euro, das andere 20 Euro.",
-          "parents_teachers": "Lernziel: Marge als Kennzahl für Profitabilität anwenden. Didaktischer Fokus: Die Marge zeigt, wie viel Gewinn aus dem Umsatz entsteht. Typische Fehlvorstellung: „Mehr Umsatz bedeutet immer bessere Profitabilität.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Stell dir zwei Limonadenstände vor: Beide nehmen 1.000 Euro ein. Der erste behält davon 100 Euro Gewinn, der zweite nur 20 Euro — weil seine Zutaten und die Standmiete viel teurer sind. Die Marge zeigt genau das: wie viel Prozent vom Umsatz am Ende als Gewinn übrig bleiben. Man rechnet Gewinn geteilt durch Umsatz mal 100. Der erste Stand hat also 10 Prozent Marge, der zweite nur 2 Prozent. Viel Umsatz allein macht eine Firma also nicht stark — entscheidend ist, was davon übrig bleibt. Die Marge ist wie der Notenschnitt fürs Wirtschaften: Sie zeigt, wie gut jemand aus Einnahmen Gewinn macht.",
+          "young_adults": "Die Gewinnmarge misst die Profitabilität: Gewinn geteilt durch Umsatz, mal 100. Beispiel: 100 Euro Gewinn bei 1.000 Euro Umsatz ergeben 10 Prozent Marge. Sie beantwortet die Frage, wie viel von jedem eingenommenen Euro tatsächlich hängen bleibt — und entlarvt damit die häufige Verwechslung von Umsatz und Gewinn. Margen sind stark branchenabhängig: Lebensmittelhändler arbeiten oft mit wenigen Prozent, Softwareunternehmen erreichen deutlich zweistellige Werte. Vergleiche Margen deshalb nur innerhalb einer Branche und beobachte die Entwicklung über mehrere Jahre. Eine stabil hohe Marge deutet auf ein starkes Geschäftsmodell hin, eine schrumpfende auf wachsenden Druck durch Kosten oder Konkurrenz.",
+          "parents_teachers": "Die Gewinnmarge (Gewinn geteilt durch Umsatz, mal 100) ist die zentrale Profitabilitätskennzahl und das direkte Gegenmittel zur verbreiteten Gleichsetzung von Umsatz und Gewinn. Fachlich relevant: Margen streuen systematisch zwischen Branchen (Handel niedrig, Software und Pharma hoch), sodass absolute Schwellenwerte („unter 10 Prozent ist schlecht“) in die Irre führen. Aussagekräftig sind der Branchenvergleich und der Zeitverlauf — sinkende Margen bei steigendem Umsatz zeigen etwa teuer erkauftes Wachstum. Didaktischer Hinweis: Das Zwei-Läden-Beispiel mit identischem Umsatz und unterschiedlichem Gewinn eignet sich hervorragend als Einstieg; lassen Sie anschließend schätzen, welche realen Branchen hohe und niedrige Margen haben, und lösen Sie die oft überraschenden Ergebnisse gemeinsam auf."
         },
         "questions": [
           {
             "id": "q_marge_kennzahl_001",
             "level": "explain",
-            "question": "Was beschreibt „Marge als Kennzahl“ am besten?",
+            "question": "Was zeigt die Gewinnmarge eines Unternehmens?",
             "points": 100,
-            "correctAnswer": "Die Marge zeigt, wie viel Gewinn aus dem Umsatz entsteht.",
+            "correctAnswer": "Wie viel Prozent vom Umsatz am Ende als Gewinn übrig bleiben.",
             "distractors": [
               {
-                "text": "Mehr Umsatz bedeutet immer bessere Profitabilität.",
+                "text": "Wer mehr Umsatz macht, hat automatisch auch die bessere Marge.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Die Marge zeigt, wie stark der Umsatz eines Unternehmens pro Jahr wächst.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Die Marge ist der Rabatt, den Kunden beim Einkauf bekommen.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Die Marge zeigt, wie viel Gewinn aus dem Umsatz entsteht."
+            "explanationAfterAnswer": "Marge = Gewinn geteilt durch Umsatz mal 100. Sie misst, wie viel von jedem eingenommenen Euro wirklich hängen bleibt."
           },
           {
             "id": "q_marge_kennzahl_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Marge als Kennzahl“?",
+            "question": "Welches Beispiel zeigt die Marge richtig?",
             "points": 100,
-            "correctAnswer": "Zwei Unternehmen machen 1.000 Euro Umsatz; eines behält 100 Euro, das andere 20 Euro.",
+            "correctAnswer": "Zwei Läden nehmen je 1.000 Euro ein: Einer behält 100 Euro Gewinn (10 Prozent Marge), der andere 20 Euro (2 Prozent Marge).",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Ein Laden macht 1.000 Euro Umsatz und 100 Euro Gewinn — die Marge beträgt 100 Prozent.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Ein Laden macht 1.000 Euro Umsatz — er hat also 1.000 Euro verdient.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Ein Laden macht 1.000 Euro Umsatz und 100 Euro Gewinn — die Marge beträgt 900 Euro.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Gleicher Umsatz, völlig unterschiedliche Profitabilität — genau diesen Unterschied macht die Marge sichtbar."
           },
           {
             "id": "q_marge_kennzahl_003",
             "level": "understand",
-            "question": "Warum ist „Marge als Kennzahl“ für Finanzbildung wichtig?",
+            "question": "Warum ist die Marge aussagekräftiger als der Umsatz allein?",
             "points": 120,
-            "correctAnswer": "Marge als Kennzahl für Profitabilität anwenden.",
+            "correctAnswer": "Weil sie zeigt, wie effizient aus Umsatz Gewinn wird — hoher Umsatz mit Mini-Marge kann weniger einbringen als kleiner Umsatz mit hoher Marge.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil eine hohe Marge garantiert, dass der Aktienkurs des Unternehmens steigt.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil die Marge angibt, wie viele Produkte ein Unternehmen insgesamt verkauft hat.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil der Umsatz für Anleger überhaupt keine Bedeutung hat.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Marge als Kennzahl für Profitabilität anwenden."
+            "explanationAfterAnswer": "Umsatz misst nur die Einnahmen, die Marge die Effizienz. Erst beides zusammen ergibt ein Bild — Kursgarantien liefert keine der beiden Zahlen."
           },
           {
             "id": "q_marge_kennzahl_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Ein Unternehmen macht 2.000 Euro Umsatz und 300 Euro Gewinn. Wie hoch ist die Gewinnmarge?",
             "points": 150,
-            "correctAnswer": "Die passenden Werte einsetzen, sauber rechnen und das Ergebnis im Kontext prüfen.",
+            "correctAnswer": "15 Prozent, denn 300 Euro geteilt durch 2.000 Euro mal 100 ergibt 15.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "15 Prozent — und weil die Marge zweistellig ist, ist die Aktie ein sicherer Kauf.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "15 Prozent — das bedeutet, das Unternehmen wächst jedes Jahr um 15 Prozent.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "6,7 Prozent, denn man teilt den Umsatz durch den Gewinn.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "300 ÷ 2.000 × 100 = 15 Prozent. Die Marge misst Profitabilität, nicht Wachstum — und sie ist kein Kaufsignal."
           },
           {
             "id": "q_marge_kennzahl_005",
             "level": "master",
-            "question": "Welche Aussage zu „Marge als Kennzahl“ stimmt am besten?",
+            "question": "Welche Aussage zur Marge ist am genauesten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Margen unterscheiden sich stark je nach Branche: Ein Supermarkt lebt mit wenigen Prozent, ein Softwareunternehmen erreicht oft deutlich mehr — sinnvoll vergleicht man innerhalb der Branche.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Eine Marge unter 10 Prozent zeigt in jeder Branche ein schlecht geführtes Unternehmen.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Steigt der Umsatz, steigt automatisch auch die Marge mit.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Die Marge eines Unternehmens bleibt über die Jahre praktisch konstant.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Es gibt keine universell „gute“ Marge — der Maßstab ist die Branche und die Entwicklung über die Zeit. Wachstum kann Margen sogar drücken, etwa durch Rabatte."
           }
         ],
         "calculationTemplates": [
@@ -1107,7 +1107,7 @@
             "id": "tmpl_marge_kennzahl",
             "level": "apply",
             "points": 150,
-            "questionTemplate": "Ein Unternehmen hat {umsatz} Euro Umsatz und {gewinn} Euro Gewinn. Wie hoch ist die Gewinnmarge?",
+            "questionTemplate": "Ein Unternehmen erzielt {umsatz} Euro Umsatz und {gewinn} Euro Gewinn. Wie hoch ist die Gewinnmarge?",
             "parameters": {
               "umsatz": {
                 "min": 100,
@@ -1124,21 +1124,21 @@
               "umsatz - gewinn",
               "umsatz + gewinn"
             ],
-            "explanationTemplate": "Gewinnmarge = Gewinn geteilt durch Umsatz mal 100.",
+            "explanationTemplate": "Gewinnmarge = Gewinn geteilt durch Umsatz mal 100. Sie zeigt, wie viel Prozent vom Umsatz als Gewinn übrig bleiben.",
             "unit": "Prozent"
           }
         ],
         "teacherSupport": {
-          "competenceGoal": "Marge als Kennzahl für Profitabilität anwenden.",
-          "typicalMisconception": "Mehr Umsatz bedeutet immer bessere Profitabilität.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Mehr Umsatz bedeutet immer bessere Profitabilität.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Marge als Kennzahl“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "competenceGoal": "Die Gewinnmarge berechnen und die Verwechslung von Umsatz und Profitabilität auflösen können.",
+          "typicalMisconception": "Wer mehr Umsatz macht, ist automatisch das profitablere Unternehmen.",
+          "discussionPrompt": "Ein Onlinehändler verdreifacht seinen Umsatz durch Dauerrabatte, seine Marge fällt dabei von 8 auf 1 Prozent. Ist das Unternehmen jetzt stärker oder schwächer als vorher?",
+          "classroomActivity": "Margen-Schätzspiel: Die Klasse schätzt die typischen Gewinnmargen von Supermarkt, Autohersteller und Software-Anbieter, danach werden realistische Größenordnungen aufgelöst. Abschluss: In Partnerarbeit die Marge zweier fiktiver Läden mit gleichem Umsatz berechnen und vergleichen."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Marge als Kennzahl“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Marge als Kennzahl“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Vom Zehner auf dem Flohmarkt bleibt nach Standgebühr und Einkauf oft weniger übrig, als man denkt — wie viel „Marge“ hatten wir bei unserem letzten Verkauf wirklich?",
+          "everydayExercise": "Einen fiktiven Kuchenverkauf durchrechnen: 50 Euro Einnahmen, 35 Euro für Zutaten und Stand. Gemeinsam die Marge bestimmen und überlegen, mit welchen Änderungen sie steigen würde."
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_umsatzwachstum",
@@ -1150,12 +1150,12 @@
           "konzept_kuv"
         ],
         "pedagogy": {
-          "learningGoal": "Umsatzwachstum als Umsatzveränderung über Zeit berechnen.",
-          "coreIdea": "Umsatzwachstum zeigt steigende Erlöse, aber nicht automatisch mehr Gewinn.",
-          "everydayScenario": "Der Umsatz steigt von 1.000 auf 1.200 Euro.",
-          "misconception": "Wachstum ist immer gut, egal was es kostet.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Umsatzwachstum' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Umsatzwachstum' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "learningGoal": "Umsatzwachstum als prozentuale Umsatzveränderung berechnen und kritisch einordnen.",
+          "coreIdea": "Umsatzwachstum zeigt steigende Erlöse — aber nicht, was das Wachstum kostet und ob Gewinn übrig bleibt.",
+          "everydayScenario": "Der Umsatz steigt von 1.000 auf 1.200 Euro — das sind 20 Prozent Wachstum; ob sich das gelohnt hat, hängt von den Kosten ab.",
+          "misconception": "Umsatzwachstum ist immer ein gutes Zeichen — egal, wie es zustande kommt und was es kostet.",
+          "transferTask": "Berechne das Umsatzwachstum von 1.500 auf 1.800 Euro. Nenne dann zwei Wege, wie eine Firma solches Wachstum erreichen könnte — einen gesunden und einen, der auf Dauer schadet.",
+          "reflectionPrompt": "Eine Firma wächst beim Umsatz um 25 Prozent, macht aber zum ersten Mal Verlust. Wie passt das zusammen — und worauf würdest du als Nächstes schauen?"
         },
         "glossaryTerms": [
           "Umsatzwachstum",
@@ -1172,125 +1172,125 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Umsatzwachstum: Umsatzwachstum zeigt steigende Erlöse, aber nicht automatisch mehr Gewinn. Beispiel: Der Umsatz steigt von 1.000 auf 1.200 Euro. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Wachstum ist immer gut, egal was es kostet.“.",
-          "young_adults": "Umsatzwachstum: Umsatzwachstum zeigt steigende Erlöse, aber nicht automatisch mehr Gewinn. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Der Umsatz steigt von 1.000 auf 1.200 Euro.",
-          "parents_teachers": "Lernziel: Umsatzwachstum als Umsatzveränderung über Zeit berechnen. Didaktischer Fokus: Umsatzwachstum zeigt steigende Erlöse, aber nicht automatisch mehr Gewinn. Typische Fehlvorstellung: „Wachstum ist immer gut, egal was es kostet.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Wächst ein Unternehmen? Das Umsatzwachstum gibt darauf eine erste Antwort: Es zeigt, um wie viel Prozent die Einnahmen im Vergleich zum Vorjahr gestiegen sind. Steigt der Umsatz von 1.000 auf 1.200 Euro, sind das 20 Prozent Wachstum — die Veränderung von 200 Euro geteilt durch die alten 1.000 Euro, mal 100. Aber Wachstum allein ist noch kein Grund zum Jubeln. Vielleicht hat die Firma dafür riesige Rabatte gegeben oder teure Werbung geschaltet — dann wächst der Umsatz, während der Gewinn schrumpft. Frage deshalb immer: Woher kommt das Wachstum, und bleibt dabei etwas übrig?",
+          "young_adults": "Umsatzwachstum berechnest du als Differenz zwischen neuem und altem Umsatz, geteilt durch den alten Umsatz, mal 100. Beispiel: Von 1.000 auf 1.200 Euro sind es 20 Prozent — 200 Euro Zuwachs geteilt durch 1.000. Der klassische Rechenfehler ist, durch den neuen Wert zu teilen; die Basis ist immer der Ausgangswert. Für die Einordnung zählt die Qualität des Wachstums: Kommt es aus mehr verkauften Produkten, aus Preiserhöhungen oder aus Zukäufen? Und was kostet es — wächst der Umsatz nur dank Rabattschlachten und Werbebudgets, kann der Gewinn gleichzeitig fallen. Ein einzelnes starkes Jahr ist zudem kein Trend: Aussagekräftig wird Wachstum erst über mehrere Jahre.",
+          "parents_teachers": "Umsatzwachstum ((neuer Umsatz minus alter Umsatz) geteilt durch alten Umsatz, mal 100) misst die Erlösdynamik, trifft aber keine Aussage über Profitabilität. Fachlich wichtig sind drei Differenzierungen: die Wachstumsquelle (Menge, Preis oder Zukäufe), die Nachhaltigkeit (Einmaleffekte vs. wiederkehrende Nachfrage) und die Kosten des Wachstums — umsatzstarkes, aber margenverzehrendes Wachstum ist ein klassisches Warnmuster. Rechnerisch lohnt der Hinweis auf die korrekte Basis (alter Wert im Nenner) und auf negative Wachstumsraten bei Umsatzrückgang. Didaktischer Hinweis: Lassen Sie Lernende zu einem fiktiven Wachstumsfall bewusst Gegenfragen entwickeln („Was hat das Wachstum gekostet? Wiederholt es sich?“) — so wird die Reflexhaltung „Wachstum = gut“ produktiv gestört."
         },
         "questions": [
           {
             "id": "q_umsatzwachstum_001",
             "level": "explain",
-            "question": "Was beschreibt „Umsatzwachstum“ am besten?",
+            "question": "Was misst das Umsatzwachstum?",
             "points": 100,
-            "correctAnswer": "Umsatzwachstum zeigt steigende Erlöse, aber nicht automatisch mehr Gewinn.",
+            "correctAnswer": "Um wie viel Prozent der Umsatz im Vergleich zur Vorperiode gestiegen oder gefallen ist.",
             "distractors": [
               {
-                "text": "Wachstum ist immer gut, egal was es kostet.",
+                "text": "Wachstum ist immer ein gutes Zeichen — egal, wie es zustande kommt und was es kostet.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Umsatzwachstum bedeutet, dass auch der Gewinn im gleichen Maß gestiegen ist.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Umsatzwachstum beschreibt, wie schnell ein Unternehmen neue Filialen eröffnet.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Umsatzwachstum zeigt steigende Erlöse, aber nicht automatisch mehr Gewinn."
+            "explanationAfterAnswer": "Umsatzwachstum ist eine reine Prozentrechnung auf die Erlöse. Ob dabei Gewinn entsteht, verrät es nicht."
           },
           {
             "id": "q_umsatzwachstum_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Umsatzwachstum“?",
+            "question": "Welches Beispiel zeigt ein richtig berechnetes Umsatzwachstum?",
             "points": 100,
-            "correctAnswer": "Der Umsatz steigt von 1.000 auf 1.200 Euro.",
+            "correctAnswer": "Der Umsatz steigt von 1.000 auf 1.200 Euro — das ist ein Wachstum von 20 Prozent.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Der Umsatz steigt von 1.000 auf 1.200 Euro — das ist ein Wachstum von 120 Prozent.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Der Umsatz steigt von 1.000 auf 1.200 Euro — das Unternehmen hat also 200 Euro mehr Gewinn gemacht.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Der Umsatz steigt von 1.000 auf 1.200 Euro — das ist ein Wachstum von 200 Prozent.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "200 Euro Zuwachs geteilt durch den alten Umsatz von 1.000 Euro mal 100 ergibt 20 Prozent. Mehr Umsatz heißt dabei nicht automatisch mehr Gewinn."
           },
           {
             "id": "q_umsatzwachstum_003",
             "level": "understand",
-            "question": "Warum ist „Umsatzwachstum“ für Finanzbildung wichtig?",
+            "question": "Warum ist Umsatzwachstum allein noch kein Qualitätsbeweis?",
             "points": 120,
-            "correctAnswer": "Umsatzwachstum als Umsatzveränderung über Zeit berechnen.",
+            "correctAnswer": "Weil Wachstum teuer erkauft sein kann — etwa durch Rabatte oder hohe Werbekosten, die den Gewinn auffressen.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Das stimmt nicht — wachsender Umsatz beweist immer ein gesundes Unternehmen.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil Umsatzwachstum nur bei kleinen Unternehmen eine Rolle spielt.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil der Umsatz nichts mit dem Geschäft eines Unternehmens zu tun hat.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Umsatzwachstum als Umsatzveränderung über Zeit berechnen."
+            "explanationAfterAnswer": "Entscheidend ist die Qualität des Wachstums: Woher kommt es, was kostet es, und bleibt dabei Gewinn übrig?"
           },
           {
             "id": "q_umsatzwachstum_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Der Umsatz eines Unternehmens steigt von 2.000 auf 2.300 Euro. Wie hoch ist das Umsatzwachstum?",
             "points": 150,
-            "correctAnswer": "Die passenden Werte einsetzen, sauber rechnen und das Ergebnis im Kontext prüfen.",
+            "correctAnswer": "15 Prozent, denn die Veränderung von 300 Euro geteilt durch den alten Umsatz von 2.000 Euro mal 100 ergibt 15.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "15 Prozent — damit steigt auch der Gewinn sicher um 15 Prozent.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "300 Prozent, denn der Umsatz ist um 300 Euro gestiegen.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "13 Prozent, denn man teilt die Veränderung durch den neuen Umsatz von 2.300 Euro.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "Basis der Prozentrechnung ist immer der alte Wert: 300 ÷ 2.000 × 100 = 15 Prozent. Über den Gewinn ist damit nichts gesagt."
           },
           {
             "id": "q_umsatzwachstum_005",
             "level": "master",
-            "question": "Welche Aussage zu „Umsatzwachstum“ stimmt am besten?",
+            "question": "Welche Aussage zum Umsatzwachstum ist am genauesten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Aussagekräftig wird Umsatzwachstum erst im Zusammenhang: Woher kommt es, ist es wiederholbar, und bleibt dabei auch Gewinn übrig?",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Ein Unternehmen, das zwei Jahre in Folge gewachsen ist, wird auch künftig sicher weiterwachsen.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Hauptsache Wachstum — ob dabei Verluste entstehen, ist für die Bewertung unwichtig.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Umsatzwachstum lässt sich nur für Zeiträume von genau einem Kalenderjahr berechnen.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Wachstum ist eine Momentbeschreibung, kein Versprechen. Quelle, Kosten und Wiederholbarkeit entscheiden, wie viel die Zahl wert ist."
           }
         ],
         "calculationTemplates": [
@@ -1298,7 +1298,7 @@
             "id": "tmpl_umsatzwachstum",
             "level": "apply",
             "points": 150,
-            "questionTemplate": "Der Umsatz steigt von {alt} Euro auf {neu} Euro. Wie hoch ist das Wachstum?",
+            "questionTemplate": "Der Umsatz eines Unternehmens verändert sich von {alt} Euro auf {neu} Euro. Wie hoch ist das Umsatzwachstum in Prozent?",
             "parameters": {
               "alt": {
                 "min": 100,
@@ -1315,21 +1315,21 @@
               "neu - alt",
               "alt / neu * 100"
             ],
-            "explanationTemplate": "Wachstum = Veränderung geteilt durch alten Wert mal 100.",
+            "explanationTemplate": "Umsatzwachstum = (neuer Umsatz minus alter Umsatz) geteilt durch alten Umsatz mal 100. Ein negativer Wert bedeutet einen Umsatzrückgang.",
             "unit": "Prozent"
           }
         ],
         "teacherSupport": {
-          "competenceGoal": "Umsatzwachstum als Umsatzveränderung über Zeit berechnen.",
-          "typicalMisconception": "Wachstum ist immer gut, egal was es kostet.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Wachstum ist immer gut, egal was es kostet.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Umsatzwachstum“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "competenceGoal": "Umsatzwachstum korrekt berechnen (Basis: alter Wert) und die Qualität des Wachstums hinterfragen können.",
+          "typicalMisconception": "Umsatzwachstum ist immer ein gutes Zeichen — egal, wie es zustande kommt und was es kostet.",
+          "discussionPrompt": "Ein Lieferdienst verschenkt Gutscheine und wächst dadurch beim Umsatz um 40 Prozent — macht aber pro Bestellung Verlust. Ist das ein Erfolg? Unter welchen Bedingungen könnte es einer werden?",
+          "classroomActivity": "Wachstums-Detektive: Gruppen erhalten drei fiktive Firmen mit gleichem Umsatzwachstum, aber unterschiedlichen Quellen (mehr Kunden, Preiserhöhung, einmaliger Großauftrag). Jede Gruppe bewertet, welches Wachstum am wertvollsten ist, und begründet die Reihenfolge."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Umsatzwachstum“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Umsatzwachstum“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Wenn ein Laden plötzlich doppelt so viel verkauft, weil er alles zum halben Preis anbietet — geht es ihm dann besser oder schlechter?",
+          "everydayExercise": "Gemeinsam das Wachstum eines fiktiven Taschengeld-Geschäfts berechnen (z. B. Einnahmen von 20 auf 25 Euro) und besprechen, welche Kosten dafür vielleicht nötig waren."
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_gewinnwachstum",
@@ -1342,12 +1342,12 @@
           "konzept_kgv"
         ],
         "pedagogy": {
-          "learningGoal": "Gewinnwachstum und seine Bedeutung für Bewertung verstehen.",
-          "coreIdea": "Wenn Gewinne langfristig wachsen, kann ein Unternehmen wertvoller werden.",
-          "everydayScenario": "Ein Unternehmen steigert Gewinn von 100 auf 130 Euro.",
-          "misconception": "Wenn der Gewinn einmal wächst, wächst er immer weiter.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Gewinnwachstum' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Gewinnwachstum' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "learningGoal": "Gewinnwachstum berechnen und seine Bedeutung für die Bewertung einschätzen.",
+          "coreIdea": "Dauerhaft wachsende Gewinne können ein Unternehmen wertvoller machen — vergangenes Wachstum ist aber keine Garantie für die Zukunft.",
+          "everydayScenario": "Ein Unternehmen steigert den Gewinn von 100 auf 130 Euro: 30 Prozent Gewinnwachstum — die Frage ist, ob das wiederholbar ist.",
+          "misconception": "Wenn der Gewinn einmal gewachsen ist, wächst er auch in Zukunft einfach immer weiter.",
+          "transferTask": "Berechne das Gewinnwachstum von 200 auf 260 Euro. Nenne dann einen Grund, warum dieses Wachstum im nächsten Jahr wiederkommen könnte — und einen, warum es ein einmaliger Ausreißer sein könnte.",
+          "reflectionPrompt": "Zwei Firmen melden 30 Prozent Gewinnwachstum: Eine hat mehr Produkte verkauft, die andere ein Bürogebäude verkauft. Warum bewertet der Markt dieselbe Zahl vermutlich sehr unterschiedlich?"
         },
         "glossaryTerms": [
           "Gewinnwachstum",
@@ -1365,125 +1365,125 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Gewinnwachstum: Wenn Gewinne langfristig wachsen, kann ein Unternehmen wertvoller werden. Beispiel: Ein Unternehmen steigert Gewinn von 100 auf 130 Euro. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Wenn der Gewinn einmal wächst, wächst er immer weiter.“.",
-          "young_adults": "Gewinnwachstum: Wenn Gewinne langfristig wachsen, kann ein Unternehmen wertvoller werden. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Ein Unternehmen steigert Gewinn von 100 auf 130 Euro.",
-          "parents_teachers": "Lernziel: Gewinnwachstum und seine Bedeutung für Bewertung verstehen. Didaktischer Fokus: Wenn Gewinne langfristig wachsen, kann ein Unternehmen wertvoller werden. Typische Fehlvorstellung: „Wenn der Gewinn einmal wächst, wächst er immer weiter.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Beim Gewinnwachstum schaust du, um wie viel Prozent der Gewinn im Vergleich zum Vorjahr zugelegt hat. Steigt er von 100 auf 130 Euro, sind das 30 Prozent — die 30 Euro Zuwachs geteilt durch die alten 100 Euro, mal 100. Wachsende Gewinne sind oft ein gutes Zeichen: Das Unternehmen kann mehr investieren und wird für Anleger wertvoller. Aber Vorsicht mit der Zukunft: Nur weil der Gewinn dieses Jahr gewachsen ist, wächst er nicht automatisch immer weiter. Manchmal steckt auch ein Einmaleffekt dahinter, etwa der Verkauf eines Gebäudes. Schau deshalb lieber auf mehrere Jahre als auf ein einzelnes Ergebnis.",
+          "young_adults": "Gewinnwachstum berechnest du wie Umsatzwachstum: neuer Gewinn minus alter Gewinn, geteilt durch den alten Gewinn, mal 100. Von 100 auf 130 Euro sind das 30 Prozent. Für die Bewertung ist Gewinnwachstum zentral, weil dauerhaft steigende Gewinne höhere Bewertungen rechtfertigen können — viele hohe KGVs erklären sich genau daraus. Entscheidend ist die Qualität: Wächst der Gewinn aus dem laufenden Geschäft oder durch Einmaleffekte wie den Verkauf einer Sparte? Und wie stabil ist das Wachstum über mehrere Jahre? Vergangenes Wachstum ist keine Garantie für die Zukunft — wer Wachstumsraten einfach fortschreibt, überschätzt Unternehmen systematisch.",
+          "parents_teachers": "Gewinnwachstum ((neuer Gewinn minus alter Gewinn) geteilt durch alten Gewinn, mal 100) verknüpft die Ertragsentwicklung mit der Bewertung: Erwartetes Wachstum ist der häufigste Grund für hohe KGVs. Fachlich zentral ist die Unterscheidung von operativem Wachstum und Sondereffekten (Verkäufe, Steuereffekte, Basiseffekte nach schwachen Jahren) sowie die Warnung vor naiver Fortschreibung — Wachstumsraten flachen mit zunehmender Unternehmensgröße typischerweise ab. Bei kleinen Ausgangswerten liefern Prozentzahlen zudem verzerrte Bilder (eine Verdopplung von 1 auf 2 Euro klingt spektakulärer, als sie ist). Didaktischer Hinweis: Kontrastieren Sie zwei fiktive Firmen mit identischem Gewinnsprung — einmal aus dem Kerngeschäft, einmal durch einen Gebäudeverkauf — und lassen Sie diskutieren, welches Wachstum für die Zukunft mehr zählt."
         },
         "questions": [
           {
             "id": "q_gewinnwachstum_001",
             "level": "explain",
-            "question": "Was beschreibt „Gewinnwachstum“ am besten?",
+            "question": "Was zeigt das Gewinnwachstum?",
             "points": 100,
-            "correctAnswer": "Wenn Gewinne langfristig wachsen, kann ein Unternehmen wertvoller werden.",
+            "correctAnswer": "Um wie viel Prozent der Gewinn im Vergleich zur Vorperiode gestiegen oder gefallen ist.",
             "distractors": [
               {
-                "text": "Wenn der Gewinn einmal wächst, wächst er immer weiter.",
+                "text": "Wenn der Gewinn einmal gewachsen ist, wächst er auch in Zukunft immer weiter.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Gewinnwachstum garantiert, dass der Aktienkurs im gleichen Tempo mitsteigt.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Gewinnwachstum zählt, wie viele neue Mitarbeiter ein Unternehmen pro Jahr einstellt.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Wenn Gewinne langfristig wachsen, kann ein Unternehmen wertvoller werden."
+            "explanationAfterAnswer": "Gewinnwachstum ist ein Rückblick in Prozent — es beschreibt die Vergangenheit und verspricht nichts für die Zukunft."
           },
           {
             "id": "q_gewinnwachstum_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Gewinnwachstum“?",
+            "question": "Welches Beispiel zeigt ein richtig berechnetes Gewinnwachstum?",
             "points": 100,
-            "correctAnswer": "Ein Unternehmen steigert Gewinn von 100 auf 130 Euro.",
+            "correctAnswer": "Der Gewinn steigt von 100 auf 130 Euro — das ist ein Gewinnwachstum von 30 Prozent.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Der Gewinn steigt von 100 auf 130 Euro — das ist ein Gewinnwachstum von 130 Prozent.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Der Gewinn steigt von 100 auf 130 Euro — die Aktionäre bekommen die 30 Euro Zuwachs ausgezahlt.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Der Gewinn steigt von 100 auf 130 Euro — das ist ein Gewinnwachstum von 77 Prozent.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "30 Euro Zuwachs geteilt durch die alten 100 Euro mal 100 ergibt 30 Prozent. Ausgezahlt wird davon nichts automatisch."
           },
           {
             "id": "q_gewinnwachstum_003",
             "level": "understand",
-            "question": "Warum ist „Gewinnwachstum“ für Finanzbildung wichtig?",
+            "question": "Warum interessieren sich Anleger so stark für das Gewinnwachstum?",
             "points": 120,
-            "correctAnswer": "Gewinnwachstum und seine Bedeutung für Bewertung verstehen.",
+            "correctAnswer": "Weil dauerhaft wachsende Gewinne ein Unternehmen wertvoller machen können und oft der Grund für höhere Bewertungen sind.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil vergangenes Gewinnwachstum zuverlässig verrät, wie sich der Kurs entwickeln wird.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil nur Unternehmen mit Gewinnwachstum überhaupt Dividenden zahlen dürfen.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil das Gewinnwachstum festlegt, wie viele Aktien es von einer Firma gibt.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Gewinnwachstum und seine Bedeutung für Bewertung verstehen."
+            "explanationAfterAnswer": "Erwartetes Gewinnwachstum steckt in vielen hohen Bewertungen. Es macht Unternehmen interessant — vorhersagen lässt sich der Kurs damit trotzdem nicht."
           },
           {
             "id": "q_gewinnwachstum_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Der Gewinn eines Unternehmens steigt von 500 auf 600 Euro. Wie hoch ist das Gewinnwachstum?",
             "points": 150,
-            "correctAnswer": "Die passenden Werte einsetzen, sauber rechnen und das Ergebnis im Kontext prüfen.",
+            "correctAnswer": "20 Prozent, denn 100 Euro Zuwachs geteilt durch den alten Gewinn von 500 Euro mal 100 ergibt 20.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "20 Prozent — und dieses Tempo lässt sich für die nächsten Jahre einfach fortschreiben.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "100 Prozent, denn der Gewinn ist um 100 Euro gestiegen.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "17 Prozent, denn man teilt den Zuwachs durch den neuen Gewinn von 600 Euro.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "100 ÷ 500 × 100 = 20 Prozent — gerechnet immer auf den alten Wert. Ob das Tempo hält, ist eine offene Frage, keine Rechenfolge."
           },
           {
             "id": "q_gewinnwachstum_005",
             "level": "master",
-            "question": "Welche Aussage zu „Gewinnwachstum“ stimmt am besten?",
+            "question": "Welche Aussage zum Gewinnwachstum ist am genauesten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Gewinnwachstum kann aus echtem Fortschritt stammen — oder aus Einmaleffekten wie einem Verkauf; für die Bewertung zählt, ob es wiederholbar ist.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Zehn Jahre Gewinnwachstum in Folge garantieren auch das elfte Jahr.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Ein einzelnes Jahr mit sinkendem Gewinn beweist, dass ein Unternehmen vor der Pleite steht.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Gewinnwachstum ist nur bei Technologieunternehmen eine sinnvolle Kennzahl.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Nicht die Höhe, sondern die Quelle und Wiederholbarkeit des Wachstums machen die Zahl wertvoll. Einmaleffekte verzerren das Bild in beide Richtungen."
           }
         ],
         "calculationTemplates": [
@@ -1491,7 +1491,7 @@
             "id": "tmpl_gewinnwachstum",
             "level": "apply",
             "points": 150,
-            "questionTemplate": "Der Gewinn steigt von {alt} Euro auf {neu} Euro. Wie hoch ist das Gewinnwachstum?",
+            "questionTemplate": "Der Gewinn eines Unternehmens verändert sich von {alt} Euro auf {neu} Euro. Wie hoch ist das Gewinnwachstum in Prozent?",
             "parameters": {
               "alt": {
                 "min": 50,
@@ -1508,21 +1508,21 @@
               "neu - alt",
               "alt / neu * 100"
             ],
-            "explanationTemplate": "Gewinnwachstum = Veränderung geteilt durch alten Gewinn mal 100.",
+            "explanationTemplate": "Gewinnwachstum = (neuer Gewinn minus alter Gewinn) geteilt durch alten Gewinn mal 100. Ein negativer Wert bedeutet einen Gewinnrückgang.",
             "unit": "Prozent"
           }
         ],
         "teacherSupport": {
-          "competenceGoal": "Gewinnwachstum und seine Bedeutung für Bewertung verstehen.",
-          "typicalMisconception": "Wenn der Gewinn einmal wächst, wächst er immer weiter.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Wenn der Gewinn einmal wächst, wächst er immer weiter.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Gewinnwachstum“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "competenceGoal": "Gewinnwachstum berechnen und zwischen nachhaltigem Wachstum und Einmaleffekten unterscheiden können.",
+          "typicalMisconception": "Wenn der Gewinn einmal gewachsen ist, wächst er auch in Zukunft einfach immer weiter.",
+          "discussionPrompt": "Firma A steigert den Gewinn durch ein neues, gefragtes Produkt um 30 Prozent, Firma B durch den Verkauf ihres Firmengebäudes ebenfalls um 30 Prozent. Für welche Firma spricht die Zahl mehr — und warum?",
+          "classroomActivity": "Prognose-Experiment: Die Klasse sieht eine fiktive Gewinnreihe (100 → 130 → 160 Euro) und tippt das nächste Jahr. Danach werden drei mögliche Fortsetzungen aufgedeckt (weiter steigend, stagnierend, einbrechend) und diskutiert, warum Fortschreiben so verführerisch wie unzuverlässig ist."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Gewinnwachstum“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Gewinnwachstum“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Wenn die Lieblingsmannschaft dreimal in Folge gewonnen hat — ist das nächste Spiel dann schon gewonnen? Und warum denken viele bei Firmengewinnen genau so?",
+          "everydayExercise": "Gemeinsam das Gewinnwachstum eines fiktiven Schülerfirmen-Beispiels berechnen (z. B. von 50 auf 65 Euro) und zwei Erklärungen sammeln: eine, die sich wiederholen lässt, und eine, die einmalig war."
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_schulden_bewertung",
@@ -1535,12 +1535,12 @@
           "konzept_risiko"
         ],
         "pedagogy": {
-          "learningGoal": "Schulden als Bewertungs- und Risikofaktor verstehen.",
-          "coreIdea": "Schulden können Wachstum ermöglichen, aber zu hohe Schulden machen anfälliger.",
-          "everydayScenario": "Ein Café nimmt einen Kredit für Maschinen auf und muss Zinsen zahlen.",
-          "misconception": "Schulden sind immer schlecht oder Schulden sind egal.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Schulden bei der Bewertung' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Schulden bei der Bewertung' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "learningGoal": "Schulden als Bewertungs- und Risikofaktor verstehen und den Schuldenanteil berechnen.",
+          "coreIdea": "Schulden können Wachstum finanzieren, machen ein Unternehmen aber anfälliger — entscheidend ist das Maß, nicht das Ob.",
+          "everydayScenario": "Ein Café nimmt einen Kredit für neue Maschinen auf: Es kann damit mehr verdienen, muss aber Zinsen zahlen und den Kredit zurückzahlen.",
+          "misconception": "Schulden sind bei Unternehmen entweder grundsätzlich schlecht — oder völlig egal, solange Gewinn fließt.",
+          "transferTask": "Entwirf für dasselbe fiktive Café zwei Szenarien: einen sinnvollen Kredit (wofür, wie hoch, wie zurückzahlbar?) und einen riskanten. Begründe, woran du den Unterschied festmachst.",
+          "reflectionPrompt": "Zwei Firmen verdienen gleich viel, aber eine hat kaum Schulden, die andere sehr hohe. Was passiert mit beiden, wenn ein schwaches Jahr kommt oder die Zinsen steigen?"
         },
         "glossaryTerms": [
           "Schulden",
@@ -1558,125 +1558,125 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Schulden bei der Bewertung: Schulden können Wachstum ermöglichen, aber zu hohe Schulden machen anfälliger. Beispiel: Ein Café nimmt einen Kredit für Maschinen auf und muss Zinsen zahlen. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Schulden sind immer schlecht oder Schulden sind egal.“.",
-          "young_adults": "Schulden bei der Bewertung: Schulden können Wachstum ermöglichen, aber zu hohe Schulden machen anfälliger. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Ein Café nimmt einen Kredit für Maschinen auf und muss Zinsen zahlen.",
-          "parents_teachers": "Lernziel: Schulden als Bewertungs- und Risikofaktor verstehen. Didaktischer Fokus: Schulden können Wachstum ermöglichen, aber zu hohe Schulden machen anfälliger. Typische Fehlvorstellung: „Schulden sind immer schlecht oder Schulden sind egal.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Schulden klingen erst mal schlecht — aber für Unternehmen sind sie ein Werkzeug. Ein Café kann mit einem Kredit neue Maschinen kaufen und dadurch mehr verdienen, muss dafür aber Zinsen zahlen und das Geld zurückgeben. Gefährlich wird es, wenn die Schulden zu groß werden: Dann fressen die Zinsen den Gewinn auf, und ein schwaches Jahr kann die Firma ins Wanken bringen. Deshalb schauen Anleger, wie viel Schulden ein Unternehmen im Vergleich zu seinem Vermögen hat. Hat eine Firma 10.000 Euro Vermögen und 4.000 Euro Schulden, sind das 40 Prozent. Schulden sind also weder automatisch schlimm noch egal — auf das Maß kommt es an.",
+          "young_adults": "Schulden gehören in jede Bewertung, weil sie Chance und Risiko zugleich sind: Fremdkapital kann Wachstum finanzieren, macht ein Unternehmen aber abhängig von Zinsen und Rückzahlungen. Eine einfache Orientierung liefert der Schuldenanteil: Schulden geteilt durch Vermögen, mal 100 — bei 4.000 Euro Schulden und 10.000 Euro Vermögen also 40 Prozent. Wie viel tragbar ist, hängt vom Geschäftsmodell ab: Stabile, planbare Einnahmen vertragen mehr Schulden als stark schwankende. Achte zusätzlich auf den Cashflow: Entscheidend ist, ob die laufenden Einnahmen Zinsen und Tilgung bequem decken. Zwei Unternehmen mit gleichem Gewinn können durch unterschiedliche Verschuldung ein völlig unterschiedliches Risiko tragen.",
+          "parents_teachers": "Die Verschuldung ist Bewertungs- und Risikofaktor zugleich: Fremdkapital hebelt Wachstum, erhöht aber die Anfälligkeit in Abschwüngen und bei steigenden Zinsen. Der einfache Schuldenanteil (Schulden geteilt durch Vermögen, mal 100) ist ein Einstieg; in der Praxis ergänzen Kennzahlen wie Zinsdeckung oder das Verhältnis von Schulden zu Cashflow das Bild. Wichtig für die Vermittlung: Weder gilt „Schulden sind immer schlecht“ (durchdacht eingesetztes Fremdkapital kann sinnvoll sein) noch „Schulden sind egal, solange Gewinne fließen“ — die Tragfähigkeit hängt von der Stabilität der Erträge und der Zinslast ab. Didaktischer Hinweis: Das Café-Beispiel (Kredit für Maschinen) eignet sich, um beide Fehlvorstellungen gegeneinander zu diskutieren; lassen Sie Lernende ein „gesundes“ und ein „riskantes“ Schuldenszenario für dieselbe Firma entwerfen."
         },
         "questions": [
           {
             "id": "q_schulden_bewertung_001",
             "level": "explain",
-            "question": "Was beschreibt „Schulden bei der Bewertung“ am besten?",
+            "question": "Welche Rolle spielen Schulden bei der Bewertung eines Unternehmens?",
             "points": 100,
-            "correctAnswer": "Schulden können Wachstum ermöglichen, aber zu hohe Schulden machen anfälliger.",
+            "correctAnswer": "Schulden können Wachstum finanzieren, machen ein Unternehmen aber anfälliger, wenn sie zu hoch werden.",
             "distractors": [
               {
-                "text": "Schulden sind immer schlecht oder Schulden sind egal.",
+                "text": "Schulden spielen für die Bewertung keine Rolle, solange das Unternehmen Gewinn macht.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Ein Unternehmen mit Schulden ist grundsätzlich ein schlechtes Investment.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Schulden sind das Geld, das Kunden dem Unternehmen für Produkte bezahlen.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Schulden können Wachstum ermöglichen, aber zu hohe Schulden machen anfälliger."
+            "explanationAfterAnswer": "Schulden sind ein Werkzeug mit zwei Seiten: Sie ermöglichen Investitionen, kosten aber Zinsen und erhöhen das Risiko in schwachen Jahren."
           },
           {
             "id": "q_schulden_bewertung_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Schulden bei der Bewertung“?",
+            "question": "Welches Beispiel zeigt den doppelten Charakter von Unternehmensschulden am besten?",
             "points": 100,
-            "correctAnswer": "Ein Café nimmt einen Kredit für Maschinen auf und muss Zinsen zahlen.",
+            "correctAnswer": "Ein Café nimmt einen Kredit für neue Maschinen auf — es kann damit mehr verdienen, muss aber Zinsen zahlen und den Kredit zurückzahlen.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Ein Café bezahlt alles bar — deshalb hat es automatisch das beste Geschäftsmodell der Stadt.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Ein Café nimmt einen Kredit auf — solange Gäste kommen, sind die Schulden völlig egal.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Ein Café spart sein Geld auf dem Konto und wartet einfach auf bessere Zeiten.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Der Kredit eröffnet eine Chance und schafft zugleich eine Pflicht — genau dieses Zusammenspiel muss man bei der Bewertung im Blick behalten."
           },
           {
             "id": "q_schulden_bewertung_003",
             "level": "understand",
-            "question": "Warum ist „Schulden bei der Bewertung“ für Finanzbildung wichtig?",
+            "question": "Warum gehören Schulden in die Bewertung eines Unternehmens?",
             "points": 120,
-            "correctAnswer": "Schulden als Bewertungs- und Risikofaktor verstehen.",
+            "correctAnswer": "Weil Zinsen und Rückzahlungen den Gewinn belasten und hohe Schulden ein Unternehmen in schwachen Jahren gefährden können.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil ein schuldenfreies Unternehmen an der Börse garantiert besser abschneidet.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil die Höhe der Schulden den Aktienkurs direkt und mechanisch festlegt.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil Unternehmen mit Schulden keine Produkte mehr verkaufen dürfen.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Schulden als Bewertungs- und Risikofaktor verstehen."
+            "explanationAfterAnswer": "Verschuldung verändert das Risiko: Gleiche Gewinne, aber hohe Zinslast bedeuten weniger Spielraum, wenn es schlecht läuft. Schuldenfreiheit allein ist aber kein Erfolgsgarant."
           },
           {
             "id": "q_schulden_bewertung_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Ein Unternehmen hat 10.000 Euro Vermögen und 4.000 Euro Schulden. Wie hoch ist der Schuldenanteil am Vermögen?",
             "points": 150,
-            "correctAnswer": "Die passenden Werte einsetzen, sauber rechnen und das Ergebnis im Kontext prüfen.",
+            "correctAnswer": "40 Prozent, denn 4.000 Euro geteilt durch 10.000 Euro mal 100 ergibt 40.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "40 Prozent — damit ist das Unternehmen auf jeden Fall ein riskanter Fehlkauf.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "40 Prozent — aber solche Zahlen sind unwichtig, solange das Unternehmen wächst.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "250 Prozent, denn man teilt das Vermögen durch die Schulden.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "4.000 ÷ 10.000 × 100 = 40 Prozent. Ob das viel oder wenig ist, hängt vom Geschäftsmodell ab — die Zahl allein fällt kein Urteil."
           },
           {
             "id": "q_schulden_bewertung_005",
             "level": "master",
-            "question": "Welche Aussage zu „Schulden bei der Bewertung“ stimmt am besten?",
+            "question": "Welche Aussage zu Schulden bei der Bewertung ist am genauesten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Ob Schulden tragbar sind, hängt vom Geschäft ab: Stabile Einnahmen vertragen mehr Fremdkapital als schwankende — zur Quote gehören immer Zinslast und Cashflow.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Die einzig gesunde Schuldenquote für Unternehmen ist null.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Hohe Schulden sind unproblematisch, weil Unternehmen ihre Kredite einfach immer verlängern können.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Schulden wirken sich nur auf die Dividende aus, nicht auf das Risiko eines Unternehmens.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Es gibt keinen universellen Grenzwert: Tragfähigkeit entsteht aus dem Zusammenspiel von Schuldenhöhe, Zinslast und Stabilität der Einnahmen."
           }
         ],
         "calculationTemplates": [
@@ -1684,7 +1684,7 @@
             "id": "tmpl_schuldenquote",
             "level": "apply",
             "points": 150,
-            "questionTemplate": "Ein Unternehmen hat {vermoegen} Euro Vermögen und {schulden} Euro Schulden. Wie hoch ist der Schuldenanteil am Vermögen?",
+            "questionTemplate": "Ein Unternehmen besitzt {vermoegen} Euro Vermögen und hat {schulden} Euro Schulden. Wie hoch ist der Schuldenanteil am Vermögen?",
             "parameters": {
               "vermoegen": {
                 "min": 1000,
@@ -1701,21 +1701,21 @@
               "vermoegen - schulden",
               "schulden + vermoegen"
             ],
-            "explanationTemplate": "Schuldenanteil = Schulden geteilt durch Vermögen mal 100.",
+            "explanationTemplate": "Schuldenanteil = Schulden geteilt durch Vermögen mal 100. Je höher der Anteil, desto abhängiger ist das Unternehmen von seinen Geldgebern.",
             "unit": "Prozent"
           }
         ],
         "teacherSupport": {
-          "competenceGoal": "Schulden als Bewertungs- und Risikofaktor verstehen.",
-          "typicalMisconception": "Schulden sind immer schlecht oder Schulden sind egal.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Schulden sind immer schlecht oder Schulden sind egal.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Schulden bei der Bewertung“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "competenceGoal": "Den Schuldenanteil berechnen und Schulden differenziert als Chance und Risiko einordnen können.",
+          "typicalMisconception": "Schulden sind bei Unternehmen entweder grundsätzlich schlecht — oder völlig egal, solange Gewinn fließt.",
+          "discussionPrompt": "Ein Stadtwerk mit sehr stabilen Einnahmen und ein Modelabel mit stark schwankenden Verkäufen haben beide 50 Prozent Schuldenanteil. Ist das Risiko für beide gleich groß?",
+          "classroomActivity": "Szenario-Werkstatt: Kleingruppen entwerfen für dasselbe fiktive Café ein „gesundes“ und ein „riskantes“ Kreditszenario (Zweck, Höhe, Rückzahlungsplan) und präsentieren, woran man den Unterschied erkennt. Abschluss: Schuldenanteil für beide Szenarien berechnen."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Schulden bei der Bewertung“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Schulden bei der Bewertung“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Ein Kredit fürs Haus, einer fürs neue Handy — fühlen sich beide gleich an? Warum kommt es bei Schulden so sehr auf den Zweck und die Rückzahlbarkeit an?",
+          "everydayExercise": "Gemeinsam ein fiktives Beispiel rechnen: Ein Familienbetrieb mit 20.000 Euro Vermögen und 5.000 Euro Schulden. Den Schuldenanteil bestimmen und besprechen, wann ein zusätzlicher Kredit sinnvoll wäre — und wann nicht."
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_kennzahlen_grenzen",
@@ -1729,12 +1729,12 @@
           "konzept_schulden_bewertung"
         ],
         "pedagogy": {
-          "learningGoal": "Grenzen von Kennzahlen und Bedeutung des Kontexts verstehen.",
-          "coreIdea": "Kennzahlen sind Werkzeuge zum Fragenstellen, keine Orakel.",
-          "everydayScenario": "Zwei Personen haben dieselbe Note, aber sehr unterschiedliche Stärken und Schwächen.",
-          "misconception": "Wenn eine Kennzahl gut aussieht, ist die Aktie automatisch gut.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Warum Kennzahlen allein nicht reichen' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Warum Kennzahlen allein nicht reichen' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "learningGoal": "Grenzen von Kennzahlen erkennen und Kennzahlen als Frage-Werkzeuge statt als Entscheidungsautomaten nutzen.",
+          "coreIdea": "Kennzahlen sind Werkzeuge zum Fragenstellen, keine Orakel — jede zeigt nur einen Ausschnitt und braucht Kontext.",
+          "everydayScenario": "Zwei Schüler haben dieselbe Note, aber völlig unterschiedliche Stärken und Schwächen — eine einzelne Zahl erzählt nie die ganze Geschichte.",
+          "misconception": "Wenn eine Kennzahl gut aussieht, ist die Aktie automatisch ein guter Kauf.",
+          "transferTask": "Erstelle einen Kennzahlen-Steckbrief: Notiere zu KGV, Dividendenrendite und Marge jeweils in einem Satz, was die Zahl zeigt — und in einem zweiten Satz, was sie verschweigt.",
+          "reflectionPrompt": "Eine Aktie hat das niedrigste KGV und die höchste Dividendenrendite ihrer Branche. Warum könnte genau diese Kombination eher ein Warnsignal als ein Schnäppchen sein?"
         },
         "glossaryTerms": [
           "Kennzahl",
@@ -1754,139 +1754,139 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Warum Kennzahlen allein nicht reichen: Kennzahlen sind Werkzeuge zum Fragenstellen, keine Orakel. Beispiel: Zwei Personen haben dieselbe Note, aber sehr unterschiedliche Stärken und Schwächen. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Wenn eine Kennzahl gut aussieht, ist die Aktie automatisch gut.“.",
-          "young_adults": "Warum Kennzahlen allein nicht reichen: Kennzahlen sind Werkzeuge zum Fragenstellen, keine Orakel. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Zwei Personen haben dieselbe Note, aber sehr unterschiedliche Stärken und Schwächen.",
-          "parents_teachers": "Lernziel: Grenzen von Kennzahlen und Bedeutung des Kontexts verstehen. Didaktischer Fokus: Kennzahlen sind Werkzeuge zum Fragenstellen, keine Orakel. Typische Fehlvorstellung: „Wenn eine Kennzahl gut aussieht, ist die Aktie automatisch gut.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Du kennst jetzt viele Kennzahlen — aber merke dir: Sie sind wie die Werte auf einer Fußball-Sammelkarte. Tore pro Spiel sagen viel über einen Stürmer, aber nichts über Teamgeist, Fitness oder Nervenstärke. Genauso zeigt jede Kennzahl nur einen Ausschnitt: Das KGV kennt die Zukunftspläne nicht, die Marge verrät nichts über Schulden. Zwei Schüler mit derselben Note können völlig unterschiedliche Stärken haben — zwei Firmen mit demselben KGV auch. Kluge Anleger nutzen Kennzahlen deshalb, um gute Fragen zu stellen, nicht als Kaufknopf. Eine einzelne gute Zahl macht eine Aktie nie automatisch zu einem guten Kauf.",
+          "young_adults": "Kennzahlen verdichten komplexe Unternehmen auf einzelne Zahlen — das macht sie nützlich und gefährlich zugleich. Jede hat blinde Flecken: Das KGV versagt bei Verlustfirmen und hängt an der Gewinnqualität, das KUV ignoriert die Marge, und die Dividendenrendite steigt ausgerechnet dann, wenn der Kurs abstürzt. Dazu kommt der Kontext: Kennzahlen sind nur im Branchenvergleich und im Zeitverlauf aussagekräftig, und sie blicken in die Vergangenheit, während Kurse Zukunftserwartungen einpreisen. Deshalb gilt: mehrere Kennzahlen kombinieren, mit dem Geschäftsmodell abgleichen und auffällige Werte als Rechercheauftrag verstehen. Eine Kennzahl beantwortet nie die Frage „kaufen oder nicht?“ — sie hilft dir, die richtigen Fragen zu stellen.",
+          "parents_teachers": "Dieses Abschlussmodul bündelt die Grenzen aller behandelten Kennzahlen: Vergangenheitsbezug, Branchenabhängigkeit, Anfälligkeit für Einmaleffekte und die Nichtabbildung qualitativer Faktoren wie Geschäftsmodell, Wettbewerb und Management. Zentral ist die Haltung: Kennzahlen sind Verständnis- und Screening-Werkzeuge, keine Entscheidungsautomaten — auffällige Werte (sehr niedriges KGV, ungewöhnlich hohe Dividendenrendite) sind Rechercheanlässe, keine Signale. Das entspricht dem OECD/INFE-Kompetenzziel, Informationen zu bewerten, statt Regeln blind zu folgen. Didaktischer Hinweis: Die Noten-Analogie (gleiche Note, unterschiedliche Stärken) trägt weit; als Abschlussaufgabe eignet sich ein „Kennzahlen-Steckbrief“, in dem Lernende zu jeder Kennzahl notieren, was sie zeigt — und was sie verschweigt."
         },
         "questions": [
           {
             "id": "q_kennzahlen_grenzen_001",
             "level": "explain",
-            "question": "Was beschreibt „Warum Kennzahlen allein nicht reichen“ am besten?",
+            "question": "Warum reichen Kennzahlen allein nicht für ein Urteil über eine Aktie?",
             "points": 100,
-            "correctAnswer": "Kennzahlen sind Werkzeuge zum Fragenstellen, keine Orakel.",
+            "correctAnswer": "Weil jede Kennzahl nur einen Ausschnitt zeigt — Geschäftsmodell, Branche und Zukunftsaussichten stecken nicht in einer einzelnen Zahl.",
             "distractors": [
               {
-                "text": "Wenn eine Kennzahl gut aussieht, ist die Aktie automatisch gut.",
+                "text": "Wenn mehrere Kennzahlen gut aussehen, ist die Aktie bewiesen ein sicherer Kauf.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Kennzahlen reichen völlig aus — wer rechnen kann, braucht sonst nichts über die Firma zu wissen.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Weil Kennzahlen geheim sind und nur Banken sie einsehen dürfen.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Kennzahlen sind Werkzeuge zum Fragenstellen, keine Orakel."
+            "explanationAfterAnswer": "Kennzahlen verdichten ein ganzes Unternehmen auf eine Zahl — dabei geht zwangsläufig viel verloren. Sie sind der Anfang der Analyse, nicht ihr Ende."
           },
           {
             "id": "q_kennzahlen_grenzen_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Warum Kennzahlen allein nicht reichen“?",
+            "question": "Welcher Vergleich zeigt die Grenze von Kennzahlen am besten?",
             "points": 100,
-            "correctAnswer": "Zwei Personen haben dieselbe Note, aber sehr unterschiedliche Stärken und Schwächen.",
+            "correctAnswer": "Zwei Schüler haben dieselbe Note, aber völlig unterschiedliche Stärken — eine einzelne Zahl erzählt nicht die ganze Geschichte.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Zwei Schüler haben verschiedene Noten — also ist der eine in allen Fächern besser.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Eine gute Note garantiert, dass jemand auch die nächste Prüfung besteht.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Noten und Kennzahlen haben nichts gemeinsam, weil es in der Schule nicht um Geld geht.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Wie eine Note fasst eine Kennzahl vieles in einer Zahl zusammen — und verschweigt dabei, wie sie zustande kam."
           },
           {
             "id": "q_kennzahlen_grenzen_003",
             "level": "understand",
-            "question": "Warum ist „Warum Kennzahlen allein nicht reichen“ für Finanzbildung wichtig?",
+            "question": "Warum sollte man mehrere Kennzahlen gemeinsam und im Branchenvergleich betrachten?",
             "points": 120,
-            "correctAnswer": "Grenzen von Kennzahlen und Bedeutung des Kontexts verstehen.",
+            "correctAnswer": "Weil jede Kennzahl blinde Flecken hat — erst die Kombination und der passende Vergleichsmaßstab ergeben ein belastbares Bild.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil viele Kennzahlen zusammen jedes Anlagerisiko ausschließen.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil eine einzelne Kennzahl grundsätzlich falsch berechnet ist.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil man sonst die Kurslisten in der Zeitung nicht lesen kann.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Grenzen von Kennzahlen und Bedeutung des Kontexts verstehen."
+            "explanationAfterAnswer": "KGV ohne Wachstum, KUV ohne Marge, Dividendenrendite ohne Kursblick — einzeln führen Kennzahlen leicht in die Irre. Risiko verschwindet aber auch durch Kombination nie."
           },
           {
             "id": "q_kennzahlen_grenzen_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Eine Aktie hat ein KGV von 5 — deutlich unter dem Branchenschnitt von 15. Wie gehst du damit um?",
             "points": 150,
-            "correctAnswer": "Innehalten, Informationen prüfen und erst dann passend zum eigenen Ziel handeln.",
+            "correctAnswer": "Als Anlass für Fragen: Vielleicht ist die Aktie günstig bewertet, vielleicht erwartet der Markt sinkende Gewinne — beides muss geprüft werden.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "Sofort kaufen — ein KGV von 5 gegenüber 15 ist ein sicheres Schnäppchen.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "Die Aktie meiden, denn ein so niedriges KGV beweist, dass die Firma bald pleite ist.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "Das KGV zur Sicherheit mit einer Aktie aus einer ganz anderen Branche vergleichen.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "Ein auffälliger Wert ist ein Rechercheauftrag, kein Signal. Der Markt hat meist einen Grund für die niedrige Bewertung — die Frage ist, ob er berechtigt ist."
           },
           {
             "id": "q_kennzahlen_grenzen_005",
             "level": "master",
-            "question": "Welche Aussage zu „Warum Kennzahlen allein nicht reichen“ stimmt am besten?",
+            "question": "Welche Aussage beschreibt den klugen Umgang mit Kennzahlen am besten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Kennzahlen sind Werkzeuge zum Verstehen: Sie helfen, gute Fragen zu stellen und Firmen einzuordnen — die Einschätzung braucht zusätzlich Kontext, Zeit und einen kühlen Kopf.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Wer alle Kennzahlen dieses Themenblocks beherrscht, kann Kursverläufe zuverlässig vorhersagen.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Kennzahlen sind überflüssig, weil an der Börse ohnehin nur der Zufall entscheidet.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Kennzahlen nützen nur Profis — Privatanleger sollten sie besser ganz ignorieren.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Zwischen „Kennzahlen sagen alles“ und „Kennzahlen sagen nichts“ liegt die Wahrheit: Sie machen Unternehmen vergleichbar und Fragen präziser — Entscheidungen nehmen sie niemandem ab."
           }
         ],
         "calculationTemplates": [],
         "teacherSupport": {
-          "competenceGoal": "Grenzen von Kennzahlen und Bedeutung des Kontexts verstehen.",
-          "typicalMisconception": "Wenn eine Kennzahl gut aussieht, ist die Aktie automatisch gut.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Wenn eine Kennzahl gut aussieht, ist die Aktie automatisch gut.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Warum Kennzahlen allein nicht reichen“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "competenceGoal": "Die Grenzen von Kennzahlen benennen und auffällige Werte als Rechercheanlass statt als Kauf- oder Verkaufssignal behandeln können.",
+          "typicalMisconception": "Wenn eine Kennzahl gut aussieht, ist die Aktie automatisch ein guter Kauf.",
+          "discussionPrompt": "Eine Aktie hat das niedrigste KGV und die höchste Dividendenrendite der Branche. Sammeln Sie zwei Lesarten: Warum könnte das ein Schnäppchen sein — und warum ein doppeltes Warnsignal?",
+          "classroomActivity": "Kennzahlen-Steckbrief als Blockabschluss: Jede Gruppe übernimmt eine Kennzahl (KGV, KUV, Dividendenrendite, Marge, Schuldenanteil) und erstellt ein Plakat mit drei Feldern: „Das zeigt sie“, „Das verschweigt sie“, „Diese Frage stellt sie“. Die Plakate ergeben zusammen den Werkzeugkasten der Klasse."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Warum Kennzahlen allein nicht reichen“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Warum Kennzahlen allein nicht reichen“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Würden wir ein Auto nur wegen des Verbrauchswerts kaufen — ohne Probefahrt und ohne auf Zustand oder Größe zu schauen? Warum machen viele genau das bei Aktien mit einer einzigen Kennzahl?",
+          "everydayExercise": "Zum Abschluss des Themenblocks gemeinsam einen Mini-Steckbrief schreiben: Zu zwei Kennzahlen nach Wahl je einen Satz „Das zeigt sie“ und „Das zeigt sie nicht“ notieren und vergleichen."
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       }
     ]
   }

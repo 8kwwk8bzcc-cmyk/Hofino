@@ -11,8 +11,8 @@
     "id": "tb_aktien_eigentum",
     "title": "Aktien und Eigentum",
     "unlockLevel": 11,
-    "goal": "Lernende verstehen Aktien als Unternehmensanteile mit Chancen, Risiken, Rechten und möglichen Erträgen.",
-    "pedagogicalIdea": "Aktien sollen nicht als Spielchips, sondern als Beteiligung an echten Unternehmen verstanden werden.",
+    "goal": "Lernende verstehen Aktien als Anteile an echten Unternehmen – mit Rechten wie Stimmrecht und Dividende, mit Ertragschancen aus Kurs und Ausschüttung und mit ehrlichen Risiken bis hin zum Verlust.",
+    "pedagogicalIdea": "Aktien werden nicht als Spielchips behandelt, sondern als Beteiligung an echten Unternehmen: Wer investiert, wird Miteigentümer – mit Chancen, Risiken und Verantwortung. Der Weg führt vom Eigentumsgedanken über Rechte und Erträge bis zur ehrlichen Gesamtrechnung.",
     "modules": [
       {
         "id": "konzept_aktie",
@@ -24,12 +24,12 @@
           "konzept_gewinn"
         ],
         "pedagogy": {
-          "learningGoal": "Aktien als kleine Anteile an einem Unternehmen verstehen.",
-          "coreIdea": "Wer eine Aktie besitzt, besitzt einen kleinen Anteil an einem Unternehmen.",
-          "everydayScenario": "Ein Unternehmen wird in viele kleine Anteile aufgeteilt; eine Aktie ist ein solcher Anteil.",
-          "misconception": "Eine Aktie ist nur ein Preis, der hoch oder runter geht.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Was ist eine Aktie?' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Was ist eine Aktie?' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "learningGoal": "Eine Aktie als kleinen Anteil an einem Unternehmen verstehen – nicht nur als Zahl, die steigt oder fällt.",
+          "coreIdea": "Wer eine Aktie besitzt, besitzt einen kleinen Anteil an einem Unternehmen – echtes Miteigentum, kein Spielstand.",
+          "everydayScenario": "Wie eine Pizza in Stücke geschnitten wird, wird eine Aktiengesellschaft in viele gleich große Anteile zerlegt; eine Aktie ist ein solches Stück.",
+          "misconception": "Eine Aktie ist nur eine Zahl auf dem Bildschirm, die steigt oder fällt – hinter dem Kurs steckt nichts Echtes.",
+          "transferTask": "Wähle eine Marke, die du gut kennst (z. B. Sportartikel oder Spiele). Erkläre in zwei Sätzen, was sich für dich ändern würde, wenn du eine Aktie dieses Unternehmens besitzt – und was nicht.",
+          "reflectionPrompt": "Wenn eine Aktie nur eine springende Zahl wäre – warum würde man dann eher hektisch kaufen und verkaufen, statt in Ruhe über das Unternehmen dahinter nachzudenken?"
         },
         "glossaryTerms": [
           "Aktie",
@@ -47,139 +47,139 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Was ist eine Aktie?: Wer eine Aktie besitzt, besitzt einen kleinen Anteil an einem Unternehmen. Beispiel: Ein Unternehmen wird in viele kleine Anteile aufgeteilt; eine Aktie ist ein solcher Anteil. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Eine Aktie ist nur ein Preis, der hoch oder runter geht.“.",
-          "young_adults": "Was ist eine Aktie?: Wer eine Aktie besitzt, besitzt einen kleinen Anteil an einem Unternehmen. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Ein Unternehmen wird in viele kleine Anteile aufgeteilt; eine Aktie ist ein solcher Anteil.",
-          "parents_teachers": "Lernziel: Aktien als kleine Anteile an einem Unternehmen verstehen. Didaktischer Fokus: Wer eine Aktie besitzt, besitzt einen kleinen Anteil an einem Unternehmen. Typische Fehlvorstellung: „Eine Aktie ist nur ein Preis, der hoch oder runter geht.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Stell dir ein Unternehmen wie eine riesige Pizza vor, die in viele gleich große Stücke geschnitten wird. Eine Aktie ist so ein Stück: ein kleiner Anteil am ganzen Unternehmen. Wer eine Aktie seiner Lieblingsmarke besitzt, ist also Mitbesitzer – ein winziges Stück der Firma gehört ihm wirklich. Läuft das Unternehmen gut, kann dein Anteil mehr wert werden. Läuft es schlecht, kann er auch an Wert verlieren. Eine Aktie ist deshalb nicht nur eine Zahl, die hoch- und runterhüpft, sondern echtes Miteigentum an einem echten Unternehmen.",
+          "young_adults": "Eine Aktie ist ein Anteil an einer Aktiengesellschaft: Du kaufst keine Wette auf eine Kurskurve, sondern ein Stück echtes Unternehmen. Als Aktionärin oder Aktionär bist du am Erfolg beteiligt – über mögliche Kurssteigerungen und über Dividenden, wenn das Unternehmen Gewinn ausschüttet. Genauso trägst du das Risiko: Der Kurs kann fallen, und niemand garantiert dir einen Gewinn. Der Kurs schwankt täglich, das Unternehmen dahinter verändert sich viel langsamer. Wer das versteht, lässt sich von roten Tagen weniger nervös machen und denkt in Jahren statt in Stunden.",
+          "parents_teachers": "Eine Aktie ist ein Anteil am Grundkapital einer Aktiengesellschaft. Aktionäre sind Miteigentümer mit Vermögens- und Mitwirkungsrechten: Anspruch auf die beschlossene Dividende, Stimmrecht auf der Hauptversammlung und Bezugsrecht bei Kapitalerhöhungen. Erträge können aus zwei Quellen entstehen – Kursentwicklung und Ausschüttung –, beide sind unsicher. Didaktisch bewährt sich das Bild vom geteilten Ganzen (Pizza, Kuchen): Es macht den Eigentumscharakter greifbar, bevor über Kurse gesprochen wird. Achten Sie darauf, dass Lernende die Aktie zuerst als Beteiligung und erst danach als handelbares Wertpapier mit schwankendem Preis begreifen."
         },
         "questions": [
           {
             "id": "q_aktie_001",
             "level": "explain",
-            "question": "Was beschreibt „Was ist eine Aktie?“ am besten?",
+            "question": "Was ist eine Aktie?",
             "points": 100,
-            "correctAnswer": "Wer eine Aktie besitzt, besitzt einen kleinen Anteil an einem Unternehmen.",
+            "correctAnswer": "Ein kleiner Anteil an einem Unternehmen – wer sie besitzt, ist Miteigentümer.",
             "distractors": [
               {
-                "text": "Eine Aktie ist nur ein Preis, der hoch oder runter geht.",
+                "text": "Eine Zahl an der Börse, die steigt oder fällt – echter Besitz steckt nicht dahinter.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Ein Sparvertrag mit dem Unternehmen, bei dem man sein Geld garantiert zurückbekommt.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Eine Kundenkarte, mit der man die Produkte des Unternehmens billiger einkaufen darf.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Wer eine Aktie besitzt, besitzt einen kleinen Anteil an einem Unternehmen."
+            "explanationAfterAnswer": "Eine Aktie ist echtes Miteigentum: Dir gehört ein kleines Stück des Unternehmens – mit Chancen und Risiken, aber ohne Garantie."
           },
           {
             "id": "q_aktie_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Was ist eine Aktie?“?",
+            "question": "In welchem Beispiel geht es um eine Aktie?",
             "points": 100,
-            "correctAnswer": "Ein Unternehmen wird in viele kleine Anteile aufgeteilt; eine Aktie ist ein solcher Anteil.",
+            "correctAnswer": "Lena besitzt 3 von 1.000.000 Anteilen einer Sportfirma – ihr gehört ein winziges Stück des Unternehmens.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Ben leiht seiner Schwester 20 Euro und bekommt sie nächsten Monat zurück.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Mia legt 100 Euro aufs Sparbuch und erhält dafür feste Zinsen von der Bank.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Tom kauft sich Turnschuhe seiner Lieblingsmarke im Laden.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Nur Lena besitzt einen Unternehmensanteil. Geld verleihen, sparen mit festen Zinsen oder Produkte kaufen macht niemanden zum Miteigentümer."
           },
           {
             "id": "q_aktie_003",
             "level": "understand",
-            "question": "Warum ist „Was ist eine Aktie?“ für Finanzbildung wichtig?",
+            "question": "Warum ist es wichtig zu verstehen, dass eine Aktie ein Unternehmensanteil ist?",
             "points": 120,
-            "correctAnswer": "Aktien als kleine Anteile an einem Unternehmen verstehen.",
+            "correctAnswer": "Weil der Wert der Aktie langfristig vom echten Unternehmen abhängt – nicht nur von Glück oder Zufall.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil Unternehmensanteile im Wert nur steigen können, wenn man lange genug wartet.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil man als Aktionär automatisch im Unternehmen mitarbeiten darf.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil man das Wort nur für den Unterricht braucht, im echten Leben aber nie.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Aktien als kleine Anteile an einem Unternehmen verstehen."
+            "explanationAfterAnswer": "Wer die Aktie als Anteil versteht, schaut auf das Unternehmen dahinter – und weiß zugleich: Auch mit Geduld gibt es keine Gewinngarantie."
           },
           {
             "id": "q_aktie_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Die Fantasie-AG „Bergquell“ ist in 100 Anteile aufgeteilt, jeder kostet 50 Euro. Paul kauft 2 Anteile. Was stimmt?",
             "points": 150,
-            "correctAnswer": "Den Begriff verstehen, Beispiele erkennen und ihn von ähnlichen Begriffen abgrenzen.",
+            "correctAnswer": "Paul gehören 2 von 100 Anteilen – ein kleiner Teil des Unternehmens, für den er 100 Euro bezahlt hat.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "Paul gehört jetzt die ganze Firma, weil er Aktien gekauft hat.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "Pauls 100 Euro sind sicher, denn Unternehmensanteile können nicht an Wert verlieren.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "Paul hat der Firma 100 Euro geliehen und bekommt sie später mit Zinsen zurück.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "2 Anteile à 50 Euro = 100 Euro für 2 Prozent des Unternehmens. Der Wert dieser Anteile kann steigen oder fallen – zurückzahlen muss die Firma nichts."
           },
           {
             "id": "q_aktie_005",
             "level": "master",
-            "question": "Welche Aussage zu „Was ist eine Aktie?“ stimmt am besten?",
+            "question": "Welche Aussage über Aktien ist am genauesten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Eine Aktie ist ein Anteil an einem Unternehmen: Ihr Wert kann steigen oder fallen, je nachdem, wie sich das Unternehmen und die Erwartungen der Anleger entwickeln.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Eine Aktie ist vor allem ein Kurs auf dem Bildschirm – was das Unternehmen macht, spielt für den Wert keine Rolle.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Bei bekannten Unternehmen ist eine Aktie so sicher wie ein Sparbuch.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Der Aktienkurs zeigt jederzeit exakt an, wie viel das Unternehmen wirklich wert ist.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Der Kurs spiegelt Unternehmen und Erwartungen – er schwankt, und Bekanntheit schützt nicht vor Verlusten. Miteigentum bedeutet Chance und Risiko zugleich."
           }
         ],
         "calculationTemplates": [],
         "teacherSupport": {
-          "competenceGoal": "Aktien als kleine Anteile an einem Unternehmen verstehen.",
-          "typicalMisconception": "Eine Aktie ist nur ein Preis, der hoch oder runter geht.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Eine Aktie ist nur ein Preis, der hoch oder runter geht.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Was ist eine Aktie?“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "competenceGoal": "Lernende erklären eine Aktie als Anteil an einem Unternehmen und unterscheiden Miteigentum vom bloßen Beobachten eines Kurses.",
+          "typicalMisconception": "Eine Aktie ist nur eine Zahl auf dem Bildschirm, die steigt oder fällt – hinter dem Kurs steckt nichts Echtes.",
+          "discussionPrompt": "Der Kurs eines bekannten Unternehmens fällt an einem Tag um 5 Prozent. Ist das Unternehmen an diesem Tag wirklich 5 Prozent schlechter geworden? Diskutieren Sie, was ein Kurs zeigt – und was nicht.",
+          "classroomActivity": "Zeichnen Sie einen Kreis („die Firma“) an die Tafel und teilen Sie ihn in 20 Stücke. Verteilen Sie Papier-Anteilsscheine an die Klasse und klären Sie gemeinsam: Wem gehört wie viel? Was passiert mit dem Wert der Stücke, wenn die Firma einen großen Auftrag gewinnt – oder verliert?"
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Was ist eine Aktie?“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Was ist eine Aktie?“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Fragen Sie Ihr Kind: Welche Firma findest du so gut, dass du ein Stück davon besitzen wollen würdest – und warum?",
+          "everydayExercise": "Suchen Sie gemeinsam drei Marken aus Ihrem Alltag (Frühstückstisch, Kleidung, Handy) und prüfen Sie: Welche davon sind Aktiengesellschaften – von welchen könnte man also tatsächlich ein Stück besitzen?"
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_eigentum_am_unternehmen",
@@ -190,12 +190,12 @@
           "konzept_aktie"
         ],
         "pedagogy": {
-          "learningGoal": "Aktionärseigentum, Rechte und Einfluss nach Anteil verstehen.",
-          "coreIdea": "Eigentum an einem Unternehmen bedeutet Beteiligung, aber nicht automatische Kontrolle.",
-          "everydayScenario": "Wer wenige von sehr vielen Aktien besitzt, ist beteiligt, entscheidet aber nicht allein.",
-          "misconception": "Wenn ich eine Aktie besitze, darf ich im Unternehmen alles bestimmen.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Eigentum am Unternehmen' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Eigentum am Unternehmen' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "learningGoal": "Verstehen, dass Aktionäre Miteigentümer mit Rechten sind – und dass ihr Einfluss von der Größe ihres Anteils abhängt.",
+          "coreIdea": "Eigentum am Unternehmen bedeutet Beteiligung und Mitsprache nach Anteil – aber keine Alleinherrschaft.",
+          "everydayScenario": "Auf der Hauptversammlung hat jede Stammaktie eine Stimme: Wer 10 von 1.000.000 Aktien hält, ist Miteigentümer, bestimmt aber nicht allein.",
+          "misconception": "Mit einer Aktie gehört mir die Firma – ich darf dann im Unternehmen mitbestimmen wie ein Chef.",
+          "transferTask": "Ein Verein mit 200 Mitgliedern stimmt über neue Trikots ab – jedes Mitglied hat eine Stimme. Erkläre, was daran der Hauptversammlung einer Aktiengesellschaft ähnelt und was anders ist. Tipp: Bei der AG zählt nicht pro Kopf, sondern pro Aktie.",
+          "reflectionPrompt": "Du besitzt 5 von 1.000.000 Aktien eines Unternehmens. Welche Rechte hast du wirklich – und warum wäre es ein Irrtum zu glauben, du könntest dem Vorstand Anweisungen geben?"
         },
         "glossaryTerms": [
           "Aktionär",
@@ -212,125 +212,125 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Eigentum am Unternehmen: Eigentum an einem Unternehmen bedeutet Beteiligung, aber nicht automatische Kontrolle. Beispiel: Wer wenige von sehr vielen Aktien besitzt, ist beteiligt, entscheidet aber nicht allein. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Wenn ich eine Aktie besitze, darf ich im Unternehmen alles bestimmen.“.",
-          "young_adults": "Eigentum am Unternehmen: Eigentum an einem Unternehmen bedeutet Beteiligung, aber nicht automatische Kontrolle. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Wer wenige von sehr vielen Aktien besitzt, ist beteiligt, entscheidet aber nicht allein.",
-          "parents_teachers": "Lernziel: Aktionärseigentum, Rechte und Einfluss nach Anteil verstehen. Didaktischer Fokus: Eigentum an einem Unternehmen bedeutet Beteiligung, aber nicht automatische Kontrolle. Typische Fehlvorstellung: „Wenn ich eine Aktie besitze, darf ich im Unternehmen alles bestimmen.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Wenn du eine Aktie besitzt, gehört dir wirklich ein kleines Stück des Unternehmens – du bist Miteigentümer. Deshalb darfst du zur Hauptversammlung gehen: Das ist das große jährliche Treffen aller Aktionäre, bei dem abgestimmt wird. Dabei gilt: eine Aktie, eine Stimme. Wer nur wenige Aktien hat, ist zwar dabei, entscheidet aber nicht allein – so wie ein einzelnes Vereinsmitglied nicht einfach den Trainer bestimmt. Chef spielen darfst du also nicht, mitreden aber schon. Und je größer dein Anteil, desto mehr Gewicht hat deine Stimme.",
+          "young_adults": "Als Aktionärin oder Aktionär bist du Miteigentümer – mit klaren Rechten: Du darfst an der Hauptversammlung teilnehmen und dort abstimmen (bei Stammaktien gilt: eine Aktie, eine Stimme), und du bist an ausgeschütteten Gewinnen beteiligt. Dein Einfluss richtet sich nach deinem Anteil: Mit 10 von einer Million Aktien gehören dir 0,001 Prozent – allein entscheidest du also nichts. Das Tagesgeschäft führt der Vorstand, kontrolliert vom Aufsichtsrat; die Aktionäre stimmen unter anderem über die Verwendung des Gewinns mit ab. Vorzugsaktien haben meist kein Stimmrecht, dafür oft eine höhere Dividende. Eigentum heißt hier: beteiligt sein, nicht befehlen.",
+          "parents_teachers": "Aktionäre sind Miteigentümer der Aktiengesellschaft; ihr Einfluss bemisst sich am gehaltenen Anteil. Zentrale Rechte: Teilnahme- und Stimmrecht auf der Hauptversammlung (Stammaktien: eine Aktie, eine Stimme; Vorzugsaktien in der Regel stimmrechtslos gegen Dividendenvorzug), Anspruch auf die beschlossene Dividende sowie Auskunftsrechte. Die Geschäftsführung liegt beim Vorstand, die Kontrolle beim Aufsichtsrat – Kleinaktionäre steuern das Unternehmen nicht operativ. Didaktischer Hinweis: Lassen Sie Anteile konkret ausrechnen (eigene Aktien geteilt durch Gesamtzahl). Die winzigen Prozentwerte korrigieren die Fehlvorstellung „mir gehört die Firma“ wirksamer als jede Belehrung."
         },
         "questions": [
           {
             "id": "q_eigentum_am_unternehmen_001",
             "level": "explain",
-            "question": "Was beschreibt „Eigentum am Unternehmen“ am besten?",
+            "question": "Was bedeutet es, Aktien eines Unternehmens zu besitzen?",
             "points": 100,
-            "correctAnswer": "Eigentum an einem Unternehmen bedeutet Beteiligung, aber nicht automatische Kontrolle.",
+            "correctAnswer": "Man ist Miteigentümer und darf mitbestimmen – aber nur mit dem Gewicht des eigenen Anteils.",
             "distractors": [
               {
-                "text": "Wenn ich eine Aktie besitze, darf ich im Unternehmen alles bestimmen.",
+                "text": "Man darf dem Unternehmen Anweisungen geben, weil einem die Firma jetzt gehört.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Man bekommt jedes Jahr garantiert einen festen Anteil vom Gewinn ausgezahlt.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Man arbeitet automatisch als Angestellter im Unternehmen mit.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Eigentum an einem Unternehmen bedeutet Beteiligung, aber nicht automatische Kontrolle."
+            "explanationAfterAnswer": "Aktionäre sind Miteigentümer mit Stimmrecht nach Anteil – sie führen das Unternehmen nicht, und eine Gewinnauszahlung ist nie garantiert."
           },
           {
             "id": "q_eigentum_am_unternehmen_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Eigentum am Unternehmen“?",
+            "question": "Welches Beispiel zeigt, wie Eigentum am Unternehmen funktioniert?",
             "points": 100,
-            "correctAnswer": "Wer wenige von sehr vielen Aktien besitzt, ist beteiligt, entscheidet aber nicht allein.",
+            "correctAnswer": "Frau Klein hält 50 von 2.000.000 Aktien und stimmt auf der Hauptversammlung mit 50 Stimmen ab.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Herr Roth arbeitet seit 20 Jahren in der Firma und kennt den Chef persönlich.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Frau Berg besitzt 50 Aktien und darf deshalb festlegen, welche Produkte die Firma nächstes Jahr baut.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Herr Wolf kauft jede Woche im Laden des Unternehmens ein.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Eigentum zeigt sich im Stimmrecht nach Anteil – nicht darin, Produkte zu bestimmen. Das operative Geschäft führt der Vorstand."
           },
           {
             "id": "q_eigentum_am_unternehmen_003",
             "level": "understand",
-            "question": "Warum ist „Eigentum am Unternehmen“ für Finanzbildung wichtig?",
+            "question": "Warum kann ein Kleinaktionär nicht allein über das Unternehmen bestimmen?",
             "points": 120,
-            "correctAnswer": "Aktionärseigentum, Rechte und Einfluss nach Anteil verstehen.",
+            "correctAnswer": "Weil das Stimmgewicht vom Anteil abhängt – wenige Aktien bedeuten nur einen winzigen Teil aller Stimmen.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil Kleinaktionäre keine echten Eigentümer sind, sondern nur Kunden der Börse.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil nur Aktionäre abstimmen dürfen, die auch im Unternehmen arbeiten.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil Abstimmungen bei Aktiengesellschaften gesetzlich verboten sind.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Aktionärseigentum, Rechte und Einfluss nach Anteil verstehen."
+            "explanationAfterAnswer": "Auch Kleinaktionäre sind echte Miteigentümer – aber bei Abstimmungen zählt jede Aktie einzeln, und wenige Stimmen geben selten den Ausschlag."
           },
           {
             "id": "q_eigentum_am_unternehmen_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Die Muster-AG hat 1.000.000 Aktien ausgegeben. Nora besitzt 100 Stück. Welche Aussage stimmt?",
             "points": 150,
-            "correctAnswer": "Die passenden Werte einsetzen, sauber rechnen und das Ergebnis im Kontext prüfen.",
+            "correctAnswer": "Nora gehören 0,01 Prozent des Unternehmens – auf der Hauptversammlung stimmt sie mit 100 Stimmen ab.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "Nora kann mit ihren 100 Aktien den Vorstand austauschen, wenn ihr die Führung nicht gefällt.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "Nora bekommt garantiert jedes Jahr 100 Euro Gewinn, weil sie 100 Aktien hält.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "Nora besitzt 10 Prozent des Unternehmens, weil 100 Aktien eine große Zahl sind.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "100 geteilt durch 1.000.000 mal 100 ergibt 0,01 Prozent. Nora ist Miteigentümerin mit Stimmrecht – Kontrolle oder garantierte Zahlungen hat sie nicht."
           },
           {
             "id": "q_eigentum_am_unternehmen_005",
             "level": "master",
-            "question": "Welche Aussage zu „Eigentum am Unternehmen“ stimmt am besten?",
+            "question": "Welche Aussage über Aktionärsrechte ist am genauesten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Aktionäre sind Miteigentümer mit echten Rechten wie Stimmrecht und Gewinnbeteiligung – ihr Einfluss wächst mit dem Anteil, ersetzt aber nicht die Arbeit von Vorstand und Aufsichtsrat.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Wer auch nur eine Aktie besitzt, kann im Unternehmen durchsetzen, was er will.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Stimmrechte sind wertlos, weil am Ende ohnehin immer der Vorstand allein entscheidet.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Nur wer mehr als die Hälfte aller Aktien hält, hat überhaupt irgendwelche Rechte.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Rechte hat jeder Aktionär – vom Stimmrecht bis zur Dividende. Das Gewicht bei Entscheidungen richtet sich aber nach dem Anteil."
           }
         ],
         "calculationTemplates": [
@@ -338,7 +338,7 @@
             "id": "tmpl_anteil",
             "level": "apply",
             "points": 150,
-            "questionTemplate": "Ein Unternehmen hat {gesamt} Aktien. Du besitzt {anzahl}. Wie viel Prozent besitzt du?",
+            "questionTemplate": "Eine Aktiengesellschaft hat insgesamt {gesamt} Aktien ausgegeben. Du besitzt {anzahl} davon. Wie viel Prozent des Unternehmens gehören dir?",
             "parameters": {
               "gesamt": {
                 "min": 100,
@@ -355,21 +355,21 @@
               "anzahl + gesamt",
               "gesamt - anzahl"
             ],
-            "explanationTemplate": "Anteil = eigene Aktien geteilt durch alle Aktien mal 100.",
+            "explanationTemplate": "Dein Anteil in Prozent = eigene Aktien geteilt durch alle Aktien, mal 100. So siehst du, wie groß dein Stück am Unternehmen wirklich ist.",
             "unit": "Prozent"
           }
         ],
         "teacherSupport": {
-          "competenceGoal": "Aktionärseigentum, Rechte und Einfluss nach Anteil verstehen.",
-          "typicalMisconception": "Wenn ich eine Aktie besitze, darf ich im Unternehmen alles bestimmen.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Wenn ich eine Aktie besitze, darf ich im Unternehmen alles bestimmen.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Eigentum am Unternehmen“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "competenceGoal": "Lernende berechnen Eigentumsanteile und erklären, dass Mitsprache vom Anteil abhängt – nicht vom bloßen Aktienbesitz an sich.",
+          "typicalMisconception": "Mit einer Aktie gehört mir die Firma – ich darf dann im Unternehmen mitbestimmen wie ein Chef.",
+          "discussionPrompt": "Ein Schüler behauptet: „Wer eine Aktie kauft, kann der Firma sagen, was sie tun soll.“ Lassen Sie ausrechnen, welchen Stimmanteil eine Aktie bei 1.000.000 ausgegebenen Aktien hat – und klären Sie, wer die täglichen Entscheidungen wirklich trifft.",
+          "classroomActivity": "Simulieren Sie eine Mini-Hauptversammlung: Verteilen Sie unterschiedlich viele Stimmkarten (z. B. 1, 5, 20) und stimmen Sie über eine Frage ab – etwa ob der Gewinn ausgeschüttet oder investiert wird. Werten Sie danach aus, wessen Stimmen den Ausschlag gaben und warum."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Eigentum am Unternehmen“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Eigentum am Unternehmen“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Sprechen Sie beim Abendessen darüber: Was ist der Unterschied zwischen „mir gehört ein Stück der Firma“ und „mir gehört die Firma“?",
+          "everydayExercise": "Teilen Sie einen Kuchen oder eine Pizza in Stücke und verteilen Sie sie ungleich. Besprechen Sie: Wer besitzt wie viel Prozent – und wer hätte bei einer Abstimmung nach Anteilen das größte Gewicht?"
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_warum_aktien_ausgeben",
@@ -382,12 +382,12 @@
           "konzept_vermoegen_schulden_eigenkapital"
         ],
         "pedagogy": {
-          "learningGoal": "Aktienausgabe als Möglichkeit zur Kapitalbeschaffung verstehen.",
-          "coreIdea": "Aktien können Unternehmen helfen, Kapital zu bekommen; dafür geben sie Eigentumsanteile ab.",
-          "everydayScenario": "Ein Unternehmen braucht Geld für Maschinen oder Wachstum und verkauft neue Anteile.",
-          "misconception": "Wenn ich eine Aktie an der Börse kaufe, bekommt das Unternehmen immer direkt mein Geld.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Warum geben Unternehmen Aktien aus?' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Warum geben Unternehmen Aktien aus?' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "learningGoal": "Die Aktienausgabe als Weg zur Kapitalbeschaffung verstehen: Das Unternehmen erhält Geld und gibt dafür Eigentumsanteile ab.",
+          "coreIdea": "Mit dem Verkauf neuer Aktien beschafft sich ein Unternehmen Eigenkapital für Wachstum – ohne Schulden, aber gegen Anteile am Eigentum.",
+          "everydayScenario": "Eine Fahrradfirma braucht 2 Millionen Euro für eine neue Fabrik und verkauft dafür neue Anteile an viele Anleger.",
+          "misconception": "Wenn ich eine Aktie an der Börse kaufe, bekommt das Unternehmen direkt mein Geld.",
+          "transferTask": "Stell dir vor, dein Schulkiosk braucht 500 Euro für einen neuen Kühlschrank. Vergleiche zwei Wege: Geld leihen und mit Zinsen zurückzahlen – oder Anteile am Kiosk verkaufen. Nenne für beide Wege je einen Vorteil und einen Nachteil.",
+          "reflectionPrompt": "Beim Börsengang fließt dein Geld an das Unternehmen, beim späteren Kauf an der Börse an den Verkäufer der Aktie. Warum ist dieser Unterschied wichtig, wenn jemand sagt: „Kauf die Aktie, damit unterstützt du die Firma direkt“?"
         },
         "glossaryTerms": [
           "Aktienausgabe",
@@ -404,139 +404,139 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Warum geben Unternehmen Aktien aus?: Aktien können Unternehmen helfen, Kapital zu bekommen; dafür geben sie Eigentumsanteile ab. Beispiel: Ein Unternehmen braucht Geld für Maschinen oder Wachstum und verkauft neue Anteile. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Wenn ich eine Aktie an der Börse kaufe, bekommt das Unternehmen immer direkt mein Geld.“.",
-          "young_adults": "Warum geben Unternehmen Aktien aus?: Aktien können Unternehmen helfen, Kapital zu bekommen; dafür geben sie Eigentumsanteile ab. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Ein Unternehmen braucht Geld für Maschinen oder Wachstum und verkauft neue Anteile.",
-          "parents_teachers": "Lernziel: Aktienausgabe als Möglichkeit zur Kapitalbeschaffung verstehen. Didaktischer Fokus: Aktien können Unternehmen helfen, Kapital zu bekommen; dafür geben sie Eigentumsanteile ab. Typische Fehlvorstellung: „Wenn ich eine Aktie an der Börse kaufe, bekommt das Unternehmen immer direkt mein Geld.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Stell dir eine Fahrradfirma vor, die eine neue Fabrik bauen will – das kostet Millionen, und so viel Geld liegt nicht auf dem Konto. Statt alles bei der Bank zu leihen, kann die Firma neue Anteile verkaufen: Viele Menschen geben Geld und bekommen dafür Aktien, also kleine Stücke der Firma. Dieses Geld muss das Unternehmen nicht zurückzahlen – dafür gehört es jetzt vielen Miteigentümern gemeinsam. Wichtig: Nur beim Verkauf neuer Aktien bekommt die Firma das Geld. Kaufst du später eine Aktie an der Börse, zahlst du an den bisherigen Besitzer der Aktie – nicht an die Firma.",
+          "young_adults": "Unternehmen geben Aktien aus, um Eigenkapital einzusammeln – zum Beispiel beim Börsengang oder bei einer Kapitalerhöhung. Der Vorteil gegenüber einem Kredit: Das Geld muss nicht zurückgezahlt werden, und es fallen keine Zinsen an. Der Preis dafür: Die bisherigen Eigentümer geben Anteile und Mitsprache ab, und bei einer Kapitalerhöhung verwässert sich ihr Anteil, wenn sie nicht mitziehen. Entscheidend fürs Verständnis: Frisches Geld erhält das Unternehmen nur bei der Ausgabe neuer Aktien. Der normale Börsenhandel danach ist ein Geschäft zwischen Anlegern – dein Kaufpreis geht an den Verkäufer, nicht an die Firma.",
+          "parents_teachers": "Die Aktienausgabe (Emission) dient der Eigenkapitalbeschaffung: Beim Börsengang oder einer Kapitalerhöhung erhält die Gesellschaft den Emissionserlös und gibt dafür neue Anteile am Grundkapital aus. Im Unterschied zum Fremdkapital entfallen Rückzahlungspflicht und Zinsen; im Gegenzug verschiebt sich die Eigentümerstruktur, Altaktionäre können über Bezugsrechte ihre Quote halten. Zentral für Lernende ist die Unterscheidung von Primärmarkt (Erlös fließt an das Unternehmen) und Sekundärmarkt (Handel zwischen Anlegern; das Unternehmen erhält nichts). Didaktischer Hinweis: Lassen Sie beide Geldflüsse als Pfeildiagramm skizzieren – wer zahlt an wen? Das deckt die Fehlvorstellung „mein Aktienkauf finanziert die Firma“ zuverlässig auf."
         },
         "questions": [
           {
             "id": "q_warum_aktien_ausgeben_001",
             "level": "explain",
-            "question": "Was beschreibt „Warum geben Unternehmen Aktien aus?“ am besten?",
+            "question": "Warum geben Unternehmen Aktien aus?",
             "points": 100,
-            "correctAnswer": "Aktien können Unternehmen helfen, Kapital zu bekommen; dafür geben sie Eigentumsanteile ab.",
+            "correctAnswer": "Um Geld für Investitionen zu bekommen – dafür geben sie Anteile am Unternehmen ab.",
             "distractors": [
               {
-                "text": "Wenn ich eine Aktie an der Börse kaufe, bekommt das Unternehmen immer direkt mein Geld.",
+                "text": "Damit sie bei jedem späteren Aktienkauf an der Börse automatisch Geld überwiesen bekommen.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Um Anlegern feste Zinsen zu zahlen, so wie bei einem Kredit.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Um Werbung zu machen, denn Aktien sind vor allem Sammelbilder für Fans.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Aktien können Unternehmen helfen, Kapital zu bekommen; dafür geben sie Eigentumsanteile ab."
+            "explanationAfterAnswer": "Die Aktienausgabe bringt dem Unternehmen einmalig Eigenkapital – dafür nimmt es neue Miteigentümer auf. Zinsen oder spätere Handelserlöse gibt es nicht."
           },
           {
             "id": "q_warum_aktien_ausgeben_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Warum geben Unternehmen Aktien aus?“?",
+            "question": "Welches Beispiel zeigt eine Aktienausgabe zur Kapitalbeschaffung?",
             "points": 100,
-            "correctAnswer": "Ein Unternehmen braucht Geld für Maschinen oder Wachstum und verkauft neue Anteile.",
+            "correctAnswer": "Eine Fahrradfirma verkauft 100.000 neue Anteile, um mit dem Erlös eine Fabrik zu bauen.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Eine Firma nimmt einen Kredit bei der Bank auf und zahlt ihn mit Zinsen zurück.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Ein Anleger kauft an der Börse eine bereits ausgegebene Aktie – und die Firma erhält dadurch frisches Geld.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Eine Firma spart ihren Gewinn mehrere Jahre an, um später zu investieren.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Nur beim Verkauf neuer Anteile fließt Geld an das Unternehmen. Der Handel mit bereits ausgegebenen Aktien läuft zwischen Anlegern."
           },
           {
             "id": "q_warum_aktien_ausgeben_003",
             "level": "understand",
-            "question": "Warum ist „Warum geben Unternehmen Aktien aus?“ für Finanzbildung wichtig?",
+            "question": "Warum kann es für ein Unternehmen attraktiv sein, Aktien auszugeben statt einen Kredit aufzunehmen?",
             "points": 120,
-            "correctAnswer": "Aktienausgabe als Möglichkeit zur Kapitalbeschaffung verstehen.",
+            "correctAnswer": "Das eingesammelte Geld muss nicht zurückgezahlt werden und kostet keine Zinsen – dafür gibt das Unternehmen Eigentumsanteile ab.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil die Aktienausgabe für das Unternehmen völlig kostenlos ist und es dafür nichts abgeben muss.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil Banken Unternehmen grundsätzlich kein Geld leihen.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil jedes Unternehmen gesetzlich verpflichtet ist, an die Börse zu gehen.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Aktienausgabe als Möglichkeit zur Kapitalbeschaffung verstehen."
+            "explanationAfterAnswer": "Eigenkapital statt Schulden: keine Rückzahlung, keine Zinsen – aber die Gründer teilen Eigentum und Mitsprache mit neuen Aktionären. Gratis ist das nicht."
           },
           {
             "id": "q_warum_aktien_ausgeben_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Die Radwerk-AG gibt beim Börsengang 100.000 neue Aktien zu je 20 Euro aus. Alle werden verkauft. Was stimmt?",
             "points": 150,
-            "correctAnswer": "Den Begriff verstehen, Beispiele erkennen und ihn von ähnlichen Begriffen abgrenzen.",
+            "correctAnswer": "Das Unternehmen erhält 2.000.000 Euro Eigenkapital und hat dafür neue Miteigentümer aufgenommen.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "Das Unternehmen erhält auch später bei jedem Weiterverkauf der Aktien an der Börse erneut 20 Euro pro Stück.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "Die Käufer bekommen ihre 20 Euro pro Aktie nach einigen Jahren garantiert zurück.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "Das Unternehmen muss die 2.000.000 Euro wie einen Kredit mit Zinsen zurückzahlen.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "100.000 mal 20 Euro ergibt 2.000.000 Euro Emissionserlös – einmalig, ohne Rückzahlungspflicht. Die Anleger tragen dafür das Kursrisiko."
           },
           {
             "id": "q_warum_aktien_ausgeben_005",
             "level": "master",
-            "question": "Welche Aussage zu „Warum geben Unternehmen Aktien aus?“ stimmt am besten?",
+            "question": "Welche Aussage über den Geldfluss bei Aktien ist am genauesten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Frisches Geld fließt dem Unternehmen nur bei der Ausgabe neuer Aktien zu – der spätere Börsenhandel ist ein Geschäft zwischen Anlegern.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Jeder Aktienkauf an der Börse ist eine direkte Geldspritze für das Unternehmen.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Wer Aktien beim Börsengang kauft, kann nichts verlieren, weil sein Geld an die Firma geht.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Für Unternehmen ist die Aktienausgabe in jeder Lage besser als ein Kredit.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Primärmarkt: Geld an das Unternehmen. Sekundärmarkt: Geld an den Verkäufer. Und egal wo gekauft wird – das Kursrisiko bleibt beim Anleger."
           }
         ],
         "calculationTemplates": [],
         "teacherSupport": {
-          "competenceGoal": "Aktienausgabe als Möglichkeit zur Kapitalbeschaffung verstehen.",
-          "typicalMisconception": "Wenn ich eine Aktie an der Börse kaufe, bekommt das Unternehmen immer direkt mein Geld.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Wenn ich eine Aktie an der Börse kaufe, bekommt das Unternehmen immer direkt mein Geld.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Warum geben Unternehmen Aktien aus?“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "competenceGoal": "Lernende erklären die Aktienausgabe als Eigenkapitalbeschaffung und unterscheiden den Geldfluss beim Börsengang vom späteren Börsenhandel.",
+          "typicalMisconception": "Wenn ich eine Aktie an der Börse kaufe, bekommt das Unternehmen direkt mein Geld.",
+          "discussionPrompt": "„Wenn ich eine Aktie kaufe, unterstütze ich die Firma direkt mit meinem Geld.“ Stimmt das? Unterscheiden Sie mit der Klasse: Börsengang (Geld an das Unternehmen) und Börsenhandel (Geld an den Verkäufer).",
+          "classroomActivity": "Rollenspiel Börsengang: Eine Gruppe ist die „Schulhof-AG“ und braucht 100 Euro für ein Projekt. Sie gibt 20 Anteilsscheine zu 5 Euro aus; danach dürfen die Anteile untereinander weiterverkauft werden. Beobachten Sie gemeinsam: Wann bekam die AG Geld – und wann floss es nur zwischen den Anlegern?"
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Warum geben Unternehmen Aktien aus?“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Warum geben Unternehmen Aktien aus?“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Fragen Sie Ihr Kind: Woher bekommt eine Firma das Geld für eine neue Fabrik – und was ist der Unterschied zwischen Geld leihen und Anteile verkaufen?",
+          "everydayExercise": "Denken Sie sich gemeinsam ein Mini-Unternehmen aus, etwa einen Limonadenstand. Planen Sie: Was kostet der Start? Würde man sich das Geld leihen oder Anteile an Freunde verkaufen – und was bedeutet jede Variante später für Rückzahlung und Mitsprache?"
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_aktionaer_sein",
@@ -547,12 +547,12 @@
           "konzept_eigentum_am_unternehmen"
         ],
         "pedagogy": {
-          "learningGoal": "Aktionärsrolle von Kundenrolle unterscheiden.",
-          "coreIdea": "Aktionäre sind Miteigentümer, nicht bloß Kunden oder Fans.",
-          "everydayScenario": "Du kaufst Schuhe als Kunde; Aktie besitzen macht dich zum Miteigentümer.",
-          "misconception": "Wenn ich Produkte einer Firma kaufe, bin ich automatisch Aktionär.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Was bedeutet Aktionär sein?' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Was bedeutet Aktionär sein?' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "learningGoal": "Die Rolle als Aktionär klar von der Rolle als Kunde oder Fan unterscheiden.",
+          "coreIdea": "Aktionäre sind Miteigentümer mit Rechten und Risiken – Kunden kaufen nur Produkte, Fans jubeln nur.",
+          "everydayScenario": "Wer Turnschuhe einer Marke kauft, ist Kunde; wer eine Aktie der Marke besitzt, ist Miteigentümer des Unternehmens.",
+          "misconception": "Wer viele Produkte einer Firma kauft oder ihr größter Fan ist, ist damit schon so etwas wie ein Aktionär.",
+          "transferTask": "Nimm deine Lieblingsmarke und schreibe zwei Listen: Was hast du als Kunde von ihr (Produkt, Garantie, Umtausch)? Und was hättest du als Aktionär (Anteil, Stimmrecht, mögliche Dividende, Kursrisiko)? Vergleiche die Listen.",
+          "reflectionPrompt": "Als Fan wünschst du deiner Lieblingsmarke Erfolg – als Aktionär hängt dein Geld daran. Warum solltest du eine Aktie trotzdem nicht nur deshalb kaufen, weil du die Produkte cool findest?"
         },
         "glossaryTerms": [
           "Aktionär",
@@ -569,139 +569,139 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Was bedeutet Aktionär sein?: Aktionäre sind Miteigentümer, nicht bloß Kunden oder Fans. Beispiel: Du kaufst Schuhe als Kunde; Aktie besitzen macht dich zum Miteigentümer. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Wenn ich Produkte einer Firma kaufe, bin ich automatisch Aktionär.“.",
-          "young_adults": "Was bedeutet Aktionär sein?: Aktionäre sind Miteigentümer, nicht bloß Kunden oder Fans. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Du kaufst Schuhe als Kunde; Aktie besitzen macht dich zum Miteigentümer.",
-          "parents_teachers": "Lernziel: Aktionärsrolle von Kundenrolle unterscheiden. Didaktischer Fokus: Aktionäre sind Miteigentümer, nicht bloß Kunden oder Fans. Typische Fehlvorstellung: „Wenn ich Produkte einer Firma kaufe, bin ich automatisch Aktionär.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Wenn du dir Turnschuhe deiner Lieblingsmarke kaufst, bist du Kunde: Du gibst Geld und bekommst ein Produkt – fertig. Kaufst du dagegen eine Aktie dieser Marke, wirst du Miteigentümer: Dir gehört ein kleines Stück des Unternehmens. Als Aktionär darfst du auf der Hauptversammlung mitstimmen und bekommst vielleicht eine Dividende, wenn die Firma Gewinn ausschüttet. Dafür trägst du auch das Risiko: Läuft es schlecht, verliert dein Anteil an Wert. Fan sein und Produkte kaufen macht dich also nicht zum Aktionär – dafür brauchst du wirklich einen Anteil. Und umgekehrt muss ein Aktionär die Produkte nicht einmal benutzen.",
+          "young_adults": "Kunde und Aktionär sind zwei völlig verschiedene Rollen, auch wenn es um dieselbe Marke geht. Als Kunde tauschst du Geld gegen Produkt – dein Risiko endet an der Kasse. Als Aktionär bist du Miteigentümer: Du profitierst über Kursgewinne und mögliche Dividenden vom Erfolg, trägst aber auch Verluste mit, wenn das Geschäft schwächelt. Dazu kommen Rechte wie das Stimmrecht auf der Hauptversammlung. Vorsicht vor dem Fan-Fehler: Dass du die Produkte liebst, heißt nicht, dass das Unternehmen wirtschaftlich gut dasteht oder die Aktie fair bewertet ist. Beliebtes Produkt und gutes Investment sind zwei verschiedene Prüfungen.",
+          "parents_teachers": "Das Modul trennt zwei Rollen, die Lernende häufig vermischen: Kunden stehen in einer Austauschbeziehung (Geld gegen Leistung), Aktionäre in einer Eigentümerbeziehung – mit Vermögensrechten (Dividende), Mitwirkungsrechten (Stimmrecht auf der Hauptversammlung) und dem vollen Kursrisiko bis zum Totalverlust des eingesetzten Betrags. Die Markenbindung Jugendlicher ist dabei Chance und Risiko zugleich: Sie weckt Interesse am Thema, verleitet aber zum Fehlschluss „gute Produkte = gute Aktie“. Didaktischer Hinweis: Lassen Sie beide Rollen tabellarisch gegenüberstellen (Geldfluss, Rechte, Risiken) und besprechen Sie bewusst ein Beispiel, bei dem ein beliebtes Produkt und ein wirtschaftlich schwaches Unternehmen zusammenfallen."
         },
         "questions": [
           {
             "id": "q_aktionaer_sein_001",
             "level": "explain",
-            "question": "Was beschreibt „Was bedeutet Aktionär sein?“ am besten?",
+            "question": "Was unterscheidet einen Aktionär von einem Kunden?",
             "points": 100,
-            "correctAnswer": "Aktionäre sind Miteigentümer, nicht bloß Kunden oder Fans.",
+            "correctAnswer": "Der Aktionär besitzt einen Anteil am Unternehmen – der Kunde kauft nur dessen Produkte.",
             "distractors": [
               {
-                "text": "Wenn ich Produkte einer Firma kaufe, bin ich automatisch Aktionär.",
+                "text": "Kunden, die sehr viel kaufen, werden mit der Zeit automatisch zu Aktionären.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Aktionäre bekommen die Produkte des Unternehmens kostenlos.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Es gibt keinen Unterschied – beide Wörter bedeuten dasselbe.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Aktionäre sind Miteigentümer, nicht bloß Kunden oder Fans."
+            "explanationAfterAnswer": "Aktionär wird man nur durch den Besitz eines Anteils – nicht durch Treue an der Kasse. Und Miteigentum bringt Rechte, aber keine Gratisprodukte."
           },
           {
             "id": "q_aktionaer_sein_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Was bedeutet Aktionär sein?“?",
+            "question": "Wer ist in diesen Beispielen Aktionärin oder Aktionär?",
             "points": 100,
-            "correctAnswer": "Du kaufst Schuhe als Kunde; Aktie besitzen macht dich zum Miteigentümer.",
+            "correctAnswer": "Emma besitzt zwei Anteile einer Sportmarke und darf auf der Hauptversammlung abstimmen.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Jonas kauft jede Saison die neuesten Schuhe der Marke.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Lea hat den Fanclub der Marke gegründet und wirbt überall für die Produkte – ihr gehört damit praktisch ein Stück der Firma.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Ali arbeitet im Laden der Marke und verkauft dort Schuhe.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Nur Emma hält einen Anteil. Kaufen, anfeuern oder dort arbeiten – nichts davon macht Miteigentum aus."
           },
           {
             "id": "q_aktionaer_sein_003",
             "level": "understand",
-            "question": "Warum ist „Was bedeutet Aktionär sein?“ für Finanzbildung wichtig?",
+            "question": "Warum ist es wichtig, die Rollen Kunde und Aktionär auseinanderzuhalten?",
             "points": 120,
-            "correctAnswer": "Aktionärsrolle von Kundenrolle unterscheiden.",
+            "correctAnswer": "Weil nur der Aktionär am Unternehmenserfolg beteiligt ist und dessen Risiken trägt – der Kunde riskiert höchstens den Kaufpreis des Produkts.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil tolle Produkte automatisch beweisen, dass die Aktie ein sicheres Investment ist.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil Kunden bei schlechten Geschäftszahlen ihre gekauften Produkte zurückgeben müssen.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil Aktionäre in einem anderen Gebäude einkaufen müssen als Kunden.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Aktionärsrolle von Kundenrolle unterscheiden."
+            "explanationAfterAnswer": "Die Rollen unterscheiden sich im Risiko: Der Kunde hat sein Produkt sicher, der Aktionär trägt Kursschwankungen mit – im Guten wie im Schlechten."
           },
           {
             "id": "q_aktionaer_sein_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Mia liebt die Spiele der Pixel-AG und kauft jedes neue Spiel für 60 Euro. Ihr Bruder Tim besitzt 3 Aktien der Pixel-AG. Was stimmt?",
             "points": 150,
-            "correctAnswer": "Den Begriff verstehen, Beispiele erkennen und ihn von ähnlichen Begriffen abgrenzen.",
+            "correctAnswer": "Tim ist als Aktionär am Unternehmen beteiligt und trägt das Kursrisiko – Mia ist Kundin, ihr Risiko endet mit dem Kaufpreis der Spiele.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "Mia ist durch ihre vielen Käufe längst stärker am Unternehmen beteiligt als Tim mit seinen 3 Aktien.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "Tim kann mit seinen Aktien nichts verlieren, solange die Spiele der Firma beliebt sind.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "Mia erhält als treue Kundin automatisch eine Dividende von der Pixel-AG.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "Beteiligung entsteht durch Anteile, nicht durch Einkäufe. Und beliebte Produkte schützen Tims Aktienkurs nicht automatisch vor Verlusten."
           },
           {
             "id": "q_aktionaer_sein_005",
             "level": "master",
-            "question": "Welche Aussage zu „Was bedeutet Aktionär sein?“ stimmt am besten?",
+            "question": "Welche Aussage zum Verhältnis von Fan, Kunde und Aktionär ist am genauesten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Beliebte Produkte machen ein Unternehmen nicht automatisch zu einem guten Investment – als Aktionär sollte man zusätzlich auf Gewinn, Schulden und den Preis der Aktie schauen.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Wer die Produkte einer Firma gut findet, kann ihre Aktie bedenkenlos kaufen.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Aktionär zu sein lohnt sich nur, wenn man auch Kunde des Unternehmens ist.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Aktionäre sollten die Produkte ihrer eigenen Firma besser nicht benutzen, um neutral zu bleiben.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Produktliebe ist ein Startpunkt zum Hinschauen, kein Kaufgrund: Ob sich eine Beteiligung eignet, entscheiden Zahlen und Preis – nicht das Fan-Gefühl."
           }
         ],
         "calculationTemplates": [],
         "teacherSupport": {
-          "competenceGoal": "Aktionärsrolle von Kundenrolle unterscheiden.",
-          "typicalMisconception": "Wenn ich Produkte einer Firma kaufe, bin ich automatisch Aktionär.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Wenn ich Produkte einer Firma kaufe, bin ich automatisch Aktionär.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Was bedeutet Aktionär sein?“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "competenceGoal": "Lernende unterscheiden die Rollen Kunde und Aktionär nach Geldfluss, Rechten und Risiken – und erkennen den Fehlschluss „gute Produkte = gute Aktie“.",
+          "typicalMisconception": "Wer viele Produkte einer Firma kauft oder ihr größter Fan ist, ist damit schon so etwas wie ein Aktionär.",
+          "discussionPrompt": "„Ich kaufe ständig bei dieser Marke – die Aktie muss gut sein.“ Diskutieren Sie: Was weiß ein begeisterter Kunde über das Unternehmen – und was weiß er gerade nicht (Gewinn, Kosten, Schulden, Konkurrenz)?",
+          "classroomActivity": "Erstellen Sie mit der Klasse eine Vergleichstabelle „Kunde vs. Aktionär“ mit den Zeilen Geldfluss, Rechte, Risiken und Dauer der Beziehung. Jede Gruppe füllt die Tabelle für eine selbst gewählte bekannte Marke aus und stellt sie vor."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Was bedeutet Aktionär sein?“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Was bedeutet Aktionär sein?“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Fragen Sie beim Einkaufen: Wenn wir hier etwas kaufen, wem nützt das – und was wäre anders, wenn uns ein Stück dieses Unternehmens gehören würde?",
+          "everydayExercise": "Wählen Sie mit Ihrem Kind eine Lieblingsmarke und sammeln Sie in zwei Spalten: Was hat man als Kunde von ihr – und was hätte man als Aktionär? Besprechen Sie zum Schluss, in welcher Spalte das Risiko größer ist."
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_chancen_risiken_aktie",
@@ -713,12 +713,12 @@
           "konzept_unternehmen_scheitern"
         ],
         "pedagogy": {
-          "learningGoal": "Chancen auf Wertsteigerung und Dividenden sowie Verlustrisiken verstehen.",
-          "coreIdea": "Aktien bieten Chancen, können aber stark schwanken und Verluste verursachen.",
-          "everydayScenario": "Ein erfolgreiches Unternehmen kann steigende Kurse haben; ein schwaches Unternehmen fallende.",
-          "misconception": "Eine bekannte Aktie ist automatisch sicher.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Chancen und Risiken einer Aktie' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Chancen und Risiken einer Aktie' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "learningGoal": "Chancen (Wertsteigerung, Dividende) und Risiken (Schwankung, Verlust bis Totalverlust) einer Aktie realistisch einschätzen.",
+          "coreIdea": "Chance und Risiko gehören bei Aktien untrennbar zusammen – wer die Chance auf Rendite will, muss Schwankungen aushalten können.",
+          "everydayScenario": "Zwei bekannte Unternehmen, zwei Wege: Das eine wächst jahrelang und der Kurs steigt, das andere verliert Kunden und der Kurs fällt – vorher wusste das niemand sicher.",
+          "misconception": "Eine bekannte Aktie ist automatisch sicher – bei großen Firmen kann man nichts verlieren.",
+          "transferTask": "Frage Eltern oder Lehrkräfte nach einem Unternehmen, das früher berühmt war und heute kaum noch eine Rolle spielt (zum Beispiel ein Handy-Hersteller von früher). Notiere, was Anleger damals wohl dachten – und was das über die Annahme „bekannt = sicher“ verrät.",
+          "reflectionPrompt": "Stell dir vor, deine Aktie steht 20 Prozent im Minus. Woran könntest du festmachen, ob du ruhig bleiben kannst oder ob das Unternehmen wirklich in Schwierigkeiten steckt – und warum ist der Verlust erst beim Verkauf endgültig?"
         },
         "glossaryTerms": [
           "Chance",
@@ -735,139 +735,139 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Chancen und Risiken einer Aktie: Aktien bieten Chancen, können aber stark schwanken und Verluste verursachen. Beispiel: Ein erfolgreiches Unternehmen kann steigende Kurse haben; ein schwaches Unternehmen fallende. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Eine bekannte Aktie ist automatisch sicher.“.",
-          "young_adults": "Chancen und Risiken einer Aktie: Aktien bieten Chancen, können aber stark schwanken und Verluste verursachen. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Ein erfolgreiches Unternehmen kann steigende Kurse haben; ein schwaches Unternehmen fallende.",
-          "parents_teachers": "Lernziel: Chancen auf Wertsteigerung und Dividenden sowie Verlustrisiken verstehen. Didaktischer Fokus: Aktien bieten Chancen, können aber stark schwanken und Verluste verursachen. Typische Fehlvorstellung: „Eine bekannte Aktie ist automatisch sicher.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Aktien haben zwei Seiten, und beide gehören zusammen. Die Chance: Wächst das Unternehmen, kann deine Aktie mehr wert werden, und manchmal bekommst du eine Dividende dazu. Das Risiko: Der Kurs kann fallen – auch bei Firmen, die jeder kennt. Berühmt sein schützt nicht vor Fehlern, neuer Konkurrenz oder Produkten, die plötzlich niemand mehr will. Im schlimmsten Fall geht ein Unternehmen sogar pleite, dann ist das eingesetzte Geld verloren. Wichtig zu wissen: Ein gefallener Kurs ist erst dann ein echter Verlust, wenn du verkaufst. Deshalb investieren kluge Anleger nur Geld, das sie lange nicht brauchen – und nie alles in eine einzige Aktie.",
+          "young_adults": "Rendite und Risiko sind bei Aktien zwei Seiten derselben Medaille: Die Chance auf Kursgewinne und Dividenden gibt es nur, weil du bereit bist, Schwankungen und mögliche Verluste zu tragen. Kurse reagieren auf Geschäftszahlen, Konkurrenz, Zinsen und Stimmungen – auch bei großen Namen sind zweistellige Prozentbewegungen normal. Ein Buchverlust wird erst durch den Verkauf zum realisierten Verlust; wer in Panik verkauft, macht aus einer Schwankung einen endgültigen Schaden. Trotzdem gilt: Einzelne Unternehmen können dauerhaft scheitern, bis zum Totalverlust. Deine Werkzeuge dagegen sind ein langer Anlagehorizont, Streuung über mehrere Unternehmen – und die Regel, nur Geld zu investieren, das du nicht kurzfristig brauchst.",
+          "parents_teachers": "Das Modul verankert den Rendite-Risiko-Zusammenhang, eine Kernkompetenz der OECD/INFE-Finanzbildung: Höhere Ertragschancen sind untrennbar mit höherer Unsicherheit verbunden. Zu den Risiken einer Einzelaktie zählen Kursschwankungen, dauerhafte Kursverluste und im Insolvenzfall der Totalverlust; Bekanntheit oder Unternehmensgröße sind keine Sicherheitsmerkmale. Wichtig ist die Unterscheidung zwischen Buchverlust (unrealisiert, nur im Depot sichtbar) und realisiertem Verlust (durch Verkauf endgültig). Didaktischer Hinweis: Arbeiten Sie mit historischen Beispielen einst dominanter Unternehmen, die abgestiegen sind – das entkräftet die Heuristik „groß und bekannt = sicher“ nachhaltiger als abstrakte Warnungen. Betonen Sie Streuung und langen Anlagehorizont als Umgang mit Risiko, ohne Verluste zu verharmlosen."
         },
         "questions": [
           {
             "id": "q_chancen_risiken_aktie_001",
             "level": "explain",
-            "question": "Was beschreibt „Chancen und Risiken einer Aktie“ am besten?",
+            "question": "Was gehört bei einer Aktie untrennbar zusammen?",
             "points": 100,
-            "correctAnswer": "Aktien bieten Chancen, können aber stark schwanken und Verluste verursachen.",
+            "correctAnswer": "Die Chance auf Wertsteigerung und Dividende – und das Risiko von Kursverlusten bis hin zum Totalverlust.",
             "distractors": [
               {
-                "text": "Eine bekannte Aktie ist automatisch sicher.",
+                "text": "Bekanntheit und Sicherheit: Je größer die Firma, desto sicherer die Aktie.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Geduld und Garantie: Wer lange genug wartet, macht mit jeder Aktie sicher Gewinn.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Aktie und Sparbuch: Beide funktionieren im Grunde genau gleich.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Aktien bieten Chancen, können aber stark schwanken und Verluste verursachen."
+            "explanationAfterAnswer": "Ohne Risiko keine Renditechance: Genau weil Aktien schwanken und verlieren können, bieten sie langfristig höhere Ertragschancen als sichere Sparformen."
           },
           {
             "id": "q_chancen_risiken_aktie_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Chancen und Risiken einer Aktie“?",
+            "question": "Welche Situation zeigt, dass auch bekannte Aktien riskant sein können?",
             "points": 100,
-            "correctAnswer": "Ein erfolgreiches Unternehmen kann steigende Kurse haben; ein schwaches Unternehmen fallende.",
+            "correctAnswer": "Ein berühmter Handyhersteller verpasst einen Technik-Trend, verliert Kunden – und sein Kurs fällt über Jahre.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Eine Sparerin hebt Geld vom Sparbuch ab und bekommt genau den eingezahlten Betrag zurück.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Der Kurs einer großen Firma steigt seit drei Monaten – damit ist bewiesen, dass er weiter steigen wird.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Ein Schüler verliert sein Taschengeld auf dem Schulweg.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Größe und Ruhm schützen nicht: Verpasste Trends und neue Konkurrenz treffen auch Weltkonzerne – und vergangene Kursanstiege beweisen nichts für die Zukunft."
           },
           {
             "id": "q_chancen_risiken_aktie_003",
             "level": "understand",
-            "question": "Warum ist „Chancen und Risiken einer Aktie“ für Finanzbildung wichtig?",
+            "question": "Warum schützt die Bekanntheit eines Unternehmens nicht vor Kursverlusten?",
             "points": 120,
-            "correctAnswer": "Chancen auf Wertsteigerung und Dividenden sowie Verlustrisiken verstehen.",
+            "correctAnswer": "Weil auch große Unternehmen Fehler machen, Konkurrenz bekommen oder Trends verpassen können – der Kurs folgt dem Geschäft, nicht dem Ruhm.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Die Frage täuscht: Bekannte Unternehmen verlieren an der Börse nie dauerhaft an Wert.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil die Börse große Unternehmen absichtlich benachteiligt.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil der Kurs nichts mit dem Unternehmen zu tun hat, sondern ausgelost wird.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Chancen auf Wertsteigerung und Dividenden sowie Verlustrisiken verstehen."
+            "explanationAfterAnswer": "Der Kurs bewertet die Zukunft des Geschäfts. Ändert sich die – durch Fehler, Konkurrenz oder Trends –, fällt auch der bekannteste Name."
           },
           {
             "id": "q_chancen_risiken_aktie_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Jonas hat eine Aktie für 80 Euro gekauft, heute steht sie bei 60 Euro. Er braucht das Geld nicht, und das Unternehmen wirtschaftet weiter solide. Was stimmt?",
             "points": 150,
-            "correctAnswer": "Innehalten, Informationen prüfen und erst dann passend zum eigenen Ziel handeln.",
+            "correctAnswer": "Jonas hat aktuell einen Buchverlust von 20 Euro – endgültig wird der Verlust erst, wenn er zu diesem Kurs verkauft.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "Jonas hat die 20 Euro bereits unwiederbringlich verloren, egal was er jetzt tut.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "Jonas sollte sofort verkaufen, denn eine einmal gefallene Aktie steigt nie wieder.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "Jonas hat gar keinen Verlust, weil sein Kaufpreis für immer der wahre Wert der Aktie bleibt.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "80 minus 60 Euro sind 20 Euro Buchverlust – eine Momentaufnahme. Real wird er erst durch den Verkauf; garantiert erholen muss sich der Kurs aber auch nicht."
           },
           {
             "id": "q_chancen_risiken_aktie_005",
             "level": "master",
-            "question": "Welche Aussage zu „Chancen und Risiken einer Aktie“ stimmt am besten?",
+            "question": "Welche Aussage über den Umgang mit Aktienrisiken ist am genauesten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Wer die Renditechancen von Aktien nutzen will, muss Schwankungen aushalten – mit Streuung, langem Atem und Geld, das nicht kurzfristig gebraucht wird, lässt sich das Risiko steuern, aber nie ganz abschalten.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Bei Aktien großer, bekannter Unternehmen ist das Risiko praktisch null.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Risiko lässt sich vollständig vermeiden, wenn man nur die richtigen Aktien auswählt.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Wegen der Risiken sind Aktien für den langfristigen Vermögensaufbau grundsätzlich ungeeignet.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Risiko verschwindet nie ganz – aber Streuung, Zeit und ein passender Geldeinsatz machen es tragbar. Weder Verharmlosung noch Totalverzicht sind die Antwort."
           }
         ],
         "calculationTemplates": [],
         "teacherSupport": {
-          "competenceGoal": "Chancen auf Wertsteigerung und Dividenden sowie Verlustrisiken verstehen.",
-          "typicalMisconception": "Eine bekannte Aktie ist automatisch sicher.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Eine bekannte Aktie ist automatisch sicher.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Chancen und Risiken einer Aktie“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "competenceGoal": "Lernende erläutern den Rendite-Risiko-Zusammenhang, unterscheiden Buchverlust und realisierten Verlust und hinterfragen die Heuristik „bekannt = sicher“.",
+          "typicalMisconception": "Eine bekannte Aktie ist automatisch sicher – bei großen Firmen kann man nichts verlieren.",
+          "discussionPrompt": "Sammeln Sie Unternehmen, die vor 20 Jahren berühmt waren und heute kaum noch eine Rolle spielen. Diskutieren Sie: Was hätte ein Anleger damals gedacht – und was folgt daraus für den Satz „bekannte Aktien sind sicher“?",
+          "classroomActivity": "Chancen-Risiko-Waage: Jede Gruppe erhält ein fiktives Unternehmensprofil (Wachstum, Konkurrenz, Schulden) und sortiert Karten mit Chancen und Risiken auf eine gezeichnete Waage. Anschließend begründet die Gruppe, ob sie mit Spielgeld investieren würde – und was sie dabei schlimmstenfalls verlieren könnte."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Chancen und Risiken einer Aktie“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Chancen und Risiken einer Aktie“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Erzählen Sie Ihrem Kind von einem Produkt oder einer Firma aus Ihrer Jugend, die es heute nicht mehr gibt – und überlegen Sie gemeinsam, was das für die Anleger von damals bedeutete.",
+          "everydayExercise": "Verfolgen Sie zwei Wochen lang gemeinsam den Kurs eines bekannten Unternehmens und notieren Sie die Schwankungen. Besprechen Sie: Hat sich die Firma an diesen Tagen wirklich verändert – oder nur die Stimmung an der Börse?"
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_dividende",
@@ -879,12 +879,12 @@
           "konzept_aktionaer_sein"
         ],
         "pedagogy": {
-          "learningGoal": "Dividenden als mögliche Gewinnausschüttung an Aktionäre verstehen.",
-          "coreIdea": "Eine Dividende ist eine Gewinnbeteiligung, keine Garantie und kein Zins.",
-          "everydayScenario": "Ein Unternehmen schüttet 2 Euro pro Aktie aus; wer 5 Aktien hat, bekommt 10 Euro.",
-          "misconception": "Dividenden sind sichere Zinsen.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Was ist eine Dividende?' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Was ist eine Dividende?' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "learningGoal": "Dividenden als mögliche, aber nicht garantierte Gewinnbeteiligung verstehen und berechnen.",
+          "coreIdea": "Eine Dividende ist ein Anteil am ausgeschütteten Gewinn – sie kann steigen, gekürzt oder ganz gestrichen werden.",
+          "everydayScenario": "Die Hauptversammlung beschließt 2 Euro Dividende je Aktie; wer 5 Aktien besitzt, bekommt 10 Euro auf sein Verrechnungskonto.",
+          "misconception": "Dividenden sind garantiert wie Zinsen – wer die Aktie hat, bekommt jedes Jahr sicher sein Geld.",
+          "transferTask": "Ein Unternehmen hat ein schwieriges Jahr hinter sich, der Gewinn ist eingebrochen. Begründe in zwei Sätzen, warum es die Dividende kürzen oder streichen könnte – und warum das bei vereinbarten Zinsen auf einem Sparkonto so nicht passiert.",
+          "reflectionPrompt": "Eine Aktie wirbt mit besonders hoher Dividende. Warum wäre es riskant, sie nur deshalb zu kaufen – und was müsstest du vorher über den Gewinn des Unternehmens wissen?"
         },
         "glossaryTerms": [
           "Dividende",
@@ -901,125 +901,125 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Was ist eine Dividende?: Eine Dividende ist eine Gewinnbeteiligung, keine Garantie und kein Zins. Beispiel: Ein Unternehmen schüttet 2 Euro pro Aktie aus; wer 5 Aktien hat, bekommt 10 Euro. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Dividenden sind sichere Zinsen.“.",
-          "young_adults": "Was ist eine Dividende?: Eine Dividende ist eine Gewinnbeteiligung, keine Garantie und kein Zins. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Ein Unternehmen schüttet 2 Euro pro Aktie aus; wer 5 Aktien hat, bekommt 10 Euro.",
-          "parents_teachers": "Lernziel: Dividenden als mögliche Gewinnausschüttung an Aktionäre verstehen. Didaktischer Fokus: Eine Dividende ist eine Gewinnbeteiligung, keine Garantie und kein Zins. Typische Fehlvorstellung: „Dividenden sind sichere Zinsen.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Wenn ein Unternehmen Gewinn macht, kann es einen Teil davon an seine Miteigentümer verteilen – das ist die Dividende. Beispiel: Beschließt die Firma 2 Euro pro Aktie und du besitzt 5 Aktien, bekommst du 10 Euro. Das fühlt sich an wie ein Dankeschön fürs Mitbesitzen. Aber Achtung: Eine Dividende ist kein fester Zins! In schlechten Jahren kann das Unternehmen sie kürzen oder ganz streichen – dann gibt es weniger oder gar nichts. Manche Firmen zahlen auch absichtlich keine Dividende, weil sie den Gewinn lieber ins Wachstum stecken. Beides ist normal und erlaubt.",
+          "young_adults": "Die Dividende ist der Teil des Gewinns, den eine Aktiengesellschaft an ihre Aktionäre ausschüttet – die Höhe schlägt der Vorstand vor, die Hauptversammlung beschließt sie jedes Jahr neu. Genau deshalb ist sie kein Zins: Es gibt keinen Anspruch auf eine bestimmte Höhe, in schwachen Jahren wird gekürzt oder gestrichen. Wachstumsunternehmen verzichten oft bewusst auf Ausschüttungen und reinvestieren den Gewinn. Eine auffällig hohe Dividendenrendite ist kein Gütesiegel – sie kann auch entstehen, weil der Kurs eingebrochen ist. Für deine Gesamtrendite zählt am Ende beides zusammen: Kursentwicklung plus Ausschüttungen, nicht die Dividende allein.",
+          "parents_teachers": "Die Dividende ist die Beteiligung der Aktionäre am Bilanzgewinn; über die Höhe beschließt die Hauptversammlung auf Vorschlag von Vorstand und Aufsichtsrat – jedes Jahr neu. Daraus folgt der zentrale Unterschied zum Zins: Es besteht kein fester Anspruch, Kürzung und Ausfall sind jederzeit möglich, und Gewinnthesaurierung (keine Ausschüttung zugunsten von Investitionen) ist eine legitime Strategie. Am Ex-Tag wird die Ausschüttung zudem rechnerisch vom Kurs abgezogen – Dividenden sind kein „Geschenk“. Didaktischer Hinweis: Stellen Sie Sparbuchzins und Dividende tabellarisch gegenüber (Wer legt die Höhe fest? Wie sicher ist die Zahlung? Wovon hängt sie ab?). Diese Gegenüberstellung räumt die Fehlvorstellung „Dividende = sicherer Zins“ am wirksamsten aus."
         },
         "questions": [
           {
             "id": "q_dividende_001",
             "level": "explain",
-            "question": "Was beschreibt „Was ist eine Dividende?“ am besten?",
+            "question": "Was ist eine Dividende?",
             "points": 100,
-            "correctAnswer": "Eine Dividende ist eine Gewinnbeteiligung, keine Garantie und kein Zins.",
+            "correctAnswer": "Ein Anteil am Gewinn, den ein Unternehmen an seine Aktionäre ausschütten kann – die Höhe wird jedes Jahr neu beschlossen.",
             "distractors": [
               {
-                "text": "Dividenden sind sichere Zinsen.",
+                "text": "Ein fester Zins, den jede Aktie jedes Jahr garantiert abwirft.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Eine Rückzahlung des Kaufpreises, die jedem Aktionär zusteht.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Eine Gebühr, die Aktionäre jährlich an das Unternehmen zahlen müssen.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Eine Dividende ist eine Gewinnbeteiligung, keine Garantie und kein Zins."
+            "explanationAfterAnswer": "Die Dividende ist eine Gewinnbeteiligung ohne Garantie: Sie hängt vom Geschäftserfolg ab und wird jedes Jahr neu beschlossen – anders als ein fester Zins."
           },
           {
             "id": "q_dividende_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Was ist eine Dividende?“?",
+            "question": "In welchem Beispiel wird eine Dividende gezahlt?",
             "points": 100,
-            "correctAnswer": "Ein Unternehmen schüttet 2 Euro pro Aktie aus; wer 5 Aktien hat, bekommt 10 Euro.",
+            "correctAnswer": "Die Hauptversammlung beschließt 2 Euro je Aktie – Sina besitzt 5 Aktien und erhält 10 Euro.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Die Bank schreibt Sina 1 Prozent Zinsen auf ihr Sparkonto gut.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Sinas Aktie ist um 2 Euro gestiegen – dieses Geld landet automatisch auf ihrem Konto, obwohl sie die Aktie behält.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Sina bekommt von ihrer Oma 10 Euro Taschengeld für gute Noten.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Die Dividende ist eine beschlossene Ausschüttung pro Aktie. Ein Kursanstieg dagegen bringt erst beim Verkauf Geld – von allein landet er nicht auf dem Konto."
           },
           {
             "id": "q_dividende_003",
             "level": "understand",
-            "question": "Warum ist „Was ist eine Dividende?“ für Finanzbildung wichtig?",
+            "question": "Warum ist eine Dividende kein sicherer Zins?",
             "points": 120,
-            "correctAnswer": "Dividenden als mögliche Gewinnausschüttung an Aktionäre verstehen.",
+            "correctAnswer": "Weil sie vom Gewinn abhängt und jedes Jahr neu beschlossen wird – sie kann gekürzt oder ganz gestrichen werden.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Die Annahme stimmt nicht: Große Unternehmen müssen ihre Dividende per Gesetz immer zahlen.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil Dividenden nur an Aktionäre gehen, die persönlich zur Hauptversammlung reisen.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil Dividenden grundsätzlich in Gutscheinen statt in Geld ausgezahlt werden.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Dividenden als mögliche Gewinnausschüttung an Aktionäre verstehen."
+            "explanationAfterAnswer": "Kein Gewinn, keine Pflicht zur Ausschüttung: Die Hauptversammlung entscheidet jedes Jahr neu – eine gesetzliche Zahlungsgarantie gibt es nicht."
           },
           {
             "id": "q_dividende_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Die Sonnenwerk-AG zahlte letztes Jahr 3 Euro Dividende je Aktie. Dieses Jahr ist der Gewinn eingebrochen. Leo besitzt 10 Aktien und rechnet fest mit 30 Euro. Was stimmt?",
             "points": 150,
-            "correctAnswer": "Die passenden Werte einsetzen, sauber rechnen und das Ergebnis im Kontext prüfen.",
+            "correctAnswer": "Leo kann sich nicht darauf verlassen: Die Hauptversammlung kann die Dividende kürzen oder streichen – vielleicht bekommt er weniger als 30 Euro oder gar nichts.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "Leo bekommt sicher 30 Euro, denn die Dividende des Vorjahres gilt automatisch weiter.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "Leo bekommt sogar mehr als 30 Euro, weil Unternehmen in schlechten Jahren zum Ausgleich mehr ausschütten müssen.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "Leo bekommt genau 3 Euro, weil eine Dividende immer nur für eine einzige Aktie gezahlt wird.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "Die Vorjahresdividende ist kein Versprechen: Bricht der Gewinn ein, wird oft gekürzt oder gestrichen. Fest einplanen sollte man Dividenden deshalb nie."
           },
           {
             "id": "q_dividende_005",
             "level": "master",
-            "question": "Welche Aussage zu „Was ist eine Dividende?“ stimmt am besten?",
+            "question": "Welche Aussage über Dividenden ist am genauesten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Dividenden können ein wertvoller Teil der Rendite sein – ihre Höhe ist aber unsicher, und keine Dividende zu zahlen kann sogar zu einer bewussten Wachstumsstrategie gehören.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Eine hohe Dividende beweist, dass es dem Unternehmen gut geht und die Aktie sicher ist.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Unternehmen, die keine Dividende zahlen, sind grundsätzlich schlechte Investments.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Die Dividende ist der einzige Ertrag, der bei Aktien wirklich zählt.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Weder ist eine hohe Dividende ein Sicherheitsbeweis, noch ist ihr Fehlen ein Makel: Entscheidend ist das Gesamtbild aus Gewinn, Strategie und Kursentwicklung."
           }
         ],
         "calculationTemplates": [
@@ -1027,7 +1027,7 @@
             "id": "tmpl_dividende",
             "level": "apply",
             "points": 150,
-            "questionTemplate": "Du besitzt {anzahl} Aktien. Pro Aktie gibt es {div} Euro Dividende. Wie viel bekommst du?",
+            "questionTemplate": "Du besitzt {anzahl} Aktien eines Unternehmens. Die Hauptversammlung hat {div} Euro Dividende je Aktie beschlossen. Wie viel Dividende erhältst du insgesamt?",
             "parameters": {
               "anzahl": {
                 "min": 1,
@@ -1044,21 +1044,21 @@
               "anzahl * div - div",
               "div"
             ],
-            "explanationTemplate": "Gesamtdividende = Anzahl mal Dividende pro Aktie.",
+            "explanationTemplate": "Deine Gesamtdividende = Anzahl deiner Aktien mal beschlossene Dividende je Aktie. Denk daran: Im nächsten Jahr kann die Höhe ganz anders ausfallen.",
             "unit": "Euro"
           }
         ],
         "teacherSupport": {
-          "competenceGoal": "Dividenden als mögliche Gewinnausschüttung an Aktionäre verstehen.",
-          "typicalMisconception": "Dividenden sind sichere Zinsen.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Dividenden sind sichere Zinsen.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Was ist eine Dividende?“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "competenceGoal": "Lernende berechnen Dividendenzahlungen und begründen, warum Dividenden keine garantierten Zinsen sind.",
+          "typicalMisconception": "Dividenden sind garantiert wie Zinsen – wer die Aktie hat, bekommt jedes Jahr sicher sein Geld.",
+          "discussionPrompt": "„Dividende ist wie Zinsen aufs Sparbuch.“ Prüfen Sie diesen Satz gemeinsam: Wer legt die Höhe fest? Was passiert in einem Verlustjahr? Und warum kann der Verzicht auf eine Dividende sogar ein gutes Zeichen sein?",
+          "classroomActivity": "Gewinnverteilungs-Spiel: Die Klasse ist die Hauptversammlung einer fiktiven AG mit 1.000 Euro Gewinn. Gruppen vertreten Positionen (ausschütten, investieren, Rücklage bilden) und stimmen ab, wie viel Dividende je Aktie gezahlt wird. Wiederholen Sie die Runde mit einem Verlustjahr."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Was ist eine Dividende?“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Was ist eine Dividende?“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Fragen Sie Ihr Kind: Was ist der Unterschied zwischen den Zinsen auf einem Sparkonto und der Dividende einer Aktie – und welche der beiden Zahlungen ist sicherer?",
+          "everydayExercise": "Rechnen Sie gemeinsam ein Beispiel: 5 Aktien, 2 Euro Dividende – wie viel kommt an? Und dann: Was ändert sich, wenn die Firma im nächsten Jahr nur 1 Euro zahlt oder die Dividende ganz streicht?"
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_kursgewinn",
@@ -1069,12 +1069,12 @@
           "konzept_chancen_risiken_aktie"
         ],
         "pedagogy": {
-          "learningGoal": "Kursgewinn und Kursverlust aus Kauf- und Verkaufspreis verstehen.",
-          "coreIdea": "Kursgewinn entsteht, wenn man teurer verkauft als gekauft hat.",
-          "everydayScenario": "Du kaufst eine Aktie für 50 Euro und verkaufst später für 70 Euro.",
-          "misconception": "Solange der Kurs einmal gestiegen ist, habe ich den Gewinn sicher.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Kursgewinn und Kursverlust' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Kursgewinn und Kursverlust' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "learningGoal": "Kursgewinn und Kursverlust aus Kauf- und Verkaufspreis berechnen und Buchgewinn von realisiertem Gewinn unterscheiden.",
+          "coreIdea": "Kursgewinn oder -verlust ergibt sich aus dem Unterschied zwischen Kauf- und Verkaufspreis – endgültig wird er erst beim Verkauf.",
+          "everydayScenario": "Du kaufst eine Aktie für 50 Euro; steht sie später bei 70 Euro, hast du 20 Euro Buchgewinn – echtes Geld wird daraus erst, wenn du wirklich verkaufst.",
+          "misconception": "Wenn meine Aktie einmal im Plus stand, ist mir dieser Gewinn sicher – er kann nicht mehr verschwinden.",
+          "transferTask": "Rechne ein eigenes Beispiel: Denk dir Kaufpreis, Stückzahl und zwei mögliche Verkaufspreise aus – einen über und einen unter dem Kaufpreis. Berechne Gewinn und Verlust und beschreibe, in welchem Moment daraus jeweils Realität wird.",
+          "reflectionPrompt": "Deine Aktie stand schon einmal 30 Prozent im Plus, jetzt sind es nur noch 5 Prozent. Hast du etwas verloren? Erkläre den Unterschied zwischen einem Gewinn auf dem Papier und einem Gewinn auf deinem Konto."
         },
         "glossaryTerms": [
           "Kurs",
@@ -1091,125 +1091,125 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Kursgewinn und Kursverlust: Kursgewinn entsteht, wenn man teurer verkauft als gekauft hat. Beispiel: Du kaufst eine Aktie für 50 Euro und verkaufst später für 70 Euro. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Solange der Kurs einmal gestiegen ist, habe ich den Gewinn sicher.“.",
-          "young_adults": "Kursgewinn und Kursverlust: Kursgewinn entsteht, wenn man teurer verkauft als gekauft hat. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Du kaufst eine Aktie für 50 Euro und verkaufst später für 70 Euro.",
-          "parents_teachers": "Lernziel: Kursgewinn und Kursverlust aus Kauf- und Verkaufspreis verstehen. Didaktischer Fokus: Kursgewinn entsteht, wenn man teurer verkauft als gekauft hat. Typische Fehlvorstellung: „Solange der Kurs einmal gestiegen ist, habe ich den Gewinn sicher.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Ein Kursgewinn entsteht, wenn du eine Aktie teurer verkaufst, als du sie gekauft hast. Kaufst du für 50 Euro und verkaufst für 70 Euro, hast du 20 Euro Gewinn – fällt der Kurs dagegen auf 40 Euro und du verkaufst, machst du 10 Euro Verlust. Wichtig: Solange du die Aktie behältst, steht der Gewinn nur auf dem Papier. Man nennt das Buchgewinn – er kann wieder schrumpfen oder weiter wachsen, je nachdem, wie sich der Kurs bewegt. Erst wenn du verkaufst, wird daraus echtes Geld auf deinem Konto. Ein Kurs im Plus ist also erfreulich, aber noch kein sicherer Gewinn. Und denk daran: Beim Kaufen und Verkaufen gehen auch noch Gebühren ab.",
+          "young_adults": "Kursgewinn oder -verlust ist die Differenz zwischen Verkaufs- und Kaufpreis, multipliziert mit der Stückzahl – Ordergebühren schmälern das Ergebnis zusätzlich. Entscheidend ist der Unterschied zwischen Buch- und realisiertem Ergebnis: Solange du investiert bist, sind Gewinne und Verluste nur Momentaufnahmen, die sich mit jedem Kurs ändern. Erst der Verkauf macht sie endgültig – im Guten wie im Schlechten. Wer glaubt, ein einmal erreichtes Plus sei schon „sein“ Geld, ärgert sich bei jedem Rücksetzer und neigt zu hektischen Entscheidungen. Umgekehrt ist ein Buchverlust kein endgültiger Schaden, solange das Unternehmen solide bleibt und du nicht verkaufen musst. Auf realisierte Gewinne fallen zudem Steuern an.",
+          "parents_teachers": "Das Kursergebnis errechnet sich aus (Verkaufspreis − Kaufpreis) × Stückzahl, gemindert um Transaktionskosten und im realisierten Fall um Steuern. Fachlich zentral ist die Unterscheidung zwischen unrealisiertem Buchgewinn/-verlust (Bewertung zum aktuellen Kurs, ändert sich laufend) und realisiertem Ergebnis (durch Verkauf endgültig). Diese Trennung wirkt zwei typischen Fehlvorstellungen entgegen: dem Besitzdenken gegenüber Buchgewinnen („das Plus gehört mir schon“) und der Panik bei Buchverlusten („alles ist weg“). Didaktischer Hinweis: Lassen Sie eine fiktive Depotposition über mehrere Kursstände hinweg bewerten und erst am Ende verkaufen – so erleben Lernende, dass sich das Konto erst mit dem Verkauf ändert. Im Hofino-Musterdepot lässt sich das mit virtuellem Geld gefahrlos nachvollziehen."
         },
         "questions": [
           {
             "id": "q_kursgewinn_001",
             "level": "explain",
-            "question": "Was beschreibt „Kursgewinn und Kursverlust“ am besten?",
+            "question": "Wann entsteht ein Kursgewinn?",
             "points": 100,
-            "correctAnswer": "Kursgewinn entsteht, wenn man teurer verkauft als gekauft hat.",
+            "correctAnswer": "Wenn man eine Aktie zu einem höheren Preis verkauft, als man beim Kauf bezahlt hat.",
             "distractors": [
               {
-                "text": "Solange der Kurs einmal gestiegen ist, habe ich den Gewinn sicher.",
+                "text": "Sobald der Kurs einmal über den Kaufpreis steigt – dieser Gewinn ist dann für immer sicher.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Automatisch nach einem Jahr Haltezeit, unabhängig vom Kurs.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Immer dann, wenn man besonders viele Aktien besitzt.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Kursgewinn entsteht, wenn man teurer verkauft als gekauft hat."
+            "explanationAfterAnswer": "Entscheidend ist der Verkauf: Erst die Differenz zwischen Verkaufs- und Kaufpreis macht den Gewinn endgültig – ein Zwischenhoch allein sichert nichts."
           },
           {
             "id": "q_kursgewinn_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Kursgewinn und Kursverlust“?",
+            "question": "Welches Beispiel zeigt einen realisierten Kursgewinn?",
             "points": 100,
-            "correctAnswer": "Du kaufst eine Aktie für 50 Euro und verkaufst später für 70 Euro.",
+            "correctAnswer": "Finn kauft eine Aktie für 50 Euro, verkauft sie für 70 Euro und hat damit 20 Euro Gewinn vor Kosten gemacht.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Finn erhält 2 Euro Dividende auf seine Aktie.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Finns Aktie ist von 50 auf 70 Euro gestiegen – die 20 Euro sind schon auf seinem Konto, obwohl er die Aktie behält.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Finn kauft eine zweite Aktie für 50 Euro dazu.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Realisiert heißt: verkauft. Ein gestiegener Kurs ohne Verkauf ist nur ein Buchgewinn – auf dem Konto landet dabei noch nichts."
           },
           {
             "id": "q_kursgewinn_003",
             "level": "understand",
-            "question": "Warum ist „Kursgewinn und Kursverlust“ für Finanzbildung wichtig?",
+            "question": "Warum ist ein Buchgewinn noch kein sicherer Gewinn?",
             "points": 120,
-            "correctAnswer": "Kursgewinn und Kursverlust aus Kauf- und Verkaufspreis verstehen.",
+            "correctAnswer": "Weil der Kurs bis zum Verkauf weiter schwankt – erst der Verkauf macht das Ergebnis endgültig.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Die Frage täuscht: Ein einmal erreichter Kursstand kann später nicht mehr unterschritten werden.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil Buchgewinne so lange der Bank gehören, bis man sie dort abholt.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil ein Buchgewinn gar nichts mit dem Aktienkurs zu tun hat.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Kursgewinn und Kursverlust aus Kauf- und Verkaufspreis verstehen."
+            "explanationAfterAnswer": "Ein Buchgewinn ist eine Momentaufnahme zum aktuellen Kurs. Bis zum Verkauf kann er wachsen, schrumpfen oder ganz verschwinden."
           },
           {
             "id": "q_kursgewinn_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Ella hat 10 Aktien zu je 40 Euro gekauft. Heute steht der Kurs bei 55 Euro, und sie verkauft alle. Wie hoch ist ihr Kursgewinn vor Gebühren – und was gilt dabei?",
             "points": 150,
-            "correctAnswer": "Die passenden Werte einsetzen, sauber rechnen und das Ergebnis im Kontext prüfen.",
+            "correctAnswer": "150 Euro – denn 10 mal (55 minus 40) Euro; durch den Verkauf ist der Gewinn jetzt realisiert.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "550 Euro – der gesamte Verkaufserlös ist ihr Gewinn.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "Die 150 Euro hatte Ella schon sicher, bevor sie verkaufte – der Verkauf ändert daran nichts.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "15 Euro – der Kursanstieg zählt nur einmal, egal wie viele Aktien sie besitzt.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "Gewinn = (Verkaufspreis minus Kaufpreis) mal Stückzahl: 15 Euro mal 10 Aktien sind 150 Euro. Sicher war dieser Betrag erst mit dem Verkauf."
           },
           {
             "id": "q_kursgewinn_005",
             "level": "master",
-            "question": "Welche Aussage zu „Kursgewinn und Kursverlust“ stimmt am besten?",
+            "question": "Welche Aussage über Kursgewinne und Kursverluste ist am genauesten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Buchgewinne und Buchverluste schwanken mit dem Kurs – endgültig wird das Ergebnis erst durch den Verkauf, und dann zählen auch Gebühren und Steuern mit.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Ein einmal erreichter Höchstkurs bleibt einem als Gewinn erhalten, auch wenn der Kurs später fällt.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Wer Buchverluste sofort durch Verkauf realisiert, wendet damit jeden Schaden sicher ab.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Gebühren spielen für das Ergebnis keine Rolle, weil sie im Kurs bereits enthalten sind.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Erst der Verkauf macht aus Schwankung ein Ergebnis – ein Panikverkauf macht aus einem Buchverlust allerdings einen endgültigen. Gebühren kommen immer obendrauf."
           }
         ],
         "calculationTemplates": [
@@ -1217,7 +1217,7 @@
             "id": "tmpl_kursgewinn",
             "level": "apply",
             "points": 150,
-            "questionTemplate": "Du besitzt {anzahl} Aktien. Kaufpreis {kauf} Euro, Verkaufspreis {verkauf} Euro. Wie hoch ist Gewinn oder Verlust vor Kosten?",
+            "questionTemplate": "Du hast {anzahl} Aktien zum Kurs von {kauf} Euro gekauft und verkaufst sie jetzt zu {verkauf} Euro. Wie hoch ist dein Kursgewinn oder Kursverlust vor Gebühren?",
             "parameters": {
               "anzahl": {
                 "min": 1,
@@ -1238,21 +1238,21 @@
               "kauf - verkauf",
               "anzahl + verkauf - kauf"
             ],
-            "explanationTemplate": "Verkaufspreis minus Kaufpreis, dann mal Anzahl.",
+            "explanationTemplate": "Rechne Verkaufspreis minus Kaufpreis und multipliziere das Ergebnis mit der Stückzahl. Ein negatives Ergebnis bedeutet Kursverlust.",
             "unit": "Euro"
           }
         ],
         "teacherSupport": {
-          "competenceGoal": "Kursgewinn und Kursverlust aus Kauf- und Verkaufspreis verstehen.",
-          "typicalMisconception": "Solange der Kurs einmal gestiegen ist, habe ich den Gewinn sicher.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Solange der Kurs einmal gestiegen ist, habe ich den Gewinn sicher.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Kursgewinn und Kursverlust“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "competenceGoal": "Lernende berechnen Kursgewinne und -verluste und unterscheiden Buchgewinn von realisiertem Gewinn.",
+          "typicalMisconception": "Wenn meine Aktie einmal im Plus stand, ist mir dieser Gewinn sicher – er kann nicht mehr verschwinden.",
+          "discussionPrompt": "„Meine Aktie stand schon bei plus 30 Prozent – dieses Geld gehört mir.“ Diskutieren Sie: Was unterscheidet einen Gewinn im Depot von einem Gewinn auf dem Konto – und wie verändert dieser Unterschied das Verhalten von Anlegern?",
+          "classroomActivity": "Kurstagebuch: Die Klasse „kauft“ eine fiktive Aktie zu 50 Euro. Würfeln oder ziehen Sie über zehn Runden Kursänderungen und lassen Sie nach jeder Runde den Buchgewinn oder Buchverlust berechnen. Erst am Ende wird verkauft – vergleichen Sie das realisierte Ergebnis mit den zwischenzeitlichen Höchstständen."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Kursgewinn und Kursverlust“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Kursgewinn und Kursverlust“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Fragen Sie Ihr Kind: Wenn deine Sammelkarte laut Preisliste im Wert gestiegen ist – hast du dann schon Geld verdient? Was müsste passieren, damit daraus echtes Geld wird?",
+          "everydayExercise": "Rechnen Sie gemeinsam durch: Kauf für 50 Euro, Kurs steigt auf 70, fällt auf 45, steigt auf 60. Notieren Sie nach jedem Schritt den Buchgewinn oder Buchverlust – und wie das Ergebnis aussähe, wenn genau in diesem Moment verkauft würde."
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_gesamtrendite",
@@ -1264,12 +1264,12 @@
           "konzept_kursgewinn"
         ],
         "pedagogy": {
-          "learningGoal": "Gesamtrendite als Kombination aus Kursentwicklung und Dividenden verstehen.",
-          "coreIdea": "Bei Aktien zählt nicht nur der Kurs, sondern auch Dividenden, Kosten und später Steuern.",
-          "everydayScenario": "Eine Aktie bringt 10 Euro Kursgewinn und 3 Euro Dividende.",
-          "misconception": "Bei Aktien zählt nur, ob der Kurs steigt.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Gesamtrendite' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Gesamtrendite' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "learningGoal": "Die Gesamtrendite als Summe aus Kursergebnis und Dividenden verstehen – nach Abzug der Kosten.",
+          "coreIdea": "Die Gesamtrendite einer Aktie speist sich aus zwei Quellen: Kursentwicklung und Ausschüttungen – erst zusammen zeigen sie das echte Ergebnis.",
+          "everydayScenario": "Eine Aktie bringt 10 Euro Kursgewinn und 3 Euro Dividende: Der Gesamtertrag vor Kosten liegt bei 13 Euro – mehr, als der Kurs allein verrät.",
+          "misconception": "Bei Aktien zählt nur der Kurs – Dividenden, Gebühren und Steuern kann man beim Ergebnis ignorieren.",
+          "transferTask": "Vergleiche zwei erfundene Aktien: A steigt um 8 Euro und zahlt keine Dividende, B steigt um 5 Euro und zahlt 4 Euro Dividende. Berechne beide Gesamterträge und erkläre, warum der reine Kursvergleich in die Irre führt.",
+          "reflectionPrompt": "Deine Aktie hat 10 Euro Kursgewinn gebracht, dazu 3 Euro Dividende – aber für Kauf und Verkauf hast du zusammen 10 Euro Gebühren gezahlt. Was bleibt wirklich übrig, und was lernst du daraus über scheinbar kleine Kosten?"
         },
         "glossaryTerms": [
           "Gesamtrendite",
@@ -1286,125 +1286,125 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Gesamtrendite: Bei Aktien zählt nicht nur der Kurs, sondern auch Dividenden, Kosten und später Steuern. Beispiel: Eine Aktie bringt 10 Euro Kursgewinn und 3 Euro Dividende. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Bei Aktien zählt nur, ob der Kurs steigt.“.",
-          "young_adults": "Gesamtrendite: Bei Aktien zählt nicht nur der Kurs, sondern auch Dividenden, Kosten und später Steuern. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Eine Aktie bringt 10 Euro Kursgewinn und 3 Euro Dividende.",
-          "parents_teachers": "Lernziel: Gesamtrendite als Kombination aus Kursentwicklung und Dividenden verstehen. Didaktischer Fokus: Bei Aktien zählt nicht nur der Kurs, sondern auch Dividenden, Kosten und später Steuern. Typische Fehlvorstellung: „Bei Aktien zählt nur, ob der Kurs steigt.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Wie viel dir eine Aktie wirklich gebracht hat, siehst du nicht am Kurs allein. Zur Gesamtrechnung gehören zwei Teile: der Kursgewinn oder Kursverlust – und die Dividenden, die du zwischendurch bekommen hast. Beispiel: Deine Aktie ist um 10 Euro gestiegen und hat dir 3 Euro Dividende gebracht – zusammen sind das 13 Euro. Davon gehen noch die Gebühren ab, die beim Kaufen und Verkaufen anfallen. Es kann auch andersherum laufen: 5 Euro Kursverlust und 3 Euro Dividende ergeben zusammen 2 Euro Minus. Wer nur auf den Kurs schaut, sieht also nur die halbe Wahrheit – rechne immer beides zusammen.",
+          "young_adults": "Die Gesamtrendite einer Aktie setzt sich aus Kursveränderung und Ausschüttungen zusammen – abzüglich Gebühren und, bei realisierten Gewinnen, Steuern. Wer Aktien nur über Kurscharts vergleicht, unterschätzt dividendenstarke Titel systematisch, denn die Ausschüttungen tauchen im Kursbild nicht auf. Umgekehrt kann eine Dividende einen Kursverlust abmildern, ihn aber nicht verlässlich ausgleichen. Auch die Kostenseite gehört in die Rechnung: Häufiges Kaufen und Verkaufen frisst über Ordergebühren spürbar Rendite – ein Argument mehr für langfristiges Halten. Beurteile ein Investment deshalb immer am Gesamtergebnis: Kursergebnis plus Ausschüttungen minus Kosten, über deinen gesamten Anlagezeitraum.",
+          "parents_teachers": "Die Gesamtrendite (Total Return) umfasst beide Ertragsquellen einer Aktie: die Kursveränderung und die Ausschüttungen, gemindert um Transaktionskosten und Steuern. Reine Kursbetrachtungen – etwa in Charts – blenden Dividenden aus und verzerren damit den Vergleich zwischen ausschüttungsstarken und thesaurierenden Werten. Für die Bewertung zählt der Gesamtertrag über den vollständigen Anlagezeitraum; Kosten wirken dabei wie eine negative Rendite und fallen bei häufigem Handeln besonders ins Gewicht. Didaktischer Hinweis: Lassen Sie zwei fiktive Aktien mit gleichem Gesamtertrag, aber unterschiedlicher Aufteilung (nur Kurs vs. Kurs plus Dividende) vergleichen – so erkennen Lernende, dass der Kurs allein kein vollständiges Ergebnismaß ist. Das Hofino-Musterdepot mit seiner Ordergebühr von 5 Euro eignet sich, um Kosteneffekte konkret durchzurechnen."
         },
         "questions": [
           {
             "id": "q_gesamtrendite_001",
             "level": "explain",
-            "question": "Was beschreibt „Gesamtrendite“ am besten?",
+            "question": "Woraus setzt sich die Gesamtrendite einer Aktie zusammen?",
             "points": 100,
-            "correctAnswer": "Bei Aktien zählt nicht nur der Kurs, sondern auch Dividenden, Kosten und später Steuern.",
+            "correctAnswer": "Aus der Kursveränderung und den Dividenden – abzüglich der Kosten.",
             "distractors": [
               {
-                "text": "Bei Aktien zählt nur, ob der Kurs steigt.",
+                "text": "Nur aus dem Kursgewinn – Dividenden sind ein Extra, das nicht zum Ergebnis gehört.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Aus einem festen Prozentsatz, den das Unternehmen jedes Jahr garantiert.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Aus der Anzahl der Aktien, die man besitzt.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Bei Aktien zählt nicht nur der Kurs, sondern auch Dividenden, Kosten und später Steuern."
+            "explanationAfterAnswer": "Kursergebnis plus Ausschüttungen minus Kosten – erst diese Summe zeigt, was ein Investment wirklich gebracht hat. Garantiert ist daran nichts."
           },
           {
             "id": "q_gesamtrendite_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Gesamtrendite“?",
+            "question": "In welchem Beispiel wird die Gesamtrendite richtig betrachtet?",
             "points": 100,
-            "correctAnswer": "Eine Aktie bringt 10 Euro Kursgewinn und 3 Euro Dividende.",
+            "correctAnswer": "Ava rechnet zusammen: 10 Euro Kursgewinn plus 3 Euro Dividende, minus Gebühren – das ist ihr echtes Ergebnis.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Ben schaut nur auf den Chart: Der Kurs ist gestiegen, also war das Investment automatisch perfekt.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Carla ignoriert ihren Kursverlust, denn ihre 3 Euro Dividende beweisen, dass sie insgesamt Gewinn gemacht hat.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Deniz merkt sich nur, wie viel seine Aktie am teuersten Tag wert war.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Nur Ava rechnet vollständig: Kurs, Dividende und Kosten gehören zusammen. Eine Dividende allein beweist keinen Gesamtgewinn – der Kursverlust zählt mit."
           },
           {
             "id": "q_gesamtrendite_003",
             "level": "understand",
-            "question": "Warum ist „Gesamtrendite“ für Finanzbildung wichtig?",
+            "question": "Warum reicht der Blick auf den Kurs nicht, um den Erfolg eines Aktieninvestments zu beurteilen?",
             "points": 120,
-            "correctAnswer": "Gesamtrendite als Kombination aus Kursentwicklung und Dividenden verstehen.",
+            "correctAnswer": "Weil Dividenden und Kosten im Kursverlauf nicht sichtbar sind – erst zusammen ergeben sie das wirkliche Ergebnis.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Der Blick reicht doch: Im Kurs sind alle Dividenden und Gebühren automatisch enthalten.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil Kurse nur einmal im Jahr aktualisiert werden.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil der Kurs geheim ist und Anleger ihn gar nicht sehen dürfen.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Gesamtrendite als Kombination aus Kursentwicklung und Dividenden verstehen."
+            "explanationAfterAnswer": "Der Chart zeigt nur die Kursseite. Ausschüttungen und deine persönlichen Kosten stehen dort nicht – genau sie können das Ergebnis aber deutlich verändern."
           },
           {
             "id": "q_gesamtrendite_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Noah hat mit einer Aktie 10 Euro Kursgewinn gemacht und 3 Euro Dividende erhalten. Für Kauf und Verkauf hat er insgesamt 10 Euro Gebühren gezahlt. Was bleibt vor Steuern übrig?",
             "points": 150,
-            "correctAnswer": "Die passenden Werte einsetzen, sauber rechnen und das Ergebnis im Kontext prüfen.",
+            "correctAnswer": "3 Euro – denn 10 plus 3 minus 10 Euro; die Gebühren fressen hier einen Großteil des Ertrags auf.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "13 Euro – Gebühren muss man beim Ergebnis nicht mitrechnen.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "10 Euro – nur der Kursgewinn zählt, Dividende und Gebühren gehören nicht zum Ergebnis.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "23 Euro – Kursgewinn, Dividende und Gebühren werden alle zusammengezählt.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "10 + 3 − 10 = 3 Euro. Das Beispiel zeigt: Scheinbar kleine Gebühren können einen großen Teil des Ertrags auffressen – besonders bei häufigem Handeln."
           },
           {
             "id": "q_gesamtrendite_005",
             "level": "master",
-            "question": "Welche Aussage zu „Gesamtrendite“ stimmt am besten?",
+            "question": "Welche Aussage über die Gesamtrendite ist am genauesten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Ein Investment beurteilt man am Gesamtergebnis über den ganzen Zeitraum: Kursveränderung plus Dividenden, minus Gebühren und Steuern – eine Aktie mit wenig Kursplus kann dank Dividenden vorn liegen.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Die Aktie mit dem stärksten Kursanstieg hat immer auch die beste Gesamtrendite.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Hohe Dividenden gleichen jeden Kursverlust sicher wieder aus.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Gebühren kann man vernachlässigen, weil sie im Vergleich zu Kursgewinnen immer winzig sind.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Erst die vollständige Rechnung entscheidet: Dividenden können ein mageres Kursplus überholen – aber sie garantieren keinen Ausgleich für Verluste, und Kosten zählen immer mit."
           }
         ],
         "calculationTemplates": [
@@ -1412,7 +1412,7 @@
             "id": "tmpl_gesamtrendite",
             "level": "apply",
             "points": 150,
-            "questionTemplate": "Du hast {kursgewinn} Euro Kursgewinn und {dividende} Euro Dividende erhalten. Wie hoch ist der Ertrag vor Kosten und Steuern?",
+            "questionTemplate": "Deine Aktienanlage hat {kursgewinn} Euro Kursergebnis gebracht, dazu kamen {dividende} Euro Dividende. Wie hoch ist dein Gesamtertrag vor Gebühren und Steuern?",
             "parameters": {
               "kursgewinn": {
                 "min": -100,
@@ -1429,21 +1429,21 @@
               "dividende - kursgewinn",
               "kursgewinn"
             ],
-            "explanationTemplate": "Gesamtertrag = Kursgewinn oder Kursverlust plus Dividende.",
+            "explanationTemplate": "Gesamtertrag = Kursergebnis plus Dividende. Auch ein Kursverlust gehört in die Rechnung – die Dividende kann ihn abmildern, aber nicht immer ausgleichen.",
             "unit": "Euro"
           }
         ],
         "teacherSupport": {
-          "competenceGoal": "Gesamtrendite als Kombination aus Kursentwicklung und Dividenden verstehen.",
-          "typicalMisconception": "Bei Aktien zählt nur, ob der Kurs steigt.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Bei Aktien zählt nur, ob der Kurs steigt.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Gesamtrendite“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "competenceGoal": "Lernende berechnen den Gesamtertrag aus Kursergebnis und Dividende und berücksichtigen Kosten als Teil des Ergebnisses.",
+          "typicalMisconception": "Bei Aktien zählt nur der Kurs – Dividenden, Gebühren und Steuern kann man beim Ergebnis ignorieren.",
+          "discussionPrompt": "Aktie A: plus 8 Euro Kurs, keine Dividende. Aktie B: plus 5 Euro Kurs, 4 Euro Dividende. Welche war besser? Lassen Sie zuerst spontan abstimmen, dann rechnen – und diskutieren Sie, warum der Chart allein täuscht.",
+          "classroomActivity": "Renditerechnung in Gruppen: Jede Gruppe erhält eine fiktive Aktienkarte mit Kaufpreis, Verkaufspreis, Dividenden und Gebühren und berechnet die Gesamtrendite. Anschließend werden die Karten in eine Rangliste gebracht – und mit einer Rangliste verglichen, die nur nach Kursentwicklung sortiert ist."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Gesamtrendite“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Gesamtrendite“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Fragen Sie Ihr Kind: Wenn eine Aktie im Kurs kaum gestiegen ist, aber jedes Jahr Dividende gezahlt hat – war sie dann ein schlechtes Investment? Woran macht man das fest?",
+          "everydayExercise": "Rechnen Sie zusammen zwei Beispiele durch: einmal Kursgewinn ohne Dividende, einmal kleiner Kursgewinn mit Dividende – jeweils minus 5 Euro Gebühr pro Kauf und Verkauf. Vergleichen Sie, was am Ende wirklich übrig bleibt."
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       }
     ]
   }

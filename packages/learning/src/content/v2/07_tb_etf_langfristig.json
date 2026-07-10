@@ -11,8 +11,8 @@
     "id": "tb_etf_langfristig",
     "title": "ETF und langfristiges Investieren",
     "unlockLevel": 27,
-    "goal": "Lernende verstehen Fonds, ETFs, Streuung, Kosten und langfristiges Investieren als planvolle Strategie.",
-    "pedagogicalIdea": "ETFs werden als Werkzeug für breite Streuung erklärt, nicht als Garantieprodukt.",
+    "goal": "Lernende verstehen Fonds und ETFs als Werkzeuge zur breiten Streuung, beurteilen Kosten und Risiken und begreifen langfristiges Investieren als planvolle, geduldige Strategie.",
+    "pedagogicalIdea": "ETFs werden konsequent als Bausteine für breite Streuung erklärt – nützlich, aber nicht risikolos und keine Gewinngarantie. Zeit im Markt und ruhiges Verhalten stehen über dem Erraten des perfekten Zeitpunkts.",
     "modules": [
       {
         "id": "konzept_fonds",
@@ -24,12 +24,12 @@
           "konzept_risiko"
         ],
         "pedagogy": {
-          "learningGoal": "Fonds als gemeinsamen Anlagetopf verstehen.",
-          "coreIdea": "Ein Fonds sammelt Geld vieler Anleger und investiert es nach Regeln oder Entscheidungen.",
-          "everydayScenario": "Viele Menschen zahlen in einen Topf ein, aus dem viele Aktien gekauft werden.",
-          "misconception": "Ein Fonds ist eine einzelne Aktie.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Was ist ein Fonds?' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Was ist ein Fonds?' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "learningGoal": "Einen Fonds als gemeinsamen Anlagetopf verstehen, in dem viele Anleger ihr Geld bündeln, um breiter gestreut anzulegen.",
+          "coreIdea": "Ein Fonds sammelt das Geld vieler Anleger und kauft davon viele verschiedene Wertpapiere auf einmal.",
+          "everydayScenario": "Zwölf Kinder legen je 5 Euro zusammen und kaufen davon eine ganze Kiste verschiedener Sammelkarten, die allen gemeinsam gehört.",
+          "misconception": "Ein Fonds ist nur eine einzige Aktie oder ein einzelnes Unternehmen, das man kauft.",
+          "transferTask": "Stell dir vor, deine Klasse legt Geld zusammen und kauft davon Anteile an zehn verschiedenen Unternehmen. Erkläre, warum das weniger riskant ist, als das gesamte Geld in eine einzige Aktie zu stecken.",
+          "reflectionPrompt": "Warum kann es gefährlich sein, einen Fonds für dasselbe zu halten wie eine einzelne Aktie, wenn man über sein Risiko nachdenkt?"
         },
         "glossaryTerms": [
           "Fonds",
@@ -47,139 +47,139 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Was ist ein Fonds?: Ein Fonds sammelt Geld vieler Anleger und investiert es nach Regeln oder Entscheidungen. Beispiel: Viele Menschen zahlen in einen Topf ein, aus dem viele Aktien gekauft werden. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Ein Fonds ist eine einzelne Aktie.“.",
-          "young_adults": "Was ist ein Fonds?: Ein Fonds sammelt Geld vieler Anleger und investiert es nach Regeln oder Entscheidungen. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Viele Menschen zahlen in einen Topf ein, aus dem viele Aktien gekauft werden.",
-          "parents_teachers": "Lernziel: Fonds als gemeinsamen Anlagetopf verstehen. Didaktischer Fokus: Ein Fonds sammelt Geld vieler Anleger und investiert es nach Regeln oder Entscheidungen. Typische Fehlvorstellung: „Ein Fonds ist eine einzelne Aktie.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Ein Fonds ist wie ein gemeinsamer Topf für Geld. Viele Menschen zahlen etwas ein, und mit dem gesammelten Geld werden viele verschiedene Aktien oder andere Anlagen gekauft. Stell dir vor, zwölf Kinder legen je 5 Euro zusammen und kaufen davon eine ganze Kiste mit verschiedenen Sammelkarten – jedem gehört ein Stück von allem. Genau so besitzt du mit einem Fondsanteil ein kleines Stück von vielen Unternehmen. Der Vorteil: Läuft eine Aktie schlecht, können die anderen das ausgleichen. Ein Fonds ist also nicht eine einzelne Aktie, sondern ein ganzer Korb voller Anlagen.",
+          "young_adults": "Ein Fonds bündelt das Geld vieler Anleger und investiert es nach festen Regeln in viele verschiedene Wertpapiere. Statt selbst zwanzig Einzelaktien zu kaufen, kaufst du einen Fondsanteil und bist damit automatisch an allen enthaltenen Werten beteiligt – das spart Aufwand und streut das Risiko. Man unterscheidet aktiv gemanagte Fonds, bei denen ein Fondsmanager auswählt und dafür höhere Gebühren nimmt, von passiven Fonds, die einfach einen Index nachbilden. Der Preis eines Anteils hängt vom Wert aller enthaltenen Anlagen ab. Ein Fonds nimmt dir die Streuung ab, macht deine Anlage aber nicht risikolos – fällt der gesamte Markt, fällt auch der Fonds.",
+          "parents_teachers": "Ein Fonds ist ein Sondervermögen, in dem das Kapital vieler Anleger gebündelt und nach festgelegten Regeln in eine Vielzahl von Wertpapieren investiert wird; man unterscheidet aktiv gemanagte und passive Fonds. Vermitteln Sie das Bild des gemeinsamen Anlagekorbs, in dem jeder Anteil einen Bruchteil aller enthaltenen Werte repräsentiert. Die häufigste Fehlvorstellung ist die Gleichsetzung von Fonds und Einzelaktie – greifen Sie diese auf, indem Sie den Streuungsgedanken kontrastieren: ein Fonds verteilt das Risiko auf viele Titel, eine Einzelaktie konzentriert es auf ein Unternehmen."
         },
         "questions": [
           {
             "id": "q_fonds_001",
             "level": "explain",
-            "question": "Was beschreibt „Was ist ein Fonds?“ am besten?",
+            "question": "Was ist ein Fonds?",
             "points": 100,
-            "correctAnswer": "Ein Fonds sammelt Geld vieler Anleger und investiert es nach Regeln oder Entscheidungen.",
+            "correctAnswer": "Ein Topf, in dem das Geld vieler Anleger gebündelt und in viele verschiedene Anlagen investiert wird.",
             "distractors": [
               {
-                "text": "Ein Fonds ist eine einzelne Aktie.",
+                "text": "Eine einzelne Aktie eines einzigen Unternehmens.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Ein Sparkonto bei der Bank mit festem Zinssatz.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Ein Gutschein, den man in einem Geschäft einlösen kann.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Ein Fonds sammelt Geld vieler Anleger und investiert es nach Regeln oder Entscheidungen."
+            "explanationAfterAnswer": "Genau: Ein Fonds sammelt das Geld vieler Anleger und kauft davon viele verschiedene Anlagen auf einmal."
           },
           {
             "id": "q_fonds_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Was ist ein Fonds?“?",
+            "question": "Welches Beispiel beschreibt am besten, wie ein Fonds funktioniert?",
             "points": 100,
-            "correctAnswer": "Viele Menschen zahlen in einen Topf ein, aus dem viele Aktien gekauft werden.",
+            "correctAnswer": "Zwölf Kinder legen ihr Geld zusammen und kaufen davon eine Kiste mit vielen verschiedenen Sammelkarten, die allen gemeinsam gehört.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Ein Kind kauft mit seinem gesamten Taschengeld eine einzige besonders seltene Sammelkarte.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Ein Kind leiht einem Freund 5 Euro und bekommt sie später zurück.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Ein Kind tauscht eine doppelte Karte gegen eine andere doppelte Karte.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Beim Fonds zahlen viele ein, und das gemeinsame Geld wird auf viele verschiedene Anlagen verteilt."
           },
           {
             "id": "q_fonds_003",
             "level": "understand",
-            "question": "Warum ist „Was ist ein Fonds?“ für Finanzbildung wichtig?",
+            "question": "Warum kann ein Fonds das Risiko besser verteilen als der Kauf einer einzelnen Aktie?",
             "points": 120,
-            "correctAnswer": "Fonds als gemeinsamen Anlagetopf verstehen.",
+            "correctAnswer": "Weil das Geld auf viele verschiedene Unternehmen aufgeteilt wird und ein schlechter Wert von den anderen aufgefangen werden kann.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil ein Fonds vom Staat abgesichert wird und niemals an Wert verlieren kann.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil ein Fonds immer nur besonders sichere Aktien enthält, die nie fallen.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil ein Fonds gar kein echtes Geld verwendet.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Fonds als gemeinsamen Anlagetopf verstehen."
+            "explanationAfterAnswer": "Streuung bedeutet: Ein einzelner Verlust wiegt weniger schwer, weil viele andere Werte im Fonds stecken. Verschwinden kann das Risiko aber nicht."
           },
           {
             "id": "q_fonds_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Du hast 500 Euro und möchtest breit gestreut anlegen, ohne dich um viele Einzelentscheidungen zu kümmern. Was passt am besten?",
             "points": 150,
-            "correctAnswer": "Den Begriff verstehen, Beispiele erkennen und ihn von ähnlichen Begriffen abgrenzen.",
+            "correctAnswer": "Einen Fondsanteil kaufen, der viele verschiedene Unternehmen enthält, und die Kosten des Fonds vorher prüfen.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "Die kompletten 500 Euro in die Aktie des Unternehmens stecken, das gerade am meisten gestiegen ist.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "Warten, bis ein Fonds garantiert nur noch steigt, und erst dann kaufen.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "Das Geld auf zwei fast identische Aktien derselben Branche aufteilen.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "Ein Fonds nimmt dir die Streuung ab – prüfe aber immer die Kosten, denn sie mindern deine Rendite."
           },
           {
             "id": "q_fonds_005",
             "level": "master",
-            "question": "Welche Aussage zu „Was ist ein Fonds?“ stimmt am besten?",
+            "question": "Welche Aussage über Fonds ist am treffendsten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Ein Fonds verteilt das Risiko auf viele Werte, nimmt es aber nicht weg – fällt der ganze Markt, fällt auch der Fonds.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Ein Fonds ist sicher, weil er das Risiko einer Einzelaktie vollständig beseitigt.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Ein Fonds und eine Einzelaktie sind im Grunde dasselbe, nur mit anderem Namen.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Ein Fonds bringt immer mehr Rendite als jede Einzelaktie.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Streuung senkt das Risiko einzelner Fehlgriffe, aber das allgemeine Marktrisiko bleibt bestehen."
           }
         ],
         "calculationTemplates": [],
         "teacherSupport": {
-          "competenceGoal": "Fonds als gemeinsamen Anlagetopf verstehen.",
-          "typicalMisconception": "Ein Fonds ist eine einzelne Aktie.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Ein Fonds ist eine einzelne Aktie.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Was ist ein Fonds?“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "competenceGoal": "Einen Fonds als gemeinsamen Anlagekorb verstehen, der Kapital bündelt und Risiko streut.",
+          "typicalMisconception": "Ein Fonds ist dasselbe wie eine einzelne Aktie.",
+          "discussionPrompt": "Warum ist es weniger riskant, mit dem Klassengeld Anteile an zehn Unternehmen zu kaufen, als alles in ein einziges Unternehmen zu stecken?",
+          "classroomActivity": "Die Klasse simuliert einen Fonds: Jede Gruppe steht für ein Unternehmen und zieht eine Zufallskarte mit Kursgewinn oder -verlust. Anschließend wird gezeigt, wie sich der Gesamtwert des Fonds im Vergleich zu einer einzelnen Gruppe verhält."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Was ist ein Fonds?“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Was ist ein Fonds?“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Wenn wir zu Hause Geld für ein gemeinsames Ziel zusammenlegen und breit einkaufen statt alles auf eine Sache zu setzen – wo ist das ähnlich wie bei einem Fonds?",
+          "everydayExercise": "Schauen Sie gemeinsam den Namen eines bekannten Fonds an und überlegen Sie: Wie viele Unternehmen stecken darin ungefähr, und was würde passieren, wenn eines davon Probleme bekäme?"
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_etf",
@@ -191,12 +191,12 @@
           "konzept_index"
         ],
         "pedagogy": {
-          "learningGoal": "ETF als börsengehandelten Fonds verstehen, der oft einen Index abbildet.",
-          "coreIdea": "Ein ETF ist meist ein Fonds, der einen Index einfach und kostengünstig nachbildet.",
-          "everydayScenario": "Ein ETF auf einen Weltindex beteiligt dich an vielen Unternehmen.",
-          "misconception": "Ein ETF ist automatisch sicher und kann nicht fallen.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Was ist ein ETF?' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Was ist ein ETF?' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "learningGoal": "Einen ETF als börsengehandelten, meist passiven Indexfonds verstehen, der breit streut, aber trotzdem schwanken kann.",
+          "coreIdea": "Ein ETF ist ein Fonds, der an der Börse gehandelt wird und meist einfach einen Index nachbildet, statt selbst Aktien auszuwählen.",
+          "everydayScenario": "Mit einem einzigen Welt-ETF-Anteil bist du an tausenden Unternehmen aus vielen Ländern gleichzeitig beteiligt.",
+          "misconception": "Ein ETF ist automatisch sicher und kann nicht an Wert verlieren.",
+          "transferTask": "Erkläre einem Freund in zwei Sätzen, warum ein ETF wie ein gemischter Obstkorb ist – und warum der Korb trotzdem an Wert verlieren kann, wenn die ganze Ernte schlecht ausfällt.",
+          "reflectionPrompt": "Wenn jemand sagt „ETFs sind sicher“, welche wichtige Tatsache über das Marktrisiko wird dabei vergessen?"
         },
         "glossaryTerms": [
           "ETF",
@@ -213,139 +213,139 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Was ist ein ETF?: Ein ETF ist meist ein Fonds, der einen Index einfach und kostengünstig nachbildet. Beispiel: Ein ETF auf einen Weltindex beteiligt dich an vielen Unternehmen. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Ein ETF ist automatisch sicher und kann nicht fallen.“.",
-          "young_adults": "Was ist ein ETF?: Ein ETF ist meist ein Fonds, der einen Index einfach und kostengünstig nachbildet. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Ein ETF auf einen Weltindex beteiligt dich an vielen Unternehmen.",
-          "parents_teachers": "Lernziel: ETF als börsengehandelten Fonds verstehen, der oft einen Index abbildet. Didaktischer Fokus: Ein ETF ist meist ein Fonds, der einen Index einfach und kostengünstig nachbildet. Typische Fehlvorstellung: „Ein ETF ist automatisch sicher und kann nicht fallen.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "ETF ist die Abkürzung für „Exchange Traded Fund“, also ein Fonds, den man wie eine Aktie an der Börse kaufen kann. Das Besondere: Ein ETF sucht sich die Aktien nicht selbst aus, sondern bildet einfach einen Index nach – zum Beispiel „die 500 größten Firmen der USA“. Stell dir einen gemischten Obstkorb vor: Statt nur einem Apfel bekommst du Äpfel, Bananen und Trauben auf einmal. Genau so bist du mit einem ETF an vielen Unternehmen gleichzeitig beteiligt. Weil so viele Werte drin sind, ist ein einzelner Ausrutscher nicht so schlimm. Aber Achtung: Auch ein ETF kann fallen – wenn die ganze Börse nach unten geht, sinkt auch der Korb.",
+          "young_adults": "Ein ETF (Exchange Traded Fund) ist ein börsengehandelter Fonds, der meist passiv einen Index nachbildet, statt aktiv Einzelwerte auszuwählen. Genau dieses passive Vorgehen macht ihn günstig: Es braucht kein teures Fondsmanagement, deshalb sind die laufenden Kosten oft niedrig. Mit einem einzigen breiten Welt-ETF bist du an tausenden Unternehmen beteiligt und musst dich nicht um Einzelentscheidungen kümmern. Du kannst ihn während der Börsenzeiten kaufen und verkaufen wie eine Aktie. Wichtig bleibt: Ein ETF streut das Risiko, beseitigt es aber nicht – das Marktrisiko bleibt, ein breiter ETF kann in einer Krise deutlich fallen.",
+          "parents_teachers": "Ein ETF ist ein börsengehandeltes Sondervermögen, das in der Regel passiv einen Index abbildet und daher meist geringe laufende Kosten aufweist. Nutzen Sie das Bild des gemischten Obstkorbs, um die breite Streuung und den Unterschied zur Einzelauswahl zu verdeutlichen. Die zentrale Fehlvorstellung – ETF sei gleichbedeutend mit „sicher“ – sollten Sie gezielt aufgreifen: Ein ETF reduziert das unternehmensspezifische Einzelrisiko durch Streuung, das Marktrisiko trägt der Anleger jedoch weiterhin voll. Betonen Sie, dass ein breiter ETF in Krisenphasen mit dem Gesamtmarkt fällt."
         },
         "questions": [
           {
             "id": "q_etf_001",
             "level": "explain",
-            "question": "Was beschreibt „Was ist ein ETF?“ am besten?",
+            "question": "Was ist ein ETF?",
             "points": 100,
-            "correctAnswer": "Ein ETF ist meist ein Fonds, der einen Index einfach und kostengünstig nachbildet.",
+            "correctAnswer": "Ein Fonds, der an der Börse gehandelt wird und meist einfach einen Index nachbildet.",
             "distractors": [
               {
-                "text": "Ein ETF ist automatisch sicher und kann nicht fallen.",
+                "text": "Eine besonders sichere Geldanlage, die nicht an Wert verlieren kann.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Ein einzelnes Unternehmen, dessen Aktie man kauft.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Ein Sparschwein, in das man jeden Monat Münzen wirft.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Ein ETF ist meist ein Fonds, der einen Index einfach und kostengünstig nachbildet."
+            "explanationAfterAnswer": "Richtig: Ein ETF ist ein börsengehandelter Fonds, der meist passiv einen Index nachbildet."
           },
           {
             "id": "q_etf_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Was ist ein ETF?“?",
+            "question": "Welcher Vergleich passt am besten zu einem breit gestreuten ETF?",
             "points": 100,
-            "correctAnswer": "Ein ETF auf einen Weltindex beteiligt dich an vielen Unternehmen.",
+            "correctAnswer": "Ein gemischter Obstkorb mit Äpfeln, Bananen und Trauben statt nur einer einzelnen Frucht.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Ein Lottoschein, bei dem eine einzige Zahl über alles entscheidet.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Ein einzelner besonders teurer Apfel, den man kauft und hofft, dass er wertvoll wird.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Ein leerer Korb, in dem gar nichts drin ist.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Der Obstkorb zeigt es gut: Ein ETF bündelt viele verschiedene Werte in einem einzigen Anteil."
           },
           {
             "id": "q_etf_003",
             "level": "understand",
-            "question": "Warum ist „Was ist ein ETF?“ für Finanzbildung wichtig?",
+            "question": "Warum sind die laufenden Kosten vieler ETFs niedriger als bei aktiv gemanagten Fonds?",
             "points": 120,
-            "correctAnswer": "ETF als börsengehandelten Fonds verstehen, der oft einen Index abbildet.",
+            "correctAnswer": "Weil ein ETF meist passiv einfach einen Index nachbildet und dafür kein teures Team zur Aktienauswahl braucht.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil ETFs vom Staat bezuschusst werden und deshalb nichts kosten dürfen.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil ETFs nur wenige, sehr billige Aktien enthalten.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil ETFs gar keine echten Wertpapiere kaufen.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: ETF als börsengehandelten Fonds verstehen, der oft einen Index abbildet."
+            "explanationAfterAnswer": "Passives Nachbilden eines Index spart Managementkosten – deshalb sind viele ETFs günstig."
           },
           {
             "id": "q_etf_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Ein Freund sagt: „Ich stecke alles in einen Welt-ETF, dann kann ja nichts mehr schiefgehen.“ Wie reagierst du am besten?",
             "points": 150,
-            "correctAnswer": "Den Begriff verstehen, Beispiele erkennen und ihn von ähnlichen Begriffen abgrenzen.",
+            "correctAnswer": "Ein Welt-ETF streut zwar breit, aber in einer Börsenkrise fällt auch er mit dem Markt – das Marktrisiko bleibt.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "Stimmt, ein Welt-ETF kann tatsächlich nicht mehr fallen.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "Ein Welt-ETF ist genauso riskant wie eine einzelne Aktie, Streuung bringt nichts.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "Ein Welt-ETF hat mit dem Aktienmarkt gar nichts zu tun.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "Breite Streuung senkt das Einzelrisiko, aber gegen das allgemeine Marktrisiko schützt auch ein Welt-ETF nicht."
           },
           {
             "id": "q_etf_005",
             "level": "master",
-            "question": "Welche Aussage zu „Was ist ein ETF?“ stimmt am besten?",
+            "question": "Welche Aussage beschreibt einen ETF am genauesten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Ein ETF ist ein meist günstiger, breit streuender Baustein, der das Einzelrisiko senkt, aber das Marktrisiko nicht beseitigt.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Ein ETF ist eine risikolose Anlage, weil er so viele Aktien enthält.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Ein ETF garantiert langfristig immer einen Gewinn.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Ein ETF ist teurer als ein aktiv gemanagter Fonds und lohnt sich selten.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Ein ETF ist ein nützliches Werkzeug zur Streuung – aber ohne Garantie und mit weiterhin bestehendem Marktrisiko."
           }
         ],
         "calculationTemplates": [],
         "teacherSupport": {
-          "competenceGoal": "ETF als börsengehandelten Fonds verstehen, der oft einen Index abbildet.",
-          "typicalMisconception": "Ein ETF ist automatisch sicher und kann nicht fallen.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Ein ETF ist automatisch sicher und kann nicht fallen.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Was ist ein ETF?“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "competenceGoal": "Einen ETF als börsengehandelten, meist passiven Indexfonds mit breiter Streuung und weiterhin bestehendem Marktrisiko verstehen.",
+          "typicalMisconception": "Ein ETF ist automatisch sicher und kann nicht an Wert verlieren.",
+          "discussionPrompt": "Ein ETF ist wie ein gemischter Obstkorb – warum schützt selbst der breiteste Korb nicht vor einer allgemeinen Missernte an der Börse?",
+          "classroomActivity": "Die Lernenden vergleichen anhand einer einfachen Kurstabelle die Wertentwicklung eines einzelnen Unternehmens mit der eines breiten ETF über mehrere Jahre und markieren, wann beide fielen und wann die Streuung geholfen hat."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Was ist ein ETF?“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Was ist ein ETF?“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Wenn wir beim Einkaufen einen bunten Obstkorb statt nur einer Sorte kaufen – warum ist das ähnlich klug wie ein breiter ETF, und wovor schützt es trotzdem nicht?",
+          "everydayExercise": "Suchen Sie gemeinsam einen bekannten Welt-Index heraus und schätzen Sie, wie viele Unternehmen und Länder darin stecken. Sprechen Sie darüber, warum der ETF trotzdem in einer Krise fallen kann."
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_index_etf_zusammenhang",
@@ -357,12 +357,12 @@
           "konzept_index"
         ],
         "pedagogy": {
-          "learningGoal": "Index und ETF unterscheiden und ihren Zusammenhang verstehen.",
-          "coreIdea": "Der Index ist der Maßstab; der ETF ist das Produkt, das die Entwicklung abbilden soll.",
-          "everydayScenario": "Ein Index ist wie eine Einkaufsliste, ein ETF versucht sie nachzubilden.",
-          "misconception": "Index und ETF sind dasselbe.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Index und ETF – der Zusammenhang' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Index und ETF – der Zusammenhang' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "learningGoal": "Den Unterschied zwischen einem Index als Messgröße und einem ETF als Produkt verstehen, das diesen Index nachbildet.",
+          "coreIdea": "Der Index ist der Maßstab, der eine Marktentwicklung misst; der ETF ist das Produkt, das diesen Maßstab möglichst genau nachbildet.",
+          "everydayScenario": "Ein Index ist wie eine feste Einkaufsliste, ein ETF ist der Einkaufskorb, der genau diese Liste abarbeitet.",
+          "misconception": "Index und ETF sind dasselbe, man kann direkt in einen Index investieren.",
+          "transferTask": "Erkläre den Unterschied an einem Beispiel: Was ist die Fieberkurve (der Index) und was ist die Anlage, mit der du dieser Kurve folgst (der ETF)?",
+          "reflectionPrompt": "Warum ist es wichtig zu wissen, dass ein ETF einem Index nur folgt und ihn nicht ganz genau trifft, wenn du Anlagen vergleichst?"
         },
         "glossaryTerms": [
           "Index",
@@ -380,139 +380,139 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Index und ETF – der Zusammenhang: Der Index ist der Maßstab; der ETF ist das Produkt, das die Entwicklung abbilden soll. Beispiel: Ein Index ist wie eine Einkaufsliste, ein ETF versucht sie nachzubilden. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Index und ETF sind dasselbe.“.",
-          "young_adults": "Index und ETF – der Zusammenhang: Der Index ist der Maßstab; der ETF ist das Produkt, das die Entwicklung abbilden soll. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Ein Index ist wie eine Einkaufsliste, ein ETF versucht sie nachzubilden.",
-          "parents_teachers": "Lernziel: Index und ETF unterscheiden und ihren Zusammenhang verstehen. Didaktischer Fokus: Der Index ist der Maßstab; der ETF ist das Produkt, das die Entwicklung abbilden soll. Typische Fehlvorstellung: „Index und ETF sind dasselbe.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Ein Index ist eine Art Messwert, der zeigt, wie sich viele Aktien zusammen entwickeln – so wie eine Anzeigetafel den Punktestand eines Spiels zeigt. Der Index selbst ist aber nur eine Zahl, die kannst du nicht kaufen. Damit du trotzdem mitmachen kannst, gibt es den ETF: Er kauft genau die Aktien nach, die im Index stehen. Stell dir eine Einkaufsliste vor – der Index ist die Liste, der ETF ist der Einkaufskorb, der Punkt für Punkt genau das einkauft. Wenn der Index steigt, steigt normalerweise auch dein ETF. Ganz genau gleich sind sie aber selten, weil der ETF ein bisschen Kosten hat.",
+          "young_adults": "Ein Index misst die Entwicklung eines Marktausschnitts – etwa der 500 größten US-Firmen – ist aber selbst nur eine Rechengröße, in die man nicht direkt investieren kann. Der ETF ist das handelbare Produkt, das diesen Index möglichst genau nachbildet (Replikation). Der kleine Unterschied zwischen der Wertentwicklung des Index und der des ETF heißt Tracking Difference und entsteht vor allem durch Kosten und die Art der Nachbildung. Beim Vergleich von ETFs lohnt daher der Blick, welchem Index ein ETF folgt und wie genau er das tut. Merke: Der Index ist der Maßstab, der ETF das Werkzeug, um daran teilzuhaben.",
+          "parents_teachers": "Der Index ist eine normierte Kennzahl zur Messung einer Marktentwicklung, der ETF das darauf aufsetzende Anlageprodukt, das den Index über physische oder synthetische Replikation nachbildet. Verdeutlichen Sie die Rollenteilung mit dem Bild von Einkaufsliste (Index) und Einkaufskorb (ETF). Die typische Fehlvorstellung, man könne direkt in einen Index investieren, sollten Sie korrigieren und dabei die Tracking Difference einführen: Ein ETF folgt dem Index, trifft ihn aber wegen Kosten und Replikationsmethode nie exakt. Das schult den Blick für die Produktqualität beim ETF-Vergleich."
         },
         "questions": [
           {
             "id": "q_index_etf_zusammenhang_001",
             "level": "explain",
-            "question": "Was beschreibt „Index und ETF – der Zusammenhang“ am besten?",
+            "question": "Was ist der Unterschied zwischen einem Index und einem ETF?",
             "points": 100,
-            "correctAnswer": "Der Index ist der Maßstab; der ETF ist das Produkt, das die Entwicklung abbilden soll.",
+            "correctAnswer": "Der Index ist eine Messgröße für eine Marktentwicklung, der ETF ist das Produkt, das diese Entwicklung nachbildet.",
             "distractors": [
               {
-                "text": "Index und ETF sind dasselbe.",
+                "text": "Index und ETF sind dasselbe, nur unterschiedlich geschrieben.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Der Index ist ein Produkt zum Kaufen, der ETF nur eine Zahl.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Ein Index ist eine Bank, ein ETF ein Girokonto.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Der Index ist der Maßstab; der ETF ist das Produkt, das die Entwicklung abbilden soll."
+            "explanationAfterAnswer": "Richtig: Der Index misst, der ETF bildet nach – der Index ist der Maßstab, der ETF das Werkzeug."
           },
           {
             "id": "q_index_etf_zusammenhang_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Index und ETF – der Zusammenhang“?",
+            "question": "Welches Bild passt am besten zum Zusammenhang von Index und ETF?",
             "points": 100,
-            "correctAnswer": "Ein Index ist wie eine Einkaufsliste, ein ETF versucht sie nachzubilden.",
+            "correctAnswer": "Der Index ist eine Einkaufsliste, der ETF ist der Einkaufskorb, der genau diese Liste abarbeitet.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Der Index ist der Einkaufskorb, den man mit nach Hause nimmt, der ETF nur ein Foto davon.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Der Index ist das Geld, der ETF das Portemonnaie.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Der Index ist der Kassenbon, der ETF die Quittung dafür.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Die Einkaufsliste (Index) sagt, was gekauft wird; der Korb (ETF) füllt sich genau danach."
           },
           {
             "id": "q_index_etf_zusammenhang_003",
             "level": "understand",
-            "question": "Warum ist „Index und ETF – der Zusammenhang“ für Finanzbildung wichtig?",
+            "question": "Warum entwickelt sich ein ETF fast, aber nie ganz genau wie sein Index?",
             "points": 120,
-            "correctAnswer": "Index und ETF unterscheiden und ihren Zusammenhang verstehen.",
+            "correctAnswer": "Weil der ETF Kosten hat und den Index nur so gut wie möglich nachbildet – dieser kleine Unterschied heißt Tracking Difference.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil der ETF sich in Wahrheit immer schlechter entwickelt als jeder Index.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil ein ETF gar nichts mit seinem Index zu tun hat.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil ein Index sich nie verändert und ein ETF ständig.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Index und ETF unterscheiden und ihren Zusammenhang verstehen."
+            "explanationAfterAnswer": "Kosten und Nachbildungsmethode führen zur Tracking Difference – dem kleinen Abstand zwischen ETF und Index."
           },
           {
             "id": "q_index_etf_zusammenhang_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Du vergleichst zwei ETFs auf denselben Weltindex. Worauf solltest du besonders achten?",
             "points": 150,
-            "correctAnswer": "Den Begriff verstehen, Beispiele erkennen und ihn von ähnlichen Begriffen abgrenzen.",
+            "correctAnswer": "Wie genau jeder ETF den Index nachbildet und wie hoch seine Kosten sind, denn beides bestimmt die Tracking Difference.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "Nur darauf, welcher ETF gestern stärker gestiegen ist.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "Nur auf den Namen des ETF, der Rest ist egal.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "Ob der ETF von einer Bank oder von einem Freund empfohlen wurde.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "Bei gleichem Index entscheiden vor allem Kosten und Nachbildungsgüte, wie nah der ETF am Index bleibt."
           },
           {
             "id": "q_index_etf_zusammenhang_005",
             "level": "master",
-            "question": "Welche Aussage zu „Index und ETF – der Zusammenhang“ stimmt am besten?",
+            "question": "Welche Aussage über Index und ETF ist am treffendsten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Man investiert nicht in den Index selbst, sondern über einen ETF, der ihm folgt – mit einer kleinen, kostenbedingten Abweichung.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Man kauft den Index direkt, und der ETF ist nur ein anderer Name dafür.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Ein ETF trifft seinen Index immer hundertprozentig genau.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Der Index folgt dem ETF, nicht umgekehrt.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Der ETF ist der Weg, um an der Indexentwicklung teilzuhaben – nah dran, aber nie exakt gleich."
           }
         ],
         "calculationTemplates": [],
         "teacherSupport": {
-          "competenceGoal": "Index und ETF unterscheiden und ihren Zusammenhang verstehen.",
-          "typicalMisconception": "Index und ETF sind dasselbe.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Index und ETF sind dasselbe.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Index und ETF – der Zusammenhang“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "competenceGoal": "Index als Messgröße und ETF als nachbildendes Produkt unterscheiden und die Tracking Difference einordnen.",
+          "typicalMisconception": "Index und ETF sind dasselbe, man kann direkt in einen Index investieren.",
+          "discussionPrompt": "Wenn der Index nur eine Zahl auf einer Anzeigetafel ist – wie kommt man dann überhaupt an dieser Entwicklung ins Geschäft?",
+          "classroomActivity": "Die Lernenden erhalten eine kurze Kurstabelle eines Index und eines dazugehörigen ETF und berechnen die kleine Differenz pro Jahr. Anschließend diskutieren sie, woher dieser Abstand kommt."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Index und ETF – der Zusammenhang“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Index und ETF – der Zusammenhang“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Eine Einkaufsliste sagt, was in den Korb soll – wo im Alltag folgen wir sonst noch einem Maßstab, treffen ihn aber nie ganz genau?",
+          "everydayExercise": "Schauen Sie sich zu einem bekannten Index einen passenden ETF an und vergleichen Sie deren Jahresentwicklung. Sprechen Sie darüber, warum die beiden Zahlen leicht auseinanderliegen."
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_etf_vs_einzelaktie",
@@ -524,12 +524,12 @@
           "konzept_einzelrisiko"
         ],
         "pedagogy": {
-          "learningGoal": "ETF und Einzelaktie nach Streuung, Risiko und Aufwand unterscheiden.",
-          "coreIdea": "Eine Einzelaktie setzt stark auf ein Unternehmen; ein ETF kann viele Unternehmen bündeln.",
-          "everydayScenario": "Du kaufst entweder eine Aktie eines Sportartikelherstellers oder einen globalen ETF.",
-          "misconception": "ETF und Aktie sind eigentlich dasselbe.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'ETF vs. Einzelaktie' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'ETF vs. Einzelaktie' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "learningGoal": "ETF und Einzelaktie nach Streuung, Risiko und Aufwand unterscheiden und beurteilen, wann was passt.",
+          "coreIdea": "Eine Einzelaktie setzt alles auf ein Unternehmen, ein ETF verteilt das Geld auf viele Unternehmen zugleich.",
+          "everydayScenario": "Du überlegst, ob du die Aktie eines einzelnen Sportartikelherstellers kaufst oder einen ETF, der hunderte Firmen enthält.",
+          "misconception": "ETF und Einzelaktie sind eigentlich dasselbe, der Unterschied ist nur der Name.",
+          "transferTask": "Nenne je einen Vorteil einer Einzelaktie und einen Vorteil eines ETF und entscheide, was für jemanden passt, der wenig Zeit hat und breit streuen will.",
+          "reflectionPrompt": "Warum kann es besonders riskant sein, sein ganzes Anlagegeld in eine einzige Aktie zu stecken, auch wenn das Unternehmen gerade beliebt ist?"
         },
         "glossaryTerms": [
           "Einzelaktie",
@@ -546,139 +546,139 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "ETF vs. Einzelaktie: Eine Einzelaktie setzt stark auf ein Unternehmen; ein ETF kann viele Unternehmen bündeln. Beispiel: Du kaufst entweder eine Aktie eines Sportartikelherstellers oder einen globalen ETF. Wichtig ist die Abgrenzung zur Fehlvorstellung: „ETF und Aktie sind eigentlich dasselbe.“.",
-          "young_adults": "ETF vs. Einzelaktie: Eine Einzelaktie setzt stark auf ein Unternehmen; ein ETF kann viele Unternehmen bündeln. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Du kaufst entweder eine Aktie eines Sportartikelherstellers oder einen globalen ETF.",
-          "parents_teachers": "Lernziel: ETF und Einzelaktie nach Streuung, Risiko und Aufwand unterscheiden. Didaktischer Fokus: Eine Einzelaktie setzt stark auf ein Unternehmen; ein ETF kann viele Unternehmen bündeln. Typische Fehlvorstellung: „ETF und Aktie sind eigentlich dasselbe.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Wenn du eine einzelne Aktie kaufst, gehört dir ein Anteil an genau einem Unternehmen. Läuft es gut, super – läuft es schlecht, trifft es dich voll. Bei einem ETF verteilst du dein Geld dagegen auf ganz viele Unternehmen auf einmal. Stell dir vor, du wettest beim Sportfest nur auf einen einzigen Läufer oder auf ein ganzes Team: Bei einem Team gleichen die anderen aus, wenn einer stolpert. Eine Einzelaktie kann stärker steigen, aber auch tiefer fallen. Ein ETF ist ruhiger, weil das Risiko verteilt ist. Beides ist erlaubt – aber ETF und Einzelaktie sind nicht dasselbe.",
+          "young_adults": "Eine Einzelaktie ist ein Anteil an genau einem Unternehmen: hohe Chance, aber auch hohes Einzelrisiko, und du musst das Unternehmen selbst beobachten. Ein ETF bündelt viele Aktien, senkt durch Streuung das Einzelrisiko und nimmt dir viel Analysearbeit ab – dafür wirst du nie stärker steigen als der Markt, dem du folgst. Als Faustregel gilt: Je mehr du auf einen einzelnen Wert konzentrierst, desto größer dein Klumpenrisiko. Viele bauen deshalb einen breiten ETF als Basis und ergänzen ihn höchstens mit einem kleinen Anteil Einzelaktien, den sie verkraften können. Wichtig: Das Marktrisiko trifft beide.",
+          "parents_teachers": "Der Kern der Entscheidung liegt im Verhältnis von Chance, Einzelrisiko und Aufwand: Die Einzelaktie konzentriert Kapital auf ein Unternehmen (hohe Chance, hohes Einzelrisiko, hoher Informationsbedarf), der ETF streut breit (geringeres Einzelrisiko, wenig Aufwand, marktnahe Rendite). Arbeiten Sie die Fehlvorstellung heraus, ETF und Aktie seien austauschbar, indem Sie Streuung als eigentliches Unterscheidungsmerkmal betonen. Machen Sie zudem deutlich, dass Streuung das Einzelrisiko senkt, das Marktrisiko aber beiden Anlageformen gemeinsam bleibt."
         },
         "questions": [
           {
             "id": "q_etf_vs_einzelaktie_001",
             "level": "explain",
-            "question": "Was beschreibt „ETF vs. Einzelaktie“ am besten?",
+            "question": "Was ist der wichtigste Unterschied zwischen einem ETF und einer Einzelaktie?",
             "points": 100,
-            "correctAnswer": "Eine Einzelaktie setzt stark auf ein Unternehmen; ein ETF kann viele Unternehmen bündeln.",
+            "correctAnswer": "Eine Einzelaktie ist ein Anteil an einem Unternehmen, ein ETF verteilt das Geld auf viele Unternehmen zugleich.",
             "distractors": [
               {
-                "text": "ETF und Aktie sind eigentlich dasselbe.",
+                "text": "ETF und Einzelaktie sind im Grunde dasselbe, nur mit anderem Namen.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Eine Einzelaktie enthält viele Firmen, ein ETF nur eine.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Ein ETF ist Bargeld, eine Einzelaktie ist ein Sparbuch.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Eine Einzelaktie setzt stark auf ein Unternehmen; ein ETF kann viele Unternehmen bündeln."
+            "explanationAfterAnswer": "Der Unterschied ist die Streuung: eine Aktie = ein Unternehmen, ein ETF = viele Unternehmen."
           },
           {
             "id": "q_etf_vs_einzelaktie_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „ETF vs. Einzelaktie“?",
+            "question": "Welche Situation beschreibt den Kauf einer Einzelaktie statt eines ETF?",
             "points": 100,
-            "correctAnswer": "Du kaufst entweder eine Aktie eines Sportartikelherstellers oder einen globalen ETF.",
+            "correctAnswer": "Du steckst dein ganzes Anlagegeld in die Aktie eines einzelnen Sportartikelherstellers.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Du kaufst einen Anteil, der hunderte verschiedene Firmen auf einmal enthält.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Du legst dein Geld auf ein Tagesgeldkonto mit festem Zins.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Du tauschst mit einem Freund zwei gleich teure Sammelkarten.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Alles in ein Unternehmen zu stecken ist die klassische Einzelaktie – mit hohem Einzelrisiko."
           },
           {
             "id": "q_etf_vs_einzelaktie_003",
             "level": "understand",
-            "question": "Warum ist „ETF vs. Einzelaktie“ für Finanzbildung wichtig?",
+            "question": "Warum gilt eine einzelne Aktie als riskanter als ein breiter ETF?",
             "points": 120,
-            "correctAnswer": "ETF und Einzelaktie nach Streuung, Risiko und Aufwand unterscheiden.",
+            "correctAnswer": "Weil bei einer Einzelaktie das gesamte Geld vom Schicksal eines einzigen Unternehmens abhängt, während ein ETF das Risiko verteilt.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil eine Einzelaktie im Gegensatz zum ETF gar keine Gewinnchance hat.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil ein ETF vom Staat gegen jeden Verlust abgesichert ist.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil eine Einzelaktie kein echtes Wertpapier ist.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: ETF und Einzelaktie nach Streuung, Risiko und Aufwand unterscheiden."
+            "explanationAfterAnswer": "Konzentration auf ein Unternehmen ist ein Klumpenrisiko – der ETF verteilt es auf viele Werte."
           },
           {
             "id": "q_etf_vs_einzelaktie_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Jemand hat wenig Zeit, will breit streuen und sich nicht ständig um einzelne Firmen kümmern. Was passt am besten?",
             "points": 150,
-            "correctAnswer": "Innehalten, Informationen prüfen und erst dann passend zum eigenen Ziel handeln.",
+            "correctAnswer": "Ein breiter ETF als Basis, weil er die Streuung und die Beobachtung vieler Unternehmen abnimmt.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "Das ganze Geld in die eine Aktie stecken, über die gerade alle reden.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "Nur zwei Aktien aus derselben Branche kaufen, das reicht als Streuung.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "Gar nicht anlegen, weil ETF und Einzelaktie ohnehin gleich riskant sind.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "Wer wenig Zeit hat und breit streuen will, ist mit einem breiten ETF als Basis meist gut bedient."
           },
           {
             "id": "q_etf_vs_einzelaktie_005",
             "level": "master",
-            "question": "Welche Aussage zu „ETF vs. Einzelaktie“ stimmt am besten?",
+            "question": "Welche Aussage zum Vergleich von ETF und Einzelaktie ist am treffendsten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Ein ETF senkt durch Streuung das Einzelrisiko, doch das Marktrisiko tragen ETF und Einzelaktie beide.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Ein ETF hat gar kein Risiko mehr, eine Einzelaktie dagegen sehr viel.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Eine Einzelaktie bringt immer mehr Rendite als ein ETF.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Weil beide an der Börse gehandelt werden, sind sie gleich riskant.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Streuung wirkt gegen das Einzelrisiko – gegen einen breiten Börsenrückgang hilft sie beiden nicht."
           }
         ],
         "calculationTemplates": [],
         "teacherSupport": {
-          "competenceGoal": "ETF und Einzelaktie nach Streuung, Risiko und Aufwand unterscheiden.",
-          "typicalMisconception": "ETF und Aktie sind eigentlich dasselbe.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „ETF und Aktie sind eigentlich dasselbe.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „ETF vs. Einzelaktie“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "competenceGoal": "ETF und Einzelaktie nach Streuung, Einzelrisiko, Marktrisiko und Aufwand unterscheiden und begründet auswählen.",
+          "typicalMisconception": "ETF und Einzelaktie sind eigentlich dasselbe.",
+          "discussionPrompt": "Wettet man beim Sportfest lieber auf einen einzelnen Läufer oder auf ein ganzes Team – und was sagt das über Einzelaktie und ETF aus?",
+          "classroomActivity": "In Kleingruppen erhält jede Gruppe entweder eine Einzelaktie oder einen ETF und würfelt über mehrere Runden Kursveränderungen aus. Am Ende wird verglichen, welche Depots am stärksten schwankten."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „ETF vs. Einzelaktie“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „ETF vs. Einzelaktie“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Würden wir unser ganzes Urlaubsgeld auf ein einziges Los setzen oder lieber auf viele verteilen – und was hat das mit Einzelaktie und ETF zu tun?",
+          "everydayExercise": "Wählen Sie gemeinsam ein Lieblingsunternehmen und einen breiten ETF und überlegen Sie: Was passiert mit beiden, wenn genau dieses eine Unternehmen in Schwierigkeiten gerät?"
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_welt_etf",
@@ -690,12 +690,12 @@
           "konzept_marktrisiko"
         ],
         "pedagogy": {
-          "learningGoal": "Welt-ETFs als breite, aber nicht risikolose globale Aktienanlage verstehen.",
-          "coreIdea": "Ein Welt-ETF streut über viele Unternehmen und Länder, kann aber trotzdem fallen.",
-          "everydayScenario": "Statt nur ein Land zu kaufen, investiert ein Welt-ETF in Unternehmen aus verschiedenen Ländern.",
-          "misconception": "Welt-ETF bedeutet, dass wirklich jedes Unternehmen der Welt enthalten ist.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Welt-ETF' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Welt-ETF' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "learningGoal": "Einen Welt-ETF als breit über Länder und Branchen gestreute, aber nicht risikolose Aktienanlage verstehen.",
+          "coreIdea": "Ein Welt-ETF streut über viele Unternehmen aus vielen Ländern und Branchen, unterliegt aber weiterhin dem Marktrisiko.",
+          "everydayScenario": "Statt nur auf deutsche Firmen zu setzen, bist du mit einem Welt-ETF an Unternehmen aus Amerika, Europa, Asien und mehr beteiligt.",
+          "misconception": "Ein Welt-ETF enthält wirklich jedes Unternehmen der Welt und ist deshalb völlig sicher.",
+          "transferTask": "Erkläre, warum ein Welt-ETF breiter streut als ein ETF auf ein einzelnes Land – und warum er in einer weltweiten Krise trotzdem fallen kann.",
+          "reflectionPrompt": "Wieso ist die Vorstellung „ein Welt-ETF kann nicht fallen, weil er so breit ist“ gefährlich für deine Erwartungen?"
         },
         "glossaryTerms": [
           "Welt-ETF",
@@ -712,139 +712,139 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Welt-ETF: Ein Welt-ETF streut über viele Unternehmen und Länder, kann aber trotzdem fallen. Beispiel: Statt nur ein Land zu kaufen, investiert ein Welt-ETF in Unternehmen aus verschiedenen Ländern. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Welt-ETF bedeutet, dass wirklich jedes Unternehmen der Welt enthalten ist.“.",
-          "young_adults": "Welt-ETF: Ein Welt-ETF streut über viele Unternehmen und Länder, kann aber trotzdem fallen. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Statt nur ein Land zu kaufen, investiert ein Welt-ETF in Unternehmen aus verschiedenen Ländern.",
-          "parents_teachers": "Lernziel: Welt-ETFs als breite, aber nicht risikolose globale Aktienanlage verstehen. Didaktischer Fokus: Ein Welt-ETF streut über viele Unternehmen und Länder, kann aber trotzdem fallen. Typische Fehlvorstellung: „Welt-ETF bedeutet, dass wirklich jedes Unternehmen der Welt enthalten ist.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Ein Welt-ETF ist ein besonders breiter Obstkorb: Er enthält Unternehmen aus vielen Ländern der Welt – aus Amerika, Europa, Asien und anderen. Wenn es einem Land gerade schlecht geht, können Firmen aus anderen Ländern das ein Stück weit ausgleichen. Deshalb ist ein Welt-ETF breiter gestreut als ein ETF, der nur ein einziges Land enthält. Aber Vorsicht: „Welt“ heißt nicht, dass wirklich jede Firma der Erde dabei ist – meist sind es die großen und mittelgroßen Unternehmen. Und in einer weltweiten Krise, wenn die Börsen überall fallen, sinkt auch ein Welt-ETF. Breit gestreut heißt eben nicht sicher.",
+          "young_adults": "Ein Welt-ETF bildet einen globalen Aktienindex ab und beteiligt dich an tausenden Unternehmen aus Industrie- und teils Schwellenländern. Die Gewichtung erfolgt meist nach Marktkapitalisierung, weshalb große Volkswirtschaften und Konzerne stärker vertreten sind – ein Welt-ETF ist also breit, aber nicht gleichverteilt. Der große Vorteil ist die Länderstreuung: Schwächelt eine Region, federn andere ab. „Welt“ meint dabei nicht buchstäblich jedes Unternehmen der Erde, sondern einen definierten, breiten Ausschnitt. Entscheidend bleibt: Das Marktrisiko trägst du weiter – in einer globalen Krise fällt auch der breiteste Welt-ETF.",
+          "parents_teachers": "Ein Welt-ETF repräsentiert einen global diversifizierten Aktienindex, typischerweise nach Marktkapitalisierung gewichtet, und deckt Industrie- sowie teils Schwellenländer ab. Verdeutlichen Sie den doppelten Diversifikationsgewinn über Länder und Branchen, aber korrigieren Sie zwei Fehlvorstellungen: erstens, dass „Welt“ jedes Unternehmen einschließe (es ist ein definierter Ausschnitt großer und mittlerer Titel), zweitens, dass breite Streuung Sicherheit bedeute. Das systematische Marktrisiko bleibt bestehen; in einem globalen Abschwung korrelieren die Regionen und der ETF fällt mit."
         },
         "questions": [
           {
             "id": "q_welt_etf_001",
             "level": "explain",
-            "question": "Was beschreibt „Welt-ETF“ am besten?",
+            "question": "Was zeichnet einen Welt-ETF aus?",
             "points": 100,
-            "correctAnswer": "Ein Welt-ETF streut über viele Unternehmen und Länder, kann aber trotzdem fallen.",
+            "correctAnswer": "Er streut über viele Unternehmen aus vielen Ländern, kann aber trotzdem an Wert verlieren.",
             "distractors": [
               {
-                "text": "Welt-ETF bedeutet, dass wirklich jedes Unternehmen der Welt enthalten ist.",
+                "text": "Er enthält wirklich jedes Unternehmen der Welt und kann deshalb nicht fallen.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Er enthält nur Unternehmen aus einem einzigen Land.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Er ist ein Sparbuch mit weltweit festem Zins.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Ein Welt-ETF streut über viele Unternehmen und Länder, kann aber trotzdem fallen."
+            "explanationAfterAnswer": "Richtig: Ein Welt-ETF streut sehr breit über Länder und Branchen, bleibt aber dem Marktrisiko ausgesetzt."
           },
           {
             "id": "q_welt_etf_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Welt-ETF“?",
+            "question": "Welches Beispiel beschreibt einen Welt-ETF am besten?",
             "points": 100,
-            "correctAnswer": "Statt nur ein Land zu kaufen, investiert ein Welt-ETF in Unternehmen aus verschiedenen Ländern.",
+            "correctAnswer": "Statt nur deutscher Firmen bist du an Unternehmen aus Amerika, Europa, Asien und weiteren Regionen beteiligt.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Du kaufst ausschließlich Aktien eines einzigen bekannten Technologiekonzerns.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Du legst dein Geld nur in Firmen eines einzelnen Landes an.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Du sparst monatlich Münzen in einem Sparschwein.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Ein Welt-ETF verteilt dein Geld über viele Länder – genau das ist seine breite Länderstreuung."
           },
           {
             "id": "q_welt_etf_003",
             "level": "understand",
-            "question": "Warum ist „Welt-ETF“ für Finanzbildung wichtig?",
+            "question": "Warum ist ein Welt-ETF trotz breiter Streuung nicht sicher vor Verlusten?",
             "points": 120,
-            "correctAnswer": "Welt-ETFs als breite, aber nicht risikolose globale Aktienanlage verstehen.",
+            "correctAnswer": "Weil in einer weltweiten Krise die Börsen fast überall zugleich fallen und die Länderstreuung das nicht auffangen kann.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil ein Welt-ETF in Wahrheit nur ein einziges Land enthält.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil breite Streuung das Risiko sogar erhöht.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil ein Welt-ETF gar keine echten Aktien enthält.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Welt-ETFs als breite, aber nicht risikolose globale Aktienanlage verstehen."
+            "explanationAfterAnswer": "In globalen Krisen bewegen sich die Regionen oft gemeinsam nach unten – das Marktrisiko bleibt."
           },
           {
             "id": "q_welt_etf_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Ein Freund will nur einen ETF mit deutschen Firmen kaufen, um „auf Nummer sicher“ zu gehen. Was ist der bessere Hinweis?",
             "points": 150,
-            "correctAnswer": "Den Begriff verstehen, Beispiele erkennen und ihn von ähnlichen Begriffen abgrenzen.",
+            "correctAnswer": "Ein Welt-ETF streut über viele Länder und ist damit breiter aufgestellt als ein reiner Länder-ETF.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "Ein Land-ETF ist sicherer, weil man nur ein Land im Blick behalten muss.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "Egal was man kauft, ein ETF kann sowieso nie fallen.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "Man sollte gar nicht anlegen, weil ETFs keinen Sinn ergeben.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "Mehr Länder bedeuten mehr Streuung – ein einzelnes Land trägt ein höheres Klumpenrisiko."
           },
           {
             "id": "q_welt_etf_005",
             "level": "master",
-            "question": "Welche Aussage zu „Welt-ETF“ stimmt am besten?",
+            "question": "Welche Aussage über den Welt-ETF ist am genauesten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Er bietet sehr breite Länder- und Branchenstreuung, ist meist nach Größe gewichtet und trägt trotzdem das Marktrisiko.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Er enthält jedes Unternehmen der Welt zu gleichen Teilen und ist deshalb risikolos.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Er ist genauso breit gestreut wie ein einzelner Branchen-ETF.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Er verhält sich völlig unabhängig vom weltweiten Börsengeschehen.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Breite Streuung und Größengewichtung ja – Sicherheit vor Marktschwankungen nein."
           }
         ],
         "calculationTemplates": [],
         "teacherSupport": {
-          "competenceGoal": "Welt-ETFs als breite, aber nicht risikolose globale Aktienanlage verstehen.",
-          "typicalMisconception": "Welt-ETF bedeutet, dass wirklich jedes Unternehmen der Welt enthalten ist.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Welt-ETF bedeutet, dass wirklich jedes Unternehmen der Welt enthalten ist.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Welt-ETF“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "competenceGoal": "Den Welt-ETF als global gestreute, meist nach Größe gewichtete Aktienanlage mit fortbestehendem Marktrisiko verstehen.",
+          "typicalMisconception": "Ein Welt-ETF enthält jedes Unternehmen der Welt und ist deshalb sicher.",
+          "discussionPrompt": "Wenn ein Welt-ETF Firmen aus vielen Ländern enthält – warum fällt er trotzdem, wenn weltweit alle Börsen gleichzeitig einbrechen?",
+          "classroomActivity": "Die Lernenden ordnen auf einer Weltkarte einige bekannte Unternehmen ihren Ländern zu und diskutieren, welche Regionen in einem globalen Aktienindex stark und welche schwach vertreten sind."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Welt-ETF“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Welt-ETF“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Warum ist es klüger, an Firmen aus vielen Ländern beteiligt zu sein als nur an denen aus einem einzigen Land – und wovor schützt selbst das nicht?",
+          "everydayExercise": "Schauen Sie sich die grobe Länderaufteilung eines bekannten Welt-ETF an und überlegen Sie gemeinsam, warum manche Länder ein so großes Gewicht haben."
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_laender_etf",
@@ -855,12 +855,12 @@
           "konzept_welt_etf"
         ],
         "pedagogy": {
-          "learningGoal": "Länder-ETFs als fokussierte ETF-Anlagen verstehen.",
-          "coreIdea": "Ein Länder-ETF ist breiter als eine Einzelaktie, aber enger als ein Welt-ETF.",
-          "everydayScenario": "Ein ETF enthält vor allem große Unternehmen aus einem bestimmten Land.",
+          "learningGoal": "Einen Länder-ETF als auf ein Land oder eine Region fokussierte Anlage einordnen, die breiter als eine Einzelaktie, aber enger als ein Welt-ETF ist.",
+          "coreIdea": "Ein Länder-ETF bündelt Unternehmen eines einzigen Landes und liegt damit zwischen Einzelaktie und Welt-ETF.",
+          "everydayScenario": "Ein Deutschland-ETF enthält vor allem große deutsche Unternehmen, aber keine Firmen aus anderen Ländern.",
           "misconception": "Ein Länder-ETF ist genauso breit gestreut wie ein Welt-ETF.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Länder-ETF' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Länder-ETF' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "transferTask": "Ordne diese drei Anlagen nach ihrer Streuung: eine einzelne deutsche Aktie, ein Deutschland-ETF und ein Welt-ETF. Begründe deine Reihenfolge.",
+          "reflectionPrompt": "Welches zusätzliche Risiko gehst du ein, wenn dein ganzes Geld nur in Firmen eines einzigen Landes steckt?"
         },
         "glossaryTerms": [
           "Länder-ETF",
@@ -877,139 +877,139 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Länder-ETF: Ein Länder-ETF ist breiter als eine Einzelaktie, aber enger als ein Welt-ETF. Beispiel: Ein ETF enthält vor allem große Unternehmen aus einem bestimmten Land. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Ein Länder-ETF ist genauso breit gestreut wie ein Welt-ETF.“.",
-          "young_adults": "Länder-ETF: Ein Länder-ETF ist breiter als eine Einzelaktie, aber enger als ein Welt-ETF. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Ein ETF enthält vor allem große Unternehmen aus einem bestimmten Land.",
-          "parents_teachers": "Lernziel: Länder-ETFs als fokussierte ETF-Anlagen verstehen. Didaktischer Fokus: Ein Länder-ETF ist breiter als eine Einzelaktie, aber enger als ein Welt-ETF. Typische Fehlvorstellung: „Ein Länder-ETF ist genauso breit gestreut wie ein Welt-ETF.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Ein Länder-ETF sammelt die Unternehmen eines einzigen Landes – zum Beispiel viele große deutsche Firmen in einem Deutschland-ETF. Er ist breiter als eine einzelne Aktie, denn er enthält viele Firmen. Aber er ist enger als ein Welt-ETF, weil alle Firmen aus demselben Land kommen. Das ist wie ein Obstkorb, in dem zwar viele Früchte liegen, aber alle vom selben Bauernhof stammen: Geht es dem Hof schlecht, sind alle Früchte betroffen. Wenn es der Wirtschaft in diesem einen Land schlecht geht, trifft es fast alle Firmen im ETF gleichzeitig. Deshalb ist ein Länder-ETF nicht so breit gestreut wie ein Welt-ETF.",
+          "young_adults": "Ein Länder-ETF konzentriert sich auf die Unternehmen eines Landes und liegt damit in der Streuung zwischen Einzelaktie und Welt-ETF. Weil alle Titel aus derselben Volkswirtschaft stammen, entsteht ein Klumpenrisiko: Eine nationale Wirtschaftskrise oder politische Entscheidung trifft viele Firmen zugleich. Bei ausländischen Länder-ETFs kommt oft ein Währungsrisiko hinzu, wenn das Land eine andere Währung hat. Ein Länder-ETF kann sinnvoll sein, um einen Heimatmarkt gezielt abzudecken, ersetzt aber keine globale Streuung. Als Faustregel: Je enger der Fokus, desto stärker hängt dein Ergebnis von einem einzelnen Wirtschaftsraum ab.",
+          "parents_teachers": "Ein Länder-ETF diversifiziert innerhalb einer einzelnen Volkswirtschaft und positioniert sich damit zwischen Einzelaktie und global gestreutem Welt-ETF. Betonen Sie das verbleibende Klumpenrisiko: Konjunkturelle, politische und regulatorische Ereignisse wirken auf viele enthaltene Titel gleichzeitig; bei Fremdwährungsländern tritt ein Währungsrisiko hinzu. Korrigieren Sie die Fehlvorstellung, ein Länder-ETF sei so breit wie ein Welt-ETF, indem Sie die Diversifikationsstufen Einzelaktie – Länder-ETF – Welt-ETF gemeinsam sortieren lassen."
         },
         "questions": [
           {
             "id": "q_laender_etf_001",
             "level": "explain",
-            "question": "Was beschreibt „Länder-ETF“ am besten?",
+            "question": "Was ist ein Länder-ETF?",
             "points": 100,
-            "correctAnswer": "Ein Länder-ETF ist breiter als eine Einzelaktie, aber enger als ein Welt-ETF.",
+            "correctAnswer": "Ein ETF, der vor allem Unternehmen aus einem einzigen Land bündelt.",
             "distractors": [
               {
-                "text": "Ein Länder-ETF ist genauso breit gestreut wie ein Welt-ETF.",
+                "text": "Ein ETF, der genauso breit über die ganze Welt streut wie ein Welt-ETF.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Ein ETF, der nur aus einer einzigen Aktie besteht.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Ein ETF, der ausschließlich Bargeld verschiedener Länder enthält.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Ein Länder-ETF ist breiter als eine Einzelaktie, aber enger als ein Welt-ETF."
+            "explanationAfterAnswer": "Richtig: Ein Länder-ETF fokussiert sich auf die Unternehmen eines Landes."
           },
           {
             "id": "q_laender_etf_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Länder-ETF“?",
+            "question": "Welches Beispiel ist ein Länder-ETF?",
             "points": 100,
-            "correctAnswer": "Ein ETF enthält vor allem große Unternehmen aus einem bestimmten Land.",
+            "correctAnswer": "Ein Deutschland-ETF, der vor allem große deutsche Unternehmen enthält.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Ein ETF, der Firmen aus Amerika, Europa und Asien zugleich enthält.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Die einzelne Aktie eines deutschen Autoherstellers.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Ein Sparbuch bei einer deutschen Bank.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Viele Firmen, aber alle aus einem Land – das ist der typische Länder-ETF."
           },
           {
             "id": "q_laender_etf_003",
             "level": "understand",
-            "question": "Warum ist „Länder-ETF“ für Finanzbildung wichtig?",
+            "question": "Warum ist ein Länder-ETF weniger breit gestreut als ein Welt-ETF?",
             "points": 120,
-            "correctAnswer": "Länder-ETFs als fokussierte ETF-Anlagen verstehen.",
+            "correctAnswer": "Weil alle Unternehmen aus derselben Volkswirtschaft kommen und eine Krise in diesem Land viele davon gleichzeitig trifft.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil ein Länder-ETF immer nur eine einzige Aktie enthält.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil ein Länder-ETF gar keine Firmen, sondern nur Anleihen enthält.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil ein Welt-ETF gar nicht existiert.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Länder-ETFs als fokussierte ETF-Anlagen verstehen."
+            "explanationAfterAnswer": "Ein einzelnes Land ist ein Klumpenrisiko – trifft es die Wirtschaft, trifft es fast alle Firmen im ETF."
           },
           {
             "id": "q_laender_etf_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Ordne von am wenigsten bis am meisten gestreut: einzelne Aktie, Länder-ETF, Welt-ETF.",
             "points": 150,
-            "correctAnswer": "Den Begriff verstehen, Beispiele erkennen und ihn von ähnlichen Begriffen abgrenzen.",
+            "correctAnswer": "Einzelne Aktie, dann Länder-ETF, dann Welt-ETF.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "Welt-ETF, dann Länder-ETF, dann einzelne Aktie.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "Länder-ETF, dann einzelne Aktie, dann Welt-ETF.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "Alle drei sind gleich breit gestreut.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "Eine Aktie streut am wenigsten, der Länder-ETF liegt dazwischen, der Welt-ETF streut am breitesten."
           },
           {
             "id": "q_laender_etf_005",
             "level": "master",
-            "question": "Welche Aussage zu „Länder-ETF“ stimmt am besten?",
+            "question": "Welche Aussage über einen Länder-ETF ist am treffendsten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Er streut breiter als eine Einzelaktie, trägt aber ein Klumpenrisiko auf eine Volkswirtschaft und oft ein Währungsrisiko.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Er ist genauso sicher und breit wie ein Welt-ETF.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Er hat kein Risiko, weil er viele Firmen enthält.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Er unterscheidet sich in nichts von einer einzelnen Aktie.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Ein Länder-ETF steht zwischen Einzelaktie und Welt-ETF – mit einem klaren Fokus auf ein Land."
           }
         ],
         "calculationTemplates": [],
         "teacherSupport": {
-          "competenceGoal": "Länder-ETFs als fokussierte ETF-Anlagen verstehen.",
+          "competenceGoal": "Den Länder-ETF als regional fokussierte Anlage zwischen Einzelaktie und Welt-ETF einordnen und sein Klumpen- und Währungsrisiko erkennen.",
           "typicalMisconception": "Ein Länder-ETF ist genauso breit gestreut wie ein Welt-ETF.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Ein Länder-ETF ist genauso breit gestreut wie ein Welt-ETF.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Länder-ETF“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "discussionPrompt": "Ein Korb voller Früchte vom selben Bauernhof – warum ist das etwas anderes als Früchte von vielen Höfen aus vielen Ländern?",
+          "classroomActivity": "Die Lernenden sortieren Karten mit Anlageformen (Einzelaktie, Länder-ETF, Welt-ETF) nach dem Grad der Streuung und begründen ihre Reihenfolge vor der Klasse."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Länder-ETF“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Länder-ETF“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Was passiert mit einem Deutschland-ETF, wenn es der deutschen Wirtschaft insgesamt schlecht geht – und warum betrifft das fast alle Firmen darin?",
+          "everydayExercise": "Vergleichen Sie gemeinsam einen Länder-ETF und einen Welt-ETF anhand der Zahl der enthaltenen Länder und sprechen Sie über den Unterschied in der Streuung."
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_branchen_etf",
@@ -1021,12 +1021,12 @@
           "konzept_wettbewerb"
         ],
         "pedagogy": {
-          "learningGoal": "Branchen-ETFs und Konzentrationsrisiken verstehen.",
-          "coreIdea": "Ein Branchen-ETF streut innerhalb einer Branche, aber nicht über viele Branchen.",
-          "everydayScenario": "Ein Technologie-ETF enthält viele Firmen, die alle von Technologietrends abhängen.",
-          "misconception": "Ein ETF ist immer breit gestreut, egal worauf er sich konzentriert.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Branchen-ETF' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Branchen-ETF' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "learningGoal": "Branchen-ETFs als thematisch konzentrierte Anlagen mit erhöhtem Konzentrationsrisiko verstehen.",
+          "coreIdea": "Ein Branchen-ETF streut innerhalb einer Branche, aber nicht über verschiedene Branchen – deshalb bleibt ein Konzentrationsrisiko.",
+          "everydayScenario": "Ein Technologie-ETF enthält viele Firmen, die aber alle vom selben Trend abhängen: läuft die Technikbranche schlecht, trifft es fast alle zugleich.",
+          "misconception": "Weil ETF draufsteht, ist jeder Branchen-ETF automatisch breit gestreut.",
+          "transferTask": "Erkläre, warum ein ETF mit zwanzig Technologiefirmen weniger breit streut als ein Welt-ETF mit zwanzig Firmen aus zwanzig verschiedenen Branchen.",
+          "reflectionPrompt": "Warum kann der Satz „Es ist ein ETF, also ist es sicher gestreut“ bei einem Branchen-ETF in die Irre führen?"
         },
         "glossaryTerms": [
           "Branchen-ETF",
@@ -1044,139 +1044,139 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Branchen-ETF: Ein Branchen-ETF streut innerhalb einer Branche, aber nicht über viele Branchen. Beispiel: Ein Technologie-ETF enthält viele Firmen, die alle von Technologietrends abhängen. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Ein ETF ist immer breit gestreut, egal worauf er sich konzentriert.“.",
-          "young_adults": "Branchen-ETF: Ein Branchen-ETF streut innerhalb einer Branche, aber nicht über viele Branchen. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Ein Technologie-ETF enthält viele Firmen, die alle von Technologietrends abhängen.",
-          "parents_teachers": "Lernziel: Branchen-ETFs und Konzentrationsrisiken verstehen. Didaktischer Fokus: Ein Branchen-ETF streut innerhalb einer Branche, aber nicht über viele Branchen. Typische Fehlvorstellung: „Ein ETF ist immer breit gestreut, egal worauf er sich konzentriert.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Ein Branchen-ETF sammelt viele Firmen aus einem einzigen Bereich – zum Beispiel nur Technikfirmen oder nur Firmen aus dem Gesundheitsbereich. Das ist wie ein Obstkorb, in dem zwar viele Früchte liegen, aber alle Äpfel sind. Solange es der Branche gut geht, kann das gut laufen. Aber wenn dieser eine Bereich Probleme bekommt, fallen fast alle Firmen im ETF gleichzeitig. Das nennt man Konzentrationsrisiko. Nur weil „ETF“ draufsteht, ist es also nicht automatisch breit gestreut. Ein Branchen-ETF ist enger als ein Welt-ETF, weil er nur eine Branche abdeckt.",
+          "young_adults": "Ein Branchen-ETF (oder Sektor-ETF) bündelt Unternehmen eines einzelnen Wirtschaftszweigs, etwa Technologie, Gesundheit oder Energie. Innerhalb der Branche ist er gestreut, über Branchen hinweg aber nicht – daraus entsteht ein Konzentrationsrisiko, das viele unterschätzen, weil das Kürzel ETF Sicherheit suggeriert. Manche Branchen sind zudem stark zyklisch und schwanken mit der Konjunktur besonders heftig. Themeninvestments folgen oft einem gerade populären Trend, was das Risiko erhöht, teuer einzusteigen. Als Faustregel: Ein Branchen-ETF eignet sich allenfalls als kleine Ergänzung zu einer breiten Basis, nicht als alleiniges Fundament.",
+          "parents_teachers": "Ein Branchen-ETF diversifiziert innerhalb eines Sektors, nicht über Sektoren hinweg, und weist daher ein erhöhtes Konzentrationsrisiko auf; zyklische Branchen verstärken die Schwankungsanfälligkeit. Arbeiten Sie die verbreitete Fehlvorstellung heraus, das Label ETF garantiere breite Streuung – hier trifft ein Branchenschock viele Titel gleichzeitig. Ordnen Sie den Branchen-ETF didaktisch als mögliche Beimischung, nicht als tragende Basis ein, und thematisieren Sie den Trendcharakter vieler Themeninvestments (Gefahr des prozyklischen Einstiegs)."
         },
         "questions": [
           {
             "id": "q_branchen_etf_001",
             "level": "explain",
-            "question": "Was beschreibt „Branchen-ETF“ am besten?",
+            "question": "Was ist ein Branchen-ETF?",
             "points": 100,
-            "correctAnswer": "Ein Branchen-ETF streut innerhalb einer Branche, aber nicht über viele Branchen.",
+            "correctAnswer": "Ein ETF, der viele Firmen aus einer einzigen Branche bündelt.",
             "distractors": [
               {
-                "text": "Ein ETF ist immer breit gestreut, egal worauf er sich konzentriert.",
+                "text": "Ein ETF, der automatisch über alle Branchen breit gestreut ist.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Ein ETF, der nur aus einer einzigen Aktie besteht.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Ein Konto, auf dem man Geld einer bestimmten Branche spart.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Ein Branchen-ETF streut innerhalb einer Branche, aber nicht über viele Branchen."
+            "explanationAfterAnswer": "Richtig: Ein Branchen-ETF bündelt viele Firmen, aber alle aus demselben Wirtschaftszweig."
           },
           {
             "id": "q_branchen_etf_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Branchen-ETF“?",
+            "question": "Welches Beispiel zeigt das Konzentrationsrisiko eines Branchen-ETF?",
             "points": 100,
-            "correctAnswer": "Ein Technologie-ETF enthält viele Firmen, die alle von Technologietrends abhängen.",
+            "correctAnswer": "Ein Technologie-ETF enthält viele Firmen, die alle vom selben Technologietrend abhängen.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Ein ETF enthält Firmen aus Technik, Gesundheit, Energie und vielen weiteren Branchen.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Ein ETF enthält Unternehmen aus vielen verschiedenen Ländern der Welt.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Ein ETF legt das Geld nur in Bargeld an.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Wenn alle Firmen vom gleichen Trend abhängen, trifft ein Rückschlag sie fast alle zugleich."
           },
           {
             "id": "q_branchen_etf_003",
             "level": "understand",
-            "question": "Warum ist „Branchen-ETF“ für Finanzbildung wichtig?",
+            "question": "Warum ist ein Branchen-ETF trotz vieler Firmen nicht breit gestreut?",
             "points": 120,
-            "correctAnswer": "Branchen-ETFs und Konzentrationsrisiken verstehen.",
+            "correctAnswer": "Weil alle Firmen aus derselben Branche kommen und ein Branchenschock sie gemeinsam nach unten zieht.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil ein Branchen-ETF in Wirklichkeit nur eine einzige Firma enthält.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil ein Branchen-ETF gar keine echten Aktien enthält.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil Branchen-ETFs vom Staat verboten sind.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Branchen-ETFs und Konzentrationsrisiken verstehen."
+            "explanationAfterAnswer": "Streuung über viele Firmen einer Branche hilft wenig, wenn die ganze Branche gemeinsam fällt."
           },
           {
             "id": "q_branchen_etf_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Jemand will als Fundament seiner Geldanlage einen einzelnen Technologie-ETF nehmen. Was ist der bessere Rat?",
             "points": 150,
-            "correctAnswer": "Innehalten, Informationen prüfen und erst dann passend zum eigenen Ziel handeln.",
+            "correctAnswer": "Erst eine breite Basis aufbauen und einen Branchen-ETF höchstens als kleine Beimischung ergänzen.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "Ein Branchen-ETF ist die perfekte breite Basis, mehr braucht man nicht.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "Am besten sofort kaufen, weil die Branche gerade im Trend ist.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "Lieber gar nicht anlegen, weil jeder ETF gleich riskant ist.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "Ein Branchen-ETF passt als kleine Ergänzung, nicht als tragendes Fundament."
           },
           {
             "id": "q_branchen_etf_005",
             "level": "master",
-            "question": "Welche Aussage zu „Branchen-ETF“ stimmt am besten?",
+            "question": "Welche Aussage über Branchen-ETFs ist am treffendsten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Sie streuen innerhalb einer Branche, nicht darüber hinaus, und tragen deshalb ein spürbares Konzentrationsrisiko.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Weil ETF draufsteht, sind sie automatisch breit gestreut und sicher.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Sie sind genauso breit aufgestellt wie ein Welt-ETF.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Sie schwanken grundsätzlich weniger als jeder andere ETF.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Das Label ETF sagt nichts über die Breite – ein Branchen-ETF bleibt auf einen Sektor konzentriert."
           }
         ],
         "calculationTemplates": [],
         "teacherSupport": {
-          "competenceGoal": "Branchen-ETFs und Konzentrationsrisiken verstehen.",
-          "typicalMisconception": "Ein ETF ist immer breit gestreut, egal worauf er sich konzentriert.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Ein ETF ist immer breit gestreut, egal worauf er sich konzentriert.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Branchen-ETF“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "competenceGoal": "Branchen-ETFs als sektorkonzentrierte Anlagen mit Konzentrationsrisiko einordnen und von breit gestreuten ETFs abgrenzen.",
+          "typicalMisconception": "Weil ETF draufsteht, ist jeder Branchen-ETF automatisch breit gestreut.",
+          "discussionPrompt": "Ein Korb voller Früchte, aber alle sind Äpfel – warum ist das etwas anderes als ein bunt gemischter Korb, und was bedeutet das für einen Branchen-ETF?",
+          "classroomActivity": "Die Lernenden vergleichen die grobe Branchenaufteilung eines Welt-ETF mit der eines Technologie-ETF und markieren, wo die Streuung fehlt."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Branchen-ETF“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Branchen-ETF“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Wenn alle Firmen in einem ETF aus demselben Bereich kommen – was passiert dann, wenn genau dieser Bereich in Schwierigkeiten gerät?",
+          "everydayExercise": "Suchen Sie gemeinsam einen Branchen-ETF heraus und überlegen Sie, welche Ereignisse alle enthaltenen Firmen auf einmal treffen könnten."
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_etf_kosten",
@@ -1188,12 +1188,12 @@
           "konzept_spread"
         ],
         "pedagogy": {
-          "learningGoal": "ETF-Kosten und ihre Wirkung auf Rendite verstehen.",
-          "coreIdea": "Auch kleine Kosten wirken langfristig, weil sie die Rendite mindern.",
-          "everydayScenario": "ETF A kostet 0,2 Prozent pro Jahr, ETF B kostet 1,0 Prozent.",
-          "misconception": "Wenn ein ETF günstig klingt, hat er gar keine Kosten.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Kosten eines ETFs' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Kosten eines ETFs' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "learningGoal": "Die laufenden Kosten eines ETFs (TER) verstehen und begreifen, wie sie über die Jahre die Rendite mindern.",
+          "coreIdea": "Auch scheinbar kleine jährliche Kosten summieren sich über lange Zeit und schmälern das Ergebnis spürbar.",
+          "everydayScenario": "ETF A kostet 0,2 Prozent im Jahr, ETF B kostet 1,0 Prozent – bei 5.000 Euro sind das 10 Euro gegenüber 50 Euro pro Jahr.",
+          "misconception": "Wenn ein ETF günstig klingt oder keine Ordergebühr anfällt, hat er gar keine laufenden Kosten.",
+          "transferTask": "Rechne aus, wie viel 0,2 Prozent und 1,0 Prozent laufende Kosten bei 3.000 Euro pro Jahr in Euro ausmachen, und erkläre, warum der Unterschied über 20 Jahre stark wächst.",
+          "reflectionPrompt": "Warum lohnt es sich, vor dem Kauf eines ETFs auf die laufenden Kosten zu schauen, auch wenn der Prozentsatz klein wirkt?"
         },
         "glossaryTerms": [
           "ETF-Kosten",
@@ -1211,125 +1211,125 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Kosten eines ETFs: Auch kleine Kosten wirken langfristig, weil sie die Rendite mindern. Beispiel: ETF A kostet 0,2 Prozent pro Jahr, ETF B kostet 1,0 Prozent. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Wenn ein ETF günstig klingt, hat er gar keine Kosten.“.",
-          "young_adults": "Kosten eines ETFs: Auch kleine Kosten wirken langfristig, weil sie die Rendite mindern. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: ETF A kostet 0,2 Prozent pro Jahr, ETF B kostet 1,0 Prozent.",
-          "parents_teachers": "Lernziel: ETF-Kosten und ihre Wirkung auf Rendite verstehen. Didaktischer Fokus: Auch kleine Kosten wirken langfristig, weil sie die Rendite mindern. Typische Fehlvorstellung: „Wenn ein ETF günstig klingt, hat er gar keine Kosten.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Ein ETF ist nicht ganz umsonst: Jedes Jahr wird ein kleiner Teil vom angelegten Geld für die Kosten abgezogen. Diese jährlichen Kosten nennt man TER, die Kostenquote. Sie klingt oft winzig, zum Beispiel 0,2 Prozent. Bei 1.000 Euro sind das nur 2 Euro im Jahr. Kostet ein anderer ETF aber 1,0 Prozent, wären es 10 Euro. Über viele Jahre macht dieser Unterschied richtig viel aus, weil er jedes Jahr aufs Neue abgezogen wird. Deshalb lohnt es sich, vor dem Kauf zu schauen, wie teuer ein ETF ist – günstig ist bei ETFs oft besser.",
+          "young_adults": "Die laufenden Kosten eines ETFs werden über die Gesamtkostenquote (TER) angegeben und jährlich anteilig vom Vermögen abgezogen. Selbst kleine Unterschiede wirken über die Zeit stark: 0,2 Prozent statt 1,0 Prozent auf 10.000 Euro sind 20 statt 100 Euro pro Jahr – und dieser Abstand wächst mit dem Depotwert und der Anlagedauer. Neben der TER können Handelskosten wie der Spread und die Tracking Difference die Nettorendite mindern. Als Faustregel: Bei sonst vergleichbaren ETFs auf denselben Index ist der günstigere meist die bessere Wahl, weil niedrige Kosten direkt der Rendite zugutekommen.",
+          "parents_teachers": "Die laufenden Kosten eines ETFs (TER) werden pro rata vom Fondsvermögen entnommen und mindern die Nettorendite; über lange Zeiträume und mit steigendem Depotwert entfaltet der Zinseszinseffekt der Kosten eine erhebliche Wirkung. Ergänzend prägen Spread und Tracking Difference die tatsächlichen Kosten. Greifen Sie die Fehlvorstellung „günstig gleich kostenlos“ auf, indem Sie die scheinbar kleine Prozentzahl in konkrete Eurobeträge übersetzen und über mehrere Jahre fortschreiben. So wird der Kostenhebel als zentrales, beeinflussbares Entscheidungskriterium sichtbar."
         },
         "questions": [
           {
             "id": "q_etf_kosten_001",
             "level": "explain",
-            "question": "Was beschreibt „Kosten eines ETFs“ am besten?",
+            "question": "Was sind die laufenden Kosten eines ETFs (die TER)?",
             "points": 100,
-            "correctAnswer": "Auch kleine Kosten wirken langfristig, weil sie die Rendite mindern.",
+            "correctAnswer": "Ein kleiner Anteil des angelegten Geldes, der jedes Jahr für die Kosten des ETFs abgezogen wird.",
             "distractors": [
               {
-                "text": "Wenn ein ETF günstig klingt, hat er gar keine Kosten.",
+                "text": "Ein ETF, der günstig klingt, hat gar keine laufenden Kosten.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Eine einmalige Strafe, die man nur beim Verkauf zahlt.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Ein Trinkgeld, das man dem Fondsmanager freiwillig geben kann.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Auch kleine Kosten wirken langfristig, weil sie die Rendite mindern."
+            "explanationAfterAnswer": "Richtig: Die TER ist der jährliche Kostenanteil, der laufend vom Vermögen abgezogen wird."
           },
           {
             "id": "q_etf_kosten_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Kosten eines ETFs“?",
+            "question": "Welches Beispiel zeigt einen Kostenunterschied zwischen zwei ETFs?",
             "points": 100,
-            "correctAnswer": "ETF A kostet 0,2 Prozent pro Jahr, ETF B kostet 1,0 Prozent.",
+            "correctAnswer": "ETF A kostet 0,2 Prozent pro Jahr, ETF B kostet 1,0 Prozent pro Jahr.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "ETF A steigt heute, ETF B fällt heute.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "ETF A hat einen längeren Namen als ETF B.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "ETF A wurde von einem Freund empfohlen, ETF B nicht.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Die jährliche Kostenquote in Prozent zeigt, wie teuer ein ETF im Betrieb ist."
           },
           {
             "id": "q_etf_kosten_003",
             "level": "understand",
-            "question": "Warum ist „Kosten eines ETFs“ für Finanzbildung wichtig?",
+            "question": "Warum machen schon kleine Kostenunterschiede über viele Jahre viel aus?",
             "points": 120,
-            "correctAnswer": "ETF-Kosten und ihre Wirkung auf Rendite verstehen.",
+            "correctAnswer": "Weil die Kosten jedes Jahr aufs Neue abgezogen werden und dieser Betrag sich über die lange Anlagedauer aufsummiert.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil die Kosten nach dem ersten Jahr komplett verschwinden.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil hohe Kosten die Rendite langfristig sogar erhöhen.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil Kosten nur einmalig beim Kauf anfallen.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: ETF-Kosten und ihre Wirkung auf Rendite verstehen."
+            "explanationAfterAnswer": "Jährlich wiederkehrende Kosten wirken über die Zeit wie ein Bremsklotz auf die Rendite."
           },
           {
             "id": "q_etf_kosten_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Ein ETF kostet 0,5 Prozent pro Jahr. Wie viel Euro sind das bei 4.000 Euro Anlage in einem Jahr?",
             "points": 150,
-            "correctAnswer": "Die passenden Werte einsetzen, sauber rechnen und das Ergebnis im Kontext prüfen.",
+            "correctAnswer": "20 Euro.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "200 Euro.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "5 Euro.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "2 Euro.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "0,5 Prozent von 4.000 Euro sind 4.000 mal 0,5 geteilt durch 100, also 20 Euro."
           },
           {
             "id": "q_etf_kosten_005",
             "level": "master",
-            "question": "Welche Aussage zu „Kosten eines ETFs“ stimmt am besten?",
+            "question": "Welche Aussage über ETF-Kosten ist am treffendsten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Auch niedrige laufende Kosten sind nie null und mindern über die Jahre spürbar die Nettorendite – bei gleichem Index ist der günstigere ETF meist besser.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Ein günstig klingender ETF ist praktisch kostenlos.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Hohe Kosten sind ein Zeichen für besonders gute Rendite.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Kosten spielen bei langfristiger Anlage keine Rolle.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Kosten sind einer der wenigen Faktoren, die du sicher beeinflussen kannst – sie kommen direkt der Rendite zugute."
           }
         ],
         "calculationTemplates": [
@@ -1337,7 +1337,7 @@
             "id": "tmpl_etf_kosten",
             "level": "apply",
             "points": 150,
-            "questionTemplate": "Du investierst {betrag} Euro in einen ETF mit {kosten} Prozent laufenden Kosten pro Jahr. Wie viele Euro sind das ungefähr?",
+            "questionTemplate": "Du legst {betrag} Euro in einen ETF mit {kosten} Prozent laufenden Kosten pro Jahr an. Wie viele Euro Kosten fallen dafür ungefähr in einem Jahr an?",
             "parameters": {
               "betrag": {
                 "min": 100,
@@ -1345,7 +1345,7 @@
               },
               "kosten": {
                 "min": 0.1,
-                "max": 2.0
+                "max": 2
               }
             },
             "solutionFormula": "betrag * kosten / 100",
@@ -1354,21 +1354,21 @@
               "betrag * kosten",
               "betrag / kosten"
             ],
-            "explanationTemplate": "Kosten in Euro = Betrag mal Kostenquote geteilt durch 100.",
+            "explanationTemplate": "Die jährlichen Kosten in Euro berechnest du so: Betrag mal Kostenquote in Prozent, geteilt durch 100.",
             "unit": "Euro"
           }
         ],
         "teacherSupport": {
-          "competenceGoal": "ETF-Kosten und ihre Wirkung auf Rendite verstehen.",
+          "competenceGoal": "Laufende ETF-Kosten (TER) berechnen und ihre langfristige Wirkung auf die Nettorendite einschätzen.",
           "typicalMisconception": "Wenn ein ETF günstig klingt, hat er gar keine Kosten.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Wenn ein ETF günstig klingt, hat er gar keine Kosten.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Kosten eines ETFs“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "discussionPrompt": "0,2 Prozent klingt nach nichts – warum kann dieser winzige Unterschied über zwanzig Jahre am Ende hunderte Euro ausmachen?",
+          "classroomActivity": "Die Lernenden berechnen für 5.000 Euro die jährlichen Kosten bei 0,2 Prozent und bei 1,0 Prozent und schreiben den Unterschied für zehn Jahre fort, um den Kostenhebel sichtbar zu machen."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Kosten eines ETFs“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Kosten eines ETFs“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Wenn jedes Jahr ein kleiner Teil unseres Anlagegeldes für Kosten abgeht – warum lohnt es sich trotzdem, genau hinzuschauen, wie hoch dieser Anteil ist?",
+          "everydayExercise": "Vergleichen Sie gemeinsam die laufenden Kosten zweier ETFs auf denselben Index und rechnen Sie aus, was der Unterschied bei einem Beispielbetrag pro Jahr in Euro bedeutet."
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_ausschuettend_thesaurierend",
@@ -1380,12 +1380,12 @@
           "konzept_etf"
         ],
         "pedagogy": {
-          "learningGoal": "Ausschüttende und thesaurierende ETFs unterscheiden.",
-          "coreIdea": "Ausschüttend zahlt Erträge aus; thesaurierend legt Erträge wieder an.",
-          "everydayScenario": "Ein ETF erhält Dividenden und zahlt sie aus oder legt sie automatisch wieder an.",
-          "misconception": "Thesaurierende ETFs zahlen keine Erträge, also bringen sie nichts.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Ausschüttend oder thesaurierend?' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Ausschüttend oder thesaurierend?' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "learningGoal": "Ausschüttende und thesaurierende ETFs unterscheiden und verstehen, dass beide Erträge erwirtschaften.",
+          "coreIdea": "Ausschüttende ETFs zahlen Erträge aufs Konto aus, thesaurierende legen dieselben Erträge automatisch wieder an.",
+          "everydayScenario": "Ein ETF erhält Dividenden der enthaltenen Firmen und zahlt sie dir aus oder investiert sie sofort wieder für dich.",
+          "misconception": "Thesaurierende ETFs zahlen keine Erträge aus, also bringen sie gar nichts.",
+          "transferTask": "Erkläre einem Freund, der 4 Prozent Ausschüttung erwartet, warum ein thesaurierender ETF trotzdem denselben Ertrag erwirtschaften kann – nur landet das Geld anders.",
+          "reflectionPrompt": "Warum kann ein thesaurierender ETF für ein langfristiges Ziel praktisch sein, obwohl du nie eine Zahlung auf dem Konto siehst?"
         },
         "glossaryTerms": [
           "Ausschüttend",
@@ -1402,125 +1402,125 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Ausschüttend oder thesaurierend?: Ausschüttend zahlt Erträge aus; thesaurierend legt Erträge wieder an. Beispiel: Ein ETF erhält Dividenden und zahlt sie aus oder legt sie automatisch wieder an. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Thesaurierende ETFs zahlen keine Erträge, also bringen sie nichts.“.",
-          "young_adults": "Ausschüttend oder thesaurierend?: Ausschüttend zahlt Erträge aus; thesaurierend legt Erträge wieder an. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Ein ETF erhält Dividenden und zahlt sie aus oder legt sie automatisch wieder an.",
-          "parents_teachers": "Lernziel: Ausschüttende und thesaurierende ETFs unterscheiden. Didaktischer Fokus: Ausschüttend zahlt Erträge aus; thesaurierend legt Erträge wieder an. Typische Fehlvorstellung: „Thesaurierende ETFs zahlen keine Erträge, also bringen sie nichts.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Die Firmen in einem ETF verdienen Geld und schütten oft einen Teil als Dividende aus. Jetzt gibt es zwei Arten von ETFs, was mit diesem Geld passiert. Ein ausschüttender ETF zahlt dir die Dividende aufs Konto – du kannst sie ausgeben oder selbst wieder anlegen. Ein thesaurierender ETF legt die Dividende automatisch wieder für dich an, ohne dass du etwas tun musst. Das ist wie Taschengeld: Entweder bekommst du es ausgezahlt oder es wird sofort für dich weitergespart. Wichtig: Ein thesaurierender ETF bringt genauso Erträge – du siehst sie nur nicht als Zahlung, sondern der Wert wächst.",
+          "young_adults": "Ausschüttende und thesaurierende ETFs unterscheiden sich nur in der Verwendung der Erträge, nicht in deren Höhe. Der ausschüttende ETF überweist Dividenden regelmäßig aufs Verrechnungskonto und erzeugt so einen Cashflow, den du frei nutzen kannst. Der thesaurierende ETF reinvestiert dieselben Erträge automatisch, wodurch der Zinseszinseffekt ohne eigenes Zutun greift – praktisch für den langfristigen Vermögensaufbau. Die Fehlvorstellung, thesaurierende ETFs brächten „nichts“, entsteht, weil keine sichtbare Zahlung erfolgt; tatsächlich steckt der Ertrag im gestiegenen Anteilswert. Welche Variante passt, hängt davon ab, ob du laufende Auszahlungen brauchst oder auf Wachstum setzt.",
+          "parents_teachers": "Ausschüttende und thesaurierende ETFs erwirtschaften identische Erträge und unterscheiden sich allein in deren Verwendung: Auszahlung versus automatische Wiederanlage. Betonen Sie, dass die Fehlvorstellung „thesaurierend gleich ertraglos“ auf der fehlenden sichtbaren Zahlung beruht – der Ertrag manifestiert sich im Anteilswert und nutzt den Zinseszinseffekt. Diskutieren Sie die Eignung: thesaurierend für langfristigen Aufbau, ausschüttend für regelmäßigen Cashflow. So wird deutlich, dass es keine grundsätzlich bessere Variante gibt, sondern eine zum Ziel passende."
         },
         "questions": [
           {
             "id": "q_ausschuettend_thesaurierend_001",
             "level": "explain",
-            "question": "Was beschreibt „Ausschüttend oder thesaurierend?“ am besten?",
+            "question": "Was ist der Unterschied zwischen einem ausschüttenden und einem thesaurierenden ETF?",
             "points": 100,
-            "correctAnswer": "Ausschüttend zahlt Erträge aus; thesaurierend legt Erträge wieder an.",
+            "correctAnswer": "Der ausschüttende ETF zahlt Erträge aufs Konto aus, der thesaurierende legt sie automatisch wieder an.",
             "distractors": [
               {
-                "text": "Thesaurierende ETFs zahlen keine Erträge, also bringen sie nichts.",
+                "text": "Der thesaurierende ETF bringt gar keine Erträge, der ausschüttende schon.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Der ausschüttende ETF ist eine Aktie, der thesaurierende ein Sparbuch.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Der eine ist echt, der andere nur ausgedacht.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Ausschüttend zahlt Erträge aus; thesaurierend legt Erträge wieder an."
+            "explanationAfterAnswer": "Richtig: Beide erwirtschaften Erträge – der eine zahlt sie aus, der andere legt sie wieder an."
           },
           {
             "id": "q_ausschuettend_thesaurierend_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Ausschüttend oder thesaurierend?“?",
+            "question": "Welches Beispiel beschreibt einen thesaurierenden ETF?",
             "points": 100,
-            "correctAnswer": "Ein ETF erhält Dividenden und zahlt sie aus oder legt sie automatisch wieder an.",
+            "correctAnswer": "Der ETF erhält Dividenden und legt sie automatisch wieder an, ohne dass Geld auf dein Konto kommt.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Der ETF überweist die Dividenden jedes Jahr direkt auf dein Verrechnungskonto.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Der ETF verkauft alle Aktien und zahlt dir Bargeld aus.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Der ETF schickt dir einen Gutschein für ein Geschäft.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Automatische Wiederanlage ohne sichtbare Zahlung ist typisch für den thesaurierenden ETF."
           },
           {
             "id": "q_ausschuettend_thesaurierend_003",
             "level": "understand",
-            "question": "Warum ist „Ausschüttend oder thesaurierend?“ für Finanzbildung wichtig?",
+            "question": "Warum bringt ein thesaurierender ETF trotzdem Erträge, obwohl du keine Zahlung siehst?",
             "points": 120,
-            "correctAnswer": "Ausschüttende und thesaurierende ETFs unterscheiden.",
+            "correctAnswer": "Weil die Erträge sofort wieder angelegt werden und dadurch der Anteilswert steigt.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil thesaurierende ETFs die Erträge heimlich an den Staat abführen.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil thesaurierende ETFs die Erträge einfach löschen.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil thesaurierende ETFs gar keine Dividenden erhalten.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Ausschüttende und thesaurierende ETFs unterscheiden."
+            "explanationAfterAnswer": "Die Erträge stecken im gestiegenen Anteilswert – der Zinseszins arbeitet automatisch mit."
           },
           {
             "id": "q_ausschuettend_thesaurierend_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Ein ETF-Anteil ist 2.000 Euro wert und schüttet 3 Prozent aus. Wie viel Euro Ausschüttung sind das ungefähr?",
             "points": 150,
-            "correctAnswer": "Die passenden Werte einsetzen, sauber rechnen und das Ergebnis im Kontext prüfen.",
+            "correctAnswer": "60 Euro.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "600 Euro.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "6 Euro.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "2.003 Euro.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "3 Prozent von 2.000 Euro sind 2.000 mal 3 geteilt durch 100, also 60 Euro."
           },
           {
             "id": "q_ausschuettend_thesaurierend_005",
             "level": "master",
-            "question": "Welche Aussage zu „Ausschüttend oder thesaurierend?“ stimmt am besten?",
+            "question": "Welche Aussage über ausschüttende und thesaurierende ETFs ist am treffendsten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Beide erwirtschaften die gleichen Erträge – welche Variante passt, hängt davon ab, ob du Auszahlungen brauchst oder auf Wachstum setzt.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Thesaurierende ETFs bringen weniger, weil sie nichts auszahlen.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Ausschüttende ETFs sind immer die bessere Wahl.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Der Unterschied betrifft nur den Namen, sonst nichts.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Es gibt keine grundsätzlich bessere Variante, sondern eine, die zu deinem Ziel passt."
           }
         ],
         "calculationTemplates": [
@@ -1545,21 +1545,21 @@
               "betrag * quote",
               "betrag / quote"
             ],
-            "explanationTemplate": "Ausschüttung = Betrag mal Quote geteilt durch 100.",
+            "explanationTemplate": "Die Ausschüttung in Euro berechnest du so: Anteilswert mal Ausschüttungsquote in Prozent, geteilt durch 100.",
             "unit": "Euro"
           }
         ],
         "teacherSupport": {
-          "competenceGoal": "Ausschüttende und thesaurierende ETFs unterscheiden.",
+          "competenceGoal": "Ausschüttende und thesaurierende ETFs unterscheiden und erkennen, dass beide gleich viel Ertrag erwirtschaften.",
           "typicalMisconception": "Thesaurierende ETFs zahlen keine Erträge, also bringen sie nichts.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Thesaurierende ETFs zahlen keine Erträge, also bringen sie nichts.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Ausschüttend oder thesaurierend?“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "discussionPrompt": "Wenn ein thesaurierender ETF nie Geld aufs Konto überweist – woran erkennt man dann, dass er trotzdem Erträge erwirtschaftet?",
+          "classroomActivity": "Die Lernenden berechnen für einen Beispielbetrag die jährliche Ausschüttung und stellen daneben, wie derselbe Ertrag bei der thesaurierenden Variante den Anteilswert erhöht."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Ausschüttend oder thesaurierend?“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Ausschüttend oder thesaurierend?“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Taschengeld auszahlen oder sofort für ein Ziel weitersparen – welche der beiden Varianten passt eher zu einem langfristigen Plan, und warum?",
+          "everydayExercise": "Suchen Sie zu einem Index je einen ausschüttenden und einen thesaurierenden ETF und besprechen Sie, für welches Ziel welche Variante praktischer wäre."
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_rebalancing",
@@ -1571,12 +1571,12 @@
           "konzept_etf_kosten"
         ],
         "pedagogy": {
-          "learningGoal": "Rebalancing als Wiederherstellung einer Zielaufteilung verstehen.",
-          "coreIdea": "Wenn sich Anlagen unterschiedlich entwickeln, bringt Rebalancing sie zurück zum Plan.",
-          "everydayScenario": "Aus einer 50/50-Aufteilung wird durch Kursanstiege 70/30.",
-          "misconception": "Wenn eine Anlage stark gestiegen ist, sollte man sie immer weiter wachsen lassen und nie anpassen.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Rebalancing' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Rebalancing' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "learningGoal": "Rebalancing als regelmäßiges Zurücksetzen einer Anlage auf ihre geplante Zielaufteilung verstehen.",
+          "coreIdea": "Wenn sich Anlagen unterschiedlich entwickeln, verschiebt sich die Aufteilung; Rebalancing stellt die ursprüngliche Zielaufteilung wieder her und hält das Risiko im Plan.",
+          "everydayScenario": "Aus einer geplanten 50/50-Aufteilung wird nach starken Kursgewinnen 70/30 – beim Rebalancing verkaufst du etwas vom Gewachsenen und stockst das andere auf.",
+          "misconception": "Wenn eine Anlage stark gestiegen ist, sollte man sie immer weiter laufen lassen und nie anpassen.",
+          "transferTask": "Dein Depot ist 1.000 Euro wert und du wolltest 50 Prozent in ETF A halten. Durch Kursgewinne stecken jetzt 700 Euro in A. Rechne aus, wie viel du umschichten müsstest, um wieder bei 500 Euro zu landen.",
+          "reflectionPrompt": "Warum kann es riskant sein, eine stark gestiegene Anlage immer weiter wachsen zu lassen, ohne die Aufteilung je zu prüfen?"
         },
         "glossaryTerms": [
           "Rebalancing",
@@ -1593,125 +1593,125 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Rebalancing: Wenn sich Anlagen unterschiedlich entwickeln, bringt Rebalancing sie zurück zum Plan. Beispiel: Aus einer 50/50-Aufteilung wird durch Kursanstiege 70/30. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Wenn eine Anlage stark gestiegen ist, sollte man sie immer weiter wachsen lassen und nie anpassen.“.",
-          "young_adults": "Rebalancing: Wenn sich Anlagen unterschiedlich entwickeln, bringt Rebalancing sie zurück zum Plan. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Aus einer 50/50-Aufteilung wird durch Kursanstiege 70/30.",
-          "parents_teachers": "Lernziel: Rebalancing als Wiederherstellung einer Zielaufteilung verstehen. Didaktischer Fokus: Wenn sich Anlagen unterschiedlich entwickeln, bringt Rebalancing sie zurück zum Plan. Typische Fehlvorstellung: „Wenn eine Anlage stark gestiegen ist, sollte man sie immer weiter wachsen lassen und nie anpassen.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Stell dir vor, du wolltest dein Geld halb in Anlage A und halb in Anlage B stecken, also 50 zu 50. Nach einer Weile ist A stark gestiegen und B kaum – plötzlich stecken 70 Prozent in A und nur noch 30 in B. Damit passt deine Aufteilung nicht mehr zu deinem Plan, und dein Risiko hängt jetzt viel stärker an A. Rebalancing heißt: Du bringst alles zurück auf 50 zu 50, indem du etwas von A verkaufst und B aufstockst. Das ist wie beim Kuchenbacken, wenn du zu viel von einer Zutat hast und nachjustierst. So bleibt dein Plan im Gleichgewicht.",
+          "young_adults": "Rebalancing bezeichnet das Zurücksetzen eines Portfolios auf seine ursprünglich geplante Zielaufteilung. Weil sich Anlagen unterschiedlich entwickeln, verschieben sich die Gewichte mit der Zeit – aus 50/50 wird etwa 70/30, wodurch ungewollt mehr Risiko in der stark gestiegenen Position steckt. Beim Rebalancing verkaufst du einen Teil des Gewachsenen und stockst das Untergewichtete auf, oft ausgelöst durch feste Termine oder Schwellenwerte. Das dient der Risikokontrolle, nicht der Renditemaximierung. Achte auf Transaktionskosten und schichte nicht zu häufig um – ein bis zweimal im Jahr oder ab einer klaren Abweichung reicht meist.",
+          "parents_teachers": "Rebalancing ist die planmäßige Rückführung eines Portfolios auf seine Zielallokation, um die ursprünglich gewählte Risikostruktur zu erhalten. Verdeutlichen Sie, dass Kursdivergenzen die Gewichte verschieben und dadurch unbeabsichtigt das Risikoprofil verändern. Greifen Sie die Fehlvorstellung auf, Gewinner müsse man stets unbegrenzt laufen lassen: Rebalancing ist primär Risikokontrolle, kein Renditetrick. Thematisieren Sie zugleich Transaktionskosten und übliche Auslöser (Kalenderintervall oder Schwellenwert), um übermäßiges Umschichten zu vermeiden."
         },
         "questions": [
           {
             "id": "q_rebalancing_001",
             "level": "explain",
-            "question": "Was beschreibt „Rebalancing“ am besten?",
+            "question": "Was bedeutet Rebalancing?",
             "points": 100,
-            "correctAnswer": "Wenn sich Anlagen unterschiedlich entwickeln, bringt Rebalancing sie zurück zum Plan.",
+            "correctAnswer": "Eine Anlage wird auf ihre ursprünglich geplante Zielaufteilung zurückgesetzt.",
             "distractors": [
               {
-                "text": "Wenn eine Anlage stark gestiegen ist, sollte man sie immer weiter wachsen lassen und nie anpassen.",
+                "text": "Man lässt eine stark gestiegene Anlage immer weiter laufen und passt nie etwas an.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Man verkauft das gesamte Depot und fängt bei null an.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Man wechselt einfach die Bank.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Wenn sich Anlagen unterschiedlich entwickeln, bringt Rebalancing sie zurück zum Plan."
+            "explanationAfterAnswer": "Richtig: Rebalancing bringt die Aufteilung zurück auf den ursprünglichen Plan."
           },
           {
             "id": "q_rebalancing_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Rebalancing“?",
+            "question": "Welche Situation ruft nach einem Rebalancing?",
             "points": 100,
-            "correctAnswer": "Aus einer 50/50-Aufteilung wird durch Kursanstiege 70/30.",
+            "correctAnswer": "Aus einer geplanten 50/50-Aufteilung ist durch Kursgewinne 70/30 geworden.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Beide Anlagen sind genau im geplanten Verhältnis geblieben.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Du hast frisches Geld auf dem Girokonto, das nicht angelegt ist.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Du hast dein Passwort für das Depot vergessen.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Wenn sich die geplante Aufteilung verschoben hat, wird nachjustiert – genau das ist Rebalancing."
           },
           {
             "id": "q_rebalancing_003",
             "level": "understand",
-            "question": "Warum ist „Rebalancing“ für Finanzbildung wichtig?",
+            "question": "Warum ist Rebalancing vor allem eine Frage der Risikokontrolle?",
             "points": 120,
-            "correctAnswer": "Rebalancing als Wiederherstellung einer Zielaufteilung verstehen.",
+            "correctAnswer": "Weil eine verschobene Aufteilung dazu führt, dass ungewollt mehr Risiko in der stark gestiegenen Position steckt.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil Rebalancing garantiert höhere Gewinne bringt als jede andere Strategie.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil man dadurch nie wieder Verluste machen kann.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil Rebalancing die Kosten des Depots auf null senkt.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Rebalancing als Wiederherstellung einer Zielaufteilung verstehen."
+            "explanationAfterAnswer": "Rebalancing hält das Risiko im Plan – es ist Kontrolle, kein Renditetrick."
           },
           {
             "id": "q_rebalancing_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Dein Depot ist 1.000 Euro wert, die Zielaufteilung für ETF A beträgt 50 Prozent. Wie viele Euro sollten in ETF A stecken?",
             "points": 150,
-            "correctAnswer": "Die passenden Werte einsetzen, sauber rechnen und das Ergebnis im Kontext prüfen.",
+            "correctAnswer": "500 Euro.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "1.050 Euro.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "950 Euro.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "20 Euro.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "50 Prozent von 1.000 Euro sind 1.000 mal 50 geteilt durch 100, also 500 Euro."
           },
           {
             "id": "q_rebalancing_005",
             "level": "master",
-            "question": "Welche Aussage zu „Rebalancing“ stimmt am besten?",
+            "question": "Welche Aussage über Rebalancing ist am treffendsten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Es dient der Risikokontrolle und sollte wegen der Transaktionskosten maßvoll erfolgen, nicht ständig.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Man sollte Gewinner grundsätzlich unbegrenzt laufen lassen und nie umschichten.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Rebalancing maximiert immer die Rendite und sollte täglich gemacht werden.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Rebalancing ist kostenlos und ohne jeden Nachteil beliebig oft sinnvoll.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Maßvolles Rebalancing hält das Risiko im Plan, ohne die Rendite durch häufige Kosten aufzuzehren."
           }
         ],
         "calculationTemplates": [
@@ -1736,21 +1736,21 @@
               "gesamt - ziel",
               "gesamt / ziel"
             ],
-            "explanationTemplate": "Zielwert = Gesamtwert mal Zielanteil geteilt durch 100.",
+            "explanationTemplate": "Den Zielwert berechnest du so: Gesamtwert des Depots mal Zielanteil in Prozent, geteilt durch 100.",
             "unit": "Euro"
           }
         ],
         "teacherSupport": {
-          "competenceGoal": "Rebalancing als Wiederherstellung einer Zielaufteilung verstehen.",
-          "typicalMisconception": "Wenn eine Anlage stark gestiegen ist, sollte man sie immer weiter wachsen lassen und nie anpassen.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Wenn eine Anlage stark gestiegen ist, sollte man sie immer weiter wachsen lassen und nie anpassen.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Rebalancing“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "competenceGoal": "Rebalancing als planmäßige Risikokontrolle verstehen und einen Zielwert für eine Position berechnen.",
+          "typicalMisconception": "Wenn eine Anlage stark gestiegen ist, sollte man sie immer weiter laufen lassen und nie anpassen.",
+          "discussionPrompt": "Wenn eine Anlage von 50 auf 70 Prozent des Depots gewachsen ist – warum ist das Risiko dann anders als ursprünglich geplant?",
+          "classroomActivity": "Die Lernenden starten mit einer 50/50-Aufteilung, simulieren unterschiedliche Kursgewinne und berechnen anschließend, wie viel sie umschichten müssten, um zur Zielaufteilung zurückzukehren."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Rebalancing“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Rebalancing“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Wenn ein Teil unseres Geldes viel stärker gewachsen ist als der Rest – wann und warum würde es Sinn ergeben, wieder auf die ursprüngliche Aufteilung zurückzugehen?",
+          "everydayExercise": "Zeichnen Sie gemeinsam ein Kreisdiagramm mit einer Wunschaufteilung, verschieben Sie es nach fiktiven Kursgewinnen und rechnen Sie aus, wie viel Umschichten nötig wäre."
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_etf_grenzen",
@@ -1762,12 +1762,12 @@
           "konzept_streuung_grenzen"
         ],
         "pedagogy": {
-          "learningGoal": "Grenzen von ETFs verstehen.",
-          "coreIdea": "ETFs können streuen, aber Marktrisiken und Fehlverhalten nicht verhindern.",
-          "everydayScenario": "Ein Welt-ETF fällt in einer globalen Börsenkrise mit dem Markt.",
-          "misconception": "ETF bedeutet automatisch: sicher, günstig, richtig.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Was ETFs nicht können' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Was ETFs nicht können' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "learningGoal": "Die Grenzen von ETFs erkennen: Sie streuen, verhindern aber weder Marktrisiko noch eigenes Fehlverhalten.",
+          "coreIdea": "ETFs können Einzelrisiken durch Streuung senken, aber Marktschwankungen und panisches Verhalten des Anlegers nicht ausschalten.",
+          "everydayScenario": "In einer weltweiten Börsenkrise fällt auch ein breiter Welt-ETF deutlich mit dem Gesamtmarkt.",
+          "misconception": "ETF bedeutet automatisch: sicher, günstig und richtig für jeden.",
+          "transferTask": "Nenne zwei Dinge, die ein ETF für dich leisten kann, und zwei Dinge, die er nicht kann. Ordne jeweils zu, ob es um Einzelrisiko, Marktrisiko oder eigenes Verhalten geht.",
+          "reflectionPrompt": "Warum kann selbst ein breiter Welt-ETF dich nicht davor bewahren, in einer Krise aus Angst zum falschen Zeitpunkt zu verkaufen?"
         },
         "glossaryTerms": [
           "ETF-Grenzen",
@@ -1784,139 +1784,139 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Was ETFs nicht können: ETFs können streuen, aber Marktrisiken und Fehlverhalten nicht verhindern. Beispiel: Ein Welt-ETF fällt in einer globalen Börsenkrise mit dem Markt. Wichtig ist die Abgrenzung zur Fehlvorstellung: „ETF bedeutet automatisch: sicher, günstig, richtig.“.",
-          "young_adults": "Was ETFs nicht können: ETFs können streuen, aber Marktrisiken und Fehlverhalten nicht verhindern. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Ein Welt-ETF fällt in einer globalen Börsenkrise mit dem Markt.",
-          "parents_teachers": "Lernziel: Grenzen von ETFs verstehen. Didaktischer Fokus: ETFs können streuen, aber Marktrisiken und Fehlverhalten nicht verhindern. Typische Fehlvorstellung: „ETF bedeutet automatisch: sicher, günstig, richtig.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "ETFs sind praktisch, aber sie sind kein Zaubermittel. Ein ETF kann das Risiko verteilen, damit ein einzelnes schlechtes Unternehmen dir nicht das ganze Geld verhagelt. Aber er kann nicht verhindern, dass die ganze Börse einmal fällt – dann sinkt auch dein ETF mit. Und er kann dir nicht die Angst nehmen: Wenn alle in einer Krise panisch verkaufen, musst trotzdem du selbst ruhig bleiben. Ein ETF nimmt dir also die Streuung ab, aber nicht das Nachdenken. „ETF“ heißt nicht automatisch „sicher“ oder „für jeden das Richtige“. Es kommt darauf an, welcher ETF, wie lange und zu welchem Ziel.",
+          "young_adults": "Ein ETF senkt durch Streuung das unternehmensspezifische Einzelrisiko, doch drei Dinge kann er nicht: Erstens bleibt das Marktrisiko – in einer breiten Krise fällt auch ein Welt-ETF. Zweitens gibt es ein Indexrisiko: Bildet ein ETF einen engen oder konzentrierten Index ab, streut er trotz ETF-Label kaum. Drittens schützt kein ETF vor eigenem Fehlverhalten wie Panikverkauf oder ständigem Umschichten. Ob ein ETF zu dir passt, hängt von deinem Zeithorizont und Risikoprofil ab. „ETF“ ist keine Gütesiegel-Garantie – entscheidend bleiben Produktverständnis, Streuungsbreite, Kosten und dein eigenes Verhalten.",
+          "parents_teachers": "ETFs reduzieren idiosynkratisches Einzelrisiko, lassen jedoch das systematische Marktrisiko unberührt; hinzu treten Indexrisiko (enge oder konzentrierte Basisindizes) und Verhaltensrisiko des Anlegers. Korrigieren Sie die pauschale Gleichsetzung „ETF gleich sicher, günstig, richtig“, indem Sie die Leistungsgrenzen sauber trennen: Streuungsnutzen ja, Krisenimmunität nein, Verhaltenssteuerung nein. Verknüpfen Sie die Produktwahl mit Zeithorizont und Risikoprofil, sodass Lernende ETFs als nützliches, aber kein universell passendes Werkzeug einordnen."
         },
         "questions": [
           {
             "id": "q_etf_grenzen_001",
             "level": "explain",
-            "question": "Was beschreibt „Was ETFs nicht können“ am besten?",
+            "question": "Was kann ein ETF nicht leisten?",
             "points": 100,
-            "correctAnswer": "ETFs können streuen, aber Marktrisiken und Fehlverhalten nicht verhindern.",
+            "correctAnswer": "Er kann das Marktrisiko und eigenes Fehlverhalten nicht verhindern.",
             "distractors": [
               {
-                "text": "ETF bedeutet automatisch: sicher, günstig, richtig.",
+                "text": "ETF bedeutet automatisch sicher, günstig und für jeden richtig.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Er kann überhaupt kein Risiko senken.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Er kann kein Geld anlegen.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: ETFs können streuen, aber Marktrisiken und Fehlverhalten nicht verhindern."
+            "explanationAfterAnswer": "Richtig: Ein ETF streut, aber gegen Marktrisiko und Panik schützt er nicht."
           },
           {
             "id": "q_etf_grenzen_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Was ETFs nicht können“?",
+            "question": "Welches Beispiel zeigt eine Grenze von ETFs?",
             "points": 100,
-            "correctAnswer": "Ein Welt-ETF fällt in einer globalen Börsenkrise mit dem Markt.",
+            "correctAnswer": "In einer weltweiten Börsenkrise fällt auch ein breiter Welt-ETF mit dem Gesamtmarkt.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Ein ETF verteilt das Geld auf viele verschiedene Unternehmen.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Ein ETF nimmt dir die Auswahl vieler Einzelaktien ab.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Ein ETF lässt sich an der Börse handeln.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Das Fallen in einer breiten Krise zeigt das Marktrisiko – die klarste Grenze eines ETF."
           },
           {
             "id": "q_etf_grenzen_003",
             "level": "understand",
-            "question": "Warum ist „Was ETFs nicht können“ für Finanzbildung wichtig?",
+            "question": "Warum schützt ein ETF nicht vor eigenem Fehlverhalten an der Börse?",
             "points": 120,
-            "correctAnswer": "Grenzen von ETFs verstehen.",
+            "correctAnswer": "Weil ein ETF nur die Anlage streut, aber nicht entscheidet, ob du in einer Krise ruhig bleibst oder panisch verkaufst.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil ein ETF dich sogar zum Verkaufen zwingt, sobald er fällt.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil ETFs grundsätzlich schlechter sind als Einzelaktien.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil ein ETF gar keine echten Aktien enthält.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Grenzen von ETFs verstehen."
+            "explanationAfterAnswer": "Das Verhaltensrisiko liegt bei dir – kein Produkt nimmt dir die Ruhe in der Krise ab."
           },
           {
             "id": "q_etf_grenzen_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Ein Freund sagt: „Ich kaufe irgendeinen ETF, ETFs sind ja immer sicher.“ Was rätst du ihm?",
             "points": 150,
-            "correctAnswer": "Innehalten, Informationen prüfen und erst dann passend zum eigenen Ziel handeln.",
+            "correctAnswer": "Er sollte prüfen, welchen Index der ETF abbildet, wie breit er streut und ob er zu seinem Ziel und Zeithorizont passt.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "Stimmt, jeder ETF ist gleich sicher, die Auswahl ist egal.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "Er sollte den ETF sofort wieder verkaufen, sobald er einmal fällt.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "Er sollte gar nicht anlegen, weil ETFs nie zu jemandem passen.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "„ETF“ ist kein Gütesiegel – Index, Streuungsbreite, Kosten und das eigene Ziel entscheiden."
           },
           {
             "id": "q_etf_grenzen_005",
             "level": "master",
-            "question": "Welche Aussage zu „Was ETFs nicht können“ stimmt am besten?",
+            "question": "Welche Aussage über die Grenzen von ETFs ist am treffendsten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "ETFs senken das Einzelrisiko durch Streuung, lassen aber Marktrisiko, Indexrisiko und Verhaltensrisiko bestehen.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "ETFs beseitigen jedes Risiko, sobald man einen kauft.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "ETFs sind unabhängig vom gewählten Index immer gleich breit gestreut.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "ETFs schützen zuverlässig vor Panikverkäufen in der Krise.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "Streuung hilft gegen Einzelrisiken – Markt, enger Index und eigenes Verhalten bleiben deine Aufgabe."
           }
         ],
         "calculationTemplates": [],
         "teacherSupport": {
-          "competenceGoal": "Grenzen von ETFs verstehen.",
+          "competenceGoal": "Die Leistungsgrenzen von ETFs erkennen und Streuungsnutzen von Marktrisiko, Indexrisiko und Verhaltensrisiko trennen.",
           "typicalMisconception": "ETF bedeutet automatisch: sicher, günstig, richtig.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „ETF bedeutet automatisch: sicher, günstig, richtig.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Was ETFs nicht können“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "discussionPrompt": "Ein ETF verteilt das Geld auf viele Firmen – warum kann er dich trotzdem nicht davor schützen, in einer Krise aus Angst zu verkaufen?",
+          "classroomActivity": "Die Lernenden sortieren Kärtchen mit Aussagen (etwa „senkt Einzelrisiko“, „fällt in Krise mit“, „schützt vor Panik“) in die Spalten „kann ein ETF“ und „kann ein ETF nicht“."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Was ETFs nicht können“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Was ETFs nicht können“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Was kann ein breiter ETF gut für uns tun – und was müssen wir trotzdem selbst leisten, gerade wenn die Kurse mal stark fallen?",
+          "everydayExercise": "Sammeln Sie gemeinsam auf einem Zettel, was ein ETF kann und was nicht, und ordnen Sie jede Zeile den Begriffen Einzelrisiko, Marktrisiko oder eigenes Verhalten zu."
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       },
       {
         "id": "konzept_langfristig",
@@ -1929,12 +1929,12 @@
           "konzept_zinseszins"
         ],
         "pedagogy": {
-          "learningGoal": "Langfristiges Investieren als planvolles, geduldiges Anlegen verstehen.",
-          "coreIdea": "Langfristig investieren heißt mit Plan, Streuung, Geduld und passendem Risiko dabeibleiben.",
-          "everydayScenario": "Du investierst regelmäßig für ein Ziel in 15 oder 20 Jahren.",
-          "misconception": "Langfristig investieren bedeutet, nie wieder nachzudenken.",
-          "transferTask": "Beschreibe ein eigenes Beispiel zu 'Langfristig investieren' und erkläre, welche Entscheidung oder welches Risiko darin steckt.",
-          "reflectionPrompt": "Welche Fehlvorstellung zu 'Langfristig investieren' könnte dich zu einer schlechten Entscheidung verleiten?"
+          "learningGoal": "Langfristiges Investieren als planvolles, geduldiges Anlegen mit Streuung, niedrigen Kosten und ruhigem Verhalten verstehen.",
+          "coreIdea": "Langfristig investieren heißt, mit einem Plan, breiter Streuung, Geduld und passendem Risiko dabeizubleiben – Zeit im Markt zählt mehr als der perfekte Einstiegszeitpunkt.",
+          "everydayScenario": "Du legst über einen Sparplan jeden Monat einen festen Betrag in einen breiten ETF an, für ein Ziel, das erst in 15 oder 20 Jahren erreicht wird.",
+          "misconception": "Langfristig investieren bedeutet, einmal zu kaufen und danach nie wieder nachzudenken – oder umgekehrt: den perfekten Moment abzupassen.",
+          "transferTask": "Beschreibe, warum ein regelmäßiger Sparplan über zehn Jahre eher zum langfristigen Investieren passt als der Versuch, genau am tiefsten Kurs zu kaufen.",
+          "reflectionPrompt": "Warum ist die Haltung „Zeit im Markt schlägt Markt-Timing“ für langfristiges Investieren wichtiger als der Versuch, jeden Kursverlauf vorherzusagen?"
         },
         "glossaryTerms": [
           "Langfristiges Investieren",
@@ -1952,139 +1952,139 @@
           "parents_teachers"
         ],
         "explanations": {
-          "learners_10_14": "Langfristig investieren: Langfristig investieren heißt mit Plan, Streuung, Geduld und passendem Risiko dabeibleiben. Beispiel: Du investierst regelmäßig für ein Ziel in 15 oder 20 Jahren. Wichtig ist die Abgrenzung zur Fehlvorstellung: „Langfristig investieren bedeutet, nie wieder nachzudenken.“.",
-          "young_adults": "Langfristig investieren: Langfristig investieren heißt mit Plan, Streuung, Geduld und passendem Risiko dabeibleiben. Für echte Finanzentscheidungen bedeutet das: Begriffe, Kosten, Risiken, Zeitraum, Alternativen und die eigene Situation müssen zusammen betrachtet werden. Das Beispiel zeigt den praktischen Kern: Du investierst regelmäßig für ein Ziel in 15 oder 20 Jahren.",
-          "parents_teachers": "Lernziel: Langfristiges Investieren als planvolles, geduldiges Anlegen verstehen. Didaktischer Fokus: Langfristig investieren heißt mit Plan, Streuung, Geduld und passendem Risiko dabeibleiben. Typische Fehlvorstellung: „Langfristig investieren bedeutet, nie wieder nachzudenken.“. Unterrichtsimpuls: Die Lernenden übertragen das Beispiel auf eine eigene Alltagssituation und benennen Grenzen der Aussage."
+          "learners_10_14": "Langfristig investieren heißt, mit einem Plan dranzubleiben – nicht schnell reich werden, sondern über viele Jahre ruhig sparen. Am besten legst du regelmäßig einen kleinen Betrag an, zum Beispiel jeden Monat, in etwas breit Gestreutes wie einen Welt-ETF. Wenn die Kurse mal fallen, bleibst du ruhig, statt panisch zu verkaufen, denn breite Märkte sind in der Vergangenheit über lange Zeit meistens gewachsen. Wichtig: „Meistens“ ist keine Garantie, und niemand weiß, was morgen passiert. Es geht nicht darum, den perfekten Moment zum Kaufen zu erwischen. Wie man sagt: Zeit im Markt schlägt das Erraten des besten Zeitpunkts.",
+          "young_adults": "Langfristiges Investieren stützt sich auf einen langen Anlagehorizont, breite Streuung, niedrige Kosten und diszipliniertes Verhalten. Ein Sparplan ist dabei ein Werkzeug für Disziplin, kein Gewinnautomat: Du investierst regelmäßig automatisch und musst nicht versuchen, den Markt zu timen. Historisch sind breite Märkte über lange Zeiträume meist gestiegen – das ist eine Erfahrung aus der Vergangenheit und keine Garantie für die Zukunft. Die Faustregel „Zeit im Markt schlägt Markt-Timing“ bedeutet: Dabeizubleiben war meist wirksamer als der Versuch, Tiefpunkte zu erwischen. Langfristig anlegen heißt nicht, nie mehr hinzuschauen: Plan, Kosten und Aufteilung solltest du gelegentlich prüfen, etwa durch Rebalancing.",
+          "parents_teachers": "Langfristiges Investieren beruht auf den Säulen Zeithorizont, Diversifikation, Kostenbewusstsein und Verhaltensdisziplin. Vermitteln Sie den Sparplan als Instrument der Disziplin und der Vermeidung von Market-Timing, nicht als Gewinngarantie. Formulieren Sie historische Marktentwicklungen sorgfältig: Breite Märkte sind langfristig meist gestiegen – als Vergangenheitsbefund ohne Zukunftsversprechen. Greifen Sie beide Fehlvorstellungen auf: das gedankenlose Kaufen-und-Vergessen ebenso wie den Timing-Ehrgeiz. Der Leitsatz „Zeit im Markt schlägt Markt-Timing“ verbindet ruhige Haltung mit gelegentlicher, planmäßiger Kontrolle (Rebalancing, Kosten)."
         },
         "questions": [
           {
             "id": "q_langfristig_001",
             "level": "explain",
-            "question": "Was beschreibt „Langfristig investieren“ am besten?",
+            "question": "Was bedeutet langfristig investieren?",
             "points": 100,
-            "correctAnswer": "Langfristig investieren heißt mit Plan, Streuung, Geduld und passendem Risiko dabeibleiben.",
+            "correctAnswer": "Mit einem Plan, breiter Streuung, Geduld und passendem Risiko über viele Jahre dabeizubleiben.",
             "distractors": [
               {
-                "text": "Langfristig investieren bedeutet, nie wieder nachzudenken.",
+                "text": "Einmal kaufen und danach nie wieder über die Anlage nachdenken.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert automatisch Gewinn und Sicherheit.",
+                "text": "Möglichst oft kaufen und verkaufen, um schnelle Gewinne mitzunehmen.",
                 "closeness": 3
               },
               {
-                "text": "Es hat mit Geldentscheidungen nichts zu tun.",
+                "text": "Sein Geld gar nicht anlegen, sondern bar aufbewahren.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Richtig: Langfristig investieren heißt mit Plan, Streuung, Geduld und passendem Risiko dabeibleiben."
+            "explanationAfterAnswer": "Richtig: Langfristig investieren heißt planvoll und geduldig dabeizubleiben."
           },
           {
             "id": "q_langfristig_002",
             "level": "recognize",
-            "question": "Welches Beispiel passt am ehesten zu „Langfristig investieren“?",
+            "question": "Welches Beispiel passt am besten zum langfristigen Investieren?",
             "points": 100,
-            "correctAnswer": "Du investierst regelmäßig für ein Ziel in 15 oder 20 Jahren.",
+            "correctAnswer": "Du legst über einen Sparplan monatlich einen festen Betrag in einen breiten ETF an, für ein Ziel in 15 oder 20 Jahren.",
             "distractors": [
               {
-                "text": "Eine Entscheidung nur wegen Gruppendruck treffen.",
+                "text": "Du kaufst und verkaufst denselben ETF mehrmals in einer Woche.",
                 "closeness": 2
               },
               {
-                "text": "Ein Angebot ohne Kosten, Risiko oder Bedingungen als sicher annehmen.",
+                "text": "Du wartest jahrelang mit dem Anlegen, bis der perfekte Kurs kommt.",
                 "closeness": 3
               },
               {
-                "text": "Einen Begriff verwenden, ohne ihn zu verstehen.",
+                "text": "Du steckst dein gesamtes Geld in einen einzigen Trend, über den gerade alle reden.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Beispiel passt, weil es den Kern des Moduls in einer Alltagssituation zeigt."
+            "explanationAfterAnswer": "Regelmäßig, breit gestreut und mit langem Ziel – das ist typisches langfristiges Investieren."
           },
           {
             "id": "q_langfristig_003",
             "level": "understand",
-            "question": "Warum ist „Langfristig investieren“ für Finanzbildung wichtig?",
+            "question": "Warum gilt der Grundsatz „Zeit im Markt schlägt Markt-Timing“?",
             "points": 120,
-            "correctAnswer": "Langfristiges Investieren als planvolles, geduldiges Anlegen verstehen.",
+            "correctAnswer": "Weil niemand den besten Ein- und Ausstiegszeitpunkt zuverlässig trifft und dauerhaftes Dabeibleiben in der Vergangenheit meist wirksamer war.",
             "distractors": [
               {
-                "text": "Weil dadurch jede Finanzentscheidung risikolos wird.",
+                "text": "Weil man mit dem richtigen Timing garantiert immer den Tiefpunkt erwischt.",
                 "closeness": 3
               },
               {
-                "text": "Weil man danach keine Kosten mehr prüfen muss.",
+                "text": "Weil breite Märkte in Zukunft garantiert jedes Jahr steigen.",
                 "closeness": 2
               },
               {
-                "text": "Weil es nur ein Fachwort ohne praktischen Nutzen ist.",
+                "text": "Weil Kurse überhaupt keine Rolle spielen.",
                 "closeness": 1
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Das Lernziel ist: Langfristiges Investieren als planvolles, geduldiges Anlegen verstehen."
+            "explanationAfterAnswer": "Dabeibleiben ist berechenbarer als das Erraten von Zeitpunkten – deshalb zählt die Zeit im Markt."
           },
           {
             "id": "q_langfristig_004",
             "level": "apply",
-            "question": "Welche Handlung passt am besten zu diesem Modul?",
+            "question": "Die Kurse deines breiten ETF sind in einer Krise stark gefallen. Was passt am besten zu langfristigem Investieren?",
             "points": 150,
-            "correctAnswer": "Innehalten, Informationen prüfen und erst dann passend zum eigenen Ziel handeln.",
+            "correctAnswer": "Ruhig deinem Plan treu bleiben, den Sparplan fortführen und die Aufteilung bei Gelegenheit prüfen.",
             "distractors": [
               {
-                "text": "Sofort handeln, wenn etwas spannend klingt.",
+                "text": "Sofort alles verkaufen, um weitere Verluste zu vermeiden.",
                 "closeness": 3
               },
               {
-                "text": "Nur auf eine einzelne Zahl oder Meinung schauen.",
+                "text": "Panisch abwarten, bis die Kurse garantiert wieder steigen, und dann einsteigen.",
                 "closeness": 3
               },
               {
-                "text": "Kosten, Risiken und Ziel ignorieren.",
+                "text": "Das gesamte Geld in den einen Wert stecken, der zuletzt am wenigsten gefallen ist.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Anwendung bedeutet, Wissen in eine ruhige, begründete Entscheidung zu übertragen."
+            "explanationAfterAnswer": "In der Krise ruhig am Plan festzuhalten ist der Kern des langfristigen Investierens."
           },
           {
             "id": "q_langfristig_005",
             "level": "master",
-            "question": "Welche Aussage zu „Langfristig investieren“ stimmt am besten?",
+            "question": "Welche Aussage über langfristiges Investieren ist am treffendsten?",
             "points": 200,
-            "correctAnswer": "Es ist ein Baustein guter Finanzentscheidungen, muss aber immer im Zusammenhang mit Ziel, Risiko, Kosten und Situation betrachtet werden.",
+            "correctAnswer": "Breite Märkte sind langfristig meist gestiegen – das ist keine Garantie; entscheidend bleiben Plan, Streuung, niedrige Kosten und ruhiges Verhalten.",
             "distractors": [
               {
-                "text": "Es ersetzt jede weitere Prüfung.",
+                "text": "Langfristig investieren garantiert einen Gewinn, wenn man nur lange genug wartet.",
                 "closeness": 3
               },
               {
-                "text": "Es garantiert schnelle Gewinne.",
+                "text": "Wer langfristig anlegt, sollte seine Anlage nie wieder anschauen oder anpassen.",
                 "closeness": 3
               },
               {
-                "text": "Es gilt immer gleich, unabhängig von Alter, Ziel und Situation.",
+                "text": "Langfristiger Erfolg hängt vor allem davon ab, den perfekten Einstiegstag zu treffen.",
                 "closeness": 2
               }
             ],
             "displayedDistractors": 3,
-            "explanationAfterAnswer": "Meistern heißt, den Begriff nicht isoliert, sondern im passenden Kontext zu nutzen."
+            "explanationAfterAnswer": "„Meistens gestiegen“ ist eine Erfahrung, keine Garantie – Plan, Streuung, Kosten und Ruhe bleiben entscheidend."
           }
         ],
         "calculationTemplates": [],
         "teacherSupport": {
-          "competenceGoal": "Langfristiges Investieren als planvolles, geduldiges Anlegen verstehen.",
-          "typicalMisconception": "Langfristig investieren bedeutet, nie wieder nachzudenken.",
-          "discussionPrompt": "Was würde passieren, wenn man die Fehlvorstellung „Langfristig investieren bedeutet, nie wieder nachzudenken.“ glaubt?",
-          "classroomActivity": "Die Lernenden erstellen ein eigenes Beispiel zu „Langfristig investieren“ und markieren Begriff, Risiko, Kosten und Entscheidung."
+          "competenceGoal": "Langfristiges Investieren als Zusammenspiel aus Zeithorizont, Streuung, niedrigen Kosten und Verhaltensdisziplin verstehen.",
+          "typicalMisconception": "Langfristig investieren bedeutet, nie wieder nachzudenken – oder den perfekten Zeitpunkt abzupassen.",
+          "discussionPrompt": "Warum war es in der Vergangenheit meist wirksamer, dauerhaft dabeizubleiben, als zu versuchen, genau am Tiefpunkt zu kaufen – und warum ist „meistens“ trotzdem keine Garantie?",
+          "classroomActivity": "Die Lernenden vergleichen anhand einer vereinfachten historischen Kurstabelle zwei fiktive Anleger: einer mit durchgehendem Sparplan, einer mit Ein- und Ausstiegen aus Angst. Sie besprechen, wessen Verhalten ruhiger und planvoller war."
         },
         "parentSupport": {
-          "conversationPrompt": "Wo begegnet uns „Langfristig investieren“ im Alltag?",
-          "everydayExercise": "Gemeinsam ein kleines Beispiel zu „Langfristig investieren“ suchen und prüfen: Was ist sicher, was ist unklar, was kostet es?"
+          "conversationPrompt": "Wenn die Kurse mal stark fallen – warum kann es klüger sein, ruhig dem Plan zu folgen, als aus Angst schnell zu verkaufen?",
+          "everydayExercise": "Richten Sie gemeinsam gedanklich einen kleinen Sparplan für ein weit entferntes Ziel ein und sprechen Sie darüber, wie Sie in einer Krise reagieren würden, bevor sie eintritt."
         },
-        "reviewStatus": "editorial_review_recommended"
+        "reviewStatus": "editorial_v2"
       }
     ]
   }
