@@ -1,6 +1,6 @@
 # BACKLOG.md – Hofino MVP
 
-> **V1.1-Entscheidungen (verbindlich):** Kinder **10–15**. Vier Modi **alle im MVP**:
+> **V1.1-Entscheidungen (verbindlich):** Kinder/Jugendliche **12–15** (geändert 2026-07-11, s. `AUTH.md`). Vier Modi **alle im MVP**:
 > Kids, Family, **Adult** (neu), Classroom. Siehe `CLAUDE.md §7`.
 
 Reihenfolge ist bewusst gewählt: erst das Fundament (Logik + Daten), dann UI, dann Modi.

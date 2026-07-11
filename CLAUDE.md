@@ -5,7 +5,7 @@
 
 ## 1. Was ist Hofino
 
-Hofino ist eine **Finanzbildungs- und Investment-Trainings-App** für Kinder (10–15),
+Hofino ist eine **Finanzbildungs- und Investment-Trainings-App** für Kinder/Jugendliche (12–15),
 Familien, Erwachsene und Schulklassen.
 Claim: *„Geld verstehen. Investieren üben."*
 
@@ -26,7 +26,7 @@ Daraus folgen unverhandelbare Regeln:
 
 ## 3. Kinderschutz (Priorität über alle Features)
 
-- Keine Klarnamenpflicht für Kinder. Anzeigename frei wählbar.
+- Keine Klarnamenpflicht für Kinder. Login per Spitzname + Passwort (siehe `AUTH.md`). Anzeigename frei wählbar.
 - Keine offenen Profile, **kein Chat, keine Direktnachrichten, keine Kommentare**.
 - Freundes-/Gruppenkontakte nur über Einladung/Freigabe.
 - **Lehrer sehen nur Aggregate** der Klasse (Lernfortschritt, Wissenspunkte, Quiz-Ergebnisse,
@@ -141,7 +141,7 @@ Stufen: `Grundstück` (Start) → `Fundament` (erstes Investment) → `Wände` (
 
 | Modus | Zielgruppe | Rolle im MVP |
 |---|---|---|
-| Hofino Kids | Kinder 10–15 (`child`) | Hauptmodus: tägliches Finanz-Training (Mission Board), kindgerechte Anmutung; Haus-System ausgeblendet (`house_enabled=false`, s. §6) |
+| Hofino Kids | Kinder/Jugendliche 12–15 (`child`) | Hauptmodus: tägliches Finanz-Training (Mission Board), kindgerechte Anmutung; Haus-System ausgeblendet (`house_enabled=false`, s. §6) |
 | Hofino Family | Eltern (`parent`) | Begleit-/Kontrollmodus, verknüpft mit Kind |
 | Hofino Adult | Erwachsene (`adult`) | Eigenes Depot, sachlicheres Design, **kein** Haus-System |
 | Hofino Classroom | Lehrer (`teacher`) + Schüler (`student`) | Eigener Modus, Klassen-Code |
