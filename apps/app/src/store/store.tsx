@@ -180,6 +180,26 @@ const EMPTY: Data = {
 };
 
 
+/** Version des Einwilligungstexts, die bei der Kind-Registrierung gespeichert wird. */
+const CONSENT_TEXT_VERSION = "v1-2026-07";
+
+/** Interne Alias-Domain fuer Kinderkonten (empfaengt nie Mails). */
+const KIDS_ALIAS_DOMAIN = "kids.hofino.invalid";
+
+/** Spitzname -> Alias-E-Mail (null, wenn der Spitzname zu wenig verwertbare Zeichen hat). */
+export function kidsAlias(nickname: string): string | null {
+  const slug = nickname
+    .trim()
+    .toLowerCase()
+    .replaceAll("\u00e4", "ae")
+    .replaceAll("\u00f6", "oe")
+    .replaceAll("\u00fc", "ue")
+    .replaceAll("\u00df", "ss")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+  return slug.length >= 2 ? `${slug}@${KIDS_ALIAS_DOMAIN}` : null;
+}
+
 function plotKey(userId: string) {
   return `hofino:plot:${userId}`;
 }
@@ -434,17 +454,40 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
 
   const register = useCallback<StoreApi["register"]>(
     async (name, plot, email, password, role) => {
-      const { data: res, error } = await supabase.auth.signUp({ email, password });
-      if (error) return { ok: false, message: error.message };
+      // Kinder melden sich ohne eigene E-Mail an: der Spitzname wird zu einem
+      // internen Alias (empfaengt nie Mails); `email` ist hier die Eltern-E-Mail.
+      const isChild = role === "child";
+      const authEmail = isChild ? kidsAlias(name) : email;
+      if (isChild && !authEmail) return { ok: false, message: t("auth.badNickname") };
+      const { data: res, error } = await supabase.auth.signUp({ email: authEmail!, password });
+      if (error) {
+        const taken = /already registered|already exists/i.test(error.message);
+        return { ok: false, message: isChild && taken ? t("auth.nicknameTaken") : error.message };
+      }
       const user = res.user;
       if (!user) return { ok: false, message: "Keine Session erhalten." };
+      // GoTrue meldet bei existierender E-Mail u.U. einen Fake-User ohne Identitaeten.
+      if (isChild && Array.isArray((user as { identities?: unknown[] }).identities) && (user as { identities?: unknown[] }).identities!.length === 0) {
+        return { ok: false, message: t("auth.nicknameTaken") };
+      }
       // Mit aktivierter E-Mail-Bestätigung liefert signUp einen User OHNE Session — der
       // Profil-Insert würde an RLS scheitern und das Auth-Konto verwaist zurücklassen.
       // Stattdessen sauber informieren; das Profil entsteht nach dem ersten Login (ProfileSetup).
       if (!res.session) {
         return { ok: false, message: "Fast geschafft! Bitte bestätige zuerst deine E-Mail-Adresse und melde dich dann an." };
       }
-      const ins = await supabase.from("profiles").insert({ auth_user_id: user.id, role, display_name: name });
+      const ins = await supabase.from("profiles").insert(
+        isChild
+          ? {
+              auth_user_id: user.id,
+              role,
+              display_name: name,
+              // Der Insert-Trigger erzwingt pending + Frist serverseitig; hier nur die Zusatzdaten.
+              consent_parent_email: email,
+              consent_text_version: CONSENT_TEXT_VERSION,
+            }
+          : { auth_user_id: user.id, role, display_name: name }
+      );
       if (ins.error) return { ok: false, message: ins.error.message };
       try {
         globalThis.localStorage?.setItem(plotKey(user.id), plot);
@@ -454,7 +497,7 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
       await load();
       return { ok: true };
     },
-    [load]
+    [load, t]
   );
 
   const createProfile = useCallback<StoreApi["createProfile"]>(
@@ -477,7 +520,9 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
 
   const login = useCallback<StoreApi["login"]>(
     async (email, password) => {
-      const { error } = await supabase.auth.signInWithPassword({ email, password });
+      // Eingabe ohne @ = Spitzname eines Kindes -> interner Alias.
+      const authEmail = email.includes("@") ? email : (kidsAlias(email) ?? email);
+      const { error } = await supabase.auth.signInWithPassword({ email: authEmail, password });
       if (error) return { ok: false, message: error.message };
       await load();
       return { ok: true };

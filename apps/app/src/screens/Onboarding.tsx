@@ -60,11 +60,13 @@ function Credentials({
   password,
   onEmail,
   onPassword,
+  emailPlaceholder,
 }: {
   email: string;
   password: string;
   onEmail: (v: string) => void;
   onPassword: (v: string) => void;
+  emailPlaceholder?: string;
 }) {
   const { t } = useStore();
   const c = useColors();
@@ -75,7 +77,7 @@ function Credentials({
         testID="email-input"
         value={email}
         onChangeText={onEmail}
-        placeholder={t("auth.email")}
+        placeholder={emailPlaceholder ?? t("auth.email")}
         autoCapitalize="none"
         keyboardType="email-address"
         placeholderTextColor={c.muted}
@@ -138,9 +140,11 @@ export function Onboarding({ footer }: { footer?: React.ReactNode }) {
   const [busy, setBusy] = useState(false);
 
   const emailOk = /.+@.+\..+/.test(email);
+  // Anmelden geht auch mit Spitzname (Kinderkonten, kein @)
+  const nickOk = !email.includes("@") && email.trim().length >= 2;
   const plotOk = !FLAGS.house_enabled || role !== "child" || plot !== "";
   const canRegister = name.trim().length >= 2 && plotOk && emailOk && password.length >= 6;
-  const canLogin = emailOk && password.length >= 6;
+  const canLogin = (emailOk || nickOk) && password.length >= 6;
 
   const submit = async () => {
     setError(null);
@@ -178,10 +182,19 @@ export function Onboarding({ footer }: { footer?: React.ReactNode }) {
         <>
           <RoleToggle role={role} onChange={setRole} />
           <NameInput value={name} onChange={setName} />
+          {role === "child" && <Muted>{t("auth.childNickHint")}</Muted>}
           {FLAGS.house_enabled && role === "child" && <PlotPicker value={plot} onChange={setPlot} />}
         </>
       )}
-      <Credentials email={email} password={password} onEmail={setEmail} onPassword={setPassword} />
+      <Credentials
+        email={email}
+        password={password}
+        onEmail={setEmail}
+        onPassword={setPassword}
+        emailPlaceholder={
+          mode === "login" ? t("auth.loginId") : role === "child" ? t("auth.parentEmail") : undefined
+        }
+      />
 
       {error && <Text style={styles.error}>{error}</Text>}
       {info && <Body>{info}</Body>}
@@ -201,6 +214,7 @@ export function Onboarding({ footer }: { footer?: React.ReactNode }) {
         />
       )}
 
+      {mode === "register" && role === "child" && <Body>{t("auth.childConsentNote")}</Body>}
       {mode === "register" && (role === "child" || role === "adult") && (
         <Body>{t("auth.startCapitalNote", { amount: formatEuros(START_CAPITAL_CENTS) })}</Body>
       )}
