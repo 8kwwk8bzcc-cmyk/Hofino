@@ -10,7 +10,7 @@ import { font, fonts, space, type Palette } from "../theme.js";
 import { useColors, useThemedStyles } from "../theme/ThemeProvider.js";
 
 export function Depot() {
-  const { state, prices, derived, instrumentById, fetchDecisionJournal, fetchDividends, fetchPortfolioHistory, t } = useStore();
+  const { state, prices, derived, instrumentById, fetchDecisionJournal, fetchDividends, fetchPortfolioHistory, t, pricesAsOf } = useStore();
   const go = useNav();
   const c = useColors();
   const styles = useThemedStyles(makeStyles);
@@ -59,6 +59,15 @@ export function Depot() {
           <Muted>{t("depot.cash", { cash: formatEuros(state.portfolio.cashCents) })}</Muted>
           <Muted>{t("depot.positions", { value: formatEuros(derived.holdingsValueCents) })}</Muted>
         </View>
+        {/* Kursstand sichtbar machen: Kurse kommen stündlich — bei Cron-Ausfall sieht man
+            sofort, dass die Zahlen älter sind (Review P2-16c). */}
+        {pricesAsOf && (
+          <Muted>
+            {t("depot.pricesAsOf", {
+              time: new Date(pricesAsOf).toLocaleString("de-DE", { day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit" }),
+            })}
+          </Muted>
+        )}
         <View style={styles.chartWrap}>
           <LineChart values={history.map((p) => p.valueCents)} emptyHint={t("chart.valueEmpty")} />
         </View>

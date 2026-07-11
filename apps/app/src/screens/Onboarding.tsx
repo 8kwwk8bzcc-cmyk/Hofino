@@ -184,16 +184,13 @@ export function Onboarding() {
       {error && <Text style={styles.error}>{error}</Text>}
 
       {mode === "register" && (role === "child" || role === "adult") && (
-        <Body>
-          Zum Start bekommst du <Text style={{ fontWeight: "800" }}>{formatEuros(START_CAPITAL_CENTS)}</Text>{" "}
-          virtuelles Übungsgeld – kein echtes Geld.
-        </Body>
+        <Body>{t("auth.startCapitalNote", { amount: formatEuros(START_CAPITAL_CENTS) })}</Body>
       )}
       {mode === "register" && role === "parent" && (
-        <Body>Als Elternteil begleitest du dein Kind – du verknüpfst es nach der Anmeldung per Code.</Body>
+        <Body>{t("auth.parentNote")}</Body>
       )}
       {mode === "register" && role === "teacher" && (
-        <Body>Als Lehrer erstellst du nach der Anmeldung eine Klasse und teilst den Klassencode mit deinen Schülern.</Body>
+        <Body>{t("auth.teacherNote")}</Body>
       )}
 
       <Button
@@ -207,7 +204,7 @@ export function Onboarding() {
 }
 
 export function ProfileSetup() {
-  const { createProfile, signOut } = useStore();
+  const { createProfile, signOut, t } = useStore();
   const styles = useThemedStyles(makeStyles);
   const [role, setRole] = useState<RegRole>("child");
   const [name, setName] = useState("");
@@ -220,7 +217,7 @@ export function ProfileSetup() {
     <ScrollView contentContainerStyle={styles.container}>
       <View style={styles.header}>
         <HLogo size={56} />
-        <H1>Profil einrichten</H1>
+        <H1>{t("auth.profileSetupTitle")}</H1>
       </View>
       <RoleToggle role={role} onChange={setRole} />
       <NameInput value={name} onChange={setName} />
@@ -228,14 +225,14 @@ export function ProfileSetup() {
       {error && <Text style={styles.error}>{error}</Text>}
       <Button
         testID="create-profile"
-        title="Weiter"
+        title={t("auth.next")}
         disabled={name.trim().length < 2 || !plotOk}
         onPress={async () => {
           const r = await createProfile(name.trim(), role === "child" ? plot : "", role);
           if (!r.ok) setError(r.message);
         }}
       />
-      <Button title="Abmelden" variant="ghost" onPress={signOut} />
+      <Button title={t("auth.signout")} variant="ghost" onPress={signOut} />
     </ScrollView>
   );
 }

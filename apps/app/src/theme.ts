@@ -13,6 +13,7 @@ export const palettes = {
     softBlue: "#E8F0FA", // weiche Akzentfläche / Segment-Track
     mint: "#E4F4EC", // weiche Erfolgs-/Highlight-Fläche
     goldSoft: "#FBF1D6", // weiche Gold-Fläche (Hinweise, XP-Badge-BG)
+    goldText: "#9A7A1E", // lesbares Text-Gold auf goldSoft (Pills „Lehrer"/„Gold")
     text: "#0E2A47", // Primärtext
     muted: "#5C7184", // Sekundärtext
     faint: "#9AA7B4", // Tertiär / Labels / Placeholder
@@ -31,6 +32,7 @@ export const palettes = {
     softBlue: "#173049",
     mint: "rgba(52,185,126,0.14)",
     goldSoft: "rgba(231,189,87,0.16)",
+    goldText: "#E7BD57", // im Dark Mode ist das Voll-Gold auf der dunklen Fläche lesbar
     text: "#EAF1F8",
     muted: "#8FA6BC",
     faint: "#6B829A",

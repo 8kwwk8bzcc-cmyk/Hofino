@@ -90,24 +90,33 @@ testbare Funktionen ohne UI und ohne externe Aufrufe.
   manipulierbar. Alle weiteren Orders kosten regulär 5 €.
 
 ### Lernkapital (virtuell, je Nutzer nur EINMAL pro Ereignis)
+> Stand Lernsystem v2 (2026-07): Vergabe serverseitig über `lern_konzept_abschliessen`,
+> nur mit Lernnachweis (alle 5 Stufen korrekt beantwortet). Das frühere
+> „Quiz perfekt"-Kapital ist im v2-System aufgegangen (Konzept-Abschluss setzt korrekte
+> Antworten voraus).
+
 | Ereignis | Lernkapital |
 |---|---|
-| Lernmodul abgeschlossen | +500 € |
-| Quiz perfekt beantwortet | +500 € |
-| Themenblock abgeschlossen | +1.000 € |
-| Großer Meilenstein | +2.000 € |
+| Konzept abgeschlossen (alle 5 Stufen korrekt) | +500 € |
+| Themenblock abgeschlossen (alle Konzepte des Blocks) | +1.000 € |
+| Großer Meilenstein (alle Konzepte) | +2.000 € |
 
-Wiederholen ist erlaubt, bringt aber **kein** zusätzliches Kapital. Lernkapital und
-Investment-Performance werden **getrennt** ausgewertet.
+Wiederholen ist erlaubt, bringt aber **kein** zusätzliches Kapital (Unique-Constraint je
+Ereignis). Lernkapital und Investment-Performance werden **getrennt** ausgewertet.
 
-### Wissenspunkte
+### Wissenspunkte (XP)
+> Stand Lernsystem v2 (2026-07): XP werden **pro richtig beantworteter Frage** vergeben
+> (`lern_antwort_speichern`), nicht mehr pauschal pro Modul/Quiz. Die Höhe kommt aus dem
+> Fragenkatalog und ist serverseitig gedeckelt.
+
 | Ereignis | Punkte |
 |---|---|
-| Lernmodul abgeschlossen | +100 |
-| Quiz bestanden | +50 |
-| Quiz perfekt (Zusatz) | +100 |
-| Themenblock abgeschlossen | +300 |
-| Großer Meilenstein | +500 |
+| Frage richtig beantwortet (Stufen 1–3) | +100 |
+| Frage richtig beantwortet (Stufe 4 / Rechenaufgabe) | +120–150 |
+| Tagesentscheidung dokumentiert | +15 (Bonus +10 mit Begründung) |
+
+Kein Tageslimit, kein XP-Cap (Produktentscheidung 2026-07-02, PR #3). Falsche Antworten
+geben 0 XP; die Stufe wird wiederholt, bis sie richtig beantwortet ist.
 
 ### Rankings (jeweils Top 10 erhalten Auszeichnungen)
 - **Performance-Ranking:** prozentualer Gewinn/Verlust auf (Startkapital + Lernkapital), nach Gebühren.

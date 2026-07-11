@@ -25,7 +25,13 @@ export interface RankedEntry extends RankEntry {
   awarded: boolean;
 }
 
-/** Sortiert absteigend nach Score und vergibt Ränge; Top N werden ausgezeichnet (Default 10). */
+/**
+ * Sortiert absteigend nach Score und vergibt Ränge (Competition-Ranking: gleiche Scores
+ * teilen sich den Rang); Top N werden ausgezeichnet (Default 10).
+ * BEWUSST SO: Bei Punktgleichstand auf Rang ≤ N werden ALLE Gleichplatzierten ausgezeichnet —
+ * es können also mehr als N Auszeichnungen vergeben werden. Fair gegenüber Gleichstand,
+ * kein willkürlicher Tie-Break (Review 2026-07-10, als gewollt dokumentiert + getestet).
+ */
 export function rank(entries: readonly RankEntry[], topN = 10): RankedEntry[] {
   const sorted = [...entries].sort((a, b) => b.score - a.score);
   const result: RankedEntry[] = [];

@@ -127,9 +127,9 @@ export function Button({
       ]}
     >
       {loading ? (
-        <ActivityIndicator color={disabled ? "#FFFFFF" : textColor} />
+        <ActivityIndicator color={disabled ? c.muted : textColor} />
       ) : (
-        <Text style={[s.btnText, { color: isDisabled ? "#FFFFFF" : textColor }]}>
+        <Text style={[s.btnText, { color: isDisabled ? c.muted : textColor }]}>
           {title}
           {variant === "ghost" ? " ›" : ""}
         </Text>
@@ -160,10 +160,10 @@ export function Pill({ label, tone = "neutral" }: { label: string; tone?: PillTo
     good: { bg: c.mint, fg: c.success },
     mastered: { bg: c.mint, fg: c.success },
     box: { bg: c.softBlue, fg: c.navySoft },
-    teacher: { bg: c.goldSoft, fg: "#9A7A1E" },
+    teacher: { bg: c.goldSoft, fg: c.goldText },
     locked: { bg: c.bg, fg: c.muted },
     virtual: { bg: "transparent", fg: c.muted, border: c.border },
-    gold: { bg: c.goldSoft, fg: "#9A7A1E" },
+    gold: { bg: c.goldSoft, fg: c.goldText },
     xp: { bg: c.gold, fg: c.navy },
     up: { bg: c.mint, fg: c.success },
     down: { bg: c.dangerBg, fg: c.danger },
@@ -566,7 +566,7 @@ const makeStyles = (c: Palette) =>
     btnAccent: { backgroundColor: c.green },
     btnSecondary: { backgroundColor: c.surface, borderWidth: 1.5, borderColor: c.border },
     btnGhost: { backgroundColor: "transparent", paddingHorizontal: 0, minHeight: 0, alignItems: "flex-start" },
-    btnDisabled: { backgroundColor: "#C7D2DC" },
+    btnDisabled: { backgroundColor: c.border },
     btnPressed: { opacity: 0.88 },
     btnText: { fontFamily: fonts.bodyBold, fontSize: 15 },
     pill: {

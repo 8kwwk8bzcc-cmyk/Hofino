@@ -44,7 +44,9 @@ function TaskCard({
 }) {
   const { t } = useStore();
   const styles = useThemedStyles(makeStyles);
-  const tappable = !done && !locked;
+  // Erledigte Karten bleiben tappbar (nur gesperrte nicht) — sonst wäre z. B. das
+  // Markt-Labor nach dem Tagesabschluss nicht mehr erreichbar (Review P2-18).
+  const tappable = !locked;
   return (
     <Card
       onPress={tappable ? onPress : undefined}

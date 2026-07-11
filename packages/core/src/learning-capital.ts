@@ -1,3 +1,7 @@
+// Lernkapital-Beträge (Domänenregel §6). HINWEIS (Review 2026-07-10): Die Vergabe läuft
+// live serverseitig über die RPC lern_konzept_abschliessen (supabase/migrations) — dieses
+// Modul dokumentiert die verbindlichen Beträge als getestete Referenz. Beträge hier und
+// in der RPC müssen übereinstimmen (Konzept 50000 · Themenblock 100000 · Meilenstein 200000).
 // Lernkapital (virtuell): wird je Nutzer und Ereignis nur EINMAL gewährt.
 // Wiederholen bringt kein zusätzliches Kapital. Getrennt von der Investment-Performance.
 

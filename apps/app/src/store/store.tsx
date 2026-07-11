@@ -148,6 +148,8 @@ interface Data {
   decisionsCount: number;
   instruments: Instrument[];
   prices: Map<string, number>;
+  /** Zeitstempel des jüngsten Kurses (ISO) — für den „Kursstand"-Hinweis. */
+  pricesAsOf: string | null;
   pendingLinks: PendingLink[];
   loading: boolean;
 }
@@ -172,6 +174,7 @@ const EMPTY: Data = {
   decisionsCount: 0,
   instruments: [],
   prices: new Map(),
+  pricesAsOf: null,
   pendingLinks: [],
   loading: true,
 };
@@ -203,6 +206,8 @@ interface StoreApi {
   instruments: Instrument[];
   instrumentById: Map<string, Instrument>;
   prices: ReadonlyMap<string, number>;
+  /** Zeitstempel des jüngsten Kurses (ISO) — für den „Kursstand"-Hinweis. */
+  pricesAsOf: string | null;
   derived: {
     holdingsValueCents: number;
     equityCents: number;
@@ -299,11 +304,18 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
         email = null;
       }
       if (email) {
-        const r = await supabase.auth.signInWithPassword({ email, password: "hofino-dev-123" });
-        if (!r.error) {
-          ({ data: auth } = await supabase.auth.getUser());
-          user = auth.user;
+        // Zwei Test-Nutzergruppen mit unterschiedlichen Passwörtern: Cockpit-Seeds
+        // (hofino-dev-123) und DevLogin-Personas (hofino-dev-2026). Beide probieren;
+        // Fehlschlag sichtbar loggen statt still zu scheitern (Review P2-18).
+        for (const password of ["hofino-dev-123", "hofino-dev-2026"]) {
+          const r = await supabase.auth.signInWithPassword({ email, password });
+          if (!r.error) {
+            ({ data: auth } = await supabase.auth.getUser());
+            user = auth.user;
+            break;
+          }
         }
+        if (!user) console.warn("[devlogin] Anmeldung fehlgeschlagen für", email);
       }
     }
     if (!user) {
@@ -332,7 +344,7 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
     const [instrumentsRes, pricesRes, portfolioRes, holdingsRes, watchRes, grantsRes, ordersRes, pendingRes, fortschrittRes, statusRes, korrektRes, decisionsRes] =
       await Promise.all([
         supabase.from("instruments").select("id, ticker, name, type, sector, country"),
-        supabase.from("prices").select("instrument_id, price_cents"),
+        supabase.from("prices").select("instrument_id, price_cents, as_of"),
         supabase.from("portfolios").select("cash_cents").eq("owner_profile_id", profileId).maybeSingle(),
         supabase.from("holdings").select("instrument_id, quantity, avg_cost_cents"),
         supabase.from("watchlist").select("instrument_id"),
@@ -353,7 +365,11 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
     const isPlayer = role !== "parent" && role !== "teacher"; // diese Rollen haben kein eigenes Depot.
 
     const prices = new Map<string, number>();
-    for (const p of pricesRes.data ?? []) prices.set(p.instrument_id, p.price_cents);
+    let pricesAsOf: string | null = null;
+    for (const p of pricesRes.data ?? []) {
+      prices.set(p.instrument_id, p.price_cents);
+      if (p.as_of && (!pricesAsOf || p.as_of > pricesAsOf)) pricesAsOf = p.as_of as string;
+    }
 
     setData({
       sessionUserId: user.id,
@@ -385,6 +401,7 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
       decisionsCount: isPlayer ? decisionsRes.count ?? 0 : 0,
       instruments: (instrumentsRes.data ?? []) as Instrument[],
       prices,
+      pricesAsOf,
       pendingLinks: (pendingRes.data ?? []).map((r) => ({ parentProfileId: r.parent_profile_id })),
       loading: false,
     });
@@ -412,6 +429,12 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
       if (error) return { ok: false, message: error.message };
       const user = res.user;
       if (!user) return { ok: false, message: "Keine Session erhalten." };
+      // Mit aktivierter E-Mail-Bestätigung liefert signUp einen User OHNE Session — der
+      // Profil-Insert würde an RLS scheitern und das Auth-Konto verwaist zurücklassen.
+      // Stattdessen sauber informieren; das Profil entsteht nach dem ersten Login (ProfileSetup).
+      if (!res.session) {
+        return { ok: false, message: "Fast geschafft! Bitte bestätige zuerst deine E-Mail-Adresse und melde dich dann an." };
+      }
       const ins = await supabase.from("profiles").insert({ auth_user_id: user.id, role, display_name: name });
       if (ins.error) return { ok: false, message: ins.error.message };
       try {
@@ -991,6 +1014,7 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
     instruments: data.instruments,
     instrumentById,
     prices: data.prices,
+    pricesAsOf: data.pricesAsOf,
     derived,
     register,
     login,

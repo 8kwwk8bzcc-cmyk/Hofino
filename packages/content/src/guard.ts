@@ -1,7 +1,8 @@
 // Kinderschutz-Guard: prüft kindgerichtete Inhalte gegen harte Leitplanken (CLAUDE.md §2/§3).
 // Im Kindermodus: keine externen Links, keine Brokerhinweise, keine Anlageempfehlungen, kein Chat.
-// Geprüft werden die real angezeigten Inhalte: Lern-Inhalte (@hofino/learning SEED) + Profile.
-import { SEED, type LangText } from "@hofino/learning";
+// Geprüft werden die real angezeigten Inhalte: Lern-Inhalte (@hofino/learning SEED, v2-Direktfelder)
+// + Profile. Review 2026-07-10: Muster gegen False-Negatives geschärft, v2-Felder ergänzt.
+import { SEED, V2_MODULES, type LangText } from "@hofino/learning";
 import { COMPANY_PROFILES, ETF_PROFILES } from "./profiles.js";
 
 export interface ForbiddenRule {
@@ -10,10 +11,17 @@ export interface ForbiddenRule {
 }
 
 export const FORBIDDEN_RULES: ForbiddenRule[] = [
-  { pattern: /https?:\/\//i, label: "Externer Link (keine Brokerlinks im Kindermodus)" },
-  { pattern: /\bbroker\b|depot er[öo]ffnen/i, label: "Brokerhinweis" },
-  { pattern: /kaufempfehlung|anlageempfehlung/i, label: "Anlageempfehlung" },
-  { pattern: /\bkauf(e|en) sie\b|\bwir empfehlen\b|\bdu solltest\b.{0,24}\b(kaufen|verkaufen)\b/i, label: "Empfehlende Aufforderung" },
+  // www.-Links ohne Protokoll zählen ebenfalls als externer Link.
+  { pattern: /https?:\/\/|\bwww\./i, label: "Externer Link (keine Brokerlinks im Kindermodus)" },
+  // "broker" ohne Wortgrenze fängt auch "Neobroker"/"Onlinebroker";
+  // "Depot bei/eröffnen" in beiden Wortstellungen.
+  { pattern: /broker|depot\s+(bei\b|er[öo]ffn)|er[öo]ffn\w*\s+(dein|ein)\s+depot/i, label: "Brokerhinweis" },
+  { pattern: /kaufempfehlung|anlageempfehlung|kauf-?tipp/i, label: "Anlageempfehlung" },
+  // Fenster 60 Zeichen (24 war für reale Sätze zu kurz); "wir raten" und "ihr solltet" ergänzt.
+  {
+    pattern: /\bkauf(e|en) sie\b|\bwir empfehlen\b|\bwir raten\b|\b(du|ihr) solltes?t\b.{0,60}\b(kaufen|verkaufen)\b/i,
+    label: "Empfehlende Aufforderung",
+  },
   { pattern: /\bchat\b|direktnachricht|kommentarfunktion/i, label: "Chat/Direktnachricht" },
 ];
 
@@ -70,6 +78,26 @@ export function auditChildContent(): Violation[] {
   }
   for (const p of ETF_PROFILES) {
     for (const [k, val] of Object.entries(p)) if (val) v.push(...checkText(`etf:${p.ticker}.${k}`, String(val)));
+  }
+
+  // v2-Direktfelder, die NICHT über die Legacy-Bridge laufen (vorher blinder Fleck):
+  // young_adults-Erklärung, Pädagogik-Felder (Transfer-/Reflexionsaufgaben sehen Lernende),
+  // Glossarbegriffe sowie Lehrer-/Eltern-Materialien. Die Leitplanken (keine Empfehlungen,
+  // keine Brokerhinweise, keine Links) gelten app-weit (CLAUDE.md §2).
+  for (const m of V2_MODULES) {
+    if (m.explanations.young_adults) {
+      v.push(...checkText(`modul:${m.id}.explanations.young_adults`, m.explanations.young_adults));
+    }
+    for (const [feld, txt] of Object.entries(m.pedagogy)) {
+      if (txt) v.push(...checkText(`modul:${m.id}.pedagogy.${feld}`, txt));
+    }
+    for (const g of m.glossaryTerms) v.push(...checkText(`modul:${m.id}.glossar`, g));
+    for (const [feld, txt] of Object.entries(m.teacherSupport ?? {})) {
+      if (txt) v.push(...checkText(`modul:${m.id}.teacherSupport.${feld}`, txt));
+    }
+    for (const [feld, txt] of Object.entries(m.parentSupport ?? {})) {
+      if (txt) v.push(...checkText(`modul:${m.id}.parentSupport.${feld}`, txt));
+    }
   }
   return v;
 }

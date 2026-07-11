@@ -51,3 +51,22 @@ describe("rankings – rank()", () => {
     expect(r[10]?.awarded).toBe(false);
   });
 });
+
+// Review 2026-07-10: Gleichstand-Verhalten explizit dokumentieren — bei Punktgleichheit
+// auf dem letzten Auszeichnungs-Rang erhalten ALLE Gleichplatzierten die Auszeichnung.
+describe("rank – Gleichstand auf dem letzten Auszeichnungsrang", () => {
+  it("zeichnet alle Punktgleichen auf Rang ≤ topN aus (kann > topN Auszeichnungen ergeben)", () => {
+    const entries = [
+      { id: "a", score: 100 },
+      { id: "b", score: 90 },
+      { id: "c", score: 90 },
+      { id: "d", score: 90 },
+      { id: "e", score: 80 },
+    ];
+    const ranked = rank(entries, 2);
+    // a=1, b/c/d teilen Rang 2 → alle vier ausgezeichnet, e=Rang 5 nicht.
+    expect(ranked.filter((r) => r.awarded).map((r) => r.id).sort()).toEqual(["a", "b", "c", "d"]);
+    expect(ranked.find((r) => r.id === "e")?.awarded).toBe(false);
+    expect(ranked.find((r) => r.id === "e")?.rank).toBe(5);
+  });
+});

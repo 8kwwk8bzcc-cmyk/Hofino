@@ -2,6 +2,5 @@
 export * from "./money.js";
 export * from "./portfolio.js";
 export * from "./learning-capital.js";
-export * from "./knowledge-points.js";
 export * from "./rankings.js";
 export * from "./house.js";
