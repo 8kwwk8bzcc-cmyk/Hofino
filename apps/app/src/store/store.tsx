@@ -391,8 +391,10 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
     // Tages-Snapshot des Depotwerts festhalten (idempotent), damit die Wertkurve wächst.
     if (isPlayer) void supabase.rpc("capture_portfolio_snapshot");
    } catch {
-     // Netzwerk/Backend nicht erreichbar → nicht hängen bleiben, sondern Login zeigen.
-     setData({ ...EMPTY, loading: false });
+     // Netzwerk/Backend kurz nicht erreichbar → Sitzung NICHT verwerfen: bestehende
+     // Daten behalten, nur den Ladezustand beenden. (Vorher warf ein einzelner
+     // fehlgeschlagener Reload den eingeloggten Nutzer auf den Login-Screen zurück.)
+     setData((prev) => ({ ...prev, loading: false }));
    }
   }, []);
 
@@ -669,11 +671,15 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   const assignKonzept = useCallback<StoreApi["assignKonzept"]>(async (classId, konzeptId) => {
-    await supabase.from("class_assignments").insert({ class_id: classId, konzept_id: konzeptId });
+    // Serverfehler (RLS/Constraint) werfen, damit das optimistische UI zurückrollen kann —
+    // supabase-js wirft selbst nur bei Netzwerkausfall.
+    const { error } = await supabase.from("class_assignments").insert({ class_id: classId, konzept_id: konzeptId });
+    if (error) throw error;
   }, []);
 
   const unassignKonzept = useCallback<StoreApi["unassignKonzept"]>(async (classId, konzeptId) => {
-    await supabase.from("class_assignments").delete().eq("class_id", classId).eq("konzept_id", konzeptId);
+    const { error } = await supabase.from("class_assignments").delete().eq("class_id", classId).eq("konzept_id", konzeptId);
+    if (error) throw error;
   }, []);
 
   // Schüler: vom Lehrer zugewiesene Konzepte (RLS liefert nur die eigene Klasse).
@@ -695,7 +701,7 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   const setBlockRelease = useCallback<StoreApi["setBlockRelease"]>(async (classId, themenblockId, released) => {
-    await supabase.from("class_curriculum").upsert(
+    const { error } = await supabase.from("class_curriculum").upsert(
       {
         class_id: classId,
         themenblock_id: themenblockId,
@@ -705,6 +711,7 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
       },
       { onConflict: "class_id,themenblock_id" },
     );
+    if (error) throw error;
   }, []);
 
   // Mehrere Blöcke in einem Rutsch setzen (für den Voraussetzungs-Schutz: Block +
@@ -712,7 +719,7 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
   const setBlocksRelease = useCallback<StoreApi["setBlocksRelease"]>(async (classId, entries) => {
     if (entries.length === 0) return;
     const now = new Date().toISOString();
-    await supabase.from("class_curriculum").upsert(
+    const { error } = await supabase.from("class_curriculum").upsert(
       entries.map((e) => ({
         class_id: classId,
         themenblock_id: e.themenblockId,
@@ -722,6 +729,7 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
       })),
       { onConflict: "class_id,themenblock_id" },
     );
+    if (error) throw error;
   }, []);
 
   // Schüler-Sicht: Menge der aktuell GESPERRTEN Themenblöcke der eigenen Klasse (RLS-gefiltert).

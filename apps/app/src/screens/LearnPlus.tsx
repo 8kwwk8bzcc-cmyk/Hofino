@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useMemo, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Pressable, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 import {
   alleKonzepte,
@@ -90,6 +90,8 @@ export function LearnPlus() {
   const [stufeIdx, setStufeIdx] = useState(0);
   const [instanz, setInstanz] = useState<FrageInstanz | null>(null);
   const [gewaehlt, setGewaehlt] = useState<number | null>(null);
+  // Sperre gegen doppelt abgeschickte Antworten (schnelles Doppeltippen).
+  const antwortLaeuft = useRef(false);
   const [srMap, setSrMap] = useState<Record<string, SRZustand>>({});
   const [tages, setTages] = useState<{ neu: number; wieder: number; xp: number }>({ neu: 0, wieder: 0, xp: 0 });
   const [xpGesamt, setXpGesamt] = useState(0);
@@ -206,6 +208,14 @@ export function LearnPlus() {
     // keine weitere Stufe → Konzept abgeschlossen: Lernkapital gewähren
     try {
       const res = await supabase.rpc("lern_konzept_abschliessen", { p_konzept: k.id });
+      // Server verlangt Lernnachweis (alle 5 Stufen korrekt) — sollte im normalen
+      // Flow immer erfüllt sein, da falsche Antworten die Stufe wiederholen.
+      if (res.data && res.data.ok === false) {
+        toast.show(t("learn.notCompleted"), "error");
+        setPhase("liste");
+        ladeStatus();
+        return;
+      }
       setLernkapital(typeof res.data?.lernkapital_cents === "number" ? res.data.lernkapital_cents : 0);
       setPhase("konzept_fertig");
     } catch {
@@ -231,7 +241,10 @@ export function LearnPlus() {
   };
 
   const antworten = async (idx: number) => {
-    if (!konzept || !instanz) return;
+    // Doppel-Submit-Schutz: während des laufenden Speicherns (und nach einer
+    // bereits gewählten Antwort) keine weitere Antwort annehmen.
+    if (!konzept || !instanz || antwortLaeuft.current || gewaehlt !== null) return;
+    antwortLaeuft.current = true;
     setGewaehlt(idx);
     const korrekt = !!instanz.optionen[idx]?.korrekt;
     const sr = srMap[konzept.id] ?? initLeitner(konzept.id, heuteISO());
@@ -254,8 +267,10 @@ export function LearnPlus() {
     } catch {
       toast.show(t("learn.actionError"), "error");
       setGewaehlt(null);
+      antwortLaeuft.current = false;
       return;
     }
+    antwortLaeuft.current = false;
     if (res.data && res.data.ok === false) {
       setPhase("fertig"); // Tageslimit erreicht
       return;
@@ -294,7 +309,8 @@ export function LearnPlus() {
   };
 
   const antwortenWdh = async (idx: number) => {
-    if (!konzept || !instanz) return;
+    if (!konzept || !instanz || antwortLaeuft.current || gewaehlt !== null) return;
+    antwortLaeuft.current = true;
     setGewaehlt(idx);
     const korrekt = !!instanz.optionen[idx]?.korrekt;
     const sr = srMap[konzept.id] ?? initLeitner(konzept.id, heute);
@@ -317,8 +333,10 @@ export function LearnPlus() {
     } catch {
       toast.show(t("learn.actionError"), "error");
       setGewaehlt(null);
+      antwortLaeuft.current = false;
       return;
     }
+    antwortLaeuft.current = false;
     if (res.data && res.data.ok === false) {
       setPhase("fertig");
       return;
@@ -534,7 +552,13 @@ export function LearnPlus() {
           {instanz.erklaerung_nach_antwort ? <Body>{instanz.erklaerung_nach_antwort}</Body> : null}
           {korrekt && <Pill label={`+${instanz.wissenspunkte} XP`} tone="good" />}
         </Card>
-        <Button title={t("learn.next")} onPress={() => naechsteStufe(konzept, stufeIdx + 1)} testID="lp-weiter" />
+        {/* Pädagogik-Fix (Review P0-4): Aufstieg nur bei richtiger Antwort —
+            falsch beantwortet → dieselbe Stufe mit neuer Instanz wiederholen. */}
+        <Button
+          title={korrekt ? t("learn.next") : t("learn.tryAgain")}
+          onPress={() => naechsteStufe(konzept, korrekt ? stufeIdx + 1 : stufeIdx)}
+          testID="lp-weiter"
+        />
       </ScrollView>
     );
   }

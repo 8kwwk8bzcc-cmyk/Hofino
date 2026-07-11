@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Pressable, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
-import { formatEuros } from "@hofino/core";
+import { formatEuros, ORDER_FEE_CENTS } from "@hofino/core";
 import { useStore } from "../store/store.js";
 import { Body, Button, Card, H1, H2, Muted, Pill } from "../ui/components.js";
 import { font, fonts, radius, space, type Palette } from "../theme.js";
@@ -40,7 +40,7 @@ export function DecisionFlow({
   const n = Number(qty);
   const qtyValid = Number.isInteger(n) && n > 0; // keine Bruchstücke (TC-005)
   const grossCents = priceCents * (qtyValid ? n : 0);
-  const feeCents = 500;
+  const feeCents = ORDER_FEE_CENTS; // eine Wahrheit für die Ordergebühr (@hofino/core)
   const buyTotal = grossCents + feeCents;
   const sellNet = grossCents - feeCents;
   const qtyError =

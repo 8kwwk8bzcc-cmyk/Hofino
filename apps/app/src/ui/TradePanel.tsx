@@ -11,6 +11,7 @@ const REASON_KEYS: Record<string, string> = {
   insufficient_funds: "trade.errFunds",
   insufficient_holdings: "trade.errHoldings",
   invalid_quantity: "trade.errQuantity",
+  no_price: "trade.errNoPrice",
 };
 
 export function TradePanel({
@@ -101,7 +102,11 @@ export function TradePanel({
           )}
         </View>
         <View style={styles.row}>
-          <Text style={styles.totalLabel}>{t(mode === "buy" ? "trade.debit" : "trade.credit")}</Text>
+          {/* Verkauf unter Gebührenhöhe: Konto wird BELASTET, nicht gutgeschrieben —
+              Label entsprechend umschalten statt den Betrag per Math.abs zu schönen. */}
+          <Text style={styles.totalLabel}>
+            {t(mode === "buy" || total < 0 ? "trade.debit" : "trade.credit")}
+          </Text>
           <Text style={styles.total}>{formatEuros(Math.abs(total))}</Text>
         </View>
       </View>
@@ -111,6 +116,8 @@ export function TradePanel({
         title={t(mode === "buy" ? "trade.buy" : "trade.sell")}
         onPress={submit}
         loading={submitting}
+        // Ohne Kurs (0,00 €) keine Order anbieten — der Server lehnt ohnehin mit no_price ab.
+        disabled={price <= 0}
         variant={mode === "buy" ? "primary" : "secondary"}
       />
       <Muted>{t("trade.avail", { cash: formatEuros(state.portfolio.cashCents) })}</Muted>

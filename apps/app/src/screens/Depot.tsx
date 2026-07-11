@@ -48,7 +48,8 @@ export function Depot() {
           <View style={{ alignItems: "flex-end", gap: space.xs }}>
             <Pill label={t("start.virtual")} tone="neutral" />
             <Text style={styles.calmPct}>
-              {t("depot.today", {
+              {/* Gesamtperformance seit Start — nicht Tagesveränderung (Review-Fix: Label war „Heute"). */}
+              {t("depot.overall", {
                 pct: `${derived.performancePercent >= 0 ? "+" : ""}${derived.performancePercent.toFixed(1)}`,
               })}
             </Text>
