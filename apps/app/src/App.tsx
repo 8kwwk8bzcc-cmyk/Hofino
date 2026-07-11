@@ -18,7 +18,7 @@ import {
 } from "@expo-google-fonts/hanken-grotesk";
 import { SpaceGrotesk_600SemiBold, SpaceGrotesk_700Bold } from "@expo-google-fonts/space-grotesk";
 import { StoreProvider, useStore } from "./store/store.js";
-import { Onboarding, ProfileSetup } from "./screens/Onboarding.js";
+import { NewPassword, Onboarding, ProfileSetup } from "./screens/Onboarding.js";
 import { DevLogin } from "./screens/DevLogin.js";
 import { DEV_LOGIN } from "./config/flags.js";
 import { Start } from "./screens/Start.js";
@@ -31,7 +31,7 @@ import { FamilyHome } from "./screens/family/FamilyHome.js";
 import { FamilyLink } from "./screens/family/FamilyLink.js";
 import { TeacherClass } from "./screens/classroom/TeacherClass.js";
 import { TeacherBeamer } from "./screens/classroom/TeacherBeamer.js";
-import { LangToggle, ThemeToggle } from "./ui/components.js";
+import { Button, LangToggle, ThemeToggle } from "./ui/components.js";
 import { ToastProvider } from "./ui/Toast.js";
 import {
   IconBeamer,
@@ -197,6 +197,22 @@ function TeacherShell() {
   );
 }
 
+// Auth-Einstieg: mit DEV_LOGIN sind Personas UND die echte Anmeldung erreichbar
+// (Umschalter), ohne Flag gibt es nur die echte Anmeldung.
+function AuthEntry() {
+  const [real, setReal] = useState(!DEV_LOGIN);
+  if (!real) return <DevLogin onRealAuth={() => setReal(true)} />;
+  return (
+    <Onboarding
+      footer={
+        DEV_LOGIN ? (
+          <Button title="Zurück zum Entwickler-Login" variant="ghost" onPress={() => setReal(false)} />
+        ) : undefined
+      }
+    />
+  );
+}
+
 function Gate() {
   const { state } = useStore();
   const c = useColors();
@@ -207,7 +223,8 @@ function Gate() {
       </View>
     );
   }
-  if (!state.hasSession) return DEV_LOGIN ? <DevLogin /> : <Onboarding />;
+  if (!state.hasSession) return <AuthEntry />;
+  if (state.passwordRecovery) return <NewPassword />;
   if (!state.onboarded) return <ProfileSetup />;
   if (state.role === "parent") return <ParentShell />;
   if (state.role === "teacher") return <TeacherShell />;

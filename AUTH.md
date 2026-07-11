@@ -55,3 +55,7 @@ In-App-Selbstlöschung ist Pflicht (DSGVO + **App-Store-Vorgabe von Apple**). El
 5. **E – Schul-Checkbox + PDF-Vorlage** beim Klassen-Anlegen.
 6. **F – Konto-Löschung in-App** (alle Rollen).
 7. **G – Doku/Store-Vorbereitung**: 12+-Texte, Datenschutzerklärung (extern), `/security-review` über die gesamte Auth-Strecke.
+
+## 8. Launch-Schalter (Cloud, nicht vergessen)
+- `mailer_autoconfirm` ist in der Cloud derzeit **an** (nötig für die Dev-Login-Personas). Vor dem Launch **ausschalten** (E-Mail-Bestätigung Pflicht) und Dev-Login im Deploy deaktivieren (`EXPO_PUBLIC_DEV_LOGIN` aus `deploy-web.yml` entfernen).
+- Auth-URLs sind gesetzt: `site_url` + Allowlist zeigen auf `https://8kwwk8bzcc-cmyk.github.io/Hofino/` (2026-07-11). Eigene SMTP-Konfiguration prüfen (Supabase-Default ist stark ratenlimitiert).

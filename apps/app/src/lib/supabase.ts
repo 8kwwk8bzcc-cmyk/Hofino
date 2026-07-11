@@ -25,6 +25,8 @@ export const supabase = createClient(url, anonKey, {
     storageKey: `sb-hofino-auth${paneSuffix()}`,
     persistSession: true,
     autoRefreshToken: true,
-    detectSessionInUrl: false,
+    // Nötig für Passwort-Reset: der Recovery-Link liefert die Session im URL-Hash,
+    // erst dadurch feuert PASSWORD_RECOVERY (→ Neues-Passwort-Screen).
+    detectSessionInUrl: true,
   },
 });

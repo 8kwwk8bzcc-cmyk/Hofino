@@ -191,6 +191,8 @@ interface StoreApi {
   state: {
     onboarded: boolean;
     hasSession: boolean;
+    /** true, wenn der Nutzer ueber einen Passwort-Reset-Link kam. */
+    passwordRecovery: boolean;
     loading: boolean;
     role: Role;
     profileId: string | null;
@@ -221,6 +223,10 @@ interface StoreApi {
   };
   register: (name: string, plot: string, email: string, password: string, role: Role) => Promise<AuthOutcome>;
   login: (email: string, password: string) => Promise<AuthOutcome>;
+  /** Sendet die Passwort-Reset-Mail (E-Mail-Rollen). */
+  resetPassword: (email: string) => Promise<AuthOutcome>;
+  /** Setzt nach dem Reset-Link das neue Passwort. */
+  updatePassword: (password: string) => Promise<AuthOutcome>;
   createProfile: (name: string, plot: string, role: Role) => Promise<AuthOutcome>;
   signOut: () => Promise<void>;
   completeTutorial: () => void;
@@ -272,6 +278,8 @@ const StoreContext = createContext<StoreApi | null>(null);
 
 export function StoreProvider({ children }: { children: React.ReactNode }) {
   const [data, setData] = useState<Data>(EMPTY);
+  // Nutzer kam über einen Passwort-Reset-Link → Gate zeigt den Neues-Passwort-Screen.
+  const [passwordRecovery, setPasswordRecovery] = useState(false);
   const dataRef = useRef(data);
   dataRef.current = data;
 
@@ -417,7 +425,8 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     load();
-    const { data: sub } = supabase.auth.onAuthStateChange(() => {
+    const { data: sub } = supabase.auth.onAuthStateChange((event) => {
+      if (event === "PASSWORD_RECOVERY") setPasswordRecovery(true);
       load();
     });
     return () => sub.subscription.unsubscribe();
@@ -476,7 +485,24 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
     [load]
   );
 
+  const resetPassword = useCallback<StoreApi["resetPassword"]>(async (email) => {
+    // Web: zurueck zur App-URL (Pages laeuft unter /Hofino/); nativ uebernimmt das Deep-Linking spaeter.
+    const redirectTo =
+      globalThis.location ? globalThis.location.origin + globalThis.location.pathname : undefined;
+    const { error } = await supabase.auth.resetPasswordForEmail(email, { redirectTo });
+    if (error) return { ok: false, message: error.message };
+    return { ok: true };
+  }, []);
+
+  const updatePassword = useCallback<StoreApi["updatePassword"]>(async (password) => {
+    const { error } = await supabase.auth.updateUser({ password });
+    if (error) return { ok: false, message: error.message };
+    setPasswordRecovery(false);
+    return { ok: true };
+  }, []);
+
   const signOut = useCallback(async () => {
+    setPasswordRecovery(false);
     await supabase.auth.signOut();
     setData({ ...EMPTY, loading: false });
   }, []);
@@ -999,6 +1025,7 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
     state: {
       onboarded: data.profileId !== null,
       hasSession: data.sessionUserId !== null,
+      passwordRecovery,
       loading: data.loading,
       role: data.role,
       profileId: data.profileId,
@@ -1018,6 +1045,8 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
     derived,
     register,
     login,
+    resetPassword,
+    updatePassword,
     createProfile,
     signOut,
     completeTutorial,

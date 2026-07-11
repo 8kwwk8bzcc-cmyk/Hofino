@@ -95,7 +95,7 @@ async function finishAs(p: Persona): Promise<void> {
   if (r.error) throw new Error(r.error.message);
 }
 
-export function DevLogin() {
+export function DevLogin({ onRealAuth }: { onRealAuth?: () => void }) {
   const styles = useThemedStyles(makeStyles);
   const [busy, setBusy] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -181,6 +181,9 @@ export function DevLogin() {
       </Card>
 
       {error && <Text style={styles.error}>{error}</Text>}
+      {onRealAuth && (
+        <Button title="Zur echten Anmeldung" testID="dev-real-auth" variant="ghost" onPress={onRealAuth} />
+      )}
       <Muted>Nur zum Testen – vor dem echten Launch abschalten.</Muted>
     </ScrollView>
   );

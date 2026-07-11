@@ -96,7 +96,7 @@ function Credentials({
 
 type RegRole = "child" | "adult" | "parent" | "teacher";
 const ROLE_OPTIONS: { id: RegRole; label: string }[] = [
-  { id: "child", label: "Kind (10–15)" },
+  { id: "child", label: "Kind (12–15)" },
   { id: "adult", label: "Erwachsene" },
   { id: "parent", label: "Eltern" },
   { id: "teacher", label: "Lehrer" },
@@ -124,8 +124,8 @@ function RoleToggle({ role, onChange }: { role: RegRole; onChange: (r: RegRole) 
   );
 }
 
-export function Onboarding() {
-  const { register, login, t, lang, setLang } = useStore();
+export function Onboarding({ footer }: { footer?: React.ReactNode }) {
+  const { register, login, resetPassword, t, lang, setLang } = useStore();
   const styles = useThemedStyles(makeStyles);
   const [mode, setMode] = useState<"register" | "login">("register");
   const [role, setRole] = useState<RegRole>("child");
@@ -134,6 +134,7 @@ export function Onboarding() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState<string | null>(null);
+  const [info, setInfo] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
 
   const emailOk = /.+@.+\..+/.test(email);
@@ -143,6 +144,7 @@ export function Onboarding() {
 
   const submit = async () => {
     setError(null);
+    setInfo(null);
     setBusy(true);
     const r =
       mode === "register"
@@ -182,6 +184,22 @@ export function Onboarding() {
       <Credentials email={email} password={password} onEmail={setEmail} onPassword={setPassword} />
 
       {error && <Text style={styles.error}>{error}</Text>}
+      {info && <Body>{info}</Body>}
+
+      {mode === "login" && (
+        <Button
+          testID="forgot-password"
+          title={t("auth.forgot")}
+          variant="ghost"
+          disabled={!emailOk || busy}
+          onPress={async () => {
+            setError(null);
+            const r = await resetPassword(email.trim());
+            if (r.ok) setInfo(t("auth.resetSent"));
+            else setError(r.message);
+          }}
+        />
+      )}
 
       {mode === "register" && (role === "child" || role === "adult") && (
         <Body>{t("auth.startCapitalNote", { amount: formatEuros(START_CAPITAL_CENTS) })}</Body>
@@ -199,6 +217,49 @@ export function Onboarding() {
         onPress={submit}
         disabled={busy || (mode === "register" ? !canRegister : !canLogin)}
       />
+      {footer}
+    </ScrollView>
+  );
+}
+
+/** Wird angezeigt, wenn der Nutzer ueber einen Passwort-Reset-Link kam. */
+export function NewPassword() {
+  const { updatePassword, signOut, t } = useStore();
+  const c = useColors();
+  const styles = useThemedStyles(makeStyles);
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState<string | null>(null);
+  const [busy, setBusy] = useState(false);
+
+  return (
+    <ScrollView contentContainerStyle={styles.container}>
+      <View style={styles.header}>
+        <HLogo size={56} />
+        <H1>{t("auth.newPasswordTitle")}</H1>
+      </View>
+      <TextInput
+        testID="new-password-input"
+        value={password}
+        onChangeText={setPassword}
+        placeholder={t("auth.password")}
+        secureTextEntry
+        placeholderTextColor={c.muted}
+        style={styles.input}
+      />
+      {error && <Text style={styles.error}>{error}</Text>}
+      <Button
+        testID="new-password-save"
+        title={busy ? t("auth.wait") : t("auth.newPasswordSave")}
+        disabled={busy || password.length < 6}
+        onPress={async () => {
+          setError(null);
+          setBusy(true);
+          const r = await updatePassword(password);
+          setBusy(false);
+          if (!r.ok) setError(r.message);
+        }}
+      />
+      <Button title={t("auth.signout")} variant="ghost" onPress={signOut} />
     </ScrollView>
   );
 }
