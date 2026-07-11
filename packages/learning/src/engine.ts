@@ -36,6 +36,22 @@ function randInt(min: number, max: number, rng: () => number): number {
   return min + Math.floor(rng() * (max - min + 1));
 }
 
+/**
+ * Zieht einen Parameterwert. Ganzzahlige Grenzen → ganzzahlig; nicht-ganzzahlige
+ * Grenzen (z. B. 0.1–2) → Zehntelschritte, strikt innerhalb [min, max].
+ * (Vorher sprengte randInt bei min=0.1 die Obergrenze: 0.1..2 → {0.1, 1.1, 2.1}.)
+ */
+function randParam(min: number, max: number, rng: () => number): number {
+  if (Number.isInteger(min) && Number.isInteger(max)) return randInt(min, max, rng);
+  const schritte = Math.floor((max - min) * 10 + 1e-9);
+  return Math.round((min + Math.floor(rng() * (schritte + 1)) / 10) * 10) / 10;
+}
+
+/** Zahl deutsch darstellen (Dezimal-Komma statt Punkt). */
+function deZahl(zahl: number | string): string {
+  return String(zahl).replace(".", ",");
+}
+
 // Gewünschte Distraktor-Nähe je Stufe: höhere Stufe → nähere (schwerer abgrenzbare) Distraktoren.
 const ZIEL_NAEHE: Record<Stufe, number> = {
   erklaeren: 1,
@@ -84,11 +100,25 @@ export function instanziiereFrage(
 }
 
 function fuelle(text: string, vars: Record<string, number>): string {
-  return text.replace(/\{(\w+)\}/g, (_, k: string) => String(vars[k] ?? `{${k}}`));
+  return text.replace(/\{(\w+)\}/g, (_, k: string) =>
+    vars[k] === undefined ? `{${k}}` : deZahl(vars[k])
+  );
 }
 
-function runde(wert: number, rundung: string): number {
-  return rundung === "ganzzahl" ? Math.round(wert) : wert;
+/**
+ * Rundet und formatiert einen Lösungs-/Distraktorwert gemäß Vorlagen-Rundung.
+ * ganzzahl → "12" · dezimal1 → "12,5" (Kennzahlen/Prozent) · dezimal2 → "12,50" (Euro).
+ * (Vorher wurden Verhältnis-Kennzahlen zwangsgerundet: wahres KGV 0,2 → Anzeige „0".)
+ */
+function formatiereWert(wert: number, rundung: string): string {
+  switch (rundung) {
+    case "dezimal1":
+      return deZahl((Math.round(wert * 10) / 10).toFixed(1));
+    case "dezimal2":
+      return deZahl((Math.round(wert * 100) / 100).toFixed(2));
+    default:
+      return String(Math.round(wert));
+  }
 }
 
 /**
@@ -108,14 +138,14 @@ export function instanziiereVorlage(
   for (let versuch = 0; versuch < maxVersuche; versuch++) {
     const vars: Record<string, number> = {};
     for (const [name, spec] of Object.entries(vorlage.parameter)) {
-      vars[name] = randInt(spec.min, spec.max, rng);
+      vars[name] = randParam(spec.min, spec.max, rng);
     }
     const fmt = (v: number | string) =>
       typeof v === "string"
         ? v
         : vorlage.einheit
-          ? `${runde(v, vorlage.rundung)} ${vorlage.einheit}`
-          : `${runde(v, vorlage.rundung)}`;
+          ? `${formatiereWert(v, vorlage.rundung)} ${vorlage.einheit}`
+          : formatiereWert(v, vorlage.rundung);
     const loesungTxt = fmt(evalFormelValue(vorlage.loesung_formel, vars));
     const distraktorTxt = vorlage.distraktor_formeln.map((f) => fmt(evalFormelValue(f, vars)));
 

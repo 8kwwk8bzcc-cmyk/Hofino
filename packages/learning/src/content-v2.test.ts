@@ -3,7 +3,7 @@ import { V2_MODULES, V2_BLOCK_META, alleModuleV2 } from "./content-v2.js";
 import { liftModuleToSource } from "./migrate.js";
 import { validateModuleSourceSet, readinessReport } from "./validate.js";
 import { CURRICULUM_BLOCKS, alleZielModule, checkCurriculumIntegrity } from "./curriculum.js";
-import { evalFormel } from "./formel.js";
+import { evalFormel, evalFormelValue } from "./formel.js";
 
 const SPECIAL = /\?[^:]*:|'[^']*'|[<>]=?|===?|!=/; // Ternär/Vergleich/String → nicht numerisch
 
@@ -73,5 +73,30 @@ describe("Curriculum v2 – gelieferter Content", () => {
     expect(special).toEqual(["tmpl_bez_grundpreis"]);
     // Mittelpunkt-Kollisionen sind die kritischeren – als Obergrenze tracken.
     expect(midCollisions).toBeLessThanOrEqual(2);
+  });
+
+  // Paket 2 (Review-Fund): Bei exakt gleichem Stückpreis muss die Lösung „gleich" sein —
+  // vorher lieferte die Formel 'B' und die richtige Kinder-Antwort wurde als falsch gewertet.
+  it("tmpl_bez_grundpreis: Gleichstand liefert 'gleich', sonst korrekt A/B", () => {
+    const t = V2_MODULES.flatMap((m) => m.calculationTemplates ?? []).find(
+      (x) => x.id === "tmpl_bez_grundpreis"
+    )!;
+    expect(t).toBeDefined();
+    // Gleicher Stückpreis (1 €): → gleich
+    expect(evalFormelValue(t.solutionFormula, { mengeA: 2, preisA: 2, mengeB: 4, preisB: 4 })).toBe("gleich");
+    expect(evalFormelValue(t.solutionFormula, { mengeA: 3, preisA: 6, mengeB: 5, preisB: 10 })).toBe("gleich");
+    // A günstiger (1 € vs. 1,25 €): → A
+    expect(evalFormelValue(t.solutionFormula, { mengeA: 2, preisA: 2, mengeB: 4, preisB: 5 })).toBe("A");
+    // B günstiger (0,67 € vs. 0,5 €): → B
+    expect(evalFormelValue(t.solutionFormula, { mengeA: 3, preisA: 2, mengeB: 4, preisB: 2 })).toBe("B");
+    // Vollständiger Scan: die Lösung stimmt für JEDE Kombination mit dem wahren Grundpreisvergleich überein
+    let checked = 0;
+    for (let mengeA = 2; mengeA <= 10; mengeA++) for (let preisA = 2; preisA <= 20; preisA += 3)
+      for (let mengeB = 2; mengeB <= 10; mengeB++) for (let preisB = 2; preisB <= 20; preisB += 3) {
+        const wahr = preisA * mengeB === preisB * mengeA ? "gleich" : preisA * mengeB < preisB * mengeA ? "A" : "B";
+        expect(evalFormelValue(t.solutionFormula, { mengeA, preisA, mengeB, preisB })).toBe(wahr);
+        checked++;
+      }
+    expect(checked).toBeGreaterThan(2000);
   });
 });

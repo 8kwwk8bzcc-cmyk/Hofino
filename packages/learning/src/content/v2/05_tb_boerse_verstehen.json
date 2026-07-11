@@ -690,7 +690,8 @@
               "kurs / prozent"
             ],
             "explanationTemplate": "Rechne den Prozentwert aus: Kurs mal Prozentsatz, geteilt durch 100 – das ergibt die Veränderung in Euro.",
-            "unit": "Euro"
+            "unit": "Euro",
+            "rounding": "decimal2"
           }
         ],
         "teacherSupport": {

@@ -356,7 +356,8 @@
               "gesamt - anzahl"
             ],
             "explanationTemplate": "Dein Anteil in Prozent = eigene Aktien geteilt durch alle Aktien, mal 100. So siehst du, wie groß dein Stück am Unternehmen wirklich ist.",
-            "unit": "Prozent"
+            "unit": "Prozent",
+            "rounding": "decimal1"
           }
         ],
         "teacherSupport": {

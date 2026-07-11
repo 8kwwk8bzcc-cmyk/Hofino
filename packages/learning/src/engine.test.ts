@@ -111,3 +111,88 @@ describe("einstiegsStufe", () => {
     expect(einstiegsStufe(14)).toBe("verstehen");
   });
 });
+
+// ─── Paket 2 (Code-Review 2026-07-10): Dezimal-Rundung, Kommaformat, Parametergrenzen ───
+
+describe("Dezimal-Rundung & deutsche Formatierung (Vorlagen)", () => {
+  const basis = {
+    konzept_id: "k",
+    stufe: "anwenden" as const,
+    frage_vorlage: { de: "KGV bei Kurs {kurs} und Gewinn {gewinn} je Aktie?" },
+    distraktor_formeln: ["kurs * gewinn", "kurs - gewinn", "kurs + gewinn"],
+    einheit: "",
+    wissenspunkte: 150,
+  };
+
+  it("dezimal1: KGV 10/4 wird als „2,5\" angezeigt (nicht „3\" oder „0\")", () => {
+    const inst = instanziiereVorlage(
+      {
+        ...basis,
+        id: "t_kgv",
+        parameter: { kurs: { typ: "int", min: 10, max: 10 }, gewinn: { typ: "int", min: 4, max: 4 } },
+        loesung_formel: "kurs / gewinn",
+        rundung: "dezimal1",
+      },
+      makeRng(7)
+    );
+    expect(inst.optionen.find((o) => o.korrekt)?.text).toBe("2,5");
+  });
+
+  it("dezimal2 mit Einheit: Euro-Beträge mit zwei Nachkommastellen und Komma", () => {
+    const inst = instanziiereVorlage(
+      {
+        ...basis,
+        id: "t_euro",
+        parameter: { betrag: { typ: "int", min: 1000, max: 1000 }, kosten: { typ: "int", min: 1, max: 1 } },
+        loesung_formel: "betrag * kosten / 400",
+        distraktor_formeln: ["betrag * kosten", "betrag / kosten", "kosten"],
+        einheit: "Euro",
+        rundung: "dezimal2",
+      },
+      makeRng(7)
+    );
+    expect(inst.optionen.find((o) => o.korrekt)?.text).toBe("2,50 Euro");
+  });
+
+  it("ganzzahl bleibt unverändert ganzzahlig", () => {
+    const inst = instanziiereVorlage(
+      {
+        ...basis,
+        id: "t_ganz",
+        parameter: { a: { typ: "int", min: 7, max: 7 } },
+        loesung_formel: "a * 2",
+        distraktor_formeln: ["a", "a * 3", "a + 1"],
+        rundung: "ganzzahl",
+      },
+      makeRng(7)
+    );
+    expect(inst.optionen.find((o) => o.korrekt)?.text).toBe("14");
+  });
+});
+
+describe("Dezimal-Parameter bleiben innerhalb der Grenzen (randParam)", () => {
+  it("min=0.1, max=2 erzeugt nie Werte über dem Maximum und zeigt Komma im Fragetext", () => {
+    const vorlage = {
+      id: "t_ter",
+      konzept_id: "k",
+      stufe: "anwenden" as const,
+      parameter: { betrag: { typ: "int" as const, min: 1000, max: 1000 }, kosten: { typ: "int" as const, min: 0.1, max: 2 } },
+      frage_vorlage: { de: "TER von {kosten} Prozent auf {betrag} Euro?" },
+      loesung_formel: "betrag * kosten / 100",
+      distraktor_formeln: ["betrag * kosten", "betrag * kosten / 10", "betrag * kosten / 1000"],
+      einheit: "Euro",
+      rundung: "dezimal2" as const,
+      wissenspunkte: 150,
+    };
+    for (let seed = 1; seed <= 200; seed++) {
+      const inst = instanziiereVorlage(vorlage, makeRng(seed));
+      const m = inst.frage.match(/TER von ([\d,]+) Prozent/);
+      expect(m).not.toBeNull();
+      const wert = Number(m![1]!.replace(",", "."));
+      expect(wert).toBeGreaterThanOrEqual(0.1);
+      expect(wert).toBeLessThanOrEqual(2);
+      // Dezimalwerte erscheinen mit Komma, nie mit Punkt
+      expect(inst.frage).not.toMatch(/\d\.\d/);
+    }
+  });
+});

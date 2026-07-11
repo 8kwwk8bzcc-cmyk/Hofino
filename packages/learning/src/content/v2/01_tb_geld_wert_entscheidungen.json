@@ -517,7 +517,7 @@
                 "max": 20
               }
             },
-            "solutionFormula": "preisA / mengeA < preisB / mengeB ? 'A' : 'B'",
+            "solutionFormula": "preisA * mengeB == preisB * mengeA ? 'gleich' : preisA * mengeB < preisB * mengeA ? 'A' : 'B'",
             "distractorFormulas": [
               "preisA < preisB ? 'A' : 'B'",
               "mengeA > mengeB ? 'A' : 'B'",

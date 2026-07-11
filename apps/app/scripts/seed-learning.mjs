@@ -81,7 +81,9 @@ const seed = {
       loesung_formel: c.solutionFormula,
       distraktor_formeln: c.distractorFormulas,
       einheit: c.unit ?? "",
-      rundung: "ganzzahl",
+      // Rundungssemantik aus der Quelle (wie bridge.ts): integer→ganzzahl, decimal1/2→dezimal1/2.
+      rundung:
+        c.rounding === "decimal1" ? "dezimal1" : c.rounding === "decimal2" ? "dezimal2" : "ganzzahl",
       erklaerung_nach_antwort: { de: c.explanationTemplate },
       wissenspunkte: c.points,
     }))

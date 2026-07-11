@@ -44,7 +44,10 @@ export function templateToVorlage(c: CalculationTemplate, konzeptId: string): Vo
     loesung_formel: c.solutionFormula,
     distraktor_formeln: c.distractorFormulas,
     einheit: c.unit ?? "",
-    rundung: "ganzzahl",
+    // Rundungssemantik aus der Quelle respektieren (vorher pauschal "ganzzahl",
+    // was Verhältnis-Kennzahlen wie KGV 0,2 → „0" verfälschte).
+    rundung:
+      c.rounding === "decimal1" ? "dezimal1" : c.rounding === "decimal2" ? "dezimal2" : "ganzzahl",
     erklaerung_nach_antwort: { de: c.explanationTemplate },
     wissenspunkte: c.points,
   };

@@ -71,7 +71,7 @@ export interface Vorlage {
   loesung_formel: string;
   distraktor_formeln: string[];
   einheit: string;
-  rundung: "ganzzahl";
+  rundung: "ganzzahl" | "dezimal1" | "dezimal2";
   erklaerung_nach_antwort?: LangText;
   wissenspunkte: number;
 }
@@ -301,7 +301,7 @@ export interface CalculationTemplate {
   explanationTemplate: string;
   unit?: string;
   /** Superset der Spec: erhält die Rundungssemantik der Engine (Default "integer"). */
-  rounding?: "integer";
+  rounding?: "integer" | "decimal1" | "decimal2";
 }
 
 export interface LearningModule {
@@ -349,7 +349,7 @@ export interface CalculationTemplateSource {
   distractorFormulas: string[];
   explanationTemplate: LangText;
   unit?: string;
-  rounding?: "integer";
+  rounding?: "integer" | "decimal1" | "decimal2";
 }
 
 export interface LearningModuleSource {

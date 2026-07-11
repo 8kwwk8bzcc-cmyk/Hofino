@@ -1100,7 +1100,8 @@
               "spread"
             ],
             "explanationTemplate": "Der gesamte Spread-Abstand ist der Spread pro Anteil mal die gehandelte Stückzahl.",
-            "unit": "Euro"
+            "unit": "Euro",
+            "rounding": "decimal2"
           }
         ],
         "teacherSupport": {
@@ -1484,7 +1485,8 @@
               "summe + monate"
             ],
             "explanationTemplate": "Die monatliche Rate beim gestaffelten Einstieg ist die Gesamtsumme geteilt durch die Zahl der Monate.",
-            "unit": "Euro"
+            "unit": "Euro",
+            "rounding": "decimal2"
           }
         ],
         "teacherSupport": {

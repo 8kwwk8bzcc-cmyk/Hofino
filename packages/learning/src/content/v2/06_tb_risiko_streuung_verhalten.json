@@ -1019,7 +1019,8 @@
               "summe + anzahl"
             ],
             "explanationTemplate": "Gleichmäßig verteilen heißt: die Gesamtsumme durch die Anzahl der Anlagen teilen.",
-            "unit": "Euro"
+            "unit": "Euro",
+            "rounding": "decimal2"
           }
         ],
         "teacherSupport": {

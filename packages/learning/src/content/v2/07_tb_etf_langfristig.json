@@ -1355,7 +1355,8 @@
               "betrag / kosten"
             ],
             "explanationTemplate": "Die jährlichen Kosten in Euro berechnest du so: Betrag mal Kostenquote in Prozent, geteilt durch 100.",
-            "unit": "Euro"
+            "unit": "Euro",
+            "rounding": "decimal2"
           }
         ],
         "teacherSupport": {
@@ -1546,7 +1547,8 @@
               "betrag / quote"
             ],
             "explanationTemplate": "Die Ausschüttung in Euro berechnest du so: Anteilswert mal Ausschüttungsquote in Prozent, geteilt durch 100.",
-            "unit": "Euro"
+            "unit": "Euro",
+            "rounding": "decimal2"
           }
         ],
         "teacherSupport": {
@@ -1737,7 +1739,8 @@
               "gesamt / ziel"
             ],
             "explanationTemplate": "Den Zielwert berechnest du so: Gesamtwert des Depots mal Zielanteil in Prozent, geteilt durch 100.",
-            "unit": "Euro"
+            "unit": "Euro",
+            "rounding": "decimal2"
           }
         ],
         "teacherSupport": {

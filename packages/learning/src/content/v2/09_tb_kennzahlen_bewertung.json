@@ -360,7 +360,8 @@
               "aktien / gewinn"
             ],
             "explanationTemplate": "Gewinn je Aktie = Gewinn geteilt durch Aktienanzahl. Der Betrag ist eine Rechengröße — ausgezahlt wird er nicht automatisch.",
-            "unit": "Euro"
+            "unit": "Euro",
+            "rounding": "decimal2"
           }
         ],
         "teacherSupport": {
@@ -550,7 +551,8 @@
               "kurs - eps",
               "eps / kurs"
             ],
-            "explanationTemplate": "KGV = Kurs geteilt durch Gewinn je Aktie. Es zeigt, wie viele Euro der Markt für einen Euro Jahresgewinn bezahlt."
+            "explanationTemplate": "KGV = Kurs geteilt durch Gewinn je Aktie. Es zeigt, wie viele Euro der Markt für einen Euro Jahresgewinn bezahlt.",
+            "rounding": "decimal1"
           }
         ],
         "teacherSupport": {
@@ -741,7 +743,8 @@
               "umsatz / mcap",
               "mcap - umsatz"
             ],
-            "explanationTemplate": "KUV = Marktkapitalisierung geteilt durch Umsatz. Es zeigt, mit dem Wievielfachen des Jahresumsatzes der Markt das Unternehmen bewertet."
+            "explanationTemplate": "KUV = Marktkapitalisierung geteilt durch Umsatz. Es zeigt, mit dem Wievielfachen des Jahresumsatzes der Markt das Unternehmen bewertet.",
+            "rounding": "decimal1"
           }
         ],
         "teacherSupport": {
@@ -932,7 +935,8 @@
               "kurs - div"
             ],
             "explanationTemplate": "Dividendenrendite = Dividende geteilt durch Kurs mal 100. Sie hängt vom aktuellen Kurs ab und ist nicht garantiert.",
-            "unit": "Prozent"
+            "unit": "Prozent",
+            "rounding": "decimal1"
           }
         ],
         "teacherSupport": {
@@ -1125,7 +1129,8 @@
               "umsatz + gewinn"
             ],
             "explanationTemplate": "Gewinnmarge = Gewinn geteilt durch Umsatz mal 100. Sie zeigt, wie viel Prozent vom Umsatz als Gewinn übrig bleiben.",
-            "unit": "Prozent"
+            "unit": "Prozent",
+            "rounding": "decimal1"
           }
         ],
         "teacherSupport": {
@@ -1316,7 +1321,8 @@
               "alt / neu * 100"
             ],
             "explanationTemplate": "Umsatzwachstum = (neuer Umsatz minus alter Umsatz) geteilt durch alten Umsatz mal 100. Ein negativer Wert bedeutet einen Umsatzrückgang.",
-            "unit": "Prozent"
+            "unit": "Prozent",
+            "rounding": "decimal1"
           }
         ],
         "teacherSupport": {
@@ -1509,7 +1515,8 @@
               "alt / neu * 100"
             ],
             "explanationTemplate": "Gewinnwachstum = (neuer Gewinn minus alter Gewinn) geteilt durch alten Gewinn mal 100. Ein negativer Wert bedeutet einen Gewinnrückgang.",
-            "unit": "Prozent"
+            "unit": "Prozent",
+            "rounding": "decimal1"
           }
         ],
         "teacherSupport": {
@@ -1702,7 +1709,8 @@
               "schulden + vermoegen"
             ],
             "explanationTemplate": "Schuldenanteil = Schulden geteilt durch Vermögen mal 100. Je höher der Anteil, desto abhängiger ist das Unternehmen von seinen Geldgebern.",
-            "unit": "Prozent"
+            "unit": "Prozent",
+            "rounding": "decimal1"
           }
         ],
         "teacherSupport": {

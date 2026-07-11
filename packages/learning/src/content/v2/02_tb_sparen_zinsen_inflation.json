@@ -519,7 +519,8 @@
               "betrag / zins"
             ],
             "explanationTemplate": "Zinsen gleich Betrag mal Zinssatz geteilt durch 100: {betrag} mal {zins} geteilt durch 100.",
-            "unit": "Euro"
+            "unit": "Euro",
+            "rounding": "decimal2"
           }
         ],
         "teacherSupport": {
@@ -713,7 +714,8 @@
               "betrag * zins"
             ],
             "explanationTemplate": "Jedes der {jahre} Jahre wird der bereits gewachsene Betrag erneut mit {zins} Prozent verzinst, ausgehend von {betrag} Euro.",
-            "unit": "Euro"
+            "unit": "Euro",
+            "rounding": "decimal2"
           }
         ],
         "teacherSupport": {
@@ -902,7 +904,8 @@
               "preis + prozent"
             ],
             "explanationTemplate": "Erst den Aufschlag berechnen ({prozent} Prozent von {preis} Euro) und dann zum alten Preis addieren.",
-            "unit": "Euro"
+            "unit": "Euro",
+            "rounding": "decimal2"
           }
         ],
         "teacherSupport": {

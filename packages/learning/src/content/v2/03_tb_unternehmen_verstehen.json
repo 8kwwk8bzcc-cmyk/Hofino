@@ -1424,7 +1424,8 @@
               "umsatz + gewinn"
             ],
             "explanationTemplate": "Die Marge ist der Gewinn geteilt durch den Umsatz, mal 100, und wird in Prozent angegeben.",
-            "unit": "Prozent"
+            "unit": "Prozent",
+            "rounding": "decimal1"
           }
         ],
         "teacherSupport": {
