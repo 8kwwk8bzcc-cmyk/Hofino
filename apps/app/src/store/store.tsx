@@ -128,10 +128,20 @@ export interface ChildSummary {
   performancePercent: number;
 }
 
+export interface PendingConsent {
+  childProfileId: string;
+  displayName: string;
+  deadline: string | null;
+  registeredAt: string;
+}
+
 interface Data {
   sessionUserId: string | null;
   profileId: string | null;
   role: Role;
+  /** Einwilligungs-Status (Kinderkonten): approved | pending | blocked. */
+  consentStatus: string;
+  consentDeadline: string | null;
   displayName: string;
   plot: string;
   tutorialDone: boolean;
@@ -158,6 +168,8 @@ const EMPTY: Data = {
   sessionUserId: null,
   profileId: null,
   role: "child",
+  consentStatus: "approved",
+  consentDeadline: null,
   displayName: "",
   plot: "",
   tutorialDone: false,
@@ -211,6 +223,9 @@ interface StoreApi {
   state: {
     onboarded: boolean;
     hasSession: boolean;
+    /** Einwilligungs-Status des eigenen Profils (Kinderkonten). */
+    consentStatus: string;
+    consentDeadline: string | null;
     /** true, wenn der Nutzer ueber einen Passwort-Reset-Link kam. */
     passwordRecovery: boolean;
     loading: boolean;
@@ -247,6 +262,12 @@ interface StoreApi {
   resetPassword: (email: string) => Promise<AuthOutcome>;
   /** Setzt nach dem Reset-Link das neue Passwort. */
   updatePassword: (password: string) => Promise<AuthOutcome>;
+  /** Eltern: offene Einwilligungen fuer Kinder unter der eigenen E-Mail. */
+  fetchPendingConsents: () => Promise<PendingConsent[]>;
+  /** Eltern: Einwilligung bestaetigen (setzt approved + Family-Link). */
+  confirmConsent: (childProfileId: string) => Promise<AuthOutcome>;
+  /** Kind: Eltern-Mail erneut anfordern (Sweep verschickt sie neu). */
+  requestConsentMail: () => Promise<AuthOutcome>;
   createProfile: (name: string, plot: string, role: Role) => Promise<AuthOutcome>;
   signOut: () => Promise<void>;
   completeTutorial: () => void;
@@ -353,7 +374,7 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
 
     const profileRes = await supabase
       .from("profiles")
-      .select("id, role, display_name, tutorial_done")
+      .select("id, role, display_name, tutorial_done, consent_status, consent_deadline")
       .eq("auth_user_id", user.id)
       .maybeSingle();
 
@@ -403,6 +424,8 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
       sessionUserId: user.id,
       profileId,
       role,
+      consentStatus: (profileRes.data.consent_status as string) ?? "approved",
+      consentDeadline: (profileRes.data.consent_deadline as string | null) ?? null,
       displayName: (profileRes.data.display_name as string) ?? "",
       plot: globalThis.localStorage?.getItem(plotKey(user.id)) ?? "",
       tutorialDone: Boolean(profileRes.data.tutorial_done),
@@ -445,6 +468,12 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     load();
+    // Eingeladene Eltern (Invite-Mail) sollen zuerst ein Passwort setzen.
+    try {
+      if (globalThis.location?.hash.includes("type=invite")) setPasswordRecovery(true);
+    } catch {
+      // ignorieren
+    }
     const { data: sub } = supabase.auth.onAuthStateChange((event) => {
       if (event === "PASSWORD_RECOVERY") setPasswordRecovery(true);
       load();
@@ -543,6 +572,29 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
     const { error } = await supabase.auth.updateUser({ password });
     if (error) return { ok: false, message: error.message };
     setPasswordRecovery(false);
+    return { ok: true };
+  }, []);
+
+  const fetchPendingConsents = useCallback<StoreApi["fetchPendingConsents"]>(async () => {
+    const { data: rows, error } = await supabase.rpc("offene_einwilligungen");
+    if (error || !rows) return [];
+    return (rows as { child_profile_id: string; display_name: string; deadline: string | null; registered_at: string }[]).map((r) => ({
+      childProfileId: r.child_profile_id,
+      displayName: r.display_name,
+      deadline: r.deadline,
+      registeredAt: r.registered_at,
+    }));
+  }, []);
+
+  const confirmConsent = useCallback<StoreApi["confirmConsent"]>(async (childProfileId) => {
+    const { error } = await supabase.rpc("einwilligung_bestaetigen", { p_child: childProfileId });
+    if (error) return { ok: false, message: error.message };
+    return { ok: true };
+  }, []);
+
+  const requestConsentMail = useCallback<StoreApi["requestConsentMail"]>(async () => {
+    const { error } = await supabase.rpc("einwilligung_mail_anfordern");
+    if (error) return { ok: false, message: error.message };
     return { ok: true };
   }, []);
 
@@ -1070,6 +1122,8 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
     state: {
       onboarded: data.profileId !== null,
       hasSession: data.sessionUserId !== null,
+      consentStatus: data.consentStatus,
+      consentDeadline: data.consentDeadline,
       passwordRecovery,
       loading: data.loading,
       role: data.role,
@@ -1092,6 +1146,9 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
     login,
     resetPassword,
     updatePassword,
+    fetchPendingConsents,
+    confirmConsent,
+    requestConsentMail,
     createProfile,
     signOut,
     completeTutorial,

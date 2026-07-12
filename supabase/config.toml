@@ -418,3 +418,6 @@ verify_jwt = false
 
 [functions.ranking-recompute]
 verify_jwt = false
+
+[functions.consent-sweep]
+verify_jwt = false

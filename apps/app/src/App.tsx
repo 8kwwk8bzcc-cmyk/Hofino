@@ -18,7 +18,7 @@ import {
 } from "@expo-google-fonts/hanken-grotesk";
 import { SpaceGrotesk_600SemiBold, SpaceGrotesk_700Bold } from "@expo-google-fonts/space-grotesk";
 import { StoreProvider, useStore } from "./store/store.js";
-import { NewPassword, Onboarding, ProfileSetup } from "./screens/Onboarding.js";
+import { ConsentBlocked, NewPassword, Onboarding, ProfileSetup } from "./screens/Onboarding.js";
 import { DevLogin } from "./screens/DevLogin.js";
 import { DEV_LOGIN } from "./config/flags.js";
 import { Start } from "./screens/Start.js";
@@ -226,6 +226,7 @@ function Gate() {
   if (!state.hasSession) return <AuthEntry />;
   if (state.passwordRecovery) return <NewPassword />;
   if (!state.onboarded) return <ProfileSetup />;
+  if (state.consentStatus === "blocked") return <ConsentBlocked />;
   if (state.role === "parent") return <ParentShell />;
   if (state.role === "teacher") return <TeacherShell />;
   return <Main />;

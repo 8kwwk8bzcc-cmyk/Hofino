@@ -3,6 +3,7 @@ import { ScrollView, StyleSheet, Text, View } from "react-native";
 import { formatEuros } from "@hofino/core";
 import { wissenslevel } from "@hofino/learning";
 import { useStore, type DailyPlan } from "../store/store.js";
+import { formatDateDE } from "../challengeMetrics.js";
 import { Body, Card, H1, H2, Muted, Pill } from "../ui/components.js";
 import { DecisionFlow } from "./DecisionFlow.js";
 import { MarketLab } from "./MarketLab.js";
@@ -129,6 +130,11 @@ export function Start() {
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
+      {state.consentStatus === "pending" && state.consentDeadline && (
+        <Card testID="consent-pending-banner">
+          <Body>{t("consent.pendingBanner", { date: formatDateDE(state.consentDeadline) })}</Body>
+        </Card>
+      )}
       <Card style={styles.summary}>
         <H1>{t("start.headline")}</H1>
         <Muted>{t("start.subtitle")}</Muted>

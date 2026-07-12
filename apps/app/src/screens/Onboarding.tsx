@@ -236,6 +236,37 @@ export function Onboarding({ footer }: { footer?: React.ReactNode }) {
   );
 }
 
+/** Sperrbildschirm: Kinderkonto ohne Eltern-Bestätigung nach Fristablauf. */
+export function ConsentBlocked() {
+  const { requestConsentMail, signOut, t } = useStore();
+  const styles = useThemedStyles(makeStyles);
+  const [info, setInfo] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null);
+
+  return (
+    <ScrollView contentContainerStyle={styles.container}>
+      <View style={styles.header}>
+        <HLogo size={56} />
+        <H1>{t("consent.blockedTitle")}</H1>
+      </View>
+      <Body>{t("consent.blockedText")}</Body>
+      {info && <Body>{info}</Body>}
+      {error && <Text style={styles.error}>{error}</Text>}
+      <Button
+        testID="consent-resend"
+        title={t("consent.resend")}
+        onPress={async () => {
+          setError(null);
+          const r = await requestConsentMail();
+          if (r.ok) setInfo(t("consent.resendDone"));
+          else setError(r.message);
+        }}
+      />
+      <Button title={t("auth.signout")} variant="ghost" onPress={signOut} />
+    </ScrollView>
+  );
+}
+
 /** Wird angezeigt, wenn der Nutzer ueber einen Passwort-Reset-Link kam. */
 export function NewPassword() {
   const { updatePassword, signOut, t } = useStore();

@@ -2,26 +2,46 @@ import React, { useEffect, useState } from "react";
 import { ScrollView, StyleSheet, Text, View } from "react-native";
 import { formatEuros, rank } from "@hofino/core";
 import { alleKonzepte } from "@hofino/learning";
-import { useStore, type ChildSummary } from "../../store/store.js";
-import { Body, Card, H1, H2, Muted, Pill } from "../../ui/components.js";
+import { useStore, type ChildSummary, type PendingConsent } from "../../store/store.js";
+import { Body, Button, Card, H1, H2, Muted, Pill } from "../../ui/components.js";
+import { formatDateDE } from "../../challengeMetrics.js";
 import { font, fonts, space, type Palette } from "../../theme.js";
 import { useThemedStyles } from "../../theme/ThemeProvider.js";
 
 // Eltern-Dashboard: Lernfortschritt + Depotentwicklung der verknüpften Kinder (nur lesend).
 export function FamilyHome() {
-  const { fetchFamily, state, t } = useStore();
+  const { fetchFamily, fetchPendingConsents, confirmConsent, state, t } = useStore();
   const styles = useThemedStyles(makeStyles);
   const [children, setChildren] = useState<ChildSummary[] | null>(null);
+  const [consents, setConsents] = useState<PendingConsent[]>([]);
+  const [consentError, setConsentError] = useState<string | null>(null);
+  const [busy, setBusy] = useState<string | null>(null);
 
   useEffect(() => {
     let active = true;
     fetchFamily().then((c) => {
       if (active) setChildren(c);
     });
+    fetchPendingConsents().then((rows) => {
+      if (active) setConsents(rows);
+    });
     return () => {
       active = false;
     };
-  }, [fetchFamily, state.pendingLinks]);
+  }, [fetchFamily, fetchPendingConsents, state.pendingLinks]);
+
+  const confirm = async (childProfileId: string) => {
+    setConsentError(null);
+    setBusy(childProfileId);
+    const r = await confirmConsent(childProfileId);
+    setBusy(null);
+    if (!r.ok) {
+      setConsentError(r.message);
+      return;
+    }
+    setConsents(await fetchPendingConsents());
+    setChildren(await fetchFamily());
+  };
 
   const challenge = rank((children ?? []).map((c) => ({ id: c.profileId, score: c.knowledgePoints })), 10);
   const nameById = new Map((children ?? []).map((c) => [c.profileId, c.displayName]));
@@ -32,6 +52,28 @@ export function FamilyHome() {
         <Muted>{t("tab.family")}</Muted>
         <H1>{state.displayName}</H1>
       </View>
+
+      {consents.length > 0 && (
+        <Card testID="consent-card">
+          <H2>{t("consent.title")}</H2>
+          <Body>{t("consent.parentIntro")}</Body>
+          {consentError && <Muted>{consentError}</Muted>}
+          {consents.map((k) => (
+            <View key={k.childProfileId} style={{ gap: space.sm }}>
+              <View style={styles.row}>
+                <H2>{k.displayName}</H2>
+                {k.deadline && <Muted>{t("consent.deadline", { date: formatDateDE(k.deadline) })}</Muted>}
+              </View>
+              <Button
+                testID={`consent-confirm-${k.displayName}`}
+                title={t("consent.confirm")}
+                loading={busy === k.childProfileId}
+                onPress={() => confirm(k.childProfileId)}
+              />
+            </View>
+          ))}
+        </Card>
+      )}
 
       {children === null ? (
         <Muted>{t("family.loading")}</Muted>
