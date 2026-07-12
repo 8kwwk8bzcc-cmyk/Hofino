@@ -6,6 +6,7 @@ import { useStore, type ChildSummary, type PendingConsent } from "../../store/st
 import { Body, Button, Card, H1, H2, Muted, Pill } from "../../ui/components.js";
 import { formatDateDE } from "../../challengeMetrics.js";
 import { DeleteAccountSection } from "../DeleteAccount.js";
+import { FamilyDuelCard } from "./FamilyDuel.js";
 import { font, fonts, radius, space, type Palette } from "../../theme.js";
 import { useColors, useThemedStyles } from "../../theme/ThemeProvider.js";
 
@@ -205,6 +206,7 @@ export function FamilyHome() {
           )}
         </>
       )}
+      <FamilyDuelCard />
       <DeleteAccountSection />
     </ScrollView>
   );

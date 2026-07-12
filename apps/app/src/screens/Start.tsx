@@ -9,6 +9,7 @@ import { DecisionFlow } from "./DecisionFlow.js";
 import { MarketLab } from "./MarketLab.js";
 import { ChildFamilyCard } from "./family/ChildFamilyCard.js";
 import { DeleteAccountSection } from "./DeleteAccount.js";
+import { FamilyDuelCard } from "./family/FamilyDuel.js";
 import { StudentClassCard } from "./classroom/StudentClassCard.js";
 import { useNav } from "../nav.js";
 import { font, fonts, space, type Palette } from "../theme.js";
@@ -211,6 +212,7 @@ export function Start() {
           <StudentClassCard />
         </>
       )}
+      <FamilyDuelCard />
       <DeleteAccountSection />
     </ScrollView>
   );

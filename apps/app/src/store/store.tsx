@@ -128,6 +128,15 @@ export interface ChildSummary {
   performancePercent: number;
 }
 
+export interface FamilyDuelRow {
+  profileId: string;
+  displayName: string;
+  role: Role;
+  xpWeek: number;
+  korrektWeek: number;
+  tageWeek: number;
+}
+
 export interface PendingConsent {
   childProfileId: string;
   displayName: string;
@@ -276,6 +285,8 @@ interface StoreApi {
   deleteAccount: () => Promise<AuthOutcome>;
   /** Eltern/Lehrkraft: loeschen ein verknuepftes Kind / Schueler:in der eigenen Klasse. */
   deleteChildAccount: (childProfileId: string) => Promise<AuthOutcome>;
+  /** Familien-Duell: Wochenwertung ueber den Familienkreis (leer ohne Verknuepfung). */
+  fetchFamilyDuel: () => Promise<FamilyDuelRow[]>;
   createProfile: (name: string, plot: string, role: Role) => Promise<AuthOutcome>;
   signOut: () => Promise<void>;
   completeTutorial: () => void;
@@ -680,6 +691,19 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
     (childProfileId) => familyAdmin({ action: "delete_child", childProfileId }),
     [familyAdmin]
   );
+
+  const fetchFamilyDuel = useCallback<StoreApi["fetchFamilyDuel"]>(async () => {
+    const { data: rows, error } = await supabase.rpc("familien_duell");
+    if (error || !rows) return [];
+    return (rows as { profile_id: string; display_name: string; role: Role; xp_week: number; korrekt_week: number; tage_week: number }[]).map((r) => ({
+      profileId: r.profile_id,
+      displayName: r.display_name,
+      role: r.role,
+      xpWeek: Number(r.xp_week),
+      korrektWeek: Number(r.korrekt_week),
+      tageWeek: Number(r.tage_week),
+    }));
+  }, []);
 
   const signOut = useCallback(async () => {
     setPasswordRecovery(false);
@@ -1236,6 +1260,7 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
     resetChildPassword,
     deleteAccount,
     deleteChildAccount,
+    fetchFamilyDuel,
     createProfile,
     signOut,
     completeTutorial,
