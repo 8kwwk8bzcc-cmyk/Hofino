@@ -5,12 +5,13 @@ import { alleKonzepte } from "@hofino/learning";
 import { useStore, type ChildSummary, type PendingConsent } from "../../store/store.js";
 import { Body, Button, Card, H1, H2, Muted, Pill } from "../../ui/components.js";
 import { formatDateDE } from "../../challengeMetrics.js";
+import { DeleteAccountSection } from "../DeleteAccount.js";
 import { font, fonts, radius, space, type Palette } from "../../theme.js";
 import { useColors, useThemedStyles } from "../../theme/ThemeProvider.js";
 
 // Eltern-Dashboard: Lernfortschritt + Depotentwicklung der verknüpften Kinder (nur lesend).
 export function FamilyHome() {
-  const { fetchFamily, fetchPendingConsents, confirmConsent, resetChildPassword, state, t } = useStore();
+  const { fetchFamily, fetchPendingConsents, confirmConsent, resetChildPassword, deleteChildAccount, state, t } = useStore();
   const styles = useThemedStyles(makeStyles);
   const col = useColors();
   const [children, setChildren] = useState<ChildSummary[] | null>(null);
@@ -34,6 +35,17 @@ export function FamilyHome() {
   const [resetFor, setResetFor] = useState<string | null>(null);
   const [resetPw, setResetPw] = useState("");
   const [resetMsg, setResetMsg] = useState<string | null>(null);
+
+  const [deleteFor, setDeleteFor] = useState<string | null>(null);
+
+  const doDeleteChild = async (childProfileId: string) => {
+    setBusy(childProfileId);
+    const r = await deleteChildAccount(childProfileId);
+    setBusy(null);
+    setDeleteFor(null);
+    if (r.ok) setChildren(await fetchFamily());
+    else setResetMsg(r.message);
+  };
 
   const doReset = async (childProfileId: string) => {
     setResetMsg(null);
@@ -153,6 +165,25 @@ export function FamilyHome() {
                 />
               )}
               {resetFor === c.profileId && resetMsg && <Muted>{resetMsg}</Muted>}
+              {deleteFor === c.profileId ? (
+                <View style={{ gap: space.sm }}>
+                  <Body>{t("account.deleteChildWarn", { name: c.displayName })}</Body>
+                  <Button
+                    testID={`delete-child-yes-${c.displayName}`}
+                    title={t("account.deleteConfirm")}
+                    loading={busy === c.profileId}
+                    onPress={() => doDeleteChild(c.profileId)}
+                  />
+                  <Button title={t("account.deleteCancel")} variant="ghost" onPress={() => setDeleteFor(null)} />
+                </View>
+              ) : (
+                <Button
+                  testID={`delete-child-${c.displayName}`}
+                  title={t("account.delete")}
+                  variant="ghost"
+                  onPress={() => setDeleteFor(c.profileId)}
+                />
+              )}
               <Muted>{t("family.readOnly")}</Muted>
             </Card>
           ))}
@@ -174,6 +205,7 @@ export function FamilyHome() {
           )}
         </>
       )}
+      <DeleteAccountSection />
     </ScrollView>
   );
 }

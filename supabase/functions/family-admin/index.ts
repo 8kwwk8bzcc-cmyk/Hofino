@@ -36,19 +36,25 @@ Deno.serve(async (req) => {
   const jwt = (req.headers.get("Authorization") ?? "").replace(/^Bearer\s+/i, "");
   const { data: userRes, error: userErr } = await admin.auth.getUser(jwt);
   if (userErr || !userRes.user) return json({ error: "unauthorized" }, 401);
-  const { data: caller } = await admin
-    .from("profiles")
-    .select("id, role")
-    .eq("auth_user_id", userRes.user.id)
-    .maybeSingle();
-  if (!caller) return json({ error: "no_profile" }, 403);
-
   let body: { action?: string; nickname?: string; password?: string; childProfileId?: string };
   try {
     body = await req.json();
   } catch {
     return json({ error: "bad_request" }, 400);
   }
+
+  const { data: caller } = await admin
+    .from("profiles")
+    .select("id, role")
+    .eq("auth_user_id", userRes.user.id)
+    .maybeSingle();
+  // Selbstlöschung geht auch ohne Profil (z. B. eingeladene Eltern vor dem Setup).
+  if (body.action === "delete_self") {
+    const del = await admin.auth.admin.deleteUser(userRes.user.id);
+    if (del.error) return json({ error: del.error.message }, 500);
+    return json({ ok: true });
+  }
+  if (!caller) return json({ error: "no_profile" }, 403);
 
   // ── Aktion: Kind anlegen (nur Eltern/Erwachsene) ───────────────────────────
   if (body.action === "create_child") {
@@ -89,43 +95,55 @@ Deno.serve(async (req) => {
     return json({ ok: true, childProfileId: ins.data.id });
   }
 
-  // ── Aktion: Kind-/Schüler-Passwort zurücksetzen ────────────────────────────
-  if (body.action === "reset_child_password") {
-    const childProfileId = body.childProfileId ?? "";
-    const password = body.password ?? "";
-    if (!childProfileId) return json({ error: "bad_request" }, 400);
-    if (password.length < 6) return json({ error: "weak_password" }, 400);
-
+  // ── Beziehungs-Check: ist der Aufrufer Erziehungsberechtigte:r (Family-Link)
+  //    bzw. die Lehrkraft der Klasse des Kindes? ───────────────────────────────
+  async function guardedChild(childProfileId: string) {
     const { data: child } = await admin
       .from("profiles")
       .select("id, auth_user_id, role")
       .eq("id", childProfileId)
       .maybeSingle();
-    if (!child || !["child", "student"].includes(child.role)) return json({ error: "not_found" }, 404);
-
-    let allowed = false;
-    if (["parent", "adult"].includes(caller.role)) {
+    if (!child || !["child", "student"].includes(child.role)) return null;
+    if (["parent", "adult"].includes(caller!.role)) {
       const { data: link } = await admin
         .from("parent_child_links")
         .select("status")
-        .eq("parent_profile_id", caller.id)
+        .eq("parent_profile_id", caller!.id)
         .eq("child_profile_id", child.id)
         .eq("status", "approved")
         .maybeSingle();
-      allowed = Boolean(link);
-    } else if (caller.role === "teacher") {
+      if (link) return child;
+    } else if (caller!.role === "teacher") {
       const { data: member } = await admin
         .from("class_members")
         .select("class_id, classes!inner(teacher_profile_id)")
         .eq("child_profile_id", child.id)
-        .eq("classes.teacher_profile_id", caller.id)
+        .eq("classes.teacher_profile_id", caller!.id)
         .limit(1);
-      allowed = (member?.length ?? 0) > 0;
+      if ((member?.length ?? 0) > 0) return child;
     }
-    if (!allowed) return json({ error: "forbidden" }, 403);
+    return null;
+  }
 
+  // ── Aktion: Kind-/Schüler-Passwort zurücksetzen ────────────────────────────
+  if (body.action === "reset_child_password") {
+    const password = body.password ?? "";
+    if (!body.childProfileId) return json({ error: "bad_request" }, 400);
+    if (password.length < 6) return json({ error: "weak_password" }, 400);
+    const child = await guardedChild(body.childProfileId);
+    if (!child) return json({ error: "forbidden" }, 403);
     const upd = await admin.auth.admin.updateUserById(child.auth_user_id, { password });
     if (upd.error) return json({ error: upd.error.message }, 500);
+    return json({ ok: true });
+  }
+
+  // ── Aktion: verknüpftes Kind / Schüler:in der eigenen Klasse löschen ───────
+  if (body.action === "delete_child") {
+    if (!body.childProfileId) return json({ error: "bad_request" }, 400);
+    const child = await guardedChild(body.childProfileId);
+    if (!child) return json({ error: "forbidden" }, 403);
+    const del = await admin.auth.admin.deleteUser(child.auth_user_id);
+    if (del.error) return json({ error: del.error.message }, 500);
     return json({ ok: true });
   }
 

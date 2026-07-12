@@ -8,6 +8,7 @@ import { Body, Card, H1, H2, Muted, Pill } from "../ui/components.js";
 import { DecisionFlow } from "./DecisionFlow.js";
 import { MarketLab } from "./MarketLab.js";
 import { ChildFamilyCard } from "./family/ChildFamilyCard.js";
+import { DeleteAccountSection } from "./DeleteAccount.js";
 import { StudentClassCard } from "./classroom/StudentClassCard.js";
 import { useNav } from "../nav.js";
 import { font, fonts, space, type Palette } from "../theme.js";
@@ -210,6 +211,7 @@ export function Start() {
           <StudentClassCard />
         </>
       )}
+      <DeleteAccountSection />
     </ScrollView>
   );
 }

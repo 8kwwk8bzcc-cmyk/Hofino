@@ -272,6 +272,10 @@ interface StoreApi {
   createChildAccount: (nickname: string, password: string) => Promise<AuthOutcome>;
   /** Eltern/Lehrkraft: setzen das Passwort eines verknuepften Kindes/Schuelers neu. */
   resetChildPassword: (childProfileId: string, password: string) => Promise<AuthOutcome>;
+  /** Loescht das eigene Konto endgueltig (DSGVO / App-Store-Pflicht). */
+  deleteAccount: () => Promise<AuthOutcome>;
+  /** Eltern/Lehrkraft: loeschen ein verknuepftes Kind / Schueler:in der eigenen Klasse. */
+  deleteChildAccount: (childProfileId: string) => Promise<AuthOutcome>;
   createProfile: (name: string, plot: string, role: Role) => Promise<AuthOutcome>;
   signOut: () => Promise<void>;
   completeTutorial: () => void;
@@ -663,6 +667,17 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
 
   const resetChildPassword = useCallback<StoreApi["resetChildPassword"]>(
     (childProfileId, password) => familyAdmin({ action: "reset_child_password", childProfileId, password }),
+    [familyAdmin]
+  );
+
+  const deleteAccount = useCallback<StoreApi["deleteAccount"]>(async () => {
+    const r = await familyAdmin({ action: "delete_self" });
+    if (r.ok) await supabase.auth.signOut();
+    return r;
+  }, [familyAdmin]);
+
+  const deleteChildAccount = useCallback<StoreApi["deleteChildAccount"]>(
+    (childProfileId) => familyAdmin({ action: "delete_child", childProfileId }),
     [familyAdmin]
   );
 
@@ -1219,6 +1234,8 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
     requestConsentMail,
     createChildAccount,
     resetChildPassword,
+    deleteAccount,
+    deleteChildAccount,
     createProfile,
     signOut,
     completeTutorial,
