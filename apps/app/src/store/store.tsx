@@ -268,6 +268,10 @@ interface StoreApi {
   confirmConsent: (childProfileId: string) => Promise<AuthOutcome>;
   /** Kind: Eltern-Mail erneut anfordern (Sweep verschickt sie neu). */
   requestConsentMail: () => Promise<AuthOutcome>;
+  /** Eltern: legen ein Kinderkonto an (Einwilligung gilt als erteilt). */
+  createChildAccount: (nickname: string, password: string) => Promise<AuthOutcome>;
+  /** Eltern/Lehrkraft: setzen das Passwort eines verknuepften Kindes/Schuelers neu. */
+  resetChildPassword: (childProfileId: string, password: string) => Promise<AuthOutcome>;
   createProfile: (name: string, plot: string, role: Role) => Promise<AuthOutcome>;
   signOut: () => Promise<void>;
   completeTutorial: () => void;
@@ -597,6 +601,37 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
     if (error) return { ok: false, message: error.message };
     return { ok: true };
   }, []);
+
+  const familyAdmin = useCallback(async (payload: Record<string, string>): Promise<AuthOutcome> => {
+    const { error } = await supabase.functions.invoke("family-admin", { body: payload });
+    if (!error) return { ok: true };
+    // Fehlercode aus dem Response-Body ziehen (FunctionsHttpError traegt den Response-Kontext).
+    let code = error.message;
+    const ctx = (error as { context?: Response }).context;
+    if (ctx && typeof ctx.json === "function") {
+      try {
+        code = ((await ctx.json()) as { error?: string }).error ?? code;
+      } catch {
+        // Body nicht lesbar -> generische Meldung
+      }
+    }
+    const map: Record<string, string> = {
+      nickname_taken: t("auth.nicknameTaken"),
+      bad_nickname: t("auth.badNickname"),
+      weak_password: t("auth.password"),
+    };
+    return { ok: false, message: map[code] ?? code };
+  }, [t]);
+
+  const createChildAccount = useCallback<StoreApi["createChildAccount"]>(
+    (nickname, password) => familyAdmin({ action: "create_child", nickname, password }),
+    [familyAdmin]
+  );
+
+  const resetChildPassword = useCallback<StoreApi["resetChildPassword"]>(
+    (childProfileId, password) => familyAdmin({ action: "reset_child_password", childProfileId, password }),
+    [familyAdmin]
+  );
 
   const signOut = useCallback(async () => {
     setPasswordRecovery(false);
@@ -1149,6 +1184,8 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
     fetchPendingConsents,
     confirmConsent,
     requestConsentMail,
+    createChildAccount,
+    resetChildPassword,
     createProfile,
     signOut,
     completeTutorial,

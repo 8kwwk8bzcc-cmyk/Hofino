@@ -12,9 +12,13 @@ interface LinkRow {
 }
 
 export function FamilyLink() {
-  const { state, linkChild, fetchFamily, t } = useStore();
+  const { state, linkChild, fetchFamily, createChildAccount, t } = useStore();
   const [code, setCode] = useState("");
   const [msg, setMsg] = useState<string | null>(null);
+  const [newNick, setNewNick] = useState("");
+  const [newPw, setNewPw] = useState("");
+  const [createMsg, setCreateMsg] = useState<string | null>(null);
+  const [creating, setCreating] = useState(false);
   const [links, setLinks] = useState<LinkRow[]>([]);
   const [names, setNames] = useState<Map<string, string>>(new Map());
 
@@ -53,9 +57,55 @@ export function FamilyLink() {
   const c = useColors();
   const styles = useThemedStyles(makeStyles);
 
+  const createChild = async () => {
+    setCreateMsg(null);
+    setCreating(true);
+    const r = await createChildAccount(newNick.trim(), newPw);
+    setCreating(false);
+    if (r.ok) {
+      setCreateMsg(t("family.createChildDone"));
+      setNewNick("");
+      setNewPw("");
+      await reload();
+    } else {
+      setCreateMsg(r.message);
+    }
+  };
+
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <H1>{t("family.linkChild")}</H1>
+      <Card>
+        <H2>{t("family.createChild")}</H2>
+        <Body>{t("family.createChildBody")}</Body>
+        <TextInput
+          testID="new-child-nick"
+          value={newNick}
+          onChangeText={setNewNick}
+          placeholder={t("family.childNickname")}
+          autoCapitalize="none"
+          placeholderTextColor={c.muted}
+          style={styles.input}
+        />
+        <TextInput
+          testID="new-child-pw"
+          value={newPw}
+          onChangeText={setNewPw}
+          placeholder={t("family.childPassword")}
+          autoCapitalize="none"
+          placeholderTextColor={c.muted}
+          style={styles.input}
+        />
+        <Button
+          testID="create-child-submit"
+          title={t("family.createChild")}
+          loading={creating}
+          disabled={newNick.trim().length < 2 || newPw.length < 6}
+          onPress={createChild}
+        />
+        {createMsg && <Text style={styles.msg}>{createMsg}</Text>}
+      </Card>
+
       <Card>
         <H2>{t("family.enterCode")}</H2>
         <Body>{t("family.enterCodeBody")}</Body>

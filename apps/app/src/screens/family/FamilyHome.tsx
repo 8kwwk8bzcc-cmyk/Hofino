@@ -1,17 +1,18 @@
 import React, { useEffect, useState } from "react";
-import { ScrollView, StyleSheet, Text, View } from "react-native";
+import { ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 import { formatEuros, rank } from "@hofino/core";
 import { alleKonzepte } from "@hofino/learning";
 import { useStore, type ChildSummary, type PendingConsent } from "../../store/store.js";
 import { Body, Button, Card, H1, H2, Muted, Pill } from "../../ui/components.js";
 import { formatDateDE } from "../../challengeMetrics.js";
-import { font, fonts, space, type Palette } from "../../theme.js";
-import { useThemedStyles } from "../../theme/ThemeProvider.js";
+import { font, fonts, radius, space, type Palette } from "../../theme.js";
+import { useColors, useThemedStyles } from "../../theme/ThemeProvider.js";
 
 // Eltern-Dashboard: Lernfortschritt + Depotentwicklung der verknüpften Kinder (nur lesend).
 export function FamilyHome() {
-  const { fetchFamily, fetchPendingConsents, confirmConsent, state, t } = useStore();
+  const { fetchFamily, fetchPendingConsents, confirmConsent, resetChildPassword, state, t } = useStore();
   const styles = useThemedStyles(makeStyles);
+  const col = useColors();
   const [children, setChildren] = useState<ChildSummary[] | null>(null);
   const [consents, setConsents] = useState<PendingConsent[]>([]);
   const [consentError, setConsentError] = useState<string | null>(null);
@@ -29,6 +30,22 @@ export function FamilyHome() {
       active = false;
     };
   }, [fetchFamily, fetchPendingConsents, state.pendingLinks]);
+
+  const [resetFor, setResetFor] = useState<string | null>(null);
+  const [resetPw, setResetPw] = useState("");
+  const [resetMsg, setResetMsg] = useState<string | null>(null);
+
+  const doReset = async (childProfileId: string) => {
+    setResetMsg(null);
+    setBusy(childProfileId);
+    const r = await resetChildPassword(childProfileId, resetPw);
+    setBusy(null);
+    setResetMsg(r.ok ? t("family.resetPwDone") : r.message);
+    if (r.ok) {
+      setResetPw("");
+      setResetFor(null);
+    }
+  };
 
   const confirm = async (childProfileId: string) => {
     setConsentError(null);
@@ -105,9 +122,41 @@ export function FamilyHome() {
                 <Muted>{t("home.knowledge")}</Muted>
                 <Text style={styles.val}>{c.knowledgePoints}</Text>
               </View>
+              {resetFor === c.profileId ? (
+                <View style={{ gap: space.sm }}>
+                  <TextInput
+                    testID={`reset-pw-input-${c.displayName}`}
+                    value={resetPw}
+                    onChangeText={setResetPw}
+                    placeholder={t("family.newPw")}
+                    autoCapitalize="none"
+                    placeholderTextColor={col.muted}
+                    style={styles.input}
+                  />
+                  <Button
+                    testID={`reset-pw-save-${c.displayName}`}
+                    title={t("family.resetPw")}
+                    loading={busy === c.profileId}
+                    disabled={resetPw.length < 6}
+                    onPress={() => doReset(c.profileId)}
+                  />
+                </View>
+              ) : (
+                <Button
+                  testID={`reset-pw-${c.displayName}`}
+                  title={t("family.resetPw")}
+                  variant="ghost"
+                  onPress={() => {
+                    setResetMsg(null);
+                    setResetFor(c.profileId);
+                  }}
+                />
+              )}
+              {resetFor === c.profileId && resetMsg && <Muted>{resetMsg}</Muted>}
               <Muted>{t("family.readOnly")}</Muted>
             </Card>
           ))}
+          {resetFor === null && resetMsg && <Muted>{resetMsg}</Muted>}
 
           {children.length > 1 && (
             <Card>
@@ -131,6 +180,16 @@ export function FamilyHome() {
 
 const makeStyles = (c: Palette) =>
   StyleSheet.create({
+    input: {
+      borderWidth: 1,
+      borderColor: c.border,
+      borderRadius: radius.md,
+      padding: space.md,
+      fontSize: font.body,
+      fontFamily: fonts.body,
+      color: c.text,
+      backgroundColor: c.surface,
+    },
     container: { padding: space.lg, gap: space.md, backgroundColor: c.bg },
     top: { marginTop: space.sm },
     row: { flexDirection: "row", justifyContent: "space-between", alignItems: "center" },
