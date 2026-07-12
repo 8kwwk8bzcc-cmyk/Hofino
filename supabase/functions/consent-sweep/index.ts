@@ -33,14 +33,32 @@ Deno.serve(async (req) => {
     .eq("consent_status", "pending");
   if (error) return json({ ok: false, error: error.message }, 500);
 
+  // Mail-Drossel je Zieladresse (Review-Fund "Mail-Bombing"): pro Sweep-Lauf
+  // höchstens EINE Mail je Adresse, und keine, wenn dieselbe Adresse in den
+  // letzten 24 h schon eine bekommen hat (egal über welches Kind-Konto).
+  const lastMailByAddress = new Map<string, number>();
+  for (const p of pending ?? []) {
+    const addr = (p.consent_parent_email ?? "").trim().toLowerCase();
+    if (!addr) continue;
+    const ts = Math.max(
+      p.consent_mail_sent_at ? new Date(p.consent_mail_sent_at).getTime() : 0,
+      p.consent_reminded_at ? new Date(p.consent_reminded_at).getTime() : 0,
+    );
+    lastMailByAddress.set(addr, Math.max(lastMailByAddress.get(addr) ?? 0, ts));
+  }
+  const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
   for (const p of pending ?? []) {
     const email = (p.consent_parent_email ?? "").trim();
-    if (!email) continue;
+    const addr = email.toLowerCase();
+    if (!email || !EMAIL_RE.test(email)) continue;
     const needFirst = !p.consent_mail_sent_at;
     const deadlineSoon =
       p.consent_deadline !== null && new Date(p.consent_deadline).getTime() - now.getTime() <= 2 * DAY_MS;
     const needReminder = !needFirst && !p.consent_reminded_at && deadlineSoon;
     if (!needFirst && !needReminder) continue;
+    if (now.getTime() - (lastMailByAddress.get(addr) ?? 0) < DAY_MS) continue;
+    lastMailByAddress.set(addr, now.getTime());
 
     const sent = await sendParentMail(sb, email, appUrl);
     if (!sent.ok) {
@@ -58,7 +76,7 @@ Deno.serve(async (req) => {
   // ── 2) Frist abgelaufen → sperren ─────────────────────────────────────────
   const { data: blockedRows } = await sb
     .from("profiles")
-    .update({ consent_status: "blocked" })
+    .update({ consent_status: "blocked", consent_blocked_at: now.toISOString() })
     .eq("role", "child")
     .eq("consent_status", "pending")
     .lt("consent_deadline", now.toISOString())
@@ -72,7 +90,7 @@ Deno.serve(async (req) => {
     .select("id, auth_user_id")
     .eq("role", "child")
     .eq("consent_status", "blocked")
-    .lt("consent_deadline", deleteBefore);
+    .lt("consent_blocked_at", deleteBefore);
   for (const p of expired ?? []) {
     const del = await sb.auth.admin.deleteUser(p.auth_user_id);
     if (del.error) stats.errors.push(`delete ${p.id}: ${del.error.message}`);

@@ -47,15 +47,27 @@ In-App-Selbstlöschung ist Pflicht (DSGVO + **App-Store-Vorgabe von Apple**). El
 ## 6. Datenmodell-Skizze
 `profiles` erweitert um: `consent_status` (`approved` | `pending` | `blocked`; Default `approved` für Erwachsenen-Rollen), `consent_deadline timestamptz`, `consent_source` (`parent` | `school` | `self_adult`), `consent_confirmed_at`, `consent_text_version`. Neuer Cron `hofino-consent-sweep` (täglich): `pending`-Fristablauf → `blocked`; `blocked` > 30 Tage → löschen. RLS bleibt unverändert; die Sperre erzwingt zusätzlich eine Server-Prüfung in den Schreib-RPCs (nicht nur UI).
 
-## 7. Umsetzungspakete (Reihenfolge)
-1. **A – Erwachsenen-/Eltern-/Lehrer-Registrierung** wieder aktivieren (E-Mail-Flow existiert), Dev-Login hinter Build-Flag (`EXPO_PUBLIC_DEV_LOGIN`), im Pages-Deploy vorerst AN.
-2. **B – Kind-Selbstregistrierung**: Spitzname-Alias, Probefrist-Felder, sofortige Nutzbarkeit.
-3. **C – Eltern-Bestätigungsflow**: Mail, Bestätigungsseite, Family-Auto-Link, Erinnerung/Sperre/Löschung (Cron).
-4. **D – Eltern legt Kind an** + Passwort-Reset durch Eltern/Lehrkraft.
-5. **E – Schul-Checkbox + PDF-Vorlage** beim Klassen-Anlegen.
-6. **F – Konto-Löschung in-App** (alle Rollen).
-7. **G – Doku/Store-Vorbereitung**: 12+-Texte, Datenschutzerklärung (extern), `/security-review` über die gesamte Auth-Strecke.
+## 7. Umsetzungspakete — Stand 2026-07-12: A–F UMGESETZT & verifiziert
+1. **A – erledigt.** Echte Registrierung/Anmeldung + Passwort-Reset per Mail (`NewPassword`-Screen), Dev-Login hinter `EXPO_PUBLIC_DEV_LOGIN` mit Umschalter zur echten Anmeldung.
+2. **B – erledigt.** Kind-Selbstregistrierung: Spitzname-Alias (`@kids.hofino.invalid`), Insert-Trigger erzwingt pending + 7-Tage-Frist, Login per Spitzname, UPDATE auf profiles für Clients gesperrt.
+3. **C – erledigt.** Edge Function `consent-sweep` (Cron :10): Eltern-Mails via GoTrue (Invite/Magic-Link), Erinnerung, Sperre, Löschung nach 30 Tagen. RPCs für Eltern-Bestätigung + Family-Auto-Link; Sperrbildschirm + Pending-Banner; blocked serverseitig via Insert-Trigger.
+4. **D – erledigt.** Edge Function `family-admin`: `create_child` (Einwilligung gilt als erteilt) + `reset_child_password` (Eltern: verknüpfte Kinder; Lehrkraft: eigene Klasse).
+5. **E – erledigt.** `create_class` verlangt Einwilligungs-Checkbox (Zeitstempel als Nachweis), druckbare Vorlage (`ConsentTemplate`), Schüler-Registrierung per Klassencode ohne E-Mail (`register-student`), Rolle Schüler:in im Onboarding, Client-Inserts von Schüler-Profilen abgelehnt.
+6. **F – erledigt.** `delete_self` (alle Rollen) + `delete_child` (Eltern/Lehrkraft) in `family-admin`; zweistufige Lösch-UI auf allen Haupt-Screens + je Kind im Familien-Dashboard; Cascade-Kette verifiziert.
+7. **G – erledigt.** Security-Review durchgeführt und Funde behoben (§8). Offen extern: Datenschutzerklärungs-URL, App-Privacy-Angaben, Support-Kontakt (erst zur Store-Einreichung nötig; native App via EAS kommt später).
 
-## 8. Launch-Schalter (Cloud, nicht vergessen)
+## 8. Security-Review (2026-07-12) — behoben & Restrisiken
+Unabhängiger Review über die gesamte Strecke; behoben:
+- **Selbst-Einwilligung:** `einwilligung_bestaetigen`/`offene_einwilligungen` verlangen jetzt eine **verifizierte** E-Mail (`auth.users.email_confirmed_at`). Greift automatisch scharf, sobald die E-Mail-Bestätigung aktiviert wird (§9) — vorher könnte ein Kind mit einem unbestätigten Zweitkonto die eigene Einwilligung erteilen.
+- **Klassencode-Enumeration/Spam:** `register-student` antwortet generisch (kein 404/403-Unterschied) und deckelt Klassen auf 40 Mitglieder.
+- **Mail-Bombing:** `consent-sweep` validiert die Eltern-Adresse und drosselt auf max. 1 Mail/24 h je Zieladresse (über alle Kind-Konten hinweg); `einwilligung_mail_anfordern` bleibt auf 1×/h limitiert.
+- **Löschfrist:** neue Spalte `consent_blocked_at`; die 30 Tage messen ab tatsächlicher Sperre.
+- `display_name` serverseitig auf 1–40 Zeichen begrenzt.
+
+**Bewusste Restrisiken (dokumentiert, nicht technisch lösbar):**
+- **Alters-Selbstauskunft:** Ein Kind kann sich als „Erwachsene" registrieren und so den Einwilligungsflow umgehen — wie bei praktisch allen Apps ohne Ausweisprüfung (Age Assurance wäre unverhältnismäßig für ein MVP ohne echtes Geld, ohne Chat, ohne Werbung). Die Inhalte sind für alle Rollen kindgeeignet (Guard-Tests).
+- E-Mail-Besitz = Einwilligungsnachweis (Double-Opt-In-Standard, DSGVO Art. 8 „angemessene Anstrengungen").
+
+## 9. Launch-Schalter (Cloud, nicht vergessen)
 - `mailer_autoconfirm` ist in der Cloud derzeit **an** (nötig für die Dev-Login-Personas). Vor dem Launch **ausschalten** (E-Mail-Bestätigung Pflicht) und Dev-Login im Deploy deaktivieren (`EXPO_PUBLIC_DEV_LOGIN` aus `deploy-web.yml` entfernen).
 - Auth-URLs sind gesetzt: `site_url` + Allowlist zeigen auf `https://8kwwk8bzcc-cmyk.github.io/Hofino/` (2026-07-11). Eigene SMTP-Konfiguration prüfen (Supabase-Default ist stark ratenlimitiert).

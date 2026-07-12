@@ -45,13 +45,21 @@ Deno.serve(async (req) => {
   const admin = createClient(Deno.env.get("SUPABASE_URL")!, Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!);
 
   // Klasse prüfen: existiert + Lehrkraft hat die Einwilligungen bestätigt.
+  // Bewusst EINE generische Fehlermeldung (Review-Fund: unterscheidbare
+  // Antworten erlauben Klassencode-Enumeration).
   const { data: klass } = await admin
     .from("classes")
     .select("id, consent_confirmed_at")
     .eq("class_code", classCode)
     .maybeSingle();
-  if (!klass) return json({ error: "class_not_found" }, 404);
-  if (!klass.consent_confirmed_at) return json({ error: "class_without_consent" }, 403);
+  if (!klass || !klass.consent_confirmed_at) return json({ error: "class_not_found" }, 400);
+
+  // Deckel gegen Konten-Spam über einen bekannten Code (Schulklassen-Größe).
+  const { count } = await admin
+    .from("class_members")
+    .select("class_id", { count: "exact", head: true })
+    .eq("class_id", klass.id);
+  if ((count ?? 0) >= 40) return json({ error: "class_full" }, 409);
 
   const created = await admin.auth.admin.createUser({ email: alias, password, email_confirm: true });
   if (created.error) {
