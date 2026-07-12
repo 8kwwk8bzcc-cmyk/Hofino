@@ -281,7 +281,7 @@ interface StoreApi {
   linkChild: (childCode: string) => Promise<AuthOutcome>;
   respondToLink: (parentProfileId: string, approve: boolean) => Promise<void>;
   fetchFamily: () => Promise<ChildSummary[]>;
-  createClass: (name: string) => Promise<AuthOutcome & { code?: string }>;
+  createClass: (name: string, consent: boolean) => Promise<AuthOutcome & { code?: string }>;
   joinClass: (code: string) => Promise<AuthOutcome>;
   fetchTeacherClass: () => Promise<TeacherClass | null>;
   fetchClassOverview: (classId: string) => Promise<ClassOverviewRow[]>;
@@ -487,6 +487,39 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
 
   const register = useCallback<StoreApi["register"]>(
     async (name, plot, email, password, role) => {
+      // Schueler: Registrierung ueber den Schulweg (Edge Function prueft den
+      // Klassencode + Schul-Einwilligung); `email` ist hier der KLASSENCODE.
+      if (role === "student") {
+        const { error: fnError } = await supabase.functions.invoke("register-student", {
+          body: { nickname: name, password, classCode: email },
+        });
+        if (fnError) {
+          let code = fnError.message;
+          const ctx = (fnError as { context?: Response }).context;
+          if (ctx && typeof ctx.json === "function") {
+            try {
+              code = ((await ctx.json()) as { error?: string }).error ?? code;
+            } catch {
+              // Body nicht lesbar
+            }
+          }
+          const map: Record<string, string> = {
+            nickname_taken: t("auth.nicknameTaken"),
+            bad_nickname: t("auth.badNickname"),
+            class_not_found: t("auth.classNotFound"),
+            class_without_consent: t("auth.classNotFound"),
+          };
+          return { ok: false, message: map[code] ?? code };
+        }
+        const aliasLogin = kidsAlias(name);
+        const { error: loginError } = await supabase.auth.signInWithPassword({
+          email: aliasLogin ?? "",
+          password,
+        });
+        if (loginError) return { ok: false, message: loginError.message };
+        await load();
+        return { ok: true };
+      }
       // Kinder melden sich ohne eigene E-Mail an: der Spitzname wird zu einem
       // internen Alias (empfaengt nie Mails); `email` ist hier die Eltern-E-Mail.
       const isChild = role === "child";
@@ -776,9 +809,9 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
     });
   }, []);
 
-  const createClass = useCallback<StoreApi["createClass"]>(async (name) => {
+  const createClass = useCallback<StoreApi["createClass"]>(async (name, consent) => {
     try {
-      const { data: res, error } = await supabase.rpc("create_class", { p_name: name });
+      const { data: res, error } = await supabase.rpc("create_class", { p_name: name, p_consent: consent });
       if (error) return { ok: false, message: error.message };
       if (!res?.ok) return { ok: false, message: res?.reason ?? t("store.genericError") };
       return { ok: true, code: res.class_code as string };

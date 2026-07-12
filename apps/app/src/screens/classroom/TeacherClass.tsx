@@ -21,6 +21,7 @@ import {
   type ChallengeStudentStats,
 } from "../../challengeMetrics.js";
 import { TeacherPresentation } from "./TeacherPresentation.js";
+import { ConsentTemplate } from "./ConsentTemplate.js";
 import { TeacherContentBeamer } from "./TeacherContentBeamer.js";
 import { useToast } from "../../ui/Toast.js";
 import { font, fonts, radius, space, type Palette } from "../../theme.js";
@@ -264,9 +265,12 @@ export function TeacherClass() {
     reload();
   }, [reload]);
 
+  const [consentChecked, setConsentChecked] = useState(false);
+  const [showTemplate, setShowTemplate] = useState(false);
+
   const create = async () => {
     setMsg(null);
-    const r = await createClass(name.trim());
+    const r = await createClass(name.trim(), consentChecked);
     if (r.ok) {
       setName("");
       await reload();
@@ -280,6 +284,9 @@ export function TeacherClass() {
 
   if (!loaded) return null;
 
+  if (showTemplate) {
+    return <ConsentTemplate onClose={() => setShowTemplate(false)} />;
+  }
   if (presenting && cls) {
     return <TeacherPresentation classCode={cls.code} onClose={() => setPresenting(false)} />;
   }
@@ -303,7 +310,28 @@ export function TeacherClass() {
             placeholderTextColor={c.muted}
             style={styles.input}
           />
-          <Button title={t("class.create")} onPress={create} disabled={name.trim().length < 1} testID="create-class" />
+          <Pressable
+            testID="consent-checkbox"
+            onPress={() => setConsentChecked((v) => !v)}
+            style={styles.checkRow}
+          >
+            <View style={[styles.checkbox, consentChecked && styles.checkboxOn]}>
+              {consentChecked && <Text style={styles.checkmark}>✓</Text>}
+            </View>
+            <Text style={styles.checkLabel}>{t("class.consentCheck")}</Text>
+          </Pressable>
+          <Button
+            title={t("class.consentTemplate")}
+            variant="ghost"
+            onPress={() => setShowTemplate(true)}
+            testID="show-consent-template"
+          />
+          <Button
+            title={t("class.create")}
+            onPress={create}
+            disabled={name.trim().length < 1 || !consentChecked}
+            testID="create-class"
+          />
           {msg && <Text style={styles.msg}>{msg}</Text>}
         </Card>
       ) : (
@@ -535,6 +563,20 @@ export function TeacherClass() {
 
 const makeStyles = (c: Palette) =>
   StyleSheet.create({
+    checkRow: { flexDirection: "row", alignItems: "flex-start", gap: space.sm },
+    checkbox: {
+      width: 24,
+      height: 24,
+      borderRadius: 6,
+      borderWidth: 2,
+      borderColor: c.border,
+      alignItems: "center",
+      justifyContent: "center",
+      backgroundColor: c.surface,
+    },
+    checkboxOn: { borderColor: c.green, backgroundColor: c.mint },
+    checkmark: { color: c.green, fontWeight: "800", fontFamily: fonts.bodyBold },
+    checkLabel: { flex: 1, fontSize: font.small, color: c.text, fontFamily: fonts.body },
     container: { padding: space.lg, gap: space.md, backgroundColor: c.bg },
     input: {
       borderWidth: 1,

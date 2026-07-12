@@ -96,22 +96,31 @@ function Credentials({
   );
 }
 
-type RegRole = "child" | "adult" | "parent" | "teacher";
+type RegRole = "child" | "student" | "adult" | "parent" | "teacher";
 const ROLE_OPTIONS: { id: RegRole; label: string }[] = [
   { id: "child", label: "Kind (12–15)" },
+  { id: "student", label: "Schüler:in" },
   { id: "adult", label: "Erwachsene" },
   { id: "parent", label: "Eltern" },
   { id: "teacher", label: "Lehrer" },
 ];
 
-function RoleToggle({ role, onChange }: { role: RegRole; onChange: (r: RegRole) => void }) {
+function RoleToggle({
+  role,
+  onChange,
+  exclude = [],
+}: {
+  role: RegRole;
+  onChange: (r: RegRole) => void;
+  exclude?: RegRole[];
+}) {
   const { t } = useStore();
   const styles = useThemedStyles(makeStyles);
   return (
     <View style={styles.block}>
       <Text style={styles.label}>{t("auth.roleQuestion")}</Text>
       <View style={styles.tabs}>
-        {ROLE_OPTIONS.map((o) => (
+        {ROLE_OPTIONS.filter((o) => !exclude.includes(o.id)).map((o) => (
           <Pressable
             key={o.id}
             testID={`role-${o.id}`}
@@ -143,7 +152,9 @@ export function Onboarding({ footer }: { footer?: React.ReactNode }) {
   // Anmelden geht auch mit Spitzname (Kinderkonten, kein @)
   const nickOk = !email.includes("@") && email.trim().length >= 2;
   const plotOk = !FLAGS.house_enabled || role !== "child" || plot !== "";
-  const canRegister = name.trim().length >= 2 && plotOk && emailOk && password.length >= 6;
+  // Schueler: `email` ist der Klassencode (6 Zeichen), keine E-Mail noetig.
+  const credentialOk = role === "student" && mode === "register" ? email.trim().length >= 6 : emailOk;
+  const canRegister = name.trim().length >= 2 && plotOk && credentialOk && password.length >= 6;
   const canLogin = (emailOk || nickOk) && password.length >= 6;
 
   const submit = async () => {
@@ -182,7 +193,7 @@ export function Onboarding({ footer }: { footer?: React.ReactNode }) {
         <>
           <RoleToggle role={role} onChange={setRole} />
           <NameInput value={name} onChange={setName} />
-          {role === "child" && <Muted>{t("auth.childNickHint")}</Muted>}
+          {(role === "child" || role === "student") && <Muted>{t("auth.childNickHint")}</Muted>}
           {FLAGS.house_enabled && role === "child" && <PlotPicker value={plot} onChange={setPlot} />}
         </>
       )}
@@ -192,7 +203,13 @@ export function Onboarding({ footer }: { footer?: React.ReactNode }) {
         onEmail={setEmail}
         onPassword={setPassword}
         emailPlaceholder={
-          mode === "login" ? t("auth.loginId") : role === "child" ? t("auth.parentEmail") : undefined
+          mode === "login"
+            ? t("auth.loginId")
+            : role === "child"
+              ? t("auth.parentEmail")
+              : role === "student"
+                ? t("auth.classCode")
+                : undefined
         }
       />
 
@@ -215,6 +232,7 @@ export function Onboarding({ footer }: { footer?: React.ReactNode }) {
       )}
 
       {mode === "register" && role === "child" && <Body>{t("auth.childConsentNote")}</Body>}
+      {mode === "register" && role === "student" && <Body>{t("auth.studentNote")}</Body>}
       {mode === "register" && (role === "child" || role === "adult") && (
         <Body>{t("auth.startCapitalNote", { amount: formatEuros(START_CAPITAL_CENTS) })}</Body>
       )}
@@ -325,7 +343,7 @@ export function ProfileSetup() {
         <HLogo size={56} />
         <H1>{t("auth.profileSetupTitle")}</H1>
       </View>
-      <RoleToggle role={role} onChange={setRole} />
+      <RoleToggle role={role} onChange={setRole} exclude={["student"]} />
       <NameInput value={name} onChange={setName} />
       {FLAGS.house_enabled && role === "child" && <PlotPicker value={plot} onChange={setPlot} />}
       {error && <Text style={styles.error}>{error}</Text>}

@@ -421,3 +421,6 @@ verify_jwt = false
 
 [functions.consent-sweep]
 verify_jwt = false
+
+[functions.register-student]
+verify_jwt = false
