@@ -146,6 +146,8 @@ export interface PendingConsent {
 
 interface Data {
   sessionUserId: string | null;
+  /** E-Mail der Auth-Session (leer bei Kinder-Alias ohne echte Mail). */
+  sessionEmail: string;
   profileId: string | null;
   role: Role;
   /** Einwilligungs-Status (Kinderkonten): approved | pending | blocked. */
@@ -175,6 +177,7 @@ interface Data {
 
 const EMPTY: Data = {
   sessionUserId: null,
+  sessionEmail: "",
   profileId: null,
   role: "child",
   consentStatus: "approved",
@@ -232,6 +235,8 @@ interface StoreApi {
   state: {
     onboarded: boolean;
     hasSession: boolean;
+    /** E-Mail der Auth-Session (fuer das Admin-Gate). */
+    sessionEmail: string;
     /** Einwilligungs-Status des eigenen Profils (Kinderkonten). */
     consentStatus: string;
     consentDeadline: string | null;
@@ -398,7 +403,7 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
       .maybeSingle();
 
     if (!profileRes.data) {
-      setData({ ...EMPTY, sessionUserId: user.id, profileId: null, loading: false });
+      setData({ ...EMPTY, sessionUserId: user.id, sessionEmail: user.email ?? "", profileId: null, loading: false });
       return;
     }
     const profileId = profileRes.data.id as string;
@@ -441,6 +446,7 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
 
     setData({
       sessionUserId: user.id,
+      sessionEmail: user.email ?? "",
       profileId,
       role,
       consentStatus: (profileRes.data.consent_status as string) ?? "approved",
@@ -1239,6 +1245,7 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
     state: {
       onboarded: data.profileId !== null,
       hasSession: data.sessionUserId !== null,
+      sessionEmail: data.sessionEmail,
       consentStatus: data.consentStatus,
       consentDeadline: data.consentDeadline,
       passwordRecovery,

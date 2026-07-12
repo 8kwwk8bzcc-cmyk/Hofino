@@ -76,7 +76,7 @@ async function setupStudentTeacher(): Promise<void> {
     .maybeSingle();
   let code = existing.data?.class_code as string | undefined;
   if (!code) {
-    const r = await supabase.rpc("create_class", { p_name: "Testklasse" });
+    const r = await supabase.rpc("create_class", { p_name: "Testklasse", p_consent: true });
     code = r.data?.class_code as string;
   }
   await supabase.auth.signOut();
@@ -95,7 +95,15 @@ async function finishAs(p: Persona): Promise<void> {
   if (r.error) throw new Error(r.error.message);
 }
 
-export function DevLogin({ onRealAuth }: { onRealAuth?: () => void }) {
+export function DevLogin({
+  onRealAuth,
+  onRealAuthLabel = "Zur echten Anmeldung",
+  onContinueAsSelf,
+}: {
+  onRealAuth?: () => void;
+  onRealAuthLabel?: string;
+  onContinueAsSelf?: () => void;
+}) {
   const styles = useThemedStyles(makeStyles);
   const [busy, setBusy] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -181,8 +189,16 @@ export function DevLogin({ onRealAuth }: { onRealAuth?: () => void }) {
       </Card>
 
       {error && <Text style={styles.error}>{error}</Text>}
+      {onContinueAsSelf && (
+        <Button
+          title="Als dieses Konto weiter (z. B. für Einwilligungen)"
+          testID="dev-continue-self"
+          variant="secondary"
+          onPress={onContinueAsSelf}
+        />
+      )}
       {onRealAuth && (
-        <Button title="Zur echten Anmeldung" testID="dev-real-auth" variant="ghost" onPress={onRealAuth} />
+        <Button title={onRealAuthLabel} testID="dev-real-auth" variant="ghost" onPress={onRealAuth} />
       )}
       <Muted>Nur zum Testen – vor dem echten Launch abschalten.</Muted>
     </ScrollView>

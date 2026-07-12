@@ -25,9 +25,8 @@ jobs:
       EXPO_PUBLIC_SUPABASE_ANON_KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImlwcmpobmZycGVmc21uZ3Zza2VoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODI2MDIzMzUsImV4cCI6MjA5ODE3ODMzNX0.m6Z40c_iUNFPM33kcideccETsPxrTC6M_HmoYht7Vac
       # Unterpfad auf GitHub Pages: https://<user>.github.io/Hofino/
       EXPO_BASE_URL: /Hofino
-      # TEMPORÄR: Entwickler-Login statt normaler Anmeldung (Persona-Auswahl zum
-      # Durchtesten). VOR dem echten Launch entfernen!
-      EXPO_PUBLIC_DEV_LOGIN: "1"
+      # Persona-Auswahl gibt es nur noch nach Anmeldung mit dem Betreiber-Konto
+      # (Admin-Gate in App.tsx) — kein Dev-Login-Flag im Deploy mehr.
     steps:
       - uses: actions/checkout@v4
 

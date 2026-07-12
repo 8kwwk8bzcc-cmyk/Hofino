@@ -197,6 +197,11 @@ function TeacherShell() {
   );
 }
 
+// Betreiber-Zugang: Nach Anmeldung mit dieser E-Mail erscheint die
+// Persona-Auswahl (statt der App). Nur UI-Komfort, keine Sonderrechte —
+// die Personas sind normale Testkonten.
+const ADMIN_EMAIL = "hofstetter@agendaro.de";
+
 // Auth-Einstieg: mit DEV_LOGIN sind Personas UND die echte Anmeldung erreichbar
 // (Umschalter), ohne Flag gibt es nur die echte Anmeldung.
 function AuthEntry() {
@@ -214,8 +219,12 @@ function AuthEntry() {
 }
 
 function Gate() {
-  const { state } = useStore();
+  const { state, signOut } = useStore();
   const c = useColors();
+  // Betreiber will ausnahmsweise als das Admin-Konto selbst in die App
+  // (z. B. um eine Einwilligung zu bestätigen, deren Eltern-Mail die
+  // Admin-Adresse ist) — Persona-Auswahl dann für diese Sitzung umgehen.
+  const [adminBypass, setAdminBypass] = useState(false);
   if (state.loading) {
     return (
       <View style={[styles.center, { backgroundColor: c.bg }]}>
@@ -225,6 +234,15 @@ function Gate() {
   }
   if (!state.hasSession) return <AuthEntry />;
   if (state.passwordRecovery) return <NewPassword />;
+  if (state.sessionEmail.toLowerCase() === ADMIN_EMAIL && !adminBypass) {
+    return (
+      <DevLogin
+        onRealAuth={signOut}
+        onRealAuthLabel="Abmelden"
+        onContinueAsSelf={() => setAdminBypass(true)}
+      />
+    );
+  }
   if (!state.onboarded) return <ProfileSetup />;
   if (state.consentStatus === "blocked") return <ConsentBlocked />;
   if (state.role === "parent") return <ParentShell />;

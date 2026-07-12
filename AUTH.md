@@ -69,6 +69,7 @@ Unabhängiger Review über die gesamte Strecke; behoben:
 - E-Mail-Besitz = Einwilligungsnachweis (Double-Opt-In-Standard, DSGVO Art. 8 „angemessene Anstrengungen").
 
 ## 9. Launch-Schalter (Cloud, nicht vergessen)
-- `mailer_autoconfirm` ist in der Cloud derzeit **an** (nötig für die Dev-Login-Personas). Vor dem Launch **ausschalten** (E-Mail-Bestätigung Pflicht) und Dev-Login im Deploy deaktivieren (`EXPO_PUBLIC_DEV_LOGIN` aus `deploy-web.yml` entfernen).
+- **Dev-Login ist aus dem öffentlichen Deploy entfernt (2026-07-12).** Die Persona-Auswahl erscheint nur noch nach Anmeldung mit dem Betreiber-Konto (`hofstetter@agendaro.de`, Admin-Gate in `App.tsx`; „Als dieses Konto weiter" umgeht das Gate bei Bedarf). Lokal weiterhin über `EXPO_PUBLIC_DEV_LOGIN=1` (Cockpit/LAN-Test).
+- `mailer_autoconfirm` ist in der Cloud derzeit **an** (nötig für das Persona-Bootstrapping und die sofortige Kind-Registrierung). Vor dem Launch **ausschalten** (E-Mail-Bestätigung Pflicht); dann Kind-Registrierung auf eine Edge Function umstellen (Alias-Konten können keine Mail bestätigen) und beachten, dass die Personas dann nicht mehr selbst-bootstrappen.
 - Auth-URLs sind gesetzt: `site_url` + Allowlist zeigen auf `https://8kwwk8bzcc-cmyk.github.io/Hofino/` (2026-07-11).
 - **SMTP (vor Tests mit mehreren Familien):** Der Supabase-Standard-Mailer ist auf ~2 Mails/Stunde begrenzt und erlaubt KEINE eigenen Templates. Eigenen SMTP-Provider einrichten (Dashboard → Authentication → Emails → SMTP), danach die vorbereiteten deutschen Templates setzen: `SUPABASE_ACCESS_TOKEN=… node supabase/templates/set-cloud-templates.mjs`. Lokal sind die deutschen Templates bereits aktiv (config.toml → `supabase/templates/*.html`).
