@@ -424,3 +424,20 @@ verify_jwt = false
 
 [functions.register-student]
 verify_jwt = false
+
+# Deutsche Mail-Templates (Testbereitschaft; Cloud-Pendant via Management-API gesetzt)
+[auth.email.template.invite]
+subject = "Einwilligung für dein Kind bei Hofino"
+content_path = "./supabase/templates/invite.html"
+
+[auth.email.template.magic_link]
+subject = "Dein Anmelde-Link für Hofino"
+content_path = "./supabase/templates/magic_link.html"
+
+[auth.email.template.recovery]
+subject = "Hofino: Passwort zurücksetzen"
+content_path = "./supabase/templates/recovery.html"
+
+[auth.email.template.confirmation]
+subject = "Willkommen bei Hofino – bitte E-Mail bestätigen"
+content_path = "./supabase/templates/confirmation.html"

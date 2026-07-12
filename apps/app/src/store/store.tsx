@@ -500,6 +500,22 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
     return () => sub.subscription.unsubscribe();
   }, [load]);
 
+  // Haeufige GoTrue-Fehler in verstaendliches Deutsch/Englisch uebersetzen.
+  const authErrorText = useCallback(
+    (message: string): string => {
+      const m = message.toLowerCase();
+      if (m.includes("invalid login credentials")) return t("authErr.badCredentials");
+      if (m.includes("already registered") || m.includes("already exists")) return t("authErr.emailTaken");
+      if (m.includes("not confirmed")) return t("authErr.unconfirmed");
+      if (m.includes("failed to fetch") || m.includes("network")) return t("authErr.network");
+      if (m.includes("rate limit") || m.includes("for security purposes")) return t("authErr.rateLimit");
+      if (m.includes("at least 6 characters")) return t("authErr.weakPassword");
+      if (m.includes("different from the old")) return t("authErr.samePassword");
+      return message;
+    },
+    [t]
+  );
+
   const register = useCallback<StoreApi["register"]>(
     async (name, plot, email, password, role) => {
       // Schueler: Registrierung ueber den Schulweg (Edge Function prueft den
@@ -531,7 +547,7 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
           email: aliasLogin ?? "",
           password,
         });
-        if (loginError) return { ok: false, message: loginError.message };
+        if (loginError) return { ok: false, message: authErrorText(loginError.message) };
         await load();
         return { ok: true };
       }
@@ -543,7 +559,8 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
       const { data: res, error } = await supabase.auth.signUp({ email: authEmail!, password });
       if (error) {
         const taken = /already registered|already exists/i.test(error.message);
-        return { ok: false, message: isChild && taken ? t("auth.nicknameTaken") : error.message };
+        if (isChild && taken) return { ok: false, message: t("auth.nicknameTaken") };
+        return { ok: false, message: authErrorText(error.message) };
       }
       const user = res.user;
       if (!user) return { ok: false, message: "Keine Session erhalten." };
@@ -578,7 +595,7 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
       await load();
       return { ok: true };
     },
-    [load, t]
+    [load, t, authErrorText]
   );
 
   const createProfile = useCallback<StoreApi["createProfile"]>(
@@ -604,11 +621,11 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
       // Eingabe ohne @ = Spitzname eines Kindes -> interner Alias.
       const authEmail = email.includes("@") ? email : (kidsAlias(email) ?? email);
       const { error } = await supabase.auth.signInWithPassword({ email: authEmail, password });
-      if (error) return { ok: false, message: error.message };
+      if (error) return { ok: false, message: authErrorText(error.message) };
       await load();
       return { ok: true };
     },
-    [load]
+    [load, authErrorText]
   );
 
   const resetPassword = useCallback<StoreApi["resetPassword"]>(async (email) => {
@@ -616,16 +633,16 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
     const redirectTo =
       globalThis.location ? globalThis.location.origin + globalThis.location.pathname : undefined;
     const { error } = await supabase.auth.resetPasswordForEmail(email, { redirectTo });
-    if (error) return { ok: false, message: error.message };
+    if (error) return { ok: false, message: authErrorText(error.message) };
     return { ok: true };
-  }, []);
+  }, [authErrorText]);
 
   const updatePassword = useCallback<StoreApi["updatePassword"]>(async (password) => {
     const { error } = await supabase.auth.updateUser({ password });
-    if (error) return { ok: false, message: error.message };
+    if (error) return { ok: false, message: authErrorText(error.message) };
     setPasswordRecovery(false);
     return { ok: true };
-  }, []);
+  }, [authErrorText]);
 
   const fetchPendingConsents = useCallback<StoreApi["fetchPendingConsents"]>(async () => {
     const { data: rows, error } = await supabase.rpc("offene_einwilligungen");
@@ -715,15 +732,8 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
     // Optimistisch ausblenden und serverseitig dauerhaft merken (überlebt Reload,
     // Gerätewechsel und native Clients). RLS erlaubt das Schreiben des eigenen Profils.
     setData((d) => ({ ...d, tutorialDone: true }));
-    const profileId = dataRef.current.profileId;
-    if (profileId) {
-      // .then() erzwingt die Ausführung – der Supabase-Builder feuert sonst nicht.
-      void supabase
-        .from("profiles")
-        .update({ tutorial_done: true })
-        .eq("id", profileId)
-        .then(() => {}, () => {});
-    }
+    // Direktes profiles-UPDATE ist fuer Clients gesperrt (Consent-Haertung) -> RPC.
+    void supabase.rpc("tutorial_abschliessen").then(() => {}, () => {});
   }, []);
 
   const order = useCallback(

@@ -23,6 +23,7 @@ import {
 import { TeacherPresentation } from "./TeacherPresentation.js";
 import { ConsentTemplate } from "./ConsentTemplate.js";
 import { DeleteAccountSection } from "../DeleteAccount.js";
+import { FeedbackButton } from "../FeedbackButton.js";
 import { TeacherContentBeamer } from "./TeacherContentBeamer.js";
 import { useToast } from "../../ui/Toast.js";
 import { font, fonts, radius, space, type Palette } from "../../theme.js";
@@ -558,6 +559,7 @@ export function TeacherClass() {
           </Card>
         </>
       )}
+      <FeedbackButton />
       <DeleteAccountSection />
     </ScrollView>
   );

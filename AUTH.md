@@ -70,4 +70,5 @@ Unabhängiger Review über die gesamte Strecke; behoben:
 
 ## 9. Launch-Schalter (Cloud, nicht vergessen)
 - `mailer_autoconfirm` ist in der Cloud derzeit **an** (nötig für die Dev-Login-Personas). Vor dem Launch **ausschalten** (E-Mail-Bestätigung Pflicht) und Dev-Login im Deploy deaktivieren (`EXPO_PUBLIC_DEV_LOGIN` aus `deploy-web.yml` entfernen).
-- Auth-URLs sind gesetzt: `site_url` + Allowlist zeigen auf `https://8kwwk8bzcc-cmyk.github.io/Hofino/` (2026-07-11). Eigene SMTP-Konfiguration prüfen (Supabase-Default ist stark ratenlimitiert).
+- Auth-URLs sind gesetzt: `site_url` + Allowlist zeigen auf `https://8kwwk8bzcc-cmyk.github.io/Hofino/` (2026-07-11).
+- **SMTP (vor Tests mit mehreren Familien):** Der Supabase-Standard-Mailer ist auf ~2 Mails/Stunde begrenzt und erlaubt KEINE eigenen Templates. Eigenen SMTP-Provider einrichten (Dashboard → Authentication → Emails → SMTP), danach die vorbereiteten deutschen Templates setzen: `SUPABASE_ACCESS_TOKEN=… node supabase/templates/set-cloud-templates.mjs`. Lokal sind die deutschen Templates bereits aktiv (config.toml → `supabase/templates/*.html`).

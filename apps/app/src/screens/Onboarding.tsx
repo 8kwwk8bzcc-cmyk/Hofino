@@ -366,7 +366,9 @@ const makeStyles = (c: Palette) =>
     container: { padding: space.xl, gap: space.lg, backgroundColor: c.bg, flexGrow: 1 },
     header: { alignItems: "center", gap: space.sm, marginTop: space.lg },
     tabs: { flexDirection: "row", flexWrap: "wrap", gap: space.sm },
-    tab: { flex: 1, padding: space.md, borderRadius: radius.md, alignItems: "center", backgroundColor: c.surface, borderWidth: 1, borderColor: c.border },
+    // flexBasis statt flex:1, damit die 5 Rollen-Chips auf schmalen Screens
+    // umbrechen statt sich zu quetschen (flexWrap greift nur mit Mindestbreite).
+    tab: { flexGrow: 1, flexBasis: 104, padding: space.md, borderRadius: radius.md, alignItems: "center", backgroundColor: c.surface, borderWidth: 1, borderColor: c.border },
     tabActive: { borderColor: c.navy, backgroundColor: c.navy },
     tabText: { fontWeight: "700", fontFamily: fonts.bodyBold, color: c.navy },
     tabTextActive: { color: "#FFFFFF" },
