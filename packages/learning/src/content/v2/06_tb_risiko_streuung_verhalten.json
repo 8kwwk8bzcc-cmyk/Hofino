@@ -183,7 +183,7 @@
       {
         "id": "konzept_schwankung_vs_verlust",
         "title": "Schwankung vs. Verlust",
-        "type": "calculation",
+        "type": "understanding",
         "unlockLevel": 20,
         "prerequisites": [
           "konzept_risiko",

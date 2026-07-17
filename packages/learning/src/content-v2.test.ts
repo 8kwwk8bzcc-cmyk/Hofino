@@ -30,15 +30,10 @@ describe("Curriculum v2 – gelieferter Content", () => {
     expect(validateModuleSourceSet(V2_MODULES.map(liftModuleToSource))).toEqual([]);
   });
 
-  // Bekannte redaktionelle Lücke im gelieferten Material (reviewStatus: editorial_review_recommended):
-  // dieses Modul ist als "calculation" deklariert, liefert aber keine Rechenvorlage.
-  const KNOWN_EDITORIAL_GAPS = new Set(["konzept_schwankung_vs_verlust"]);
-
-  it("ist pädagogisch importreif – Readiness-Lücken nur in bekannter Allowlist (§19)", () => {
+  it("ist pädagogisch importreif – keine Readiness-Lücken (§19)", () => {
     const report = readinessReport(V2_MODULES.map(liftModuleToSource));
     if (report.length) console.log("Readiness-Warnungen:", JSON.stringify(report));
-    const unerwartet = report.filter((r) => !KNOWN_EDITORIAL_GAPS.has(r.moduleId));
-    expect(unerwartet).toEqual([]);
+    expect(report).toEqual([]);
   });
 
   it("Rechenvorlagen sind auswertbar; Spezial-/Kollisionsfälle werden ausgewiesen", () => {
