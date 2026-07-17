@@ -46,6 +46,11 @@ jobs:
         working-directory: apps/app
         run: CI=1 ./node_modules/.bin/expo export --platform web --clear
 
+      # Statische Rechtsseiten (public/ wird von expo export bereits kopiert;
+      # der cp ist ein Sicherheitsnetz, falls sich das Export-Verhalten ändert)
+      - name: Rechtsseiten (public/ -> dist)
+        run: cp -r apps/app/public/. apps/app/dist/
+
       - name: SPA-Fallback (404 -> index)
         run: cp apps/app/dist/index.html apps/app/dist/404.html
 

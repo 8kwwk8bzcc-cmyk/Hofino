@@ -11,6 +11,7 @@ import { ChildFamilyCard } from "./family/ChildFamilyCard.js";
 import { DeleteAccountSection } from "./DeleteAccount.js";
 import { FamilyDuelCard } from "./family/FamilyDuel.js";
 import { FeedbackButton } from "./FeedbackButton.js";
+import { LegalLinks } from "./LegalLinks.js";
 import { StudentClassCard } from "./classroom/StudentClassCard.js";
 import { useNav } from "../nav.js";
 import { font, fonts, space, type Palette } from "../theme.js";
@@ -216,6 +217,7 @@ export function Start() {
       <FamilyDuelCard />
       <FeedbackButton />
       <DeleteAccountSection />
+      <LegalLinks />
     </ScrollView>
   );
 }

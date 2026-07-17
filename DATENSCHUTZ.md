@@ -1,12 +1,19 @@
-# Datenschutzerklärung Hofino — ENTWURF
+# Datenschutzerklärung Hofino
 
-> **Status: Entwurf (2026-07-12), vor Veröffentlichung juristisch prüfen lassen.
-> Dieses Dokument ersetzt keine Rechtsberatung.** Platzhalter sind mit ⟨…⟩ markiert.
-> Vor der Store-Einreichung als öffentliche URL bereitstellen (z. B. GitHub Pages
-> `/datenschutz`), sie wird im App-Store-Eintrag und in der App verlinkt.
+> **Status: finalisiert (2026-07-17), Betreiber-Review durch J. Hofstetter (IHK-DSB) offen.**
+> Öffentliche Fassung: `apps/app/public/datenschutz/index.html` → wird mit dem
+> Web-Deploy unter `https://8kwwk8bzcc-cmyk.github.io/Hofino/datenschutz/` ausgeliefert
+> und ist in der App (Login-Screen + Startseiten) sowie später im App-Store-Eintrag verlinkt.
+> Bei inhaltlichen Änderungen IMMER beide Fassungen (diese Datei + HTML) anpassen.
+>
+> **Offene Häkchen vor Launch (nicht Teil des öffentlichen Texts):**
+> - [ ] Supabase-AVV akzeptieren (Dashboard → Organization → Legal Documents → DPA)
+> - [ ] Brevo-Konto anlegen + AVV (in Brevo-AGB enthalten, DPA herunterladen), SMTP in Supabase hinterlegen
+> - [ ] Telefonnummer für DSA-Händlerstatus festlegen (wird im App Store öffentlich; s. `APPSTORE.md`)
 
 ## 1. Verantwortlicher
-⟨Name / Firma⟩, ⟨Anschrift⟩, E-Mail: hofstetter@agendaro.de
+Josef Hofstetter, Moorbadstraße 46a, 83093 Bad Endorf, Deutschland
+E-Mail: hofstetter@agendaro.de
 
 ## 2. Was Hofino ist — und was nicht
 Hofino ist eine Finanzbildungs-App (ab 12 Jahren) zum Üben mit **ausschließlich
@@ -46,10 +53,15 @@ Server-Protokolle des Hosting-Anbieters (IP-Adresse, Zeitpunkt) zur Betriebssich
   Mengenbegrenzungen): berechtigtes Interesse (Art. 6 Abs. 1 lit. f DSGVO).
 
 ## 5. Empfänger und Auftragsverarbeiter
-- **Supabase** (Datenbank, Anmeldung, E-Mail-Versand) — Serverstandort **EU (Irland)**,
-  Auftragsverarbeitungsvertrag ⟨abschließen/liegt vor⟩.
-- **GitHub Pages** (Auslieferung der Web-App; statische Dateien, dort werden keine
-  Kontodaten gespeichert; Zugriffs-Logs bei GitHub).
+- **Supabase Inc.** (Datenbank und Anmeldung) — Serverstandort **EU (Irland)**,
+  Verarbeitung auf Grundlage eines Auftragsverarbeitungsvertrags (Art. 28 DSGVO).
+- **Brevo** (Sendinblue GmbH, Köpenicker Straße 126, 10179 Berlin) — Versand der
+  System-E-Mails (z. B. Bestätigungs- und Einwilligungs-Mails), Serverstandort EU,
+  Auftragsverarbeitungsvertrag (Art. 28 DSGVO).
+- **GitHub Inc.** (GitHub Pages: Auslieferung der Web-App; statische Dateien, dort
+  werden keine Kontodaten gespeichert). Beim Abruf fallen Zugriffs-Logs (IP-Adresse)
+  bei GitHub an; GitHub ist unter dem **EU-US Data Privacy Framework** zertifiziert
+  (Art. 45 DSGVO).
 - Keine Weitergabe an Dritte zu Werbe- oder Analysezwecken. Kein Verkauf von Daten.
 
 ## 6. Speicherdauer
@@ -64,9 +76,12 @@ Server-Protokolle des Hosting-Anbieters (IP-Adresse, Zeitpunkt) zur Betriebssich
 ## 7. Ihre Rechte
 Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit, Widerspruch
 sowie Widerruf erteilter Einwilligungen — Kontakt: siehe Ziffer 1. Außerdem besteht
-ein Beschwerderecht bei einer Datenschutz-Aufsichtsbehörde, z. B. ⟨zuständige
-Landesbehörde⟩.
+ein Beschwerderecht bei einer Datenschutz-Aufsichtsbehörde; zuständig ist das
+**Bayerische Landesamt für Datenschutzaufsicht (BayLDA)**, Promenade 18,
+91522 Ansbach, www.lda.bayern.de.
 
 ## 8. Änderungen
 Diese Erklärung wird bei Funktionsänderungen aktualisiert; die jeweils aktuelle
-Fassung ist in der App bzw. unter ⟨URL⟩ abrufbar. Stand: ⟨Datum einsetzen⟩.
+Fassung ist in der App bzw. unter
+https://8kwwk8bzcc-cmyk.github.io/Hofino/datenschutz/ abrufbar.
+Stand: 17. Juli 2026.

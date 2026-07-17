@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Pressable, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 import { formatEuros, START_CAPITAL_CENTS } from "@hofino/core";
 import { useStore } from "../store/store.js";
+import { LegalLinks } from "./LegalLinks.js";
 import { Body, Button, H1, HLogo, LangToggle, Muted } from "../ui/components.js";
 import { FLAGS } from "../config/flags.js";
 import { font, fonts, radius, space, type Palette } from "../theme.js";
@@ -250,6 +251,7 @@ export function Onboarding({ footer }: { footer?: React.ReactNode }) {
         disabled={busy || (mode === "register" ? !canRegister : !canLogin)}
       />
       {footer}
+      <LegalLinks />
     </ScrollView>
   );
 }
