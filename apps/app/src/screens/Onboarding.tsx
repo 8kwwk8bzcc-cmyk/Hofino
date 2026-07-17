@@ -98,15 +98,42 @@ function Credentials({
 }
 
 type RegRole = "child" | "student" | "adult" | "parent" | "teacher";
-const ROLE_OPTIONS: { id: RegRole; label: string }[] = [
-  { id: "child", label: "Kind (12–15)" },
-  { id: "student", label: "Schüler:in" },
-  { id: "adult", label: "Erwachsene" },
-  { id: "parent", label: "Eltern" },
-  { id: "teacher", label: "Lehrer" },
-];
+// Zweistufige Auswahl: oben nur drei Basis-Rollen, Schüler:in steckt als
+// Nachfrage hinter „Jugendliche:r", Eltern hinter „Erwachsene:r".
+type BaseRole = "child" | "adult" | "teacher";
+const BASE_ROLES: BaseRole[] = ["child", "adult", "teacher"];
+const baseOf = (r: RegRole): BaseRole => (r === "student" ? "child" : r === "parent" ? "adult" : r);
 
-function RoleToggle({
+function YesNo({
+  value,
+  onChange,
+  testID,
+}: {
+  value: boolean;
+  onChange: (v: boolean) => void;
+  testID: string;
+}) {
+  const { t } = useStore();
+  const styles = useThemedStyles(makeStyles);
+  return (
+    <View style={styles.tabs}>
+      {([true, false] as const).map((v) => (
+        <Pressable
+          key={String(v)}
+          testID={`${testID}-${v ? "yes" : "no"}`}
+          onPress={() => onChange(v)}
+          style={[styles.tab, value === v && styles.tabActive]}
+        >
+          <Text style={[styles.tabText, value === v && styles.tabTextActive]}>
+            {t(v ? "common.yes" : "common.no")}
+          </Text>
+        </Pressable>
+      ))}
+    </View>
+  );
+}
+
+function RolePicker({
   role,
   onChange,
   exclude = [],
@@ -117,21 +144,42 @@ function RoleToggle({
 }) {
   const { t } = useStore();
   const styles = useThemedStyles(makeStyles);
+  const base = baseOf(role);
   return (
     <View style={styles.block}>
       <Text style={styles.label}>{t("auth.roleQuestion")}</Text>
       <View style={styles.tabs}>
-        {ROLE_OPTIONS.filter((o) => !exclude.includes(o.id)).map((o) => (
+        {BASE_ROLES.map((b) => (
           <Pressable
-            key={o.id}
-            testID={`role-${o.id}`}
-            onPress={() => onChange(o.id)}
-            style={[styles.tab, role === o.id && styles.tabActive]}
+            key={b}
+            testID={`role-${b}`}
+            onPress={() => onChange(b)}
+            style={[styles.tab, base === b && styles.tabActive]}
           >
-            <Text style={[styles.tabText, role === o.id && styles.tabTextActive]}>{t(`role.${o.id}`)}</Text>
+            <Text style={[styles.tabText, base === b && styles.tabTextActive]}>{t(`role.${b}`)}</Text>
           </Pressable>
         ))}
       </View>
+      {base === "child" && !exclude.includes("student") && (
+        <>
+          <Muted>{t("auth.studentFollowup")}</Muted>
+          <YesNo
+            testID="followup-student"
+            value={role === "student"}
+            onChange={(v) => onChange(v ? "student" : "child")}
+          />
+        </>
+      )}
+      {base === "adult" && !exclude.includes("parent") && (
+        <>
+          <Muted>{t("auth.parentFollowup")}</Muted>
+          <YesNo
+            testID="followup-parent"
+            value={role === "parent"}
+            onChange={(v) => onChange(v ? "parent" : "adult")}
+          />
+        </>
+      )}
     </View>
   );
 }
@@ -192,7 +240,7 @@ export function Onboarding({ footer }: { footer?: React.ReactNode }) {
 
       {mode === "register" && (
         <>
-          <RoleToggle role={role} onChange={setRole} />
+          <RolePicker role={role} onChange={setRole} />
           <NameInput value={name} onChange={setName} />
           {(role === "child" || role === "student") && <Muted>{t("auth.childNickHint")}</Muted>}
           {FLAGS.house_enabled && role === "child" && <PlotPicker value={plot} onChange={setPlot} />}
@@ -345,7 +393,7 @@ export function ProfileSetup() {
         <HLogo size={56} />
         <H1>{t("auth.profileSetupTitle")}</H1>
       </View>
-      <RoleToggle role={role} onChange={setRole} exclude={["student"]} />
+      <RolePicker role={role} onChange={setRole} exclude={["student"]} />
       <NameInput value={name} onChange={setName} />
       {FLAGS.house_enabled && role === "child" && <PlotPicker value={plot} onChange={setPlot} />}
       {error && <Text style={styles.error}>{error}</Text>}
